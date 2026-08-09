@@ -39,7 +39,8 @@ public static class CustodesModelPackResolver
         return b.ToString()
             .Replace("armour", "armor")
             .Replace("ventari", "venatari")
-            .Replace("saggitarum", "sagittarum");
+            .Replace("saggitarum", "sagittarum")
+	.Replace("aquilon", "aquillon");
     }
 
     private static string StripPrefixes(string value)
