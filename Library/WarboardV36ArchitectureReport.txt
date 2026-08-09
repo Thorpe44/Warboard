@@ -1,0 +1,9 @@
+﻿WARBOARD v36 ARCHITECTURE CLEANUP
+
+GameController is split and now publishes missing rule timing events directly from the authoritative methods.
+FactionControllerHost is roster-event driven; no 0.20s polling Update remains.
+AeldariGameController uses the public GameController runtime API; reflection and ObserveCoreTiming are removed.
+Battle Focus base resource state lives in AeldariBattleFocusController.
+Battle Focus Agile Manoeuvre names are passed directly; StackTrace inference is removed.
+Temporary Aeldari keyword grants track provenance instead of removing imported roster keywords.
+CoreEventBridge and the v35 one-time refactor script are removed.

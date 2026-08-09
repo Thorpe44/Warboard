@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +8,7 @@ using UnityEngine.Networking;
 // Method bodies were moved verbatim from GameController.cs.
 public partial class GameController : MonoBehaviour
 {
+    // WARBOARD_V36_DIRECT_COMBAT_EVENTS
     private bool FactionUsesAttackerZone(
         string faction)
     {
@@ -710,6 +711,7 @@ public partial class GameController : MonoBehaviour
                 AttackMode.Ranged)
             {
                 attacker.HasShot = true;
+                NotifyUnitFinishedShooting(attacker);
 
                 if (attacker.AttachedLeader != null)
                     attacker.AttachedLeader.HasShot = true;
@@ -1378,6 +1380,8 @@ public partial class GameController : MonoBehaviour
         }
 
         selectedSquad.HasShot = true;
+
+        NotifyUnitFinishedShooting(selectedSquad);
 
         if (selectedSquad.AttachedLeader != null)
         {

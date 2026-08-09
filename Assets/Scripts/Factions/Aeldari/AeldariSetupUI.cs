@@ -4,14 +4,14 @@ using System.Linq;
 using UnityEngine;
 
 /// <summary>
-/// One-time Aeldari pre-game detachment selector.
+/// One-time Aeldari pre-game detachment selection.
 ///
 /// Normal path:
-/// YellowScribe/New Recruit roster -> auto-detected detachment -> locked.
+/// imported roster metadata -> Aeldari controller -> detachment auto-lock.
 ///
 /// Fallback path:
-/// if the roster JSON does not expose a single detachment value, the player
-/// selects it once here before deployment. It cannot be cycled during play.
+/// if the imported roster does not expose one unambiguous detachment, the
+/// player selects the roster's detachment once before deployment.
 /// </summary>
 [DefaultExecutionOrder(-32000)]
 public sealed class AeldariSetupUI :
@@ -30,7 +30,8 @@ public sealed class AeldariSetupUI :
         RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void Install()
     {
-        if (UnityEngine.Object.FindAnyObjectByType<
+        if (UnityEngine.Object
+            .FindAnyObjectByType<
                 AeldariSetupUI>() != null)
         {
             return;
@@ -40,7 +41,8 @@ public sealed class AeldariSetupUI :
             new GameObject(
                 "WarboardAeldariSetupUI");
 
-        UnityEngine.Object.DontDestroyOnLoad(go);
+        UnityEngine.Object
+            .DontDestroyOnLoad(go);
 
         go.AddComponent<
             AeldariSetupUI>();
@@ -49,8 +51,7 @@ public sealed class AeldariSetupUI :
     private void OnGUI()
     {
         FactionControllerHost host =
-            UnityEngine.Object.FindAnyObjectByType<
-                FactionControllerHost>();
+            FactionControllerHost.Instance;
 
         if (host == null)
             return;
@@ -102,7 +103,7 @@ public sealed class AeldariSetupUI :
                 0f,
                 0f,
                 0f,
-                0.82f);
+                0.84f);
 
         GUI.DrawTexture(
             new Rect(
@@ -123,7 +124,7 @@ public sealed class AeldariSetupUI :
 
         float height =
             Mathf.Min(
-                640f,
+                660f,
                 Screen.height -
                     50f);
 
@@ -156,7 +157,8 @@ public sealed class AeldariSetupUI :
                 panel.y + 14f,
                 panel.width - 40f,
                 34f),
-            "AELDARI DETACHMENT",
+            controller.FactionId +
+            " — AELDARI DETACHMENT",
             title);
 
         GUIStyle body =
@@ -172,8 +174,8 @@ public sealed class AeldariSetupUI :
                 panel.x + 28f,
                 panel.y + 55f,
                 panel.width - 56f,
-                52f),
-            "The imported roster did not expose one unambiguous detachment. Select the detachment recorded on the roster once. Warboard will lock it for the battle.",
+                56f),
+            "Warboard could not read one unambiguous Aeldari detachment from the imported roster. Select the detachment shown on the roster once. Deployment is blocked until it is confirmed.",
             body);
 
         AeldariDetachment selected;
@@ -196,7 +198,7 @@ public sealed class AeldariSetupUI :
                 .AvailableDetachments();
 
         float gridTop =
-            panel.y + 118f;
+            panel.y + 122f;
 
         float gap = 8f;
 
@@ -267,7 +269,7 @@ public sealed class AeldariSetupUI :
         string sourceText =
             string.IsNullOrWhiteSpace(
                 controller.RosterProbeStatus)
-            ? ""
+            ? "No roster detachment metadata was available."
             : controller.RosterProbeStatus;
 
         GUI.Label(
@@ -275,7 +277,7 @@ public sealed class AeldariSetupUI :
                 panel.x + 28f,
                 infoY,
                 panel.width - 56f,
-                42f),
+                52f),
             sourceText,
             body);
 
@@ -291,9 +293,9 @@ public sealed class AeldariSetupUI :
             GUI.Label(
                 new Rect(
                     panel.x + 28f,
-                    infoY + 40f,
+                    infoY + 48f,
                     panel.width - 56f,
-                    40f),
+                    46f),
                 controller.SelectionError,
                 error);
         }
@@ -302,25 +304,22 @@ public sealed class AeldariSetupUI :
             new Rect(
                 panel.x +
                     panel.width -
-                    248f,
+                    258f,
                 panel.y +
                     panel.height -
                     58f,
-                220f,
+                230f,
                 38f);
 
         if (GUI.Button(
                 confirm,
-                "CONFIRM & LOCK"))
+                "CONFIRM DETACHMENT"))
         {
             controller.TryLockDetachment(
                 selected,
                 "Pre-game detachment selection");
         }
 
-        // Consume mouse input before the legacy GameController OnGUI receives
-        // it. This makes the selector genuinely modal instead of letting
-        // clicks fall through onto the old setup controls.
         if (Event.current != null &&
             (Event.current.type ==
                  EventType.MouseDown ||
@@ -355,7 +354,19 @@ public sealed class AeldariSetupUI :
             GUI.depth = -15000;
 
             float width =
-                360f;
+                440f;
+
+            string source =
+                controller.DetachmentLockSource
+                    .IndexOf(
+                        "YellowScribe",
+                        StringComparison.OrdinalIgnoreCase) >= 0 ||
+                controller.DetachmentLockSource
+                    .IndexOf(
+                        "New Recruit",
+                        StringComparison.OrdinalIgnoreCase) >= 0
+                ? "ROSTER"
+                : "CONFIRMED";
 
             Rect badge =
                 new Rect(
@@ -369,9 +380,12 @@ public sealed class AeldariSetupUI :
 
             GUI.Box(
                 badge,
-                "AELDARI • " +
+                controller.FactionId +
+                " • AELDARI • " +
                 controller.DetachmentName +
-                " • LOCKED");
+                " • " +
+                source +
+                " LOCKED");
 
             GUI.depth =
                 previousDepth;

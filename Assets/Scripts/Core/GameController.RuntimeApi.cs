@@ -34,6 +34,16 @@ public partial class GameController : MonoBehaviour
         get { return battlePoints; }
     }
 
+    public bool DeploymentStarted
+    {
+        get
+        {
+            return
+                deploymentMode ||
+                round > 0;
+        }
+    }
+
     public bool PreGameReady
     {
         get
@@ -187,6 +197,32 @@ public partial class GameController : MonoBehaviour
 
         if (changed != null)
             changed();
+    }
+
+    internal bool
+        EnsureFactionControllersReadyForDeployment()
+    {
+        FactionControllerHost host =
+            FactionControllers;
+
+        if (host == null)
+            return true;
+
+        string reason;
+
+        if (host.CanBeginDeployment(
+                out reason))
+        {
+            return true;
+        }
+
+        status =
+            string.IsNullOrWhiteSpace(
+                reason)
+            ? "Faction pre-game setup is incomplete."
+            : reason;
+
+        return false;
     }
 
     internal void RaiseCoreEvent(

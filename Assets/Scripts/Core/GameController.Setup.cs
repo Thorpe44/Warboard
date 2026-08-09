@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +8,7 @@ using UnityEngine.Networking;
 // Method bodies were moved verbatim from GameController.cs.
 public partial class GameController : MonoBehaviour
 {
+    // WARBOARD_V36_DIRECT_SETUP_EVENTS
     private MissionDeploymentZone
         DeploymentZoneForFaction(
             string faction)
@@ -407,7 +408,9 @@ public partial class GameController : MonoBehaviour
                 imported.ImportedMeleeWeaponInstances +
                 " melee. Multi-weapon combat is active.";
         }
-    }
+    
+        NotifyRostersChanged();
+}
 
     private void RemovePlayerArmy(
         int playerIndex)
@@ -441,7 +444,9 @@ public partial class GameController : MonoBehaviour
             playerOneLoaded = false;
         else
             playerTwoLoaded = false;
-    }
+    
+        NotifyRostersChanged();
+}
 
     private void OpenMissionSetup()
     {
@@ -1709,6 +1714,7 @@ public partial class GameController : MonoBehaviour
 
         squad.HasMoved = true;
         squad.MarkSetUpThisTurn();
+        NotifyUnitSetUp(squad);
         squad.MustIngressFromVeil = false;
         squad.TemporaryDeepStrike = false;
 

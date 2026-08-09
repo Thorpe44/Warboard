@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -1295,6 +1295,10 @@ public partial class GameController : MonoBehaviour
         reserveCycleIndex = -1;
 
         round = 1;
+
+        NotifyBattleStarted();
+
+        NotifyBattleRoundStarted();
         turnsCompletedThisRound = 0;
 
         if (!IsXcomMode)
@@ -1893,6 +1897,13 @@ public partial class GameController : MonoBehaviour
         SquadController squad,
         ModelToken model)
     {
+        if (phase == Phase.Move &&
+            squad != null)
+        {
+            NotifyUnitSelectedToMove(
+                squad);
+        }
+
         bool isDoubleClick =
             phase == Phase.Move &&
             model != null &&
@@ -6552,6 +6563,8 @@ public partial class GameController : MonoBehaviour
         Phase leavingPhase =
             phase;
 
+        NotifyPhaseEnded(leavingPhase);
+
         if (phase == Phase.Command &&
             missionSystem != null)
         {
@@ -6837,6 +6850,8 @@ public partial class GameController : MonoBehaviour
 
     private void EndTurn()
     {
+        NotifyTurnEnded();
+
         string missionScore = "";
         string secondaryScore = "";
 
@@ -6877,6 +6892,8 @@ public partial class GameController : MonoBehaviour
         if (turnsCompletedThisRound >=
             factions.Count)
         {
+            NotifyBattleRoundEnded();
+
             turnsCompletedThisRound = 0;
 
             if (round >= 5)
@@ -6905,6 +6922,8 @@ public partial class GameController : MonoBehaviour
             }
 
             round++;
+
+            NotifyBattleRoundStarted();
 
             activeFactionIndex =
                 firstTurnFactionIndex;

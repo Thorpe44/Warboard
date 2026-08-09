@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +8,7 @@ using UnityEngine.Networking;
 // Method bodies were moved verbatim from GameController.cs.
 public partial class GameController : MonoBehaviour
 {
+    // WARBOARD_V36_DIRECT_MOVEMENT_EVENTS
     private void CreateMoveRing()
     {
         GameObject go =
@@ -1272,6 +1273,9 @@ public partial class GameController : MonoBehaviour
             roll
         );
 
+        NotifyUnitAdvanced(
+            unit);
+
         status =
             unit.DisplayName +
             " ADVANCES: +" +
@@ -1300,6 +1304,7 @@ public partial class GameController : MonoBehaviour
 
         if (wasEngagedBeforeMove)
             selectedSquad.HasFallenBack = true;
+            NotifyUnitFellBack(selectedSquad);
 
         destination.y =
             selectedModel.transform.position.y;
@@ -1335,9 +1340,15 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
+        NotifyMoveStarted(selectedSquad);
+
         selectedModel.transform.position = destination;
 
+        NotifyMoveStarted(selectedSquad);
+
         selectedSquad.HasMoved = true;
+
+        NotifyMoveEnded(selectedSquad);
         selectedSquad.RefreshVisuals();
 
         string coherence =
@@ -1401,6 +1412,7 @@ public partial class GameController : MonoBehaviour
         if (wasEngagedBeforeMove)
         {
             selectedSquad.HasFallenBack = true;
+            NotifyUnitFellBack(selectedSquad);
 
             if (selectedSquad.AttachedLeader != null)
                 selectedSquad.AttachedLeader.HasFallenBack = true;
@@ -1467,7 +1479,11 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
+        NotifyMoveStarted(selectedSquad);
+
         selectedSquad.HasMoved = true;
+
+        NotifyMoveEnded(selectedSquad);
 
         if (selectedSquad.AttachedLeader != null)
             selectedSquad.AttachedLeader.HasMoved = true;
@@ -1862,7 +1878,11 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
+        NotifyMoveStarted(squad);
+
         squad.HasMoved = true;
+
+        NotifyMoveEnded(squad);
 
         if (squad.AttachedLeader != null)
             squad.AttachedLeader.HasMoved = true;

@@ -1067,7 +1067,15 @@ public class ModelToken : MonoBehaviour
         RefreshWoundDisplay();
 
         if (CurrentWounds <= 0)
+        {
             gameObject.SetActive(false);
+
+            if (GameController.Current != null)
+            {
+                GameController.Current.NotifyModelDestroyed(
+                    Squad);
+            }
+        }
 
         return lost;
     }

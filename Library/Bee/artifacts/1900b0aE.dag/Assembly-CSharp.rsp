@@ -436,6 +436,7 @@
 "Assets/Scripts/Core/WeaponRuleParser.cs"
 "Assets/Scripts/Core/WoundDisplayBillboard.cs"
 "Assets/Scripts/Core/YellowScribeImporter.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariBattleFocusController.cs"
 "Assets/Scripts/Factions/Aeldari/AeldariDetachmentControllers.cs"
 "Assets/Scripts/Factions/Aeldari/AeldariFactionModule.cs"
 "Assets/Scripts/Factions/Aeldari/AeldariGameController.cs"

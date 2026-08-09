@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -101,6 +101,13 @@ public partial class GameController : MonoBehaviour
                 "That squad is already engaged.";
             return;
         }
+
+        NotifyChargeDeclared(
+
+            attacker,
+
+            target);
+
 
         attacker.HasCharged = true;
 

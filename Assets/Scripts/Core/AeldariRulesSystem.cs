@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -510,9 +510,8 @@ public class AeldariRulesSystem
     public void NextDetachment(
         string faction)
     {
-        // v35: detachment selection is a pre-game roster decision and is
-        // locked for the battle. Runtime cycling is intentionally disabled.
-        return;
+        // Detachments are roster-driven, selected once before deployment and
+        // locked for the battle. Runtime cycling no longer exists.
     }
 
     public string RuleSummary(
@@ -570,84 +569,15 @@ public class AeldariRulesSystem
         string faction,
         IList<SquadController> squads)
     {
-        if (!IsAeldariFaction(faction) ||
-            squads == null)
+        // v36: temporary keyword grants are owned by AeldariGameController so
+        // imported roster keywords are never accidentally removed later.
+        AeldariGameController controller =
+            FactionControllerRuntime.GetAeldari(
+                faction);
+
+        if (controller != null)
         {
-            return;
-        }
-
-        AeldariDetachment detachment =
-            GetDetachment(
-                faction
-            );
-
-        foreach (SquadController unit
-            in squads)
-        {
-            if (unit == null ||
-                unit.FactionId != faction)
-            {
-                continue;
-            }
-
-            if (detachment ==
-                    AeldariDetachment.DevotedOfYnnead &&
-                unit.HasKeyword("asuryani") &&
-                !unit.HasKeyword("epic hero"))
-            {
-                unit.AddFactionKeyword(
-                    "YNNARI"
-                );
-            }
-
-            if (detachment ==
-                    AeldariDetachment.WindriderHost &&
-                (unit.HasKeyword("windriders") ||
-                 unit.DisplayName.IndexOf(
-                    "Windrider",
-                    StringComparison.OrdinalIgnoreCase
-                 ) >= 0))
-            {
-                unit.AddFactionKeyword(
-                    "BATTLELINE"
-                );
-            }
-
-            if (detachment ==
-                    AeldariDetachment.SpiritConclave &&
-                (unit.HasKeyword("wraithblades") ||
-                 unit.HasKeyword("wraithguard") ||
-                 unit.DisplayName.IndexOf(
-                    "Wraithblade",
-                    StringComparison.OrdinalIgnoreCase
-                 ) >= 0 ||
-                 unit.DisplayName.IndexOf(
-                    "Wraithguard",
-                    StringComparison.OrdinalIgnoreCase
-                 ) >= 0))
-            {
-                unit.AddFactionKeyword(
-                    "BATTLELINE"
-                );
-            }
-
-            if ((detachment ==
-                    AeldariDetachment.GhostsOfTheWebway ||
-                 detachment ==
-                    AeldariDetachment.SerpentsBrood) &&
-                (unit.HasKeyword("troupe") ||
-                 unit.DisplayName.IndexOf(
-                    "Troupe",
-                    StringComparison.OrdinalIgnoreCase
-                 ) >= 0))
-            {
-                unit.AddFactionKeyword(
-                    "BATTLELINE"
-                );
-
-                unit.AeldariObjectiveControlOverride =
-                    2;
-            }
+            controller.RefreshDetachmentState();
         }
     }
 

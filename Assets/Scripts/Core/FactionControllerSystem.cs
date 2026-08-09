@@ -19,6 +19,20 @@ public interface IFactionGameController
         GameEventContext context);
 }
 
+
+public interface IFactionPreGameController
+{
+    bool IsReadyForDeployment
+    {
+        get;
+    }
+
+    string DeploymentBlockReason
+    {
+        get;
+    }
+}
+
 public abstract class FactionGameControllerBase :
     IFactionGameController
 {
@@ -379,6 +393,38 @@ public sealed class FactionControllerHost :
             controller.OnGameEvent(
                 context);
         }
+    }
+
+
+    public bool CanBeginDeployment(
+        out string reason)
+    {
+        foreach (
+            IFactionGameController controller
+            in controllers.Values)
+        {
+            IFactionPreGameController preGame =
+                controller as
+                    IFactionPreGameController;
+
+            if (preGame == null ||
+                preGame.IsReadyForDeployment)
+            {
+                continue;
+            }
+
+            reason =
+                string.IsNullOrWhiteSpace(
+                    preGame.DeploymentBlockReason)
+                ? controller.DisplayName +
+                  " pre-game setup is incomplete."
+                : preGame.DeploymentBlockReason;
+
+            return false;
+        }
+
+        reason = "";
+        return true;
     }
 
     public IFactionGameController Get(

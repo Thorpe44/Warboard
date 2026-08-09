@@ -1,0 +1,16 @@
+WARBOARD v37 PATCH MANIFEST
+
+Assets/Editor/WarboardV37RosterDetachmentMigration.cs
+Assets/Editor/WarboardV37RosterDetachmentMigration.cs.meta
+Assets/Scripts/Core/FactionControllerSystem.cs
+Assets/Scripts/Core/FactionControllerSystem.cs.meta
+Assets/Scripts/Core/GameController.RuntimeApi.cs
+Assets/Scripts/Core/RosterImportMetadataStore.cs
+Assets/Scripts/Core/RosterImportMetadataStore.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs.meta
+Assets/Scripts/Factions/Aeldari/AeldariSetupUI.cs
+Assets/Scripts/Factions/Aeldari/AeldariSetupUI.cs.meta
+README_V37.md

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -740,6 +740,10 @@ public partial class GameController : MonoBehaviour
         fightActivationInitialTarget =
             target.JoinedActionController();
 
+        NotifyUnitSelectedToFight(
+            fightActivationUnit,
+            fightActivationInitialTarget);
+
         fightActivationStage =
             FightActivationStage.PileIn;
 
@@ -1431,6 +1435,8 @@ public partial class GameController : MonoBehaviour
             fightActivationUnit;
 
         completed.HasFought = true;
+
+        NotifyUnitFinishedFighting(completed);
 
         if (completed.AttachedLeader != null)
         {

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -419,14 +419,17 @@ public partial class GameController : MonoBehaviour
 
         bool spent = false;
 
-        if (factionRules.GetBattleFocusTokens(
-                unit.FactionId) > 0)
+        AeldariGameController factionController =
+            FactionControllerRuntime.GetAeldari(
+                unit.FactionId);
+
+        if (factionController != null &&
+            factionController.BattleFocusTokens > 0)
         {
             spent =
-                factionRules.SpendBattleFocus(
-                    unit.FactionId,
-                    1
-                );
+                factionController.SpendBattleFocus(
+                    1,
+                    manoeuvre);
         }
 
         if (!spent &&
