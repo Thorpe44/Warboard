@@ -30,7 +30,7 @@ public sealed class AeldariSetupUI :
         RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void Install()
     {
-        if (Object.FindAnyObjectByType<
+        if (UnityEngine.Object.FindAnyObjectByType<
                 AeldariSetupUI>() != null)
         {
             return;
@@ -40,7 +40,7 @@ public sealed class AeldariSetupUI :
             new GameObject(
                 "WarboardAeldariSetupUI");
 
-        Object.DontDestroyOnLoad(go);
+        UnityEngine.Object.DontDestroyOnLoad(go);
 
         go.AddComponent<
             AeldariSetupUI>();
@@ -49,7 +49,7 @@ public sealed class AeldariSetupUI :
     private void OnGUI()
     {
         FactionControllerHost host =
-            Object.FindAnyObjectByType<
+            UnityEngine.Object.FindAnyObjectByType<
                 FactionControllerHost>();
 
         if (host == null)
