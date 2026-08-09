@@ -1,0 +1,10 @@
+WARBOARD v37.2 PATCH MANIFEST
+
+Assets/Scripts/Core/RosterImportMetadataStore.cs
+Assets/Scripts/Core/RosterImportMetadataStore.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs.meta
+README_V37_2.md
+V37_2_PATCH_MANIFEST.txt

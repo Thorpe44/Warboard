@@ -604,46 +604,17 @@ private RosterDetachmentResolution
         return RosterDetachmentResolution.Ambiguous;
     }
 
-    HashSet<AeldariDetachment> structural =
-        new HashSet<AeldariDetachment>();
-
-    foreach (string value
-        in metadata.StructuralSelectionNames ??
-           new string[0])
-    {
-        AeldariDetachment candidate;
-
-        if (TryMatchDetachmentText(
-                value,
-                false,
-                out candidate))
-        {
-            structural.Add(
-                candidate);
-        }
-    }
-
-    if (structural.Count == 1)
-    {
-        detachment =
-            structural.First();
-
-        message =
-            "Detected from the imported roster selection name: " +
-            DisplayNameFor(
-                detachment) +
-            ".";
-
-        return RosterDetachmentResolution.Detected;
-    }
-
-    if (structural.Count > 1)
-    {
-        message =
-            "Several detachment names were present in roster structure, so Warboard will not guess. Select the roster's detachment once.";
-
-        return RosterDetachmentResolution.Ambiguous;
-    }
+    // YellowScribe's 8-character code stores the transformed unit payload,
+    // not the roster-level configuration selections. In particular, the
+    // upstream parser only carries top-level selections of type unit/model
+    // into armyData, so a New Recruit/BattleScribe "Detachment Choice"
+    // selection is normally absent by the time Warboard receives the code.
+    //
+    // Do not scan arbitrary unit/rule/category names for detachment names:
+    // that creates false positives and can report an "ambiguous" detachment
+    // even though YellowScribe simply did not preserve the choice.
+    message =
+        "YellowScribe did not preserve a roster-level Aeldari detachment choice in this code. Select the detachment once before deployment.";
 
     return RosterDetachmentResolution.Missing;
 }

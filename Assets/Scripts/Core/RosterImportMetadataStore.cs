@@ -217,8 +217,12 @@ public static class RosterImportMetadataStore
                 return;
             }
 
-            if (insideDetachmentContext ||
-                LooksLikeDetachmentKey(
+            // Only a direct string value on a detachment-like key is
+            // authoritative. Do not treat every descendant of an object whose
+            // key contains "detachment" as a detachment value; that can pull
+            // in rule names, labels and unrelated options and manufacture a
+            // false "ambiguous" result.
+            if (LooksLikeDetachmentKey(
                     keyHint))
             {
                 explicitDetachments.Add(
@@ -246,15 +250,10 @@ public static class RosterImportMetadataStore
                     pair
                 in map)
             {
-                bool childDetachmentContext =
-                    insideDetachmentContext ||
-                    LooksLikeDetachmentKey(
-                        pair.Key);
-
                 Collect(
                     pair.Value,
                     pair.Key,
-                    childDetachmentContext,
+                    false,
                     explicitDetachments,
                     structuralNames);
             }
