@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -264,11 +264,19 @@ public class SquadController : MonoBehaviour
         {
             foreach (string id in data.abilities)
             {
-                IUnitAbility ability =
-                    AbilityRegistry.Create(id);
+                IUnitAbility ability;
 
-                if (ability != null)
+                // Imported New Recruit/YellowScribe ability names are retained
+                // in SourceData for the universal and faction rule engines.
+                // Only instantiate entries that are explicitly registered with
+                // the legacy IUnitAbility modifier system.
+                if (AbilityRegistry.TryCreate(
+                        id,
+                        out ability) &&
+                    ability != null)
+                {
                     abilities.Add(ability);
+                }
             }
         }
 
@@ -2431,3 +2439,4 @@ public class SquadController : MonoBehaviour
     }
 
 }
+

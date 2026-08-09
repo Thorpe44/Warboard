@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 public interface IUnitAbility
@@ -35,6 +35,23 @@ public static class AbilityRegistry
         Factories[id] = factory;
     }
 
+    public static bool TryCreate(
+        string id,
+        out IUnitAbility ability)
+    {
+        ability = null;
+
+        if (string.IsNullOrWhiteSpace(id))
+            return false;
+
+        Func<IUnitAbility> factory;
+
+        if (!Factories.TryGetValue(id, out factory))
+            return false;
+
+        ability = factory();
+        return ability != null;
+    }
     public static IUnitAbility Create(string id)
     {
         if (string.IsNullOrWhiteSpace(id))
@@ -47,3 +64,4 @@ public static class AbilityRegistry
         return null;
     }
 }
+

@@ -1,31 +1,34 @@
-WARBOARD - ROSTER ABILITY WARNING FIX
+WARBOARD ROSTER ABILITY WARNING FIX V2
 
-WHAT THIS FIXES
----------------
-YellowScribe/New Recruit imports every datasheet ability name into UnitData.abilities.
-SquadController was attempting to instantiate every imported rule through the old
-AbilityRegistry, causing "Unknown ability id" warnings for modern rules.
+WHY V2 EXISTS
+-------------
+The first installer relied on exact whitespace/text matching. The Unity log after
+running it still showed:
 
-The modern engine already retains those rule names in SourceData. Universal rules
-and faction-pack systems can continue reading them there.
+  AbilityRegistry:Create(string)
+  SquadController:Initialize(...)
 
-This patch:
-1. Adds AbilityRegistry.TryCreate(), which quietly checks whether a legacy ability
-   object is actually registered.
-2. Changes SquadController so it only instantiates registered legacy abilities.
-3. Leaves all imported ability names/data intact.
-4. Keeps AbilityRegistry.Create() warning behaviour for any genuine direct caller.
-5. Creates backups before editing.
+That proves Unity was still compiling the unpatched path.
+
+V2:
+- Automatically locates the real Warboard project.
+- Uses regex/pattern matching rather than exact formatting.
+- Creates timestamped backups.
+- Re-reads both files after editing.
+- Refuses to report SUCCESS unless:
+    * AbilityRegistry.TryCreate exists
+    * SquadController uses TryCreate(id)
+    * the old AbilityRegistry.Create(id) call is gone from SquadController
+- Writes ABILITY_WARNING_FIX_V2_INSTALLED.txt into the actual project root.
 
 INSTALL
 -------
-1. Extract both FIX_ROSTER_ABILITY_WARNINGS files into the ROOT Warboard folder
-   (the folder containing Assets, Packages and ProjectSettings).
-2. Double-click FIX_ROSTER_ABILITY_WARNINGS.bat.
-3. Return to Unity and wait for compilation.
-4. Reload the roster.
-5. The repeated "Unknown ability id" warnings from roster loading should be gone.
+1. Extract BOTH .bat and .ps1.
+2. Put them in the Warboard project root if possible.
+3. Run FIX_ROSTER_ABILITY_WARNINGS_V2.bat.
+4. Do not close the window until it says:
+       SUCCESS - PATCH VERIFIED ON DISK
+5. Return to Unity and allow compilation.
+6. Reload the roster.
 
-This is deliberately NOT a fake no-op registration of the 33 rule names. Doing that
-would make the console quiet while falsely implying the old AbilityRegistry was
-implementing those rules.
+If the BAT says FAILED, take a screenshot of the BAT window and send it to ChatGPT.
