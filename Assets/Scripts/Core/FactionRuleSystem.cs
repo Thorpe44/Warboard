@@ -131,8 +131,24 @@ public class FactionRuleSystem
         {
             if (pair.Value.UsesBattleFocus)
             {
-                battleFocusTokens[pair.Key] =
-                    BattleFocusTokensForBattlefield();
+                AeldariGameController aeldari =
+                    FactionControllerRuntime
+                        .GetAeldari(
+                            pair.Key);
+
+                if (aeldari != null)
+                {
+                    aeldari.StartBattleRound(
+                        round);
+
+                    battleFocusTokens[pair.Key] =
+                        aeldari.BattleFocusTokens;
+                }
+                else
+                {
+                    battleFocusTokens[pair.Key] =
+                        BattleFocusTokensForBattlefield();
+                }
             }
 
             lethalSurgeUsedThisTurn[pair.Key] = false;
@@ -172,6 +188,18 @@ public class FactionRuleSystem
 
     public int GetBattleFocusTokens(string faction)
     {
+        AeldariGameController aeldari =
+            FactionControllerRuntime
+                .GetAeldari(
+                    faction);
+
+        if (aeldari != null &&
+            aeldari.UsesBattleFocus())
+        {
+            return aeldari
+                .BattleFocusTokens;
+        }
+
         int value;
 
         return battleFocusTokens.TryGetValue(
@@ -187,6 +215,23 @@ public class FactionRuleSystem
     {
         if (amount <= 0)
             return true;
+
+        AeldariGameController aeldari =
+            FactionControllerRuntime
+                .GetAeldari(
+                    faction);
+
+        if (aeldari != null &&
+            aeldari.UsesBattleFocus())
+        {
+            string manoeuvre =
+                ResolveBattleFocusManoeuvreFromCallStack();
+
+            return aeldari
+                .SpendBattleFocus(
+                    amount,
+                    manoeuvre);
+        }
 
         int current =
             GetBattleFocusTokens(
@@ -399,6 +444,17 @@ public class FactionRuleSystem
 
     public bool IsYnnari(string faction)
     {
+        AeldariGameController aeldari =
+            FactionControllerRuntime
+                .GetAeldari(
+                    faction);
+
+        if (aeldari != null)
+        {
+            return aeldari
+                .UsesDevotedOfYnnead();
+        }
+
         FactionRuleProfile profile =
             GetProfile(faction);
 
@@ -466,30 +522,22 @@ public class FactionRuleSystem
                         "adeptus custodes")
             );
 
-        // Retained as a legacy compatibility flag for existing v32 UI and
-        // reaction code. It no longer mutates the army. The selected
-        // Aeldari detachment is the gameplay authority.
-        bool ynnari =
+        bool aeldari =
             army.Any(
                 squad =>
-                    squad.HasKeyword(
-                        "ynnari") ||
-                    squad.DisplayName.IndexOf(
-                        "Ynnari",
-                        StringComparison.OrdinalIgnoreCase
-                    ) >= 0 ||
-                    squad.DisplayName.IndexOf(
-                        "Yvraine",
-                        StringComparison.OrdinalIgnoreCase
-                    ) >= 0 ||
-                    squad.DisplayName.IndexOf(
-                        "Yncarne",
-                        StringComparison.OrdinalIgnoreCase
-                    ) >= 0
+                    squad != null &&
+                    (squad.HasKeyword(
+                         "aeldari") ||
+                     squad.HasKeyword(
+                         "asuryani") ||
+                     squad.HasKeyword(
+                         "ynnari") ||
+                     squad.HasKeyword(
+                         "harlequins") ||
+                     squad.HasKeyword(
+                         "anhrathe"))
             );
 
-        // Battle Focus is the ASURYANI army rule in the supplied 11e pack.
-        // Explicit imported Battle Focus rules remain supported.
         bool battleFocus =
             army.Any(
                 squad =>
@@ -514,17 +562,17 @@ public class FactionRuleSystem
             };
         }
 
-        if (ynnari)
+        if (aeldari)
         {
             return new FactionRuleProfile
             {
                 GameFactionId = faction,
-                ArmyName = "Aeldari / Ynnari",
+                ArmyName = "Aeldari",
                 ArmyRuleName =
                     "Battle Focus",
                 DetachmentName =
-                    "Aeldari detachment controller",
-                IsYnnari = true,
+                    "Faction controller",
+                IsYnnari = false,
                 UsesBattleFocus = battleFocus
             };
         }
@@ -552,4 +600,68 @@ public class FactionRuleSystem
             UsesBattleFocus = battleFocus
         };
     }
+
+private static string
+    ResolveBattleFocusManoeuvreFromCallStack()
+{
+    System.Diagnostics.StackTrace trace =
+        new System.Diagnostics.StackTrace();
+
+    foreach (
+        System.Diagnostics.StackFrame frame
+        in trace.GetFrames() ??
+           new System.Diagnostics.StackFrame[0])
+    {
+        System.Reflection.MethodBase method =
+            frame.GetMethod();
+
+        string name =
+            method != null
+            ? method.Name
+            : "";
+
+        string upper =
+            name.ToUpperInvariant();
+
+        if (upper.Contains(
+                "SWIFT"))
+        {
+            return "SWIFT AS THE WIND";
+        }
+
+        if (upper.Contains(
+                "FLITTING"))
+        {
+            return "FLITTING SHADOWS";
+        }
+
+        if (upper.Contains(
+                "STARENGINE"))
+        {
+            return "STAR ENGINES";
+        }
+
+        if (upper.Contains(
+                "SUDDENSTRIKE"))
+        {
+            return "SUDDEN STRIKE";
+        }
+
+        if (upper.Contains(
+                "OPPORTUNITY"))
+        {
+            return "OPPORTUNITY SEIZED";
+        }
+
+        if (upper.Contains(
+                "FADEBACK") ||
+            upper.Contains(
+                "FADE_BACK"))
+        {
+            return "FADE BACK";
+        }
+    }
+
+    return "";
+}
 }

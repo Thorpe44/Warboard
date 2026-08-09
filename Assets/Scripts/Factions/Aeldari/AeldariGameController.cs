@@ -1,25 +1,128 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using UnityEngine;
+using UnityEngine.Networking;
 
 /// <summary>
-/// Faction-level controller for Aeldari.
+/// Aeldari faction-level runtime controller.
 ///
-/// v33 is a migration release: the existing AeldariRulesSystem remains the
-/// gameplay implementation, while this controller becomes the faction-level
-/// authority and owns detachment-derived state synchronisation.
+/// v34 makes this the authority for:
+/// - the selected/locked Aeldari detachment
+/// - the loaded detachment controller
+/// - detachment-granted temporary keywords/state
+/// - the base Battle Focus token pool
 ///
-/// Future Aeldari rules should enter through this controller rather than
-/// adding new Aeldari branches to GameController.
+/// The existing AeldariRulesSystem remains the current rules implementation
+/// during migration, but GameController no longer needs to own new Aeldari
+/// architecture.
 /// </summary>
 public sealed class AeldariGameController :
     FactionGameControllerBase
 {
+    private const string YellowScribeEndpoint =
+        "https://yellowscribe.link/get_army_by_id?id=";
+
+    private static readonly Dictionary<
+        AeldariDetachment,
+        string
+    > DetachmentNames =
+        new Dictionary<
+            AeldariDetachment,
+            string>
+        {
+            {
+                AeldariDetachment.Warhost,
+                "Warhost"
+            },
+            {
+                AeldariDetachment.WindriderHost,
+                "Windrider Host"
+            },
+            {
+                AeldariDetachment.SpiritConclave,
+                "Spirit Conclave"
+            },
+            {
+                AeldariDetachment.GuardianBattlehost,
+                "Guardian Battlehost"
+            },
+            {
+                AeldariDetachment.GhostsOfTheWebway,
+                "Ghosts of the Webway"
+            },
+            {
+                AeldariDetachment.DevotedOfYnnead,
+                "Devoted of Ynnead"
+            },
+            {
+                AeldariDetachment.SeerCouncil,
+                "Seer Council"
+            },
+            {
+                AeldariDetachment.AspectHost,
+                "Aspect Host"
+            },
+            {
+                AeldariDetachment.ArmouredWarhost,
+                "Armoured Warhost"
+            },
+            {
+                AeldariDetachment.FatefulPerformance,
+                "Fateful Performance"
+            },
+            {
+                AeldariDetachment.PathOfTheOutcast,
+                "Path of the Outcast"
+            },
+            {
+                AeldariDetachment.TwilightFlickers,
+                "Twilight Flickers"
+            },
+            {
+                AeldariDetachment.SerpentsBrood,
+                "Serpent's Brood"
+            },
+            {
+                AeldariDetachment.EldritchRaiders,
+                "Eldritch Raiders"
+            },
+            {
+                AeldariDetachment.CorsairCoterie,
+                "Corsair Coterie"
+            }
+        };
+
     private AeldariRulesSystem rules;
 
-    private AeldariDetachment lastDetachment;
-    private bool hasLastDetachment;
+    private IAeldariDetachmentController
+        detachmentController;
+
+    private AeldariDetachment lockedDetachment;
+    private bool detachmentLocked;
+    private string detachmentLockSource = "";
+
+    private AeldariDetachment suggestedDetachment =
+        AeldariDetachment.Warhost;
+
+    private bool rosterProbeStarted;
+    private bool rosterProbeFinished;
+    private string rosterProbeStatus = "";
+
+    private string selectionError = "";
+
+    private AeldariDetachment lastAppliedDetachment;
+    private bool hasLastAppliedDetachment;
+
+    private int battleFocusTokens;
+    private int battleFocusRound = -1;
+
+    private readonly HashSet<string>
+        agileManoeuvresUsedThisPhase =
+            new HashSet<string>(
+                StringComparer.OrdinalIgnoreCase);
 
     public override string DisplayName
     {
@@ -35,6 +138,60 @@ public sealed class AeldariGameController :
         }
     }
 
+    public bool DetachmentLocked
+    {
+        get { return detachmentLocked; }
+    }
+
+    public AeldariDetachment LockedDetachment
+    {
+        get
+        {
+            return detachmentLocked
+                ? lockedDetachment
+                : suggestedDetachment;
+        }
+    }
+
+    public string DetachmentName
+    {
+        get
+        {
+            return DisplayNameFor(
+                LockedDetachment);
+        }
+    }
+
+    public string DetachmentLockSource
+    {
+        get { return detachmentLockSource; }
+    }
+
+    public string RosterProbeStatus
+    {
+        get { return rosterProbeStatus; }
+    }
+
+    public string SelectionError
+    {
+        get { return selectionError; }
+    }
+
+    public int BattleFocusTokens
+    {
+        get
+        {
+            EnsureBattleFocusRound();
+            return battleFocusTokens;
+        }
+    }
+
+    public IAeldariDetachmentController
+        ActiveDetachmentController
+    {
+        get { return detachmentController; }
+    }
+
     public override void Initialize(
         GameController game,
         string factionId)
@@ -44,6 +201,7 @@ public sealed class AeldariGameController :
             factionId);
 
         EnsureRulesBinding();
+        RefreshSuggestedDetachment();
     }
 
     public override void RefreshArmy(
@@ -52,6 +210,13 @@ public sealed class AeldariGameController :
         base.RefreshArmy(units);
 
         EnsureRulesBinding();
+
+        if (!detachmentLocked)
+        {
+            RefreshSuggestedDetachment();
+            BeginRosterProbeWhenPossible();
+        }
+
         SynchronizeDetachmentState();
     }
 
@@ -69,11 +234,33 @@ public sealed class AeldariGameController :
         switch (context.Type)
         {
             case GameEventType.BattleRoundStarted:
+                StartBattleRound(
+                    Game != null
+                    ? Game.CurrentRoundNumber
+                    : context.Amount);
+                SynchronizeDetachmentState();
+                break;
+
+            case GameEventType.BattleRoundEnded:
+                battleFocusTokens = 0;
+                agileManoeuvresUsedThisPhase.Clear();
+                break;
+
+            case GameEventType.PhaseEnded:
+                agileManoeuvresUsedThisPhase.Clear();
+                break;
+
             case GameEventType.TurnStarted:
             case GameEventType.PhaseStarted:
             case GameEventType.UnitSetUp:
                 SynchronizeDetachmentState();
                 break;
+        }
+
+        if (detachmentController != null)
+        {
+            detachmentController.OnGameEvent(
+                context);
         }
     }
 
@@ -84,14 +271,692 @@ public sealed class AeldariGameController :
         if (rules == null)
             return;
 
-        AeldariDetachment current =
-            rules.GetDetachment(
+        BeginRosterProbeWhenPossible();
+
+        if (detachmentLocked)
+        {
+            AeldariDetachment current =
+                rules.GetDetachment(
+                    FactionId);
+
+            // The old v32 "NEXT AELDARI DETACHMENT" control may still be
+            // rendered by GameController during migration. Once v34 locks
+            // the roster detachment, any attempt to cycle it is immediately
+            // rejected and the roster's locked value is restored.
+            if (current !=
+                lockedDetachment)
+            {
+                rules.SetDetachment(
+                    FactionId,
+                    lockedDetachment);
+
+                selectionError =
+                    "Detachment is locked for this battle.";
+            }
+        }
+
+        AeldariDetachment effective =
+            detachmentLocked
+            ? lockedDetachment
+            : rules.GetDetachment(
                 FactionId);
 
-        if (!hasLastDetachment ||
-            current != lastDetachment)
+        if (!hasLastAppliedDetachment ||
+            effective !=
+                lastAppliedDetachment)
         {
             SynchronizeDetachmentState();
+        }
+
+        if (detachmentController != null)
+        {
+            detachmentController.Tick();
+        }
+    }
+
+    public bool ShouldShowDetachmentSelection()
+    {
+        if (detachmentLocked ||
+            army.Count == 0 ||
+            Game == null)
+        {
+            return false;
+        }
+
+        if (!ReadyForPreGameSelection())
+            return false;
+
+        // Give the YellowScribe probe a chance to resolve the roster
+        // automatically. The fallback selector only appears once that probe
+        // is complete or if no roster code is available.
+        return rosterProbeFinished ||
+            string.IsNullOrWhiteSpace(
+                ResolveYellowScribeCode());
+    }
+
+    public AeldariDetachment SuggestedDetachment
+    {
+        get { return suggestedDetachment; }
+    }
+
+    public AeldariDetachment[] AvailableDetachments()
+    {
+        return
+            (AeldariDetachment[])
+            Enum.GetValues(
+                typeof(AeldariDetachment));
+    }
+
+    public string GetDetachmentDisplayName(
+        AeldariDetachment detachment)
+    {
+        return DisplayNameFor(
+            detachment);
+    }
+
+    public bool TryLockDetachment(
+        AeldariDetachment detachment,
+        string source)
+    {
+        EnsureRulesBinding();
+
+        if (rules == null ||
+            !rules.IsAeldariFaction(
+                FactionId))
+        {
+            selectionError =
+                "Aeldari rules have not finished loading yet.";
+
+            return false;
+        }
+
+        string validation;
+
+        if (!ValidateDetachment(
+                detachment,
+                out validation))
+        {
+            selectionError =
+                validation;
+
+            return false;
+        }
+
+        lockedDetachment =
+            detachment;
+
+        detachmentLocked = true;
+
+        detachmentLockSource =
+            string.IsNullOrWhiteSpace(
+                source)
+            ? "Pre-game roster"
+            : source;
+
+        selectionError = "";
+
+        rules.SetDetachment(
+            FactionId,
+            lockedDetachment);
+
+        LoadDetachmentController();
+
+        SynchronizeDetachmentState();
+
+        return true;
+    }
+
+    public bool UsesDevotedOfYnnead()
+    {
+        return
+            detachmentLocked
+            ? lockedDetachment ==
+                AeldariDetachment
+                    .DevotedOfYnnead
+            : rules != null &&
+              rules.DetachmentIs(
+                  FactionId,
+                  AeldariDetachment
+                      .DevotedOfYnnead);
+    }
+
+    public bool UsesBattleFocus()
+    {
+        return army.Any(
+            unit =>
+                unit != null &&
+                (unit.HasIntrinsicKeyword(
+                     "asuryani") ||
+                 FactionRuleSystem
+                     .UnitOrLeaderHasRule(
+                         unit,
+                         "Battle Focus")));
+    }
+
+    public void StartBattleRound(
+        int round)
+    {
+        if (!UsesBattleFocus())
+        {
+            battleFocusTokens = 0;
+            battleFocusRound = round;
+            return;
+        }
+
+        if (battleFocusRound == round &&
+            round > 0)
+        {
+            return;
+        }
+
+        battleFocusRound = round;
+
+        battleFocusTokens =
+            BaseBattleFocusForCurrentSize();
+
+        agileManoeuvresUsedThisPhase.Clear();
+    }
+
+    public bool SpendBattleFocus(
+        int amount,
+        string manoeuvre = "")
+    {
+        if (amount <= 0)
+            return true;
+
+        EnsureBattleFocusRound();
+
+        string canonical =
+            CanonicalManoeuvre(
+                manoeuvre);
+
+        bool repeatable =
+            string.Equals(
+                canonical,
+                "SWIFT AS THE WIND",
+                StringComparison.OrdinalIgnoreCase);
+
+        if (!string.IsNullOrWhiteSpace(
+                canonical) &&
+            !repeatable &&
+            agileManoeuvresUsedThisPhase.Contains(
+                canonical))
+        {
+            selectionError =
+                canonical +
+                " has already been triggered this phase.";
+
+            return false;
+        }
+
+        if (battleFocusTokens < amount)
+            return false;
+
+        battleFocusTokens -= amount;
+
+        if (!string.IsNullOrWhiteSpace(
+                canonical) &&
+            !repeatable)
+        {
+            agileManoeuvresUsedThisPhase.Add(
+                canonical);
+        }
+
+        return true;
+    }
+
+    public void EndBattleRound()
+    {
+        battleFocusTokens = 0;
+        agileManoeuvresUsedThisPhase.Clear();
+    }
+
+    public static string DisplayNameFor(
+        AeldariDetachment detachment)
+    {
+        string value;
+
+        return DetachmentNames.TryGetValue(
+            detachment,
+            out value)
+            ? value
+            : detachment.ToString();
+    }
+
+    private void EnsureBattleFocusRound()
+    {
+        if (Game == null)
+            return;
+
+        int round =
+            Game.CurrentRoundNumber;
+
+        if (round > 0 &&
+            round != battleFocusRound)
+        {
+            StartBattleRound(
+                round);
+        }
+    }
+
+    private int BaseBattleFocusForCurrentSize()
+    {
+        string battleSize =
+            ReadPrivateString(
+                "battleSizeName");
+
+        if (string.Equals(
+                battleSize,
+                "Incursion",
+                StringComparison.OrdinalIgnoreCase))
+        {
+            return 2;
+        }
+
+        if (string.Equals(
+                battleSize,
+                "Strike Force",
+                StringComparison.OrdinalIgnoreCase))
+        {
+            return 4;
+        }
+
+        if (string.Equals(
+                battleSize,
+                "Onslaught",
+                StringComparison.OrdinalIgnoreCase))
+        {
+            return 6;
+        }
+
+        int points =
+            ReadPrivateInt(
+                "battlePoints",
+                2000);
+
+        if (points <= 1000)
+            return 2;
+
+        if (points <= 2000)
+            return 4;
+
+        return 6;
+    }
+
+    private void RefreshSuggestedDetachment()
+    {
+        if (rules == null ||
+            !rules.IsAeldariFaction(
+                FactionId))
+        {
+            return;
+        }
+
+        suggestedDetachment =
+            rules.GetDetachment(
+                FactionId);
+    }
+
+    private void BeginRosterProbeWhenPossible()
+    {
+        if (detachmentLocked ||
+            rosterProbeStarted ||
+            Game == null ||
+            army.Count == 0)
+        {
+            return;
+        }
+
+        string code =
+            ResolveYellowScribeCode();
+
+        if (string.IsNullOrWhiteSpace(
+                code))
+        {
+            if (ReadyForPreGameSelection())
+            {
+                rosterProbeFinished = true;
+                rosterProbeStatus =
+                    "No YellowScribe roster code is available; pre-game detachment selection is required.";
+            }
+
+            return;
+        }
+
+        rosterProbeStarted = true;
+        rosterProbeStatus =
+            "Reading detachment from imported roster...";
+
+        Game.StartCoroutine(
+            ProbeRosterDetachment(
+                code));
+    }
+
+    private IEnumerator ProbeRosterDetachment(
+        string code)
+    {
+        string url =
+            YellowScribeEndpoint +
+            UnityWebRequest.EscapeURL(
+                code);
+
+        using (UnityWebRequest request =
+            UnityWebRequest.Get(url))
+        {
+            yield return
+                request.SendWebRequest();
+
+            if (request.result !=
+                UnityWebRequest.Result.Success)
+            {
+                rosterProbeFinished = true;
+
+                rosterProbeStatus =
+                    "Roster loaded, but its detachment metadata could not be read automatically.";
+
+                yield break;
+            }
+
+            AeldariDetachment detected;
+
+            if (TryFindDetachmentInPayload(
+                    request.downloadHandler.text,
+                    out detected))
+            {
+                rosterProbeFinished = true;
+
+                if (TryLockDetachment(
+                        detected,
+                        "YellowScribe / New Recruit roster"))
+                {
+                    rosterProbeStatus =
+                        "Detachment read from roster: " +
+                        DisplayNameFor(
+                            detected) +
+                        ".";
+                }
+
+                yield break;
+            }
+
+            rosterProbeFinished = true;
+
+            rosterProbeStatus =
+                "The imported roster did not expose a single Aeldari detachment value. Select it once before deployment.";
+        }
+    }
+
+    private bool TryFindDetachmentInPayload(
+        string json,
+        out AeldariDetachment detachment)
+    {
+        detachment =
+            AeldariDetachment.Warhost;
+
+        if (string.IsNullOrWhiteSpace(
+                json))
+        {
+            return false;
+        }
+
+        object root =
+            MiniJson.Deserialize(
+                json);
+
+        HashSet<AeldariDetachment>
+            explicitCandidates =
+                new HashSet<AeldariDetachment>();
+
+        HashSet<AeldariDetachment>
+            exactCandidates =
+                new HashSet<AeldariDetachment>();
+
+        CollectDetachmentCandidates(
+            root,
+            "",
+            explicitCandidates,
+            exactCandidates);
+
+        if (explicitCandidates.Count == 1)
+        {
+            detachment =
+                explicitCandidates.First();
+
+            return true;
+        }
+
+        if (explicitCandidates.Count > 1)
+            return false;
+
+        if (exactCandidates.Count == 1)
+        {
+            detachment =
+                exactCandidates.First();
+
+            return true;
+        }
+
+        return false;
+    }
+
+    private void CollectDetachmentCandidates(
+        object node,
+        string keyHint,
+        HashSet<AeldariDetachment>
+            explicitCandidates,
+        HashSet<AeldariDetachment>
+            exactCandidates)
+    {
+        if (node == null)
+            return;
+
+        string text =
+            node as string;
+
+        if (text != null)
+        {
+            AeldariDetachment match;
+
+            bool explicitField =
+                !string.IsNullOrWhiteSpace(
+                    keyHint) &&
+                keyHint.IndexOf(
+                    "detachment",
+                    StringComparison.OrdinalIgnoreCase) >= 0;
+
+            if (TryMatchDetachmentText(
+                    text,
+                    explicitField,
+                    out match))
+            {
+                if (explicitField)
+                {
+                    explicitCandidates.Add(
+                        match);
+                }
+                else
+                {
+                    exactCandidates.Add(
+                        match);
+                }
+            }
+
+            return;
+        }
+
+        Dictionary<string, object> map =
+            node as
+                Dictionary<string, object>;
+
+        if (map != null)
+        {
+            foreach (
+                KeyValuePair<string, object>
+                    pair
+                in map)
+            {
+                CollectDetachmentCandidates(
+                    pair.Value,
+                    pair.Key,
+                    explicitCandidates,
+                    exactCandidates);
+            }
+
+            return;
+        }
+
+        IList list =
+            node as IList;
+
+        if (list != null)
+        {
+            foreach (object item in list)
+            {
+                CollectDetachmentCandidates(
+                    item,
+                    keyHint,
+                    explicitCandidates,
+                    exactCandidates);
+            }
+        }
+    }
+
+    private bool TryMatchDetachmentText(
+        string value,
+        bool allowContainedName,
+        out AeldariDetachment detachment)
+    {
+        detachment =
+            AeldariDetachment.Warhost;
+
+        string normalized =
+            NormalizeDetachmentText(
+                value);
+
+        if (string.IsNullOrWhiteSpace(
+                normalized))
+        {
+            return false;
+        }
+
+        foreach (
+            KeyValuePair<
+                AeldariDetachment,
+                string
+            > pair
+            in DetachmentNames
+                .OrderByDescending(
+                    item =>
+                        item.Value.Length))
+        {
+            string wanted =
+                NormalizeDetachmentText(
+                    pair.Value);
+
+            if (normalized == wanted ||
+                (allowContainedName &&
+                 normalized.Contains(
+                     wanted)))
+            {
+                detachment =
+                    pair.Key;
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static string NormalizeDetachmentText(
+        string value)
+    {
+        if (string.IsNullOrWhiteSpace(
+                value))
+        {
+            return "";
+        }
+
+        char[] characters =
+            value
+                .ToLowerInvariant()
+                .Replace('’', '\'')
+                .Where(
+                    c =>
+                        char.IsLetterOrDigit(c) ||
+                        char.IsWhiteSpace(c) ||
+                        c == '\'')
+                .ToArray();
+
+        return string.Join(
+            " ",
+            new string(characters)
+                .Split(
+                    new[]
+                    {
+                        ' ',
+                        '\t',
+                        '\r',
+                        '\n'
+                    },
+                    StringSplitOptions
+                        .RemoveEmptyEntries));
+    }
+
+    private bool ValidateDetachment(
+        AeldariDetachment detachment,
+        out string message)
+    {
+        message = "";
+
+        if (detachment ==
+                AeldariDetachment
+                    .DevotedOfYnnead)
+        {
+            bool hasRequiredEpicHero =
+                army.Any(
+                    unit =>
+                        unit != null &&
+                        (NameContains(
+                             unit,
+                             "Yvraine") ||
+                         NameContains(
+                             unit,
+                             "Yncarne")));
+
+            if (!hasRequiredEpicHero)
+            {
+                message =
+                    "Devoted of Ynnead requires Yvraine and/or the Yncarne in the army.";
+
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private void LoadDetachmentController()
+    {
+        if (!detachmentLocked)
+            return;
+
+        if (detachmentController != null &&
+            detachmentController.Detachment ==
+                lockedDetachment)
+        {
+            return;
+        }
+
+        detachmentController =
+            AeldariDetachmentControllerFactory
+                .Create(
+                    lockedDetachment);
+
+        if (detachmentController != null)
+        {
+            detachmentController.Initialize(
+                this);
         }
     }
 
@@ -118,13 +983,6 @@ public sealed class AeldariGameController :
             as AeldariRulesSystem;
     }
 
-    /// <summary>
-    /// Ensures that keywords/state granted by a detachment do not leak into
-    /// another detachment when the player cycles selections.
-    ///
-    /// The old v32 path only added keywords. v33 makes the selected Aeldari
-    /// detachment the authority for those temporary grants.
-    /// </summary>
     private void SynchronizeDetachmentState()
     {
         if (rules == null ||
@@ -135,8 +993,17 @@ public sealed class AeldariGameController :
         }
 
         AeldariDetachment detachment =
-            rules.GetDetachment(
+            detachmentLocked
+            ? lockedDetachment
+            : rules.GetDetachment(
                 FactionId);
+
+        if (detachmentLocked)
+        {
+            rules.SetDetachment(
+                FactionId,
+                detachment);
+        }
 
         foreach (SquadController unit
             in army)
@@ -163,14 +1030,20 @@ public sealed class AeldariGameController :
                 detachment);
         }
 
-        // Keep the existing v32 implementation responsible for adding all
-        // grants that belong to the currently selected detachment.
         rules.ApplyDetachmentKeywords(
             FactionId,
             army);
 
-        lastDetachment = detachment;
-        hasLastDetachment = true;
+        lastAppliedDetachment =
+            detachment;
+
+        hasLastAppliedDetachment =
+            true;
+
+        if (detachmentLocked)
+        {
+            LoadDetachmentController();
+        }
     }
 
     private void SynchronizeYnnariKeyword(
@@ -249,9 +1122,6 @@ public sealed class AeldariGameController :
                      .SerpentsBrood) &&
              troupe);
 
-        // Only the units above receive BATTLELINE from the detachment
-        // architecture. Other units retain whatever their imported
-        // datasheet already says.
         if (windrider ||
             wraithBattleline ||
             troupe)
@@ -289,6 +1159,154 @@ public sealed class AeldariGameController :
             : 0;
     }
 
+    private bool ReadyForPreGameSelection()
+    {
+        bool p1Loaded =
+            ReadPrivateBool(
+                "playerOneLoaded");
+
+        bool p2Loaded =
+            ReadPrivateBool(
+                "playerTwoLoaded");
+
+        if (p1Loaded &&
+            p2Loaded)
+        {
+            return true;
+        }
+
+        bool deploymentMode =
+            ReadPrivateBool(
+                "deploymentMode");
+
+        bool missionSetupMode =
+            ReadPrivateBool(
+                "missionSetupMode");
+
+        return deploymentMode ||
+            missionSetupMode;
+    }
+
+    private string ResolveYellowScribeCode()
+    {
+        if (Game == null)
+            return "";
+
+        FieldInfo factionsField =
+            typeof(GameController)
+                .GetField(
+                    "factions",
+                    BindingFlags.Instance |
+                    BindingFlags.NonPublic);
+
+        object rawFactions =
+            factionsField != null
+            ? factionsField.GetValue(
+                Game)
+            : null;
+
+        IEnumerable<string> factions =
+            rawFactions as
+                IEnumerable<string>;
+
+        if (factions == null)
+            return "";
+
+        List<string> list =
+            factions.ToList();
+
+        int index =
+            list.FindIndex(
+                item =>
+                    string.Equals(
+                        item,
+                        FactionId,
+                        StringComparison.OrdinalIgnoreCase));
+
+        if (index == 0)
+        {
+            return ReadPrivateString(
+                "yellowCodePlayerOne");
+        }
+
+        if (index == 1)
+        {
+            return ReadPrivateString(
+                "yellowCodePlayerTwo");
+        }
+
+        return "";
+    }
+
+    private string ReadPrivateString(
+        string fieldName)
+    {
+        if (Game == null)
+            return "";
+
+        FieldInfo field =
+            typeof(GameController)
+                .GetField(
+                    fieldName,
+                    BindingFlags.Instance |
+                    BindingFlags.NonPublic);
+
+        object value =
+            field != null
+            ? field.GetValue(Game)
+            : null;
+
+        return value != null
+            ? value.ToString()
+            : "";
+    }
+
+    private bool ReadPrivateBool(
+        string fieldName)
+    {
+        if (Game == null)
+            return false;
+
+        FieldInfo field =
+            typeof(GameController)
+                .GetField(
+                    fieldName,
+                    BindingFlags.Instance |
+                    BindingFlags.NonPublic);
+
+        object value =
+            field != null
+            ? field.GetValue(Game)
+            : null;
+
+        return value is bool &&
+            (bool)value;
+    }
+
+    private int ReadPrivateInt(
+        string fieldName,
+        int fallback)
+    {
+        if (Game == null)
+            return fallback;
+
+        FieldInfo field =
+            typeof(GameController)
+                .GetField(
+                    fieldName,
+                    BindingFlags.Instance |
+                    BindingFlags.NonPublic);
+
+        object value =
+            field != null
+            ? field.GetValue(Game)
+            : null;
+
+        return value is int
+            ? (int)value
+            : fallback;
+    }
+
     private static bool NameContains(
         SquadController unit,
         string text)
@@ -323,9 +1341,6 @@ public sealed class AeldariGameController :
             return;
         }
 
-        // Detachment-granted keywords in v32 were written into
-        // SourceData.factionKeywords. Remove the temporary grant from that
-        // collection when its detachment is no longer selected.
         List<string> values =
             new List<string>(
                 unit.SourceData
@@ -341,5 +1356,56 @@ public sealed class AeldariGameController :
 
         unit.SourceData.factionKeywords =
             values.ToArray();
+    }
+
+    private static string CanonicalManoeuvre(
+        string manoeuvre)
+    {
+        if (string.IsNullOrWhiteSpace(
+                manoeuvre))
+        {
+            return "";
+        }
+
+        string value =
+            manoeuvre.ToUpperInvariant();
+
+        if (value.Contains(
+                "SWIFT AS THE WIND"))
+        {
+            return "SWIFT AS THE WIND";
+        }
+
+        if (value.Contains(
+                "FLITTING SHADOWS"))
+        {
+            return "FLITTING SHADOWS";
+        }
+
+        if (value.Contains(
+                "STAR ENGINES"))
+        {
+            return "STAR ENGINES";
+        }
+
+        if (value.Contains(
+                "SUDDEN STRIKE"))
+        {
+            return "SUDDEN STRIKE";
+        }
+
+        if (value.Contains(
+                "OPPORTUNITY SEIZED"))
+        {
+            return "OPPORTUNITY SEIZED";
+        }
+
+        if (value.Contains(
+                "FADE BACK"))
+        {
+            return "FADE BACK";
+        }
+
+        return value.Trim();
     }
 }

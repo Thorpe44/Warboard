@@ -1,0 +1,15 @@
+Warboard v35 patch manifest
+
+Files included in this ZIP:
+- Assets/Editor/WarboardV35GameControllerRefactor.cs
+- Assets/Editor/WarboardV35GameControllerRefactor.cs.meta
+- Assets/Scripts/Core/WarboardBuildInfo.cs
+- Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+- README_V35.md
+
+Important:
+The GameController partial files are generated inside the local Unity project
+from the user's current GameController.cs on the first Unity refresh. This
+avoids replacing the 28,000+ line controller with a stale copy.
+
+The refactor creates a local backup before modifying GameController.
