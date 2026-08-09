@@ -435,7 +435,6 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Editor/WarboardV41CoreRulesCompletion.cs"
-"Assets/Editor/WarboardV43CustodesFactionRules.cs"
 -langversion:9.0
 /deterministic
 /optimize+

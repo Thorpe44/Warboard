@@ -114,6 +114,9 @@ public static class UniversalRuleRegistry
             );
         }
 
+        CustodesFactionPack11.ApplyAttackModifiers(
+            game, attacker, target, shooter, weapon, mode, state);
+
         if (attacker != null &&
             attacker
                 .JoinedActionController()
@@ -155,6 +158,12 @@ public static class UniversalRuleRegistry
         }
 
         if (AeldariFactionPack11.GrantsCoreAbility(
+                squad, ruleName))
+        {
+            return true;
+        }
+
+        if (CustodesFactionPack11.GrantsCoreAbility(
                 squad, ruleName))
         {
             return true;
@@ -311,6 +320,10 @@ public static class UniversalRuleRegistry
 
         int fnp =
             GetFeelNoPain(squad);
+
+        fnp =
+            CustodesFactionPack11.ConditionalFeelNoPain(
+                squad, label, fnp);
 
         if (incomingWounds <= 0 ||
             fnp <= 0)

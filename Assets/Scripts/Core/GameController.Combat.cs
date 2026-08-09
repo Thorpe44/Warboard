@@ -1481,6 +1481,7 @@ public partial class GameController : MonoBehaviour
                     );
 
                 if (attacker.HasAdvanced &&
+                    !Custodes11CanShootAfterAdvance(attacker) &&
                     !attacker
                         .JoinedActionController()
                         .SnapShootingActive &&
@@ -1559,6 +1560,7 @@ public partial class GameController : MonoBehaviour
                         indirect &&
                         !attackerEngaged &&
                         !attacker.HasAdvanced &&
+                    !Custodes11CanShootAfterAdvance(attacker) &&
                         !targetEngaged;
 
                     if (!legalIndirect)

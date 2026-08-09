@@ -262,7 +262,11 @@ public partial class GameController
             return true;
 
         float detectionRange =
-            CoreRules11Terrain.HiddenDetectionRange;
+            CoreRules11Terrain.HiddenDetectionRange +
+            CustodesFactionPack11.DetectionRangeBonus(
+                target.Squad != null
+                    ? target.Squad.JoinedActionController()
+                    : null);
 
         if (Core11GoneToGround(target))
         {
@@ -1874,7 +1878,7 @@ public partial class GameController
                 UniversalRuleRegistry.ApplyFeelNoPain(
                     model.Squad,
                     1,
-                    source
+                    "Mortal Wounds: " + source
                 );
 
             if (afterFnp > 0)

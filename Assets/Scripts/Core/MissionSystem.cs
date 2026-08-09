@@ -1623,7 +1623,8 @@ public class MissionSystem
             return false;
         }
 
-        if (actionUnit.HasAdvanced ||
+        if ((actionUnit.HasAdvanced &&
+             !CustodesFactionPack11.CanStartActionAfterAdvance(actionUnit)) ||
             actionUnit.HasFallenBack)
         {
             reason =

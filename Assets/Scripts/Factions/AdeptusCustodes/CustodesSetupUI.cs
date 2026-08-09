@@ -585,7 +585,26 @@ public sealed class CustodesSetupUI : MonoBehaviour
             return;
         }
 
-        float y = 280f;
+        // Share the same top-right status area used by Aeldari instead of
+        // drawing a faction badge in the middle of the battlefield.
+        int occupiedRows = 0;
+
+        FactionControllerHost host =
+            FactionControllerHost.Instance;
+
+        if (host != null)
+        {
+            occupiedRows =
+                host.Controllers.Values
+                    .OfType<AeldariGameController>()
+                    .Count(
+                        value =>
+                            value != null &&
+                            value.DetachmentLocked
+                    );
+        }
+
+        int custodesRow = 0;
 
         foreach (CustodesGameController controller
             in controllers)
@@ -603,7 +622,8 @@ public sealed class CustodesSetupUI : MonoBehaviour
                 controller.DetachmentPointLimit;
 
             string text =
-                "ADEPTUS CUSTODES • " +
+                controller.FactionId +
+                " • ADEPTUS CUSTODES • " +
                 controller.DetachmentName +
                 " • " +
                 spent +
@@ -620,18 +640,23 @@ public sealed class CustodesSetupUI : MonoBehaviour
 
             float width =
                 Mathf.Min(
-                    670f,
-                    Screen.width - 30f);
+                    760f,
+                    Screen.width - 24f);
+
+            Rect badge =
+                new Rect(
+                    Screen.width - width - 12f,
+                    48f +
+                    (occupiedRows + custodesRow) *
+                    36f,
+                    width - 74f,
+                    30f);
 
             GUI.Box(
-                new Rect(
-                    15f,
-                    y,
-                    width,
-                    32f),
+                badge,
                 text);
 
-            y += 38f;
+            custodesRow++;
         }
     }
 }

@@ -1,0 +1,12 @@
+WARBOARD v43 — FULL ADEPTUS CUSTODES FACTION RULES
+
+Installed against Adeptus Custodes Faction Pack 11e v1.1, July 2026.
+9 detachments / 45 stratagems / 30 enhancements.
+Standard matched-play faction pack only; Crusade and Boarding Actions are not part of v43.
+
+Touched source:
+ - Assets/Scripts/Core\GameController.Setup.cs
+ - Assets/Scripts/Core\GameController.Combat.cs
+ - Assets/Scripts/Core/UniversalRuleEngine.cs
+ - Assets/Scripts/Core/GameController.CoreCompletion11.cs
+ - Assets/Scripts/Core/MissionSystem.cs

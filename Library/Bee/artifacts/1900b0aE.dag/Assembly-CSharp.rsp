@@ -450,7 +450,6 @@
 "Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11.cs"
 "Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11Runtime.cs"
 "Assets/Scripts/Factions/AdeptusCustodes/CustodesGameController.cs"
-"Assets/Scripts/Factions/AdeptusCustodes/CustodesModelTokenCompileShim.cs"
 "Assets/Scripts/Factions/AdeptusCustodes/CustodesSetupUI.cs"
 "Assets/Scripts/Factions/Aeldari/AeldariBattleFocusController.cs"
 "Assets/Scripts/Factions/Aeldari/AeldariDetachmentControllers.cs"
