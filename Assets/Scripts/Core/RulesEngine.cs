@@ -237,6 +237,18 @@ public static class RulesEngine
                     );
             }
 
+            // v41 / 22.05 Plunging Fire improves BS by 1. It does not
+            // apply to attacks made by or targeting AIRCRAFT.
+            if (mode == AttackMode.Ranged &&
+                game != null &&
+                game.Core11PlungingFireApplies(
+                    model,
+                    target
+                ))
+            {
+                skill = Mathf.Max(2, skill - 1);
+            }
+
             bool torrent =
                 HasKeyword(
                     weapon,
@@ -277,7 +289,9 @@ public static class RulesEngine
                 WeaponRuleParser.Has(
                     weapon,
                     "precision"
-                );
+                ) ||
+                (game != null &&
+                 game.Core11HasEpicChallenge(model));
 
             int melta =
                 halfRange

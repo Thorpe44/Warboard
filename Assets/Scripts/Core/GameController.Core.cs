@@ -1288,6 +1288,10 @@ public partial class GameController : MonoBehaviour
 
     private void BeginBattle()
     {
+        if (!Core11PrepareAircraftAndValidateMuster())
+            return;
+
+
         deploymentMode = false;
         SetDeploymentWorldLabelsVisible(true);
         currentDeploymentSquad = null;
@@ -1808,6 +1812,17 @@ public partial class GameController : MonoBehaviour
 
             return;
         }
+
+        if (hit.collider.GetComponent<BoardSurface>() != null &&
+
+            Core11HandleBoardPlacementClick(hit.point))
+
+        {
+
+            return;
+
+        }
+
 
         if (reservePlacementSquad != null &&
             phase == Phase.Move)
@@ -2945,7 +2960,12 @@ public partial class GameController : MonoBehaviour
                 col.GetComponent<TerrainFeature>();
 
             if (terrain != null &&
-                terrain.BlocksMovement)
+                !CoreRules11Terrain.MovementDestinationAllowsTerrain(
+                    movingModel != null && movingModel.Squad != null
+                    ? movingModel.Squad.JoinedActionController()
+                    : null,
+                    terrain
+                ))
             {
                 return false;
             }
@@ -3655,6 +3675,8 @@ public partial class GameController : MonoBehaviour
         ModelToken model,
         SquadController attacker)
     {
+        Core11CheckDestroyedTransportForEmergencyDisembark(model);
+
         if (model == null ||
             model.Squad == null)
         {
@@ -4891,51 +4913,7 @@ public partial class GameController : MonoBehaviour
         ModelToken shooter,
         ModelToken targetModel)
     {
-        Vector3 origin =
-            shooter.transform.position +
-            Vector3.up * 0.5f;
-
-        Vector3 destination =
-            targetModel.transform.position +
-            Vector3.up * 0.5f;
-
-        Vector3 direction =
-            destination -
-            origin;
-
-        float distance =
-            direction.magnitude;
-
-        RaycastHit[] hits =
-            Physics.RaycastAll(
-                origin,
-                direction.normalized,
-                distance
-            );
-
-        foreach (RaycastHit hit
-            in hits.OrderBy(h => h.distance))
-        {
-            ModelToken hitModel =
-                hit.collider.GetComponent<ModelToken>();
-
-            if (hitModel == shooter ||
-                hitModel == targetModel)
-            {
-                continue;
-            }
-
-            TerrainFeature terrain =
-                hit.collider.GetComponent<TerrainFeature>();
-
-            if (terrain != null &&
-                terrain.BlocksLineOfSight)
-            {
-                return false;
-            }
-        }
-
-        return true;
+        return Core11CanSeeModel(shooter, targetModel);
     }
 
     private ModelToken ClosestJoinedModelTo(
@@ -6403,6 +6381,14 @@ public partial class GameController : MonoBehaviour
 
     private void NextPhase()
     {
+        string core11PhaseReason;
+        if (!Core11CanAdvancePhase(out core11PhaseReason))
+        {
+            status = core11PhaseReason;
+            return;
+        }
+
+
         // v40 / 11e 12: Pile In, Fight and Consolidate are distinct
         // phase-wide steps and cannot be bypassed with NEXT PHASE.
         if (phase == Phase.Fight)

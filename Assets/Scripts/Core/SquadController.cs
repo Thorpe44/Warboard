@@ -6,7 +6,8 @@ public enum SquadBattlefieldState
 {
     Undeployed,
     Battlefield,
-    Reserves
+    Reserves,
+    Embarked
 }
 
 public class SquadController : MonoBehaviour
@@ -56,6 +57,30 @@ public class SquadController : MonoBehaviour
     public bool IsInReserves
     {
         get { return BattlefieldState == SquadBattlefieldState.Reserves; }
+    }
+
+    private readonly List<SquadController>
+        embarkedPassengers =
+            new List<SquadController>();
+
+    public SquadController EmbarkedTransport
+    {
+        get;
+        private set;
+    }
+
+    public IReadOnlyList<SquadController> EmbarkedPassengers
+    {
+        get { return embarkedPassengers; }
+    }
+
+    public bool IsEmbarked
+    {
+        get
+        {
+            return BattlefieldState ==
+                SquadBattlefieldState.Embarked;
+        }
     }
 
     public bool HasMoved { get; set; }
@@ -631,6 +656,8 @@ public class SquadController : MonoBehaviour
 
     public void StageForDeployment()
     {
+        ClearEmbarkmentLinks();
+
         BattlefieldState =
             SquadBattlefieldState.Undeployed;
 
@@ -640,6 +667,8 @@ public class SquadController : MonoBehaviour
     public void SendToReserves(
         bool repositioned = false)
     {
+        ClearEmbarkmentLinks();
+
         BattlefieldState =
             SquadBattlefieldState.Reserves;
 
@@ -670,6 +699,8 @@ public class SquadController : MonoBehaviour
     public void DeployToBattlefield(
         Vector3 rootPosition)
     {
+        ClearEmbarkmentLinks();
+
         transform.position =
             rootPosition;
 
@@ -1068,12 +1099,20 @@ public class SquadController : MonoBehaviour
         SquadController actionUnit =
             JoinedActionController();
 
-        return
+        float allowance =
             model.Squad.GetMove() +
             actionUnit.BattleFocusMoveBonus +
             (actionUnit.HasAdvanced
                 ? actionUnit.AdvanceBonus
                 : 0);
+
+        if (CoreRules11FlightRegistry
+            .IsTakingToSkies(actionUnit))
+        {
+            allowance -= 2f;
+        }
+
+        return Mathf.Max(0f, allowance);
     }
 
     public int BestLeadership()
@@ -2267,4 +2306,119 @@ public class SquadController : MonoBehaviour
             new Vector2(b.x, b.z)
         );
     }
+    public bool EmbarkWithin(
+        SquadController transport)
+    {
+        SquadController actionUnit =
+            JoinedActionController();
+
+        if (transport == null ||
+            actionUnit == transport ||
+            !actionUnit.IsAlive)
+        {
+            return false;
+        }
+
+        transport = transport.JoinedActionController();
+
+        actionUnit.ClearEmbarkmentLinks();
+
+        actionUnit.EmbarkedTransport = transport;
+        actionUnit.BattlefieldState =
+            SquadBattlefieldState.Embarked;
+
+        if (!transport.embarkedPassengers.Contains(
+                actionUnit))
+        {
+            transport.embarkedPassengers.Add(
+                actionUnit
+            );
+        }
+
+        actionUnit.SetModelPresentation(false);
+        actionUnit.SetSelected(false);
+
+        if (actionUnit.AttachedLeader != null &&
+            actionUnit.AttachedLeader.IsAlive)
+        {
+            SquadController leader =
+                actionUnit.AttachedLeader;
+
+            leader.EmbarkedTransport = transport;
+            leader.BattlefieldState =
+                SquadBattlefieldState.Embarked;
+            leader.SetModelPresentation(false);
+            leader.SetSelected(false);
+        }
+
+        return true;
+    }
+
+    public void DisembarkFromTransport(
+        Vector3 rootPosition)
+    {
+        SquadController actionUnit =
+            JoinedActionController();
+
+        SquadController transport =
+            actionUnit.EmbarkedTransport;
+
+        if (transport != null)
+        {
+            transport.embarkedPassengers.Remove(
+                actionUnit
+            );
+        }
+
+        actionUnit.EmbarkedTransport = null;
+        actionUnit.BattlefieldState =
+            SquadBattlefieldState.Battlefield;
+        actionUnit.transform.position = rootPosition;
+        actionUnit.SetModelPresentation(true);
+
+        if (actionUnit.AttachedLeader != null)
+        {
+            SquadController leader = actionUnit.AttachedLeader;
+            leader.EmbarkedTransport = null;
+            leader.BattlefieldState =
+                SquadBattlefieldState.Battlefield;
+            leader.transform.position =
+                rootPosition + new Vector3(1.1f, 0f, 0f);
+            leader.SetModelPresentation(true);
+        }
+    }
+
+    public void ReembarkAfterFailedDisembark(
+        SquadController transport)
+    {
+        if (transport == null)
+            return;
+
+        EmbarkWithin(transport);
+    }
+
+    private void ClearEmbarkmentLinks()
+    {
+        SquadController actionUnit =
+            IsAttachedLeader &&
+            AttachedBodyguard != null
+            ? AttachedBodyguard
+            : this;
+
+        if (actionUnit.EmbarkedTransport != null)
+        {
+            actionUnit.EmbarkedTransport
+                .embarkedPassengers
+                .Remove(actionUnit);
+        }
+
+        actionUnit.EmbarkedTransport = null;
+
+        if (actionUnit.AttachedLeader != null)
+        {
+            actionUnit.AttachedLeader
+                .EmbarkedTransport = null;
+        }
+    }
+
 }

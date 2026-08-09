@@ -1725,82 +1725,14 @@ public partial class GameController : MonoBehaviour
         ModelToken shooter,
         SquadController target)
     {
-        if (shooter == null ||
-            target == null)
-        {
-            return false;
-        }
-
-        List<ModelToken> targetModels =
-            JoinedModels(target);
-
-        if (targetModels.Count == 0)
-            return false;
-
-        return targetModels.All(
-            model =>
-                TargetModelHasCoverFromShooter(
-                    shooter,
-                    model
-                )
-        );
+        return Core11TargetUnitHasCoverFromShooter(shooter, target);
     }
 
     public bool TargetModelHasCoverFromShooter(
         ModelToken shooter,
         ModelToken targetModel)
     {
-        if (shooter == null ||
-            targetModel == null)
-        {
-            return false;
-        }
-
-        Vector3 origin =
-            shooter.transform.position +
-            Vector3.up * 0.5f;
-
-        Vector3 destination =
-            targetModel.transform.position +
-            Vector3.up * 0.5f;
-
-        Vector3 direction =
-            destination -
-            origin;
-
-        float distance =
-            direction.magnitude;
-
-        RaycastHit[] hits =
-            Physics.RaycastAll(
-                origin,
-                direction.normalized,
-                distance
-            );
-
-        foreach (RaycastHit hit
-            in hits.OrderBy(h => h.distance))
-        {
-            ModelToken hitModel =
-                hit.collider.GetComponent<ModelToken>();
-
-            if (hitModel == shooter ||
-                hitModel == targetModel)
-            {
-                continue;
-            }
-
-            TerrainFeature terrain =
-                hit.collider.GetComponent<TerrainFeature>();
-
-            if (terrain != null &&
-                terrain.GrantsCover)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        return Core11TargetModelHasCoverFromShooter(shooter, targetModel);
     }
 
     public int ApplyMortalWounds(

@@ -1,0 +1,20 @@
+WARBOARD v42 PATCH MANIFEST
+
+Faction catalogue: 78 Stratagems / 52 Enhancements
+
+Assets/Editor/WarboardV42AeldariFactionRules.cs
+Assets/Editor/WarboardV42AeldariFactionRules.cs.meta
+Assets/Scripts/Core/GameController.AeldariFaction11.cs
+Assets/Scripts/Core/GameController.AeldariFaction11.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+Assets/Scripts/Factions/Aeldari/AeldariBattleFocusController.cs
+Assets/Scripts/Factions/Aeldari/AeldariBattleFocusController.cs.meta
+Assets/Scripts/Factions/Aeldari/AeldariFactionPack11.cs
+Assets/Scripts/Factions/Aeldari/AeldariFactionPack11.cs.meta
+Assets/Scripts/Factions/Aeldari/AeldariFactionPack11Runtime.cs
+Assets/Scripts/Factions/Aeldari/AeldariFactionPack11Runtime.cs.meta
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs.meta
+README_V42.md
+V42_PATCH_MANIFEST.txt

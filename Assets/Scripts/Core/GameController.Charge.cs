@@ -50,6 +50,16 @@ public partial class GameController : MonoBehaviour
         SquadController attacker,
         SquadController target)
     {
+        if (!Core11AircraftChargeAllowed(attacker, target))
+            return;
+
+        if (attacker != null && core11CannotChargeThisTurn.Contains(attacker.JoinedActionController()))
+        {
+            status = attacker.DisplayName + " cannot declare a charge this turn.";
+            return;
+        }
+
+
         if (missionSystem != null &&
             missionSystem.UnitHasStartedAction(
                 attacker))
@@ -348,6 +358,14 @@ public partial class GameController : MonoBehaviour
         bool wasRerolled,
         int previousRoll)
     {
+        // v41 / 21.03 Take to the Skies reduces the maximum
+        // distance of this Charge move by 2 inches.
+        if (attacker != null &&
+            CoreRules11FlightRegistry.IsTakingToSkies(attacker))
+        {
+            roll = Mathf.Max(0, roll - 2);
+        }
+
         if (attacker == null ||
             target == null ||
             !attacker.IsAlive ||

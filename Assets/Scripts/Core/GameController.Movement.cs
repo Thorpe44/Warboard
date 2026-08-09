@@ -1110,6 +1110,13 @@ public partial class GameController : MonoBehaviour
 
     private void TryDeclareAdvance()
     {
+        if (selectedSquad != null && selectedSquad.HasKeyword("AIRCRAFT"))
+        {
+            status = "AIRCRAFT units are only eligible to make an Ingress move.";
+            return;
+        }
+
+
         if (phase != Phase.Move ||
             selectedSquad == null ||
             !selectedSquad.IsAlive ||
@@ -1121,7 +1128,7 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
-        if (IsEngaged(selectedSquad))
+        if (Core11IsEngagedForNormalMovement(selectedSquad))
         {
             status =
                 "Engaged units cannot Advance.";
@@ -1287,6 +1294,12 @@ public partial class GameController : MonoBehaviour
 
     private void TryMoveSelectedModel(Vector3 destination)
     {
+        if (selectedSquad != null && selectedSquad.HasKeyword("AIRCRAFT"))
+        {
+            status = "AIRCRAFT units are only eligible to make an Ingress move.";
+            return;
+        }
+
         if (selectedSquad == null ||
             selectedModel == null ||
             !selectedModel.IsAlive)
@@ -1294,8 +1307,14 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
+        if (!Core11NormalMovePathIsClear(selectedModel, destination))
+        {
+            status = "That movement path is blocked by terrain or an enemy model.";
+            return;
+        }
+
         bool wasEngagedBeforeMove =
-            IsEngaged(selectedSquad);
+            Core11IsEngagedForNormalMovement(selectedSquad);
 
         List<SquadController> enemiesEngagedBeforeMove =
             wasEngagedBeforeMove
@@ -1394,6 +1413,12 @@ public partial class GameController : MonoBehaviour
 
     private void TryMoveWholeSquad(Vector3 destination)
     {
+        if (selectedSquad != null && selectedSquad.HasKeyword("AIRCRAFT"))
+        {
+            status = "AIRCRAFT units are only eligible to make an Ingress move.";
+            return;
+        }
+
         if (selectedSquad == null ||
             !wholeSquadMoveMode ||
             !selectedSquad.IsAlive)
@@ -1402,7 +1427,7 @@ public partial class GameController : MonoBehaviour
         }
 
         bool wasEngagedBeforeMove =
-            IsEngaged(selectedSquad);
+            Core11IsEngagedForNormalMovement(selectedSquad);
 
         List<SquadController> enemiesEngagedBeforeMove =
             wasEngagedBeforeMove
@@ -1440,6 +1465,12 @@ public partial class GameController : MonoBehaviour
             currentCentre;
 
         delta.y = 0f;
+
+        if (!Core11WholeSquadPathIsClear(selectedSquad, delta))
+        {
+            status = "That whole-unit movement path is blocked by terrain or enemy models.";
+            return;
+        }
 
         if (!selectedSquad
             .CanTranslateWithinNormalMove(delta))
@@ -1533,6 +1564,14 @@ public partial class GameController : MonoBehaviour
         Vector3 destination,
         bool ignoreEnemyModels = false)
     {
+        if (movingModel != null &&
+            movingModel.Squad != null &&
+            CoreRules11FlightRegistry.IsTakingToSkies(
+                movingModel.Squad.JoinedActionController()))
+        {
+            return true;
+        }
+
         Vector3 flat =
             destination -
             start;
@@ -1618,7 +1657,12 @@ public partial class GameController : MonoBehaviour
                         col.GetComponent<TerrainFeature>();
 
                     if (terrain != null &&
-                        terrain.BlocksMovement)
+                !CoreRules11Terrain.MovementDestinationAllowsTerrain(
+                    movingModel != null && movingModel.Squad != null
+                    ? movingModel.Squad.JoinedActionController()
+                    : null,
+                    terrain
+                ))
                     {
                         return false;
                     }
@@ -1699,9 +1743,7 @@ public partial class GameController : MonoBehaviour
         }
 
         SquadController target =
-            FindNearestEnemy(
-                squad
-            );
+            Core11FindNearestSurgeEnemy(squad);
 
         if (target == null)
         {

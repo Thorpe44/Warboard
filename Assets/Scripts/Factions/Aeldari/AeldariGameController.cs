@@ -69,6 +69,16 @@ public sealed class AeldariGameController :
         get { return "Aeldari"; }
     }
 
+    public GameController OwnerGame
+    {
+        get { return Game; }
+    }
+
+    public IReadOnlyList<SquadController> ArmyUnits
+    {
+        get { return army.ToArray(); }
+    }
+
     public AeldariRulesSystem Rules
     {
         get
@@ -201,6 +211,8 @@ public sealed class AeldariGameController :
         battleFocus.Initialize(
             game,
             factionId);
+
+        AeldariFactionPack11Runtime.Register(this);
     }
 
 public override void RefreshArmy(
@@ -213,6 +225,7 @@ public override void RefreshArmy(
 
     ResolveRosterDetachmentMetadata();
     SynchronizeDetachmentState();
+    AeldariFactionPack11Runtime.SynchronizePersistent(this);
 }
 
 public override void OnGameEvent(
@@ -240,23 +253,36 @@ public override void OnGameEvent(
                 break;
         }
 
-        if (!EventConcernsFaction(
-                context) &&
-            context.Type !=
-                GameEventType.BattleRoundStarted &&
-            context.Type !=
-                GameEventType.BattleRoundEnded &&
-            context.Type !=
-                GameEventType.PhaseEnded)
-        {
-            return;
-        }
-
         if (context.Type ==
-                GameEventType.UnitSetUp)
+                GameEventType.UnitSetUp &&
+            context.Source != null &&
+            string.Equals(
+                context.Source.FactionId,
+                FactionId,
+                StringComparison.OrdinalIgnoreCase))
         {
             SynchronizeDetachmentState();
         }
+
+        // The 11e faction pack contains reactions to opponent movement,
+        // opponent Fall Back moves and opponent turn/phase endings. Route the
+        // global event stream to the faction runtime and let each rule apply
+        // its own WHEN/TARGET filters.
+        AeldariFactionPack11Runtime.HandleFactionEvent(
+            this,
+            context);
+
+        bool concernsFaction =
+            EventConcernsFaction(context) ||
+            context.Type == GameEventType.BattleRoundStarted ||
+            context.Type == GameEventType.BattleRoundEnded ||
+            context.Type == GameEventType.PhaseStarted ||
+            context.Type == GameEventType.PhaseEnded ||
+            context.Type == GameEventType.TurnStarted ||
+            context.Type == GameEventType.TurnEnded;
+
+        if (!concernsFaction)
+            return;
 
         foreach (IAeldariDetachmentController controller
             in detachmentControllers.ToArray())
@@ -488,12 +514,24 @@ public bool SpendBattleFocus(
         int amount,
         string manoeuvre = "")
     {
+        return SpendBattleFocus(
+            amount,
+            manoeuvre,
+            null);
+    }
+
+public bool SpendBattleFocus(
+        int amount,
+        string manoeuvre,
+        SquadController unit)
+    {
         string failureReason;
 
         bool spent =
             battleFocus.Spend(
                 amount,
                 manoeuvre,
+                unit,
                 out failureReason);
 
         if (!spent &&
@@ -505,6 +543,12 @@ public bool SpendBattleFocus(
         }
 
         return spent;
+    }
+
+public void AddBattleFocusTokens(
+        int amount)
+    {
+        battleFocus.AddTokens(amount);
     }
 
 public void EndBattleRound()
@@ -1084,6 +1128,9 @@ private void SynchronizeDetachmentState()
     }
 
     LoadDetachmentControllers();
+    AeldariFactionPack11Runtime.SynchronizePersistent(this);
+    if (Game != null)
+        Game.Aeldari11SynchronizeFaction(this);
 }
 
 

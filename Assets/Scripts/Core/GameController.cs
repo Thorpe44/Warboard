@@ -400,6 +400,8 @@ public partial class GameController : MonoBehaviour
 
     private void Start()
     {
+        Core11Install();
+
         DiceRoller.Rolled +=
             HandleLoggedDiceRoll;
 
@@ -420,6 +422,8 @@ public partial class GameController : MonoBehaviour
 
     private void OnDestroy()
     {
+        Core11Uninstall();
+
         UnbindAsCurrent();
 
         DiceRoller.Rolled -=

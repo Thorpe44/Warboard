@@ -1,0 +1,25 @@
+Warboard v41 - Core Rules Completion
+2026-08-09 19:13:59Z
+
+Installed direct 11e systems:
+- terrain categories, cover, Hidden/detection, obscuring/solid LOS approximation, Plunging Fire
+- transports: capacity parsing, embark, disembark, emergency disembark, dedicated transport formation gate
+- Fly: Take to the Skies -2 move and terrain/model pass-through path handling
+- Aircraft: reserves lifecycle, charge/fight restrictions, movement interactions
+- core Stratagem completion: preserved Command Re-roll/Fire Overwatch and added Epic Challenge, Insane Bravery, Explosives, Crushing Impact, Rapid Ingress, Smokescreen, Heroic Intervention and Counteroffensive
+- muster validation: points, enhancements, Warlord, unit limits, Battleline/Dedicated Transport doubling, Epic Hero limit
+
+Touched/generated files:
+- Assets/Scripts/Core/CoreRules11Completion.cs
+- Assets/Scripts/Core/GameController.CoreCompletion11.cs
+- Assets/Scripts/Core/SquadController.cs
+- Assets/Scripts/Core/GameController.cs
+- Assets/Scripts/Core/GameController.Core.cs
+- Assets/Scripts/Core/GameController.Combat.cs
+- Assets/Scripts/Core/GameController.Charge.cs
+- Assets/Scripts/Core/GameController.Movement.cs
+- Assets/Scripts/Core/GameController.UI.cs
+- Assets/Scripts/Core/GameController.Traditional.cs
+- Assets/Scripts/Core/RulesEngine.cs
+- Assets/Scripts/Core/InteractiveAttackController.cs
+- Assets/Scripts/Core/GameController.Fight11.cs

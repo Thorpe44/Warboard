@@ -1305,6 +1305,16 @@ public class InteractiveAttackController
                     6
                 );
 
+            if (mode == AttackMode.Ranged &&
+                game != null &&
+                game.Core11PlungingFireApplies(
+                    first.model,
+                    target
+                ))
+            {
+                volley.skill = Mathf.Max(2, volley.skill - 1);
+            }
+
             volley.hitRollModifier =
                 universal.hitRollModifier;
 
@@ -1426,6 +1436,9 @@ public class InteractiveAttackController
                     weapon,
                     "precision"
                 );
+            volley.precision = volley.precision ||
+                (game != null &&
+                 game.Core11HasEpicChallenge(first.model));
 
             volley.effectiveStrength =
                 weapon.strength;

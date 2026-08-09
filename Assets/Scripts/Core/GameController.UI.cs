@@ -6997,6 +6997,8 @@ public partial class GameController : MonoBehaviour
         float x =
             bar.x + 10f;
 
+        DrawCore11ContextControls(bar, ref x);
+
         if (selectedSquad != null)
         {
             GUI.Label(

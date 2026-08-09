@@ -290,6 +290,12 @@ public partial class GameController
         string faction,
         bool fightsFirstOnly)
     {
+        List<SquadController> core11Forced =
+            Core11ForcedFightSelection(faction, fightsFirstOnly);
+        if (core11Forced != null)
+            return core11Forced;
+
+
         Fight11RefreshEverEligible();
 
         return squads
@@ -455,6 +461,14 @@ public partial class GameController
         SquadController attacker,
         SquadController target)
     {
+        if (attacker != null && target != null &&
+            !CoreRules11Aircraft.CanFightTarget(attacker, target))
+        {
+            status = "AIRCRAFT melee can only interact with FLYING units/models.";
+            return;
+        }
+
+
         if (attacker == null || target == null)
             return;
 
@@ -1102,6 +1116,9 @@ public partial class GameController
             Fight11ContinueForcedConsolidationFights();
             return;
         }
+
+        if (Core11CounteroffensiveDecisionIsPending(completed))
+            return;
 
         Fight11AdvanceFightPriority(completed);
     }
@@ -1852,6 +1869,7 @@ public partial class GameController
                     enemy.IsOnBattlefield &&
                     !enemy.IsAttachedLeader &&
                     enemy.FactionId != unit.FactionId &&
+                    CoreRules11Aircraft.CanFightTarget(unit, enemy) &&
                     UnitsAreEngaged(unit, enemy)
             )
             .Select(enemy => enemy.JoinedActionController())
@@ -1876,6 +1894,7 @@ public partial class GameController
                     enemy.IsOnBattlefield &&
                     !enemy.IsAttachedLeader &&
                     enemy.FactionId != unit.FactionId &&
+                    CoreRules11Aircraft.CanFightTarget(unit, enemy) &&
                     Fight11UnitDistance(unit, enemy) <= inches + 0.001f
             )
             .Select(enemy => enemy.JoinedActionController())

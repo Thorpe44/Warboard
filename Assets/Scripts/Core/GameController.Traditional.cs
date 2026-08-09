@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -228,6 +228,12 @@ public partial class GameController : MonoBehaviour
 
             traditionalBattleShockPending =
                 true;
+
+            if (Core11OfferInsaneBraveryForTraditionalBattleShock(
+                    traditionalBattleShockUnit))
+            {
+                return;
+            }
 
             OpenTraditionalDicePrompt(
                 2
