@@ -409,6 +409,7 @@
 "Assets/Scripts/Core/GameController.Core.cs"
 "Assets/Scripts/Core/GameController.CoreRules11.cs"
 "Assets/Scripts/Core/GameController.Fight.cs"
+"Assets/Scripts/Core/GameController.Fight11.cs"
 "Assets/Scripts/Core/GameController.Missions.cs"
 "Assets/Scripts/Core/GameController.Movement.cs"
 "Assets/Scripts/Core/GameController.Rules.cs"

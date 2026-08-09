@@ -6403,6 +6403,18 @@ public partial class GameController : MonoBehaviour
 
     private void NextPhase()
     {
+        // v40 / 11e 12: Pile In, Fight and Consolidate are distinct
+        // phase-wide steps and cannot be bypassed with NEXT PHASE.
+        if (phase == Phase.Fight)
+        {
+            string fight11Reason;
+            if (!Fight11CanLeaveFightPhase(out fight11Reason))
+            {
+                status = fight11Reason;
+                return;
+            }
+        }
+
         if (traditionalAttackPending)
         {
             status =

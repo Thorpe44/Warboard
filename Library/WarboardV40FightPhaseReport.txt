@@ -1,0 +1,15 @@
+Warboard v40 - 11e Fight Phase Compliance
+2026-08-09 18:10:12Z
+
+Installed phase-wide steps:
+1. Pile In - active player all moves, then opponent
+2. Fight - Fights First then Remaining, alternating
+3. Consolidate - active player all moves, then opponent
+4. Normal Fight / Overrun Fight selection
+5. Ongoing / Engaging / Objective Consolidation
+6. New Foes To Face forced fights from Engaging Consolidation
+
+Touched files:
+- Assets/Scripts/Core\GameController.Fight.cs
+- Assets/Scripts/Core\GameController.UI.cs
+- Assets/Scripts/Core\GameController.Core.cs

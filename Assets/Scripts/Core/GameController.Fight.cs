@@ -229,21 +229,7 @@ public partial class GameController : MonoBehaviour
 
     private void BeginFightSequence()
     {
-        ClearFightActivationState();
-
-        fightSequenceActive = true;
-        fightPriorityStep =
-            FightPriorityStep.FightsFirst;
-        fightSelectionFaction =
-            activeFaction;
-
-        ResolveFightSelector(
-            activeFaction
-        );
-
-        status +=
-            " | " +
-            FightPriorityText();
+        Fight11BeginPileInStep();
     }
 
     private bool UnitHasFightsFirst(
@@ -267,212 +253,36 @@ public partial class GameController : MonoBehaviour
     private bool IsEligibleToFightNow(
         SquadController unit)
     {
-        if (unit == null ||
-            unit.IsAttachedLeader ||
-            !unit.IsAlive ||
-            !unit.IsOnBattlefield ||
-            unit.HasFought)
-        {
-            return false;
-        }
-
-        SquadController actionUnit =
-            unit.JoinedActionController();
-
-        bool rulesEligible =
-            IsEngaged(actionUnit) ||
-            actionUnit.MadeChargeMove ||
-            fightEligibleAtStart.Contains(
-                actionUnit
-            );
-
-        if (!rulesEligible)
-            return false;
-
-        return squads.Any(
-            enemy =>
-                enemy != null &&
-                enemy.IsAlive &&
-                enemy.IsOnBattlefield &&
-                !enemy.IsAttachedLeader &&
-                enemy.FactionId !=
-                    actionUnit.FactionId &&
-                JoinedDistance(
-                    actionUnit,
-                    enemy
-                ) <=
-                    EngagementRange +
-                    6.05f
-        );
+        return Fight11IsEligibleToFightNow(unit);
     }
 
     private List<SquadController> EligibleFightUnits(
         string faction,
         bool fightsFirstOnly)
     {
-        return squads
-            .Where(
-                unit =>
-                    unit != null &&
-                    !unit.IsAttachedLeader &&
-                    unit.FactionId == faction &&
-                    IsEligibleToFightNow(
-                        unit
-                    ) &&
-                    (!fightsFirstOnly ||
-                     UnitHasFightsFirst(
-                        unit
-                     ))
-            )
-            .ToList();
+        return Fight11EligibleFightUnits(faction, fightsFirstOnly);
     }
 
     private bool AnyEligibleFightUnits()
     {
-        return squads.Any(
-            unit =>
-                unit != null &&
-                !unit.IsAttachedLeader &&
-                IsEligibleToFightNow(
-                    unit
-                )
-        );
+        return Fight11AnyEligibleFightUnits();
     }
 
     private void ResolveFightSelector(
         string preferredFaction)
     {
-        if (!fightSequenceActive)
-            return;
-
-        if (fightPriorityStep ==
-            FightPriorityStep.FightsFirst)
-        {
-            List<SquadController> allFirst =
-                squads
-                    .Where(
-                        unit =>
-                            unit != null &&
-                            !unit.IsAttachedLeader &&
-                            IsEligibleToFightNow(
-                                unit
-                            ) &&
-                            UnitHasFightsFirst(
-                                unit
-                            )
-                    )
-                    .ToList();
-
-            if (allFirst.Count > 0)
-            {
-                if (EligibleFightUnits(
-                        preferredFaction,
-                        true
-                    ).Count > 0)
-                {
-                    fightSelectionFaction =
-                        preferredFaction;
-                    return;
-                }
-
-                string other =
-                    OtherFaction(
-                        preferredFaction
-                    );
-
-                if (EligibleFightUnits(
-                        other,
-                        true
-                    ).Count > 0)
-                {
-                    fightSelectionFaction = other;
-                    return;
-                }
-            }
-
-            fightPriorityStep =
-                FightPriorityStep.Remaining;
-        }
-
-        if (!AnyEligibleFightUnits())
-        {
-            fightSequenceActive = false;
-            fightPriorityStep =
-                FightPriorityStep.None;
-            fightSelectionFaction = "";
-            return;
-        }
-
-        if (EligibleFightUnits(
-                preferredFaction,
-                false
-            ).Count > 0)
-        {
-            fightSelectionFaction =
-                preferredFaction;
-            return;
-        }
-
-        string fallback =
-            OtherFaction(
-                preferredFaction
-            );
-
-        if (EligibleFightUnits(
-                fallback,
-                false
-            ).Count > 0)
-        {
-            fightSelectionFaction =
-                fallback;
-            return;
-        }
-
-        fightSequenceActive = false;
-        fightPriorityStep =
-            FightPriorityStep.None;
-        fightSelectionFaction = "";
+        Fight11ResolveFightSelector(preferredFaction);
     }
 
     private void AdvanceFightPriority(
         SquadController unitThatFought)
     {
-        if (!fightSequenceActive ||
-            unitThatFought == null)
-        {
-            return;
-        }
-
-        string next =
-            OtherFaction(
-                unitThatFought.FactionId
-            );
-
-        ResolveFightSelector(
-            next
-        );
-
-        status +=
-            " | " +
-            FightPriorityText();
+        Fight11AdvanceFightPriority(unitThatFought);
     }
 
     private string FightPriorityText()
     {
-        if (!fightSequenceActive)
-            return "Fight sequence complete";
-
-        return
-            "Fight priority: " +
-            (fightPriorityStep ==
-                FightPriorityStep.FightsFirst
-                ? "FIGHTS FIRST"
-                : "REMAINING") +
-            " — " +
-            DisplayFactionName(
-                fightSelectionFaction
-            ) +
-            " selects";
+        return Fight11FightPriorityText();
     }
 
     private void ExecuteFight(
@@ -542,111 +352,7 @@ public partial class GameController : MonoBehaviour
         Vector3 destination,
         out string reason)
     {
-        reason = "";
-
-        if (!ModelBelongsToFightActivation(
-                model) ||
-            (fightActivationStage !=
-                FightActivationStage.PileIn &&
-             fightActivationStage !=
-                FightActivationStage.Consolidate))
-        {
-            reason =
-                "No pile-in/consolidation move is active for that model.";
-            return false;
-        }
-
-        Vector3 start;
-
-        if (!fightStageStartPositions
-            .TryGetValue(
-                model,
-                out start))
-        {
-            start =
-                model.transform.position;
-        }
-
-        destination.y =
-            model.transform.position.y;
-
-        float moveDistance =
-            HorizontalDistance(
-                start,
-                destination
-            );
-
-        float limit =
-            FightStageMoveLimit();
-
-        if (moveDistance >
-            limit + 0.001f)
-        {
-            reason =
-                "That move exceeds the " +
-                limit.ToString("0.#") +
-                "″ " +
-                (fightActivationStage ==
-                    FightActivationStage.PileIn
-                    ? "pile-in"
-                    : "consolidation") +
-                " allowance.";
-            return false;
-        }
-
-        if (!InsideBoard(destination))
-        {
-            reason =
-                "That model would leave the battlefield.";
-            return false;
-        }
-
-        if (!CanPlaceModel(
-                model,
-                destination))
-        {
-            reason =
-                "That model cannot legally occupy that position.";
-            return false;
-        }
-
-        if (!CombatMovePathIsClear(
-                model,
-                model.transform.position,
-                destination))
-        {
-            reason =
-                "The combat move path is blocked.";
-            return false;
-        }
-
-        float startEnemy =
-            DistancePointToClosestEnemyModel(
-                start,
-                fightActivationUnit.FactionId
-            );
-
-        float endEnemy =
-            DistancePointToClosestEnemyModel(
-                destination,
-                fightActivationUnit.FactionId
-            );
-
-        if (startEnemy <
-                float.MaxValue &&
-            endEnemy >=
-                startEnemy - 0.001f)
-        {
-            reason =
-                fightActivationStage ==
-                    FightActivationStage.PileIn
-                ? "A pile-in model must finish closer to the nearest enemy model."
-                : "A consolidating model must finish closer to the nearest enemy model.";
-
-            return false;
-        }
-
-        return true;
+        return Fight11FightStageDestinationLegal(model, destination, out reason);
     }
 
     private void TryFightStageMoveSelectedModel(
@@ -728,68 +434,7 @@ public partial class GameController : MonoBehaviour
         SquadController attacker,
         SquadController target)
     {
-        if (attacker == null ||
-            target == null)
-        {
-            return;
-        }
-
-        fightActivationUnit =
-            attacker.JoinedActionController();
-
-        fightActivationInitialTarget =
-            target.JoinedActionController();
-
-        NotifyUnitSelectedToFight(
-            fightActivationUnit,
-            fightActivationInitialTarget);
-
-        fightActivationStage =
-            FightActivationStage.PileIn;
-
-        fightModelsResolvedThisActivation.Clear();
-
-        CaptureFightStageStartPositions();
-
-        selectedSquad =
-            fightActivationUnit;
-
-        if (!ModelBelongsToFightActivation(
-                selectedModel))
-        {
-            selectedModel =
-                JoinedModels(
-                    fightActivationUnit)
-                    .FirstOrDefault(
-                        model =>
-                            model != null &&
-                            model.IsAlive
-                    );
-        }
-
-        if (selectedModel != null)
-        {
-            SelectModelForAction(
-                fightActivationUnit,
-                selectedModel
-            );
-        }
-
-        AppendBattleLog(
-            "FIGHT",
-            fightActivationUnit.DisplayName +
-            " activation",
-            "PILE-IN started against " +
-            fightActivationInitialTarget.DisplayName +
-            ". Player moves models individually before resolving model-level melee attacks."
-        );
-
-        status =
-            "PILE-IN: " +
-            fightActivationUnit.DisplayName +
-            ". Select each model and click its destination. Hold ALT for the live distance ruler. Click DONE PILE-IN when the unit is coherent.";
-
-        RefreshMoveRing();
+        Fight11BeginNormalFight(attacker, target, false);
     }
 
     private void ClearFightModelFocus()
@@ -813,52 +458,7 @@ public partial class GameController : MonoBehaviour
 
     private void CompleteFightPileIn()
     {
-        if (fightActivationStage !=
-                FightActivationStage.PileIn ||
-            fightActivationUnit == null)
-        {
-            return;
-        }
-
-        if (!fightActivationUnit.IsCoherent())
-        {
-            status =
-                "Cannot finish pile-in: the unit is out of coherency.";
-            return;
-        }
-
-        if (!AllModelsInsideBoard(
-                fightActivationUnit) ||
-            !AllModelsHaveLegalPlacement(
-                fightActivationUnit))
-        {
-            status =
-                "Cannot finish pile-in: one or more models are in an illegal position.";
-            return;
-        }
-
-        fightActivationStage =
-            FightActivationStage.Attacks;
-
-        fightPreparedAttackModel = null;
-        fightPreparedMeleeWeapon = null;
-
-        fightStageStartPositions.Clear();
-        fightStageMovedModels.Clear();
-
-        selectedModel = null;
-        ClearFightModelFocus();
-
-        AppendBattleLog(
-            "FIGHT",
-            fightActivationUnit.DisplayName,
-            "Pile-in complete. Model-level melee attack selection started."
-        );
-
-        status =
-            "MELEE ATTACKS: click the exact fighting model, choose its melee weapon/profile, then click an enemy target. Extra Attacks profiles are added automatically.";
-
-        RefreshMoveRing();
+        Fight11CompletePileIn();
     }
 
     private List<ModelToken>
@@ -1240,228 +840,27 @@ public partial class GameController : MonoBehaviour
     private void CompleteFightModelAttack(
         ModelToken model)
     {
-        if (model != null)
-        {
-            fightModelsResolvedThisActivation.Add(
-                model
-            );
-        }
-
-        fightPreparedAttackModel = null;
-        fightPreparedMeleeWeapon = null;
-
-        if (fightActivationStage !=
-            FightActivationStage.Attacks)
-        {
-            return;
-        }
-
-        ClearFightModelFocus();
-
-        selectedModel = null;
-
-        int remaining =
-            FightPotentialAttackModels()
-                .Count(
-                    candidate =>
-                        !fightModelsResolvedThisActivation
-                            .Contains(
-                                candidate)
-                );
-
-        if (remaining <= 0)
-        {
-            BeginFightConsolidation();
-            return;
-        }
-
-        status =
-            "MELEE: model resolved. " +
-            remaining +
-            " fighting model(s) remain. Select the next model, or click DONE ATTACKS.";
-
-        RefreshMoveRing();
+        Fight11CompleteFightModelAttack(model);
     }
 
     private void SkipSelectedFightModel()
     {
-        if (fightActivationStage !=
-                FightActivationStage.Attacks ||
-            !ModelBelongsToFightActivation(
-                selectedModel))
-        {
-            return;
-        }
-
-        string role =
-            selectedModel.RoleName;
-
-        fightModelsResolvedThisActivation.Add(
-            selectedModel
-        );
-
-        fightPreparedAttackModel = null;
-        fightPreparedMeleeWeapon = null;
-        selectedModel = null;
-
-        ClearFightModelFocus();
-
-        AppendBattleLog(
-            "FIGHT",
-            fightActivationUnit != null
-                ? fightActivationUnit.DisplayName
-                : "Unit",
-            role +
-            " marked DONE without resolving a melee attack."
-        );
-
-        int remaining =
-            FightPotentialAttackModels()
-                .Count(
-                    candidate =>
-                        !fightModelsResolvedThisActivation
-                            .Contains(
-                                candidate)
-                );
-
-        if (remaining <= 0)
-        {
-            BeginFightConsolidation();
-            return;
-        }
-
-        status =
-            role +
-            " marked DONE. " +
-            remaining +
-            " model(s) remain.";
-
-        RefreshMoveRing();
+        Fight11SkipSelectedFightModel();
     }
 
     private void CompleteFightAttacks()
     {
-        if (fightActivationStage !=
-            FightActivationStage.Attacks)
-        {
-            return;
-        }
-
-        foreach (ModelToken model
-            in FightPotentialAttackModels())
-        {
-            fightModelsResolvedThisActivation.Add(
-                model
-            );
-        }
-
-        BeginFightConsolidation();
+        Fight11CompleteFightAttacks();
     }
 
     private void BeginFightConsolidation()
     {
-        if (fightActivationUnit == null)
-        {
-            ClearFightActivationState();
-            return;
-        }
-
-        fightActivationStage =
-            FightActivationStage.Consolidate;
-
-        CaptureFightStageStartPositions();
-
-        selectedModel =
-            JoinedModels(
-                fightActivationUnit)
-                .FirstOrDefault(
-                    model =>
-                        model != null &&
-                        model.IsAlive
-                );
-
-        if (selectedModel != null)
-        {
-            SelectModelForAction(
-                fightActivationUnit,
-                selectedModel
-            );
-        }
-
-        AppendBattleLog(
-            "FIGHT",
-            fightActivationUnit.DisplayName,
-            "Model-level attacks complete. CONSOLIDATION started."
-        );
-
-        status =
-            "CONSOLIDATE: move models individually up to " +
-            FightStageMoveLimit()
-                .ToString("0.#") +
-            "″. Hold ALT for the live ruler, then click DONE CONSOLIDATE.";
-
-        RefreshMoveRing();
+        Fight11FinishSelectedFightAttacks();
     }
 
     private void CompleteFightConsolidation()
     {
-        if (fightActivationStage !=
-                FightActivationStage.Consolidate ||
-            fightActivationUnit == null)
-        {
-            return;
-        }
-
-        if (fightActivationUnit.IsAlive &&
-            !fightActivationUnit.IsCoherent())
-        {
-            status =
-                "Cannot finish consolidation: the unit is out of coherency.";
-            return;
-        }
-
-        if (fightActivationUnit.IsAlive &&
-            (!AllModelsInsideBoard(
-                fightActivationUnit) ||
-             !AllModelsHaveLegalPlacement(
-                fightActivationUnit)))
-        {
-            status =
-                "Cannot finish consolidation: one or more models are in an illegal position.";
-            return;
-        }
-
-        SquadController completed =
-            fightActivationUnit;
-
-        completed.HasFought = true;
-
-        NotifyUnitFinishedFighting(completed);
-
-        if (completed.AttachedLeader != null)
-        {
-            completed.AttachedLeader.HasFought =
-                true;
-        }
-
-        completed.KatahSustainedActive = false;
-        completed.KatahLethalActive = false;
-
-        AppendBattleLog(
-            "FIGHT",
-            completed.DisplayName,
-            "Consolidation complete. Fight activation finished."
-        );
-
-        ClearFightActivationState();
-
-        status =
-            completed.DisplayName +
-            " completed its fight activation.";
-
-        AdvanceFightPriority(
-            completed
-        );
+        Fight11CompleteConsolidation();
     }
 
     private void ClearFightActivationState()
@@ -1492,204 +891,7 @@ public partial class GameController : MonoBehaviour
         SquadController attacker,
         SquadController target)
     {
-        attacker =
-            attacker.JoinedActionController();
-
-        target =
-            target.JoinedActionController();
-
-        if (fightActivationStage !=
-            FightActivationStage.None)
-        {
-            if (fightActivationUnit == null ||
-                attacker !=
-                    fightActivationUnit)
-            {
-                status =
-                    "Finish the current fight activation before selecting another unit.";
-                return;
-            }
-
-            if (fightActivationStage !=
-                FightActivationStage.Attacks)
-            {
-                status =
-                    fightActivationStage ==
-                        FightActivationStage.PileIn
-                    ? "Finish the model-by-model pile-in before resolving melee attacks."
-                    : "Finish consolidation before starting another fight.";
-                return;
-            }
-
-            if (selectedModel == null ||
-                !ModelBelongsToFightActivation(
-                    selectedModel))
-            {
-                status =
-                    "MELEE: click the exact model that will fight, then click its enemy target.";
-                return;
-            }
-
-            TryFightModelAttack(
-                selectedModel,
-                target
-            );
-
-            return;
-        }
-
-        if (!fightSequenceActive)
-        {
-            status =
-                "The Fight sequence is not active yet.";
-            return;
-        }
-
-        if (attacker.FactionId !=
-            fightSelectionFaction)
-        {
-            status =
-                "It is " +
-                DisplayFactionName(
-                    fightSelectionFaction
-                ) +
-                "'s fight activation. " +
-                FightPriorityText();
-            return;
-        }
-
-        if (!IsEligibleToFightNow(
-                attacker))
-        {
-            status =
-                "That unit is not eligible to fight now.";
-            return;
-        }
-
-        if (selectedModel == null ||
-            selectedModel.Squad == null ||
-            selectedModel.Squad
-                .JoinedActionController() !=
-                attacker)
-        {
-            status =
-                "FIGHT: click the exact model in the unit you want to activate, then click an enemy unit.";
-            return;
-        }
-
-        if (fightPriorityStep ==
-                FightPriorityStep.FightsFirst &&
-            !UnitHasFightsFirst(
-                attacker))
-        {
-            status =
-                "Fights First units must be resolved before remaining combats.";
-            return;
-        }
-
-        float allowedPile =
-            attacker.SuddenStrikeActive
-            ? 6f
-            : PileInDistance;
-
-        if (attacker.DistanceTo(target) >
-            EngagementRange +
-            allowedPile +
-            0.1f)
-        {
-            status =
-                "Target is too far away to pile in.";
-            return;
-        }
-
-        if (FactionRuleSystem.UnitOrLeaderHasRule(
-                attacker,
-                "Martial Ka'tah") &&
-            !attacker.KatahChoiceMadeThisFight)
-        {
-            OpenRuleChoice(
-                "MARTIAL KA'TAH",
-                attacker.DisplayName +
-                " is selected to fight. Choose one Ka'tah Stance for these attacks.",
-                new[]
-                {
-                    new RuleChoiceOption(
-                        "Dacatarai — Sustained Hits 1",
-                        () =>
-                        {
-                            CloseRuleChoice();
-                            attacker.KatahChoiceMadeThisFight = true;
-                            attacker.KatahSustainedActive = true;
-                            attacker.KatahLethalActive = false;
-                            ExecuteFight(attacker, target);
-                        }
-                    ),
-                    new RuleChoiceOption(
-                        "Rendax — Lethal Hits",
-                        () =>
-                        {
-                            CloseRuleChoice();
-                            attacker.KatahChoiceMadeThisFight = true;
-                            attacker.KatahSustainedActive = false;
-                            attacker.KatahLethalActive = true;
-                            ExecuteFight(attacker, target);
-                        }
-                    )
-                }
-            );
-
-            return;
-        }
-
-        if (CanUseBattleFocusManoeuvre(
-                attacker))
-        {
-            OpenRuleChoice(
-                "BATTLE FOCUS — SUDDEN STRIKE",
-                attacker.DisplayName +
-                " is selected to fight. Spend 1 Battle Focus token to increase pile-in and consolidation moves to 6 inches this phase?",
-                new[]
-                {
-                    new RuleChoiceOption(
-                        "Use Sudden Strike (1 BF)",
-                        () =>
-                        {
-                            CloseRuleChoice();
-
-                            if (SpendBattleFocusFor(
-                                    attacker,
-                                    "SUDDEN STRIKE"))
-                            {
-                                attacker.SuddenStrikeActive = true;
-                            }
-
-                            ExecuteFight(
-                                attacker,
-                                target
-                            );
-                        }
-                    ),
-                    new RuleChoiceOption(
-                        "Fight normally",
-                        () =>
-                        {
-                            CloseRuleChoice();
-                            ExecuteFight(
-                                attacker,
-                                target
-                            );
-                        }
-                    )
-                }
-            );
-
-            return;
-        }
-
-        ExecuteFight(
-            attacker,
-            target
-        );
+        Fight11TryFight(attacker, target);
     }
 
     private List<WeaponAttackSelection>

@@ -1,0 +1,18 @@
+WARBOARD v41 — CORE RULES COMPLETION
+
+Overlay files:
+Assets/Editor/WarboardV41CoreRulesCompletion.cs
+Assets/Editor/WarboardV41CoreRulesCompletion.cs.meta
+Assets/Editor/WarboardV41.meta
+Assets/Editor/WarboardV41/Generated.meta
+Assets/Editor/WarboardV41/Generated/CoreRules11Completion.cs.txt
+Assets/Editor/WarboardV41/Generated/CoreRules11Completion.cs.txt.meta
+Assets/Editor/WarboardV41/Generated/GameController.CoreCompletion11.cs.txt
+Assets/Editor/WarboardV41/Generated/GameController.CoreCompletion11.cs.txt.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+README_V41.md
+CORE_RULES_AUDIT_V41.md
+V41_PATCH_MANIFEST.txt
+
+The idempotent editor migration generates/patches runtime sources on first successful Unity compile. It stays in Assets/Editor as a no-op after successful installation so the migration remains recoverable.
