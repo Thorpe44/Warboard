@@ -1,0 +1,71 @@
+{
+  "id": "aeldari_rangers",
+  "displayName": "Aeldari Rangers",
+  "factionId": "Aeldari",
+  "move": 7.0,
+  "toughness": 3,
+  "save": 5,
+  "modelCount": 5,
+  "woundsPerModel": 1,
+  "modelSpacing": 1.15,
+  "loadouts": [
+    {
+      "roleName": "Ranger",
+      "count": 4,
+      "rangedWeapon": {
+        "id": "rifle",
+        "displayName": "Ranger Rifle",
+        "range": 24.0,
+        "attacksPerModel": 1,
+        "skill": 3,
+        "strength": 4,
+        "ap": -1,
+        "damage": 1,
+        "keywords": []
+      },
+      "meleeWeapon": {
+        "id": "blade",
+        "displayName": "Close Weapon",
+        "range": 0.0,
+        "attacksPerModel": 1,
+        "skill": 4,
+        "strength": 3,
+        "ap": 0,
+        "damage": 1,
+        "keywords": []
+      }
+    },
+    {
+      "roleName": "Pathfinder",
+      "count": 1,
+      "rangedWeapon": {
+        "id": "precision_rifle",
+        "displayName": "Precision Rifle",
+        "range": 30.0,
+        "attacksPerModel": 1,
+        "skill": 2,
+        "strength": 5,
+        "ap": -2,
+        "damage": 2,
+        "keywords": [
+          "lethal_hits"
+        ]
+      },
+      "meleeWeapon": {
+        "id": "blade",
+        "displayName": "Close Weapon",
+        "range": 0.0,
+        "attacksPerModel": 1,
+        "skill": 4,
+        "strength": 3,
+        "ap": 0,
+        "damage": 1,
+        "keywords": []
+      }
+    }
+  ],
+  "abilities": [
+    "swift"
+  ],
+  "canDeepStrike": true
+}

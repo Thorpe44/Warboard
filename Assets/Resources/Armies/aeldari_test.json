@@ -1,0 +1,20 @@
+{
+  "factionId": "Aeldari",
+  "units": [
+    {
+      "unitResource": "Factions/Aeldari/rangers",
+      "x": -9.0,
+      "z": 6.0
+    },
+    {
+      "unitResource": "Factions/Aeldari/wraiths",
+      "x": -5.5,
+      "z": 9.0
+    },
+    {
+      "unitResource": "Factions/Aeldari/spiritseer",
+      "x": -11.0,
+      "z": 10.0
+    }
+  ]
+}

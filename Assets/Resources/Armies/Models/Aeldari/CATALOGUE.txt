@@ -1,0 +1,224 @@
+WARBOARD AELDARI MODEL PACK CATALOGUE
+
+Total indexed objects: 209
+Core Aeldari: 101
+Ynnari addon: 63
+Harlequins: 45
+Unique visual mesh assets: 206
+Unique texture assets: 204
+Shared base meshes: 8
+
+== Aeldari ==
+Asurmen [d50960]  base=40.0mm  parts=1
+Autarch [f1b251]  base=32.0mm  parts=1
+Autarch Wayleaper Sword + Fusion Pistol[Special] [1f3a54]  base=32.0mm  parts=1
+Avatar Of Khaine [22e2f2]  base=80.0mm  parts=1
+Craftworlds Wave Serpent [cbd501]  base=60.0mm  parts=1
+Dark Reapers [59a3bd]  base=28.5mm  parts=1
+Dark Reapers [9c1b2d]  base=28.5mm  parts=1
+Dark Reapers (Old models) [05cd9a]  base=25.0mm  parts=1
+Dark Reapers (Old models) [64b365]  base=25.0mm  parts=1
+Dark Reapers (Old models) [96b753]  base=25.0mm  parts=1
+Dark Reapers (Old models) [fa20fd]  base=25.0mm  parts=1
+Dark Reapers Exarch [368942]  base=28.5mm  parts=1
+Dire Avenger Exarch [70bc19]  base=28.5mm  parts=1
+Dire Avengers [3fc222]  base=28.5mm  parts=1
+Dire Avengers [f1ec84]  base=28.5mm  parts=1
+Dire Avengers Exarch [e9b3dd]  base=28.5mm  parts=1
+Eldar Wraithguard [3f68e7]  base=40.0mm  parts=1
+Eldar Wraithguard [9c2ad8]  base=40.0mm  parts=1
+Eldar Wraithguard [bee7e1]  base=40.0mm  parts=1
+Eldrad Uthran [aa1a06]  base=32.0mm  parts=1
+Farseer [fa5de7]  base=25.0mm  parts=1
+Farseer [Special] [414555]  base=25.0mm  parts=1
+Farseer Skyrunner [9ae4f8]  base=32.0mm  parts=2
+Fire Dragons [34021d]  base=28.5mm  parts=1
+Fire Dragons [4fca71]  base=28.5mm  parts=1
+Fire Dragons Exarch [bcc8be]  base=28.5mm  parts=1
+Fire Prism [d04648]  base=60.0mm  parts=1
+Guardian Defender 1 [a3ed1c]  base=28.5mm  parts=2
+Guardian Defender 2 [d43df5]  base=28.5mm  parts=2
+Guardian Defender 3 [3bae14]  base=28.5mm  parts=2
+Guardian Defenders [1b0f49]  base=28.5mm  parts=1
+Guardian Defenders [6e1d84]  base=28.5mm  parts=1
+Guardian Defenders [c8dd16]  base=28.5mm  parts=1
+Hemlock Wraithfighter [8f41f6]  base=unresolvedmm  parts=2
+Howling Banshee Exarch [832d64]  base=28.5mm  parts=1
+Howling Banshees [71a9b7]  base=28.5mm  parts=1
+Howling Banshees [74de1c]  base=28.5mm  parts=1
+Illic Nightspear [2dd59d]  base=25.0mm  parts=1
+Old Avatar Of Khaine models [ef519d]  base=unresolvedmm  parts=0
+Pheonix Lord Baharroth [87fc0e]  base=40.0mm  parts=1
+Pheonix Lord Fuegan [1e265b]  base=40.0mm  parts=1
+Pheonix Lord Jain Zar [da5848]  base=40.0mm  parts=1
+Pheonix Lord Karandras [e77cc1]  base=25.0mm  parts=1
+Pheonix Lord Lhykhis [4a2f12]  base=40.0mm  parts=1
+Pheonix Lord Maugan Ra [64d4a7]  base=40.0mm  parts=1
+Prince Yriel [335e9d]  base=25.0mm  parts=1
+Rangers [4c4064]  base=28.5mm  parts=1
+Rangers [5fd2d0]  base=28.5mm  parts=1
+Rangers [bf4031]  base=28.5mm  parts=1
+Revenant Titan Pulsars Photoscan [32d026]  base=unresolvedmm  parts=2
+Saim-Hann Wraithknight [cbed1d]  base=unresolvedmm  parts=4
+Serpent's Scale Platform [2f3c5f]  base=40.0mm  parts=1
+Serpent's Scale Platform [59cd35]  base=28.5mm  parts=1
+Shining Spears [7b7062]  base=60.0mm  parts=1
+Shining Spears [997948]  base=60.0mm  parts=1
+Shining Spears [e7f335]  base=60.0mm  parts=1
+Shroud Runners [624398]  base=60.0mm  parts=2
+Shroud Runners [63c9dc]  base=60.0mm  parts=2
+Shroud Runners [eba766]  base=60.0mm  parts=2
+Spiritseer [10a378]  base=25.0mm  parts=1
+Storm Guardians [80b996]  base=28.5mm  parts=1
+Storm Guardians [cb25b6]  base=28.5mm  parts=1
+Storm Guardians [e971d7]  base=28.5mm  parts=1
+Striking Scorpion [0024db]  base=28.5mm  parts=1
+Striking Scorpion [109eef]  base=28.5mm  parts=1
+Striking Scorpion [158029]  base=28.5mm  parts=1
+Striking Scorpion [39eeb0]  base=28.5mm  parts=1
+Striking Scorpion [3ac237]  base=28.5mm  parts=1
+Striking Scorpion [61af8c]  base=28.5mm  parts=1
+Striking Scorpion [b2dedd]  base=28.5mm  parts=1
+Striking Scorpion [c3ccbc]  base=28.5mm  parts=1
+Striking Scorpion [f50087]  base=28.5mm  parts=1
+Striking Scorpion Exarch [4b85fa]  base=28.5mm  parts=1
+Swooping Hawks [08b6c3]  base=32.0mm  parts=1
+Swooping Hawks [983397]  base=32.0mm  parts=1
+Swooping Hawks Exarch [1a6bfb]  base=32.0mm  parts=1
+The Visarch [c08fdb]  base=32.0mm  parts=1
+The Yncarne [468296]  base=80.0mm  parts=2
+Ulthwe Wraithknight [14a871]  base=unresolvedmm  parts=4
+Unnamed_66 [fdf742]  base=unresolvedmm  parts=0
+Unnamed_83 [ab3d6f]  base=unresolvedmm  parts=0
+Vyper [56cbc9]  base=unresolvedmm  parts=2
+Vyper Shuriken Cannon [Alaitoc] [427608]  base=60.0mm  parts=1
+Vyper Shuriken Cannon [Saim-Hann] [fdc9b0]  base=60.0mm  parts=1
+War Walker [98d055]  base=65.0mm  parts=1
+Warlock Skyrunner [59ccd3]  base=32.0mm  parts=2
+Warlocks [655c09]  base=25.0mm  parts=1
+Warlocks [dacba5]  base=25.0mm  parts=1
+Warp Spiders [27e32e]  base=28.5mm  parts=1
+Warp Spiders [b3d3bc]  base=28.5mm  parts=1
+Warp Spiders Exarch [fa4726]  base=28.5mm  parts=1
+Windriders [0c6007]  base=32.0mm  parts=2
+Windriders [b06c8e]  base=32.0mm  parts=2
+Windriders [d860bf]  base=32.0mm  parts=2
+Wraithblade / Axe, Shield [b8be6d]  base=40.0mm  parts=1
+Wraithknight [6d398f]  base=unresolvedmm  parts=2
+Wraithlord [517872]  base=60.0mm  parts=1
+Wraithlord [921ecd]  base=60.0mm  parts=1
+Wraithlord Sword, flamers, Brightlance [a3354f]  base=60.0mm  parts=1
+Wraithseer / Wraithcannon [Iyanden] [f78b02]  base=60.0mm  parts=2
+Yvraine [a40deb]  base=unresolvedmm  parts=2
+
+== Ynnari_Addon ==
+Archon [3cea11]  base=25.0mm  parts=1
+Corsair Voidreaver Felarch w/ Pistol [50dce3]  base=25.0mm  parts=1
+Corsair Voidreaver Felarch w/ Rifle [7db6c3]  base=25.0mm  parts=1
+Corsair Voidreaver w/ Corsair Blaster [d8969f]  base=25.0mm  parts=1
+Corsair Voidreaver w/ Corsair Shredder [d39d0c]  base=25.0mm  parts=1
+Corsair Voidreaver w/ Shuriken Cannon [ebfcc2]  base=25.0mm  parts=1
+Corsair Voidreaver w/ Shuriken Rifle [25b354]  base=unresolvedmm  parts=2
+Corsair Voidreaver w/ Sword and Pistol [ea0544]  base=25.0mm  parts=1
+Corsair Voidreaver w/ Wraithcannon [915e08]  base=25.0mm  parts=1
+Corsair Voidscarred [0dce52]  base=28.5mm  parts=1
+Corsair Voidscarred [222307]  base=28.5mm  parts=1
+Corsair Voidscarred [3e3750]  base=28.5mm  parts=1
+Corsair Voidscarred [4151b4]  base=28.5mm  parts=1
+Corsair Voidscarred [4d9a6e]  base=28.5mm  parts=1
+Corsair Voidscarred [516a07]  base=28.5mm  parts=1
+Corsair Voidscarred [5d2d57]  base=28.5mm  parts=1
+Corsair Voidscarred [e3b18a]  base=28.5mm  parts=1
+Corsair Voidscarred Felarch w/ Pistol [16729f]  base=25.0mm  parts=1
+Corsair Voidscarred Felarch w/ Rifle [2f5ba5]  base=25.0mm  parts=1
+Corsair Voidscarred Shade Runner [24d601]  base=25.0mm  parts=1
+Corsair Voidscarred Soul Weaver [5ff4f9]  base=25.0mm  parts=1
+Corsair Voidscarred w/ Corsair Blaster [907d50]  base=25.0mm  parts=1
+Corsair Voidscarred w/ Corsair Shredder [9a5e81]  base=25.0mm  parts=1
+Corsair Voidscarred w/ Faolchu [f1228b]  base=25.0mm  parts=1
+Corsair Voidscarred w/ Fusion Pistol [ea98d0]  base=25.0mm  parts=1
+Corsair Voidscarred w/ Ranger Long Rifle [a6c8e2]  base=25.0mm  parts=1
+Corsair Voidscarred w/ Shuriken Cannon [d9cbdf]  base=25.0mm  parts=1
+Corsair Voidscarred w/ Shuriken Rifle [551d21]  base=unresolvedmm  parts=2
+Corsair Voidscarred w/ Sword and Pistol [b71d68]  base=25.0mm  parts=1
+Corsair Voidscarred w/ Wraithcannon [6b10d0]  base=25.0mm  parts=1
+Corsair Voidscarred Way Seeker [22c001]  base=25.0mm  parts=1
+Corsairs Voidscarred [5f271b]  base=unresolvedmm  parts=0
+Fate Dealer [bbce3e]  base=25.0mm  parts=1
+Felarch / Neuro Disruptor, PW. [1c87ea]  base=25.0mm  parts=1
+Felarch / Neuro Disruptor, PW. [6b69de]  base=25.0mm  parts=1
+Gunner w/ Blaster [2d3805]  base=25.0mm  parts=1
+Gunner w/ Shredder [dfa1ec]  base=25.0mm  parts=1
+Hakatrix [792e6a]  base=25.0mm  parts=1
+Heavy Gunner w/ Shuriken Cannon [872bf1]  base=25.0mm  parts=1
+Heavy Gunner w/ Wraithcannon [687d21]  base=25.0mm  parts=1
+Incubi 1 [678471]  base=28.5mm  parts=1
+Incubi 2 [59f7fc]  base=28.5mm  parts=1
+Incubi 3 [2960cd]  base=28.5mm  parts=1
+Kabalite Sybariite w/ Splinter Pistol + Agoniser [1a0fcd]  base=25.0mm  parts=1
+Kabalite w/ Blaster [e9577f]  base=25.0mm  parts=1
+Kabalite Warrior w/ Splinter Cannon [ab196c]  base=25.0mm  parts=1
+Klaivex [efea23]  base=28.5mm  parts=1
+Kurnathi [027a64]  base=25.0mm  parts=1
+Kurnite Hunter [5f3a1c]  base=25.0mm  parts=1
+Raider w/ Dark Lance [33b052]  base=60.0mm  parts=3
+Reaver [7d9058]  base=32.0mm  parts=1
+Soul Weaver [8d2e8f]  base=25.0mm  parts=1
+Succubus [d1e7d7]  base=25.0mm  parts=1
+Venom [1aec3e]  base=50.0mm  parts=2
+Warrior w/ Rifle [05236f]  base=25.0mm  parts=1
+Warrior w/ Rifle [38f342]  base=25.0mm  parts=1
+Warrior w/ Rifle [3e9459]  base=25.0mm  parts=1
+Warrior w/ Rifle [f466e2]  base=25.0mm  parts=1
+Wayseeker [38a910]  base=25.0mm  parts=1
+Wych 1 [4cc8dd]  base=25.0mm  parts=1
+Wych 2 [accedc]  base=25.0mm  parts=1
+Wych w/ Razorflails [eafebf]  base=25.0mm  parts=1
+Wych w/ Shardnet and Impaler [f63cff]  base=25.0mm  parts=1
+
+== Harlequins ==
+Death Jester [e247cb]  base=25.0mm  parts=1
+Harlequin Troupe Troop [54c0a8]  base=25.0mm  parts=1
+Harlequin Troupe Troop [9c1258]  base=25.0mm  parts=1
+Harlequin Troupe Troop [e3acee]  base=25.0mm  parts=1
+Lead Player (Sword + Fusion) [a70877]  base=25.0mm  parts=1
+Lead Player (Sword + Neuro Disruptor) [2ad07c]  base=25.0mm  parts=1
+Lead Player (Sword + Shuriken) [db3b4e]  base=unresolvedmm  parts=2
+Shadowseer [ec7463]  base=25.0mm  parts=1
+Skyweaver (Star bolas + shuriken) [445f02]  base=60.0mm  parts=2
+Skyweaver (Star bolas + shuriken) [5f789d]  base=60.0mm  parts=2
+Skyweaver (Star bolas + shuriken) [6283ab]  base=60.0mm  parts=2
+Skyweaver (Star bolas + shuriken) [b07128]  base=60.0mm  parts=2
+Skyweaver (Star bolas + shuriken) [f09f72]  base=60.0mm  parts=2
+Solitaire [a5f0de]  base=25.0mm  parts=1
+Starwevaer [4795c4]  base=60.0mm  parts=3
+Starwevaer [95af78]  base=60.0mm  parts=3
+Starwevaer [a70b33]  base=60.0mm  parts=3
+Starwevaer [dbc03d]  base=60.0mm  parts=3
+Starwevaer [f8f093]  base=60.0mm  parts=3
+Starwevaer [ff30dd]  base=60.0mm  parts=3
+Troupe Master [055367]  base=25.0mm  parts=2
+Troupe Master [d7248a]  base=25.0mm  parts=2
+Troupe Player (Blade + Fusion) [efc5b9]  base=25.0mm  parts=1
+Troupe Player (Blade + Neuro Disruptor) [57bc32]  base=25.0mm  parts=2
+Troupe Player (Blade + Neuro Disruptor) [59e85d]  base=25.0mm  parts=1
+Troupe Player (Blade + Shuriken Pistol) [b1fc87]  base=25.0mm  parts=1
+Troupe Player (Blade + Shuriken Pistol) [bd4571]  base=25.0mm  parts=1
+Troupe Player (Blade + Shuriken Pistol) [e61b80]  base=25.0mm  parts=1
+Troupe Player (Blade + Shuriken Pistol) [e779ad]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Fusion) [716043]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Fusion) [8a2116]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Neuro Disruptor) [62b65c]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Neuro Disruptor) [c465e5]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Shurken Pistol) [0f4a51]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Shurken Pistol) [427345]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Shurken Pistol) [75f493]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Shurken Pistol) [bf77a7]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Shurken Pistol) [c872e3]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Shurken Pistol) [db5b56]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Shurken Pistol) [f23271]  base=25.0mm  parts=1
+Troupe Player (Harlequin's Special Weapon + Shurken Pistol) [f530c5]  base=25.0mm  parts=1
+Voidweaver (Prism) [3a0684]  base=60.0mm  parts=4
+Voidweaver (Prism) [4910ae]  base=60.0mm  parts=4
+Voidweaver (Prism) [bace01]  base=60.0mm  parts=4
+Voidweaver (Prism) [eb6dd8]  base=60.0mm  parts=4

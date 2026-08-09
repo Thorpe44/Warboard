@@ -1,0 +1,592 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.7f1 (017862109af0) revision 96354'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0" at "2026-08-09T13:03:40.0234613Z"
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 15681 MB
+BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-08-09T13:03:40Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Unity.exe
+-projectpath
+C:\Users\elli0\Documents\Warboard
+-acceptSoftwareTermsForThisRunOnly
+-useHub
+-hubIPC
+-cloudEnvironment
+production
+-licensingIpc
+LicenseClient-elli0
+-hubSessionId
+0b4f232c-1762-4864-b0d6-9d5283ca21f2
+-accessToken
+41ix59LZNOmeFZEQE33i19MXyk4sjTCarCA1dNrQohs005f
+Successfully changed project path to: C:\Users\elli0\Documents\Warboard
+C:/Users/elli0/Documents/Warboard
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [10652]  Target information:
+
+Player connection [10652]  * "[IP] 192.168.1.228 [Port] 55504 [Flags] 2 [Guid] 1290904302 [EditorId] 1290904302 [Version] 1048832 [Id] WindowsEditor(7,Elliot_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [10652] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [10652] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-29384" after 0.3 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-elli0"
+[Licensing::IpcConnector] LicenseClient-elli0 channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-elli0-6000.5.7 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 28028)
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-elli0-6000.5.7, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7" at "2026-08-09T13:03:41.7454153Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 28028, path: "C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              62d7f54ba0e244948b9397b4dfc7c0d2
+  Correlation Id:          324844fd88e1f47c6899e4e6a023c6bf
+  External correlation Id: 2267613083488166124
+  Machine Id:              JOUP1U45KtUV8sm1s/K3HmNb45Q=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-elli0-6000.5.7" (connect: 0.37s, validation: 0.22s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7-notifications" at "2026-08-09T13:03:41.9735762Z"
+[Licensing::Module] Connected to LicensingClient (PId: 28028, launch time: 0.01, total connection time: 0.60s)
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated the access token 41ix59LZNO...
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 5774099461094-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 2.01s
+[Licensing::Module] Licensing is initialized (took 1.33s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 1 unused hashed content files
+Initialize engine version: 6000.5.7f1 (017862109af0)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/elli0/Documents/Warboard/Assets
+[D3D12 Device Filter] Vendor Name: ATI
+[D3D12 Device Filter] Device Name: AMD Radeon (TM) Graphics
+[D3D12 Device Filter] Driver Version: 31.0.21923.3003
+[D3D12 Device Filter] Feature Level: 12.1
+[D3D12 Device Filter] Graphics Memory: 7840 MB
+[D3D12 Device Filter] Processor Count: 12
+[D3D12 Device Filter] Device Type: Integrated
+[D3D12 Device Filter] D3D12 API denied by user filter: {"Vendor": "ATI", "Device Type:": Integrated}
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon (TM) Graphics (ID=0x15e7)
+    Vendor:   ATI
+    VRAM:     7840 MB
+    Driver:   31.0.21923.3003
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002444 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.478 seconds
+Domain Reload Profiling: 1065ms
+	BeginReloadAssembly (142ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (6ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (80ms)
+	LoadAllAssembliesAndSetupDomain (338ms)
+		LoadAssemblies (135ms)
+		AnalyzeDomain (247ms)
+			TypeCache.Refresh (246ms)
+				TypeCache.ScanAssembly (230ms)
+	FinalizeReload (481ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (107ms)
+			ProcessInitializeOnLoadAttributes (114ms)
+			ProcessInitializeOnLoadMethodAttributes (167ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 4 packages:
+  Built-in packages:
+    com.unity.modules.physics@1.0.0 (location: C:\Users\elli0\Documents\Warboard\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\elli0\Documents\Warboard\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\elli0\Documents\Warboard\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\elli0\Documents\Warboard\Library\PackageCache\com.unity.modules.unitywebrequest)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:80
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\elli0\Documents\Warboard
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 30.9853ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/elli0/Documents/Warboard
+ExitCode: 4 Duration: 1s931ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+*** Tundra requires additional run (1.89 seconds), 1 items updated, 118 evaluated
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/elli0/Documents/Warboard
+ExitCode: 0 Duration: 1s946ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/elli0/Documents/Warboard
+ExitCode: 0 Duration: 2s464ms
+Finished compiling graph: 125 nodes, 366 flattened edges (362 ToBuild, 2 ToUse), maximum node priority 14
+[118/122    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[119/122    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[120/122    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[121/122    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+*** Tundra build success (2.43 seconds), 4 items updated, 122 evaluated
+Total cache size 16069784
+Total cache size after purge 16069784, took 00:00:00.0401548
+AssetDatabase: script compilation time: 7.192052s
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.563 seconds
+Domain Reload Profiling: 1065ms
+	BeginReloadAssembly (305ms)
+		DisableScriptedObjects (61ms)
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (11ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (116ms)
+		LoadAssemblies (127ms)
+		AnalyzeDomain (12ms)
+			TypeCache.Refresh (7ms)
+			BuildScriptInfoCaches (3ms)
+	FinalizeReload (566ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (133ms)
+			ProcessInitializeOnLoadMethodAttributes (90ms)
+			AfterProcessingInitializeOnLoad (8ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Starting new worker id: 0 with log in C:/Users/elli0/Documents/Warboard/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=420ef87a210b82a40b61bbb56e00649f): Total: 8.588 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=759 ms
+		Asset DB Callback time: managed=76 ms, native=9 ms
+		Scripting: domain reloads=1, domain reload time=540 ms, compile time=7195 ms, other=7 ms
+		Project Asset Count: scripts=46, non-scripts=436
+		Asset File Changes: new=1, changed=4, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 8.692ms
+	ApplyChangesToAssetFolders: 0.226ms
+	Scan: 98.913ms
+	Collect global state as custom dependencies: 8.995ms
+	OnSourceAssetsModified: 0.788ms
+	CategorizeScriptCompilationAssets: 0.153ms
+	ProcessAssetsWithTransientArtifactChanges: 1.415ms
+	CategorizeAssets: 3.752ms
+	CompileScripts: 7195.079ms
+	ImportOutOfDateAssets: 594.640ms (570.322ms without children)
+		UnloadImportedAssets: 0.163ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.064ms
+		ImportSchedulerStart: 24.087ms
+	PostProcessAllAssets: 77.116ms
+		VCAutoAddAssetPostprocess 1.281ms
+		VersionControlSettings.HiddenFilePostprocess 0.067ms
+		MonoPostProcessAllAssets: 74.935ms
+			AssetPostprocessor.OnPostprocessAllAssets 16.076ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 14.252ms
+			AssetChangedListener.OnPostprocessAllAssets 9.151ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 8.869ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.267ms
+			SyncVS.PostprocessSyncProject 1.802ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.445ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.345ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.115ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.815ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.603ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.417ms
+			AssetEvents.OnPostprocessAllAssets 0.355ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.338ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.337ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.248ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.192ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.162ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.156ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.116ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.092ms
+	PostAssetChangesProfiler: 1.370ms
+	UnloadStreamsBegin: 1.383ms
+	Untracked: 588.110ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Scanning for USB devices : 5.329ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Warboard_Unity6_v26_1_ReservePlacementFix_FLAT
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (0.5 MB). Loaded Objects now: 698.
+Memory consumption went from 206.0 MB to 205.5 MB.
+Total: 9.268600 ms (FindLiveObjects: 0.096400 ms CreateObjectMapping: 0.017400 ms MarkObjects: 8.708000 ms  DeleteObjects: 0.438100 ms)
+
+[LAYOUT] About to load UserSettings\Layouts\default-6000.dwlt, keepMainWindow=False
+[LAYOUT] About to save layout C:\Users\elli0\Documents\Warboard\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/elli0/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+[MODES] ModeService[default].InitializeCurrentMode
+[MODES] ModeService[default].RaiseModeChanged(default, default)
+This project uses Input Manager, which is marked for deprecation. To manage input in your project, use the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest">Input System package</a> instead.
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+[Project] Loading completed in 13.939 seconds
+	Project init time: 				12.531 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		1.662 seconds
+		Asset Database init time: 		0.610 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			1.122 seconds
+		Unity extensions init time: 	0.001 seconds
+		Asset Database refresh time: 	8.588 seconds
+	Scene opening time: 			1.105 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1786280633948,"processId":29384,"projectLoad":13.9389433,"projectInit":12.5310129,"templateInit":0.0,"packageManagerInit":1.66215,"assetDatabaseInit":0.6101757,"globalIlluminationInit":0.0026445,"assembliesLoad":1.1217089,"unityExtensionsInit":0.0006733,"assetDatabaseRefresh":8.5884704,"sceneOpening":1.1046592}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1786280633948,"processId":29384,"editorVersion":"6000.5.7f1 (017862109af0)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+D3D11 device created for Microsoft Media Foundation video decoding.
+Asset Pipeline Refresh (id=710df695bf755ea4eb7eebebe7277fe4): Total: 0.042 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Worker ready: AssetImportWorkerHW0 0
+Dynamic Batching is deprecated and will be removed in a future release. Use GPU Instancing instead. Disable Dynamic Batching in Project Settings > Player > Other Settings to remove this warning.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+UnityEditor.PlayerSettingsBatchingWarning:WarnIfDynamicBatchingEnabled ()
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+Created GICache directory at C:/Users/elli0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.022s, timestamps: [14.946 - 14.968]
+Starting new worker id: 1 with log in C:/Users/elli0/Documents/Warboard/Logs/AssetImportWorkerHW1.log
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated access token: "41ix59LZ"... (expires: 2026-08-09T13:59:02Z)
+[Worker0] Imported GUID: 9e6da8da46e74a2459d0d3a153a80f57 - Path: Assets/Scripts/Core/AeldariRulesSystem.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'afc2e357f0856f7e497aada6fbecfb78') in 0.1639819 seconds
+[Worker0] Imported GUID: 6fa08679180b9c6459f659157be3f2ad - Path: Assets/Scripts/Core/SquadController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'cea6df670cadb3676b323a300e7800d4') in 0.0059483 seconds
+[Worker0] Imported GUID: 06bb162be4391b343a7fcb025859a08b - Path: Assets/Scripts/Core/GameController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '66480d98727a9b8d63e14e0b73230901') in 0.0067619 seconds
+[Worker0] Imported GUID: 737a08491b670a74cb22ad4b23e92a70 - Path: Assets/Scripts/Core/InteractiveAttackController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a75364b2b84260fe300ff4e8aeeb7cab') in 0.005922 seconds
+Starting new worker id: 2 with log in C:/Users/elli0/Documents/Warboard/Logs/AssetImportWorkerHW2.log
+[Licensing::Client] Successfully resolved entitlement details
+[Worker0] Imported GUID: b0541e61e13517843b2a7c2151c8fd74 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957618096B2F8B0D9F60A387C2A04E4950C1487B51D4BCDAB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a66bb61a74487ddd26d84df3ee5cef16') in 0.1391885 seconds
+[Worker0] Imported GUID: d7a4207e8638ff541aec9a2a4837f0ec - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576192989499093C22FCB2D53D558A8761C4D027F85CD518.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '90861968ee5d63e17a7e2c837d87d6ee') in 0.0541746 seconds
+[Worker0] Imported GUID: 5e24bc8fef0903e44b2670873a86a856 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2543423fd07c6f7c75d5b4ce0d7daf15') in 0.0279791 seconds
+[Worker0] Imported GUID: 7ed63674beae25c42897ff4971b20d7e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237067093053423746213865A95A2E3D0F8049D05C2600005B74C05B380.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'cdf1f0b2202b4ae3dcc0a52948852aa4') in 0.0213855 seconds
+[Worker0] Imported GUID: 54ccb8787b4f1904c834e4fa9c9f0da0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957618746C64B798F9CB36CE41DD3D11D1C5D8D8D405F0060.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '771ce6da782d36fcbe60a8b401527960') in 0.0716705 seconds
+[Worker0] Imported GUID: 48a7235bf00a0534da2bf56b724a1e9c - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2297465338554404696553C353BFD8CFFC7C2450CC14CF57635A3483442.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '243e23c256635a698321d89e1d42e195') in 0.0501872 seconds
+[Worker0] Imported GUID: 68086931b16f03b49b6a53b1101efd32 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2370671116167745892CEC4B508AD157A725EA1BE969167977C2057E430.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0c295ee0d3367cc0e83daffc268ccbff') in 0.0455077 seconds
+[Worker0] Imported GUID: 6089ba83135b83245b58c20c18002080 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576191647448DDADD1986D97C4F1261516360F43950FB5FA.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2d17ab06118fd06ee6f04a212f49bec4') in 0.0711 seconds
+[Worker0] Imported GUID: b5c0ee0acc2406146ba11f6c54f61e87 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498565392422BD5BFA110D6FA8EB91FAE6FB4EF3FAC6011392ED.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ed0513d563148abca223ac6f59a36cdb') in 0.052673 seconds
+[Worker0] Imported GUID: 80d598fcbafc7e141aa1d0223399e5aa - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576179614EDA3483939107143028BEABFAF7AC0B332566CB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '70b8a2e432a2b59d13a0bf39ed0458c2') in 0.0448711 seconds
+[Worker0] Imported GUID: 6800207e9151f3a42b942151b20da8c0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957617845F442ACF4FD2A8656FE1DD6F403FC36D68AA45F82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '478d45f03ff8885f325fd2920c992394') in 0.0519446 seconds
+[Worker0] Imported GUID: cc7a20dea728fc141907c6d50117bd8d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23706711161660673220C36642045E522E254FB74A64FF5BCF8586A2DE5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0d779ab83a233d356895606523bff3bd') in 0.041299 seconds
+[Worker0] Imported GUID: 799caa12ada3abf4397e6e31e4e9d18b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464004A330C7ED2277342B8485C0055A8F51C3EBEFC5AD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ba7df00bfc52dd032eec8fb7671f501f') in 0.0574147 seconds
+[Worker0] Imported GUID: a4b3c246a33dd9649ba3a0ad52169040 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751232464099E98D776DB8A102F885A5EE030AEDCCA61FAD14D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '950a8ed77ebe83a13b27eb7dd074f6a5') in 0.0538153 seconds
+[Worker0] Imported GUID: 61da3a45a434b9944a498d27e3236828 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751184645156072B317B81B31CE7ACB8AEBD770CF886F6B1508.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a4e42373ce517d31a4723bb1f491db62') in 0.0556224 seconds
+[Worker0] Imported GUID: 4960826862aaeee4e8dfba9e0a87bbdc - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2451736358375261427B9E5A7164E7DD969C582FDD372C4DEBC791EFAA7.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '56a0657ced06839f4702a8ebf79c7fdc') in 0.0394764 seconds
+[Worker0] Imported GUID: a2b651a69aaf4c349b729100e1185de0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186361F623AA21E13C1AEF636EDD2F1BE891DE0965389D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '913417112647c54e38a13ca6d80b0a64') in 0.0449492 seconds
+[Worker0] Imported GUID: efbd742dbd3a5d140a1371d2fbcece7d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196901035627561F1B87491C15A2D9DB6295CB8A3E72DE54938D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '04dd10c68e1181e21e30cc6fa9bc0abe') in 0.0865424 seconds
+[Worker0] Imported GUID: c2b0c0ecff50f854f80343cbb1be5334 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411924452664815753A74E1F8745DB2F30454D3DCDE61D8780EB98AFB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a8563a274266bbc8657f4e4509b6b0dc') in 0.0631382 seconds
+[Worker0] Imported GUID: dcfb311fb32f2e54a865af4f4c9a7eb3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464603869B149E9BC2A7FCFD0E084907C290D397A4846F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2a4bedfd11423209e3624c8e6975bf60') in 0.1487148 seconds
+[Worker0] Imported GUID: 1c68e03aabc79aa48bf959d2f534f73f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075123246040BD64FE566B31321B11A0FE6970D408F10B6442A3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '45dab476511d8da325746a5191702b9d') in 0.0599674 seconds
+[Worker0] Imported GUID: 2d57a63af40cd534ca31d808a590b3a7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807512039286714F6DD3DF8E54C55D479512D0C7688E2943834CF.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '47a0257667a7e75b36a84e547404e943') in 0.0521241 seconds
+[Worker0] Imported GUID: 167a1b0a26d97d74099b98c3a468aee5 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412000814599865533C86A1B28B983C48625E839C3DF6527B65A97939.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1fc533b6de7091ac2fb11d942a81fbd8') in 0.0526175 seconds
+[Worker0] Imported GUID: 8dcc6c27dba25cf41b40b742028a1ae1 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464806BFB723EA956C052E3BD7AB3F2127B5927A975A0E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9f36d24cae29c4d28f6fda958bd52895') in 0.03695 seconds
+[Worker0] Imported GUID: 2e6586ff5448d6e48bc208c3e53b5b0e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24517363583752618306410BCFA995CC98215DA4E468958FA260B30C5DC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a89ef0ceb1be1ac3a534ad30e05aa1c2') in 0.0368681 seconds
+[Worker0] Imported GUID: 0de61b310ea12644bb46269fc1cbb282 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2435956901696347800001C516E835B8A15D855AFA755ED81A12B6C44BD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'da2544bcc5257cce470ab28f5888d0e8') in 0.0374791 seconds
+[Worker0] Imported GUID: ca76e914c0e0ed74eaf5f250525a5860 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119924828098299180CBD092D57C05B3D3518B97573C598259CB1F37.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'fb57ee5e6865a22a15f45b33e6db217b') in 0.0360649 seconds
+[Worker0] Imported GUID: 717cde9cd47fcd04e9af1d1616bf7aa9 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2380802127833019151EB8F9BAB50E4A43F8331B6DFE31C98CDC16DC43A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6fc1e4618b0fd6b6dbe56cbeb5c2b87e') in 0.0414576 seconds
+[Worker0] Imported GUID: abf87510e27e89f43929bba43ca3ffb1 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24719938605576519821D8BCF89018556B3E013F26CDDFC11228CC7167A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5dabbd901b894de22fce87bfa49130cc') in 0.0357258 seconds
+[Worker0] Imported GUID: ad7f55ef8817f1540added6980dcd174 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc247199386055765240524EFA2EA4D884F59313AF2516CBC4C6AE8C0507E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '84bae6a695f7bdc743e2764940c3eb33') in 0.033368 seconds
+[Worker0] Imported GUID: da564caad877a784e8745c2187f0f1e6 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196898784838D984DF4A3419AAC40C8B0C5CAA989AB7B6912293.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '121ee4e46db92485f88bbaaef88cfdfe') in 0.0358373 seconds
+[Worker0] Imported GUID: 13c15b8640526824bb045cb12660f228 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24719938605576522699BA138CAED8CECF9AEF8ADF0B66C2235F0B79A48.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1085939d8e00913bc30c80351d50d975') in 0.0323264 seconds
+[Worker0] Imported GUID: d2c01543701fb814792ab6af2da0e28d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987850285541ABBCF03548586F5ADFF8E693A68188003243.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3088242b58e420c0400cceb57650498e') in 0.0168672 seconds
+[Worker0] Imported GUID: c9eb577f33f0c4f499a4dc0efca15379 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118463743EC89EEFE0F66183946249D76166287EB4252807B.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1dce7e5eac5e771d4a0250bd76612b64') in 0.0326971 seconds
+[Worker0] Imported GUID: f929fc8c755ce6b41a9dafc6829d4f1e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280983506AD1C48A6BC6F0591A5BE55633249897C71A4FC58.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e59c7e0fc2e4e9f3e094b1103395dd16') in 0.0304269 seconds
+[Worker0] Imported GUID: 280fcd3de52dc9946bce80f98e22ad61 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186592B80544495E9B94E2B27C9973BACD5ECAD8AC562F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '57dd80ec999955614c8d9c9b73f44e90') in 0.0340695 seconds
+[Worker0] Imported GUID: b6ea8dbffbbe45d459988dd04d1b114b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464241204B8ED0BA6BB1FB7449C01E4016E555ED8A51DD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '393c039804179f5244539952468adfad') in 0.0402845 seconds
+[Worker0] Imported GUID: 12e8bcca409b58e48bbf05029f8f3c57 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075123246638CBBF31E69544FCFB9C6457EAF98075DF0BFB0ABA.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ddaa5303454ea0deac2912829c9d485f') in 0.035911 seconds
+[Worker0] Imported GUID: eda2006385f06e84d971d294f510ce0e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237179619689878577766AE14A6F428BF469814EA612169C82221FFD053.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '699d23e5347ef193b4950fa7ea4a326a') in 0.0159255 seconds
+[Worker0] Imported GUID: 1e169707a94dc074398f7a80ca15ab0b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237179619690103448046B37382361A159011BC1924C3C0FCDDF7DC72CC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd82b4627eba9fc2873dc6da503b46889') in 0.0365008 seconds
+[Worker0] Imported GUID: f340c7adaeeb3934c91c1a0942d91bdf - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464141BFF27317CC58F5E1877D705DBB9EFD0455363AF5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4dd8f7d0190bb3a6cd5cb1d953dfef18') in 0.0349189 seconds
+[Worker0] Imported GUID: 9fcc20d8829c13244adcab02238f70b0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41192445266481656AA0DC0EBBA5EA32ED02ED741C0BEB66C2A1E72C2.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '782b2bb2333e1f7ada7a6f07aa33b4d3') in 0.0308333 seconds
+[Worker0] Imported GUID: fb9934bb810f2be45b67477e4abffce3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23706711161794898744FFF864018B69AA1B5437A2643ECC59411F30BB0.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '30a97fe6ac3cc57f0a1b0f560eeaa754') in 0.0364325 seconds
+[Worker0] Imported GUID: 95874a5fac1341242acf161646133271 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412000814599945668DA8BE9BA89F2017261A7D4F2531CAA05D5991AE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bcec28a3da7a59a4a66d5114994c70bb') in 0.0316834 seconds
+[Worker0] Imported GUID: 511d636579250e94097e94fbd31673cd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2435956901695407198649716F9FC33E89786AB9AD119C06BFCCEA6156F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c76767e791215f95607012ab98edbdc3') in 0.0344436 seconds
+[Worker0] Imported GUID: 978cf0b76c2e5444b9d393a3e16a0659 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459994657DE46ECFB9F83C77713CAAC0C4BFA59D04EE0111C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b45a16c597e546cadb352063e5d8a381') in 0.0308934 seconds
+[Worker0] Imported GUID: c10fce4bf857b01478b7b00f02a54823 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459994393ED25243C271253C567EA967DA87840D4FA63239C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ea2eff71e01f68b8be66c82012bb09e9') in 0.0325972 seconds
+[Worker0] Imported GUID: 85d4ebb5e6688b343b413fe6fec8ccc3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987865811988CE6152F1567624AA7EF304F36184EBF87239.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3f6817446eff6522d5973fc994f80cc9') in 0.0405845 seconds
+[Worker0] Imported GUID: 6fc43ed6770deaf4fb47560d30e458d0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987862877DF63A91CF01EA8CC02A3CF6ADE5A34864D2966E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0b81ff6e62e18a8787aa59494cc4138e') in 0.0366497 seconds
+[Worker0] Imported GUID: 94524a3ce9f469e47adfb0ab5397e0c7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41191003128316542ABF6815FD3A4C9CCE983FBD68DFFE98446A7EFED.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4d1383427391f710a3642221d17a681c') in 0.0339828 seconds
+[Worker0] Imported GUID: c2f636f9874891e4cb951ede7c37e8eb - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119924828098331827157AFDDA24F2B6D5C92324AF752331F8D11E82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1ab1314932f40e2897bd928fd7bf30c9') in 0.0329532 seconds
+[Worker0] Imported GUID: 9abd3290d9014eb4c8578132d76b1fca - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459991165C70CA5311517A0EE5F99C22923CB0070C230989D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '142362a1dba09405501b898f7fb254b4') in 0.0290962 seconds
+[Worker0] Imported GUID: 5617445ca7709284db9d11e19500831a - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2370671116167746358D0C807D7E5328A183F1F75AD1A559E32795D6B2C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7bff5135e02c83a9f9e8954fe2d89c85') in 0.0341877 seconds
+[Worker0] Imported GUID: b32bc0c051c051b40a67068a011a150d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119100312831674141D830D81BCA1E085011B9C976C978F9175038EE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '427556267e333d4578ad5e62743a7bed') in 0.0338416 seconds
+[Worker0] Imported GUID: f6a7563ec95970e4ea8f545d8712a549 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075120393041C829BC998FD9248B61CF3D5CE8D7B7157A60BE82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7199667f8b7073be42243fc8573af028') in 0.0346508 seconds
+[Worker0] Imported GUID: 09cf1b0003a61cb4e8bd27d33f5aa632 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751184647403341FE8CBB4151ACDD4A85B6E519ED564A0A7ED0.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'eaa246ade73889f64f41cc7645f98fd5') in 0.0377217 seconds
+[Worker0] Imported GUID: 7a413d32afa655b488c4fb825b004ff7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961969010364198F296F2A992F07B6778EE4F39BE9B78CE3A9CD7A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2142c94edeef561548bb73b22ea8a8a5') in 0.039691 seconds
+[Worker0] Imported GUID: ee2c5ba03968c9247b0458e2e17fadc4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196901035213F98DE1CCCA8BB379D84C4FBA1C07AED46BF6E055.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '964729585e71b06dd6da0ef61d766f59') in 0.0303353 seconds
+[Worker0] Imported GUID: e35f461235e4bed4fb0824325c728949 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186804072B76A688ABD6393F902481DAFF4CB02D0231E9.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5f3ecc42baa08cecb5cf2b1b243b39e6') in 0.0285039 seconds
+[Worker0] Imported GUID: 0a6037089c1e7e44c8906a36f92920fd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987852746CB7A8141E0A4AC69B4861CD977882E4A5BB334E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3699d02e87bd2306f8297c4ab40a9303') in 0.016531 seconds
+[Worker0] Imported GUID: a0f2765cc746d2d4dbcf6515b88abc93 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120008145998866973F77C4D76A2A7F9C7549A8AF7BA1623A0F5BE17.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '07183207adb728b0831eeb05dd37f2ac') in 0.0296913 seconds
+[Worker0] Imported GUID: 79648debb25ff4d4580449807f829c40 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280982805ACCCDDD350406A130A37B514B1A7382D21893936.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7b29876c3cab34ab6b3fcf326978a462') in 0.0314591 seconds
+[Worker0] Imported GUID: 1bf243d15a3dc7049831ea52a9355d7c - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41196408011694738429090DA3562EE21EC4836D05581965E025378B4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0615a9f3ce365c0a3ba1af436a39e273') in 0.0354618 seconds
+Worker ready: AssetImportWorkerHW1 1
+[Worker0] Imported GUID: 265a3bd92510ae146ab75fde94465663 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987860823140A804FB1C3894E0D0A8B082A68C3165C0EA35.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '17963d9093b48e02ec6b03a1353645b8') in 0.0324898 seconds
+[Worker0] Imported GUID: 390fa0c8bc3eb1e419405bc6bfe13b28 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459986580551A025B693D5E3C51B5AE6D10FE5CCD82F9F9E6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4cccb741afe39c134d99ced2b3d9c2a5') in 0.0268423 seconds
+[Worker0] Imported GUID: 81898e540fc7b4546adea6667a1a00a9 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807511846445427F8506F6163E637F9033AEFF4C87C3A691B5DD5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '39cc89a4137da6805f6801af9038c029') in 0.0350555 seconds
+[Worker0] Imported GUID: 6438d1506babe3243acaca965d3af0f6 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475185080BBA5DB8674CBD79040DB76EDABDC84F6FFBE11C6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2a627dfbf4b0d02cd5499f9f27e3292b') in 0.035579 seconds
+[Worker0] Imported GUID: 5471cfde9c323984388b2b8fc35cbe21 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41192445266481141A894CE0A88FC3E52013747D313BBD7A8A00F6D62.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd05ba2426d8a9126f3991826f69d13b1') in 0.0301459 seconds
+[Worker0] Imported GUID: d6fc668e1eb2d1e4a98eea320b845bf5 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411992482809834069FC8489EB6ADB686BF99B61D350B24FD79E902F4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ed4941a4aaea448c33a63e08ccd3e741') in 0.0407942 seconds
+[Worker0] Imported GUID: 6f0973f8b9e55974abc09de890eaa5e8 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961969010360073F2F3499DBE631BC46BCB8EC34EE06CCAD9DF105.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e069c4c0e9e8801d35b506cc743d01f9') in 0.0383738 seconds
+[Worker0] Imported GUID: d8330af5a0c4ae040a8f1bf81dec0fbd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280982859B65DB87EDF5953389AC72E2EC11222356D3DDCBE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4061b7d4e38960f045790208fa2d409a') in 0.0307015 seconds
+[Worker0] Imported GUID: caba2c2fb1fda4f4aa186670e13be05f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc245511718947518598446340B520A16AD1C8B408213C4347D5F14A68251.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'af3e53868bdf22b72fd8a0a3292248c4') in 0.032352 seconds
+[Worker0] Imported GUID: a1a1ff2807c851c4aace564c0ca69e85 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807512039296351DBA041832137FC2DAEC108C998988F24590BC3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '21c4eee53e9bc22aa51d39314423f730') in 0.0288305 seconds
+[Worker0] Imported GUID: 294f34d353027444e9bf58cebc32efcb - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411948081817589637516F30A5805D00544C9A581AD87C8E23FFACACD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b8bbf530b27b6dcd3544af048b398224') in 0.0305247 seconds
+[Worker0] Imported GUID: eeead589dfd24734d8d645ed44b997a4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280983205F13FBB5A2940847FF657A1CD2773D2D4FA9C4452.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7ceecd3dbe0a4d3a3f3603c5b8951630') in 0.0344336 seconds
+[Worker0] Imported GUID: 76f55ccb985883841b3aefee1c1bc8fa - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620252275A0414F686F143CCF8C3AD3582BAE4494C0C46882.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '31260b0c5ab1c5424ffa9092fd65bdbe') in 0.0307678 seconds
+[Worker0] Imported GUID: ed6e75446d9dc4544b6205d198a17fec - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc93175051892930818610558FDAE2EBA74948AE4AC0FE3FC6B8B08DF69A1.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8c6a77a10d55c984cd6d385db1186a60') in 0.0324787 seconds
+[Worker0] Imported GUID: be13c398521e3c1ad21fb9da30ab2ab6 - Path: Packages/com.unity.modules.imgui/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e03fd2bfadc0d01a41e64b22b3c229da') in 0.007978 seconds
+[Worker0] Imported GUID: a2bf254017c87b24a872a9c1a15da172 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc9830083177504156295835F52A497DBF6BF55AA5DDD1D327AE6E875A117.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '93dc45fde6588834783ceacffb302551') in 0.030461 seconds
+[Worker0] Imported GUID: 2f69cce2467e6db418f53160dab07754 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120059862025665113F13981D777680FB1C465BA8BAC6E9FDAA55BC1.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '77eea6dad9efbd7e9c97c1116c49a1f7') in 0.0385968 seconds
+[Worker0] Imported GUID: 7d1bc5059b3dc244cbafafcd4eeef4ab - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202561622D6FDC53187344F6E937B7E17FBE5BAF1F19A680.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e144fd92d84bf7f96337631ad2b4ac0e') in 0.0348631 seconds
+[Worker0] Imported GUID: a9dc0d95f2498804fa78a5f1dac0c3b8 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256493FA86C33039B33898735A76F84C40DE1B1DF4C86F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd6bcc9a1c61b7d9a2f29e4d7df82bf3d') in 0.0275956 seconds
+[Worker0] Imported GUID: c9dbc84e1800aa246a34e4c36d4ae52f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120059862025234445B14B3777F7B68A3F7C33143617464C370D5C8A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd27b176f0efc4f64e309d2d16841c3cd') in 0.0297523 seconds
+[Worker0] Imported GUID: 4df886af4ebdf944b8dd89281722853a - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256571A8B50FC810EA2E34874F266F5CA629C0707E4767.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5f3d4992818b8dcdee2f88b5753e66f4') in 0.0320937 seconds
+[Worker0] Imported GUID: 40447d988cc999242bd1f6b352754e61 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202563594C9C8CA350F192F0B80BFAB11E9F190374CC6546.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e7802844c9ea8fbb923e52d71958c8b8') in 0.0342688 seconds
+[Worker0] Imported GUID: 5c1ee4056d0ac7ad3c5a16597fcaa38a - Path: Packages/com.unity.modules.physics/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3b2283b9937f3dea5a6039b8207cad63') in 0.0054301 seconds
+[Worker0] Imported GUID: 1a4266815e998967becf686f9c71f0a6 - Path: Packages/com.unity.modules.physics/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f6716fcfd418bf0d78594432937656ce') in 0.0210439 seconds
+[Worker0] Imported GUID: de563c8a20a79a24380104900e2bb3a4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256278BDBB0DD86BF3B44AF3D666A2F28924E005CB78EC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f61731a484b1a0061d0d50739e5b17f2') in 0.0293001 seconds
+[Worker0] Imported GUID: d2ec2d1228c8e67cdd913cb5609176a2 - Path: Packages/com.unity.modules.unitywebrequest/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bbad08856e3c8a8e5710360d64c437c6') in 0.0050142 seconds
+[Worker0] Imported GUID: 40bf3cec17fa0b49fe04443c8332d638 - Path: Packages/com.unity.modules.jsonserialize/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ed17e05a7bf2f4f1f91f73202a4ff19f') in 0.0179118 seconds
+[Worker0] Imported GUID: 623c2e15ad408e24c8732f08ba162616 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202562463268327B601869DDC31609127AE602FF0650B6F6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '16a6d6541ac4e6d3b0d80d4a12c6f652') in 0.0328525 seconds
+Worker ready: AssetImportWorkerHW2 2
+[Worker0] Imported GUID: 773d2434bd55af747a9fd7f394f67a4d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc94255186502808192267CD3F4A7EC8EF61347D06A5FCEC0B5622408B313.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'fbf723d132409cf75a15c0f72e7d733b') in 0.0370291 seconds
+[Worker0] Imported GUID: 42fe78c8fe682715a2cb531422e6ccb3 - Path: Packages/com.unity.modules.imgui/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f4743fac315668f638ee7fbfcd3b1da0') in 0.0202395 seconds
+[Worker0] Imported GUID: e6a135e3ea9cb46795d1b0e05ac3e1e5 - Path: Packages/com.unity.modules.jsonserialize/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a34dfe4e9ff6f98526e35e5b61faf007') in 0.0050962 seconds
+[Worker0] Imported GUID: 3fdd83b151eb8d25c5e2f82fc39dcb04 - Path: Packages/com.unity.modules.unitywebrequest/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'aa95ac472ae167db2e9eb6ab7727b2c4') in 0.0227476 seconds
+[Worker0] Imported GUID: f0457d61a57b53442b364ce8f23d49a7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256449556750155862F723B992882F46C4FA2ACE85F56C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '841ea8232e9dd6c21e514ef92feb7879') in 0.0319118 seconds
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.332 seconds
+Domain Reload Profiling: 1911ms
+	BeginReloadAssembly (394ms)
+		DisableScriptedObjects (93ms)
+		CreateAndSetChildDomain (126ms)
+	RebuildCommonClasses (12ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (102ms)
+		LoadAssemblies (116ms)
+		AnalyzeDomain (5ms)
+			TypeCache.Refresh (4ms)
+	FinalizeReload (1333ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (115ms)
+			ProcessInitializeOnLoadAttributes (109ms)
+			ProcessInitializeOnLoadMethodAttributes (99ms)
+			AfterProcessingInitializeOnLoad (8ms)
+		AwakeInstancesAfterBackupRestoration (621ms)
+
+Asset Pipeline Refresh (id=b8254d14c00591947b5ef56644214cc1): Total: 2.049 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1381 ms
+		Asset DB Callback time: managed=53 ms, native=3 ms
+		Scripting: domain reloads=1, domain reload time=610 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=46, non-scripts=436
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 2.247ms
+	ApplyChangesToAssetFolders: 0.055ms
+	Collect global state as custom dependencies: 1.018ms
+	ProcessAssetsWithTransientArtifactChanges: 2.076ms
+	CategorizeAssets: 3.983ms
+	CompileScripts: 1.770ms
+	ImportOutOfDateAssets: 1337.866ms (1333.460ms without children)
+		UnloadImportedAssets: 1.622ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.061ms
+		ImportSchedulerStart: 2.720ms
+	PostProcessAllAssets: 55.339ms
+		PostProcessCallbackCreateDeferredMaterials 0.207ms
+		ShaderAssetModifiedCallback 0.116ms
+		MonoPostProcessAllAssets: 53.138ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 13.250ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 7.510ms
+			AssetPostprocessor.OnPostprocessAllAssets 5.217ms
+			AssetChangedListener.OnPostprocessAllAssets 3.018ms
+			SyncVS.PostprocessSyncProject 2.156ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.486ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.302ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.181ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.660ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.464ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.444ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.360ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.309ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.297ms
+			AssetEvents.OnPostprocessAllAssets 0.283ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.276ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.185ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.185ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.170ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.158ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.124ms
+	PostAssetChangesProfiler: 0.434ms
+	UnloadStreamsBegin: 1.617ms
+	Untracked: 638.744ms
+
+AudioListener component deleted: Component belongs to a disabled built-in package.
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.739 ms
+	Integration:            32.299 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.013 ms
+	Total Operation Time:   33.055 ms
+[Licensing::Client] Successfully resolved entitlement details
+TrimDiskCacheJob: Current cache size 0mb
+Asset Pipeline Refresh (id=8e72bdb6af631f543bb4772e1060068f): Total: 0.012 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Warboard Aeldari Model Pack loaded from Resources/Armies/Models/Aeldari: 209 indexed objects.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ModelVisualRegistry:EnsurePackLoaded () (at Assets/Scripts/Core/ModelVisualRegistry.cs:146)
+ModelVisualRegistry:TryResolvePack (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:404)
+ModelVisualRegistry:Resolve (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:771)
+SquadController:CreateModels () (at Assets/Scripts/Core/SquadController.cs:278)
+SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:250)
+GameController:SpawnSquad (string,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.cs:2825)
+GameController:LoadArmy (string) (at Assets/Scripts/Core/GameController.cs:2791)
+GameController:LoadBuiltInTestArmies () (at Assets/Scripts/Core/GameController.cs:2856)
+GameController:OnGUI () (at Assets/Scripts/Core/GameController.cs:23869)
+
+(Filename: Assets/Scripts/Core/ModelVisualRegistry.cs Line: 146)
+
+MonoPathRemapper: Attempts to remap: 2192; Successful remaps: 36
+Serialized file version minimum: 23, current 23
+[LAYOUT] About to save layout C:\Users\elli0\Documents\Warboard\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/elli0/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-elli0-6000.5.7-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-elli0-6000.5.7 channel disconnected successfully.
+Shut down.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 0000000000006740, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000712C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000006740, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000712C, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 6000
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1786280727445,"processId":29384,"allocatedMemory":45399036,"memoryLabels":[{"Default":162664},{"Permanent":15516},{"NewDelete":66321},{"Thread":4197560},{"Manager":32517},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":837372},{"Material":24},{"GfxDevice":55328},{"Animation":952},{"Audio":880},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":94664},{"Input":42840},{"JobScheduler":256},{"TextLib":19030},{"Mono":48},{"ScriptingNativeRuntime":674964},{"BaseObject":1734314},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":1032},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":9874},{"StaticString":3808},{"Utility":2673426},{"Curl":48},{"PoolAlloc":2168},{"AI":80},{"TypeTree":17165},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7352},{"WebRequest":8022},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":33042128},{"Camera":17},{"Secure":265},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":234464},{"CoreStats":13688},{"Identifiers":6768},{"Gui":601},{"EditorUtility":192635},{"VersionControl":8},{"Undo":931},{"AssetDatabase":756879},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35345},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

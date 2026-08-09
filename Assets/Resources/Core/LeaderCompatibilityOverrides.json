@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "leaderName": "Ynnari Archon",
+      "bodyguardNames": [
+        "Ynnari Incubi",
+        "Ynnari Kabalite Warriors"
+      ]
+    },
+    {
+      "leaderName": "Yvraine",
+      "bodyguardNames": [
+        "Corsair Reaver Band",
+        "Corsair Voidreavers",
+        "Corsair Voidscarred",
+        "Guardian Defenders",
+        "Storm Guardians",
+        "Ynnari Incubi",
+        "Ynnari Kabalite Warriors",
+        "Ynnari Wyches"
+      ]
+    },
+    {
+      "leaderName": "The Visarch",
+      "bodyguardNames": [
+        "Corsair Reaver Band",
+        "Corsair Voidreavers",
+        "Corsair Voidscarred",
+        "Guardian Defenders",
+        "Storm Guardians",
+        "Ynnari Incubi",
+        "Ynnari Kabalite Warriors",
+        "Ynnari Wyches"
+      ]
+    }
+  ]
+}

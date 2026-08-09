@@ -1,0 +1,48 @@
+{
+  "id": "necron_overlord",
+  "displayName": "Necron Overlord",
+  "factionId": "Necrons",
+  "move": 5.0,
+  "toughness": 5,
+  "save": 2,
+  "modelCount": 1,
+  "woundsPerModel": 5,
+  "modelSpacing": 1.0,
+  "canDeepStrike": false,
+  "isLeader": true,
+  "canAttachToIds": [
+    "necron_immortals"
+  ],
+  "attachedMoveModifier": 0.0,
+  "attachedRangedSkillModifier": 0,
+  "attachedMeleeSkillModifier": -1,
+  "loadouts": [
+    {
+      "roleName": "Overlord",
+      "count": 1,
+      "rangedWeapon": {
+        "id": "overlord_arrow_test",
+        "displayName": "Overlord Ranged Weapon",
+        "range": 18.0,
+        "attacksPerModel": 1,
+        "skill": 2,
+        "strength": 6,
+        "ap": -1,
+        "damage": 2,
+        "keywords": []
+      },
+      "meleeWeapon": {
+        "id": "overlord_blade_test",
+        "displayName": "Overlord Blade",
+        "range": 0.0,
+        "attacksPerModel": 4,
+        "skill": 2,
+        "strength": 7,
+        "ap": -2,
+        "damage": 2,
+        "keywords": []
+      }
+    }
+  ],
+  "abilities": []
+}

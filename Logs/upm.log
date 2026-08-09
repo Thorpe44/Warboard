@@ -1,0 +1,33 @@
+[2026-08-09T13:03:40.636Z][INFO] Command-line: 'C:\\Program Files\\Unity\\Hub\\Editor\\6000.5.7f1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe' server -s 29384 --ipc-path Unity-Upm-29384 -l 2 --log-file C:\\Users\\elli0\\Documents\\Warboard/Logs/upm.log
+[2026-08-09T13:03:40.691Z][INFO] IPC server started (IPC path=Unity-Upm-29384).
+[2026-08-09T13:03:40.691Z][INFO] Hint: To connect to this UPM instance, launch Unity with the command-line parameter -upmIpcPath Upm-29384.
+[2026-08-09T13:03:43.815Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-08-09T13:03:43.895Z][INFO] project:list-packages --> 200 (80 ms)
+[2026-08-09T13:03:43.970Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-08-09T13:03:43.984Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-08-09T13:03:43.999Z][INFO] config:project:get-registries --> 200 (15 ms)
+[2026-08-09T13:03:43.999Z][INFO] project:list-packages --> 200 (29 ms)
+[2026-08-09T13:03:52.321Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-08-09T13:03:52.352Z][INFO] project:list-packages --> 200 (31 ms)
+[2026-08-09T13:03:52.364Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-08-09T13:03:52.394Z][INFO] project:list-packages --> 200 (30 ms)
+[2026-08-09T13:03:52.456Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-08-09T13:03:52.460Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-08-09T13:03:53.901Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-08-09T13:03:53.949Z][INFO] project:list-packages --> 200 (47 ms)
+[2026-08-09T13:03:55.970Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-08-09T13:03:56.328Z][INFO] project:list-packages --> 200 (358 ms)
+[2026-08-09T13:04:05.834Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-08-09T13:04:05.868Z][INFO] project:list-packages --> 200 (34 ms)
+[2026-08-09T13:04:05.934Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-08-09T13:04:05.938Z][INFO] config:project:get-registries --> 200 (5 ms)

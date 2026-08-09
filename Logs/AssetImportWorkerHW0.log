@@ -1,0 +1,1158 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.7f1 (017862109af0) revision 96354'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0" at "2026-08-09T13:03:52.6824793Z"
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 15681 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-08-09T13:03:52Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorkerHW0
+-projectPath
+C:/Users/elli0/Documents/Warboard
+-logFile
+Logs/AssetImportWorkerHW0.log
+-srvPort
+54822
+-parentPid
+29384
+-analyticsCloudUserId
+anonymous
+-analyticsLocalProjectId
+c906cf14c5cdf1c4c98a018ddbb3d1d4
+-editorAnalyticsEnabled
+1
+-cbmEditorLicense
+b7554ef441d2256055a9bf018eca10ed8b75e9f3
+-cbmMachineId
+JOUP1U45KtUV8sm1s/K3HmNb45Q=
+-licensingIpc
+LicenseClient-elli0
+-noDiagnosticSwitchPersistentStore
+-job-worker-count
+5
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+-force-d3d12
+-name
+AssetImport
+Successfully changed project path to: C:/Users/elli0/Documents/Warboard
+C:/Users/elli0/Documents/Warboard
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [25196]  Target information:
+
+Player connection [25196]  * "[IP] 192.168.1.228 [Port] 0 [Flags] 2 [Guid] 2175502669 [EditorId] 2175502669 [Version] 1048832 [Id] WindowsEditor(7,Elliot_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [25196] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [25196] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.5.7f1 (017862109af0)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/elli0/Documents/Warboard/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.1]
+    Renderer:        AMD Radeon (TM) Graphics (ID=0x15e7)
+    Vendor:          ATI
+    VRAM:            7840 MB
+    App VRAM Budget: 7663 MB
+    Driver:          31.0.21923.3003
+    Unified Memory Architecture
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56716
+CodeReloadManager initialized
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003001 seconds.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-elli0"
+[Licensing::IpcConnector] LicenseClient-elli0 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7" at "2026-08-09T13:03:54.1122449Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 28028, path: "C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              09748546c40945e78fd63cbe4b742a51
+  Correlation Id:          324844fd88e1f47c6899e4e6a023c6bf
+  External correlation Id: 6307554784811294812
+  Machine Id:              JOUP1U45KtUV8sm1s/K3HmNb45Q=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-elli0-6000.5.7" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7-notifications" at "2026-08-09T13:03:54.1248051Z"
+[Licensing::Module] Licensing Background thread has ended after 1.44s
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.515 seconds
+Domain Reload Profiling: 1284ms
+	BeginReloadAssembly (174ms)
+	RebuildCommonClasses (8ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (88ms)
+	LoadAllAssembliesAndSetupDomain (476ms)
+		LoadAssemblies (168ms)
+		AnalyzeDomain (324ms)
+			TypeCache.Refresh (321ms)
+				TypeCache.ScanAssembly (298ms)
+	FinalizeReload (517ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (118ms)
+			ProcessInitializeOnLoadAttributes (143ms)
+			ProcessInitializeOnLoadMethodAttributes (154ms)
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 5774099461094-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.667 seconds
+Domain Reload Profiling: 1172ms
+	BeginReloadAssembly (283ms)
+		DisableScriptedObjects (12ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (11ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (123ms)
+		LoadAssemblies (148ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (8ms)
+			BuildScriptInfoCaches (3ms)
+	FinalizeReload (669ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (182ms)
+			ProcessInitializeOnLoadAttributes (144ms)
+			ProcessInitializeOnLoadMethodAttributes (124ms)
+			AfterProcessingInitializeOnLoad (9ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+AcceleratorClientConnectionCallback - disconnected - :0
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Curl error 3: URL rejected: Malformed input to a URL function
+Unloading 32 unused Assets / (28.4 KB). Loaded Objects now: 642.
+Memory consumption went from 157.7 MB to 157.6 MB.
+Total: 9.661100 ms (FindLiveObjects: 0.144700 ms CreateObjectMapping: 0.019300 ms MarkObjects: 9.351200 ms  DeleteObjects: 0.141200 ms)
+
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.0215878Z
+  Time since last request: 179333.73031350001111 seconds.
+  importAddress: GUID: 9e6da8da46e74a2459d0d3a153a80f57 - Path: Assets/Scripts/Core/AeldariRulesSystem.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 9e6da8da46e74a2459d0d3a153a80f57 - Path: Assets/Scripts/Core/AeldariRulesSystem.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 9e6da8da46e74a2459d0d3a153a80f57' -> (Import Result ID: 'afc2e357f0856f7e497aada6fbecfb78') in 0.162 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d9aca68dc4d4ec1ec7635315c2d8992d DependenciesID=e3cb56b135effd89c4be9de2e7fac259 StaticDependenciesID=4702cbfde9c0e3f17c050793647fd26c 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.1865062Z
+  Time since last request: 0.0005331 seconds.
+  importAddress: GUID: 6fa08679180b9c6459f659157be3f2ad - Path: Assets/Scripts/Core/SquadController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 6fa08679180b9c6459f659157be3f2ad - Path: Assets/Scripts/Core/SquadController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 6fa08679180b9c6459f659157be3f2ad' -> (Import Result ID: 'cea6df670cadb3676b323a300e7800d4') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a6f15ad07bf96a18d22402051676b91c DependenciesID=68a37ce47017799e3e2da5eab4a31099 StaticDependenciesID=7d64e0e8ca90ebcad96e4bc765e4fb5e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.1933065Z
+  Time since last request: 0.0006445 seconds.
+  importAddress: GUID: 06bb162be4391b343a7fcb025859a08b - Path: Assets/Scripts/Core/GameController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 06bb162be4391b343a7fcb025859a08b - Path: Assets/Scripts/Core/GameController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 06bb162be4391b343a7fcb025859a08b' -> (Import Result ID: '66480d98727a9b8d63e14e0b73230901') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8af755a0b1d740661da295c7f044c6d7 DependenciesID=14c860d63ab631dc8e98b10732b621e6 StaticDependenciesID=812cec54a6bb28e6707961b47cb74cca 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.2010301Z
+  Time since last request: 0.0007588 seconds.
+  importAddress: GUID: 737a08491b670a74cb22ad4b23e92a70 - Path: Assets/Scripts/Core/InteractiveAttackController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 737a08491b670a74cb22ad4b23e92a70 - Path: Assets/Scripts/Core/InteractiveAttackController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 737a08491b670a74cb22ad4b23e92a70' -> (Import Result ID: 'a75364b2b84260fe300ff4e8aeeb7cab') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=deb2717e564421c2d8d537b115a8dafd DependenciesID=741439023eecf9ae95a31e34a7d15e44 StaticDependenciesID=c2db9e62d7d5e8e3a0a7ff8f6979ddba 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.3384731Z
+  Time since last request: 0.1312829 seconds.
+  importAddress: GUID: b0541e61e13517843b2a7c2151c8fd74 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957618096B2F8B0D9F60A387C2A04E4950C1487B51D4BCDAB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: b0541e61e13517843b2a7c2151c8fd74 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957618096B2F8B0D9F60A387C2A04E4950C1487B51D4BCDAB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: b0541e61e13517843b2a7c2151c8fd74' -> (Import Result ID: 'a66bb61a74487ddd26d84df3ee5cef16') in 0.139 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9056072029d0a5c5cea94bac1305f6c8 DependenciesID=c45735287180d45a7725e5bf7c9007a1 StaticDependenciesID=b650828c65801b82105c04ba6026784a 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.4787477Z
+  Time since last request: 0.0008381 seconds.
+  importAddress: GUID: d7a4207e8638ff541aec9a2a4837f0ec - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576192989499093C22FCB2D53D558A8761C4D027F85CD518.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: d7a4207e8638ff541aec9a2a4837f0ec - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576192989499093C22FCB2D53D558A8761C4D027F85CD518.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: d7a4207e8638ff541aec9a2a4837f0ec' -> (Import Result ID: '90861968ee5d63e17a7e2c837d87d6ee') in 0.054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f3ee49cf048a363c81464fba6d49e2b5 DependenciesID=422d7eac2a9e2257a54649eebd415402 StaticDependenciesID=0953c7574713b9e6df86f9ba4c07193c 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.5337519Z
+  Time since last request: 0.0006222 seconds.
+  importAddress: GUID: 5e24bc8fef0903e44b2670873a86a856 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 5e24bc8fef0903e44b2670873a86a856 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 5e24bc8fef0903e44b2670873a86a856' -> (Import Result ID: '2543423fd07c6f7c75d5b4ce0d7daf15') in 0.028 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e2565329d12a91e984e33cfce0cb0936 DependenciesID=ed56f14ce69199942d1daf395e54b839 StaticDependenciesID=4072392d877f9e59fce4881ab686c29b 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.5627969Z
+  Time since last request: 0.0007964 seconds.
+  importAddress: GUID: 7ed63674beae25c42897ff4971b20d7e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237067093053423746213865A95A2E3D0F8049D05C2600005B74C05B380.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 7ed63674beae25c42897ff4971b20d7e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237067093053423746213865A95A2E3D0F8049D05C2600005B74C05B380.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 7ed63674beae25c42897ff4971b20d7e' -> (Import Result ID: 'cdf1f0b2202b4ae3dcc0a52948852aa4') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5295e0059edbca3d652cea406dfce92d DependenciesID=1050b843e7d0216da50bd89c38b00402 StaticDependenciesID=80f69204d612253a3afa7562f0b76544 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.5850666Z
+  Time since last request: 0.0005188 seconds.
+  importAddress: GUID: 54ccb8787b4f1904c834e4fa9c9f0da0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957618746C64B798F9CB36CE41DD3D11D1C5D8D8D405F0060.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 54ccb8787b4f1904c834e4fa9c9f0da0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957618746C64B798F9CB36CE41DD3D11D1C5D8D8D405F0060.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 54ccb8787b4f1904c834e4fa9c9f0da0' -> (Import Result ID: '771ce6da782d36fcbe60a8b401527960') in 0.072 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=35dbfe6d0c819696dd6f678de5efb516 DependenciesID=c4eb057d361915c8a0882480b699e15f StaticDependenciesID=8223e7587b65c60b3649da7c88c629d9 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.6588238Z
+  Time since last request: 0.0014475 seconds.
+  importAddress: GUID: 48a7235bf00a0534da2bf56b724a1e9c - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2297465338554404696553C353BFD8CFFC7C2450CC14CF57635A3483442.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 48a7235bf00a0534da2bf56b724a1e9c - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2297465338554404696553C353BFD8CFFC7C2450CC14CF57635A3483442.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 48a7235bf00a0534da2bf56b724a1e9c' -> (Import Result ID: '243e23c256635a698321d89e1d42e195') in 0.050 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aa7d59840db741b4d3a60f427202e0c0 DependenciesID=4b587b62b8a723399e15ba657e901601 StaticDependenciesID=00e55bc370ed2e58139318905a98ebc1 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.7116561Z
+  Time since last request: 0.0007843 seconds.
+  importAddress: GUID: 68086931b16f03b49b6a53b1101efd32 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2370671116167745892CEC4B508AD157A725EA1BE969167977C2057E430.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 68086931b16f03b49b6a53b1101efd32 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2370671116167745892CEC4B508AD157A725EA1BE969167977C2057E430.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 68086931b16f03b49b6a53b1101efd32' -> (Import Result ID: '0c295ee0d3367cc0e83daffc268ccbff') in 0.045 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28c10530fc07455a6e20c305ecd59a10 DependenciesID=82a6de7c3de778df7814709b8528039f StaticDependenciesID=9f2f47b9052f1a383262c024df310263 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.7584531Z
+  Time since last request: 0.0009923 seconds.
+  importAddress: GUID: 6089ba83135b83245b58c20c18002080 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576191647448DDADD1986D97C4F1261516360F43950FB5FA.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 6089ba83135b83245b58c20c18002080 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576191647448DDADD1986D97C4F1261516360F43950FB5FA.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 6089ba83135b83245b58c20c18002080' -> (Import Result ID: '2d17ab06118fd06ee6f04a212f49bec4') in 0.071 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=afbf8f605f801a577ec14558ce3d5584 DependenciesID=694010280e4e1c92e26913146ff43541 StaticDependenciesID=f31dad3dc393ec731d5633eec6747f98 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.8327133Z
+  Time since last request: 0.0029065 seconds.
+  importAddress: GUID: b5c0ee0acc2406146ba11f6c54f61e87 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498565392422BD5BFA110D6FA8EB91FAE6FB4EF3FAC6011392ED.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: b5c0ee0acc2406146ba11f6c54f61e87 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498565392422BD5BFA110D6FA8EB91FAE6FB4EF3FAC6011392ED.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: b5c0ee0acc2406146ba11f6c54f61e87' -> (Import Result ID: 'ed0513d563148abca223ac6f59a36cdb') in 0.052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c169bd72569146d24565d727e033811b DependenciesID=cfba2ccbe15b39c81fd7c4742fdd9084 StaticDependenciesID=8d3cb56c17455d7dbafc80a2704e2973 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.8871594Z
+  Time since last request: 0.0006517 seconds.
+  importAddress: GUID: 80d598fcbafc7e141aa1d0223399e5aa - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576179614EDA3483939107143028BEABFAF7AC0B332566CB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 80d598fcbafc7e141aa1d0223399e5aa - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc20249771699576179614EDA3483939107143028BEABFAF7AC0B332566CB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 80d598fcbafc7e141aa1d0223399e5aa' -> (Import Result ID: '70b8a2e432a2b59d13a0bf39ed0458c2') in 0.045 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=84fd1620b6e400aaffc1388161136cc5 DependenciesID=000316eea3d4ab8d930faa83250c1004 StaticDependenciesID=6d0b8878adcbea14208ccdbd3b38e20a 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.9329038Z
+  Time since last request: 0.0005932 seconds.
+  importAddress: GUID: 6800207e9151f3a42b942151b20da8c0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957617845F442ACF4FD2A8656FE1DD6F403FC36D68AA45F82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 6800207e9151f3a42b942151b20da8c0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2024977169957617845F442ACF4FD2A8656FE1DD6F403FC36D68AA45F82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 6800207e9151f3a42b942151b20da8c0' -> (Import Result ID: '478d45f03ff8885f325fd2920c992394') in 0.052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=27a19661277c67ffb903fda987473d58 DependenciesID=761c93eae1f433158d40025805f91c56 StaticDependenciesID=a8778257003f2727fb7ffa0bc790257f 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:56.9857228Z
+  Time since last request: 0.0005937 seconds.
+  importAddress: GUID: cc7a20dea728fc141907c6d50117bd8d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23706711161660673220C36642045E522E254FB74A64FF5BCF8586A2DE5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: cc7a20dea728fc141907c6d50117bd8d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23706711161660673220C36642045E522E254FB74A64FF5BCF8586A2DE5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: cc7a20dea728fc141907c6d50117bd8d' -> (Import Result ID: '0d779ab83a233d356895606523bff3bd') in 0.041 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fe76132fa87957e9e2d9b47084049878 DependenciesID=844214a7622e5b256bb6592e2efff38e StaticDependenciesID=2a078b1f6d9579c37a6170818c5b7301 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.032793Z
+  Time since last request: 0.0054594 seconds.
+  importAddress: GUID: 799caa12ada3abf4397e6e31e4e9d18b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464004A330C7ED2277342B8485C0055A8F51C3EBEFC5AD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 799caa12ada3abf4397e6e31e4e9d18b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464004A330C7ED2277342B8485C0055A8F51C3EBEFC5AD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 799caa12ada3abf4397e6e31e4e9d18b' -> (Import Result ID: 'ba7df00bfc52dd032eec8fb7671f501f') in 0.057 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=37b35a41a41cb9a5249734e90ba0b769 DependenciesID=3ba802c2ca7cd26a42fbb7418627303e StaticDependenciesID=cab525881393da539d6ddf6a3d02c1f3 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.0915073Z
+  Time since last request: 0.0009904 seconds.
+  importAddress: GUID: a4b3c246a33dd9649ba3a0ad52169040 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751232464099E98D776DB8A102F885A5EE030AEDCCA61FAD14D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: a4b3c246a33dd9649ba3a0ad52169040 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751232464099E98D776DB8A102F885A5EE030AEDCCA61FAD14D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: a4b3c246a33dd9649ba3a0ad52169040' -> (Import Result ID: '950a8ed77ebe83a13b27eb7dd074f6a5') in 0.054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3a62af666f6064c5b3a564c870201327 DependenciesID=7f9927e4661de6cf1fc11f66669bbeda StaticDependenciesID=947cd84cf14232092cbd7453ca544330 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.1471897Z
+  Time since last request: 0.0007977 seconds.
+  importAddress: GUID: 61da3a45a434b9944a498d27e3236828 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751184645156072B317B81B31CE7ACB8AEBD770CF886F6B1508.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 61da3a45a434b9944a498d27e3236828 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751184645156072B317B81B31CE7ACB8AEBD770CF886F6B1508.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 61da3a45a434b9944a498d27e3236828' -> (Import Result ID: 'a4e42373ce517d31a4723bb1f491db62') in 0.055 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=135583d8f5ecbd095099b65fcf918dbe DependenciesID=d8e281055769dd9ffdb9e6b8a137f586 StaticDependenciesID=807964b24c51a02ca4d47f94b11b6184 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.2045025Z
+  Time since last request: 0.0000677 seconds.
+  importAddress: GUID: 4960826862aaeee4e8dfba9e0a87bbdc - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2451736358375261427B9E5A7164E7DD969C582FDD372C4DEBC791EFAA7.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 4960826862aaeee4e8dfba9e0a87bbdc - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2451736358375261427B9E5A7164E7DD969C582FDD372C4DEBC791EFAA7.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 4960826862aaeee4e8dfba9e0a87bbdc' -> (Import Result ID: '56a0657ced06839f4702a8ebf79c7fdc') in 0.039 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dc4ae7553f1c1864461438d53eaf9249 DependenciesID=68ed46963dc198d67131ed6e4542ab42 StaticDependenciesID=815bb80293d644093414052b6be5cf20 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.2458509Z
+  Time since last request: 0.0000811 seconds.
+  importAddress: GUID: a2b651a69aaf4c349b729100e1185de0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186361F623AA21E13C1AEF636EDD2F1BE891DE0965389D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: a2b651a69aaf4c349b729100e1185de0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186361F623AA21E13C1AEF636EDD2F1BE891DE0965389D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: a2b651a69aaf4c349b729100e1185de0' -> (Import Result ID: '913417112647c54e38a13ca6d80b0a64') in 0.045 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a7744844d5695a7df94336f48835c59e DependenciesID=ac823b6e9cc380628156dc8d1f3af4f1 StaticDependenciesID=f4bc141084c9ad4ed7f5c7f135213d0f 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.2916678Z
+  Time since last request: 0.0006134 seconds.
+  importAddress: GUID: efbd742dbd3a5d140a1371d2fbcece7d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196901035627561F1B87491C15A2D9DB6295CB8A3E72DE54938D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: efbd742dbd3a5d140a1371d2fbcece7d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196901035627561F1B87491C15A2D9DB6295CB8A3E72DE54938D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: efbd742dbd3a5d140a1371d2fbcece7d' -> (Import Result ID: '04dd10c68e1181e21e30cc6fa9bc0abe') in 0.086 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=76917b3aa793c9a3a16485df12a7a833 DependenciesID=3a9a33f8f77fe5a1cda767b0789bf006 StaticDependenciesID=fdbf44a5b62c20961a36b4493e24aaeb 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.3794296Z
+  Time since last request: 0.0007573 seconds.
+  importAddress: GUID: c2b0c0ecff50f854f80343cbb1be5334 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411924452664815753A74E1F8745DB2F30454D3DCDE61D8780EB98AFB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: c2b0c0ecff50f854f80343cbb1be5334 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411924452664815753A74E1F8745DB2F30454D3DCDE61D8780EB98AFB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: c2b0c0ecff50f854f80343cbb1be5334' -> (Import Result ID: 'a8563a274266bbc8657f4e4509b6b0dc') in 0.063 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ad015b9247eec4528de5a72f9e40a02e DependenciesID=692d9cac7f966d629b5b52064a7b371a StaticDependenciesID=8500f528c3fc11a2dc56610148d9a388 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.4438354Z
+  Time since last request: 0.0009655 seconds.
+  importAddress: GUID: dcfb311fb32f2e54a865af4f4c9a7eb3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464603869B149E9BC2A7FCFD0E084907C290D397A4846F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: dcfb311fb32f2e54a865af4f4c9a7eb3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464603869B149E9BC2A7FCFD0E084907C290D397A4846F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: dcfb311fb32f2e54a865af4f4c9a7eb3' -> (Import Result ID: '2a4bedfd11423209e3624c8e6975bf60') in 0.149 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=96dcf54c45a054a2416943283d8f7404 DependenciesID=99d507212b415fab234f4852791899b1 StaticDependenciesID=cb8c8cf5f4f77978f53995a4c4f25fc9 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.5935074Z
+  Time since last request: 0.0006851 seconds.
+  importAddress: GUID: 1c68e03aabc79aa48bf959d2f534f73f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075123246040BD64FE566B31321B11A0FE6970D408F10B6442A3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 1c68e03aabc79aa48bf959d2f534f73f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075123246040BD64FE566B31321B11A0FE6970D408F10B6442A3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 1c68e03aabc79aa48bf959d2f534f73f' -> (Import Result ID: '45dab476511d8da325746a5191702b9d') in 0.060 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ff4cf994c2e84dde2c9b7402938a4da DependenciesID=0508c1c7c2dbd305bf3ea1f4805f967b StaticDependenciesID=6cbace4583948f552bd8dca59302c58b 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.6547048Z
+  Time since last request: 0.0009072 seconds.
+  importAddress: GUID: 2d57a63af40cd534ca31d808a590b3a7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807512039286714F6DD3DF8E54C55D479512D0C7688E2943834CF.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 2d57a63af40cd534ca31d808a590b3a7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807512039286714F6DD3DF8E54C55D479512D0C7688E2943834CF.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 2d57a63af40cd534ca31d808a590b3a7' -> (Import Result ID: '47a0257667a7e75b36a84e547404e943') in 0.052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5d1edaa2f30534f17cb5b091b7516b6c DependenciesID=6062489caca71bfbe9ecb0a41f4edf83 StaticDependenciesID=ef8c8eae0349333bbe9702fe822283e8 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.708064Z
+  Time since last request: 0.000963 seconds.
+  importAddress: GUID: 167a1b0a26d97d74099b98c3a468aee5 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412000814599865533C86A1B28B983C48625E839C3DF6527B65A97939.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 167a1b0a26d97d74099b98c3a468aee5 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412000814599865533C86A1B28B983C48625E839C3DF6527B65A97939.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 167a1b0a26d97d74099b98c3a468aee5' -> (Import Result ID: '1fc533b6de7091ac2fb11d942a81fbd8') in 0.052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e3b922517ccc6a824de8da047f5256d2 DependenciesID=43c7cbefe6dea32bc85302fc571ebcd1 StaticDependenciesID=cc8d53ea7a666152cf67e6220a25cd9f 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.7616931Z
+  Time since last request: 0.0007445 seconds.
+  importAddress: GUID: 8dcc6c27dba25cf41b40b742028a1ae1 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464806BFB723EA956C052E3BD7AB3F2127B5927A975A0E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 8dcc6c27dba25cf41b40b742028a1ae1 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464806BFB723EA956C052E3BD7AB3F2127B5927A975A0E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 8dcc6c27dba25cf41b40b742028a1ae1' -> (Import Result ID: '9f36d24cae29c4d28f6fda958bd52895') in 0.037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ba0fd1c44e87d0700e57893e4d1de556 DependenciesID=bce61296d50c39868a01dec51428897b StaticDependenciesID=61a03b506c8785a9ff4ae63396923a88 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.7995325Z
+  Time since last request: 0.0006345 seconds.
+  importAddress: GUID: 2e6586ff5448d6e48bc208c3e53b5b0e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24517363583752618306410BCFA995CC98215DA4E468958FA260B30C5DC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 2e6586ff5448d6e48bc208c3e53b5b0e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24517363583752618306410BCFA995CC98215DA4E468958FA260B30C5DC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 2e6586ff5448d6e48bc208c3e53b5b0e' -> (Import Result ID: 'a89ef0ceb1be1ac3a534ad30e05aa1c2') in 0.037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4ff91c0e9901eb0e6cb053726d67828b DependenciesID=e10536685dcb8cc8eb4152405afe04fe StaticDependenciesID=630b941529f1c8f29b38e125da996b14 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.8374988Z
+  Time since last request: 0.0006988 seconds.
+  importAddress: GUID: 0de61b310ea12644bb46269fc1cbb282 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2435956901696347800001C516E835B8A15D855AFA755ED81A12B6C44BD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 0de61b310ea12644bb46269fc1cbb282 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2435956901696347800001C516E835B8A15D855AFA755ED81A12B6C44BD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 0de61b310ea12644bb46269fc1cbb282' -> (Import Result ID: 'da2544bcc5257cce470ab28f5888d0e8') in 0.037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=364f436d2a06260128db134c91047e22 DependenciesID=cdb87ffaacc850a2f05b414cdd30fbd2 StaticDependenciesID=1698a23d8eab0b60f787d963b5ca79d7 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.8761053Z
+  Time since last request: 0.0008556 seconds.
+  importAddress: GUID: ca76e914c0e0ed74eaf5f250525a5860 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119924828098299180CBD092D57C05B3D3518B97573C598259CB1F37.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: ca76e914c0e0ed74eaf5f250525a5860 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119924828098299180CBD092D57C05B3D3518B97573C598259CB1F37.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: ca76e914c0e0ed74eaf5f250525a5860' -> (Import Result ID: 'fb57ee5e6865a22a15f45b33e6db217b') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5345eab540229790515dc98c5fe88cfe DependenciesID=32735e994253fe05b0eb72d554e52f0c StaticDependenciesID=f2eed9ca8be2850c83a12b2817ae6c01 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.9132277Z
+  Time since last request: 0.0008062 seconds.
+  importAddress: GUID: 717cde9cd47fcd04e9af1d1616bf7aa9 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2380802127833019151EB8F9BAB50E4A43F8331B6DFE31C98CDC16DC43A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 717cde9cd47fcd04e9af1d1616bf7aa9 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2380802127833019151EB8F9BAB50E4A43F8331B6DFE31C98CDC16DC43A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 717cde9cd47fcd04e9af1d1616bf7aa9' -> (Import Result ID: '6fc1e4618b0fd6b6dbe56cbeb5c2b87e') in 0.041 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6cf85f9d8db8e4196f5628d3b4136b74 DependenciesID=f9bfe6be8aabe2e080923898ac570c96 StaticDependenciesID=52f98ae91e12f79d237441fe33d9a833 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.9556416Z
+  Time since last request: 0.0006983 seconds.
+  importAddress: GUID: abf87510e27e89f43929bba43ca3ffb1 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24719938605576519821D8BCF89018556B3E013F26CDDFC11228CC7167A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: abf87510e27e89f43929bba43ca3ffb1 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24719938605576519821D8BCF89018556B3E013F26CDDFC11228CC7167A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: abf87510e27e89f43929bba43ca3ffb1' -> (Import Result ID: '5dabbd901b894de22fce87bfa49130cc') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=842d6ec0e990ccb69fd0fa6f7a5dc71a DependenciesID=dd8d61cc5e76b2decaa4f2bc16c40c7d StaticDependenciesID=18c473e89e86608dd8f46e1381613228 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:57.9922935Z
+  Time since last request: 0.0006116 seconds.
+  importAddress: GUID: ad7f55ef8817f1540added6980dcd174 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc247199386055765240524EFA2EA4D884F59313AF2516CBC4C6AE8C0507E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: ad7f55ef8817f1540added6980dcd174 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc247199386055765240524EFA2EA4D884F59313AF2516CBC4C6AE8C0507E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: ad7f55ef8817f1540added6980dcd174' -> (Import Result ID: '84bae6a695f7bdc743e2764940c3eb33') in 0.033 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7e90ce5017efdfcd84363a7b36142a48 DependenciesID=c5bedd7959485323dc96368794230afe StaticDependenciesID=81b73bd8d37b51f3a181b8fd6d1f575d 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.026713Z
+  Time since last request: 0.0007511 seconds.
+  importAddress: GUID: da564caad877a784e8745c2187f0f1e6 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196898784838D984DF4A3419AAC40C8B0C5CAA989AB7B6912293.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: da564caad877a784e8745c2187f0f1e6 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196898784838D984DF4A3419AAC40C8B0C5CAA989AB7B6912293.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: da564caad877a784e8745c2187f0f1e6' -> (Import Result ID: '121ee4e46db92485f88bbaaef88cfdfe') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a353bdf4d5538fd6ca9833a557a16da7 DependenciesID=761b76b625f98083c36842b62971fb75 StaticDependenciesID=c9b62cfcfe768dddbfde7237991394b1 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.063522Z
+  Time since last request: 0.0006701 seconds.
+  importAddress: GUID: 13c15b8640526824bb045cb12660f228 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24719938605576522699BA138CAED8CECF9AEF8ADF0B66C2235F0B79A48.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 13c15b8640526824bb045cb12660f228 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc24719938605576522699BA138CAED8CECF9AEF8ADF0B66C2235F0B79A48.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 13c15b8640526824bb045cb12660f228' -> (Import Result ID: '1085939d8e00913bc30c80351d50d975') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=050981a512707b68d17b2d2d2340d72b DependenciesID=d2826493835ec252a46783c85139951a StaticDependenciesID=4ff48fe607ecd1794f9f94420abd5eb8 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.0967949Z
+  Time since last request: 0.0007367 seconds.
+  importAddress: GUID: d2c01543701fb814792ab6af2da0e28d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987850285541ABBCF03548586F5ADFF8E693A68188003243.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: d2c01543701fb814792ab6af2da0e28d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987850285541ABBCF03548586F5ADFF8E693A68188003243.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: d2c01543701fb814792ab6af2da0e28d' -> (Import Result ID: '3088242b58e420c0400cceb57650498e') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b57a001b406aef5b2f6654158fd29c43 DependenciesID=6843b727648a0aedae6e255c2b588711 StaticDependenciesID=89cfa72b439171ed34422f1f9de56042 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.1146815Z
+  Time since last request: 0.0007444 seconds.
+  importAddress: GUID: c9eb577f33f0c4f499a4dc0efca15379 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118463743EC89EEFE0F66183946249D76166287EB4252807B.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: c9eb577f33f0c4f499a4dc0efca15379 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118463743EC89EEFE0F66183946249D76166287EB4252807B.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: c9eb577f33f0c4f499a4dc0efca15379' -> (Import Result ID: '1dce7e5eac5e771d4a0250bd76612b64') in 0.033 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d6214898c97e80ac1da106dbd629f6cd DependenciesID=a92c24e693922b1ec465877910c74d60 StaticDependenciesID=4be5f4d440b05d01ae471ba34c51ef12 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.1484387Z
+  Time since last request: 0.0008126 seconds.
+  importAddress: GUID: f929fc8c755ce6b41a9dafc6829d4f1e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280983506AD1C48A6BC6F0591A5BE55633249897C71A4FC58.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: f929fc8c755ce6b41a9dafc6829d4f1e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280983506AD1C48A6BC6F0591A5BE55633249897C71A4FC58.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: f929fc8c755ce6b41a9dafc6829d4f1e' -> (Import Result ID: 'e59c7e0fc2e4e9f3e094b1103395dd16') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bc879254a86043dd83aaafac2f412b93 DependenciesID=199fda06b332511882056fc4e7b6795c StaticDependenciesID=d09aa97a765054f23982d0704b5330bc 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.1797007Z
+  Time since last request: 0.0005878 seconds.
+  importAddress: GUID: 280fcd3de52dc9946bce80f98e22ad61 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186592B80544495E9B94E2B27C9973BACD5ECAD8AC562F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 280fcd3de52dc9946bce80f98e22ad61 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186592B80544495E9B94E2B27C9973BACD5ECAD8AC562F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 280fcd3de52dc9946bce80f98e22ad61' -> (Import Result ID: '57dd80ec999955614c8d9c9b73f44e90') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=36dbb5e39a4a51fc55167a7cdaf5c124 DependenciesID=90446884468bd64a00198caed768c2d9 StaticDependenciesID=01252052e3de48b79d7d294c13873569 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.2146232Z
+  Time since last request: 0.0006028 seconds.
+  importAddress: GUID: b6ea8dbffbbe45d459988dd04d1b114b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464241204B8ED0BA6BB1FB7449C01E4016E555ED8A51DD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: b6ea8dbffbbe45d459988dd04d1b114b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464241204B8ED0BA6BB1FB7449C01E4016E555ED8A51DD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: b6ea8dbffbbe45d459988dd04d1b114b' -> (Import Result ID: '393c039804179f5244539952468adfad') in 0.040 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b6364d7a43f8304d83fa25249649f880 DependenciesID=754e9ba2e3fe9d6362a83b54a5905f99 StaticDependenciesID=324d5caa09ab0168181d80884fb9616b 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.2557738Z
+  Time since last request: 0.0005685 seconds.
+  importAddress: GUID: 12e8bcca409b58e48bbf05029f8f3c57 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075123246638CBBF31E69544FCFB9C6457EAF98075DF0BFB0ABA.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 12e8bcca409b58e48bbf05029f8f3c57 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075123246638CBBF31E69544FCFB9C6457EAF98075DF0BFB0ABA.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 12e8bcca409b58e48bbf05029f8f3c57' -> (Import Result ID: 'ddaa5303454ea0deac2912829c9d485f') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=052c0ab82580ae2d41f3adc34c3f9c6f DependenciesID=b14271a7ceaa2838501c7dadacf628d3 StaticDependenciesID=bcbe8d88538f6d06824d447a292bb8b8 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.2925912Z
+  Time since last request: 0.0006679 seconds.
+  importAddress: GUID: eda2006385f06e84d971d294f510ce0e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237179619689878577766AE14A6F428BF469814EA612169C82221FFD053.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: eda2006385f06e84d971d294f510ce0e - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237179619689878577766AE14A6F428BF469814EA612169C82221FFD053.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: eda2006385f06e84d971d294f510ce0e' -> (Import Result ID: '699d23e5347ef193b4950fa7ea4a326a') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b6e71fbf562f294f84bbe1170037c672 DependenciesID=e146c08ed25306ce0992a886a0d903b3 StaticDependenciesID=9fc144714cea042417fb713db44bc81e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.3094922Z
+  Time since last request: 0.0004484 seconds.
+  importAddress: GUID: 1e169707a94dc074398f7a80ca15ab0b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237179619690103448046B37382361A159011BC1924C3C0FCDDF7DC72CC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 1e169707a94dc074398f7a80ca15ab0b - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc237179619690103448046B37382361A159011BC1924C3C0FCDDF7DC72CC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 1e169707a94dc074398f7a80ca15ab0b' -> (Import Result ID: 'd82b4627eba9fc2873dc6da503b46889') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=157e01563a2d10a49e8efb286436e980 DependenciesID=e58c77ea6191a91e5349af8d02abf1dc StaticDependenciesID=e9dc72aeb52998086a44c72262c5bc36 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.3470336Z
+  Time since last request: 0.0007799 seconds.
+  importAddress: GUID: f340c7adaeeb3934c91c1a0942d91bdf - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464141BFF27317CC58F5E1877D705DBB9EFD0455363AF5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: f340c7adaeeb3934c91c1a0942d91bdf - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075118464141BFF27317CC58F5E1877D705DBB9EFD0455363AF5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: f340c7adaeeb3934c91c1a0942d91bdf' -> (Import Result ID: '4dd8f7d0190bb3a6cd5cb1d953dfef18') in 0.035 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d2f002adac47b5ad38c9ec4ed62aa424 DependenciesID=e4a2816f8ce65b63ff4e1cf10e6dd832 StaticDependenciesID=23b529c906e160c05d2d2c46cc99aa7c 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.3827747Z
+  Time since last request: 0.0003741 seconds.
+  importAddress: GUID: 9fcc20d8829c13244adcab02238f70b0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41192445266481656AA0DC0EBBA5EA32ED02ED741C0BEB66C2A1E72C2.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 9fcc20d8829c13244adcab02238f70b0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41192445266481656AA0DC0EBBA5EA32ED02ED741C0BEB66C2A1E72C2.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 9fcc20d8829c13244adcab02238f70b0' -> (Import Result ID: '782b2bb2333e1f7ada7a6f07aa33b4d3') in 0.031 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3fec1e2941f7ce4f52a5c33820a0fcc6 DependenciesID=219896425efec7533bc4e749dd854e13 StaticDependenciesID=a7525ec1034d85b3806e9bbb813c7797 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.4146799Z
+  Time since last request: 0.0006997 seconds.
+  importAddress: GUID: fb9934bb810f2be45b67477e4abffce3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23706711161794898744FFF864018B69AA1B5437A2643ECC59411F30BB0.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: fb9934bb810f2be45b67477e4abffce3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23706711161794898744FFF864018B69AA1B5437A2643ECC59411F30BB0.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: fb9934bb810f2be45b67477e4abffce3' -> (Import Result ID: '30a97fe6ac3cc57f0a1b0f560eeaa754') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d4c7945dabe777f7165e68999b79da6f DependenciesID=2b643bd9eb88c339c58a12cceed1411c StaticDependenciesID=5fe28e4c8a8fbb1f9d2eb8cc9e444e2c 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.4521449Z
+  Time since last request: 0.0007416 seconds.
+  importAddress: GUID: 95874a5fac1341242acf161646133271 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412000814599945668DA8BE9BA89F2017261A7D4F2531CAA05D5991AE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 95874a5fac1341242acf161646133271 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412000814599945668DA8BE9BA89F2017261A7D4F2531CAA05D5991AE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 95874a5fac1341242acf161646133271' -> (Import Result ID: 'bcec28a3da7a59a4a66d5114994c70bb') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9bf132bb03daccd45f2c85805cc81afb DependenciesID=51486428fc404780c5ab2701c0a2d220 StaticDependenciesID=4e5fb34202cac8d7a18405adea25097a 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.4847131Z
+  Time since last request: 0.000629 seconds.
+  importAddress: GUID: 511d636579250e94097e94fbd31673cd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2435956901695407198649716F9FC33E89786AB9AD119C06BFCCEA6156F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 511d636579250e94097e94fbd31673cd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2435956901695407198649716F9FC33E89786AB9AD119C06BFCCEA6156F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 511d636579250e94097e94fbd31673cd' -> (Import Result ID: 'c76767e791215f95607012ab98edbdc3') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e15b46259ba7a8d30f34a7b2cf9feeed DependenciesID=26718a70509cb6e6986c859393bbe924 StaticDependenciesID=1e404dd9af2393a9e2768262ee77e670 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.520155Z
+  Time since last request: 0.0006504 seconds.
+  importAddress: GUID: 978cf0b76c2e5444b9d393a3e16a0659 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459994657DE46ECFB9F83C77713CAAC0C4BFA59D04EE0111C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 978cf0b76c2e5444b9d393a3e16a0659 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459994657DE46ECFB9F83C77713CAAC0C4BFA59D04EE0111C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 978cf0b76c2e5444b9d393a3e16a0659' -> (Import Result ID: 'b45a16c597e546cadb352063e5d8a381') in 0.031 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=638ebf2511aae85aa25107521e7f154c DependenciesID=56e387a9430eee4cc8805e9825f5872b StaticDependenciesID=6d731834f40927fc2938ad9df8145fc9 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.5519019Z
+  Time since last request: 0.0004932 seconds.
+  importAddress: GUID: c10fce4bf857b01478b7b00f02a54823 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459994393ED25243C271253C567EA967DA87840D4FA63239C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: c10fce4bf857b01478b7b00f02a54823 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459994393ED25243C271253C567EA967DA87840D4FA63239C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: c10fce4bf857b01478b7b00f02a54823' -> (Import Result ID: 'ea2eff71e01f68b8be66c82012bb09e9') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=67d578909683b5ceebb1cb361a056055 DependenciesID=6cba5d6b38cec7d834e4ee3894f76222 StaticDependenciesID=ec5bc00900a7e2402cc3a3f29489aae0 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.5854273Z
+  Time since last request: 0.0005835 seconds.
+  importAddress: GUID: 85d4ebb5e6688b343b413fe6fec8ccc3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987865811988CE6152F1567624AA7EF304F36184EBF87239.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 85d4ebb5e6688b343b413fe6fec8ccc3 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987865811988CE6152F1567624AA7EF304F36184EBF87239.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 85d4ebb5e6688b343b413fe6fec8ccc3' -> (Import Result ID: '3f6817446eff6522d5973fc994f80cc9') in 0.040 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6e0e69b081db17d1f7fabd65577b9f59 DependenciesID=6e69eeb09b9b83a6f610b390a73192ca StaticDependenciesID=5e75fc775ac6ec20a8b0554045757f5b 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.6272351Z
+  Time since last request: 0.000485 seconds.
+  importAddress: GUID: 6fc43ed6770deaf4fb47560d30e458d0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987862877DF63A91CF01EA8CC02A3CF6ADE5A34864D2966E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 6fc43ed6770deaf4fb47560d30e458d0 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987862877DF63A91CF01EA8CC02A3CF6ADE5A34864D2966E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 6fc43ed6770deaf4fb47560d30e458d0' -> (Import Result ID: '0b81ff6e62e18a8787aa59494cc4138e') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a49e669addae90b038c7644ad88a7189 DependenciesID=4b5e9d8d7be1c3bbb0f052667d214183 StaticDependenciesID=7eadacad6a1c896a560a6a1221761bce 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.6648598Z
+  Time since last request: 0.0006892 seconds.
+  importAddress: GUID: 94524a3ce9f469e47adfb0ab5397e0c7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41191003128316542ABF6815FD3A4C9CCE983FBD68DFFE98446A7EFED.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 94524a3ce9f469e47adfb0ab5397e0c7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41191003128316542ABF6815FD3A4C9CCE983FBD68DFFE98446A7EFED.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 94524a3ce9f469e47adfb0ab5397e0c7' -> (Import Result ID: '4d1383427391f710a3642221d17a681c') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=49540581dedfa7026db8509cb09fa00d DependenciesID=b25ecbe95695f44706f77996c3806c15 StaticDependenciesID=7b8e2cdbab761dd6b86d3909d0663b0d 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.6996144Z
+  Time since last request: 0.0004982 seconds.
+  importAddress: GUID: c2f636f9874891e4cb951ede7c37e8eb - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119924828098331827157AFDDA24F2B6D5C92324AF752331F8D11E82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: c2f636f9874891e4cb951ede7c37e8eb - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119924828098331827157AFDDA24F2B6D5C92324AF752331F8D11E82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: c2f636f9874891e4cb951ede7c37e8eb' -> (Import Result ID: '1ab1314932f40e2897bd928fd7bf30c9') in 0.033 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9efe31a9434f0b977adc6e35c318f237 DependenciesID=1a9f3cafe707e6dd77a56b0b01d1c574 StaticDependenciesID=eb7bd31602bdc1937a15b76a9413f9e0 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.7334539Z
+  Time since last request: 0.0006204 seconds.
+  importAddress: GUID: 9abd3290d9014eb4c8578132d76b1fca - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459991165C70CA5311517A0EE5F99C22923CB0070C230989D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 9abd3290d9014eb4c8578132d76b1fca - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459991165C70CA5311517A0EE5F99C22923CB0070C230989D.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 9abd3290d9014eb4c8578132d76b1fca' -> (Import Result ID: '142362a1dba09405501b898f7fb254b4') in 0.029 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f4f7e49c6d2403a759367f8a96809aa0 DependenciesID=1466d926dd93e06428dff041d2ff3cc7 StaticDependenciesID=09297b8c5191b9c89e7e180f4e0e6e82 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.7633557Z
+  Time since last request: 0.0005515 seconds.
+  importAddress: GUID: 5617445ca7709284db9d11e19500831a - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2370671116167746358D0C807D7E5328A183F1F75AD1A559E32795D6B2C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 5617445ca7709284db9d11e19500831a - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2370671116167746358D0C807D7E5328A183F1F75AD1A559E32795D6B2C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 5617445ca7709284db9d11e19500831a' -> (Import Result ID: '7bff5135e02c83a9f9e8954fe2d89c85') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3a06c00147df656348fa91b4351250af DependenciesID=3735f1d8b46602c43f1adb83fca65a5d StaticDependenciesID=077c3d67017800ff8697922ca7bcb7b1 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.7984334Z
+  Time since last request: 0.0006687 seconds.
+  importAddress: GUID: b32bc0c051c051b40a67068a011a150d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119100312831674141D830D81BCA1E085011B9C976C978F9175038EE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: b32bc0c051c051b40a67068a011a150d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119100312831674141D830D81BCA1E085011B9C976C978F9175038EE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: b32bc0c051c051b40a67068a011a150d' -> (Import Result ID: '427556267e333d4578ad5e62743a7bed') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eb6e8c1fc2a315172da25d0874484d52 DependenciesID=391d7e87e48178ef11b8332e97d3bcfa StaticDependenciesID=e1ff4a10919c5d178bc0a5b3c3978de7 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.8331914Z
+  Time since last request: 0.0006337 seconds.
+  importAddress: GUID: f6a7563ec95970e4ea8f545d8712a549 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075120393041C829BC998FD9248B61CF3D5CE8D7B7157A60BE82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: f6a7563ec95970e4ea8f545d8712a549 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41198075120393041C829BC998FD9248B61CF3D5CE8D7B7157A60BE82.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: f6a7563ec95970e4ea8f545d8712a549' -> (Import Result ID: '7199667f8b7073be42243fc8573af028') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9f247c6e72a57a9612011ca10e5ecdff DependenciesID=3530b15ae86394db2cae66d78348b1ba StaticDependenciesID=df6d8c41968018bb2b7158013b1df5b5 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.8687041Z
+  Time since last request: 0.0006059 seconds.
+  importAddress: GUID: 09cf1b0003a61cb4e8bd27d33f5aa632 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751184647403341FE8CBB4151ACDD4A85B6E519ED564A0A7ED0.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 09cf1b0003a61cb4e8bd27d33f5aa632 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411980751184647403341FE8CBB4151ACDD4A85B6E519ED564A0A7ED0.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 09cf1b0003a61cb4e8bd27d33f5aa632' -> (Import Result ID: 'eaa246ade73889f64f41cc7645f98fd5') in 0.038 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c0de13005b61bc5f63d3a11a1db41f66 DependenciesID=bd14c8d7a2f91f23a56096460fb953e9 StaticDependenciesID=7e21b635f62dd099a8f61cf70654a178 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.907258Z
+  Time since last request: 0.0005789 seconds.
+  importAddress: GUID: 7a413d32afa655b488c4fb825b004ff7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961969010364198F296F2A992F07B6778EE4F39BE9B78CE3A9CD7A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 7a413d32afa655b488c4fb825b004ff7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961969010364198F296F2A992F07B6778EE4F39BE9B78CE3A9CD7A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 7a413d32afa655b488c4fb825b004ff7' -> (Import Result ID: '2142c94edeef561548bb73b22ea8a8a5') in 0.040 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=32494ffda5b1a229bab069ddf9a42d29 DependenciesID=7375c2e7212c87e2f62d04225d513e23 StaticDependenciesID=110a6c67fd0c5b31506db394118e0b03 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.9479148Z
+  Time since last request: 0.0006643 seconds.
+  importAddress: GUID: ee2c5ba03968c9247b0458e2e17fadc4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196901035213F98DE1CCCA8BB379D84C4FBA1C07AED46BF6E055.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: ee2c5ba03968c9247b0458e2e17fadc4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2371796196901035213F98DE1CCCA8BB379D84C4FBA1C07AED46BF6E055.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: ee2c5ba03968c9247b0458e2e17fadc4' -> (Import Result ID: '964729585e71b06dd6da0ef61d766f59') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3583ae35062d881fa9ca69c1906b6b14 DependenciesID=684558fa8ab0eda2e374c2ad466e8bba StaticDependenciesID=4524bbff0412729cee54dcc51ddffbe7 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:58.9793146Z
+  Time since last request: 0.0008383 seconds.
+  importAddress: GUID: e35f461235e4bed4fb0824325c728949 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186804072B76A688ABD6393F902481DAFF4CB02D0231E9.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: e35f461235e4bed4fb0824325c728949 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475186804072B76A688ABD6393F902481DAFF4CB02D0231E9.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: e35f461235e4bed4fb0824325c728949' -> (Import Result ID: '5f3ecc42baa08cecb5cf2b1b243b39e6') in 0.028 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6f09f75fbd380a8b377c28775833b8aa DependenciesID=1b3ad6bf4f819a4f894001fd7d8ea307 StaticDependenciesID=6ff06c22bc648daee9f5e167a6d86f44 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.0086109Z
+  Time since last request: 0.0004984 seconds.
+  importAddress: GUID: 0a6037089c1e7e44c8906a36f92920fd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987852746CB7A8141E0A4AC69B4861CD977882E4A5BB334E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 0a6037089c1e7e44c8906a36f92920fd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987852746CB7A8141E0A4AC69B4861CD977882E4A5BB334E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 0a6037089c1e7e44c8906a36f92920fd' -> (Import Result ID: '3699d02e87bd2306f8297c4ab40a9303') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c21ee916679cb60ae463ecdce71cc386 DependenciesID=8140f24222f47417d6f7aaf33afc4e0a StaticDependenciesID=d94ccb28fbf3aa57de83c3da44259222 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.0260297Z
+  Time since last request: 0.000674 seconds.
+  importAddress: GUID: a0f2765cc746d2d4dbcf6515b88abc93 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120008145998866973F77C4D76A2A7F9C7549A8AF7BA1623A0F5BE17.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: a0f2765cc746d2d4dbcf6515b88abc93 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120008145998866973F77C4D76A2A7F9C7549A8AF7BA1623A0F5BE17.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: a0f2765cc746d2d4dbcf6515b88abc93' -> (Import Result ID: '07183207adb728b0831eeb05dd37f2ac') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d3abb41d01a6c09aae6eac4700d77648 DependenciesID=fcf54bf05122e5b436c802f4d4fefdf9 StaticDependenciesID=b727773847e5631f54072c150ac44703 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.0565288Z
+  Time since last request: 0.0005796 seconds.
+  importAddress: GUID: 79648debb25ff4d4580449807f829c40 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280982805ACCCDDD350406A130A37B514B1A7382D21893936.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 79648debb25ff4d4580449807f829c40 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280982805ACCCDDD350406A130A37B514B1A7382D21893936.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 79648debb25ff4d4580449807f829c40' -> (Import Result ID: '7b29876c3cab34ab6b3fcf326978a462') in 0.031 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a0519c433c158b853ce1dd948ee1997e DependenciesID=3f6e89c8a7388aad0676357165dd943c StaticDependenciesID=1301fed018e6f2a5abc7ecdaad1f68c9 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.089108Z
+  Time since last request: 0.0007956 seconds.
+  importAddress: GUID: 1bf243d15a3dc7049831ea52a9355d7c - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41196408011694738429090DA3562EE21EC4836D05581965E025378B4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 1bf243d15a3dc7049831ea52a9355d7c - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41196408011694738429090DA3562EE21EC4836D05581965E025378B4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 1bf243d15a3dc7049831ea52a9355d7c' -> (Import Result ID: '0615a9f3ce365c0a3ba1af436a39e273') in 0.035 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f00864813dfdbc4806078dac5ca94df8 DependenciesID=5fb8ce94119804144ae58a9450934ebd StaticDependenciesID=1ac1fadceab278e09f9450eded14dcd4 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.1254303Z
+  Time since last request: 0.0006072 seconds.
+  importAddress: GUID: 265a3bd92510ae146ab75fde94465663 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987860823140A804FB1C3894E0D0A8B082A68C3165C0EA35.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 265a3bd92510ae146ab75fde94465663 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961968987860823140A804FB1C3894E0D0A8B082A68C3165C0EA35.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 265a3bd92510ae146ab75fde94465663' -> (Import Result ID: '17963d9093b48e02ec6b03a1353645b8') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=71fddbf553d1f2fe4504c0d341abd9c7 DependenciesID=c34c2324f5174411b54e487041297df4 StaticDependenciesID=0df36cf10e4af5308eac3c96087760fb 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.1586508Z
+  Time since last request: 0.0004713 seconds.
+  importAddress: GUID: 390fa0c8bc3eb1e419405bc6bfe13b28 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459986580551A025B693D5E3C51B5AE6D10FE5CCD82F9F9E6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 390fa0c8bc3eb1e419405bc6bfe13b28 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459986580551A025B693D5E3C51B5AE6D10FE5CCD82F9F9E6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 390fa0c8bc3eb1e419405bc6bfe13b28' -> (Import Result ID: '4cccb741afe39c134d99ced2b3d9c2a5') in 0.027 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a4e9d13a4bfad5b719b8dfbbd820206b DependenciesID=f6113a1d65ece08e58d784baa04f017b StaticDependenciesID=42a93fbe077b6eecc91c21cc71a49f61 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.1863503Z
+  Time since last request: 0.0004737 seconds.
+  importAddress: GUID: 81898e540fc7b4546adea6667a1a00a9 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807511846445427F8506F6163E637F9033AEFF4C87C3A691B5DD5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 81898e540fc7b4546adea6667a1a00a9 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807511846445427F8506F6163E637F9033AEFF4C87C3A691B5DD5.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 81898e540fc7b4546adea6667a1a00a9' -> (Import Result ID: '39cc89a4137da6805f6801af9038c029') in 0.035 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=62cf447275ac184f06939a4c63b0d5e3 DependenciesID=bbbcf2a584ef9d1e416fbccf483b5b7d StaticDependenciesID=edd61bcc6bee47915559fcadec89428b 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.2222786Z
+  Time since last request: 0.0005772 seconds.
+  importAddress: GUID: 6438d1506babe3243acaca965d3af0f6 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475185080BBA5DB8674CBD79040DB76EDABDC84F6FFBE11C6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 6438d1506babe3243acaca965d3af0f6 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc2455117189475185080BBA5DB8674CBD79040DB76EDABDC84F6FFBE11C6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 6438d1506babe3243acaca965d3af0f6' -> (Import Result ID: '2a627dfbf4b0d02cd5499f9f27e3292b') in 0.035 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7e7fd3a674537e654fe59a49c4571a26 DependenciesID=efa51f9db3490a06cae8d45480cabe18 StaticDependenciesID=d4bc80042dfae6108a4569e99d32ba64 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.2586404Z
+  Time since last request: 0.0005194 seconds.
+  importAddress: GUID: 5471cfde9c323984388b2b8fc35cbe21 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41192445266481141A894CE0A88FC3E52013747D313BBD7A8A00F6D62.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 5471cfde9c323984388b2b8fc35cbe21 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41192445266481141A894CE0A88FC3E52013747D313BBD7A8A00F6D62.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 5471cfde9c323984388b2b8fc35cbe21' -> (Import Result ID: 'd05ba2426d8a9126f3991826f69d13b1') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8408c11049df08a9121a8f12593df41a DependenciesID=91370f218b19eff8c2935d422aee65ec StaticDependenciesID=2ce362589e0f5c42e712e6cf6f1b226e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.2896296Z
+  Time since last request: 0.0006046 seconds.
+  importAddress: GUID: d6fc668e1eb2d1e4a98eea320b845bf5 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411992482809834069FC8489EB6ADB686BF99B61D350B24FD79E902F4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: d6fc668e1eb2d1e4a98eea320b845bf5 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411992482809834069FC8489EB6ADB686BF99B61D350B24FD79E902F4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: d6fc668e1eb2d1e4a98eea320b845bf5' -> (Import Result ID: 'ed4941a4aaea448c33a63e08ccd3e741') in 0.041 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cd099b3132a826904caf560b0dae30a8 DependenciesID=bfcfb5c49bd60e077cccced18bacac1b StaticDependenciesID=f91ecf6723fb03521fed3308d08f63e3 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.3313059Z
+  Time since last request: 0.0006111 seconds.
+  importAddress: GUID: 6f0973f8b9e55974abc09de890eaa5e8 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961969010360073F2F3499DBE631BC46BCB8EC34EE06CCAD9DF105.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 6f0973f8b9e55974abc09de890eaa5e8 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc23717961969010360073F2F3499DBE631BC46BCB8EC34EE06CCAD9DF105.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 6f0973f8b9e55974abc09de890eaa5e8' -> (Import Result ID: 'e069c4c0e9e8801d35b506cc743d01f9') in 0.038 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bde8fb6d1bf0710cddf01dd66233de40 DependenciesID=55e6297349d1d70a9c4a4bbd8e5614ae StaticDependenciesID=67fe16bba39efa2e311e98d63d808128 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.3705187Z
+  Time since last request: 0.0006032 seconds.
+  importAddress: GUID: d8330af5a0c4ae040a8f1bf81dec0fbd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280982859B65DB87EDF5953389AC72E2EC11222356D3DDCBE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: d8330af5a0c4ae040a8f1bf81dec0fbd - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280982859B65DB87EDF5953389AC72E2EC11222356D3DDCBE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: d8330af5a0c4ae040a8f1bf81dec0fbd' -> (Import Result ID: '4061b7d4e38960f045790208fa2d409a') in 0.031 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e3c9ed6828e164fd08b1aec606b0c85a DependenciesID=078b738a835fdc45c9cb46e565782d5c StaticDependenciesID=1d87a17fb7fb2c5b51784527b46ca5fc 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.4020819Z
+  Time since last request: 0.0006011 seconds.
+  importAddress: GUID: caba2c2fb1fda4f4aa186670e13be05f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc245511718947518598446340B520A16AD1C8B408213C4347D5F14A68251.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: caba2c2fb1fda4f4aa186670e13be05f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc245511718947518598446340B520A16AD1C8B408213C4347D5F14A68251.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: caba2c2fb1fda4f4aa186670e13be05f' -> (Import Result ID: 'af3e53868bdf22b72fd8a0a3292248c4') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9d960a596e2941a61758e5a18b0509a2 DependenciesID=4fd06d6b4f49b1487c6e9f2f811d6c7d StaticDependenciesID=4d235845d36230be8e1320bf6e964231 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.4351364Z
+  Time since last request: 0.0004645 seconds.
+  importAddress: GUID: a1a1ff2807c851c4aace564c0ca69e85 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807512039296351DBA041832137FC2DAEC108C998988F24590BC3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: a1a1ff2807c851c4aace564c0ca69e85 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4119807512039296351DBA041832137FC2DAEC108C998988F24590BC3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: a1a1ff2807c851c4aace564c0ca69e85' -> (Import Result ID: '21c4eee53e9bc22aa51d39314423f730') in 0.029 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6fe40d2bd83f23fda1979954fa7bc16e DependenciesID=f8207e9c271e247a31026f98bffa82d7 StaticDependenciesID=32455742461b2657b2b8c3fe3726beaf 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.4647507Z
+  Time since last request: 0.0005478 seconds.
+  importAddress: GUID: 294f34d353027444e9bf58cebc32efcb - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411948081817589637516F30A5805D00544C9A581AD87C8E23FFACACD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 294f34d353027444e9bf58cebc32efcb - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc411948081817589637516F30A5805D00544C9A581AD87C8E23FFACACD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 294f34d353027444e9bf58cebc32efcb' -> (Import Result ID: 'b8bbf530b27b6dcd3544af048b398224') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e1efa9d36f0d95bfe1745e255139cb57 DependenciesID=6af2cc29c31a4f25e70206ed13a9c0ed StaticDependenciesID=d82c6d993e2021dd05ee93af06bb3a54 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.4960717Z
+  Time since last request: 0.0004814 seconds.
+  importAddress: GUID: eeead589dfd24734d8d645ed44b997a4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280983205F13FBB5A2940847FF657A1CD2773D2D4FA9C4452.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: eeead589dfd24734d8d645ed44b997a4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41199248280983205F13FBB5A2940847FF657A1CD2773D2D4FA9C4452.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: eeead589dfd24734d8d645ed44b997a4' -> (Import Result ID: '7ceecd3dbe0a4d3a3f3603c5b8951630') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=db4382df248562d60631e18cecb9ad05 DependenciesID=4f6b33f5678bf6db5f8de8b36a9a8f2d StaticDependenciesID=f07d44e836db6954dd212ba360aae3f0 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.5514862Z
+  Time since last request: 0.0207225 seconds.
+  importAddress: GUID: 76f55ccb985883841b3aefee1c1bc8fa - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620252275A0414F686F143CCF8C3AD3582BAE4494C0C46882.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 76f55ccb985883841b3aefee1c1bc8fa - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620252275A0414F686F143CCF8C3AD3582BAE4494C0C46882.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 76f55ccb985883841b3aefee1c1bc8fa' -> (Import Result ID: '31260b0c5ab1c5424ffa9092fd65bdbe') in 0.031 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7a8f9ce4a6a87b1a916c79949b52d194 DependenciesID=9e2b86fd994b8d7becc6899d7b38c138 StaticDependenciesID=42d4bc91734ed6758537f563849f10ba 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.5830957Z
+  Time since last request: 0.0005527 seconds.
+  importAddress: GUID: ed6e75446d9dc4544b6205d198a17fec - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc93175051892930818610558FDAE2EBA74948AE4AC0FE3FC6B8B08DF69A1.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: ed6e75446d9dc4544b6205d198a17fec - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc93175051892930818610558FDAE2EBA74948AE4AC0FE3FC6B8B08DF69A1.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: ed6e75446d9dc4544b6205d198a17fec' -> (Import Result ID: '8c6a77a10d55c984cd6d385db1186a60') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c0bb8d0aecea71662f37fbf73fe1ebbd DependenciesID=2b16c4c35d00a497040cff3d93df4ca8 StaticDependenciesID=d37f107919b67335420a761a8f8835a2 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.6164317Z
+  Time since last request: 0.0006034 seconds.
+  importAddress: GUID: be13c398521e3c1ad21fb9da30ab2ab6 - Path: Packages/com.unity.modules.imgui/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: be13c398521e3c1ad21fb9da30ab2ab6 - Path: Packages/com.unity.modules.imgui/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: be13c398521e3c1ad21fb9da30ab2ab6' -> (Import Result ID: 'e03fd2bfadc0d01a41e64b22b3c229da') in 0.008 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=05e607f02976d91193e2d971bc870adf DependenciesID=108c3f2db49eb4472d57ade1ae3abe56 StaticDependenciesID=7686c654ee477143b09045dec3b84da5 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.6251776Z
+  Time since last request: 0.0005338 seconds.
+  importAddress: GUID: a2bf254017c87b24a872a9c1a15da172 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc9830083177504156295835F52A497DBF6BF55AA5DDD1D327AE6E875A117.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: a2bf254017c87b24a872a9c1a15da172 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc9830083177504156295835F52A497DBF6BF55AA5DDD1D327AE6E875A117.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: a2bf254017c87b24a872a9c1a15da172' -> (Import Result ID: '93dc45fde6588834783ceacffb302551') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=29aa23c101c1cb7751ddecfa9296ec2e DependenciesID=d9167ee063e0758d33958ecc60411dc3 StaticDependenciesID=0120d15280f0e9e8e75332a59d706914 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.6563779Z
+  Time since last request: 0.0005173 seconds.
+  importAddress: GUID: 2f69cce2467e6db418f53160dab07754 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120059862025665113F13981D777680FB1C465BA8BAC6E9FDAA55BC1.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 2f69cce2467e6db418f53160dab07754 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120059862025665113F13981D777680FB1C465BA8BAC6E9FDAA55BC1.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 2f69cce2467e6db418f53160dab07754' -> (Import Result ID: '77eea6dad9efbd7e9c97c1116c49a1f7') in 0.038 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dd7565795e3c04d4b6df943fda40dd11 DependenciesID=5027731578d4c523913ef88e22ec54bc StaticDependenciesID=5276a240862d83e1471cf43b76f4bcb4 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.6957608Z
+  Time since last request: 0.0005853 seconds.
+  importAddress: GUID: 7d1bc5059b3dc244cbafafcd4eeef4ab - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202561622D6FDC53187344F6E937B7E17FBE5BAF1F19A680.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 7d1bc5059b3dc244cbafafcd4eeef4ab - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202561622D6FDC53187344F6E937B7E17FBE5BAF1F19A680.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 7d1bc5059b3dc244cbafafcd4eeef4ab' -> (Import Result ID: 'e144fd92d84bf7f96337631ad2b4ac0e') in 0.035 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eff13b09a4a9b612ad8af7bc85377160 DependenciesID=a702581034ef8119e5d43f9f0aba33e3 StaticDependenciesID=dcd59d898194e1a179b1a99353522936 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.7313932Z
+  Time since last request: 0.0005456 seconds.
+  importAddress: GUID: a9dc0d95f2498804fa78a5f1dac0c3b8 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256493FA86C33039B33898735A76F84C40DE1B1DF4C86F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: a9dc0d95f2498804fa78a5f1dac0c3b8 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256493FA86C33039B33898735A76F84C40DE1B1DF4C86F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: a9dc0d95f2498804fa78a5f1dac0c3b8' -> (Import Result ID: 'd6bcc9a1c61b7d9a2f29e4d7df82bf3d') in 0.027 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eb3379d33eca4378c83981a9a0ddce1a DependenciesID=609930e299251ea0523ec2a2bfffde9a StaticDependenciesID=33f32d3b46887a4ded47f96f446fbee8 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.7597857Z
+  Time since last request: 0.000495 seconds.
+  importAddress: GUID: c9dbc84e1800aa246a34e4c36d4ae52f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120059862025234445B14B3777F7B68A3F7C33143617464C370D5C8A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: c9dbc84e1800aa246a34e4c36d4ae52f - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc4120059862025234445B14B3777F7B68A3F7C33143617464C370D5C8A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: c9dbc84e1800aa246a34e4c36d4ae52f' -> (Import Result ID: 'd27b176f0efc4f64e309d2d16841c3cd') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a6abf1a72d3807035413ef1751835ffa DependenciesID=ac82fd342f1d08813eba7fc899620ecc StaticDependenciesID=fae5740211dd6712dddb473dbd9d32cd 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.7902863Z
+  Time since last request: 0.0005177 seconds.
+  importAddress: GUID: 4df886af4ebdf944b8dd89281722853a - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256571A8B50FC810EA2E34874F266F5CA629C0707E4767.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 4df886af4ebdf944b8dd89281722853a - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256571A8B50FC810EA2E34874F266F5CA629C0707E4767.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 4df886af4ebdf944b8dd89281722853a' -> (Import Result ID: '5f3d4992818b8dcdee2f88b5753e66f4') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6dc84c2c8cdd5423477a4c39ead4897f DependenciesID=659af8a2e57bab83e93fe49f0ff8062f StaticDependenciesID=bb11b8a52c619be533db9ddf0f76c55e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.8231452Z
+  Time since last request: 0.0005574 seconds.
+  importAddress: GUID: 40447d988cc999242bd1f6b352754e61 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202563594C9C8CA350F192F0B80BFAB11E9F190374CC6546.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 40447d988cc999242bd1f6b352754e61 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202563594C9C8CA350F192F0B80BFAB11E9F190374CC6546.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 40447d988cc999242bd1f6b352754e61' -> (Import Result ID: 'e7802844c9ea8fbb923e52d71958c8b8') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=88a4086df946178941712b66a1166fb7 DependenciesID=6cd25b1632fcf30ba79ba7128b6a46b9 StaticDependenciesID=293e3b39e1d3894387860dbe9a40cec9 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.8581741Z
+  Time since last request: 0.0005104 seconds.
+  importAddress: GUID: 5c1ee4056d0ac7ad3c5a16597fcaa38a - Path: Packages/com.unity.modules.physics/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 5c1ee4056d0ac7ad3c5a16597fcaa38a - Path: Packages/com.unity.modules.physics/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 5c1ee4056d0ac7ad3c5a16597fcaa38a' -> (Import Result ID: '3b2283b9937f3dea5a6039b8207cad63') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dce00906151c7f0da512101f8da441c4 DependenciesID=866be44d1cd1f938abd83f253f5b29ee StaticDependenciesID=834c0b0f298c7616967164616a5f3cb7 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.8644159Z
+  Time since last request: 0.0004171 seconds.
+  importAddress: GUID: 1a4266815e998967becf686f9c71f0a6 - Path: Packages/com.unity.modules.physics/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 1a4266815e998967becf686f9c71f0a6 - Path: Packages/com.unity.modules.physics/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 1a4266815e998967becf686f9c71f0a6' -> (Import Result ID: 'f6716fcfd418bf0d78594432937656ce') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=108a3d0a7c1e9ed7994c9e41abd978ee DependenciesID=ff37ff97e48a3abd6f43184fabb81e45 StaticDependenciesID=ed81ca19a41862fefec5243a398361fe 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.8862103Z
+  Time since last request: 0.0004792 seconds.
+  importAddress: GUID: de563c8a20a79a24380104900e2bb3a4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256278BDBB0DD86BF3B44AF3D666A2F28924E005CB78EC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: de563c8a20a79a24380104900e2bb3a4 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256278BDBB0DD86BF3B44AF3D666A2F28924E005CB78EC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: de563c8a20a79a24380104900e2bb3a4' -> (Import Result ID: 'f61731a484b1a0061d0d50739e5b17f2') in 0.029 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=67ff4b32eef2de5a948ad53cfa81f469 DependenciesID=cc973391b57716430fee973867c4da1e StaticDependenciesID=78b16339d9d404005294c9d5469f9b80 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.9161879Z
+  Time since last request: 0.0004008 seconds.
+  importAddress: GUID: d2ec2d1228c8e67cdd913cb5609176a2 - Path: Packages/com.unity.modules.unitywebrequest/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: d2ec2d1228c8e67cdd913cb5609176a2 - Path: Packages/com.unity.modules.unitywebrequest/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: d2ec2d1228c8e67cdd913cb5609176a2' -> (Import Result ID: 'bbad08856e3c8a8e5710360d64c437c6') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2fc381991e42a5a04e55ad4a29ed5f35 DependenciesID=6aacc8ecde87d60c30f0c3f76bb462b7 StaticDependenciesID=92572239c7faf4658758eb8822444c9e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.9219315Z
+  Time since last request: 0.000419 seconds.
+  importAddress: GUID: 40bf3cec17fa0b49fe04443c8332d638 - Path: Packages/com.unity.modules.jsonserialize/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 40bf3cec17fa0b49fe04443c8332d638 - Path: Packages/com.unity.modules.jsonserialize/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 40bf3cec17fa0b49fe04443c8332d638' -> (Import Result ID: 'ed17e05a7bf2f4f1f91f73202a4ff19f') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1ac0705e07ddf20f693a9062ddee0243 DependenciesID=707f06d4297662a4aa04b95c94776881 StaticDependenciesID=0e4a81f415c513f8532b252122458b6c 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.9404636Z
+  Time since last request: 0.0004204 seconds.
+  importAddress: GUID: 623c2e15ad408e24c8732f08ba162616 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202562463268327B601869DDC31609127AE602FF0650B6F6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 623c2e15ad408e24c8732f08ba162616 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc412005986202562463268327B601869DDC31609127AE602FF0650B6F6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 623c2e15ad408e24c8732f08ba162616' -> (Import Result ID: '16a6d6541ac4e6d3b0d80d4a12c6f652') in 0.033 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7784bfa5a9b3ed1b3ec3303de4464759 DependenciesID=8e5418e2b8a7764953a2f2f0a00beda8 StaticDependenciesID=e51132bf2d85aa1577408d35b4b0d7a4 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:03:59.9742171Z
+  Time since last request: 0.0006522 seconds.
+  importAddress: GUID: 773d2434bd55af747a9fd7f394f67a4d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc94255186502808192267CD3F4A7EC8EF61347D06A5FCEC0B5622408B313.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 773d2434bd55af747a9fd7f394f67a4d - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc94255186502808192267CD3F4A7EC8EF61347D06A5FCEC0B5622408B313.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 773d2434bd55af747a9fd7f394f67a4d' -> (Import Result ID: 'fbf723d132409cf75a15c0f72e7d733b') in 0.037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=91fd5027d91e534ed46311da5037f39b DependenciesID=fc29ae662a73018e561830e91b8a9ea0 StaticDependenciesID=30cd6475c5ba241733707b629c6549b3 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:04:00.0167387Z
+  Time since last request: 0.0052515 seconds.
+  importAddress: GUID: 42fe78c8fe682715a2cb531422e6ccb3 - Path: Packages/com.unity.modules.imgui/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 42fe78c8fe682715a2cb531422e6ccb3 - Path: Packages/com.unity.modules.imgui/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 42fe78c8fe682715a2cb531422e6ccb3' -> (Import Result ID: 'f4743fac315668f638ee7fbfcd3b1da0') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b6289fd790bfb52caf4b44f8a5812328 DependenciesID=2727e841bceffd12b781dd7b4b42afdf StaticDependenciesID=780632b9a178a33902f5392619c9500b 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:04:00.0377812Z
+  Time since last request: 0.0005258 seconds.
+  importAddress: GUID: e6a135e3ea9cb46795d1b0e05ac3e1e5 - Path: Packages/com.unity.modules.jsonserialize/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: e6a135e3ea9cb46795d1b0e05ac3e1e5 - Path: Packages/com.unity.modules.jsonserialize/package.ModuleCompilationTrigger - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: e6a135e3ea9cb46795d1b0e05ac3e1e5' -> (Import Result ID: 'a34dfe4e9ff6f98526e35e5b61faf007') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d66dfe1d83a205ebdc79b6b63367437b DependenciesID=22c050577a77b58aa71555933adbb664 StaticDependenciesID=f0a8c83c7eb8745344ad5a8480e061d4 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:04:00.0436433Z
+  Time since last request: 0.0004604 seconds.
+  importAddress: GUID: 3fdd83b151eb8d25c5e2f82fc39dcb04 - Path: Packages/com.unity.modules.unitywebrequest/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 3fdd83b151eb8d25c5e2f82fc39dcb04 - Path: Packages/com.unity.modules.unitywebrequest/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 3fdd83b151eb8d25c5e2f82fc39dcb04' -> (Import Result ID: 'aa95ac472ae167db2e9eb6ab7727b2c4') in 0.023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=07a80d9e2270a856fe14ae7a0086332e DependenciesID=c3c03c7cce13949c9888fadca942b964 StaticDependenciesID=2faf0d4aeb0fa8e22dbed1af75baa923 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-08-09T13:04:00.0671199Z
+  Time since last request: 0.0004984 seconds.
+  importAddress: GUID: f0457d61a57b53442b364ce8f23d49a7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256449556750155862F723B992882F46C4FA2ACE85F56C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: f0457d61a57b53442b364ce8f23d49a7 - Path: Assets/Resources/Armies/Models/Aeldari/TexturePool/httpssteamusercontentaakamaihdnetugc41200598620256449556750155862F723B992882F46C4FA2ACE85F56C.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: f0457d61a57b53442b364ce8f23d49a7' -> (Import Result ID: '841ea8232e9dd6c21e514ef92feb7879') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=afd3432e656eab40fac6d3080e5bd09e DependenciesID=bb6f4157b48c470d95d7f89f4f140d42 StaticDependenciesID=d050051ae8d976abc756e633c0c330c7 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.676 seconds
+Domain Reload Profiling: 1262ms
+	BeginReloadAssembly (308ms)
+		DisableScriptedObjects (19ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (16ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (76ms)
+	LoadAllAssembliesAndSetupDomain (154ms)
+		LoadAssemblies (171ms)
+		AnalyzeDomain (8ms)
+			TypeCache.Refresh (5ms)
+	FinalizeReload (679ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (149ms)
+			ProcessInitializeOnLoadAttributes (124ms)
+			ProcessInitializeOnLoadMethodAttributes (120ms)
+			AfterProcessingInitializeOnLoad (12ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (0 B). Loaded Objects now: 644.
+Memory consumption went from 158.7 MB to 158.7 MB.
+Total: 7.165600 ms (FindLiveObjects: 0.079300 ms CreateObjectMapping: 0.012600 ms MarkObjects: 7.038700 ms  DeleteObjects: 0.033200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

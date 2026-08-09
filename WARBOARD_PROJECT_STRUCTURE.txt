@@ -1,0 +1,40 @@
+﻿WARBOARD v26.8 - CANONICAL PROJECT STRUCTURE
+
+Warboard/
+  Assets/
+    Resources/
+      Armies/
+        Models/
+          Aeldari/
+            ModelIndex.json
+            ModelPool/
+            TexturePool/
+          Bases/
+        [army JSON resources]
+      Core/
+      Factions/
+    Scripts/
+      Core/
+      Factions/
+  Packages/
+  ProjectSettings/
+
+MODEL RULE
+The sole canonical miniature location is:
+  Assets/Resources/Armies/Models/<Faction>/
+
+Do not recreate Assets/Resources/WarboardModels.
+
+A unit without a matching installed model-pack entry uses the normal gameplay
+capsule instead of an obsolete hard-coded fallback asset.
+
+SAFE TO REGENERATE
+Library/
+Logs/
+Temp/
+obj/
+
+DO NOT DELETE
+Assets/
+Packages/
+ProjectSettings/

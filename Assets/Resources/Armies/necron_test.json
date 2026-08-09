@@ -1,0 +1,20 @@
+{
+  "factionId": "Necrons",
+  "units": [
+    {
+      "unitResource": "Factions/Necrons/warriors",
+      "x": 8.5,
+      "z": -7.0
+    },
+    {
+      "unitResource": "Factions/Necrons/immortals",
+      "x": 4.5,
+      "z": -10.0
+    },
+    {
+      "unitResource": "Factions/Necrons/overlord",
+      "x": 11.0,
+      "z": -10.0
+    }
+  ]
+}

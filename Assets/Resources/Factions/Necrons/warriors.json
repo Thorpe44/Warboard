@@ -1,0 +1,69 @@
+{
+  "id": "necron_warriors",
+  "displayName": "Necron Warriors",
+  "factionId": "Necrons",
+  "move": 5.0,
+  "toughness": 4,
+  "save": 4,
+  "modelCount": 10,
+  "woundsPerModel": 1,
+  "modelSpacing": 1.05,
+  "loadouts": [
+    {
+      "roleName": "Warrior",
+      "count": 7,
+      "rangedWeapon": {
+        "id": "gauss_long",
+        "displayName": "Gauss Long",
+        "range": 24.0,
+        "attacksPerModel": 1,
+        "skill": 4,
+        "strength": 4,
+        "ap": 0,
+        "damage": 1,
+        "keywords": []
+      },
+      "meleeWeapon": {
+        "id": "combat",
+        "displayName": "Combat Weapon",
+        "range": 0.0,
+        "attacksPerModel": 1,
+        "skill": 4,
+        "strength": 4,
+        "ap": 0,
+        "damage": 1,
+        "keywords": []
+      }
+    },
+    {
+      "roleName": "Warrior Reaper",
+      "count": 3,
+      "rangedWeapon": {
+        "id": "gauss_reaper_test",
+        "displayName": "Gauss Reaper Test",
+        "range": 12.0,
+        "attacksPerModel": 2,
+        "skill": 4,
+        "strength": 5,
+        "ap": -1,
+        "damage": 1,
+        "keywords": []
+      },
+      "meleeWeapon": {
+        "id": "combat",
+        "displayName": "Combat Weapon",
+        "range": 0.0,
+        "attacksPerModel": 1,
+        "skill": 4,
+        "strength": 4,
+        "ap": 0,
+        "damage": 1,
+        "keywords": []
+      }
+    }
+  ],
+  "abilities": [
+    "repair"
+  ],
+  "canDeepStrike": false
+}
