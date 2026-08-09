@@ -1,37 +1,24 @@
-WARBOARD FULL v44 VISUAL ROLLBACK
+WARBOARD SAFE PROJECT CLEANUP
 
-This removes the failed v44 visual-polish pass and restores the exact source
-files backed up immediately before that installer changed them.
+Removes only the temporary files created during the Custodes/ability/v44 work:
 
-IT RESTORES
------------
-GameController.UI.cs
-GameController.Core.cs
-ObjectiveController.cs
-ModelToken.cs
-BattlefieldWorldUI.cs
-WarboardBuildInfo.cs
+- one-off BAT/PS1 installers and repair scripts
+- v44 marker text files
+- timestamped backup copies made by those scripts
+- downloaded Warboard patch ZIPs if they were copied into the project root
+- stale WarboardVisualTheme.cs.meta if the rolled-back source file is gone
 
-It also removes WarboardVisualTheme.cs if that file did not exist before v44.
+DOES NOT REMOVE
 
-IT DOES NOT TOUCH
------------------
-Custodes model assets
-Custodes model resolver
-New Recruit / YellowScribe fixes
-Ability warning fix
-Faction rules
-Roster data
-ModelIndex files
+- Assets
+- Packages
+- ProjectSettings
+- Custodes model assets
+- ModelPool / TexturePool
+- ModelIndex.json
+- faction rules
+- roster importer
+- live Unity .meta files
+- actual Warboard source files
 
-INSTALL
--------
-1. Extract this ZIP into the Warboard project root.
-2. Run ROLLBACK_WARBOARD_V44_VISUALS.bat.
-3. Wait for:
-
-   SUCCESS - FULL V44 VISUAL ROLLBACK VERIFIED
-
-4. Return to Unity and allow it to recompile.
-
-Do not run the v44 visual-polish installer again.
+Run CLEAN_WARBOARD_FOLDER.bat from the Warboard project root.
