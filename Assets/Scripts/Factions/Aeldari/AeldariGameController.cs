@@ -24,82 +24,18 @@ public sealed class AeldariGameController :
     FactionGameControllerBase,
     IFactionPreGameController
 {
-private static readonly Dictionary<
-        AeldariDetachment,
-        string
-    > DetachmentNames =
-        new Dictionary<
-            AeldariDetachment,
-            string>
-        {
-            {
-                AeldariDetachment.Warhost,
-                "Warhost"
-            },
-            {
-                AeldariDetachment.WindriderHost,
-                "Windrider Host"
-            },
-            {
-                AeldariDetachment.SpiritConclave,
-                "Spirit Conclave"
-            },
-            {
-                AeldariDetachment.GuardianBattlehost,
-                "Guardian Battlehost"
-            },
-            {
-                AeldariDetachment.GhostsOfTheWebway,
-                "Ghosts of the Webway"
-            },
-            {
-                AeldariDetachment.DevotedOfYnnead,
-                "Devoted of Ynnead"
-            },
-            {
-                AeldariDetachment.SeerCouncil,
-                "Seer Council"
-            },
-            {
-                AeldariDetachment.AspectHost,
-                "Aspect Host"
-            },
-            {
-                AeldariDetachment.ArmouredWarhost,
-                "Armoured Warhost"
-            },
-            {
-                AeldariDetachment.FatefulPerformance,
-                "Fateful Performance"
-            },
-            {
-                AeldariDetachment.PathOfTheOutcast,
-                "Path of the Outcast"
-            },
-            {
-                AeldariDetachment.TwilightFlickers,
-                "Twilight Flickers"
-            },
-            {
-                AeldariDetachment.SerpentsBrood,
-                "Serpent's Brood"
-            },
-            {
-                AeldariDetachment.EldritchRaiders,
-                "Eldritch Raiders"
-            },
-            {
-                AeldariDetachment.CorsairCoterie,
-                "Corsair Coterie"
-            }
-        };
+    // v38: names, DP costs and UNIQUE tags live in AeldariDetachmentRuntime.
 
     private AeldariRulesSystem rules;
 
-    private IAeldariDetachmentController
-        detachmentController;
+    private readonly List<IAeldariDetachmentController>
+        detachmentControllers =
+            new List<IAeldariDetachmentController>();
 
-    private AeldariDetachment lockedDetachment;
+    private readonly List<AeldariDetachment>
+        lockedDetachments =
+            new List<AeldariDetachment>();
+
     private bool detachmentLocked;
     private string detachmentLockSource = "";
 
@@ -108,6 +44,10 @@ private static readonly Dictionary<
 
     private RosterImportMetadata rosterMetadata;
     private int rosterMetadataRevision = -1;
+
+    private WarboardRosterManifest rosterManifest;
+    private int rosterManifestRevision = -1;
+
     private string rosterProbeStatus = "";
 
     private string selectionError = "";
@@ -143,12 +83,18 @@ private static readonly Dictionary<
         get { return detachmentLocked; }
     }
 
+    public IReadOnlyList<AeldariDetachment> LockedDetachments
+    {
+        get { return lockedDetachments.ToArray(); }
+    }
+
+    // Compatibility accessor for code that still expects one detachment.
     public AeldariDetachment LockedDetachment
     {
         get
         {
-            return detachmentLocked
-                ? lockedDetachment
+            return lockedDetachments.Count > 0
+                ? lockedDetachments[0]
                 : suggestedDetachment;
         }
     }
@@ -157,8 +103,16 @@ private static readonly Dictionary<
     {
         get
         {
-            return DisplayNameFor(
-                LockedDetachment);
+            if (lockedDetachments.Count == 0)
+                return AeldariDetachmentRuntime.Name(
+                    suggestedDetachment);
+
+            return string.Join(
+                " + ",
+                lockedDetachments
+                    .Select(
+                        AeldariDetachmentRuntime.Name)
+                    .ToArray());
         }
     }
 
@@ -182,10 +136,56 @@ private static readonly Dictionary<
         get { return battleFocus.Tokens; }
     }
 
+    public int DetachmentPointsSpent
+    {
+        get
+        {
+            return AeldariDetachmentRuntime.TotalCost(
+                lockedDetachments);
+        }
+    }
+
+    public int DetachmentPointLimit
+    {
+        get
+        {
+            return AeldariDetachmentRuntime
+                .DetachmentPointLimit(
+                    Game != null
+                    ? Game.BattleSizeName
+                    : "");
+        }
+    }
+
+    public string ForceDisposition
+    {
+        get
+        {
+            return rosterManifest != null
+                ? rosterManifest.ForceDisposition
+                : "";
+        }
+    }
+
+    public WarboardRosterManifest RosterManifest
+    {
+        get { return rosterManifest; }
+    }
+
     public IAeldariDetachmentController
         ActiveDetachmentController
     {
-        get { return detachmentController; }
+        get
+        {
+            return detachmentControllers
+                .FirstOrDefault();
+        }
+    }
+
+    public IReadOnlyList<IAeldariDetachmentController>
+        ActiveDetachmentControllers
+    {
+        get { return detachmentControllers.ToArray(); }
     }
 
     public override void Initialize(
@@ -258,17 +258,16 @@ public override void OnGameEvent(
             SynchronizeDetachmentState();
         }
 
-        if (detachmentController != null)
+        foreach (IAeldariDetachmentController controller
+            in detachmentControllers.ToArray())
         {
-            detachmentController.OnGameEvent(
-                context);
+            if (controller != null)
+                controller.OnGameEvent(context);
         }
     }
-
 public bool ShouldShowDetachmentSelection()
 {
-    if (detachmentLocked ||
-        army.Count == 0 ||
+    if (army.Count == 0 ||
         Game == null)
     {
         return false;
@@ -276,8 +275,11 @@ public bool ShouldShowDetachmentSelection()
 
     ResolveRosterDetachmentMetadata();
 
-    return Game.PreGameReady;
+    return
+        !detachmentLocked &&
+        Game.PreGameReady;
 }
+
 
     public bool IsReadyForDeployment
     {
@@ -314,30 +316,52 @@ public bool ShouldShowDetachmentSelection()
             Enum.GetValues(
                 typeof(AeldariDetachment));
     }
-
-    public string GetDetachmentDisplayName(
+public string GetDetachmentDisplayName(
         AeldariDetachment detachment)
     {
-        return DisplayNameFor(
+        return AeldariDetachmentRuntime.Name(
             detachment);
     }
+
+    public int GetDetachmentPointCost(
+        AeldariDetachment detachment)
+    {
+        return AeldariDetachmentRuntime.Cost(
+            detachment);
+    }
+
 
 public bool TryLockDetachment(
     AeldariDetachment detachment,
     string source)
 {
+    return TryLockDetachments(
+        new[] { detachment },
+        source);
+}
+
+public bool TryLockDetachments(
+    IEnumerable<AeldariDetachment> detachments,
+    string source)
+{
     EnsureRulesBinding();
+
+    List<AeldariDetachment> requested =
+        detachments != null
+        ? detachments.ToList()
+        : new List<AeldariDetachment>();
 
     if (detachmentLocked)
     {
-        if (lockedDetachment ==
-                detachment)
-        {
+        bool same =
+            lockedDetachments.SequenceEqual(
+                requested);
+
+        if (same)
             return true;
-        }
 
         selectionError =
-            "Detachment is already locked for this battle.";
+            "Detachments are already locked for this battle.";
 
         return false;
     }
@@ -346,7 +370,7 @@ public bool TryLockDetachment(
         Game.DeploymentStarted)
     {
         selectionError =
-            "Detachment must be confirmed before deployment begins.";
+            "Detachments must be confirmed before deployment begins.";
 
         return false;
     }
@@ -363,47 +387,81 @@ public bool TryLockDetachment(
 
     string validation;
 
-    if (!ValidateDetachment(
-            detachment,
+    if (!ValidateDetachmentSet(
+            requested,
             out validation))
     {
-        selectionError =
-            validation;
-
+        selectionError = validation;
         return false;
     }
 
-    lockedDetachment =
-        detachment;
+    lockedDetachments.Clear();
+    lockedDetachments.AddRange(requested);
 
     detachmentLocked = true;
 
     detachmentLockSource =
-        string.IsNullOrWhiteSpace(
-            source)
+        string.IsNullOrWhiteSpace(source)
         ? "Pre-game roster"
         : source;
 
     selectionError = "";
 
+    AeldariDetachmentRuntime.SetSelected(
+        FactionId,
+        lockedDetachments);
+
+    // Keep the old single-detachment storage pointed at the first selected
+    // detachment while v38's compatibility migration redirects rule checks
+    // to AeldariDetachmentRuntime.
     rules.SetDetachment(
         FactionId,
-        lockedDetachment);
+        lockedDetachments[0]);
 
-    LoadDetachmentController();
+    LoadDetachmentControllers();
     SynchronizeDetachmentState();
 
     return true;
 }
 
-public bool UsesDevotedOfYnnead()
+public bool TryUnlockBeforeDeployment()
+{
+    if (Game != null &&
+        Game.DeploymentStarted)
+    {
+        selectionError =
+            "Detachments cannot be changed after deployment begins.";
+        return false;
+    }
+
+    ResetDetachmentForRosterChange();
+    return true;
+}
+
+public bool TryValidateDetachmentSelection(
+    IEnumerable<AeldariDetachment> detachments,
+    out string message)
+{
+    return ValidateDetachmentSet(
+        detachments != null
+        ? detachments.ToList()
+        : new List<AeldariDetachment>(),
+        out message);
+}
+
+public bool HasDetachment(
+    AeldariDetachment detachment)
 {
     return
         detachmentLocked &&
-        lockedDetachment ==
-            AeldariDetachment
-                .DevotedOfYnnead;
+        lockedDetachments.Contains(detachment);
 }
+public bool UsesDevotedOfYnnead()
+{
+    return HasDetachment(
+        AeldariDetachment.DevotedOfYnnead);
+}
+
 
     public bool UsesBattleFocus()
     {
@@ -453,28 +511,137 @@ public void EndBattleRound()
     {
         battleFocus.EndBattleRound();
     }
-
-    public static string DisplayNameFor(
+public static string DisplayNameFor(
         AeldariDetachment detachment)
     {
-        string value;
-
-        return DetachmentNames.TryGetValue(
-            detachment,
-            out value)
-            ? value
-            : detachment.ToString();
+        return AeldariDetachmentRuntime.Name(
+            detachment);
     }
-
 private void ResolveRosterDetachmentMetadata()
 {
+    WarboardRosterManifest manifest =
+        RosterTextManifestStore.Get(
+            FactionId);
+
+    int manifestRevision =
+        manifest != null
+        ? manifest.Revision
+        : -1;
+
+    if (manifestRevision !=
+            rosterManifestRevision)
+    {
+        if (Game == null ||
+            !Game.DeploymentStarted)
+        {
+            ResetDetachmentForRosterChange();
+        }
+
+        rosterManifest = manifest;
+        rosterManifestRevision =
+            manifestRevision;
+    }
+    else
+    {
+        rosterManifest = manifest;
+    }
+
+    if (detachmentLocked)
+        return;
+
+    // v38 authority: pasted New Recruit roster text. This preserves the
+    // roster-level configuration that YellowScribe's compact code discards.
+    if (rosterManifest != null)
+    {
+        List<AeldariDetachment> parsed =
+            new List<AeldariDetachment>();
+
+        List<string> unknown =
+            new List<string>();
+
+        foreach (string label
+            in rosterManifest.Detachments)
+        {
+            AeldariDetachment detachment;
+
+            if (AeldariDetachmentRuntime.TryParse(
+                    label,
+                    out detachment))
+            {
+                parsed.Add(detachment);
+            }
+            else
+            {
+                unknown.Add(label);
+            }
+        }
+
+        if (unknown.Count > 0)
+        {
+            rosterProbeStatus =
+                "Roster text contains unsupported Aeldari detachment name(s): " +
+                string.Join(", ", unknown.ToArray()) +
+                ".";
+            return;
+        }
+
+        if (parsed.Count == 0)
+        {
+            rosterProbeStatus =
+                "Roster text was parsed, but it did not contain a DETACHMENT line.";
+            return;
+        }
+
+        if (TryLockDetachments(
+                parsed,
+                "Pasted New Recruit roster"))
+        {
+            int spent =
+                AeldariDetachmentRuntime.TotalCost(
+                    parsed);
+
+            int limit =
+                DetachmentPointLimit;
+
+            rosterProbeStatus =
+                "Roster text locked: " +
+                string.Join(
+                    " + ",
+                    parsed
+                        .Select(
+                            AeldariDetachmentRuntime.Name)
+                        .ToArray()) +
+                " • " +
+                spent +
+                (limit > 0
+                    ? "/" + limit
+                    : "") +
+                " DP" +
+                (!string.IsNullOrWhiteSpace(
+                    rosterManifest.ForceDisposition)
+                    ? " • " +
+                      rosterManifest.ForceDisposition
+                    : "") +
+                (!string.IsNullOrWhiteSpace(
+                    rosterManifest.Warlord)
+                    ? " • Warlord " +
+                      rosterManifest.Warlord
+                    : "") +
+                ".";
+        }
+
+        return;
+    }
+
+    // Secondary fallback: explicit metadata that genuinely survived the
+    // YellowScribe payload. YellowScribe normally strips roster-level
+    // configuration, so this path is deliberately conservative.
     RosterImportMetadata current =
         RosterImportMetadataStore.Get(
             FactionId);
 
     if (current != null &&
-        !current.MatchesArmy(
-            army))
+        !current.MatchesArmy(army))
     {
         current = null;
     }
@@ -487,27 +654,18 @@ private void ResolveRosterDetachmentMetadata()
     if (revision !=
             rosterMetadataRevision)
     {
-        if (Game == null ||
-            !Game.DeploymentStarted)
-        {
-            ResetDetachmentForRosterChange();
-        }
-
-        rosterMetadata =
-            current;
-
-        rosterMetadataRevision =
-            revision;
+        rosterMetadata = current;
+        rosterMetadataRevision = revision;
     }
-
-    if (detachmentLocked)
-        return;
+    else
+    {
+        rosterMetadata = current;
+    }
 
     if (rosterMetadata == null)
     {
         rosterProbeStatus =
-            "No matching imported detachment metadata was found for this army. Select the roster's detachment once before deployment.";
-
+            "Paste the New Recruit roster text to load detachment configuration automatically, or select detachments manually.";
         return;
     }
 
@@ -520,8 +678,7 @@ private void ResolveRosterDetachmentMetadata()
             out detected,
             out detectionMessage);
 
-    rosterProbeStatus =
-        detectionMessage;
+    rosterProbeStatus = detectionMessage;
 
     if (resolution !=
             RosterDetachmentResolution.Detected)
@@ -529,17 +686,17 @@ private void ResolveRosterDetachmentMetadata()
         return;
     }
 
-    if (TryLockDetachment(
-            detected,
-            "YellowScribe / New Recruit roster"))
+    if (TryLockDetachments(
+            new[] { detected },
+            "YellowScribe explicit metadata"))
     {
         rosterProbeStatus =
-            "Detachment read from imported roster: " +
-            DisplayNameFor(
-                detected) +
+            "Detachment read from explicit YellowScribe metadata: " +
+            DisplayNameFor(detected) +
             ".";
     }
 }
+
 
 private enum RosterDetachmentResolution
 {
@@ -618,15 +775,16 @@ private RosterDetachmentResolution
 
     return RosterDetachmentResolution.Missing;
 }
-
 private void ResetDetachmentForRosterChange()
 {
-    if (detachmentLocked)
-    {
-        detachmentLocked = false;
-        detachmentLockSource = "";
-        detachmentController = null;
-    }
+    detachmentLocked = false;
+    detachmentLockSource = "";
+
+    lockedDetachments.Clear();
+    detachmentControllers.Clear();
+
+    AeldariDetachmentRuntime.Clear(
+        FactionId);
 
     selectionError = "";
     suggestedDetachment =
@@ -638,144 +796,218 @@ private void ResetDetachmentForRosterChange()
 
 
 
+
     private bool TryMatchDetachmentText(
         string value,
         bool allowContainedName,
         out AeldariDetachment detachment)
     {
-        detachment =
-            AeldariDetachment.Warhost;
-
-        string normalized =
-            NormalizeDetachmentText(
-                value);
-
-        if (string.IsNullOrWhiteSpace(
-                normalized))
-        {
-            return false;
-        }
-
-        foreach (
-            KeyValuePair<
-                AeldariDetachment,
-                string
-            > pair
-            in DetachmentNames
-                .OrderByDescending(
-                    item =>
-                        item.Value.Length))
-        {
-            string wanted =
-                NormalizeDetachmentText(
-                    pair.Value);
-
-            if (normalized == wanted ||
-                (allowContainedName &&
-                 normalized.Contains(
-                     wanted)))
-            {
-                detachment =
-                    pair.Key;
-
-                return true;
-            }
-        }
-
-        return false;
+        // AeldariDetachmentRuntime owns the canonical names in v38. Its
+        // parser accepts exact names and names embedded in explicit metadata
+        // labels such as "Devoted of Ynnead (Strength From Death)".
+        return AeldariDetachmentRuntime.TryParse(
+            value,
+            out detachment);
     }
 
-    private static string NormalizeDetachmentText(
-        string value)
-    {
-        if (string.IsNullOrWhiteSpace(
-                value))
-        {
-            return "";
-        }
-
-        char[] characters =
-            value
-                .ToLowerInvariant()
-                .Replace('’', '\'')
-                .Where(
-                    c =>
-                        char.IsLetterOrDigit(c) ||
-                        char.IsWhiteSpace(c) ||
-                        c == '\'')
-                .ToArray();
-
-        return string.Join(
-            " ",
-            new string(characters)
-                .Split(
-                    new[]
-                    {
-                        ' ',
-                        '\t',
-                        '\r',
-                        '\n'
-                    },
-                    StringSplitOptions
-                        .RemoveEmptyEntries));
-    }
-
-    private bool ValidateDetachment(
-        AeldariDetachment detachment,
+private bool ValidateDetachmentSet(
+        IReadOnlyList<AeldariDetachment> detachments,
         out string message)
     {
         message = "";
 
-        if (detachment ==
-                AeldariDetachment
-                    .DevotedOfYnnead)
+        if (detachments == null ||
+            detachments.Count == 0)
         {
-            bool hasRequiredEpicHero =
+            message =
+                "Select at least one Aeldari detachment.";
+            return false;
+        }
+
+        if (detachments.Distinct().Count() !=
+            detachments.Count)
+        {
+            message =
+                "The same detachment cannot be selected more than once.";
+            return false;
+        }
+
+        int acrobaticCount =
+            detachments.Count(
+                AeldariDetachmentRuntime.IsAcrobatic);
+
+        if (acrobaticCount > 1)
+        {
+            message =
+                "Only one ACROBATIC detachment can be selected.";
+            return false;
+        }
+
+        int spent =
+            AeldariDetachmentRuntime.TotalCost(
+                detachments);
+
+        int limit =
+            AeldariDetachmentRuntime
+                .DetachmentPointLimit(
+                    Game != null
+                    ? Game.BattleSizeName
+                    : "");
+
+        bool incursionThreeDpException =
+            Game != null &&
+            string.Equals(
+                Game.BattleSizeName,
+                "Incursion",
+                StringComparison.OrdinalIgnoreCase) &&
+            detachments.Count == 1 &&
+            spent == 3;
+
+        if (limit > 0 &&
+            spent > limit &&
+            !incursionThreeDpException)
+        {
+            message =
+                "Selected detachments cost " +
+                spent +
+                "DP, but " +
+                (Game != null
+                    ? Game.BattleSizeName
+                    : "this battle") +
+                " allows " +
+                limit +
+                "DP.";
+
+            return false;
+        }
+
+        if (rosterManifest != null &&
+            rosterManifest.TotalArmyPoints > 0 &&
+            Game != null &&
+            Game.BattlePoints > 0 &&
+            rosterManifest.TotalArmyPoints >
+                Game.BattlePoints)
+        {
+            message =
+                "Roster text is " +
+                rosterManifest.TotalArmyPoints +
+                "pts, exceeding the selected " +
+                Game.BattlePoints +
+                "pt battle size.";
+
+            return false;
+        }
+
+        if (detachments.Contains(
+                AeldariDetachment
+                    .DevotedOfYnnead))
+        {
+            bool hasYvraine =
                 army.Any(
                     unit =>
-                        unit != null &&
-                        (NameContains(
-                             unit,
-                             "Yvraine") ||
-                         NameContains(
-                             unit,
-                             "Yncarne")));
+                        NameContains(
+                            unit,
+                            "Yvraine"));
 
-            if (!hasRequiredEpicHero)
+            bool hasYncarne =
+                army.Any(
+                    unit =>
+                        NameContains(
+                            unit,
+                            "Yncarne"));
+
+            if (!hasYvraine &&
+                !hasYncarne)
             {
                 message =
                     "Devoted of Ynnead requires Yvraine and/or the Yncarne in the army.";
-
                 return false;
             }
+
+            if (rosterManifest != null)
+            {
+                string warlord =
+                    rosterManifest.Warlord ?? "";
+
+                bool validWarlord =
+                    warlord.IndexOf(
+                        "Yvraine",
+                        StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    warlord.IndexOf(
+                        "Yncarne",
+                        StringComparison.OrdinalIgnoreCase) >= 0;
+
+                if (!validWarlord)
+                {
+                    message =
+                        "Devoted of Ynnead requires Yvraine or the Yncarne to be the WARLORD; the pasted roster lists '" +
+                        (string.IsNullOrWhiteSpace(warlord)
+                            ? "no Warlord"
+                            : warlord) +
+                        "'.";
+
+                    return false;
+                }
+            }
+        }
+
+        if (rosterManifest != null &&
+            !string.IsNullOrWhiteSpace(
+                rosterManifest.FactionKeyword) &&
+            rosterManifest.FactionKeyword.IndexOf(
+                "Aeldari",
+                StringComparison.OrdinalIgnoreCase) < 0 &&
+            rosterManifest.FactionKeyword.IndexOf(
+                "Asuryani",
+                StringComparison.OrdinalIgnoreCase) < 0)
+        {
+            message =
+                "The pasted roster faction does not appear to be Aeldari: " +
+                rosterManifest.FactionKeyword +
+                ".";
+            return false;
         }
 
         return true;
     }
-
-    private void LoadDetachmentController()
+private void LoadDetachmentControllers()
     {
         if (!detachmentLocked)
-            return;
-
-        if (detachmentController != null &&
-            detachmentController.Detachment ==
-                lockedDetachment)
         {
+            detachmentControllers.Clear();
             return;
         }
 
-        detachmentController =
-            AeldariDetachmentControllerFactory
-                .Create(
-                    lockedDetachment);
+        bool alreadyCorrect =
+            detachmentControllers.Count ==
+                lockedDetachments.Count &&
+            detachmentControllers
+                .Select(
+                    controller =>
+                        controller.Detachment)
+                .SequenceEqual(
+                    lockedDetachments);
 
-        if (detachmentController != null)
+        if (alreadyCorrect)
+            return;
+
+        detachmentControllers.Clear();
+
+        foreach (AeldariDetachment detachment
+            in lockedDetachments)
         {
-            detachmentController.Initialize(
-                this);
+            IAeldariDetachmentController controller =
+                AeldariDetachmentControllerFactory
+                    .Create(detachment);
+
+            if (controller == null)
+                continue;
+
+            controller.Initialize(this);
+            detachmentControllers.Add(controller);
         }
     }
+
 
 private void EnsureRulesBinding()
 {
@@ -806,7 +1038,6 @@ private void EnsureRulesBinding()
                 : new List<string>());
     }
 }
-
 private void SynchronizeDetachmentState()
 {
     if (rules == null ||
@@ -816,18 +1047,24 @@ private void SynchronizeDetachmentState()
         return;
     }
 
-    if (!detachmentLocked)
+    if (!detachmentLocked ||
+        lockedDetachments.Count == 0)
     {
+        AeldariDetachmentRuntime.Clear(
+            FactionId);
         ClearTemporaryDetachmentState();
         return;
     }
 
-    AeldariDetachment detachment =
-        lockedDetachment;
+    AeldariDetachmentRuntime.SetSelected(
+        FactionId,
+        lockedDetachments);
 
+    // Legacy primary pointer; v38 compatibility migration makes
+    // AeldariRulesSystem.DetachmentIs multi-aware.
     rules.SetDetachment(
         FactionId,
-        detachment);
+        lockedDetachments[0]);
 
     foreach (SquadController unit
         in army)
@@ -841,21 +1078,14 @@ private void SynchronizeDetachmentState()
             continue;
         }
 
-        SynchronizeYnnariKeyword(
-            unit,
-            detachment);
-
-        SynchronizeBattlelineKeyword(
-            unit,
-            detachment);
-
-        SynchronizeObjectiveControl(
-            unit,
-            detachment);
+        SynchronizeYnnariKeyword(unit);
+        SynchronizeBattlelineKeyword(unit);
+        SynchronizeObjectiveControl(unit);
     }
 
-    LoadDetachmentController();
+    LoadDetachmentControllers();
 }
+
 
 private void ClearTemporaryDetachmentState()
 {
@@ -892,10 +1122,8 @@ private void ClearTemporaryDetachmentState()
     }
 
 }
-
-    private void SynchronizeYnnariKeyword(
-        SquadController unit,
-        AeldariDetachment detachment)
+private void SynchronizeYnnariKeyword(
+        SquadController unit)
     {
         bool asuryani =
             unit.HasIntrinsicKeyword(
@@ -912,9 +1140,9 @@ private void ClearTemporaryDetachmentState()
         }
 
         bool shouldHave =
-            detachment ==
+            HasDetachment(
                 AeldariDetachment
-                    .DevotedOfYnnead;
+                    .DevotedOfYnnead);
 
         SetTemporaryFactionKeyword(
             unit,
@@ -922,10 +1150,8 @@ private void ClearTemporaryDetachmentState()
             shouldHave,
             ynnariGrantedByDetachment);
     }
-
-    private void SynchronizeBattlelineKeyword(
-        SquadController unit,
-        AeldariDetachment detachment)
+private void SynchronizeBattlelineKeyword(
+        SquadController unit)
     {
         bool windrider =
             unit.HasIntrinsicKeyword(
@@ -954,20 +1180,20 @@ private void ClearTemporaryDetachmentState()
                 "Troupe");
 
         bool granted =
-            (detachment ==
-                AeldariDetachment
-                    .WindriderHost &&
+            (HasDetachment(
+                 AeldariDetachment
+                     .WindriderHost) &&
              windrider) ||
-            (detachment ==
-                AeldariDetachment
-                    .SpiritConclave &&
+            (HasDetachment(
+                 AeldariDetachment
+                     .SpiritConclave) &&
              wraithBattleline) ||
-            ((detachment ==
-                 AeldariDetachment
-                     .GhostsOfTheWebway ||
-              detachment ==
-                 AeldariDetachment
-                     .SerpentsBrood) &&
+            ((HasDetachment(
+                  AeldariDetachment
+                      .GhostsOfTheWebway) ||
+              HasDetachment(
+                  AeldariDetachment
+                      .SerpentsBrood)) &&
              troupe);
 
         if (windrider ||
@@ -981,10 +1207,8 @@ private void ClearTemporaryDetachmentState()
                 battlelineGrantedByDetachment);
         }
     }
-
-    private void SynchronizeObjectiveControl(
-        SquadController unit,
-        AeldariDetachment detachment)
+private void SynchronizeObjectiveControl(
+        SquadController unit)
     {
         bool troupe =
             unit.HasIntrinsicKeyword(
@@ -995,18 +1219,19 @@ private void ClearTemporaryDetachmentState()
 
         bool troupeOcTwo =
             troupe &&
-            (detachment ==
-                AeldariDetachment
-                    .GhostsOfTheWebway ||
-             detachment ==
-                AeldariDetachment
-                    .SerpentsBrood);
+            (HasDetachment(
+                 AeldariDetachment
+                     .GhostsOfTheWebway) ||
+             HasDetachment(
+                 AeldariDetachment
+                     .SerpentsBrood));
 
         unit.AeldariObjectiveControlOverride =
             troupeOcTwo
             ? 2
             : 0;
     }
+
 
 
     private static bool NameContains(
