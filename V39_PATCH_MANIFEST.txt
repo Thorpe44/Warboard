@@ -1,0 +1,13 @@
+WARBOARD v39 PATCH MANIFEST
+
+Assets/Editor/WarboardV39CoreRulesCompliance.cs
+Assets/Editor/WarboardV39CoreRulesCompliance.cs.meta
+Assets/Scripts/Core/CoreRules11Geometry.cs
+Assets/Scripts/Core/CoreRules11Geometry.cs.meta
+Assets/Scripts/Core/GameController.CoreRules11.cs
+Assets/Scripts/Core/GameController.CoreRules11.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+CORE_RULES_AUDIT_V39.md
+README_V39.md
+V39_PATCH_MANIFEST.txt
