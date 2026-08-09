@@ -1,18 +1,18 @@
 {
   "context": {
-    "projectPath": "C:/Users/elli0/Documents/Warboard/Packages",
+    "projectPath": "C:/Users/elli0/Documents/GitHub/Warboard/Packages",
     "unityVersion": "6000.5.7f1"
   },
   "inputs": [
-    "C:\\Users\\elli0\\Documents\\Warboard\\Packages\\manifest.json",
-    "C:\\Users\\elli0\\Documents\\Warboard\\Packages\\packages-lock.json",
+    "C:\\Users\\elli0\\Documents\\GitHub\\Warboard\\Packages\\manifest.json",
+    "C:\\Users\\elli0\\Documents\\GitHub\\Warboard\\Packages\\packages-lock.json",
     "C:\\Program Files\\Unity\\Hub\\Editor\\6000.5.7f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.modules.physics@1.0.0": {
       "name": "com.unity.modules.physics",
       "displayName": "Physics",
-      "resolvedPath": "C:\\Users\\elli0\\Documents\\Warboard\\Library\\PackageCache\\com.unity.modules.physics",
+      "resolvedPath": "C:\\Users\\elli0\\Documents\\GitHub\\Warboard\\Library\\PackageCache\\com.unity.modules.physics",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -20,7 +20,7 @@
     "com.unity.modules.imgui@1.0.0": {
       "name": "com.unity.modules.imgui",
       "displayName": "IMGUI",
-      "resolvedPath": "C:\\Users\\elli0\\Documents\\Warboard\\Library\\PackageCache\\com.unity.modules.imgui",
+      "resolvedPath": "C:\\Users\\elli0\\Documents\\GitHub\\Warboard\\Library\\PackageCache\\com.unity.modules.imgui",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -28,7 +28,7 @@
     "com.unity.modules.jsonserialize@1.0.0": {
       "name": "com.unity.modules.jsonserialize",
       "displayName": "JSONSerialize",
-      "resolvedPath": "C:\\Users\\elli0\\Documents\\Warboard\\Library\\PackageCache\\com.unity.modules.jsonserialize",
+      "resolvedPath": "C:\\Users\\elli0\\Documents\\GitHub\\Warboard\\Library\\PackageCache\\com.unity.modules.jsonserialize",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -36,7 +36,7 @@
     "com.unity.modules.unitywebrequest@1.0.0": {
       "name": "com.unity.modules.unitywebrequest",
       "displayName": "Unity Web Request",
-      "resolvedPath": "C:\\Users\\elli0\\Documents\\Warboard\\Library\\PackageCache\\com.unity.modules.unitywebrequest",
+      "resolvedPath": "C:\\Users\\elli0\\Documents\\GitHub\\Warboard\\Library\\PackageCache\\com.unity.modules.unitywebrequest",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false

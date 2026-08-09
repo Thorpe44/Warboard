@@ -400,6 +400,7 @@
 "Assets/Scripts/Core/BattlefieldWorldUI.cs"
 "Assets/Scripts/Core/DataModels.cs"
 "Assets/Scripts/Core/DiceRoller.cs"
+"Assets/Scripts/Core/FactionControllerSystem.cs"
 "Assets/Scripts/Core/FactionRuleSystem.cs"
 "Assets/Scripts/Core/GameController.cs"
 "Assets/Scripts/Core/InteractiveAttackController.cs"
@@ -423,7 +424,9 @@
 "Assets/Scripts/Core/WoundDisplayBillboard.cs"
 "Assets/Scripts/Core/YellowScribeImporter.cs"
 "Assets/Scripts/Factions/Aeldari/AeldariFactionModule.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariGameController.cs"
 "Assets/Scripts/Factions/Necrons/NecronFactionModule.cs"
+"Assets/Scripts/Factions/Necrons/NecronGameController.cs"
 -langversion:9.0
 /deterministic
 /optimize+

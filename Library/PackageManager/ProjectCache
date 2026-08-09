@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/elli0/Documents/Warboard/Packages/manifest.json
+    m_FilePath: C:/Users/elli0/Documents/GitHub/Warboard/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -8,7 +8,7 @@ m_ProjectFiles:
       ticks: 639218200370918733
     m_Hash: 841582669
   m_LockFileStatus:
-    m_FilePath: C:/Users/elli0/Documents/Warboard/Packages/packages-lock.json
+    m_FilePath: C:/Users/elli0/Documents/GitHub/Warboard/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -19,7 +19,7 @@ m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/elli0/Documents/Warboard/Packages
+m_ProjectPath: C:/Users/elli0/Documents/GitHub/Warboard/Packages
 m_EditorVersion: 6000.5.7f1 (017862109af0)
 m_ResolvedPackages:
 - packageId: com.unity.modules.physics@1.0.0
@@ -28,7 +28,7 @@ m_ResolvedPackages:
   isInstalled: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\elli0\Documents\Warboard\Library\PackageCache\com.unity.modules.physics
+  resolvedPath: C:\Users\elli0\Documents\GitHub\Warboard\Library\PackageCache\com.unity.modules.physics
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -118,7 +118,7 @@ m_ResolvedPackages:
   isInstalled: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\elli0\Documents\Warboard\Library\PackageCache\com.unity.modules.imgui
+  resolvedPath: C:\Users\elli0\Documents\GitHub\Warboard\Library\PackageCache\com.unity.modules.imgui
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -208,7 +208,7 @@ m_ResolvedPackages:
   isInstalled: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\elli0\Documents\Warboard\Library\PackageCache\com.unity.modules.jsonserialize
+  resolvedPath: C:\Users\elli0\Documents\GitHub\Warboard\Library\PackageCache\com.unity.modules.jsonserialize
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -298,7 +298,7 @@ m_ResolvedPackages:
   isInstalled: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\elli0\Documents\Warboard\Library\PackageCache\com.unity.modules.unitywebrequest
+  resolvedPath: C:\Users\elli0\Documents\GitHub\Warboard\Library\PackageCache\com.unity.modules.unitywebrequest
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
