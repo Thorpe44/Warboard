@@ -1159,6 +1159,15 @@ public partial class GameController
         SquadController passenger,
         SquadController transport)
     {
+        if (passenger != null &&
+            !Aeldari11CanEmbark(passenger))
+        {
+            status = passenger.DisplayName +
+                " cannot embark this turn because of an Aeldari rule.";
+            return;
+        }
+
+
         if (passenger == null || transport == null)
             return;
 

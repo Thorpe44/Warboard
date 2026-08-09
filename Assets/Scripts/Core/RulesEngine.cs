@@ -149,12 +149,20 @@ public static class RulesEngine
                     )
                 );
 
+            attacks +=
+                AeldariFactionPack11.AdditionalAttacks(
+                    attacker, model, weapon, mode);
+
             int rapidFire =
                 WeaponRuleParser.GetValue(
                     weapon,
                     "rapid_fire",
                     0
                 );
+
+            rapidFire +=
+                AeldariFactionPack11.AdditionalRapidFire(
+                    attacker, weapon, mode);
 
             if (halfRange &&
                 rapidFire > 0)
@@ -249,7 +257,11 @@ public static class RulesEngine
                 skill = Mathf.Max(2, skill - 1);
             }
 
-            bool torrent =
+                        UniversalAttackRuleState aeldari11UniversalState =
+                UniversalRuleRegistry.BuildAttackState(
+                    game, attacker, target, model, weapon, mode);
+
+bool torrent =
                 HasKeyword(
                     weapon,
                     "torrent"
@@ -260,6 +272,11 @@ public static class RulesEngine
                     weapon,
                     "lethal_hits"
                 );
+
+            lethalHits =
+                lethalHits ||
+                AeldariFactionPack11.GrantsLethalHits(
+                    attacker, mode);
 
             int sustainedHits =
                 WeaponRuleParser.GetValue(
@@ -273,6 +290,12 @@ public static class RulesEngine
                     : 0
                 );
 
+            sustainedHits =
+                Mathf.Max(
+                    sustainedHits,
+                    AeldariFactionPack11.MinimumSustainedHits(
+                        attacker, weapon, mode));
+
             bool twinLinked =
                 HasKeyword(
                     weapon,
@@ -285,6 +308,11 @@ public static class RulesEngine
                     "devastating_wounds"
                 );
 
+            devastating =
+                devastating ||
+                AeldariFactionPack11.GrantsDevastatingWounds(
+                    attacker, weapon, mode);
+
             bool precision =
                 WeaponRuleParser.Has(
                     weapon,
@@ -292,6 +320,11 @@ public static class RulesEngine
                 ) ||
                 (game != null &&
                  game.Core11HasEpicChallenge(model));
+
+            precision =
+                precision ||
+                AeldariFactionPack11.GrantsPrecision(
+                    attacker, weapon, mode);
 
             int melta =
                 halfRange
@@ -324,7 +357,16 @@ public static class RulesEngine
                         weapon.displayName
                     );
 
-                if (hitRoll < skill)
+                if (!aeldari11UniversalState.cannotRerollHits &&
+                    AeldariFactionPack11.AutomaticRerollHit(
+                        attacker, hitRoll, skill, aeldari11UniversalState))
+                {
+                    hitRoll = DiceRoller.RollD6(
+                        "Aeldari Hit re-roll: " + weapon.displayName);
+                }
+
+                if (!AeldariFactionPack11.AutomaticHitSucceeds(
+                        hitRoll, skill, aeldari11UniversalState))
                 {
                     int rerolledHit;
 
@@ -365,7 +407,8 @@ public static class RulesEngine
                     }
                 );
 
-                if (hitRoll < skill)
+                if (!AeldariFactionPack11.AutomaticHitSucceeds(
+                        hitRoll, skill, aeldari11UniversalState))
                     continue;
 
                 hits++;
@@ -411,6 +454,10 @@ public static class RulesEngine
                         target
                     );
 
+            criticalThreshold =
+                AeldariFactionPack11.CriticalWoundThreshold(
+                    attacker, target, weapon, criticalThreshold);
+
             for (int i = 0;
                  i < normalWoundRolls;
                  i++)
@@ -422,11 +469,23 @@ public static class RulesEngine
                     );
 
                 bool success =
-                    woundRoll >=
-                    woundTarget;
+                    AeldariFactionPack11.AutomaticWoundSucceeds(
+                        woundRoll, woundTarget, criticalThreshold,
+                        aeldari11UniversalState.woundRollModifier);
 
                 bool alreadyRerolled =
                     false;
+
+                if (AeldariFactionPack11.AutomaticRerollWound(
+                        attacker, woundRoll, success, mode))
+                {
+                    woundRoll = DiceRoller.RollD6(
+                        "Aeldari Wound re-roll: " + weapon.displayName);
+                    success = AeldariFactionPack11.AutomaticWoundSucceeds(
+                        woundRoll, woundTarget, criticalThreshold,
+                        aeldari11UniversalState.woundRollModifier);
+                    alreadyRerolled = true;
+                }
 
                 if (!success &&
                     twinLinked)
@@ -440,8 +499,9 @@ public static class RulesEngine
                     alreadyRerolled = true;
 
                     success =
-                        woundRoll >=
-                        woundTarget;
+                        AeldariFactionPack11.AutomaticWoundSucceeds(
+                            woundRoll, woundTarget, criticalThreshold,
+                            aeldari11UniversalState.woundRollModifier);
                 }
 
                 if (!success &&
@@ -465,8 +525,9 @@ public static class RulesEngine
                         alreadyRerolled = true;
 
                         success =
-                            woundRoll >=
-                            woundTarget;
+                        AeldariFactionPack11.AutomaticWoundSucceeds(
+                            woundRoll, woundTarget, criticalThreshold,
+                            aeldari11UniversalState.woundRollModifier);
                     }
                 }
 

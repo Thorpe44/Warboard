@@ -50,6 +50,15 @@ public partial class GameController : MonoBehaviour
         SquadController attacker,
         SquadController target)
     {
+        if (attacker != null &&
+            !Aeldari11CanCharge(attacker))
+        {
+            status = attacker.DisplayName +
+                " cannot declare a charge this turn because of an Aeldari rule.";
+            return;
+        }
+
+
         if (!Core11AircraftChargeAllowed(attacker, target))
             return;
 

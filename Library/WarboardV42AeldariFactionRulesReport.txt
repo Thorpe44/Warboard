@@ -1,0 +1,16 @@
+WARBOARD v42 — FULL AELDARI FACTION RULES
+
+Installed against Aeldari Faction Pack 11e v1.1, July 2026.
+15 detachments / 78 stratagems / 52 enhancements.
+
+Touched source:
+ - Assets/Scripts/Core/AeldariRulesSystem.cs
+ - Assets/Scripts/Core\GameController.cs
+ - Assets/Scripts/Core\GameController.UI.cs
+ - Assets/Scripts/Core\GameController.Rules.cs
+ - Assets/Scripts/Core\GameController.Charge.cs
+ - Assets/Scripts/Core/InteractiveAttackController.cs
+ - Assets/Scripts/Core/RulesEngine.cs
+ - Assets/Scripts/Core/SquadController.cs
+ - Assets/Scripts/Core/UniversalRuleEngine.cs
+ - Assets/Scripts/Core\GameController.CoreCompletion11.cs

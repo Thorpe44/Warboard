@@ -427,9 +427,7 @@ public partial class GameController : MonoBehaviour
             factionController.BattleFocusTokens > 0)
         {
             spent =
-                factionController.SpendBattleFocus(
-                    1,
-                    manoeuvre);
+                factionController.SpendBattleFocus(1, manoeuvre, unit);
         }
 
         if (!spent &&
@@ -647,6 +645,10 @@ public partial class GameController : MonoBehaviour
                 0,
                 baseCost
             );
+
+        cost =
+            Aeldari11ModifyStratagemCost(
+                unit, label, cost);
 
         SquadController overlord = null;
 

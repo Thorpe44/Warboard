@@ -1,0 +1,27 @@
+WARBOARD v43 PATCH MANIFEST
+
+Adeptus Custodes standard faction rules
+Detachments: 9
+Stratagems: 45
+Enhancements: 30
+
+Assets/Editor/WarboardV43CustodesFactionRules.cs
+Assets/Editor/WarboardV43CustodesFactionRules.cs.meta
+Assets/Scripts/Core/GameController.CustodesFaction11.cs
+Assets/Scripts/Core/GameController.CustodesFaction11.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+Assets/Scripts/Factions/AdeptusCustodes/CustodesDetachmentControllerSystem.cs
+Assets/Scripts/Factions/AdeptusCustodes/CustodesDetachmentControllerSystem.cs.meta
+Assets/Scripts/Factions/AdeptusCustodes/CustodesDetachmentRuntime.cs
+Assets/Scripts/Factions/AdeptusCustodes/CustodesDetachmentRuntime.cs.meta
+Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11.cs
+Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11.cs.meta
+Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11Runtime.cs
+Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11Runtime.cs.meta
+Assets/Scripts/Factions/AdeptusCustodes/CustodesGameController.cs
+Assets/Scripts/Factions/AdeptusCustodes/CustodesGameController.cs.meta
+Assets/Scripts/Factions/AdeptusCustodes/CustodesSetupUI.cs
+Assets/Scripts/Factions/AdeptusCustodes/CustodesSetupUI.cs.meta
+README_V43.md
+V43_PATCH_MANIFEST.txt

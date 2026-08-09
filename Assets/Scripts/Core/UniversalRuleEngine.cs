@@ -154,6 +154,12 @@ public static class UniversalRuleRegistry
             return false;
         }
 
+        if (AeldariFactionPack11.GrantsCoreAbility(
+                squad, ruleName))
+        {
+            return true;
+        }
+
         UnitData data =
             squad.SourceData;
 
@@ -430,10 +436,8 @@ public static class UniversalRuleRegistry
                  ));
 
             bool terrainCover =
-                game.TargetUnitHasCoverFromShooter(
-                    shooter,
-                    target
-                );
+                (game.TargetUnitHasCoverFromShooter(shooter, target) ||
+                 game.Aeldari11HasRuneOfMistsCover(target, shooter));
 
             state.benefitOfCover =
                 stealth ||

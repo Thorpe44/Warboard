@@ -432,6 +432,9 @@ public partial class GameController : MonoBehaviour
 
     private void Update()
     {
+        Aeldari11PumpDeferredReactions();
+
+
         if (battleSetupMode ||
             missionSetupMode ||
             battleOver)

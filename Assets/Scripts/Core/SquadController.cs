@@ -1256,6 +1256,10 @@ public class SquadController : MonoBehaviour
                     .AeldariObjectiveControlOverride;
         }
 
+        objectiveControl =
+            AeldariFactionPack11.ModifyObjectiveControl(
+                JoinedActionController(), model, objectiveControl);
+
         return Mathf.Max(
             0,
             objectiveControl

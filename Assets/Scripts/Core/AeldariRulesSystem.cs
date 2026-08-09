@@ -698,159 +698,34 @@ public class AeldariRulesSystem
         AttackMode mode,
         UniversalAttackRuleState state)
     {
-        if (attacker == null ||
-            target == null ||
-            state == null ||
-            !IsAeldariFaction(
-                attacker.FactionId) &&
-            !IsAeldariFaction(
-                target.FactionId))
-        {
-            return;
-        }
-
-        if (IsAeldariFaction(
-                attacker.FactionId))
-        {
-            AeldariDetachment detachment =
-                GetDetachment(
-                    attacker.FactionId
-                );
-
-            if (detachment ==
-                    AeldariDetachment.GuardianBattlehost &&
-                (attacker.HasKeyword("dire avengers") ||
-                 attacker.HasKeyword("guardian") ||
-                 attacker.HasKeyword("support weapon") ||
-                 attacker.HasKeyword("war walker") ||
-                 UnitNameContains(
-                     attacker,
-                     "Dire Avenger") ||
-                 UnitNameContains(
-                     attacker,
-                     "Guardian") ||
-                 UnitNameContains(
-                     attacker,
-                     "Support Weapon") ||
-                 UnitNameContains(
-                     attacker,
-                     "War Walker")) &&
-                (game.UnitWithinAnyObjective(attacker) ||
-                 game.UnitWithinAnyObjective(target)))
-            {
-                state.hitRollModifier += 1;
-            }
-
-            if (detachment ==
-                    AeldariDetachment.SpiritConclave &&
-                attacker.HasKeyword("wraith construct") &&
-                target.AeldariVengefulDeadTokens > 0)
-            {
-                state.hitRollModifier += 1;
-                state.woundRollModifier += 1;
-            }
-
-            state.hitRollModifier +=
-                attacker.JoinedActionController()
-                    .AeldariOffensiveHitModifier;
-
-            state.woundRollModifier +=
-                attacker.JoinedActionController()
-                    .AeldariOffensiveWoundModifier;
-        }
-
-        if (IsAeldariFaction(
-                target.FactionId))
-        {
-            AeldariDetachment detachment =
-                GetDetachment(
-                    target.FactionId
-                );
-
-            if (mode == AttackMode.Ranged &&
-                detachment ==
-                    AeldariDetachment.TwilightFlickers &&
-                target.HasKeyword("harlequins"))
-            {
-                state.hitRollModifier -= 1;
-            }
-
-            if (FactionRuleSystem.UnitOrLeaderHasRule(
-                    target,
-                    "Mirage Field"))
-            {
-                state.hitRollModifier -= 1;
-            }
-
-            if (mode == AttackMode.Ranged &&
-                FactionRuleSystem.UnitOrLeaderHasRule(
-                    target,
-                    "Shimmerstone"))
-            {
-                state.woundRollModifier -= 1;
-            }
-
-            state.hitRollModifier +=
-                target.JoinedActionController()
-                    .AeldariDefensiveHitModifier;
-
-            state.woundRollModifier +=
-                target.JoinedActionController()
-                    .AeldariDefensiveWoundModifier;
-        }
-    }
+        AeldariFactionPack11.ApplyAttackModifiers(
+            game, attacker, target, weapon, mode, state);
+}
 
     public int MinimumSustainedHits(
         SquadController attacker,
         WeaponData weapon,
         AttackMode mode)
     {
-        if (attacker == null ||
-            !IsAeldariFaction(
-                attacker.FactionId))
-        {
-            return 0;
-        }
-
-        int value =
-            attacker.JoinedActionController()
-                .AeldariSustainedHits;
-
-        if (DetachmentIs(
-                attacker.FactionId,
-                AeldariDetachment.SerpentsBrood) &&
-            attacker.HasKeyword("harlequins") &&
-            (attacker.HasKeyword("mounted") ||
-             attacker.HasKeyword("vehicle")))
-        {
-            value = Mathf.Max(
-                value,
-                1
-            );
-        }
-
-        return value;
-    }
+        return AeldariFactionPack11.MinimumSustainedHits(
+            attacker, weapon, mode);
+}
 
     public bool GrantsLethalHits(
         SquadController attacker,
         AttackMode mode)
     {
-        return
-            attacker != null &&
-            attacker.JoinedActionController()
-                .AeldariLethalHits;
-    }
+        return AeldariFactionPack11.GrantsLethalHits(
+            attacker, mode);
+}
 
     public bool GrantsDevastatingWounds(
         SquadController attacker,
         AttackMode mode)
     {
-        return
-            attacker != null &&
-            attacker.JoinedActionController()
-                .AeldariDevastatingWounds;
-    }
+        return AeldariFactionPack11.GrantsDevastatingWounds(
+            attacker, null, mode);
+}
 
     public int ApModifier(
         SquadController attacker,
@@ -858,119 +733,39 @@ public class AeldariRulesSystem
         WeaponData weapon,
         AttackMode mode)
     {
-        if (attacker == null)
-            return 0;
-
-        int result =
-            attacker.JoinedActionController()
-                .AeldariApModifier;
-
-        if (FactionRuleSystem.UnitOrLeaderHasRule(
-                attacker,
-                "Assassins' Eye Upgrade") &&
-            target != null &&
-            target.HasKeyword("character"))
-        {
-            result -= 1;
-        }
-
-        return result;
-    }
+        return AeldariFactionPack11.ApModifier(
+            attacker, target, weapon, mode);
+}
 
     public int DamageModifier(
         SquadController attacker,
         WeaponData weapon,
         AttackMode mode)
     {
-        if (attacker == null ||
-            weapon == null)
-        {
-            return 0;
-        }
-
-        int result =
-            attacker.JoinedActionController()
-                .AeldariDamageModifier;
-
-        if (mode == AttackMode.Ranged &&
-            WeaponRuleParser.Has(
-                weapon,
-                "psychic") &&
-            FactionRuleSystem.UnitOrLeaderHasRule(
-                attacker,
-                "Psychic Destroyer"))
-        {
-            result += 1;
-        }
-
-        if (mode == AttackMode.Melee &&
-            FactionRuleSystem.UnitOrLeaderHasRule(
-                attacker,
-                "Aspect of Murder"))
-        {
-            result += 1;
-        }
-
-        return result;
-    }
+        return AeldariFactionPack11.DamageModifier(
+            attacker, weapon, mode);
+}
 
     public int InvulnerableOverride(
         SquadController unit)
     {
-        if (unit == null)
-            return 0;
-
-        int value =
-            unit.JoinedActionController()
-                .AeldariInvulnerableOverride;
-
-        if (FactionRuleSystem.UnitOrLeaderHasRule(
-                unit,
-                "Voidstone"))
-        {
-            value =
-                value > 0
-                ? Mathf.Min(
-                    value,
-                    5
-                )
-                : 5;
-        }
-
-        return value;
-    }
+        return AeldariFactionPack11.InvulnerableOverride(unit);
+}
 
     public float RangedRangeModifier(
         SquadController attacker,
         WeaponData weapon)
     {
-        if (attacker == null ||
-            weapon == null)
-        {
-            return 0f;
-        }
-
-        if (WeaponRuleParser.Has(
-                weapon,
-                "psychic") &&
-            FactionRuleSystem.UnitOrLeaderHasRule(
-                attacker,
-                "Stone of Eldritch Fury"))
-        {
-            return 12f;
-        }
-
-        return 0f;
-    }
+        return AeldariFactionPack11.RangedRangeModifier(
+            attacker, weapon);
+}
 
     public bool IgnoresCover(
         SquadController attacker)
     {
-        return
-            attacker != null &&
-            attacker.JoinedActionController()
-                .AeldariIgnoresCover;
-    }
+        return AeldariFactionPack11.GrantsIgnoresCover(
+            attacker, AttackMode.Ranged);
+}
 
     public bool IsPathOfWarriorUnit(
         SquadController unit)
@@ -1031,105 +826,42 @@ public class AeldariRulesSystem
     public bool CanMoveThroughEnemyModelsWhenCharging(
         SquadController unit)
     {
-        if (unit == null ||
-            !unit.HasKeyword("harlequins"))
-        {
-            return false;
-        }
-
-        AeldariDetachment detachment =
-            GetDetachment(
-                unit.FactionId
-            );
-
-        return
-            detachment ==
-                AeldariDetachment.GhostsOfTheWebway ||
-            detachment ==
-                AeldariDetachment.FatefulPerformance;
-    }
+        return AeldariFactionPack11.CanMoveThroughEnemyModelsWhenCharging(unit);
+}
 
     public bool CanRerollAdvance(
         SquadController unit)
     {
-        if (unit == null ||
-            !DetachmentIs(
-                unit.FactionId,
-                AeldariDetachment.EldritchRaiders))
-        {
-            return false;
-        }
-
-        return
-            unit.HasKeyword("anhrathe") ||
-            unit.HasKeyword("rangers") ||
-            unit.HasKeyword("shroud runners") ||
-            UnitNameContains(
-                unit,
-                "Ranger") ||
-            UnitNameContains(
-                unit,
-                "Shroud Runner");
-    }
+        return AeldariFactionPack11.CanRerollAdvance(unit);
+}
 
     public bool CanChargeAfterAdvance(
         SquadController unit)
     {
-        if (unit == null)
-            return false;
-
-        return
-            unit.JoinedActionController()
-                .AeldariCanChargeAfterAdvance ||
-            (DetachmentIs(
-                unit.FactionId,
-                AeldariDetachment.EldritchRaiders) &&
-             IsAeldariUnit(unit));
-    }
+        return AeldariFactionPack11.CanChargeAfterAdvance(unit);
+}
 
     public bool CanChargeAfterFallBack(
         SquadController unit)
     {
-        return
-            unit != null &&
-            unit.JoinedActionController()
-                .AeldariCanChargeAfterFallBack;
-    }
+        return AeldariFactionPack11.CanChargeAfterFallBack(unit);
+}
 
     public bool CanShootAfterFallBack(
         SquadController unit)
     {
-        if (unit == null)
-            return false;
-
-        return
-            unit.JoinedActionController()
-                .AeldariCanShootAfterFallBack ||
-            (DetachmentIs(
-                unit.FactionId,
-                AeldariDetachment.ArmouredWarhost) &&
-             unit.HasKeyword("vehicle") &&
-             unit.JoinedActionController()
-                .AeldariVectoredEnginesActive);
-    }
+        return AeldariFactionPack11.CanShootAfterFallBack(unit);
+}
 
     public bool VehicleRangedHasAssault(
         SquadController unit)
     {
-        return
-            unit != null &&
-            DetachmentIs(
-                unit.FactionId,
-                AeldariDetachment.ArmouredWarhost) &&
-            unit.HasKeyword("vehicle");
-    }
+        return AeldariFactionPack11.VehicleRangedHasAssault(unit);
+}
 
     public bool HasRange18Protection(
         SquadController unit)
     {
-        return
-            unit != null &&
-            unit.JoinedActionController()
-                .AeldariRange18Protection;
-    }
+        return AeldariFactionPack11.HasRange18Protection(unit);
+}
 }

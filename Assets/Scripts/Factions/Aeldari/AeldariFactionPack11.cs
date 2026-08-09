@@ -43,6 +43,8 @@ public sealed class AeldariDetachmentRule11
 
 public static class AeldariFactionPack11
 {
+    // WARBOARD_V42_FULL_AELDARI_FACTION_RULES
+
     public const string Version = "Aeldari Faction Pack 11e v1.1 July 2026";
     private static readonly List<AeldariStratagem11> stratagems = new List<AeldariStratagem11>();
     private static readonly List<AeldariEnhancement11> enhancements = new List<AeldariEnhancement11>();

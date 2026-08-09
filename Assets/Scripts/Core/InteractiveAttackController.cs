@@ -1436,12 +1436,19 @@ public class InteractiveAttackController
                     weapon,
                     "precision"
                 );
+
+            volley.precision =
+                volley.precision ||
+                AeldariFactionPack11.GrantsPrecision(
+                    attacker, weapon, mode);
             volley.precision = volley.precision ||
                 (game != null &&
                  game.Core11HasEpicChallenge(first.model));
 
             volley.effectiveStrength =
-                weapon.strength;
+                weapon.strength +
+                AeldariFactionPack11.StrengthModifier(
+                    attacker, weapon, mode);
 
             volley.effectiveAp =
                 weapon.ap;
@@ -1488,6 +1495,11 @@ public class InteractiveAttackController
                         target
                     );
 
+            volley.criticalWoundThreshold =
+                AeldariFactionPack11.CriticalWoundThreshold(
+                    attacker, target, weapon,
+                    volley.criticalWoundThreshold);
+
             int attacks = 0;
 
             foreach (
@@ -1503,14 +1515,9 @@ public class InteractiveAttackController
                         )
                     );
 
-                if (mode == AttackMode.Melee &&
-                    UniversalRuleRegistry.UnitHasRule(
-                        selection.model.Squad,
-                        "Borrowed Vigour"
-                    ))
-                {
-                    oneModelAttacks += 2;
-                }
+                oneModelAttacks +=
+                    AeldariFactionPack11.AdditionalAttacks(
+                        attacker, selection.model, weapon, mode);
 
                 float distance =
                     DistanceFromModelToUnit(
@@ -1531,6 +1538,10 @@ public class InteractiveAttackController
                         "rapid_fire",
                         0
                     );
+
+                rapid +=
+                    AeldariFactionPack11.AdditionalRapidFire(
+                        attacker, weapon, mode);
 
                 if (halfRange)
                     oneModelAttacks += rapid;
