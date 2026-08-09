@@ -1,10 +1,6 @@
-﻿using UnityEngine;
-
 /// <summary>
-/// Small runtime lookup facade for the faction-controller layer.
-///
-/// Core systems can ask whether a faction controller exists without owning
-/// or constructing faction-specific rule systems themselves.
+/// Small lookup facade for the loaded faction-controller layer.
+/// No scene searches or polling are performed here.
 /// </summary>
 public static class FactionControllerRuntime
 {

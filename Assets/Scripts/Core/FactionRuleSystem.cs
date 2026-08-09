@@ -224,13 +224,11 @@ public class FactionRuleSystem
         if (aeldari != null &&
             aeldari.UsesBattleFocus())
         {
-            string manoeuvre =
-                ResolveBattleFocusManoeuvreFromCallStack();
-
+            // Compatibility only. v36's real Agile Manoeuvre path passes the
+            // manoeuvre name directly to AeldariGameController.
             return aeldari
                 .SpendBattleFocus(
-                    amount,
-                    manoeuvre);
+                    amount);
         }
 
         int current =
@@ -601,67 +599,4 @@ public class FactionRuleSystem
         };
     }
 
-private static string
-    ResolveBattleFocusManoeuvreFromCallStack()
-{
-    System.Diagnostics.StackTrace trace =
-        new System.Diagnostics.StackTrace();
-
-    foreach (
-        System.Diagnostics.StackFrame frame
-        in trace.GetFrames() ??
-           new System.Diagnostics.StackFrame[0])
-    {
-        System.Reflection.MethodBase method =
-            frame.GetMethod();
-
-        string name =
-            method != null
-            ? method.Name
-            : "";
-
-        string upper =
-            name.ToUpperInvariant();
-
-        if (upper.Contains(
-                "SWIFT"))
-        {
-            return "SWIFT AS THE WIND";
-        }
-
-        if (upper.Contains(
-                "FLITTING"))
-        {
-            return "FLITTING SHADOWS";
-        }
-
-        if (upper.Contains(
-                "STARENGINE"))
-        {
-            return "STAR ENGINES";
-        }
-
-        if (upper.Contains(
-                "SUDDENSTRIKE"))
-        {
-            return "SUDDEN STRIKE";
-        }
-
-        if (upper.Contains(
-                "OPPORTUNITY"))
-        {
-            return "OPPORTUNITY SEIZED";
-        }
-
-        if (upper.Contains(
-                "FADEBACK") ||
-            upper.Contains(
-                "FADE_BACK"))
-        {
-            return "FADE BACK";
-        }
-    }
-
-    return "";
-}
 }

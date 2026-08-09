@@ -1,0 +1,31 @@
+WARBOARD v36 PATCH
+
+REPLACED
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/GameController.RuntimeApi.cs
+Assets/Scripts/Core/FactionControllerSystem.cs
+Assets/Scripts/Core/FactionControllerRuntime.cs
+Assets/Scripts/Core/FactionRuleSystem.cs
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs
+
+ADDED
+Assets/Scripts/Factions/Aeldari/AeldariBattleFocusController.cs
+Assets/Editor/WarboardV36ArchitectureCleanup.cs (one-time; self-deletes after success)
+
+SOURCE-MIGRATED LOCALLY AFTER FIRST COMPILE
+Assets/Scripts/Core/GameController.cs
+Assets/Scripts/Core/GameController.Core.cs
+Assets/Scripts/Core/GameController.Setup.cs
+Assets/Scripts/Core/GameController.Movement.cs
+Assets/Scripts/Core/GameController.Charge.cs
+Assets/Scripts/Core/GameController.Combat.cs
+Assets/Scripts/Core/GameController.Fight.cs
+Assets/Scripts/Core/GameController.Rules.cs
+Assets/Scripts/Core/GameController.Traditional.cs
+Assets/Scripts/Core/ModelToken.cs
+Assets/Scripts/Core/AeldariRulesSystem.cs
+
+REMOVED AFTER SUCCESS
+Assets/Scripts/Core/CoreEventBridge.cs
+Assets/Editor/WarboardV35GameControllerRefactor.cs
+Assets/Editor/WarboardV36ArchitectureCleanup.cs

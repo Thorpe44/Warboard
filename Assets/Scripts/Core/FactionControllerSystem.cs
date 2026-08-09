@@ -1,15 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-/// <summary>
-/// Runtime contract for faction-specific game controllers.
-///
-/// GameController remains the owner of universal 40K rules. Faction
-/// controllers listen to the core event stream and own faction/detachment
-/// state that sits on top of those universal rules.
-/// </summary>
 public interface IFactionGameController
 {
     string FactionId { get; }
@@ -24,8 +17,6 @@ public interface IFactionGameController
 
     void OnGameEvent(
         GameEventContext context);
-
-    void Tick();
 }
 
 public abstract class FactionGameControllerBase :
@@ -79,15 +70,23 @@ public abstract class FactionGameControllerBase :
     {
     }
 
-    public virtual void Tick()
-    {
-    }
-
     protected bool EventConcernsFaction(
         GameEventContext context)
     {
         if (context == null)
             return false;
+
+        switch (context.Type)
+        {
+            case GameEventType.BattleStarted:
+            case GameEventType.BattleRoundStarted:
+            case GameEventType.BattleRoundEnded:
+            case GameEventType.TurnStarted:
+            case GameEventType.TurnEnded:
+            case GameEventType.PhaseStarted:
+            case GameEventType.PhaseEnded:
+                return true;
+        }
 
         if (string.Equals(
                 context.ActingFaction,
@@ -124,11 +123,6 @@ public sealed class GenericFactionGameController :
     }
 }
 
-/// <summary>
-/// Creates only the controllers required by the armies currently loaded.
-/// New factions are added here rather than by adding faction branches to
-/// GameController.
-/// </summary>
 public static class FactionGameControllerFactory
 {
     public static IFactionGameController Create(
@@ -177,20 +171,20 @@ public static class FactionGameControllerFactory
 }
 
 /// <summary>
-/// Migration host for v33.
+/// Event-driven faction-controller host.
 ///
-/// It attaches automatically to the running Warboard game, discovers the
-/// factions present in loaded rosters, instantiates one controller per
-/// faction, and routes GameEventBus events to those controllers.
-///
-/// This lets the existing GameController remain untouched during the
-/// architecture migration. Later versions can move more faction behaviour
-/// behind IFactionGameController without another large GameController rewrite.
+/// v36 removes the old 0.20 second roster polling loop. The host binds once
+/// to GameController, rebuilds controllers only when GameController reports a
+/// roster change, and otherwise only routes the authoritative core event bus.
 /// </summary>
 public sealed class FactionControllerHost :
     MonoBehaviour
 {
-    public static FactionControllerHost Instance { get; private set; }
+    public static FactionControllerHost Instance
+    {
+        get;
+        private set;
+    }
 
     private GameController game;
 
@@ -202,8 +196,6 @@ public sealed class FactionControllerHost :
             string,
             IFactionGameController
         >(StringComparer.OrdinalIgnoreCase);
-
-    private float nextRefreshTime;
 
     public IReadOnlyDictionary<
         string,
@@ -240,51 +232,70 @@ public sealed class FactionControllerHost :
             HandleGameEvent;
     }
 
+    private void Start()
+    {
+        GameController owner =
+            GameController.Current;
+
+        if (owner == null)
+        {
+            owner =
+                UnityEngine.Object
+                    .FindAnyObjectByType<
+                        GameController>();
+        }
+
+        Attach(owner);
+    }
+
     private void OnDestroy()
     {
         GameEventBus.Raised -=
             HandleGameEvent;
 
+        Attach(null);
+
         if (Instance == this)
             Instance = null;
     }
 
-    private void Update()
+    private void Attach(
+        GameController owner)
     {
-        if (game == null)
-        {
-            game =
-                UnityEngine.Object
-                    .FindAnyObjectByType<
-                        GameController>();
+        if (game == owner)
+            return;
 
-            if (game == null)
-                return;
+        if (game != null)
+        {
+            game.RostersChanged -=
+                HandleRostersChanged;
         }
 
-        if (Time.unscaledTime >=
-            nextRefreshTime)
+        game = owner;
+
+        if (game != null)
         {
-            nextRefreshTime =
-                Time.unscaledTime +
-                0.20f;
+            game.RostersChanged +=
+                HandleRostersChanged;
 
             RefreshControllers();
         }
-
-        foreach (
-            IFactionGameController controller
-            in controllers.Values.ToArray())
+        else
         {
-            controller.Tick();
+            controllers.Clear();
         }
+    }
+
+    private void HandleRostersChanged()
+    {
+        RefreshControllers();
     }
 
     private void RefreshControllers()
     {
         IReadOnlyList<SquadController> allUnits =
             game != null
-            ? game.CoreSquads
+            ? game.AllSquads
             : new List<SquadController>();
 
         Dictionary<
@@ -360,10 +371,6 @@ public sealed class FactionControllerHost :
     {
         if (context == null)
             return;
-
-        // A roster can be loaded between refresh ticks. Refresh immediately
-        // before routing so the faction controller exists for the event.
-        RefreshControllers();
 
         foreach (
             IFactionGameController controller

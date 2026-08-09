@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -115,13 +115,17 @@ public sealed class AeldariGameController :
     private AeldariDetachment lastAppliedDetachment;
     private bool hasLastAppliedDetachment;
 
-    private int battleFocusTokens;
-    private int battleFocusRound = -1;
+    private readonly AeldariBattleFocusController
+        battleFocus =
+            new AeldariBattleFocusController();
 
-    private readonly HashSet<string>
-        agileManoeuvresUsedThisPhase =
-            new HashSet<string>(
-                StringComparer.OrdinalIgnoreCase);
+    private readonly HashSet<SquadController>
+        ynnariGrantedByDetachment =
+            new HashSet<SquadController>();
+
+    private readonly HashSet<SquadController>
+        battlelineGrantedByDetachment =
+            new HashSet<SquadController>();
 
     public override string DisplayName
     {
@@ -178,11 +182,7 @@ public sealed class AeldariGameController :
 
     public int BattleFocusTokens
     {
-        get
-        {
-            EnsureBattleFocusRound();
-            return battleFocusTokens;
-        }
+        get { return battleFocus.Tokens; }
     }
 
     public IAeldariDetachmentController
@@ -200,15 +200,21 @@ public sealed class AeldariGameController :
             factionId);
 
         EnsureRulesBinding();
+
+        battleFocus.Initialize(
+            game,
+            factionId);
+
         RefreshSuggestedDetachment();
     }
 
-    public override void RefreshArmy(
+public override void RefreshArmy(
         IReadOnlyList<SquadController> units)
     {
         base.RefreshArmy(units);
 
         EnsureRulesBinding();
+        PruneTemporaryKeywordGrants();
 
         if (!detachmentLocked)
         {
@@ -219,41 +225,47 @@ public sealed class AeldariGameController :
         SynchronizeDetachmentState();
     }
 
-    public override void OnGameEvent(
+public override void OnGameEvent(
         GameEventContext context)
     {
+        if (context == null)
+            return;
+
+        EnsureRulesBinding();
+
+        // Battle-round and phase timing are global core events. Every Aeldari
+        // controller must receive them, regardless of which faction currently
+        // has the active turn.
+        battleFocus.HandleGameEvent(
+            context,
+            UsesBattleFocus());
+
+        switch (context.Type)
+        {
+            case GameEventType.BattleStarted:
+            case GameEventType.BattleRoundStarted:
+            case GameEventType.TurnStarted:
+            case GameEventType.PhaseStarted:
+                SynchronizeDetachmentState();
+                break;
+        }
+
         if (!EventConcernsFaction(
-                context))
+                context) &&
+            context.Type !=
+                GameEventType.BattleRoundStarted &&
+            context.Type !=
+                GameEventType.BattleRoundEnded &&
+            context.Type !=
+                GameEventType.PhaseEnded)
         {
             return;
         }
 
-        EnsureRulesBinding();
-
-        switch (context.Type)
+        if (context.Type ==
+                GameEventType.UnitSetUp)
         {
-            case GameEventType.BattleRoundStarted:
-                StartBattleRound(
-                    Game != null
-                    ? Game.CurrentRoundNumber
-                    : context.Amount);
-                SynchronizeDetachmentState();
-                break;
-
-            case GameEventType.BattleRoundEnded:
-                battleFocusTokens = 0;
-                agileManoeuvresUsedThisPhase.Clear();
-                break;
-
-            case GameEventType.PhaseEnded:
-                agileManoeuvresUsedThisPhase.Clear();
-                break;
-
-            case GameEventType.TurnStarted:
-            case GameEventType.PhaseStarted:
-            case GameEventType.UnitSetUp:
-                SynchronizeDetachmentState();
-                break;
+            SynchronizeDetachmentState();
         }
 
         if (detachmentController != null)
@@ -263,59 +275,7 @@ public sealed class AeldariGameController :
         }
     }
 
-    public override void Tick()
-    {
-        ObserveCoreTiming();
-
-        EnsureRulesBinding();
-
-        if (rules == null)
-            return;
-
-        BeginRosterProbeWhenPossible();
-
-        if (detachmentLocked)
-        {
-            AeldariDetachment current =
-                rules.GetDetachment(
-                    FactionId);
-
-            // The old v32 "NEXT AELDARI DETACHMENT" control may still be
-            // rendered by GameController during migration. Once v34 locks
-            // the roster detachment, any attempt to cycle it is immediately
-            // rejected and the roster's locked value is restored.
-            if (current !=
-                lockedDetachment)
-            {
-                rules.SetDetachment(
-                    FactionId,
-                    lockedDetachment);
-
-                selectionError =
-                    "Detachment is locked for this battle.";
-            }
-        }
-
-        AeldariDetachment effective =
-            detachmentLocked
-            ? lockedDetachment
-            : rules.GetDetachment(
-                FactionId);
-
-        if (!hasLastAppliedDetachment ||
-            effective !=
-                lastAppliedDetachment)
-        {
-            SynchronizeDetachmentState();
-        }
-
-        if (detachmentController != null)
-        {
-            detachmentController.Tick();
-        }
-    }
-
-    public bool ShouldShowDetachmentSelection()
+public bool ShouldShowDetachmentSelection()
     {
         if (detachmentLocked ||
             army.Count == 0 ||
@@ -324,12 +284,11 @@ public sealed class AeldariGameController :
             return false;
         }
 
+        BeginRosterProbeWhenPossible();
+
         if (!ReadyForPreGameSelection())
             return false;
 
-        // Give the YellowScribe probe a chance to resolve the roster
-        // automatically. The fallback selector only appears once that probe
-        // is complete or if no roster code is available.
         return rosterProbeFinished ||
             string.IsNullOrWhiteSpace(
                 ResolveYellowScribeCode());
@@ -434,82 +393,40 @@ public sealed class AeldariGameController :
                          "Battle Focus")));
     }
 
-    public void StartBattleRound(
+public void StartBattleRound(
         int round)
     {
-        if (!UsesBattleFocus())
-        {
-            battleFocusTokens = 0;
-            battleFocusRound = round;
-            return;
-        }
-
-        if (battleFocusRound == round &&
-            round > 0)
-        {
-            return;
-        }
-
-        battleFocusRound = round;
-
-        battleFocusTokens =
-            BaseBattleFocusForCurrentSize();
-
-        agileManoeuvresUsedThisPhase.Clear();
+        battleFocus.StartBattleRound(
+            round,
+            UsesBattleFocus());
     }
 
-    public bool SpendBattleFocus(
+public bool SpendBattleFocus(
         int amount,
         string manoeuvre = "")
     {
-        if (amount <= 0)
-            return true;
+        string failureReason;
 
-        EnsureBattleFocusRound();
+        bool spent =
+            battleFocus.Spend(
+                amount,
+                manoeuvre,
+                out failureReason);
 
-        string canonical =
-            CanonicalManoeuvre(
-                manoeuvre);
-
-        bool repeatable =
-            string.Equals(
-                canonical,
-                "SWIFT AS THE WIND",
-                StringComparison.OrdinalIgnoreCase);
-
-        if (!string.IsNullOrWhiteSpace(
-                canonical) &&
-            !repeatable &&
-            agileManoeuvresUsedThisPhase.Contains(
-                canonical))
+        if (!spent &&
+            !string.IsNullOrWhiteSpace(
+                failureReason))
         {
             selectionError =
-                canonical +
-                " has already been triggered this phase.";
-
-            return false;
+                failureReason;
         }
 
-        if (battleFocusTokens < amount)
-            return false;
-
-        battleFocusTokens -= amount;
-
-        if (!string.IsNullOrWhiteSpace(
-                canonical) &&
-            !repeatable)
-        {
-            agileManoeuvresUsedThisPhase.Add(
-                canonical);
-        }
-
-        return true;
+        return spent;
     }
 
-    public void EndBattleRound()
+public void EndBattleRound()
     {
-        battleFocusTokens = 0;
-        agileManoeuvresUsedThisPhase.Clear();
+        battleFocus.EndBattleRound();
     }
 
     public static string DisplayNameFor(
@@ -522,67 +439,6 @@ public sealed class AeldariGameController :
             out value)
             ? value
             : detachment.ToString();
-    }
-
-    private void EnsureBattleFocusRound()
-    {
-        if (Game == null)
-            return;
-
-        int round =
-            Game.CurrentRoundNumber;
-
-        if (round > 0 &&
-            round != battleFocusRound)
-        {
-            StartBattleRound(
-                round);
-        }
-    }
-
-    private int BaseBattleFocusForCurrentSize()
-    {
-        string battleSize =
-            Game != null
-            ? Game.CoreBattleSizeName
-            : "";
-
-        if (string.Equals(
-                battleSize,
-                "Incursion",
-                StringComparison.OrdinalIgnoreCase))
-        {
-            return 2;
-        }
-
-        if (string.Equals(
-                battleSize,
-                "Strike Force",
-                StringComparison.OrdinalIgnoreCase))
-        {
-            return 4;
-        }
-
-        if (string.Equals(
-                battleSize,
-                "Onslaught",
-                StringComparison.OrdinalIgnoreCase))
-        {
-            return 6;
-        }
-
-        int points =
-            Game != null
-            ? Game.CoreBattlePoints
-            : 2000;
-
-        if (points <= 1000)
-            return 2;
-
-        if (points <= 2000)
-            return 4;
-
-        return 6;
     }
 
     private void RefreshSuggestedDetachment()
@@ -962,7 +818,7 @@ public sealed class AeldariGameController :
         }
     }
 
-    private void EnsureRulesBinding()
+private void EnsureRulesBinding()
     {
         if (rules != null ||
             Game == null)
@@ -971,7 +827,7 @@ public sealed class AeldariGameController :
         }
 
         rules =
-            Game.CoreAeldariRules;
+            Game.AeldariRules;
     }
 
     private void SynchronizeDetachmentState()
@@ -1020,12 +876,7 @@ public sealed class AeldariGameController :
                 unit,
                 detachment);
         }
-
-        rules.ApplyDetachmentKeywords(
-            FactionId,
-            army);
-
-        lastAppliedDetachment =
+lastAppliedDetachment =
             detachment;
 
         hasLastAppliedDetachment =
@@ -1060,10 +911,11 @@ public sealed class AeldariGameController :
                 AeldariDetachment
                     .DevotedOfYnnead;
 
-        SetAddedFactionKeyword(
+        SetTemporaryFactionKeyword(
             unit,
             "YNNARI",
-            shouldHave);
+            shouldHave,
+            ynnariGrantedByDetachment);
     }
 
     private void SynchronizeBattlelineKeyword(
@@ -1117,10 +969,11 @@ public sealed class AeldariGameController :
             wraithBattleline ||
             troupe)
         {
-            SetAddedFactionKeyword(
+            SetTemporaryFactionKeyword(
                 unit,
                 "BATTLELINE",
-                granted);
+                granted,
+                battlelineGrantedByDetachment);
         }
     }
 
@@ -1150,18 +1003,18 @@ public sealed class AeldariGameController :
             : 0;
     }
 
-    private bool ReadyForPreGameSelection()
+private bool ReadyForPreGameSelection()
     {
         return
             Game != null &&
-            Game.CorePreGameReady;
+            Game.PreGameReady;
     }
 
-    private string ResolveYellowScribeCode()
+private string ResolveYellowScribeCode()
     {
         return
             Game != null
-            ? Game.CoreYellowCodeForFaction(
+            ? Game.GetRosterCode(
                 FactionId)
             : "";
     }
@@ -1179,13 +1032,15 @@ public sealed class AeldariGameController :
                 StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
-    private static void SetAddedFactionKeyword(
+private static void SetTemporaryFactionKeyword(
         SquadController unit,
         string keyword,
-        bool enabled)
+        bool enabled,
+        HashSet<SquadController> grants)
     {
         if (unit == null ||
             unit.SourceData == null ||
+            grants == null ||
             string.IsNullOrWhiteSpace(
                 keyword))
         {
@@ -1194,11 +1049,27 @@ public sealed class AeldariGameController :
 
         if (enabled)
         {
+            if (grants.Contains(unit))
+                return;
+
+            // Never claim ownership of a keyword imported on the roster.
+            if (unit.HasIntrinsicKeyword(
+                    keyword))
+            {
+                return;
+            }
+
             unit.AddFactionKeyword(
                 keyword);
 
+            grants.Add(
+                unit);
+
             return;
         }
+
+        if (!grants.Remove(unit))
+            return;
 
         List<string> values =
             new List<string>(
@@ -1217,89 +1088,30 @@ public sealed class AeldariGameController :
             values.ToArray();
     }
 
-    private static string CanonicalManoeuvre(
-        string manoeuvre)
+
+    internal void RefreshDetachmentState()
     {
-        if (string.IsNullOrWhiteSpace(
-                manoeuvre))
-        {
-            return "";
-        }
-
-        string value =
-            manoeuvre.ToUpperInvariant();
-
-        if (value.Contains(
-                "SWIFT AS THE WIND"))
-        {
-            return "SWIFT AS THE WIND";
-        }
-
-        if (value.Contains(
-                "FLITTING SHADOWS"))
-        {
-            return "FLITTING SHADOWS";
-        }
-
-        if (value.Contains(
-                "STAR ENGINES"))
-        {
-            return "STAR ENGINES";
-        }
-
-        if (value.Contains(
-                "SUDDEN STRIKE"))
-        {
-            return "SUDDEN STRIKE";
-        }
-
-        if (value.Contains(
-                "OPPORTUNITY SEIZED"))
-        {
-            return "OPPORTUNITY SEIZED";
-        }
-
-        if (value.Contains(
-                "FADE BACK"))
-        {
-            return "FADE BACK";
-        }
-
-        return value.Trim();
+        EnsureRulesBinding();
+        SynchronizeDetachmentState();
     }
 
-    private GameController.Phase observedPhase;
-    private bool hasObservedPhase;
-    private int observedRound = -1;
-
-    private void ObserveCoreTiming()
+    private void PruneTemporaryKeywordGrants()
     {
-        if (Game == null)
-            return;
+        HashSet<SquadController> current =
+            new HashSet<SquadController>(
+                army.Where(
+                    unit =>
+                        unit != null));
 
-        GameController.Phase currentPhase =
-            Game.CurrentPhase;
+        ynnariGrantedByDetachment.RemoveWhere(
+            unit =>
+                unit == null ||
+                !current.Contains(unit));
 
-        if (!hasObservedPhase)
-        {
-            observedPhase = currentPhase;
-            hasObservedPhase = true;
-        }
-        else if (observedPhase != currentPhase)
-        {
-            agileManoeuvresUsedThisPhase.Clear();
-            observedPhase = currentPhase;
-        }
-
-        int currentRound =
-            Game.CurrentRoundNumber;
-
-        if (currentRound > 0 &&
-            currentRound != observedRound)
-        {
-            observedRound = currentRound;
-            StartBattleRound(
-                currentRound);
-        }
+        battlelineGrantedByDetachment.RemoveWhere(
+            unit =>
+                unit == null ||
+                !current.Contains(unit));
     }
+
 }
