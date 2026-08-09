@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Small runtime lookup facade for the faction-controller layer.
@@ -18,8 +18,7 @@ public static class FactionControllerRuntime
         }
 
         FactionControllerHost host =
-            Object.FindAnyObjectByType<
-                FactionControllerHost>();
+            FactionControllerHost.Instance;
 
         return host != null
             ? host.Get(factionId)

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -510,26 +510,9 @@ public class AeldariRulesSystem
     public void NextDetachment(
         string faction)
     {
-        if (!IsAeldariFaction(faction))
-            return;
-
-        AeldariDetachment current =
-            GetDetachment(faction);
-
-        int index =
-            Array.IndexOf(
-                Order,
-                current
-            );
-
-        index =
-            (index + 1) %
-            Order.Length;
-
-        SetDetachment(
-            faction,
-            Order[index]
-        );
+        // v35: detachment selection is a pre-game roster decision and is
+        // locked for the battle. Runtime cycling is intentionally disabled.
+        return;
     }
 
     public string RuleSummary(

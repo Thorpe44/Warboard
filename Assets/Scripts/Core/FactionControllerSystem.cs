@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -190,6 +190,8 @@ public static class FactionGameControllerFactory
 public sealed class FactionControllerHost :
     MonoBehaviour
 {
+    public static FactionControllerHost Instance { get; private set; }
+
     private GameController game;
 
     private readonly Dictionary<
@@ -232,6 +234,8 @@ public sealed class FactionControllerHost :
 
     private void Awake()
     {
+        Instance = this;
+
         GameEventBus.Raised +=
             HandleGameEvent;
     }
@@ -240,6 +244,9 @@ public sealed class FactionControllerHost :
     {
         GameEventBus.Raised -=
             HandleGameEvent;
+
+        if (Instance == this)
+            Instance = null;
     }
 
     private void Update()
@@ -275,11 +282,10 @@ public sealed class FactionControllerHost :
 
     private void RefreshControllers()
     {
-        SquadController[] allUnits =
-            UnityEngine.Object
-                .FindObjectsByType<
-                    SquadController>(
-                    FindObjectsSortMode.None);
+        IReadOnlyList<SquadController> allUnits =
+            game != null
+            ? game.CoreSquads
+            : new List<SquadController>();
 
         Dictionary<
             string,

@@ -1,8 +1,7 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -266,6 +265,8 @@ public sealed class AeldariGameController :
 
     public override void Tick()
     {
+        ObserveCoreTiming();
+
         EnsureRulesBinding();
 
         if (rules == null)
@@ -542,8 +543,9 @@ public sealed class AeldariGameController :
     private int BaseBattleFocusForCurrentSize()
     {
         string battleSize =
-            ReadPrivateString(
-                "battleSizeName");
+            Game != null
+            ? Game.CoreBattleSizeName
+            : "";
 
         if (string.Equals(
                 battleSize,
@@ -570,9 +572,9 @@ public sealed class AeldariGameController :
         }
 
         int points =
-            ReadPrivateInt(
-                "battlePoints",
-                2000);
+            Game != null
+            ? Game.CoreBattlePoints
+            : 2000;
 
         if (points <= 1000)
             return 2;
@@ -968,19 +970,8 @@ public sealed class AeldariGameController :
             return;
         }
 
-        FieldInfo field =
-            typeof(GameController)
-                .GetField(
-                    "aeldariRules",
-                    BindingFlags.Instance |
-                    BindingFlags.NonPublic);
-
-        if (field == null)
-            return;
-
         rules =
-            field.GetValue(Game)
-            as AeldariRulesSystem;
+            Game.CoreAeldariRules;
     }
 
     private void SynchronizeDetachmentState()
@@ -1161,150 +1152,18 @@ public sealed class AeldariGameController :
 
     private bool ReadyForPreGameSelection()
     {
-        bool p1Loaded =
-            ReadPrivateBool(
-                "playerOneLoaded");
-
-        bool p2Loaded =
-            ReadPrivateBool(
-                "playerTwoLoaded");
-
-        if (p1Loaded &&
-            p2Loaded)
-        {
-            return true;
-        }
-
-        bool deploymentMode =
-            ReadPrivateBool(
-                "deploymentMode");
-
-        bool missionSetupMode =
-            ReadPrivateBool(
-                "missionSetupMode");
-
-        return deploymentMode ||
-            missionSetupMode;
+        return
+            Game != null &&
+            Game.CorePreGameReady;
     }
 
     private string ResolveYellowScribeCode()
     {
-        if (Game == null)
-            return "";
-
-        FieldInfo factionsField =
-            typeof(GameController)
-                .GetField(
-                    "factions",
-                    BindingFlags.Instance |
-                    BindingFlags.NonPublic);
-
-        object rawFactions =
-            factionsField != null
-            ? factionsField.GetValue(
-                Game)
-            : null;
-
-        IEnumerable<string> factions =
-            rawFactions as
-                IEnumerable<string>;
-
-        if (factions == null)
-            return "";
-
-        List<string> list =
-            factions.ToList();
-
-        int index =
-            list.FindIndex(
-                item =>
-                    string.Equals(
-                        item,
-                        FactionId,
-                        StringComparison.OrdinalIgnoreCase));
-
-        if (index == 0)
-        {
-            return ReadPrivateString(
-                "yellowCodePlayerOne");
-        }
-
-        if (index == 1)
-        {
-            return ReadPrivateString(
-                "yellowCodePlayerTwo");
-        }
-
-        return "";
-    }
-
-    private string ReadPrivateString(
-        string fieldName)
-    {
-        if (Game == null)
-            return "";
-
-        FieldInfo field =
-            typeof(GameController)
-                .GetField(
-                    fieldName,
-                    BindingFlags.Instance |
-                    BindingFlags.NonPublic);
-
-        object value =
-            field != null
-            ? field.GetValue(Game)
-            : null;
-
-        return value != null
-            ? value.ToString()
+        return
+            Game != null
+            ? Game.CoreYellowCodeForFaction(
+                FactionId)
             : "";
-    }
-
-    private bool ReadPrivateBool(
-        string fieldName)
-    {
-        if (Game == null)
-            return false;
-
-        FieldInfo field =
-            typeof(GameController)
-                .GetField(
-                    fieldName,
-                    BindingFlags.Instance |
-                    BindingFlags.NonPublic);
-
-        object value =
-            field != null
-            ? field.GetValue(Game)
-            : null;
-
-        return value is bool &&
-            (bool)value;
-    }
-
-    private int ReadPrivateInt(
-        string fieldName,
-        int fallback)
-    {
-        if (Game == null)
-            return fallback;
-
-        FieldInfo field =
-            typeof(GameController)
-                .GetField(
-                    fieldName,
-                    BindingFlags.Instance |
-                    BindingFlags.NonPublic);
-
-        object value =
-            field != null
-            ? field.GetValue(Game)
-            : null;
-
-        return value is int
-            ? (int)value
-            : fallback;
     }
 
     private static bool NameContains(
@@ -1407,5 +1266,40 @@ public sealed class AeldariGameController :
         }
 
         return value.Trim();
+    }
+
+    private GameController.Phase observedPhase;
+    private bool hasObservedPhase;
+    private int observedRound = -1;
+
+    private void ObserveCoreTiming()
+    {
+        if (Game == null)
+            return;
+
+        GameController.Phase currentPhase =
+            Game.CurrentPhase;
+
+        if (!hasObservedPhase)
+        {
+            observedPhase = currentPhase;
+            hasObservedPhase = true;
+        }
+        else if (observedPhase != currentPhase)
+        {
+            agileManoeuvresUsedThisPhase.Clear();
+            observedPhase = currentPhase;
+        }
+
+        int currentRound =
+            Game.CurrentRoundNumber;
+
+        if (currentRound > 0 &&
+            currentRound != observedRound)
+        {
+            observedRound = currentRound;
+            StartBattleRound(
+                currentRound);
+        }
     }
 }
