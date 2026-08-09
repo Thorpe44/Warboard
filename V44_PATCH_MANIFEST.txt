@@ -1,0 +1,27 @@
+WARBOARD v44 PATCH MANIFEST
+
+Necrons Faction Pack 11e v1.1 — standard matched play
+Detachments: 12
+Stratagems: 63
+Enhancements / Bindings: 42
+
+Assets/Editor/WarboardV44NecronsFactionRules.cs
+Assets/Editor/WarboardV44NecronsFactionRules.cs.meta
+Assets/Scripts/Core/GameController.NecronsFaction11.cs
+Assets/Scripts/Core/GameController.NecronsFaction11.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+Assets/Scripts/Factions/Necrons/NecronDetachmentControllerSystem.cs
+Assets/Scripts/Factions/Necrons/NecronDetachmentControllerSystem.cs.meta
+Assets/Scripts/Factions/Necrons/NecronDetachmentRuntime.cs
+Assets/Scripts/Factions/Necrons/NecronDetachmentRuntime.cs.meta
+Assets/Scripts/Factions/Necrons/NecronGameController.cs
+Assets/Scripts/Factions/Necrons/NecronGameController.cs.meta
+Assets/Scripts/Factions/Necrons/NecronsFactionPack11.cs
+Assets/Scripts/Factions/Necrons/NecronsFactionPack11.cs.meta
+Assets/Scripts/Factions/Necrons/NecronsFactionPack11Runtime.cs
+Assets/Scripts/Factions/Necrons/NecronsFactionPack11Runtime.cs.meta
+Assets/Scripts/Factions/Necrons/NecronsSetupUI.cs
+Assets/Scripts/Factions/Necrons/NecronsSetupUI.cs.meta
+README_V44.md
+V44_PATCH_MANIFEST.txt
