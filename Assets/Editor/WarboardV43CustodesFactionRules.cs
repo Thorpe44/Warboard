@@ -19,6 +19,9 @@ public static class WarboardV43CustodesFactionRules
     private const string SelfPath =
         "Assets/Editor/WarboardV43CustodesFactionRules.cs";
 
+    private const string CompileShimPath =
+        "Assets/Scripts/Factions/AdeptusCustodes/CustodesModelTokenCompileShim.cs";
+
     private const string BackupRoot =
         "Library/WarboardBackups/V43";
 
@@ -2141,6 +2144,13 @@ public static class WarboardV43CustodesFactionRules
             string meta = SelfPath + ".meta";
             if (File.Exists(meta))
                 AssetDatabase.DeleteAsset(meta);
+
+            if (File.Exists(CompileShimPath))
+                AssetDatabase.DeleteAsset(CompileShimPath);
+
+            string shimMeta = CompileShimPath + ".meta";
+            if (File.Exists(shimMeta))
+                AssetDatabase.DeleteAsset(shimMeta);
 
             AssetDatabase.Refresh();
         }

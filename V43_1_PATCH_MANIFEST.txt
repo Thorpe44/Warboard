@@ -1,0 +1,16 @@
+WARBOARD v43.1 HOTFIX MANIFEST
+
+Fixes 3 compile errors from v43:
+- 2 x obsolete GetInstanceID() calls
+- missing first-pass ApplyFactionMaxWoundsModifier compiler symbol
+
+Assets/Editor/WarboardV43CustodesFactionRules.cs
+Assets/Editor/WarboardV43CustodesFactionRules.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11.cs
+Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11.cs.meta
+Assets/Scripts/Factions/AdeptusCustodes/CustodesModelTokenCompileShim.cs
+Assets/Scripts/Factions/AdeptusCustodes/CustodesModelTokenCompileShim.cs.meta
+README_V43_1.md
+V43_1_PATCH_MANIFEST.txt

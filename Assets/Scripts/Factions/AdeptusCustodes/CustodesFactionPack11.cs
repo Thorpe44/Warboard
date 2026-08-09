@@ -2761,13 +2761,13 @@ public static class CustodesFactionPack11
                 .HasUsedThisTurn(
                     modelUnit.FactionId,
                     "aegis_projector|" +
-                    modelUnit.JoinedActionController().GetInstanceID()))
+                    modelUnit.JoinedActionController().GetEntityId()))
         {
             CustodesFactionPack11Runtime
                 .MarkOncePerTurn(
                     modelUnit.FactionId,
                     "aegis_projector|" +
-                    modelUnit.JoinedActionController().GetInstanceID());
+                    modelUnit.JoinedActionController().GetEntityId());
 
             return 0;
         }
