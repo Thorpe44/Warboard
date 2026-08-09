@@ -1,3 +1,2 @@
-v38 migration failed:
-System.InvalidOperationException: v38 validation failed: multi-detachment runtime references were not installed.
-  at WarboardV38MultiDetachmentMigration.Run () [0x00136] in C:\Users\elli0\Documents\GitHub\Warboard\Assets\Editor\WarboardV38MultiDetachmentMigration.cs:129 
+v38 multi-detachment compatibility migration completed successfully.
+AeldariRulesSystem detachment queries now use AeldariDetachmentRuntime.

@@ -51,6 +51,8 @@ public class AeldariDetachmentDefinition
 
 public class AeldariRulesSystem
 {
+    // WARBOARD_V38_MULTI_DETACHMENT
+
     // WARBOARD_V37_ROSTER_DRIVEN_DETACHMENT
     private readonly GameController game;
 
@@ -406,13 +408,19 @@ public class AeldariRulesSystem
     public AeldariDetachment GetDetachment(
         string faction)
     {
-        AeldariDetachment value;
+        AeldariDetachment legacy;
 
-        return detachmentByFaction.TryGetValue(
+        if (!detachmentByFaction.TryGetValue(
+                faction,
+                out legacy))
+        {
+            legacy =
+                AeldariDetachment.Warhost;
+        }
+
+        return AeldariDetachmentRuntime.Primary(
             faction,
-            out value)
-            ? value
-            : AeldariDetachment.Warhost;
+            legacy);
     }
 
     public AeldariDetachmentDefinition GetDefinition(
@@ -441,39 +449,87 @@ public class AeldariRulesSystem
         if (!IsAeldariFaction(faction))
             return "";
 
-        AeldariDetachmentDefinition definition =
-            GetDefinition(faction);
+        AeldariDetachment[] selected =
+            AeldariDetachmentRuntime
+                .GetSelected(faction)
+                .ToArray();
 
-        return
-            definition.DisplayName +
-            " — " +
-            definition.RuleName +
-            ": " +
-            definition.RuleSummary;
+        if (selected.Length == 0)
+            return "";
+
+        return string.Join(
+            " | ",
+            selected
+                .Select(
+                    detachment =>
+                    {
+                        AeldariDetachmentDefinition definition =
+                            Definitions[detachment];
+
+                        return
+                            definition.DisplayName +
+                            " — " +
+                            definition.RuleName +
+                            ": " +
+                            definition.RuleSummary;
+                    })
+                .ToArray());
     }
 
     public string DetachmentName(
         string faction)
     {
-        return IsAeldariFaction(faction)
-            ? GetDefinition(faction).DisplayName
-            : "";
+        if (!IsAeldariFaction(faction))
+            return "";
+
+        return string.Join(
+            " + ",
+            AeldariDetachmentRuntime
+                .GetSelected(faction)
+                .Select(
+                    detachment =>
+                        Definitions[detachment]
+                            .DisplayName)
+                .ToArray());
     }
 
     public AeldariStratagemDefinition[] Stratagems(
         string faction)
     {
-        return IsAeldariFaction(faction)
-            ? GetDefinition(faction).Stratagems
-            : new AeldariStratagemDefinition[0];
+        if (!IsAeldariFaction(faction))
+            return new AeldariStratagemDefinition[0];
+
+        return AeldariDetachmentRuntime
+            .GetSelected(faction)
+            .SelectMany(
+                detachment =>
+                    Definitions[detachment]
+                        .Stratagems ??
+                    new AeldariStratagemDefinition[0])
+            .GroupBy(
+                stratagem =>
+                    stratagem.Name,
+                StringComparer.OrdinalIgnoreCase)
+            .Select(group => group.First())
+            .ToArray();
     }
 
     public string[] Enhancements(
         string faction)
     {
-        return IsAeldariFaction(faction)
-            ? GetDefinition(faction).Enhancements
-            : new string[0];
+        if (!IsAeldariFaction(faction))
+            return new string[0];
+
+        return AeldariDetachmentRuntime
+            .GetSelected(faction)
+            .SelectMany(
+                detachment =>
+                    Definitions[detachment]
+                        .Enhancements ??
+                    new string[0])
+            .Distinct(
+                StringComparer.OrdinalIgnoreCase)
+            .ToArray();
     }
 
     public bool DetachmentIs(
@@ -482,8 +538,9 @@ public class AeldariRulesSystem
     {
         return
             IsAeldariFaction(faction) &&
-            GetDetachment(faction) ==
-                detachment;
+            AeldariDetachmentRuntime.Has(
+                faction,
+                detachment);
     }
 
     public void ApplyDetachmentKeywords(
