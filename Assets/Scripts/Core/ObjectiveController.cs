@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -89,6 +89,15 @@ public class ObjectiveController : MonoBehaviour
             marker.GetComponent<Renderer>();
 
         CreateStatusText();
+
+        // WARBOARD_V44_OBJECTIVE_POLISH
+        WarboardVisualTheme.StyleObjective(
+            transform,
+            marker,
+            markerRenderer,
+            statusText,
+            ControlRadius
+        );
     }
 
     public Dictionary<string, int>
@@ -560,3 +569,4 @@ public class ObjectiveController : MonoBehaviour
         >();
     }
 }
+

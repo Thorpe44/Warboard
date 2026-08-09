@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -401,7 +401,7 @@ public class BattlefieldWorldUI : MonoBehaviour
         if (entries == null ||
             entries.Length == 0)
         {
-            lines.Add("—");
+            lines.Add("â€”");
         }
         else
         {
@@ -409,7 +409,7 @@ public class BattlefieldWorldUI : MonoBehaviour
                 in entries.Take(7))
             {
                 lines.Add(
-                    "• " +
+                    "â€¢ " +
                     entry
                 );
             }
@@ -445,7 +445,7 @@ public class BattlefieldWorldUI : MonoBehaviour
         return value.Substring(
             0,
             13
-        ) + "…";
+        ) + "â€¦";
     }
 
     private WorldPanel CreatePanel(
@@ -491,7 +491,7 @@ public class BattlefieldWorldUI : MonoBehaviour
             new Vector3(
                 width,
                 height,
-                0.18f
+                0.075f
             );
 
         Collider collider =
@@ -674,12 +674,12 @@ public class BattlefieldWorldUI : MonoBehaviour
         if (renderer == null)
             return;
 
-        Material material =
-            renderer.material;
-
-        if (material == null)
-            return;
-
-        material.color = color;
+        // WARBOARD_V44_WORLD_UI_POLISH
+        WarboardVisualTheme.StyleWorldPanel(
+            renderer,
+            color
+        );
     }
 }
+
+

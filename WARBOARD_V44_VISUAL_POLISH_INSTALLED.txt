@@ -1,0 +1,15 @@
+﻿WARBOARD v44.0 VISUAL POLISH INSTALLED
+Date: 08/09/2026 22:40:35
+
+Installed:
+- Dark polished IMGUI button/text-field theme
+- Cooler cinematic camera/background
+- Warm key light + cool rim light + soft shadows
+- Procedural textured battle mat
+- Dark board edge trim
+- Styled mission terrain with top/edge detailing
+- Objective control rings + compact centre markers
+- Full-health wound-label clutter removed
+- Smaller damaged-model wound labels
+- Thinner styled scoreboard / reserves / dead world panels
+- Build identity bumped to v44.0

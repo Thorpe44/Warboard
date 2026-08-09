@@ -1,0 +1,680 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class BattlefieldWorldUI : MonoBehaviour
+{
+    private class WorldPanel
+    {
+        public GameObject Root;
+        public TextMesh Text;
+        public Renderer Background;
+        public Renderer Accent;
+        public string LastText = "";
+    }
+
+    private GameController game;
+
+    private WorldPanel scoreboard;
+    private WorldPanel playerOneReserves;
+    private WorldPanel playerOneDead;
+    private WorldPanel playerTwoReserves;
+    private WorldPanel playerTwoDead;
+
+    public void Initialize(
+        GameController owner)
+    {
+        game = owner;
+
+        scoreboard =
+            CreatePanel(
+                "World Scoreboard",
+                new Vector3(
+                    0f,
+                    5.0f,
+                    GameController.BoardDepth *
+                        0.5f +
+                    4.0f
+                ),
+                15.5f,
+                5.2f,
+                new Color(
+                    0.055f,
+                    0.06f,
+                    0.075f
+                ),
+                new Color(
+                    0.72f,
+                    0.72f,
+                    0.76f
+                ),
+                0.050f
+            );
+
+        float sideX =
+            GameController.BoardWidth *
+                0.5f +
+            4.2f;
+
+        playerOneReserves =
+            CreatePanel(
+                "Player 1 Reserves Tray",
+                new Vector3(
+                    -sideX,
+                    3.6f,
+                    -4.6f
+                ),
+                6.4f,
+                4.4f,
+                new Color(
+                    0.055f,
+                    0.06f,
+                    0.075f
+                ),
+                GameController.FactionColor(
+                    "Player 1"
+                ),
+                0.055f
+            );
+
+        playerOneDead =
+            CreatePanel(
+                "Player 1 Dead Tray",
+                new Vector3(
+                    -sideX,
+                    3.6f,
+                    4.6f
+                ),
+                6.4f,
+                4.4f,
+                new Color(
+                    0.055f,
+                    0.06f,
+                    0.075f
+                ),
+                GameController.FactionColor(
+                    "Player 1"
+                ),
+                0.055f
+            );
+
+        playerTwoReserves =
+            CreatePanel(
+                "Player 2 Reserves Tray",
+                new Vector3(
+                    sideX,
+                    3.6f,
+                    -4.6f
+                ),
+                6.4f,
+                4.4f,
+                new Color(
+                    0.055f,
+                    0.06f,
+                    0.075f
+                ),
+                GameController.FactionColor(
+                    "Player 2"
+                ),
+                0.055f
+            );
+
+        playerTwoDead =
+            CreatePanel(
+                "Player 2 Dead Tray",
+                new Vector3(
+                    sideX,
+                    3.6f,
+                    4.6f
+                ),
+                6.4f,
+                4.4f,
+                new Color(
+                    0.055f,
+                    0.06f,
+                    0.075f
+                ),
+                GameController.FactionColor(
+                    "Player 2"
+                ),
+                0.055f
+            );
+
+        Refresh();
+    }
+
+    private void LateUpdate()
+    {
+        Refresh();
+    }
+
+    private void Refresh()
+    {
+        if (game == null)
+            return;
+
+        bool ready =
+            game.WorldUiFactionCount >= 2;
+
+        SetPanelVisible(
+            scoreboard,
+            ready
+        );
+
+        SetPanelVisible(
+            playerOneReserves,
+            ready
+        );
+
+        SetPanelVisible(
+            playerOneDead,
+            ready
+        );
+
+        SetPanelVisible(
+            playerTwoReserves,
+            ready
+        );
+
+        SetPanelVisible(
+            playerTwoDead,
+            ready
+        );
+
+        if (!ready)
+            return;
+
+        UpdatePanel(
+            scoreboard,
+            BuildScoreboardText()
+        );
+
+        UpdatePanel(
+            playerOneReserves,
+            BuildTrayText(
+                0,
+                "IN RESERVES",
+                game.WorldUiReserveEntries(
+                    0
+                )
+            )
+        );
+
+        UpdatePanel(
+            playerOneDead,
+            BuildTrayText(
+                0,
+                "DEAD",
+                game.WorldUiDeadEntries(
+                    0
+                )
+            )
+        );
+
+        UpdatePanel(
+            playerTwoReserves,
+            BuildTrayText(
+                1,
+                "IN RESERVES",
+                game.WorldUiReserveEntries(
+                    1
+                )
+            )
+        );
+
+        UpdatePanel(
+            playerTwoDead,
+            BuildTrayText(
+                1,
+                "DEAD",
+                game.WorldUiDeadEntries(
+                    1
+                )
+            )
+        );
+
+        SetRendererColor(
+            playerOneReserves.Accent,
+            GameController.FactionColor(
+                "Player 1"
+            )
+        );
+
+        SetRendererColor(
+            playerOneDead.Accent,
+            GameController.FactionColor(
+                "Player 1"
+            )
+        );
+
+        SetRendererColor(
+            playerTwoReserves.Accent,
+            GameController.FactionColor(
+                "Player 2"
+            )
+        );
+
+        SetRendererColor(
+            playerTwoDead.Accent,
+            GameController.FactionColor(
+                "Player 2"
+            )
+        );
+    }
+
+    private string BuildScoreboardText()
+    {
+        string p1 =
+            game.WorldUiFactionName(
+                0
+            );
+
+        string p2 =
+            game.WorldUiFactionName(
+                1
+            );
+
+        List<string> lines =
+            new List<string>();
+
+        lines.Add(
+            "MATCH SCOREBOARD"
+        );
+
+        lines.Add(
+            p1 +
+            "  " +
+            game.WorldUiCommandPoints(0) +
+            " CP        |        " +
+            p2 +
+            "  " +
+            game.WorldUiCommandPoints(1) +
+            " CP"
+        );
+
+        lines.Add(
+            "ROUND        " +
+            ShortName(p1) +
+            "  P / S        " +
+            ShortName(p2) +
+            "  P / S"
+        );
+
+        for (int scoringRound = 1;
+             scoringRound <= 5;
+             scoringRound++)
+        {
+            lines.Add(
+                "R" +
+                scoringRound +
+                "             " +
+                game.WorldUiRoundPrimary(
+                    0,
+                    scoringRound
+                ) +
+                " / " +
+                game.WorldUiRoundSecondary(
+                    0,
+                    scoringRound
+                ) +
+                "                 " +
+                game.WorldUiRoundPrimary(
+                    1,
+                    scoringRound
+                ) +
+                " / " +
+                game.WorldUiRoundSecondary(
+                    1,
+                    scoringRound
+                )
+            );
+        }
+
+        int p1Primary =
+            game.WorldUiPrimaryTotal(
+                0
+            );
+
+        int p1Secondary =
+            game.WorldUiSecondaryTotal(
+                0
+            );
+
+        int p2Primary =
+            game.WorldUiPrimaryTotal(
+                1
+            );
+
+        int p2Secondary =
+            game.WorldUiSecondaryTotal(
+                1
+            );
+
+        lines.Add(
+            "TOTAL    " +
+            p1 +
+            "  P " +
+            p1Primary +
+            " + S " +
+            p1Secondary +
+            " = " +
+            (p1Primary +
+             p1Secondary) +
+            " VP"
+        );
+
+        lines.Add(
+            "         " +
+            p2 +
+            "  P " +
+            p2Primary +
+            " + S " +
+            p2Secondary +
+            " = " +
+            (p2Primary +
+             p2Secondary) +
+            " VP"
+        );
+
+        return string.Join(
+            "\n",
+            lines.ToArray()
+        );
+    }
+
+    private string BuildTrayText(
+        int playerIndex,
+        string title,
+        string[] entries)
+    {
+        List<string> lines =
+            new List<string>();
+
+        lines.Add(
+            game.WorldUiFactionName(
+                playerIndex
+            )
+        );
+
+        lines.Add(title);
+
+        if (entries == null ||
+            entries.Length == 0)
+        {
+            lines.Add("â€”");
+        }
+        else
+        {
+            foreach (string entry
+                in entries.Take(7))
+            {
+                lines.Add(
+                    "â€¢ " +
+                    entry
+                );
+            }
+
+            if (entries.Length > 7)
+            {
+                lines.Add(
+                    "+" +
+                    (entries.Length - 7) +
+                    " more"
+                );
+            }
+        }
+
+        return string.Join(
+            "\n",
+            lines.ToArray()
+        );
+    }
+
+    private string ShortName(
+        string value)
+    {
+        if (string.IsNullOrWhiteSpace(
+            value))
+        {
+            return "PLAYER";
+        }
+
+        if (value.Length <= 14)
+            return value;
+
+        return value.Substring(
+            0,
+            13
+        ) + "â€¦";
+    }
+
+    private WorldPanel CreatePanel(
+        string name,
+        Vector3 position,
+        float width,
+        float height,
+        Color backgroundColor,
+        Color accentColor,
+        float characterSize)
+    {
+        WorldPanel panel =
+            new WorldPanel();
+
+        panel.Root =
+            new GameObject(name);
+
+        panel.Root.transform.position =
+            position;
+
+        panel.Root.AddComponent<
+            WoundDisplayBillboard
+        >();
+
+        GameObject background =
+            GameObject.CreatePrimitive(
+                PrimitiveType.Cube
+            );
+
+        background.name =
+            name +
+            " Background";
+
+        background.transform.SetParent(
+            panel.Root.transform,
+            false
+        );
+
+        background.transform.localPosition =
+            Vector3.zero;
+
+        $10.075f
+            );
+
+        Collider collider =
+            background
+                .GetComponent<Collider>();
+
+        if (collider != null)
+            Object.Destroy(collider);
+
+        panel.Background =
+            background.GetComponent<
+                Renderer
+            >();
+
+        SetRendererColor(
+            panel.Background,
+            backgroundColor
+        );
+
+        GameObject accent =
+            GameObject.CreatePrimitive(
+                PrimitiveType.Cube
+            );
+
+        accent.name =
+            name +
+            " Accent";
+
+        accent.transform.SetParent(
+            panel.Root.transform,
+            false
+        );
+
+        accent.transform.localPosition =
+            new Vector3(
+                0f,
+                height * 0.5f -
+                    0.08f,
+                -0.12f
+            );
+
+        accent.transform.localScale =
+            new Vector3(
+                width,
+                0.10f,
+                0.05f
+            );
+
+        Collider accentCollider =
+            accent
+                .GetComponent<Collider>();
+
+        if (accentCollider != null)
+            Object.Destroy(
+                accentCollider
+            );
+
+        panel.Accent =
+            accent.GetComponent<
+                Renderer
+            >();
+
+        SetRendererColor(
+            panel.Accent,
+            accentColor
+        );
+
+        GameObject textObject =
+            new GameObject(
+                name +
+                " Text"
+            );
+
+        textObject.transform.SetParent(
+            panel.Root.transform,
+            false
+        );
+
+        textObject.transform.localPosition =
+            new Vector3(
+                0f,
+                height * 0.5f -
+                    0.35f,
+                -0.13f
+            );
+
+        panel.Text =
+            textObject.AddComponent<
+                TextMesh
+            >();
+
+        Font font =
+            Resources.GetBuiltinResource<
+                Font
+            >(
+                "LegacyRuntime.ttf"
+            );
+
+        if (font != null)
+        {
+            panel.Text.font = font;
+
+            MeshRenderer renderer =
+                textObject.GetComponent<
+                    MeshRenderer
+                >();
+
+            if (renderer != null)
+            {
+                renderer.sharedMaterial =
+                    font.material;
+            }
+        }
+
+        panel.Text.anchor =
+            TextAnchor.UpperCenter;
+
+        panel.Text.alignment =
+            TextAlignment.Center;
+
+        panel.Text.fontSize = 42;
+        panel.Text.characterSize =
+            characterSize;
+
+        panel.Text.color =
+            new Color(
+                0.92f,
+                0.93f,
+                0.96f
+            );
+
+        panel.Text.text = "";
+
+        return panel;
+    }
+
+    private void SetPanelVisible(
+        WorldPanel panel,
+        bool visible)
+    {
+        if (panel == null ||
+            panel.Root == null)
+        {
+            return;
+        }
+
+        if (panel.Root.activeSelf !=
+            visible)
+        {
+            panel.Root.SetActive(
+                visible
+            );
+        }
+    }
+
+    private void UpdatePanel(
+        WorldPanel panel,
+        string text)
+    {
+        if (panel == null ||
+            panel.Text == null)
+        {
+            return;
+        }
+
+        if (panel.LastText ==
+            text)
+        {
+            return;
+        }
+
+        panel.LastText = text;
+        panel.Text.text = text;
+    }
+
+    private void SetRendererColor(
+        Renderer renderer,
+        Color color)
+    {
+        if (renderer == null)
+            return;
+
+        // WARBOARD_V44_WORLD_UI_POLISH
+        WarboardVisualTheme.StyleWorldPanel(
+            renderer,
+            color
+        );
+    }
+}
+

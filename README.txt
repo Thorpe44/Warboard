@@ -1,34 +1,33 @@
-WARBOARD ROSTER ABILITY WARNING FIX V2
+WARBOARD v44 TEXT ENCODING HOTFIX
 
-WHY V2 EXISTS
--------------
-The first installer relied on exact whitespace/text matching. The Unity log after
-running it still showed:
+Fixes text such as:
 
-  AbilityRegistry:Create(string)
-  SquadController:Initialize(...)
+  â€¢  ->  •
+  â€”  ->  —
+  â€“  ->  –
+  â†’  ->  →
+  â‰¥  ->  ≥
+  â€¦  ->  …
 
-That proves Unity was still compiling the unpatched path.
+CAUSE
+-----
+The original v44 PowerShell installer used Windows PowerShell's default
+text-file decoding when reading existing C# files. Existing UTF-8 punctuation
+was therefore decoded incorrectly and then saved back as UTF-8.
 
-V2:
-- Automatically locates the real Warboard project.
-- Uses regex/pattern matching rather than exact formatting.
+THIS HOTFIX
+-----------
+- Repairs the known mojibake in every source file touched by v44.
+- Writes the repaired files explicitly as UTF-8.
 - Creates timestamped backups.
-- Re-reads both files after editing.
-- Refuses to report SUCCESS unless:
-    * AbilityRegistry.TryCreate exists
-    * SquadController uses TryCreate(id)
-    * the old AbilityRegistry.Create(id) call is gone from SquadController
-- Writes ABILITY_WARNING_FIX_V2_INSTALLED.txt into the actual project root.
+- Verifies that the broken sequences are gone before reporting success.
 
 INSTALL
 -------
-1. Extract BOTH .bat and .ps1.
-2. Put them in the Warboard project root if possible.
-3. Run FIX_ROSTER_ABILITY_WARNINGS_V2.bat.
-4. Do not close the window until it says:
-       SUCCESS - PATCH VERIFIED ON DISK
-5. Return to Unity and allow compilation.
-6. Reload the roster.
+Run FIX_WARBOARD_V44_ENCODING.bat from the Warboard project root
+(or a folder directly inside it).
 
-If the BAT says FAILED, take a screenshot of the BAT window and send it to ChatGPT.
+Wait for:
+  SUCCESS - v44 ENCODING HOTFIX VERIFIED
+
+Then return to Unity and allow it to recompile.

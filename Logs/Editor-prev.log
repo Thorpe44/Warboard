@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0" at "2026-08-09T21:20:53.5502433Z"
 Built from '6000.5/staging' branch; Version is '6000.5.7f1 (017862109af0) revision 96354'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 15681 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0" at "2026-08-09T21:40:57.5346575Z"
 BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-08-09T21:20:53Z
+Date: 2026-08-09T21:40:57Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Unity.exe
@@ -60,16 +60,16 @@ C:/Users/elli0/Documents/GitHub/Warboard
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [17824]  Target information:
+Player connection [30696]  Target information:
 
-Player connection [17824]  * "[IP] 192.168.1.228 [Port] 55504 [Flags] 2 [Guid] 1649923907 [EditorId] 1649923907 [Version] 1048832 [Id] WindowsEditor(7,Elliot_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [30696]  * "[IP] 192.168.1.228 [Port] 55504 [Flags] 2 [Guid] 1900032327 [EditorId] 1900032327 [Version] 1048832 [Id] WindowsEditor(7,Elliot_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [17824] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [17824] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [30696] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [30696] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-1512" after 0.4 seconds.
+[Package Manager] Connected to IPC stream "Upm-30664" after 0.4 seconds.
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
@@ -77,21 +77,21 @@ Input System module state changed to: Initialized.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-elli0"
 [Licensing::IpcConnector] LicenseClient-elli0 channel disconnected successfully.
 [Licensing::IpcConnector] Channel LicenseClient-elli0-6000.5.7 doesn't exist
-[Licensing::Module] Successfully launched the LicensingClient (PId: 34068)
+[Licensing::Module] Successfully launched the LicensingClient (PId: 31272)
 Starting IPC server.
 Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-elli0-6000.5.7, press Ctrl-C to exit.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7" at "2026-08-09T21:20:55.2897335Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 34068, path: "C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7" at "2026-08-09T21:40:59.1375983Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 31272, path: "C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              1f3dd51e2928493483189740a3ea8fe2
-  Correlation Id:          400e94b91362e91e78714a9be1222d2a
-  External correlation Id: 4007559964341173224
+  Session Id:              e42a5d10547241e78f50df86560da8b8
+  Correlation Id:          7719555044344709f3a83fee928556d9
+  External correlation Id: 4469290959245124753
   Machine Id:              JOUP1U45KtUV8sm1s/K3HmNb45Q=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-elli0-6000.5.7" (connect: 0.37s, validation: 0.31s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7-notifications" at "2026-08-09T21:20:55.606456Z"
-[Licensing::Module] Connected to LicensingClient (PId: 34068, launch time: 0.01, total connection time: 0.69s)
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-elli0-6000.5.7" (connect: 0.37s, validation: 0.20s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7-notifications" at "2026-08-09T21:40:59.3490678Z"
+[Licensing::Module] Connected to LicensingClient (PId: 31272, launch time: 0.01, total connection time: 0.58s)
 [Licensing::Client] Successfully updated the access token
 [Licensing::Module] Successfully updated the access token PfX7ad6Lo_...
 [Licensing::Client] Successfully resolved entitlement details
@@ -100,10 +100,10 @@ Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-elli0-6000.5.7, p
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-[Licensing::Client] Successfully updated license, isAsync: True, time: 0.02
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
 [Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] Licensing Background thread has ended after 2.13s
-[Licensing::Module] Licensing is initialized (took 1.43s).
+[Licensing::Module] Licensing Background thread has ended after 1.87s
+[Licensing::Module] Licensing is initialized (took 1.22s).
 [Licensing::Client] Successfully resolved entitlement details
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
@@ -112,6 +112,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 2 unused hashed content files
 Initialize engine version: 6000.5.7f1 (017862109af0)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/elli0/Documents/GitHub/Warboard/Assets
@@ -135,7 +136,7 @@ Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
@@ -143,30 +144,30 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002717 seconds.
+Registered in 0.002653 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.530 seconds
-Domain Reload Profiling: 1210ms
-	BeginReloadAssembly (196ms)
-		CreateAndSetChildDomain (19ms)
-	RebuildCommonClasses (9ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (87ms)
-	LoadAllAssembliesAndSetupDomain (362ms)
-		LoadAssemblies (173ms)
-		AnalyzeDomain (270ms)
-			TypeCache.Refresh (269ms)
-				TypeCache.ScanAssembly (251ms)
-	FinalizeReload (536ms)
+- Finished resetting the current domain, in  0.505 seconds
+Domain Reload Profiling: 1125ms
+	BeginReloadAssembly (160ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (6ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (79ms)
+	LoadAllAssembliesAndSetupDomain (354ms)
+		LoadAssemblies (152ms)
+		AnalyzeDomain (263ms)
+			TypeCache.Refresh (262ms)
+				TypeCache.ScanAssembly (243ms)
+	FinalizeReload (508ms)
 		SetupLoadedEditorAssemblies (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (114ms)
-			ProcessInitializeOnLoadAttributes (119ms)
-			ProcessInitializeOnLoadMethodAttributes (204ms)
+			BeforeProcessingInitializeOnLoad (107ms)
+			ProcessInitializeOnLoadAttributes (120ms)
+			ProcessInitializeOnLoadMethodAttributes (189ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
 [Package Manager] Restoring resolved packages state from cache
@@ -179,6 +180,7 @@ Application.AssetDatabase Initial Refresh Start
     com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\elli0\Documents\GitHub\Warboard\Library\PackageCache\com.unity.modules.unitywebrequest)
 [Subsystems] No new subsystems found in resolved package list.
 [Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
 info: Microsoft.Hosting.Lifetime[14]
       Now listening on: http://localhost:80
 info: Microsoft.Hosting.Lifetime[0]
@@ -194,1132 +196,751 @@ info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
       Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
 info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
-      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 37.4924ms
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 32.5663ms
 Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
 WorkingDir: C:/Users/elli0/Documents/GitHub/Warboard
-ExitCode: 0 Duration: 0s108ms
-*** Tundra build success (0.06 seconds), 0 items updated, 168 evaluated
-AssetDatabase: script compilation time: 0.580690s
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+ExitCode: 4 Duration: 1s235ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+*** Tundra requires additional run (1.19 seconds), 1 items updated, 161 evaluated
+WorkingDir: C:/Users/elli0/Documents/GitHub/Warboard
+ExitCode: 0 Duration: 0s267ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/elli0/Documents/GitHub/Warboard
+ExitCode: 3 Duration: 0s304ms
+Finished compiling graph: 171 nodes, 617 flattened edges (607 ToBuild, 4 ToUse), maximum node priority 18
+[161/168    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[162/168    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+##### CommandLine
+"C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\DotNetSdk\dotnet.exe" exec "C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/DotNetSdk/sdk/8.0.318/Roslyn/bincore/csc.dll" /nostdlib /noconfig /shared "@Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp" "@Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2"
+##### Contents of Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.rsp
+-target:library
+-out:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll"
+-refout:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.ref.dll"
+-define:UNITY_6000_5_7
+-define:UNITY_6000_5
+-define:UNITY_6000
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_4_OR_NEWER
+-define:UNITY_2018_1_OR_NEWER
+-define:UNITY_2018_2_OR_NEWER
+-define:UNITY_2018_3_OR_NEWER
+-define:UNITY_2018_4_OR_NEWER
+-define:UNITY_2019_1_OR_NEWER
+-define:UNITY_2019_2_OR_NEWER
+-define:UNITY_2019_3_OR_NEWER
+-define:UNITY_2019_4_OR_NEWER
+-define:UNITY_2020_1_OR_NEWER
+-define:UNITY_2020_2_OR_NEWER
+-define:UNITY_2020_3_OR_NEWER
+-define:UNITY_2021_1_OR_NEWER
+-define:UNITY_2021_2_OR_NEWER
+-define:UNITY_2021_3_OR_NEWER
+-define:UNITY_2022_1_OR_NEWER
+-define:UNITY_2022_2_OR_NEWER
+-define:UNITY_2022_3_OR_NEWER
+-define:UNITY_2023_1_OR_NEWER
+-define:UNITY_2023_2_OR_NEWER
+-define:UNITY_2023_3_OR_NEWER
+-define:UNITY_6000_0_OR_NEWER
+-define:UNITY_6000_1_OR_NEWER
+-define:UNITY_6000_2_OR_NEWER
+-define:UNITY_6000_3_OR_NEWER
+-define:UNITY_6000_4_OR_NEWER
+-define:UNITY_6000_5_OR_NEWER
+-define:PLATFORM_ARCH_64
+-define:UNITY_64
+-define:UNITY_INCLUDE_TESTS
+-define:ENABLE_AR
+-define:ENABLE_AUDIO
+-define:ENABLE_AUDIO_SCRIPTABLE_PIPELINE
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_TEXTURE_STREAMING
+-define:ENABLE_VIRTUALTEXTURING
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_VR
+-define:ENABLE_WEBCAM
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_UNITY_CONSENT
+-define:ENABLE_UNITY_CLOUD_IDENTIFIERS
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_EDITOR_GAME_SERVICES
+-define:ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_MANAGED_JOBS
+-define:ENABLE_MANAGED_TRANSFORM_JOBS
+-define:ENABLE_MANAGED_ANIMATION_JOBS
+-define:ENABLE_MANAGED_AUDIO_JOBS
+-define:ENABLE_MANAGED_UNITYTLS
+-define:INCLUDE_DYNAMIC_GI
+-define:ENABLE_SCRIPTING_GC_WBARRIERS
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_MARSHALLING_TESTS
+-define:ENABLE_VIDEO
+-define:ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK
+-define:ENABLE_ACCELERATOR_CLIENT_DEBUGGING
+-define:ENABLE_ACCESSIBILITY_SCREEN_READER
+-define:TEXTCORE_1_0_OR_NEWER
+-define:EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED
+-define:PLATFORM_STANDALONE_WIN
+-define:PLATFORM_STANDALONE
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_NVIDIA
+-define:ENABLE_AMD
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_CLOUD_SERVICES_ENGINE_DIAGNOSTICS
+-define:ENABLE_OUT_OF_PROCESS_CRASH_HANDLER
+-define:ENABLE_CLUSTER_SYNC
+-define:ENABLE_CLUSTERINPUT
+-define:PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP
+-define:GFXDEVICE_WAITFOREVENT_MESSAGEPUMP
+-define:PLATFORM_USES_EXPLICIT_MEMORY_MANAGER_INITIALIZER
+-define:PLATFORM_SUPPORTS_WAIT_FOR_PRESENTATION
+-define:PLATFORM_SUPPORTS_SPLIT_GRAPHICS_JOBS
+-define:PLATFORM_USES_VULKAN_OLD_SWAPCHAIN
+-define:USE_READ_ASYNC_MANAGED_API
+-define:ENABLE_MONO
+-define:NET_STANDARD_2_0
+-define:NET_STANDARD
+-define:NET_STANDARD_2_1
+-define:NETSTANDARD
+-define:NETSTANDARD2_1
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_UNITY_COLLECTIONS_CHECKS
+-define:ENABLE_BURST_AOT
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_DIRECTOR
+-define:ENABLE_LOCALIZATION
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_TILEMAP
+-define:ENABLE_TIMELINE
+-define:ENABLE_LEGACY_INPUT_MANAGER
+-define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
+-define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
+-define:TEXTCORE_FONT_ENGINE_1_6_OR_NEWER
+-define:CSHARP_7_OR_LATER
+-define:CSHARP_7_3_OR_NEWER
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/Microsoft.Bcl.AsyncInterfaces.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/Microsoft.Extensions.Logging.Abstractions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Collections.Immutable.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Diagnostics.DiagnosticSource.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.IO.Hashing.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Reflection.Metadata.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Runtime.CompilerServices.Unsafe.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Text.Encodings.Web.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Text.Json.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/Unity.Scripting.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.AIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.AccessibilityModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.AdaptivePerformanceModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.AssetComplianceModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.BuildProfileModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.ClothModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.ContentLoadModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreBusinessMetricsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.EditorToolbarModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.EmbreeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.GIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.GenericRemoteModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.GraphToolkitModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.GraphViewModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.GraphicsStateCollectionSerializerModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.GridAndSnapModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.GridModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.HierarchyModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.LightingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.MathematicsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.MediaModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.MultiplayerModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.Physics2DModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.PhysicsCore2DModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.PhysicsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.PlayModeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.PresetsUIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.ProjectAuditorModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.PropertiesModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.QuickInstallModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.QuickSearchModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.SafeModeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.SceneViewModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.ShaderBuildSettingsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.ShaderCompilationModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.ShaderFoundryModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.SketchUpModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.SpriteMaskModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.SpriteShapeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.SubstanceModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.TerrainModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.TextCoreFontEngineModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.TextCoreTextEngineModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.TextRenderingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.TilemapModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.TreeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.U2DModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIAutomationModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIBuilderModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIToolkitAuthoringModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UmbraModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.VFXModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.VectorGraphicsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.VideoModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.XRModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ContentLoadModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.GIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.GraphicsStateCollectionSerializerModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.IdentifiersModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputForUIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.InsightsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.MarshallingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.MathematicsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.MultiplayerModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsBackendPhysXModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.PropertiesModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.RenderAs2DModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScriptingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ShaderVariantAnalyticsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreFontEngineModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreTextEngineModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.U2DRuntimeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsCommonModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConsentModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Data.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Drawing.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.IO.Compression.FileSystem.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Net.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Numerics.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Runtime.Serialization.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ServiceModel.Web.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Transactions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Web.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Windows.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Linq.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Serialization.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Xml.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.AppContext.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Buffers.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Concurrent.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.NonGeneric.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Specialized.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.TypeConverter.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Console.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Data.Common.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Contracts.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Debug.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Process.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.StackTrace.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tools.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TraceSource.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tracing.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Drawing.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Dynamic.Runtime.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Calendars.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.ZipFile.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Watcher.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.IsolatedStorage.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.MemoryMappedFiles.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Pipes.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Expressions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Parallel.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Queryable.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Memory.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Http.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NameResolution.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NetworkInformation.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Ping.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Requests.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Security.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Sockets.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebHeaderCollection.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.Client.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Numerics.Vectors.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ObjectModel.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.DispatchProxy.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.ILGeneration.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.Lightweight.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Reader.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.ResourceManager.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Writer.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Handles.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Numerics.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Json.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Xml.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Claims.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Csp.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Encoding.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Principal.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.SecureString.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.RegularExpressions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Overlapped.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Parallel.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Thread.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.ThreadPool.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Timer.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ValueTuple.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.ReaderWriter.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XDocument.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Tools/BuildPipeline/Unity.Analyzers.Common/Unity.Analyzers.Common.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Tools/BuildPipeline/Unity.Analyzers.LongLiving/Unity.Analyzers.LongLiving.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/Scripts/Core/AbilitySystem.cs"
+"Assets/Scripts/Core/AeldariRulesSystem.cs"
+"Assets/Scripts/Core/BattleFlowTypes.cs"
+"Assets/Scripts/Core/BattlefieldWorldUI.cs"
+"Assets/Scripts/Core/CoreRules11Completion.cs"
+"Assets/Scripts/Core/CoreRules11Geometry.cs"
+"Assets/Scripts/Core/CustodesModelPackResolver.cs"
+"Assets/Scripts/Core/DataModels.cs"
+"Assets/Scripts/Core/DiceRoller.cs"
+"Assets/Scripts/Core/FactionControllerRuntime.cs"
+"Assets/Scripts/Core/FactionControllerSystem.cs"
+"Assets/Scripts/Core/FactionRuleSystem.cs"
+"Assets/Scripts/Core/GameController.AeldariFaction11.cs"
+"Assets/Scripts/Core/GameController.Charge.cs"
+"Assets/Scripts/Core/GameController.Combat.cs"
+"Assets/Scripts/Core/GameController.Core.cs"
+"Assets/Scripts/Core/GameController.CoreCompletion11.cs"
+"Assets/Scripts/Core/GameController.CoreRules11.cs"
+"Assets/Scripts/Core/GameController.CustodesFaction11.cs"
+"Assets/Scripts/Core/GameController.Fight.cs"
+"Assets/Scripts/Core/GameController.Fight11.cs"
+"Assets/Scripts/Core/GameController.Missions.cs"
+"Assets/Scripts/Core/GameController.Movement.cs"
+"Assets/Scripts/Core/GameController.Rules.cs"
+"Assets/Scripts/Core/GameController.RuntimeApi.cs"
+"Assets/Scripts/Core/GameController.Setup.cs"
+"Assets/Scripts/Core/GameController.Traditional.cs"
+"Assets/Scripts/Core/GameController.UI.cs"
+"Assets/Scripts/Core/GameController.cs"
+"Assets/Scripts/Core/InteractiveAttackController.cs"
+"Assets/Scripts/Core/LeaderCompatibilityRegistry.cs"
+"Assets/Scripts/Core/MiniJson.cs"
+"Assets/Scripts/Core/MissionBattlefieldDefinition.cs"
+"Assets/Scripts/Core/MissionSystem.cs"
+"Assets/Scripts/Core/ModelToken.cs"
+"Assets/Scripts/Core/ModelVisualRegistry.cs"
+"Assets/Scripts/Core/ObjectiveController.cs"
+"Assets/Scripts/Core/RosterImportMetadataStore.cs"
+"Assets/Scripts/Core/RosterTextManifestStore.cs"
+"Assets/Scripts/Core/RulesEngine.cs"
+"Assets/Scripts/Core/SquadController.cs"
+"Assets/Scripts/Core/StratagemSystem.cs"
+"Assets/Scripts/Core/TerrainFeature.cs"
+"Assets/Scripts/Core/TraditionalDiceTray3D.cs"
+"Assets/Scripts/Core/UniversalRuleEngine.cs"
+"Assets/Scripts/Core/WarboardBattleLog.cs"
+"Assets/Scripts/Core/WarboardBootstrap.cs"
+"Assets/Scripts/Core/WarboardBuildInfo.cs"
+"Assets/Scripts/Core/WarboardResolutionMode.cs"
+"Assets/Scripts/Core/WarboardVisualTheme.cs"
+"Assets/Scripts/Core/WeaponRuleParser.cs"
+"Assets/Scripts/Core/WoundDisplayBillboard.cs"
+"Assets/Scripts/Core/YellowScribeImporter.cs"
+"Assets/Scripts/Factions/AdeptusCustodes/CustodesDetachmentControllerSystem.cs"
+"Assets/Scripts/Factions/AdeptusCustodes/CustodesDetachmentRuntime.cs"
+"Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11.cs"
+"Assets/Scripts/Factions/AdeptusCustodes/CustodesFactionPack11Runtime.cs"
+"Assets/Scripts/Factions/AdeptusCustodes/CustodesGameController.cs"
+"Assets/Scripts/Factions/AdeptusCustodes/CustodesSetupUI.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariBattleFocusController.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariDetachmentControllers.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariDetachmentRuntime.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariFactionModule.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariFactionPack11.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariFactionPack11Runtime.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariGameController.cs"
+"Assets/Scripts/Factions/Aeldari/AeldariSetupUI.cs"
+"Assets/Scripts/Factions/Necrons/NecronFactionModule.cs"
+"Assets/Scripts/Factions/Necrons/NecronGameController.cs"
+-langversion:9.0
+/deterministic
+/optimize+
+/debug:portable
+/nologo
+/RuntimeMetadataVersion:v4.0.30319
+/nowarn:0169
+/nowarn:0649
+/nowarn:0282
+/nowarn:1701
+/nowarn:1702
+/utf8output
+/preferreduilang:en-US
+/additionalfile:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.UnityAdditionalFile.txt"
+##### Custom Environment Variables
+DOTNET_HOST_PATH=C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\DotNetSdk\dotnet.exe
+DOTNET_MULTILEVEL_LOOKUP=0
+##### ExitCode
+1
+##### Output
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,9): error CS1056: Unexpected character '$'
+
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,17): error CS1002: ; expected
+
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,17): error CS1513: } expected
+*** Tundra build failed (0.27 seconds), 2 items updated, 168 evaluated
+## Script Compilation Error for: Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+## CmdLine: "C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\DotNetSdk\dotnet.exe" exec "C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/DotNetSdk/sdk/8.0.318/Roslyn/bincore/csc.dll" /nostdlib /noconfig /shared "@Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp" "@Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2"
+## Output:
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,9): error CS1056: Unexpected character '$'
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,17): error CS1002: ; expected
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,17): error CS1513: } expected
+
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,9): error CS1056: Unexpected character '$'
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,17): error CS1002: ; expected
+Assets\Scripts\Core\BattlefieldWorldUI.cs(490,17): error CS1513: } expected
+AssetDatabase: script compilation time: 2.222217s
 Total cache size 16069784
-Total cache size after purge 16069784, took 00:00:00.0378539
+Total cache size after purge 16069784, took 00:00:00.0302871
+Safe Mode: Only loading a subset of assemblies
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.587 seconds
-Domain Reload Profiling: 1035ms
-	BeginReloadAssembly (258ms)
-		DisableScriptedObjects (34ms)
-		CreateAndSetChildDomain (51ms)
+- Finished resetting the current domain, in  0.511 seconds
+Domain Reload Profiling: 929ms
+	BeginReloadAssembly (247ms)
+		DisableScriptedObjects (31ms)
+		CreateAndSetChildDomain (46ms)
 	RebuildCommonClasses (10ms)
 	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (111ms)
-		LoadAssemblies (118ms)
-		AnalyzeDomain (15ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (4ms)
-			BuildScriptInfoCaches (3ms)
-	FinalizeReload (591ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (96ms)
+		LoadAssemblies (111ms)
+		AnalyzeDomain (6ms)
+			TypeCache.Refresh (4ms)
+	FinalizeReload (513ms)
 		SetupLoadedEditorAssemblies (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
 			BeforeProcessingInitializeOnLoad (101ms)
-			ProcessInitializeOnLoadAttributes (117ms)
-			ProcessInitializeOnLoadMethodAttributes (93ms)
-			AfterProcessingInitializeOnLoad (7ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
-Starting new worker id: 0 with log in C:/Users/elli0/Documents/GitHub/Warboard/Logs/AssetImportWorkerHW0.log
+			ProcessInitializeOnLoadAttributes (105ms)
+			ProcessInitializeOnLoadMethodAttributes (87ms)
+			AfterProcessingInitializeOnLoad (6ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
 
-Asset Pipeline Refresh (id=53ce97a050019414c80bcf58161176c0): Total: 1.860 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=a3923d5d6946bb64d873e0ffe359e402): Total: 7.857 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	(Values over 0.05ms)
 	Summary:
 		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=748 ms
-		Asset DB Callback time: managed=27 ms, native=8 ms
-		Scripting: domain reloads=1, domain reload time=484 ms, compile time=583 ms, other=6 ms
-		Project Asset Count: scripts=53, non-scripts=654
-		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Asset DB Process Time: managed=0 ms, native=5166 ms
+		Asset DB Callback time: managed=0 ms, native=9 ms
+		Scripting: domain reloads=1, domain reload time=450 ms, compile time=2224 ms, other=6 ms
+		Project Asset Count: scripts=53, non-scripts=662
+		Asset File Changes: new=7, changed=13, moved=0, deleted=0
 		Scan Filter Count: 0
-	InvokePackagesCallback: 11.923ms
-	ApplyChangesToAssetFolders: 0.289ms
-	Scan: 52.800ms
-	Collect global state as custom dependencies: 11.331ms
-	CategorizeScriptCompilationAssets: 0.319ms
-	ProcessAssetsWithTransientArtifactChanges: 2.234ms
-	CategorizeAssets: 5.815ms
-	CompileScripts: 583.125ms
-	ImportOutOfDateAssets: 624.183ms (592.180ms without children)
-		UnloadImportedAssets: 0.175ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.138ms
-		ImportSchedulerStart: 31.685ms
-	PostProcessAllAssets: 27.379ms
-		MonoPostProcessAllAssets: 27.273ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 10.250ms
-			SyncVS.PostprocessSyncProject 1.658ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 1.304ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.965ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.347ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.248ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.205ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.107ms
-	UnloadStreamsBegin: 2.511ms
-	Untracked: 530.087ms
+	InvokePackagesCallback: 11.265ms
+	ApplyChangesToAssetFolders: 0.215ms
+	Scan: 74.533ms
+	Collect global state as custom dependencies: 9.799ms
+	OnSourceAssetsModified: 0.884ms
+	CategorizeScriptCompilationAssets: 0.307ms
+	ProcessAssetsWithTransientArtifactChanges: 0.531ms
+	CategorizeAssets: 5.997ms
+	CompileScripts: 2224.402ms
+	ImportOutOfDateAssets: 514.861ms (514.680ms without children)
+		UnloadImportedAssets: 0.155ms
+	UnloadStreamsBegin: 1.402ms
+	Untracked: 5006.166ms
 
 Application.AssetDatabase Initial Refresh End
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Scanning for USB devices : 6.593ms
+Scanning for USB devices : 5.329ms
 Initializing Unity extensions:
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-Warboard_Unity6_v26_1_ReservePlacementFix_FLAT
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 83 unused Assets / (0.5 MB). Loaded Objects now: 737.
-Memory consumption went from 206.4 MB to 205.9 MB.
-Total: 9.727600 ms (FindLiveObjects: 0.082200 ms CreateObjectMapping: 0.023300 ms MarkObjects: 9.186300 ms  DeleteObjects: 0.425200 ms)
-
-[LAYOUT] About to load UserSettings\Layouts\default-6000.dwlt, keepMainWindow=False
-[LAYOUT] About to save layout C:\Users\elli0\Documents\GitHub\Warboard\UserSettings\Layouts\default-6000.dwlt
-[LAYOUT] About to save layout C:/Users/elli0/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
-[MODES] ModeService[default].InitializeCurrentMode
-[MODES] ModeService[default].RaiseModeChanged(default, default)
-This project uses Input Manager, which is marked for deprecation. To manage input in your project, use the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest">Input System package</a> instead.
+[MODES] ModeService[default].ChangeMode(safe_mode)
+[MODES] ModeService[safe_mode].RaiseModeChanged(default, safe_mode)
+[MODES] ModeService[safe_mode].OnModeChangeUpdate
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
-D3D11 device created for Microsoft Media Foundation video decoding.
-[Project] Loading completed in 7.230 seconds
-	Project init time: 				5.744 seconds
+[Project] Loading completed in 11.966 seconds
+	Project init time: 				11.309 seconds
 		Template init time: 		0.000 seconds
-		Package Manager init time: 		1.835 seconds
-		Asset Database init time: 		0.207 seconds
+		Package Manager init time: 		1.599 seconds
+		Asset Database init time: 		0.191 seconds
 		Global illumination init time: 	0.003 seconds
-		Assemblies load time: 			1.274 seconds
+		Assemblies load time: 			1.174 seconds
 		Unity extensions init time: 	0.001 seconds
-		Asset Database refresh time: 	1.860 seconds
-	Scene opening time: 			1.202 seconds
-##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1786310460771,"processId":1512,"projectLoad":7.2303726,"projectInit":5.7443027,"templateInit":0.0,"packageManagerInit":1.8351985,"assetDatabaseInit":0.2066549,"globalIlluminationInit":0.003111,"assembliesLoad":1.2738119,"unityExtensionsInit":0.0012021,"assetDatabaseRefresh":1.8600666,"sceneOpening":1.2021966}
-##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1786310460771,"processId":1512,"editorVersion":"6000.5.7f1 (017862109af0)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
-Asset Pipeline Refresh (id=fef209798cfd78941978f039f25cf4ae): Total: 0.036 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-Worker ready: AssetImportWorkerHW0 0
-Dynamic Batching is deprecated and will be removed in a future release. Use GPU Instancing instead. Disable Dynamic Batching in Project Settings > Player > Other Settings to remove this warning.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-UnityEditor.PlayerSettingsBatchingWarning:WarnIfDynamicBatchingEnabled ()
-UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+		Asset Database refresh time: 	7.857 seconds
+	Scene opening time: 			0.413 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1786311669491,"processId":30664,"projectLoad":11.965677000000002,"projectInit":11.3085048,"templateInit":0.0,"packageManagerInit":1.5992209,"assetDatabaseInit":0.1909525,"globalIlluminationInit":0.0025229,"assembliesLoad":1.1739573,"unityExtensionsInit":0.0008867,"assetDatabaseRefresh":7.8571019,"sceneOpening":0.4127209}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1786311669491,"processId":30664,"editorVersion":"6000.5.7f1 (017862109af0)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+D3D11 device created for Microsoft Media Foundation video decoding.
+Asset Pipeline Refresh (id=0c68bdce11b3c814d8ea174b030a3b19): Total: 0.022 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Request Asset Garbage Collect because used heap size increased from 0.8 MB to 334.4 MB, exceeding the threshold of 256.0 MB.
+Asset Pipeline Refresh (id=552fcb9a88abe78429ad5ca4c733bbc6): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Created GICache directory at C:/Users/elli0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.012s, timestamps: [12.913 - 12.925]
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 135 unused Assets / (17.5 MB). Loaded Objects now: 1508.
+Memory consumption went from 328.5 MB to 311.0 MB.
+Total: 12.484500 ms (FindLiveObjects: 0.141100 ms CreateObjectMapping: 0.031000 ms MarkObjects: 8.401800 ms  DeleteObjects: 3.899600 ms)
 
-Start Indexing on Editor startup
-[Indexing] Starting Initial Indexing for Assets
-Created GICache directory at C:/Users/elli0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.013s, timestamps: [8.202 - 8.215]
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Client] Successfully updated the access token
 [Licensing::Module] Successfully updated access token: "PfX7ad6L"... (expires: 2026-08-09T21:57:07Z)
-Starting new worker id: 1 with log in C:/Users/elli0/Documents/GitHub/Warboard/Logs/AssetImportWorkerHW1.log
 [Licensing::Client] Successfully resolved entitlement details
-[Worker0] Imported GUID: c92f8304365a8b647bbb421253feee30 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566968474D7610B52FE5A7E4964186F05CF7B40E7AE91E8C4.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7f4055e8eafd05f945ef7e6a548973fb') in 0.2498548 seconds
-Starting new worker id: 2 with log in C:/Users/elli0/Documents/GitHub/Warboard/Logs/AssetImportWorkerHW2.log
-[Worker0] Imported GUID: 1360d38511a6b1e44ac3a48600eb189b - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1821147036166902000997EE64E11D03D8D8B979AB1BB91C59EED0FCC39.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f34513eea5e08951f4a7417a5df00258') in 0.0678102 seconds
-[Worker0] Imported GUID: 68b0483fcce999f41bcf3b216ad1a904 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802620717997EE642C580C4E38BB65B24194086DBBE2EE729969.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'acc3780455730791486b50aa602c6020') in 0.017553 seconds
-[Worker0] Imported GUID: e2da0c709fc80f045a9181bd23463bbe - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc178173112572013706015E198596FB0F4B0C6D2C172C44044836C967586.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2f90e2eba26daaffc3c39519f104efb6') in 0.0217367 seconds
-[Worker0] Imported GUID: 70432c46f6154304aa9e47ca8127f820 - Path: Assets/Resources/Armies/Models/Custodes/ModelIndex.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '42117e66589a0c5a39ec8c4716f4fa3d') in 0.0070864 seconds
-[Worker0] Imported GUID: 4888b8f0293bf4140ba67ed91ceb00b5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497870899BE6ED9BA3AFC6440D49F52E8287984ED197D1CCC.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '86c5e8ec313df93b6567b821be4ad23b') in 0.0211344 seconds
-[Worker0] Imported GUID: b2236fda5f1ff7e4b9ecd2b56b38bb0b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc3105672570961972635CC8EBC938149950DF02B275C91EF3BCE34A297.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7fdb4f1325e22e34ca1c7fd99cc605a7') in 0.0199744 seconds
-[Worker0] Imported GUID: 818118c13bb80454db3084f75e62566c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc155871891669372221183F269D26632B4B656D314DD15E00E90843CB9745.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f2291652fc339f074d2a282550440944') in 0.0171427 seconds
-[Worker0] Imported GUID: cc57cc708e23e7a40869a536a3c62448 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10801543461324502FCCA79E97B28E8DD328E1D6B214A615F24978AEF.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b4540fbe9345a7f9b99884edc5a7fdc4') in 0.0186777 seconds
-[Worker0] Imported GUID: b97c56eb4a6ff4047a8be6589197784c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc3107058347301820584C58581FD1A9A204717DD63C36681D0F39E0921.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '38fcca0cb371c355d4777f3c2e822609') in 0.0232219 seconds
-[Worker0] Imported GUID: b0a09d59e50fa1b47b05a77e2342ec13 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431056814431114C4A5E238EB3C19A53FA35585A0A5A3CB98485A73.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '30cc6975377130b98264d4cfb8ee8819') in 0.0198444 seconds
-[Worker0] Imported GUID: da3e897735087d94aa0ecfaa4bfc0ef3 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12341415840940575925BBF25E4003A35502C546F2350E0F3D7C0181CBA6.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2b6ead686f2c8d2c6c2d8a8347c9b6c4') in 0.0158573 seconds
-[Worker0] Imported GUID: 9022a81b96f14c64596c0963cdd094f7 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14565709098843504768AE1B7F7709F7C91438FBBCC29A43DC8EF7C6202E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4496cf26ccf3cf67e1340f8ac02ae52b') in 0.0191281 seconds
-[Worker0] Imported GUID: 1b084ac1b463a45468a62829e4d71068 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1424736400201757855487D42BCF6593E12F2661221AF1F8E3A312161AB1.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '15b5a320261ad6c540af067a5fa23acd') in 0.0179093 seconds
-[Worker0] Imported GUID: 5e740a9251b9e9e499cb0b642372e165 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc9529663569249853499427F863D4449A719CD173A5A72D2FD2FF4327D6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ddabbbee8cc9c07fa7bbae7d3f5175da') in 0.0175505 seconds
-[Worker0] Imported GUID: 0bd73c6294c03874eba14050fb58eb22 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10202235339304378313B005CC89D56CEFFCE1A15746B87F222CCA7323C3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ad2572dd1a39d50f54cab1ce0b9d3305') in 0.0197815 seconds
-[Worker0] Imported GUID: a11b8241fe3cd614193a1d9a45c53a34 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13014103330245238354AA58696A831BED9B0B5E67B39D21B24A1783A981.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a88c74a114f2c6aeafbf1d75add11018') in 0.0160095 seconds
-[Worker0] Imported GUID: 5739a006c04dcef4394cf6c42202bd70 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1204295545634989123272B1717C952E34B86CFFE2313AFB30EB99D6C045.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8616d31ecd9e9a3c82e55d54d0f3b3cc') in 0.0154538 seconds
-[Worker0] Imported GUID: a841e4f48a99a124fb13e1d3b172a919 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13054310568144318463CB4ABC1C32021C1C629E67C7D4D0AC229B2470B.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'cc51e1b582f3ef15a1b9b01b283fcab8') in 0.0176916 seconds
-[Worker0] Imported GUID: 48f970f965ec1e94f9ded3a135a026a5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc16927771776970002323D2A92F0C02ED0DE431FA3394A3005C6A3514444.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '91d3ae7c89f93fb577bf7f6a334e6311') in 0.0173909 seconds
-[Worker0] Imported GUID: 6b2378138daec934facaabd59d790a41 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc41194808183768465D2065A5CA79710627FEC8CC6DF708994A9C78191.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9eed273a79167661c8fba2618d12697e') in 0.0164765 seconds
-[Worker0] Imported GUID: 7570bb6a8e3c38544acdf2dbc4df7742 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc189435349856696781917DD8CE63A858DF558B543CBCA7C32A142724A2C.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'feb01a627a86985d037619ab1e74f24b') in 0.0221255 seconds
-[Worker0] Imported GUID: d9878884035616f459adc133a2cabdff - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc102958018670834509947620A01C49D79172122E05CDB39B5619E725AAC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd5272794aebcc058ac491de0701875b5') in 0.0203565 seconds
-[Worker0] Imported GUID: a015ef485ed2d1641805293e86f48757 - Path: Assets/Scripts/Core/ModelVisualRegistry.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '07cf38f2668a504b32cdf9bf51fbd24b') in 0.0086965 seconds
-[Worker0] Imported GUID: 3910628f85ee9d64294ab145bee8d442 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc107898026290783940A34DF95D714BEC6C9A3E370FB5F822F19F6E99C.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '463bd8310046745e94461849c425a1f9') in 0.0191844 seconds
-[Worker0] Imported GUID: 0bf0a45c42af7af4295f2e3bb8f4d647 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497868220E7EB506E5E22EF923D6B552E17ED8C48276C33C8.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4fc3588d7e0386b0efa1741afc1f46cc') in 0.0244671 seconds
-[Worker0] Imported GUID: 626e81442803f3342ae8a1945a9a56b3 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10790527710376686443922DCD41FE3443D9BE675A603683C9666E108.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c236ed7432f42197be559aa7121dcf9e') in 0.0272043 seconds
-[Worker0] Imported GUID: 372bc93052e71ad4a9189101ed2073c9 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc3107058347301856835462F11A586F4E43567D1309FA36CC526669860.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '02e0b10440ac65f877bd2280524cc78e') in 0.0166379 seconds
-[Worker0] Imported GUID: 1c06d997715866c4c997b42f745ea1d8 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14778190837284138856368572D77BDB05E92B63D9DE008B38477D79AAB3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c9c00705da5329ee16a83e7f262592e4') in 0.0254263 seconds
-[Worker0] Imported GUID: 95512ba0d56378f4dbef454c2651a076 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14007928467632830425B9085F7225376EC82EF5BC5F012561CF676AC472.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7733757a5dbdc5ac842960d250a5f94e') in 0.0182191 seconds
-[Worker0] Imported GUID: 047906af5c2a86e4093dbf997a256d05 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1694663387668461296267269A03D7F1E7ADB80478129661D01BC5E957D3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '77d30399674867468a5ab82160ca25df') in 0.0210497 seconds
-[Worker0] Imported GUID: 03612b127b24d994ab99b529d349fc0b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc15004475678211406673D9D914B9CD022919EE873A0D0410B795E6BEE71D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '95a9eda499fa49cfe6224658fd71a343') in 0.0223028 seconds
-[Worker0] Imported GUID: cc0246dbddb78ed478b1032a305098fa - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc15592158661965307126245B42BA6FE11AFB58327247917DD5570F679DA4.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '55486a003ed639a679635dfd4ae65e26') in 0.0225313 seconds
-[Worker0] Imported GUID: 61a9308b069184a418f38b15d9515d79 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1486703883914914939D1A267360BDD2BAEB395A4B1B48E533FC42E71BB.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a07dfb3ecedc95ddb3c3c01064a52e40') in 0.0207396 seconds
-[Worker0] Imported GUID: 5421bb715f1207240882094f0623b914 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431194677668812917FE53DA92390B74F0728DA40F7C8C9D99AFD5A.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5dc9e2479ac9c1077aed69f3256a8734') in 0.027223 seconds
-[Worker0] Imported GUID: ec7fc465c8343474e86df5a7e865f29b - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194673017531CCE037CAE9AE6D36EF784865E27C403E07B27B13.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1b7e8b817baae27f1a93cc233e1051a6') in 0.0217181 seconds
-[Worker0] Imported GUID: 7c0db4b193507254e8795a2912aa18e0 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc20103494434978677186AD0054DEEB1BA91B8A63099FB3935782A38590D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '189b042e1671f105da25f9e55f3a06c6') in 0.0162684 seconds
-[Worker0] Imported GUID: 21cbbb0e533f07c4ebbf7ba419c58187 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985670819731CB37E7DAE8DD465CA634A1B209E22C6DD2B3F16.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd83571c9bc4f1a00d9353db9d774e677') in 0.020401 seconds
-[Worker0] Imported GUID: d0e3334524e24a94ebb26962e5653a26 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1396628954941556060760E5AABD51711DD7DA582B5EC88DDD128C1D13C1.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '26ee8cb3f41c451c4635683191e53e7d') in 0.0231589 seconds
-[Worker0] Imported GUID: 7cd6f09b30dcb5948bc595cb8eea97de - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc101507134767136637120459C74E6145D194A01B2B86EFDE928F479E63C9.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0e4b089de77f629f66767fdbaca0ac37') in 0.0270998 seconds
-[Worker0] Imported GUID: 0970e1fe26255304d8a458db21ab501b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1692777177697002734E6E82DC517DE23DD124E2572F7FA46E14897E066.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '01ae7000e54815d84936c59e4172632d') in 0.0236329 seconds
-[Worker0] Imported GUID: 8fa84d6fe9e51ee44bd5bc0458223961 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2435956414433317788D2D9F01ABA35E6D398BA04316C5BD4711FEF94DC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '292377fb7aa9022410659373420474b4') in 0.0205794 seconds
-[Worker0] Imported GUID: b56942dbcdd58164283cb4fcb98b81e5 - Path: Assets/Resources/Armies/Models/Custodes/CATALOGUE.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'dc1eac32f5c59dafc64b278e49152dbf') in 0.0112145 seconds
-[Worker0] Imported GUID: 4b3e192c9908cca43953cce44999298c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5d449d2051c26157a4f8d31a14c0c6f9') in 0.0100108 seconds
-[Worker0] Imported GUID: 4d32b9dc49eb60840af5ca3ec5d255d0 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc228395254390968306426BE70092A75A7A8D8D420B4AE2E23BE9BC1CF20.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '974998bd6b0e2cb44fb0d839e3abca9f') in 0.0202003 seconds
-[Worker0] Imported GUID: 995282200f7019042a00913b57697182 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1750180373837761017A991C1AC731B4BB84EB3112221D9E7DD2FC9BD30.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '18702ef9e950be5975d8e3580146dbae') in 0.0250496 seconds
-[Worker0] Imported GUID: eae3fa72646ff73448c185c577f6c062 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc238080190443685093346AA3438F32BBA0BCFF113433D13D8438B793F2F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ef53aa6cd4b62e31f50ffe73da39db07') in 0.0242298 seconds
-[Worker0] Imported GUID: 06012184c78bdc2439fd1ac4894894ee - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431405701592236FE9A5CC6F7AED098DFF9B371F57FF8CB2D292DB4.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7d5a53b2d25cd802f4d2c99457bea8ec') in 0.0237707 seconds
-[Worker0] Imported GUID: 5dd923e19b53f1f4791c738adb18d173 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9529663569250035527F24342D01D0B1E2B30E3D3F7CCFEFC74DEC6933.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'efa34378022e62bb08b3bdb9185d5235') in 0.0231521 seconds
-[Worker0] Imported GUID: eeba4f10ecf31c4468417e6cdefe4c85 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14111529875816533586C7D2C4FCCB920BFCD96CF55D6370959B38C5FA41.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0f58f834feecb6de9db976532bc428f7') in 0.0287122 seconds
-[Worker0] Imported GUID: 1b031902a445ed8429152bcc67e5aa61 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18943534985668857224EE501EFB9A172C13A5AC71DF4B1894AAEDD590D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '292539b0a33cce74c21282ec6a99d990') in 0.0178337 seconds
-[Worker0] Imported GUID: 1203a1c61ac38384ca9ee09d28f6bab1 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720138770E6D5D440061FB39C1A4067C6369934C708F55B66.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '57c0c0f09786d580fd32c916bd93abb4') in 0.0221166 seconds
-[Worker0] Imported GUID: 121ab099bb896884a8c4a586d648b26a - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14913819375214553844B8FD333F34F7E80BB9CCD123F687851D4C4ACE30.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '47c6d36346bab5abdde2b73704d79040') in 0.0169698 seconds
-[Worker0] Imported GUID: 3a5f78b22d0cdc14eb0fc52f7ad7631f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc142060775450782977408D5E0413276A7C2D11F0B3B5BAF857AE6879C775.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b71fae79baf4c0b4c406daff7ee09fa9') in 0.0185868 seconds
-[Worker0] Imported GUID: cc9929055193bb245a238f2053b41f02 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc78187612663007098831C473275E24B4A853CE264051DE9C8FFF797BDB.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b4befaa255ae2e96c9ac9a8e0874f1ef') in 0.0224865 seconds
-[Worker0] Imported GUID: db70d09178fabea44802ef7db668c60b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1169969432031733147743608AC01E48C671BF3E9AA7610E06DDE3336C03.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a2e81e9add59e464824d7197a2358923') in 0.0211521 seconds
-[Worker0] Imported GUID: 8894fccd616c95446b8678314fdf4efb - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1486703883914937326C8C4A65059D3FEA64E2D3D88DB8B1137220470DA.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8e681e26eaba13b115217a08a7a58065') in 0.0206935 seconds
-[Worker0] Imported GUID: 1488706d5966b1e41992992cbd10119f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720139970F57B5A359CAF1C3C5BEB5C84A8F323D04DAC05D9.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0e363722e9ca066d71feeca1f5363841') in 0.0189299 seconds
-[Worker0] Imported GUID: 73b86d2e0fa386046abf21ae85e76212 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1825649131183539545F52037D9B6B814A5B829E1038B4435A65B52F0E0.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '69da31cf7dd58b3255e52470131716b7') in 0.0277977 seconds
-[Worker0] Imported GUID: 731e9f6bea15c1149ba607600ea361de - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9622965398647091610459ABBE114D035B447CA0FB2B7A3A92448ED07C7.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '76a17acfa95fa7ea11ef5722e508d4e3') in 0.0190388 seconds
-[Worker0] Imported GUID: 4e2218d4353135446a41175a7546c4f6 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431405701572752620DF74BDC141B8DB36CEEE53EC46E4E4E485A5C.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2373415560058ef362a1fbf43cdf9803') in 0.0201938 seconds
-[Worker0] Imported GUID: 95883a9f327b28d4ca69f1865e6a9ccf - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc128519539762957023900AA46D85B4AC4ABA262D97E2C60330BAE51C2338.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b2de4a5f8866551d5769e82b5fa85f28') in 0.020489 seconds
-[Worker0] Imported GUID: 91b9906ca83e4cc479ffbcb3a45fd227 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978695544C8E7E21C74B7EE9DCB982785C97650CAF6F79F4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ae7fcc351c1aa4deecc02f2dce5e456f') in 0.0198573 seconds
-[Worker0] Imported GUID: 02475665127a241448b21464c527b439 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18320137091868427475637A30FF7C664724562DB0709BBC1514AB2CD1DC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'fdd4bab8f4aef225cbb55047a4ec6987') in 0.0205839 seconds
-[Worker0] Imported GUID: 5112b6a5bcd079c46a0371505df9e309 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985669688570D36AA64F38EB10E2DB8D3E58D2F2324653411C6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b5104eba12676db16a2eb5f477bee1d6') in 0.0221384 seconds
-[Worker0] Imported GUID: 1eb1ca920e7cce34a8d48e3d6127b79b - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1821147036162828120C525B89047928F3B132D9C1247215AA1F94ECFF4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '30243038ab97154674d8b882f2d53b31') in 0.0208436 seconds
-[Worker0] Imported GUID: eb23d0f0fa565784aabb15fd3408a401 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13503376855967707728CD49B576E920E3F6A5B860654038705B1A3E557F.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9b42d57ee408352ee2b44425552be717') in 0.0205678 seconds
-[Worker0] Imported GUID: 014b09515e618464fb6f6f86195be753 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc17817311257201378220F77E73971595CE2A34BA5763EB0A3AA004675AF.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '60703c8aa30125eb74e5f9a8d3ca80b5') in 0.0203012 seconds
-[Worker0] Imported GUID: b7932b0fbc32bd647ac156bf589ec1cd - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc17531329397109570912F1A7752577E4A2F4FA08EAC7A3248CBCA1469396.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'fcb7e37852f42aa6f6831b8be0a128d0') in 0.0252214 seconds
-[Worker0] Imported GUID: dd302b2bba720c3438365b538b909e6d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc144722961778971426133500E24BC2A35D35D867624A0DD0194143EEE101.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9f6964f90710d8bcb75d63bba68dd467') in 0.0210946 seconds
-[Worker0] Imported GUID: 4cdbd4140bef6cc48b702301715da785 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10791705628407015FA230CFE7522E798766A38F0A6B424D86B770105.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0c7e310e5e8392e8d5869b8a70895558') in 0.021752 seconds
-[Worker0] Imported GUID: 4d27b1918af277d4c95c93c161d49133 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc201034944349787432301F25FB005155F6BC7FAF2B9C7D22C86368E1071.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '572cf49164e1dce257cdfb5527fa5172') in 0.0200074 seconds
-[Worker0] Imported GUID: b553a86a8bfd56344b9813f75f3ddc37 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436850616FC796FBC5B3888A7B9B6A3FF54B8A8CEDBA6BE45.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f815fa9f25303835c4220eb1865161af') in 0.0172594 seconds
-[Worker0] Imported GUID: 6b9dba61aac949d4b8f35677c9c722fd - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc31069949141769372A60CF003ACA1F8178573BFEB60FDC66FA3F08992.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e0d5482f4e9dbb549f24571a33cd0e03') in 0.023435 seconds
-[Worker0] Imported GUID: 90966d57d0d4caf4ebbbda62e744b24d - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1029580186709972353BD4C48310E2F701508F4A786C0C72DDD66461C7A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1d0c07a922d202289db5d08bc2284e13') in 0.0212556 seconds
-[Worker0] Imported GUID: ba3b0b73d12c9824f982402d77b24539 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc141540768619893704124D8F25E0312AA912A2334EEC06096D4254120912.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '922dffb37d166e704b568b0b9d7eb660') in 0.0187185 seconds
-[Worker0] Imported GUID: 56ba0d8cf237e6e4ea9fd56c8e418360 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9750579273913085057E7F833123BB44774C8D4358C319E06AAE79EDBA8.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '51c68fab45f8edb06c7926521caa50a5') in 0.0156441 seconds
-[Worker0] Imported GUID: 040bca81f0acfc54db7f0cf8dd9d1dee - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12645141954097003512D6F53B15A17B970A40BF67063F2436B025A700CB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'da7297b3a2fa1e830cfdd59f92db2cef') in 0.024563 seconds
-[Worker0] Imported GUID: c6e54ddbaa475744ba9992a8be3ff36d - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10791705628416087D6161A6E23CBBA37DA828E26A9A6CC637CB45D48.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bb47507cfb39a3627e3acae4d62965f4') in 0.0212556 seconds
-[Worker0] Imported GUID: 3ba19f866964bd542a73f240f6c73926 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497872570D8997A276148B46EA09D17DC0B01365DF219C9D7.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c5d09fd8474fca27854e226ea0eed053') in 0.022322 seconds
-[Worker0] Imported GUID: 8886274b149acb8428d98c9f2b2ced4d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802627851117FE6ED8BB990247BB2609789E652B416BA952B756.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'df0de947c60e9302c679d6b3d6c7f2c8') in 0.016631 seconds
-[Worker0] Imported GUID: 1a93756c22a37c14aa110840fbff07c9 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436849391F3D920928B087659CD675E68F3808D84C6D362FF.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3f9fa9deef7d4fe588f061ebb2ed625b') in 0.0187763 seconds
-[Worker0] Imported GUID: 79cd9ee87795f8644be94611a5e72898 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12261043242531130365F6AD0461AE779069EBB62FAF67867B92E7BC8BE1.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8f2f625d9722b3e7443b7454fa456ae2') in 0.0186301 seconds
-[Worker0] Imported GUID: 21d1d24c95aac1e4cbfb328d17e51d61 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc110544324588304516533EB2FA0A3579DD5B3BECA9EB9CA641537C8FF5D6.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ba426b35bca144ac5aac35e07280e588') in 0.0201767 seconds
-[Worker0] Imported GUID: 31cc98d72fc27fe45a9e8d8033e2dcff - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14561935396444137599CFFB5670D34C7FF39CC863A6B9D66B4D81351FCF.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2153ef2a613e99d8e6c3eea185618c64') in 0.0202468 seconds
-[Worker0] Imported GUID: ba615c4f9fdb19a4497704e0075e4bf5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc13001155980243478692F43F4C00FFCF25F9EB7B9C27E5ED82316FA0D42B.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '10dc856f0c6ef1e342d36a9aca0534a2') in 0.0252356 seconds
-[Worker0] Imported GUID: 894f9e2c4daad33419578313d5d9fe15 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc16536678139503611559943E96A4A825EBE9DACA71013358797940BFA62E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd5a3ef4f37181fb68f6121b88faf2f40') in 0.0221868 seconds
-[Worker0] Imported GUID: d57bce6bf0b630a44a487f7346b68128 - Path: Assets/Scripts/Core/CustodesModelPackResolver.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bbc029ed1da60ea4435915c81540bb56') in 0.0149935 seconds
-[Worker0] Imported GUID: 419244baf7cab0b499edcaa8206d19b3 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc109883056726794776078054C64FD55E7DEC61E175653F8C59C2ECC56616.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8c9950fbbd436530264323a42663c0bb') in 0.0237779 seconds
-[Worker0] Imported GUID: 8175e09768a7394479574c19d242449d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7a16db6047f964726de47e1e2f0416da') in 0.0201502 seconds
-[Worker0] Imported GUID: 385bdd73643e26844bb74cc4c138c3e9 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc100139382505414373888F90437B42C17102A73FEA20628330A00AD02F5.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '88199731ce29b82673e297f381cad31b') in 0.0239775 seconds
-[Worker0] Imported GUID: f2d6747f5d91649459f6e62354b1a110 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566887001FE1D4769AD0E7C8A827436D0CAA8FCAB6D8D515F.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'dfb018e3851d8acef25193cac5864f6c') in 0.021193 seconds
-[Worker0] Imported GUID: f4e9a2eb148d9c4408de1979f3335ae8 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1078980262905596446AC497CB413C20FBECBFB633FFA847990335995.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd5080ce19f96b7f23b7a9df2d8247bba') in 0.0168301 seconds
-[Worker0] Imported GUID: 0d47194cfaadced49aaa2a9485c61dec - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12481717435481830880A865A574CE590B8DA162171FD6C437D527E8473F.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8253cbaa9434d5748ecbfecfe5022205') in 0.021315 seconds
-[Worker0] Imported GUID: 83ab5b92240d75147b1f27a03d6ddc7c - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc177143862223268749947B5DE719C3F9896DE0029647B8630594AE59A4AC.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '19e37e495ce6b92bed2567e1b723a0a3') in 0.0243889 seconds
-[Worker0] Imported GUID: 453fbcc1a506b8f45b05e88d038219c4 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802627849091CCB1A670C2F8978A9CEBFFB0D9FA58754059217D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e504e5e28059f78c4771e5f41bbfc717') in 0.0193979 seconds
-[Worker0] Imported GUID: c9004ea54f05a7046af59be01c3a5aee - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978730917313297BBA3BC181720C9D5C122B3B030FF2C288.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ce355a2712a179f6084ca5f3457a8890') in 0.0183432 seconds
-[Worker0] Imported GUID: 24dc0f3375dc31445b1164481852efb4 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc160418544166715580694522F52CB71B35CA00464224EB6BCE4D091BB9D3.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4715f007d0231de205606347678cbcaf') in 0.020762 seconds
-[Worker0] Imported GUID: 67f2285aaadbad544b4757aad5aa855a - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc98920990603425139580D9F389E4EE18E30F563E2D18689ABFB750B0FB8.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e457130d83714da315971d6228c8d582') in 0.0198697 seconds
-[Worker0] Imported GUID: 70d55dc0c68186d4fa5f36980c190711 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1751307139248784144A7E6CFF4C43707E372C496E95E7C980EB9C5DD3F.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9b4c1a75f3ca3ab8d92baddbf461375b') in 0.0181943 seconds
-Worker ready: AssetImportWorkerHW1 1
-Worker ready: AssetImportWorkerHW2 2
-Reloading assemblies for play mode.
+Asset Pipeline Refresh (id=7c3c35174003afb40ab10dd2f502053c): Total: 0.004 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+TrimDiskCacheJob: Current cache size 0mb
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 1.8874ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/elli0/Documents/GitHub/Warboard
+ExitCode: 0 Duration: 3s441ms
+[162/168    2s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets\Scripts\Core\CoreRules11Completion.cs(46,16): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+[163/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[164/168    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[165/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[166/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[167/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (3.39 seconds), 6 items updated, 168 evaluated
+Assets\Scripts\Core\CoreRules11Completion.cs(46,16): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Total cache size 16069784
+Total cache size after purge 16069784, took 00:00:00.0359709
 Reloading assemblies after forced synchronous recompile.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.184 seconds
-Domain Reload Profiling: 1742ms
-	BeginReloadAssembly (390ms)
-		DisableScriptedObjects (113ms)
-		CreateAndSetChildDomain (105ms)
+- Finished resetting the current domain, in  0.919 seconds
+Domain Reload Profiling: 1441ms
+	BeginReloadAssembly (320ms)
+		DisableScriptedObjects (61ms)
+		CreateAndSetChildDomain (76ms)
 	RebuildCommonClasses (11ms)
 	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (95ms)
-		LoadAssemblies (112ms)
-		AnalyzeDomain (5ms)
-			TypeCache.Refresh (4ms)
-	FinalizeReload (1185ms)
+	initialDomainReloadingComplete (46ms)
+	LoadAllAssembliesAndSetupDomain (124ms)
+		LoadAssemblies (131ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (3ms)
+	FinalizeReload (921ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (96ms)
-			ProcessInitializeOnLoadAttributes (86ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
+			BeforeProcessingInitializeOnLoad (149ms)
+			ProcessInitializeOnLoadAttributes (97ms)
+			ProcessInitializeOnLoadMethodAttributes (101ms)
 			AfterProcessingInitializeOnLoad (7ms)
-		AwakeInstancesAfterBackupRestoration (555ms)
+		AwakeInstancesAfterBackupRestoration (229ms)
+Importing 'GUID: 402dbf50239cdda4a8caafc3cd53d5fa - Path: Assets/Scripts/Core/GameController.Core.cs.before_v44_visual_20260809_224035.bak' with importer (DefaultImporter)
+Imported 'GUID: 402dbf50239cdda4a8caafc3cd53d5fa' -> (Import Result ID: 'b607b7cce96e88603acea9833b36c874') in 0.058 seconds [static dependencies only]. Details - ImportResultOutputID=2394f343d8d6eeeb2a9070000ba37ddb DependenciesID=9a8cf6fef808ef45150043e21565ad2e StaticDependenciesID=68b12b7452242e92415e9589b00b6672 
+Importing 'GUID: 82d189864eef5e24fb21b23644ed6b60 - Path: Assets/Scripts/Core/BattlefieldWorldUI.cs.before_v44_hotfix_20260809_224222.bak' with importer (DefaultImporter)
+Imported 'GUID: 82d189864eef5e24fb21b23644ed6b60' -> (Import Result ID: '3a68e0b188feb1d9d83c8b926a1689dd') in 0.012 seconds [static dependencies only]. Details - ImportResultOutputID=3e142ef34e9d482dcb7708925897a0f6 DependenciesID=80a26f24f10f8324edfa6d5024676765 StaticDependenciesID=41b2255ecddea99265cedca60c1932ba 
+Importing 'GUID: ba06e5411dbddae4c8c7a8071a7f152f - Path: Assets/Scripts/Core/GameController.UI.cs.before_v44_visual_20260809_224035.bak' with importer (DefaultImporter)
+Imported 'GUID: ba06e5411dbddae4c8c7a8071a7f152f' -> (Import Result ID: '3a1eb76e83a85a59d4658df58b5ef51e') in 0.014 seconds [static dependencies only]. Details - ImportResultOutputID=52350c7bd53e6c2daaac13490421cf18 DependenciesID=1061c8a70ea7f3739b129f58769b6aa0 StaticDependenciesID=56aba19863becad64d100b2303d427fb 
+Importing 'GUID: cb48e958e040d634ea226c1bc595944b - Path: Assets/Scripts/Core/BattlefieldWorldUI.cs.before_v44_visual_20260809_224035.bak' with importer (DefaultImporter)
+Imported 'GUID: cb48e958e040d634ea226c1bc595944b' -> (Import Result ID: '96d63775ea0e0b6145b8baa047fc9f42') in 0.014 seconds [static dependencies only]. Details - ImportResultOutputID=85f1cfaa4cf53560bddb71dd1568abf0 DependenciesID=708edc59de853524cd948d56c26a77c3 StaticDependenciesID=913f3d5dc5c4f829ed3a74042c6fbb4a 
+Importing 'GUID: 5c79be87776be334ea96a79dc62c2011 - Path: Assets/Scripts/Core/WarboardBuildInfo.cs.before_v44_visual_20260809_224035.bak' with importer (DefaultImporter)
+Imported 'GUID: 5c79be87776be334ea96a79dc62c2011' -> (Import Result ID: 'f6d8e584e360d294cfe6b94cad03e611') in 0.014 seconds [static dependencies only]. Details - ImportResultOutputID=92956d03545142017e2e7a23e8a6e9e2 DependenciesID=029a2d0858d5d31b1e5d7e959c4ed8e1 StaticDependenciesID=f3ff1022919d900fe646424426502b8e 
+Importing 'GUID: 0dae2bfced76ef946a32ae4a63b49cb5 - Path: Assets/Scripts/Core/ModelToken.cs.before_v44_visual_20260809_224035.bak' with importer (DefaultImporter)
+Imported 'GUID: 0dae2bfced76ef946a32ae4a63b49cb5' -> (Import Result ID: 'c78ae8b5ba51d1da564a2f20bdd5b51f') in 0.014 seconds [static dependencies only]. Details - ImportResultOutputID=05a1ddedee22d0d0888b05dd9fa8f8db DependenciesID=daf5f5e2f14fb49c8f574dd46df91f9f StaticDependenciesID=cd3386e8928131e048e136c7145f6b95 
+Importing 'GUID: 0ef24d53c821a2a49931ef891cf77cf3 - Path: Assets/Scripts/Core/ObjectiveController.cs.before_v44_visual_20260809_224035.bak' with importer (DefaultImporter)
+Imported 'GUID: 0ef24d53c821a2a49931ef891cf77cf3' -> (Import Result ID: 'e8a34274756db5382c8f372953fc5fa0') in 0.013 seconds [static dependencies only]. Details - ImportResultOutputID=d063f70265c4e62bee054968fb775461 DependenciesID=443a31876b09a6730af71a258728f14d StaticDependenciesID=94585e7a7d7927ea8674a3d8677af0a2 
+Starting new worker id: 0 with log in C:/Users/elli0/Documents/GitHub/Warboard/Logs/AssetImportWorkerHW0.log
 
-Asset Pipeline Refresh (id=1f65ace88ae17ce44b3e9f5dc95d849e): Total: 1.885 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+Asset Pipeline Refresh (id=7c42d759c7750ea498bee223a157dbaa): Total: 5.968 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
 	(Values over 0.05ms)
 	Summary:
-		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=1235 ms
-		Asset DB Callback time: managed=55 ms, native=4 ms
-		Scripting: domain reloads=1, domain reload time=587 ms, compile time=2 ms, other=0 ms
-		Project Asset Count: scripts=53, non-scripts=654
-		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Imports: total=7 (actual=7, local cache=0, cache server=0)
+		Asset DB Process Time: managed=2 ms, native=1184 ms
+		Asset DB Callback time: managed=76 ms, native=5 ms
+		Scripting: domain reloads=1, domain reload time=551 ms, compile time=4148 ms, other=0 ms
+		Project Asset Count: scripts=53, non-scripts=663
+		Asset File Changes: new=1, changed=2, moved=0, deleted=0
 		Scan Filter Count: 0
-	InvokePackagesCallback: 2.136ms
-	Collect global state as custom dependencies: 1.063ms
-	ProcessAssetsWithTransientArtifactChanges: 2.909ms
-	CategorizeAssets: 5.124ms
-	CompileScripts: 1.670ms
-	ImportOutOfDateAssets: 1191.439ms (1185.760ms without children)
-		UnloadImportedAssets: 1.543ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.103ms
-		ImportSchedulerStart: 4.031ms
-	PostProcessAllAssets: 58.957ms
-		PostProcessCallbackCreateDeferredMaterials 0.419ms
-		ShaderAssetModifiedCallback 0.251ms
-		RaytracingShaderImportPostprocess 0.080ms
-		ComputeShaderImportPostprocess 0.072ms
-		SpeedTreeImporter.PostprocessAllAssets 0.061ms
-		MonoPostProcessAllAssets: 55.173ms
-			AssetPostprocessor.OnPostprocessAllAssets 13.536ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 9.605ms
-			BuilderAssetPostprocessor.OnPostprocessAllAssets 9.009ms
-			AssetChangedListener.OnPostprocessAllAssets 2.965ms
-			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.639ms
-			SyncVS.PostprocessSyncProject 1.256ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.997ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 0.939ms
-			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.852ms
-			AudioMixerPostprocessor.OnPostprocessAllAssets 0.478ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.426ms
-			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.367ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 0.351ms
-			AssetEvents.OnPostprocessAllAssets 0.313ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.210ms
-			SpeedTreePostProcessor.OnPostprocessAllAssets 0.194ms
-			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.186ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.179ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.171ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.128ms
-			AudioContainerPostProcessor.OnPostprocessAllAssets 0.125ms
-	PostAssetChangesProfiler: 0.393ms
-	UnloadStreamsBegin: 1.745ms
-	Untracked: 615.779ms
-
-AudioListener component deleted: Component belongs to a disabled built-in package.
-Loaded scene 'Temp/__Backupscenes/0.backup'
-	Deserialize:            0.632 ms
-	Integration:            31.705 ms
-	Integration of assets:  0.003 ms
-	Thread Wait Time:       0.022 ms
-	Total Operation Time:   32.362 ms
-[Licensing::Client] Successfully resolved entitlement details
-TrimDiskCacheJob: Current cache size 0mb
-Asset Pipeline Refresh (id=0241f34c031de6c4ca2d8331107dfc90): Total: 0.012 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=9570616baeacebc489edc2cffc136f60): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-Unknown ability id: Herald of Ynnead
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Word of the Phoenix (Psychic)
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Leader
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Servant of the Whispering God
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Battle Focus
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Disparate Paths
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Warlord
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Warboard Custodes Model Pack loaded: 104 indexed objects.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-CustodesModelPackResolver:EnsureLoaded () (at Assets/Scripts/Core/CustodesModelPackResolver.cs:24)
-CustodesModelPackResolver:TryResolve (string,string,int) (at Assets/Scripts/Core/CustodesModelPackResolver.cs:119)
-ModelVisualRegistry:Resolve (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:771)
-SquadController:CreateModels () (at Assets/Scripts/Core/SquadController.cs:303)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:275)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/CustodesModelPackResolver.cs Line: 24)
-
-Warboard Aeldari Model Pack loaded from Resources/Armies/Models/Aeldari: 209 indexed objects.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-ModelVisualRegistry:EnsurePackLoaded () (at Assets/Scripts/Core/ModelVisualRegistry.cs:146)
-ModelVisualRegistry:TryResolvePack (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:404)
-ModelVisualRegistry:Resolve (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:781)
-SquadController:CreateModels () (at Assets/Scripts/Core/SquadController.cs:303)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:275)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/ModelVisualRegistry.cs Line: 146)
-
-Unknown ability id: Sadistic Raiders
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Disparate Paths
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Battle Focus
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Bladestorm
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Battle Focus
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Bladestorm
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Aspect Shrine Token
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Battle Focus
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Flickerjump
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Aspect Shrine Token
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Battle Focus
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Deep Strike
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Malevolent Souls
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Psychic Guidance
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Forceshield
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Damaged: 1-6 Wounds Remaining
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Titanic Strides
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Point-blank Devastation
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Deadly Demise D6
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Battle Focus
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Scattershield
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Leader
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Martial Inspiration
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Swift Onslaught
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Deep Strike
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Martial Ka'tah
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Warlord
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Stand Vigil
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Sentinel Storm
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Deep Strike
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Martial Ka'tah
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Heavy Assault Infantry
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: From Golden Light
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Deep Strike
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Martial Ka'tah
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Resolute Will
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Living Fortress
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Deep Strike
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Martial Ka'tah
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Feel No Pain
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Guardian Eternal
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Damaged: 1-4 wounds remaining
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Martial Ka'tah
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-Unknown ability id: Deadly Demise D3
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
-SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
-GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
-GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
-UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
-
-(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
-
-MonoPathRemapper: Attempts to remap: 3557; Successful remaps: 16
+	InvokePackagesCallback: 3.233ms
+	ApplyChangesToAssetFolders: 0.076ms
+	Scan: 47.080ms
+	Collect global state as custom dependencies: 1.907ms
+	OnSourceAssetsModified: 0.771ms
+	ProcessAssetsWithTransientArtifactChanges: 2.381ms
+	CategorizeAssets: 5.628ms
+	CompileScripts: 4147.750ms
+	ImportOutOfDateAssets: 1097.983ms (924.158ms without children)
+		ImportManagerImport: 143.395ms (1.450ms without children)
+			UpdateCategorizedAssets: 0.089ms
+		UnloadImportedAssets: 1.688ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.122ms
+		ImportSchedulerStart: 28.614ms
+	PostProcessAllAssets: 77.100ms
+		PostProcessCallbackCreateDeferredMaterials 0.478ms
+		ShaderAssetModifiedCallback 0.280ms
+		PostprocessAssetsUpdateCachedIcon 0.240ms
+		RaytracingShaderImportPostprocess 0.109ms
+		ComputeShaderImportPostprocess 0.088ms
+		SpeedTreeImporter.PostprocessAllAssets 0.075ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 0.059ms
+		VersionControlSettings.HiddenFilePostprocess 0.050ms
+		MonoPostProcessAllAssets: 72.819ms
+			AssetPostprocessor.OnPostprocessAllAssets 12.471ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 11.410ms
+			AssetChangedListener.OnPostprocessAllAssets 9.669ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 9.009ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 7.364ms
+			SyncVS.PostprocessSyncProject 2.701ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.529ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.518ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.422ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.210ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.748ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.386ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.378ms
+			AssetEvents.OnPostprocessAllAssets 0.351ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.328ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.297ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.234ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.198ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.165ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.129ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.090ms
+	PostAssetChangesProfiler: 3.320ms
+	PersistCurrentRevisions: 0.133ms
+	Untracked: 576.696ms
+
+MonoPathRemapper: Attempts to remap: 1898; Successful remaps: 0
 Serialized file version minimum: 23, current 23
-[LAYOUT] About to save layout C:\Users\elli0\Documents\GitHub\Warboard\UserSettings\Layouts\default-6000.dwlt
-[LAYOUT] About to save layout C:/Users/elli0/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 Input System module state changed to: ShutdownInProgress.
@@ -1331,16 +952,16 @@ Shut down.
 AcceleratorClientConnectionCallback - disconnected - :0
 Cleanup mono
 CodeReloadManager destroyed
-abort_threads: Failed aborting id: 00000000000074A4, mono_thread_manage will ignore it
+abort_threads: Failed aborting id: 00000000000013D8, mono_thread_manage will ignore it
 
-abort_threads: Failed aborting id: 0000000000008040, mono_thread_manage will ignore it
+abort_threads: Failed aborting id: 00000000000055AC, mono_thread_manage will ignore it
 
-abort_threads: Failed aborting id: 00000000000074A4, mono_thread_manage will ignore it
+abort_threads: Failed aborting id: 00000000000013D8, mono_thread_manage will ignore it
 
-abort_threads: Failed aborting id: 0000000000008040, mono_thread_manage will ignore it
+abort_threads: Failed aborting id: 00000000000055AC, mono_thread_manage will ignore it
 
-debugger-agent: Unable to listen on 4724
+debugger-agent: Unable to listen on 4604
 Checking for leaked weakptr:
   Found no leaked weakptrs.
 [Package Manager] Server process was shutdown
-##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1786310531375,"processId":1512,"allocatedMemory":45851918,"memoryLabels":[{"Default":165338},{"Permanent":15516},{"NewDelete":66249},{"Thread":4197560},{"Manager":32517},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":837400},{"Material":24},{"GfxDevice":55328},{"Animation":952},{"Audio":880},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":94664},{"Input":42840},{"JobScheduler":256},{"TextLib":19030},{"Mono":48},{"ScriptingNativeRuntime":674964},{"BaseObject":1734314},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":1032},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":9908},{"StaticString":3808},{"Utility":2673378},{"Curl":48},{"PoolAlloc":2168},{"AI":80},{"TypeTree":8869},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7352},{"WebRequest":7654},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":33042128},{"Camera":17},{"Secure":265},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":201616},{"CoreStats":13688},{"Identifiers":6768},{"Gui":289},{"EditorUtility":193177},{"VersionControl":8},{"Undo":931},{"AssetDatabase":1248427},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35345},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1786311756049,"processId":30664,"allocatedMemory":45642339,"memoryLabels":[{"Default":162390},{"Permanent":15516},{"NewDelete":66033},{"Thread":4197560},{"Manager":32325},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":837400},{"Material":24},{"GfxDevice":55328},{"Animation":952},{"Audio":1544},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":58728},{"Input":42840},{"JobScheduler":256},{"TextLib":8470},{"Mono":48},{"ScriptingNativeRuntime":674964},{"BaseObject":1673850},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":1032},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":9651},{"StaticString":3808},{"Utility":2673358},{"Curl":48},{"PoolAlloc":2168},{"AI":80},{"TypeTree":81261},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7208},{"WebRequest":6741},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":33006992},{"Camera":17},{"Secure":265},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":72},{"CoreStats":13688},{"Identifiers":6768},{"Gui":92809},{"EditorUtility":137624},{"VersionControl":8},{"Undo":931},{"AssetDatabase":1277155},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35345},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}
