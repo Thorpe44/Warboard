@@ -443,7 +443,6 @@
 "Assets/Scripts/Core/WarboardBootstrap.cs"
 "Assets/Scripts/Core/WarboardBuildInfo.cs"
 "Assets/Scripts/Core/WarboardResolutionMode.cs"
-"Assets/Scripts/Core/WarboardVisualTheme.cs"
 "Assets/Scripts/Core/WeaponRuleParser.cs"
 "Assets/Scripts/Core/WoundDisplayBillboard.cs"
 "Assets/Scripts/Core/YellowScribeImporter.cs"

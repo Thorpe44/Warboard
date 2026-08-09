@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -1147,8 +1147,7 @@ public class ModelToken : MonoBehaviour
         {
             woundDisplayObject.SetActive(
                 visible &&
-                IsAlive &&
-                CurrentWounds < MaxWounds
+                IsAlive
             );
         }
     }
@@ -1205,8 +1204,7 @@ public class ModelToken : MonoBehaviour
         {
             woundDisplayObject.SetActive(
                 woundDisplayRequestedVisible &&
-                IsAlive &&
-                CurrentWounds < MaxWounds
+                IsAlive
             );
         }
     }
@@ -1230,7 +1228,7 @@ public class ModelToken : MonoBehaviour
         woundDisplayObject.transform.localPosition =
             new Vector3(
                 0f,
-                1.34f,
+                1.55f,
                 0f
             );
 
@@ -1268,9 +1266,8 @@ public class ModelToken : MonoBehaviour
         woundText.alignment =
             TextAlignment.Center;
 
-        // WARBOARD_V44_WOUND_POLISH
-        woundText.fontSize = 34;
-        woundText.characterSize = 0.044f;
+        woundText.fontSize = 48;
+        woundText.characterSize = 0.055f;
         woundText.fontStyle =
             FontStyle.Bold;
 
@@ -1325,4 +1322,3 @@ public class ModelToken : MonoBehaviour
         );
     }
 }
-

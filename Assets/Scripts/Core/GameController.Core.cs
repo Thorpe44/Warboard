@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -77,13 +77,13 @@ public partial class GameController : MonoBehaviour
             battleSizeName +
             " (" +
             battlePoints +
-            " pts) â€¢ " +
+            " pts) • " +
             missionPresetName +
-            " â€¢ battlefield " +
+            " • battlefield " +
             BoardWidth.ToString("0.#") +
             " x " +
             BoardDepth.ToString("0.#") +
-            " â€¢ deployment depth " +
+            " • deployment depth " +
             DeploymentZoneWidth.ToString("0.#") +
             ". Load both armies.";
     }
@@ -173,9 +173,6 @@ public partial class GameController : MonoBehaviour
         gameCamera.backgroundColor =
             new Color(0.08f, 0.09f, 0.12f);
 
-        // WARBOARD_V44_WORLD_POLISH
-        WarboardVisualTheme.StyleCamera(gameCamera);
-
         Light light = Object.FindAnyObjectByType<Light>();
 
         if (light == null)
@@ -191,8 +188,6 @@ public partial class GameController : MonoBehaviour
         light.intensity = 1.25f;
         light.transform.rotation =
             Quaternion.Euler(55f, -35f, 0f);
-
-        WarboardVisualTheme.StyleLight(light);
 
         GameObject board =
             GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -214,8 +209,6 @@ public partial class GameController : MonoBehaviour
             board,
             new Color(0.19f, 0.22f, 0.19f)
         );
-
-        WarboardVisualTheme.StyleBoard(board);
 
         // Terrain and mission objectives are generated after Force
         // Dispositions resolve the Chapter Approved mission matchup.
@@ -259,12 +252,6 @@ public partial class GameController : MonoBehaviour
 
         SetObjectColor(
             terrain,
-            color
-        );
-
-        WarboardVisualTheme.StyleTerrain(
-            terrain,
-            trait,
             color
         );
     }
@@ -1387,7 +1374,7 @@ public partial class GameController : MonoBehaviour
             ) +
             " " +
             p2Roll +
-            " â€” " +
+            " — " +
             ActiveFactionDisplayName() +
             " wins the roll-off and takes first turn.";
 
@@ -1619,12 +1606,12 @@ public partial class GameController : MonoBehaviour
                 unit.DisplayName,
                 "Leadership " +
                 leadership +
-                "+ â€¢ roll " +
+                "+ • roll " +
                 roll +
-                " â†’ " +
+                " → " +
                 (passed
                     ? "PASS"
-                    : "FAIL â€” BATTLE-SHOCKED (OC 0)")
+                    : "FAIL — BATTLE-SHOCKED (OC 0)")
             );
 
             results.Add(
@@ -1635,7 +1622,7 @@ public partial class GameController : MonoBehaviour
                 leadership +
                 (passed
                     ? "+ PASS"
-                    : "+ FAIL â†’ BATTLE-SHOCKED")
+                    : "+ FAIL → BATTLE-SHOCKED")
             );
         }
 
@@ -2115,7 +2102,7 @@ public partial class GameController : MonoBehaviour
             coherence +
             " | " +
             (selectedSquad.AttachedLeader != null
-                ? "ATTACHED UNIT â€” " +
+                ? "ATTACHED UNIT — " +
                   selectedSquad.LeaderSummary()
                 : selectedSquad.LeaderSummary()) +
             " | Loadouts: " +
@@ -2147,7 +2134,7 @@ public partial class GameController : MonoBehaviour
             status +=
                 " | selected model remaining move " +
                 remaining.ToString("0.0") +
-                " â€” blue ring";
+                " — blue ring";
         }
         else if (selectedModel != null &&
                  phase == Phase.Shoot)
@@ -2159,7 +2146,7 @@ public partial class GameController : MonoBehaviour
                 range > 0.01f
                 ? " | selected model max usable weapon range " +
                   range.ToString("0.#") +
-                  " â€” amber ring"
+                  " — amber ring"
                 : " | selected model has no currently usable ranged weapon";
         }
         else if (selectedModel != null &&
@@ -2167,7 +2154,7 @@ public partial class GameController : MonoBehaviour
         {
             status +=
                 SelectedUnitCanCharge()
-                ? " | maximum pre-roll charge reach 12 â€” red ring"
+                ? " | maximum pre-roll charge reach 12 — red ring"
                 : " | this unit cannot currently declare a charge";
         }
         else if (selectedModel != null &&
@@ -2211,7 +2198,7 @@ public partial class GameController : MonoBehaviour
                     "/" +
                     FightStageMoveLimit()
                         .ToString("0.0") +
-                    "â€³ â€¢ hold ALT to measure";
+                    "″ • hold ALT to measure";
             }
             else if (fightActivationStage ==
                      FightActivationStage.Attacks)
@@ -2436,7 +2423,7 @@ public partial class GameController : MonoBehaviour
                         if (test < 2)
                         {
                             status =
-                                "WORD OF THE PHOENIX: rolled 1 â€” no models return.";
+                                "WORD OF THE PHOENIX: rolled 1 — no models return.";
                             return;
                         }
 
@@ -2594,7 +2581,7 @@ public partial class GameController : MonoBehaviour
         OpenRuleChoice(
             "COMMAND ABILITIES",
             unit.DisplayName +
-            " â€” choose an available Command-phase ability.",
+            " — choose an available Command-phase ability.",
             options
         );
     }
@@ -2874,7 +2861,7 @@ public partial class GameController : MonoBehaviour
         );
 
         OpenRuleChoice(
-            "BATTLE FOCUS â€” OPPORTUNITY SEIZED",
+            "BATTLE FOCUS — OPPORTUNITY SEIZED",
             fallingBackUnit.DisplayName +
             " ended a Fall Back move. An eligible unit that started the phase engaged with it can spend 1 Battle Focus token to make a D6+1 Normal move.",
             options
@@ -4294,14 +4281,14 @@ public partial class GameController : MonoBehaviour
             "BATTLE-SHOCK",
             target.DisplayName,
             label +
-            " â€¢ Leadership " +
+            " • Leadership " +
             leadership +
-            "+ â€¢ roll " +
+            "+ • roll " +
             roll +
-            " â†’ " +
+            " → " +
             (passed
                 ? "PASS"
-                : "FAIL â€” BATTLE-SHOCKED (OC 0)")
+                : "FAIL — BATTLE-SHOCKED (OC 0)")
         );
 
         status =
@@ -4313,8 +4300,8 @@ public partial class GameController : MonoBehaviour
             " vs Ld " +
             leadership +
             (passed
-                ? " â€” passed."
-                : " â€” BATTLE-SHOCKED.");
+                ? " — passed."
+                : " — BATTLE-SHOCKED.");
     }
 
     private bool ChargingModelCanReachDistance(
@@ -4715,7 +4702,7 @@ public partial class GameController : MonoBehaviour
         );
 
         OpenRuleChoice(
-            "STRENGTH FROM DEATH â€” LETHAL REPRISAL",
+            "STRENGTH FROM DEATH — LETHAL REPRISAL",
             "At the start of the Fight phase, select one below-Starting-Strength Ynnari unit to gain Fights First.",
             options
         );
@@ -5152,7 +5139,7 @@ public partial class GameController : MonoBehaviour
             options.Add(
                 new RuleChoiceOption(
                     captured.DisplayName +
-                    " â€” " +
+                    " — " +
                     Mathf.Max(
                         0,
                         captured.StartingModels -
@@ -5219,7 +5206,7 @@ public partial class GameController : MonoBehaviour
                     unit.DisplayName,
                     "D3 result " +
                     value +
-                    " â†’ " +
+                    " → " +
                     restored +
                     " wound(s) restored."
                 );
@@ -5762,7 +5749,7 @@ public partial class GameController : MonoBehaviour
         );
 
         OpenRuleChoice(
-            "STRENGTH FROM DEATH â€” LETHAL INTENT",
+            "STRENGTH FROM DEATH — LETHAL INTENT",
             "A Ynnari unit was destroyed this Shooting phase. Select one eligible Ynnari Infantry/Mounted unit that was within 6 inches of a destroyed unit.",
             options
         );
@@ -6175,7 +6162,7 @@ public partial class GameController : MonoBehaviour
 
         options.Add(
             new RuleChoiceOption(
-                "Done â€” extract no more units",
+                "Done — extract no more units",
                 () =>
                 {
                     CloseRuleChoice();
@@ -6185,7 +6172,7 @@ public partial class GameController : MonoBehaviour
         );
 
         OpenRuleChoice(
-            "WINDRIDER HOST â€” RIDE THE WIND",
+            "WINDRIDER HOST — RIDE THE WIND",
             DisplayFactionName(
                 faction
             ) +
@@ -7039,7 +7026,7 @@ public partial class GameController : MonoBehaviour
             if (p1 == p2)
             {
                 winner =
-                    "DRAW â€” " +
+                    "DRAW — " +
                     p1 +
                     " VP each";
             }
@@ -7056,7 +7043,7 @@ public partial class GameController : MonoBehaviour
                     ) +
                     " wins " +
                     Mathf.Max(p1, p2) +
-                    "â€“" +
+                    "–" +
                     Mathf.Min(p1, p2) +
                     " VP";
             }
@@ -7072,7 +7059,7 @@ public partial class GameController : MonoBehaviour
                         DisplayFactionName(
                             faction
                         ) +
-                        " â€” Primary " +
+                        " — Primary " +
                         TotalScoreType(
                             faction,
                             true
@@ -7238,7 +7225,7 @@ public partial class GameController : MonoBehaviour
 
             entries.Add(
                 squad.DisplayName +
-                " â€” " +
+                " — " +
                 casualties +
                 " dead" +
                 (!squad.IsAlive
@@ -7265,7 +7252,7 @@ public partial class GameController : MonoBehaviour
         return label.Substring(
             0,
             11
-        ) + "â€¦";
+        ) + "…";
     }
 
     private ForceDisposition NextDisposition(
@@ -7336,4 +7323,3 @@ public partial class GameController : MonoBehaviour
     }
 
 }
-

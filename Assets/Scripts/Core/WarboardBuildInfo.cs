@@ -1,7 +1,6 @@
-﻿public static class WarboardBuildInfo
+public static class WarboardBuildInfo
 {
     // Mandatory visible build identity.
     // Every Warboard release updates this value.
-    public const string CurrentVersion = "v44.0";
+    public const string CurrentVersion = "v43.4";
 }
-

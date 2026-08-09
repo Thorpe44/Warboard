@@ -1,33 +1,37 @@
-WARBOARD v44 TEXT ENCODING HOTFIX
+WARBOARD FULL v44 VISUAL ROLLBACK
 
-Fixes text such as:
+This removes the failed v44 visual-polish pass and restores the exact source
+files backed up immediately before that installer changed them.
 
-  â€¢  ->  •
-  â€”  ->  —
-  â€“  ->  –
-  â†’  ->  →
-  â‰¥  ->  ≥
-  â€¦  ->  …
-
-CAUSE
------
-The original v44 PowerShell installer used Windows PowerShell's default
-text-file decoding when reading existing C# files. Existing UTF-8 punctuation
-was therefore decoded incorrectly and then saved back as UTF-8.
-
-THIS HOTFIX
+IT RESTORES
 -----------
-- Repairs the known mojibake in every source file touched by v44.
-- Writes the repaired files explicitly as UTF-8.
-- Creates timestamped backups.
-- Verifies that the broken sequences are gone before reporting success.
+GameController.UI.cs
+GameController.Core.cs
+ObjectiveController.cs
+ModelToken.cs
+BattlefieldWorldUI.cs
+WarboardBuildInfo.cs
+
+It also removes WarboardVisualTheme.cs if that file did not exist before v44.
+
+IT DOES NOT TOUCH
+-----------------
+Custodes model assets
+Custodes model resolver
+New Recruit / YellowScribe fixes
+Ability warning fix
+Faction rules
+Roster data
+ModelIndex files
 
 INSTALL
 -------
-Run FIX_WARBOARD_V44_ENCODING.bat from the Warboard project root
-(or a folder directly inside it).
+1. Extract this ZIP into the Warboard project root.
+2. Run ROLLBACK_WARBOARD_V44_VISUALS.bat.
+3. Wait for:
 
-Wait for:
-  SUCCESS - v44 ENCODING HOTFIX VERIFIED
+   SUCCESS - FULL V44 VISUAL ROLLBACK VERIFIED
 
-Then return to Unity and allow it to recompile.
+4. Return to Unity and allow it to recompile.
+
+Do not run the v44 visual-polish installer again.
