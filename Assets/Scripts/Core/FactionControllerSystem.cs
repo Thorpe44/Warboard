@@ -158,6 +158,16 @@ public static class FactionGameControllerFactory
             return new NecronGameController();
         }
 
+        if (army != null &&
+            army.Any(
+                unit =>
+                    unit != null &&
+                    unit.HasIntrinsicKeyword(
+                        "adeptus custodes")))
+        {
+            return new CustodesGameController();
+        }
+
         return new GenericFactionGameController();
     }
 

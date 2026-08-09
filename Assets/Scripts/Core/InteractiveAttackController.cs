@@ -1355,6 +1355,11 @@ public class InteractiveAttackController
                     mode
                  ));
 
+            volley.lethalHits =
+                volley.lethalHits ||
+                CustodesFactionPack11.GrantsLethalHits(
+                    attacker, mode);
+
             volley.sustainedHits =
                 WeaponRuleParser.GetValue(
                     weapon,
@@ -1404,7 +1409,13 @@ public class InteractiveAttackController
                     );
             }
 
-            volley.twinLinked =
+                        volley.sustainedHits =
+                Mathf.Max(
+                    volley.sustainedHits,
+                    CustodesFactionPack11.MinimumSustainedHits(
+                        attacker, weapon, mode));
+
+volley.twinLinked =
                 RulesEngine.HasKeyword(
                     weapon,
                     "twin_linked"
@@ -1439,6 +1450,11 @@ public class InteractiveAttackController
 
             volley.precision =
                 volley.precision ||
+                CustodesFactionPack11.GrantsPrecision(
+                    attacker, weapon, mode);
+
+            volley.precision =
+                volley.precision ||
                 AeldariFactionPack11.GrantsPrecision(
                     attacker, weapon, mode);
             volley.precision = volley.precision ||
@@ -1449,6 +1465,10 @@ public class InteractiveAttackController
                 weapon.strength +
                 AeldariFactionPack11.StrengthModifier(
                     attacker, weapon, mode);
+
+            volley.effectiveStrength +=
+                CustodesFactionPack11.StrengthModifier(
+                    attacker, first.model, weapon, mode);
 
             volley.effectiveAp =
                 weapon.ap;
@@ -1482,7 +1502,11 @@ public class InteractiveAttackController
                     );
             }
 
-            volley.woundTarget =
+                        volley.effectiveAp +=
+                CustodesFactionPack11.ApModifier(
+                    attacker, target, first.model, weapon, mode);
+
+volley.woundTarget =
                 RulesEngine.WoundRollNeeded(
                     volley.effectiveStrength,
                     target.Toughness
@@ -1516,6 +1540,11 @@ public class InteractiveAttackController
                     );
 
                 oneModelAttacks +=
+                    CustodesFactionPack11.AdditionalAttacks(
+                        game, attacker, selection.model,
+                        weapon, mode, target);
+
+                oneModelAttacks +=
                     AeldariFactionPack11.AdditionalAttacks(
                         attacker, selection.model, weapon, mode);
 
@@ -1538,6 +1567,10 @@ public class InteractiveAttackController
                         "rapid_fire",
                         0
                     );
+
+                rapid +=
+                    CustodesFactionPack11.AdditionalRapidFire(
+                        attacker, weapon, mode);
 
                 rapid +=
                     AeldariFactionPack11.AdditionalRapidFire(
@@ -1773,6 +1806,26 @@ public class InteractiveAttackController
             }
         }
 
+        if (!volley.cannotRerollHits)
+        {
+            bool custodesRerolled = false;
+            for (int i = 0; i < volley.hitRolls.Count; i++)
+            {
+                int roll = volley.hitRolls[i];
+                bool success = roll != 1 &&
+                    (roll == 6 ||
+                     roll + volley.hitRollModifier >= volley.skill);
+                if (!CustodesFactionPack11.AutomaticRerollHit(
+                        game, attacker, roll, success, mode))
+                    continue;
+                volley.hitRolls[i] = DiceRoller.RollD6(
+                    "Custodes Hit re-roll: " + volley.weapon.displayName);
+                custodesRerolled = true;
+            }
+            if (custodesRerolled)
+                volley.automaticHitRerolls = true;
+        }
+
         RecalculateHitResults();
 
         lastActionText =
@@ -1820,7 +1873,8 @@ public class InteractiveAttackController
 
             hits++;
 
-            if (roll == 6)
+            if (CustodesFactionPack11.IsCriticalHit(
+                    attacker, roll, success))
             {
                 if (volley.lethalHits)
                     lethal++;
@@ -2004,6 +2058,24 @@ public class InteractiveAttackController
 
             volley.automaticWoundRerolls = true;
         }
+
+        bool custodesWoundRerolled = false;
+        for (int i = 0; i < volley.woundRolls.Count; i++)
+        {
+            int roll = volley.woundRolls[i];
+            bool critical = roll >= volley.criticalWoundThreshold;
+            bool success = roll != 1 &&
+                (critical || roll == 6 ||
+                 roll + volley.woundRollModifier >= volley.woundTarget);
+            if (!CustodesFactionPack11.AutomaticRerollWound(
+                    attacker, target, roll, success, mode))
+                continue;
+            volley.woundRolls[i] = DiceRoller.RollD6(
+                "Custodes Wound re-roll: " + volley.weapon.displayName);
+            custodesWoundRerolled = true;
+        }
+        if (custodesWoundRerolled)
+            volley.automaticWoundRerolls = true;
 
         RecalculateWoundResults();
 
@@ -2455,11 +2527,14 @@ public class InteractiveAttackController
                     );
             }
 
+            attackDamage =
+                CustodesFactionPack11.ModifyIncomingDamage(
+                    allocated, attacker, volley.weapon, attackDamage);
+
             int incoming =
                 Mathf.Min(
                     allocated.CurrentWounds,
-                    attackDamage
-                );
+                    attackDamage);
 
             int afterFnp =
                 UniversalRuleRegistry
@@ -2552,11 +2627,14 @@ public class InteractiveAttackController
                     );
             }
 
+            attackDamage =
+                CustodesFactionPack11.ModifyIncomingDamage(
+                    allocated, attacker, volley.weapon, attackDamage, false);
+
             int incoming =
                 Mathf.Min(
                     allocated.CurrentWounds,
-                    attackDamage
-                );
+                    attackDamage);
 
             int afterFnp =
                 UniversalRuleRegistry
@@ -2676,7 +2754,11 @@ public class InteractiveAttackController
             if (allocated != null)
             {
                 allocated.ApplyDamage(
-                    mortal
+                    UniversalRuleRegistry.ApplyFeelNoPain(
+                        allocated.Squad,
+                        mortal,
+                        "Hazardous"
+                    )
                 );
             }
         }

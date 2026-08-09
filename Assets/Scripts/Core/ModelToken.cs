@@ -93,6 +93,20 @@ public class ModelToken : MonoBehaviour
         get { return gameObject.activeSelf; }
     }
 
+    public void ApplyFactionMaxWoundsModifier(int amount)
+    {
+        if (amount == 0)
+            return;
+
+        MaxWounds = Mathf.Max(1, MaxWounds + amount);
+        CurrentWounds = Mathf.Clamp(
+            CurrentWounds + amount,
+            0,
+            MaxWounds);
+
+        RefreshWoundDisplay();
+    }
+
     public void Initialize(
         SquadController squad,
         int wounds,

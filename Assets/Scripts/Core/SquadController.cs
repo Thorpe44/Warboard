@@ -1101,6 +1101,7 @@ public class SquadController : MonoBehaviour
 
         float allowance =
             model.Squad.GetMove() +
+            CustodesFactionPack11.MoveModifier(actionUnit) +
             actionUnit.BattleFocusMoveBonus +
             (actionUnit.HasAdvanced
                 ? actionUnit.AdvanceBonus
@@ -1258,6 +1259,10 @@ public class SquadController : MonoBehaviour
 
         objectiveControl =
             AeldariFactionPack11.ModifyObjectiveControl(
+                JoinedActionController(), model, objectiveControl);
+
+        objectiveControl =
+            CustodesFactionPack11.ModifyObjectiveControl(
                 JoinedActionController(), model, objectiveControl);
 
         return Mathf.Max(

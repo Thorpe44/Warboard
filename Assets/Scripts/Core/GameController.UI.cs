@@ -2801,6 +2801,11 @@ public partial class GameController : MonoBehaviour
             DrawAeldari11StratagemCards(
                 left, right, y, cardWidth);
         }
+        else if (CustodesFactionPack11Runtime.Controller(activeFaction) != null)
+        {
+            DrawCustodes11StratagemCards(
+                left, right, y, cardWidth);
+        }
         else if (isNecrons)
         {
             if (DrawStratagemActionButton(

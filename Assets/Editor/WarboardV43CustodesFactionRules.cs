@@ -22,6 +22,9 @@ public static class WarboardV43CustodesFactionRules
     private const string CompileShimPath =
         "Assets/Scripts/Factions/AdeptusCustodes/CustodesModelTokenCompileShim.cs";
 
+    private const string SetupCompileShimPath =
+        "Assets/Scripts/Core/GameController.CustodesSetupCompileShim.cs";
+
     private const string BackupRoot =
         "Library/WarboardBackups/V43";
 
@@ -239,6 +242,8 @@ public static class WarboardV43CustodesFactionRules
     private static void PatchGameController(
         List<string> touched)
     {
+        RepairBadReserveIngressIdentifier(touched);
+
         PatchGameMethod(
             "Update",
             method =>
@@ -484,9 +489,9 @@ public static class WarboardV43CustodesFactionRules
 
                 return InsertAtMethodStart(
                     method,
-                    "        if (squad != null &&\n" +
+                    "        if (reservePlacementSquad != null &&\n" +
                     "            CurrentRoundNumber == 1 &&\n" +
-                    "            CustodesFactionPack11.CanIngressFirstMovement(squad))\n" +
+                    "            CustodesFactionPack11.CanIngressFirstMovement(reservePlacementSquad))\n" +
                     "        {\n" +
                     "            return true;\n" +
                     "        }\n\n"
@@ -522,6 +527,42 @@ public static class WarboardV43CustodesFactionRules
             },
             touched
         );
+    }
+
+    private static void RepairBadReserveIngressIdentifier(
+        List<string> touched)
+    {
+        foreach (string path in ExistingGameFiles())
+        {
+            if (!File.Exists(path))
+                continue;
+
+            string source = File.ReadAllText(path);
+
+            string bad =
+                "        if (squad != null &&\n" +
+                "            CurrentRoundNumber == 1 &&\n" +
+                "            CustodesFactionPack11.CanIngressFirstMovement(squad))\n";
+
+            if (!source.Contains(bad))
+                continue;
+
+            string good =
+                "        if (reservePlacementSquad != null &&\n" +
+                "            CurrentRoundNumber == 1 &&\n" +
+                "            CustodesFactionPack11.CanIngressFirstMovement(reservePlacementSquad))\n";
+
+            source = source.Replace(
+                bad,
+                good
+            );
+
+            WriteChanged(
+                path,
+                source,
+                touched
+            );
+        }
     }
 
     private static string PatchAdvancedShootingGate(
@@ -1853,9 +1894,15 @@ public static class WarboardV43CustodesFactionRules
         string source,
         string methodName)
     {
+        // Match method declarations even when the return type and method
+        // name are split across lines. v42/v41 deliberately formats several
+        // long signatures this way (for example UniversalRuleRegistry's
+        // BuildAttackState), so the old single-line matcher rejected valid
+        // methods before the migration could patch them.
         Regex signature =
             new Regex(
-                @"(?m)^\s*(?:public|private|protected|internal)\s+(?:static\s+)?[^\n\r;=]+\b" +
+                @"(?ms)^\s*(?:public|private|protected|internal)\s+" +
+                @"(?:static\s+)?[^;={}]+?\b" +
                 Regex.Escape(methodName) +
                 @"\s*\("
             );
@@ -2151,6 +2198,13 @@ public static class WarboardV43CustodesFactionRules
             string shimMeta = CompileShimPath + ".meta";
             if (File.Exists(shimMeta))
                 AssetDatabase.DeleteAsset(shimMeta);
+
+            if (File.Exists(SetupCompileShimPath))
+                AssetDatabase.DeleteAsset(SetupCompileShimPath);
+
+            string setupShimMeta = SetupCompileShimPath + ".meta";
+            if (File.Exists(setupShimMeta))
+                AssetDatabase.DeleteAsset(setupShimMeta);
 
             AssetDatabase.Refresh();
         }

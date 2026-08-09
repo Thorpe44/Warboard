@@ -1,0 +1,8 @@
+WARBOARD v43.2 HOTFIX MANIFEST
+
+Assets/Editor/WarboardV43CustodesFactionRules.cs
+Assets/Editor/WarboardV43CustodesFactionRules.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+README_V43_2.md
+V43_2_PATCH_MANIFEST.txt

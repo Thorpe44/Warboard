@@ -1499,6 +1499,14 @@ public partial class GameController : MonoBehaviour
     private bool ReserveCanArriveThisRound(
         SquadController unit)
     {
+        if (squad != null &&
+            CurrentRoundNumber == 1 &&
+            CustodesFactionPack11.CanIngressFirstMovement(squad))
+        {
+            return true;
+        }
+
+
         if (unit == null)
             return false;
 

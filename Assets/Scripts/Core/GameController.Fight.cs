@@ -891,6 +891,23 @@ public partial class GameController : MonoBehaviour
         SquadController attacker,
         SquadController target)
     {
+        string custodesTargetReason;
+        if (attacker != null && target != null &&
+            !Custodes11CanAttackTarget(
+                attacker, target, AttackMode.Melee,
+                out custodesTargetReason))
+        {
+            status = custodesTargetReason;
+            return;
+        }
+
+        if (attacker != null && target != null &&
+            Custodes11EnsureKatahChoice(attacker, target))
+        {
+            return;
+        }
+
+
         Fight11TryFight(attacker, target);
     }
 

@@ -1017,6 +1017,17 @@ public partial class GameController : MonoBehaviour
         SquadController attacker,
         SquadController target)
     {
+        string custodesTargetReason;
+        if (attacker != null && target != null &&
+            !Custodes11CanAttackTarget(
+                attacker, target, AttackMode.Ranged,
+                out custodesTargetReason))
+        {
+            status = custodesTargetReason;
+            return;
+        }
+
+
         if (missionSystem != null &&
             missionSystem.UnitHasStartedAction(
                 attacker) &&
@@ -1036,6 +1047,7 @@ public partial class GameController : MonoBehaviour
         }
 
         if (attacker.HasFallenBack &&
+            !Custodes11CanShootAfterFallBack(attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanShootAfterFallBack(
                   attacker

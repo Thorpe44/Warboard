@@ -432,6 +432,9 @@ public partial class GameController : MonoBehaviour
 
     private void Update()
     {
+        Custodes11PumpDeferredReactions();
+
+
         Aeldari11PumpDeferredReactions();
 
 

@@ -150,6 +150,10 @@ public static class RulesEngine
                 );
 
             attacks +=
+                CustodesFactionPack11.AdditionalAttacks(
+                    game, attacker, model, weapon, mode, target);
+
+            attacks +=
                 AeldariFactionPack11.AdditionalAttacks(
                     attacker, model, weapon, mode);
 
@@ -159,6 +163,10 @@ public static class RulesEngine
                     "rapid_fire",
                     0
                 );
+
+            rapidFire +=
+                CustodesFactionPack11.AdditionalRapidFire(
+                    attacker, weapon, mode);
 
             rapidFire +=
                 AeldariFactionPack11.AdditionalRapidFire(
@@ -273,6 +281,9 @@ bool torrent =
                     "lethal_hits"
                 );
 
+            lethalHits = lethalHits ||
+                CustodesFactionPack11.GrantsLethalHits(attacker, mode);
+
             lethalHits =
                 lethalHits ||
                 AeldariFactionPack11.GrantsLethalHits(
@@ -289,6 +300,11 @@ bool torrent =
                     ? 1
                     : 0
                 );
+
+            sustainedHits = Mathf.Max(
+                sustainedHits,
+                CustodesFactionPack11.MinimumSustainedHits(
+                    attacker, weapon, mode));
 
             sustainedHits =
                 Mathf.Max(
@@ -320,6 +336,10 @@ bool torrent =
                 ) ||
                 (game != null &&
                  game.Core11HasEpicChallenge(model));
+
+            precision = precision ||
+                CustodesFactionPack11.GrantsPrecision(
+                    attacker, weapon, mode);
 
             precision =
                 precision ||
@@ -356,6 +376,17 @@ bool torrent =
                         "Hit: " +
                         weapon.displayName
                     );
+
+                bool custodesHitSuccess =
+                    AeldariFactionPack11.AutomaticHitSucceeds(
+                        hitRoll, skill, aeldari11UniversalState);
+                if (!aeldari11UniversalState.cannotRerollHits &&
+                    CustodesFactionPack11.AutomaticRerollHit(
+                        game, attacker, hitRoll, custodesHitSuccess, mode))
+                {
+                    hitRoll = DiceRoller.RollD6(
+                        "Custodes Hit re-roll: " + weapon.displayName);
+                }
 
                 if (!aeldari11UniversalState.cannotRerollHits &&
                     AeldariFactionPack11.AutomaticRerollHit(
@@ -475,6 +506,17 @@ bool torrent =
 
                 bool alreadyRerolled =
                     false;
+
+                if (CustodesFactionPack11.AutomaticRerollWound(
+                        attacker, target, woundRoll, success, mode))
+                {
+                    woundRoll = DiceRoller.RollD6(
+                        "Custodes Wound re-roll: " + weapon.displayName);
+                    success = AeldariFactionPack11.AutomaticWoundSucceeds(
+                        woundRoll, woundTarget, criticalThreshold,
+                        aeldari11UniversalState.woundRollModifier);
+                    alreadyRerolled = true;
+                }
 
                 if (AeldariFactionPack11.AutomaticRerollWound(
                         attacker, woundRoll, success, mode))
@@ -632,6 +674,10 @@ bool torrent =
                             melta
                         );
 
+                    rolledDamage =
+                        CustodesFactionPack11.ModifyIncomingDamage(
+                            allocated, attacker, weapon, rolledDamage);
+
                     int lost =
                         allocated.ApplyDamage(
                             UniversalRuleRegistry.ApplyFeelNoPain(
@@ -682,6 +728,10 @@ bool torrent =
                         ) +
                         melta
                     );
+
+                mortalDamage =
+                    CustodesFactionPack11.ModifyIncomingDamage(
+                        allocated, attacker, weapon, mortalDamage, false);
 
                 int lost =
                     allocated.ApplyDamage(

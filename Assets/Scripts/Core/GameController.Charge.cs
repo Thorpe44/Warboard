@@ -93,6 +93,7 @@ public partial class GameController : MonoBehaviour
         }
 
         if (attacker.HasFallenBack &&
+            !Custodes11CanChargeAfterFallBack(attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanChargeAfterFallBack(
                   attacker
@@ -104,6 +105,7 @@ public partial class GameController : MonoBehaviour
         }
 
         if (attacker.HasAdvanced &&
+            !Custodes11CanChargeAfterAdvance(attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanChargeAfterAdvance(
                   attacker
@@ -385,6 +387,16 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
+        if (Custodes11OfferHammerFallsChargeReroll(
+                attacker, target, roll, wasRerolled))
+        {
+            return;
+        }
+
+        roll +=
+            CustodesFactionPack11.ChargeRollModifier(
+                attacker);
+
         float targetDistance =
             JoinedDistance(
                 attacker,
@@ -498,6 +510,8 @@ public partial class GameController : MonoBehaviour
         attacker.HasMoved = true;
         attacker.HasCharged = true;
         attacker.MarkMadeChargeMove();
+
+        Custodes11AfterSuccessfulCharge(attacker);
 
         if (attacker.AttachedLeader != null)
         {
