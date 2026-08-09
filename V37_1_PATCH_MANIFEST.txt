@@ -1,0 +1,8 @@
+WARBOARD v37.1 PATCH MANIFEST
+
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs
+Assets/Scripts/Factions/Aeldari/AeldariGameController.cs.meta
+README_V37_1.md
+V37_1_PATCH_MANIFEST.txt

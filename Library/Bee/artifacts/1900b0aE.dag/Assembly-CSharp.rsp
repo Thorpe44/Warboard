@@ -423,6 +423,7 @@
 "Assets/Scripts/Core/ModelToken.cs"
 "Assets/Scripts/Core/ModelVisualRegistry.cs"
 "Assets/Scripts/Core/ObjectiveController.cs"
+"Assets/Scripts/Core/RosterImportMetadataStore.cs"
 "Assets/Scripts/Core/RulesEngine.cs"
 "Assets/Scripts/Core/SquadController.cs"
 "Assets/Scripts/Core/StratagemSystem.cs"

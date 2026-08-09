@@ -1,0 +1,7 @@
+WARBOARD v37 — ROSTER-DRIVEN DETACHMENTS
+
+YellowScribeImporter now records detachment-related metadata from the same JSON payload used to import the army.
+AeldariGameController resolves and locks a single unambiguous roster detachment without a second network request.
+If no single detachment can be resolved, the one-time pre-game selector is required.
+BeginDeployment is blocked until every faction pre-game controller reports ready.
+AeldariRulesSystem no longer guesses Devoted of Ynnead from Yvraine/Yncarne, guesses Ghosts from army composition, or exposes runtime NextDetachment cycling.

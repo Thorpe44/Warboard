@@ -51,6 +51,7 @@ public class AeldariDetachmentDefinition
 
 public class AeldariRulesSystem
 {
+    // WARBOARD_V37_ROSTER_DRIVEN_DETACHMENT
     private readonly GameController game;
 
     private readonly Dictionary<string, AeldariDetachment>
@@ -65,24 +66,6 @@ public class AeldariRulesSystem
         aeldariFactions =
             new HashSet<string>();
 
-    private static readonly AeldariDetachment[] Order =
-    {
-        AeldariDetachment.Warhost,
-        AeldariDetachment.WindriderHost,
-        AeldariDetachment.SpiritConclave,
-        AeldariDetachment.GuardianBattlehost,
-        AeldariDetachment.GhostsOfTheWebway,
-        AeldariDetachment.DevotedOfYnnead,
-        AeldariDetachment.SeerCouncil,
-        AeldariDetachment.AspectHost,
-        AeldariDetachment.ArmouredWarhost,
-        AeldariDetachment.FatefulPerformance,
-        AeldariDetachment.PathOfTheOutcast,
-        AeldariDetachment.TwilightFlickers,
-        AeldariDetachment.SerpentsBrood,
-        AeldariDetachment.EldritchRaiders,
-        AeldariDetachment.CorsairCoterie
-    };
 
     private static readonly Dictionary<AeldariDetachment, AeldariDetachmentDefinition>
         Definitions = BuildDefinitions();
@@ -368,64 +351,9 @@ public class AeldariRulesSystem
             if (!detachmentByFaction.ContainsKey(
                     faction))
             {
-                detachmentByFaction[
-                    faction] =
-                    AutoDetectDefault(
-                        faction,
-                        squads
-                    );
+                detachmentByFaction[faction] = AeldariDetachment.Warhost;
             }
         }
-    }
-
-    private AeldariDetachment AutoDetectDefault(
-        string faction,
-        IList<SquadController> squads)
-    {
-        bool ynnari =
-            squads != null &&
-            squads.Any(
-                unit =>
-                    unit != null &&
-                    unit.FactionId == faction &&
-                    (unit.HasKeyword("ynnari") ||
-                     unit.DisplayName.IndexOf(
-                         "Yvraine",
-                         StringComparison.OrdinalIgnoreCase
-                     ) >= 0 ||
-                     unit.DisplayName.IndexOf(
-                         "Yncarne",
-                         StringComparison.OrdinalIgnoreCase
-                     ) >= 0)
-            );
-
-        if (ynnari)
-            return AeldariDetachment.DevotedOfYnnead;
-
-        bool allHarlequins =
-            squads != null &&
-            squads
-                .Where(
-                    unit =>
-                        unit != null &&
-                        unit.FactionId == faction
-                )
-                .Any() &&
-            squads
-                .Where(
-                    unit =>
-                        unit != null &&
-                        unit.FactionId == faction
-                )
-                .All(
-                    unit =>
-                        unit.HasKeyword("harlequins")
-                );
-
-        if (allHarlequins)
-            return AeldariDetachment.GhostsOfTheWebway;
-
-        return AeldariDetachment.Warhost;
     }
 
     public bool IsAeldariFaction(
@@ -505,13 +433,6 @@ public class AeldariRulesSystem
         detachmentByFaction[
             faction] =
             detachment;
-    }
-
-    public void NextDetachment(
-        string faction)
-    {
-        // Detachments are roster-driven, selected once before deployment and
-        // locked for the battle. Runtime cycling no longer exists.
     }
 
     public string RuleSummary(

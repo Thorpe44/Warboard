@@ -616,6 +616,12 @@ public partial class GameController : MonoBehaviour
 
     private void BeginDeployment()
     {
+        if (!EnsureFactionControllersReadyForDeployment())
+        {
+            return;
+        }
+
+
         deploymentMode = true;
         SetDeploymentWorldLabelsVisible(false);
         round = 0;

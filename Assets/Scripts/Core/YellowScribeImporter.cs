@@ -21,6 +21,10 @@ public static class YellowScribeImporter
         string json,
         string gameFactionId)
     {
+        // v37: clear stale metadata before attempting a new import.
+        RosterImportMetadataStore.Clear(
+            gameFactionId);
+
         Dictionary<string, object> root =
             MiniJson.Deserialize(json)
             as Dictionary<string, object>;
@@ -132,6 +136,17 @@ public static class YellowScribeImporter
             result.SourceFaction =
                 gameFactionId;
         }
+
+        RosterImportMetadataStore.RecordYellowScribe(
+
+            gameFactionId,
+
+            json,
+
+            result.SourceFaction,
+
+            result.Units);
+
 
         return result;
     }

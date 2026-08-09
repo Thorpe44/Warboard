@@ -807,16 +807,34 @@ private void ResetDetachmentForRosterChange()
     }
 
 private void EnsureRulesBinding()
-    {
-        if (rules != null ||
-            Game == null)
-        {
-            return;
-        }
+{
+    if (Game == null)
+        return;
 
+    if (rules == null)
+    {
         rules =
             Game.AeldariRules;
     }
+
+    if (rules == null)
+        return;
+
+    // v37.1: roster import notifies faction controllers immediately. Ensure
+    // the backing AeldariRulesSystem knows the newly loaded armies before
+    // detachment validation/locking is attempted.
+    if (!rules.IsAeldariFaction(
+            FactionId))
+    {
+        rules.Configure(
+            Game.AllSquads != null
+                ? Game.AllSquads.ToList()
+                : new List<SquadController>(),
+            Game.FactionIds != null
+                ? Game.FactionIds.ToList()
+                : new List<string>());
+    }
+}
 
 private void SynchronizeDetachmentState()
 {
