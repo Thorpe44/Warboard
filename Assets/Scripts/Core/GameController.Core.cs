@@ -4838,19 +4838,9 @@ public partial class GameController : MonoBehaviour
         SquadController a,
         SquadController b)
     {
-        if (a == null ||
-            b == null)
-        {
-            return false;
-        }
-
         return
-            JoinedDistance(
-                a,
-                b
-            ) <=
-            EngagementRange +
-            0.001f;
+            CoreRules11Geometry
+                .UnitsEngaged(a, b);
     }
 
     public bool ModelCanSeeUnit(
@@ -6474,6 +6464,9 @@ public partial class GameController : MonoBehaviour
 
         if (phase == Phase.Move)
         {
+            // 11e 09.02.01: every unit must be selected in the Move Units step. Untouched units resolve as Remain Stationary without move-start/end triggers.
+            ResolveImplicitRemainStationarySelections();
+
             SquadController veilUnit =
                 squads.FirstOrDefault(
                     squad =>
@@ -6534,6 +6527,10 @@ public partial class GameController : MonoBehaviour
 
     private void CompletePhaseTransition()
     {
+        // 11e 14.02.01: objective control is determined before other end-of-phase rules.
+        ResolveCoreObjectiveControlTiming();
+
+
         string factionPhaseSummary = "";
 
         ApplyAeldariEndOfPhaseObjectiveRules();
@@ -6850,6 +6847,10 @@ public partial class GameController : MonoBehaviour
 
     private void EndTurn()
     {
+        // 11e: objective control is determined first at end of turn, before other rules and mission resolution.
+        ResolveCoreObjectiveControlTiming();
+
+
         NotifyTurnEnded();
 
         string missionScore = "";

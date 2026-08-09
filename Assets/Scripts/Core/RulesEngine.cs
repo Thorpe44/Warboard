@@ -207,6 +207,36 @@ public static class RulesEngine
                     weapon
                   );
 
+            // v39 11e Benefit of Cover: cover worsens the attacking BS
+            // characteristic by 1; it does not improve the target's save.
+            bool v39BenefitOfCover =
+                mode == AttackMode.Ranged &&
+                game != null &&
+                (game.TargetUnitHasCoverFromShooter(
+                    model,
+                    target
+                 ) ||
+                 UniversalRuleRegistry.UnitHasRule(
+                    target.JoinedActionController(),
+                    "stealth"
+                 ));
+
+            bool v39IgnoresCover =
+                WeaponRuleParser.Has(
+                    weapon,
+                    "ignores_cover"
+                );
+
+            if (v39BenefitOfCover &&
+                !v39IgnoresCover)
+            {
+                skill =
+                    Mathf.Min(
+                        7,
+                        skill + 1
+                    );
+            }
+
             bool torrent =
                 HasKeyword(
                     weapon,
@@ -503,32 +533,6 @@ public static class RulesEngine
                         7
                     );
 
-                bool hasCover =
-                    mode == AttackMode.Ranged &&
-                    game != null &&
-                    game.TargetModelHasCoverFromShooter(
-                        model,
-                        allocated
-                    );
-
-                if (hasCover)
-                {
-                    int improved =
-                        Mathf.Max(
-                            3,
-                            saveTarget - 1
-                        );
-
-                    if (improved <
-                        saveTarget)
-                    {
-                        saveTarget =
-                            improved;
-
-                        coverSaves++;
-                    }
-                }
-
                 int saveRoll =
                     DiceRoller.RollD6(
                         "Save: " +
@@ -555,7 +559,11 @@ public static class RulesEngine
 
                     int lost =
                         allocated.ApplyDamage(
-                            rolledDamage
+                            UniversalRuleRegistry.ApplyFeelNoPain(
+                                allocated.Squad,
+                                rolledDamage,
+                                weapon.displayName
+                            )
                         );
 
                     woundsLost += lost;
@@ -602,7 +610,12 @@ public static class RulesEngine
 
                 int lost =
                     allocated.ApplyDamage(
-                        mortalDamage
+                        UniversalRuleRegistry.ApplyFeelNoPain(
+                            allocated.Squad,
+                            mortalDamage,
+                            "Devastating Wounds: " +
+                            weapon.displayName
+                        )
                     );
 
                 woundsLost += lost;
@@ -713,7 +726,11 @@ public static class RulesEngine
 
             hazardMortalWounds +=
                 hazardTarget.ApplyDamage(
-                    mortalWounds
+                    UniversalRuleRegistry.ApplyFeelNoPain(
+                        hazardTarget.Squad,
+                        mortalWounds,
+                        "Hazardous"
+                    )
                 );
         }
 

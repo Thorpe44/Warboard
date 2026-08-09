@@ -144,18 +144,12 @@ public class ObjectiveController : MonoBehaviour
             .JoinedLivingModelTokens()
             .Any(
                 model =>
-                    Vector2.Distance(
-                        new Vector2(
-                            model.transform.position.x,
-                            model.transform.position.z
-                        ),
-                        new Vector2(
-                            transform.position.x,
-                            transform.position.z
+                    CoreRules11Geometry
+                        .ModelWithinObjective(
+                            model,
+                            transform.position,
+                            ControlRadius
                         )
-                    ) -
-                    model.BaseRadiusInches <=
-                    ControlRadius
             );
     }
 

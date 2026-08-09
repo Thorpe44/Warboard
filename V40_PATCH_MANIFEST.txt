@@ -1,0 +1,11 @@
+WARBOARD v40 PATCH MANIFEST
+
+Assets/Editor/WarboardV40FightPhaseCompliance.cs
+Assets/Editor/WarboardV40FightPhaseCompliance.cs.meta
+Assets/Scripts/Core/GameController.Fight11.cs
+Assets/Scripts/Core/GameController.Fight11.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+CORE_RULES_FIGHT_AUDIT_V40.md
+README_V40.md
+V40_PATCH_MANIFEST.txt

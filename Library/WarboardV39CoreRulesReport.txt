@@ -1,0 +1,13 @@
+Warboard v39 Core Rules compliance migration complete.
+
+Installed:
+- 11e base-to-base 2/5 and 9/5 coherency geometry
+- 11e base-to-base 2/5 engagement geometry
+- 11e 3/5 objective range geometry
+- objective-control pre-pass before end-of-phase/end-of-turn rules
+- automatic Remain Stationary selection for untouched units when Movement ends
+- generic action eligibility gate
+- 11e cover as BS degradation in the automatic attack path
+- Feel No Pain parity in the automatic attack path
+
+See CORE_RULES_AUDIT_V39.md for full section-by-section status and remaining work.

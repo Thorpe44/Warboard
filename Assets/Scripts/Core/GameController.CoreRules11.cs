@@ -4,6 +4,7 @@ using UnityEngine;
 
 public partial class GameController
 {
+    // WARBOARD_V39_CORE_RULES_COMPLIANCE
     /// <summary>
     /// 11e requires objective control to be determined before any other
     /// end-of-phase/end-of-turn rules. Controller() is live rather than stored,

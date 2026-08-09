@@ -1533,6 +1533,15 @@ public class MissionSystem
         SquadController unit,
         out string reason)
     {
+        if (!CoreRules11Actions.CanStart(
+                game,
+                unit,
+                out reason))
+        {
+            return false;
+        }
+
+
         reason = "";
 
         if (unit == null)

@@ -1236,28 +1236,30 @@ public class SquadController : MonoBehaviour
         int total = 0;
 
         foreach (ModelToken model
-            in actionUnit.JoinedLivingModelTokens())
+            in actionUnit
+                .JoinedLivingModelTokens())
         {
-            float distance =
-                Vector2.Distance(
-                    new Vector2(
-                        model.transform.position.x,
-                        model.transform.position.z
-                    ),
-                    new Vector2(
-                        point.x,
-                        point.z
-                    )
-                ) -
-                model.BaseRadiusInches;
-
-            if (distance <= radius)
+            if (model == null ||
+                !model.IsAlive ||
+                !CoreRules11Geometry
+                    .ModelWithinObjective(
+                        model,
+                        point,
+                        radius
+                    ))
             {
-                total +=
-                    actionUnit.EffectiveObjectiveControl(
-                        model
-                    );
+                continue;
             }
+
+            int oc =
+                actionUnit
+                    .AeldariObjectiveControlOverride > 0
+                ? actionUnit
+                    .AeldariObjectiveControlOverride
+                : model.ObjectiveControl;
+
+            total +=
+                Mathf.Max(0, oc);
         }
 
         return total;
@@ -1701,11 +1703,7 @@ public class SquadController : MonoBehaviour
                     unvisited
                         .Where(
                             other =>
-                                HorizontalDistance(
-                                    current.transform.position,
-                                    other.transform.position
-                                ) <=
-                                2.0f
+                                CoreRules11Geometry.WithinCoherencyNeighbour(current, other)
                         )
                         .ToList();
 
@@ -2007,47 +2005,53 @@ public class SquadController : MonoBehaviour
 
         List<ModelToken> living =
             actionUnit
-                .JoinedLivingModelTokens();
+                .JoinedLivingModelTokens()
+                .Where(
+                    model =>
+                        model != null &&
+                        model.IsAlive
+                )
+                .ToList();
 
-        List<ModelToken> result =
+        List<ModelToken> invalid =
             new List<ModelToken>();
 
         if (living.Count <= 1)
-            return result;
+            return invalid;
 
         foreach (ModelToken model
             in living)
         {
-            bool hasNeighbourWithinTwo =
+            bool hasNeighbour =
                 living.Any(
                     other =>
                         other != model &&
-                        HorizontalDistance(
-                            model.transform.position,
-                            other.transform.position
-                        ) <= 2.0f
+                        CoreRules11Geometry
+                            .WithinCoherencyNeighbour(
+                                model,
+                                other
+                            )
                 );
 
-            bool withinNineOfEveryone =
+            bool withinNine =
                 living.All(
                     other =>
                         other == model ||
-                        HorizontalDistance(
-                            model.transform.position,
-                            other.transform.position
-                        ) <= 9.0f
+                        CoreRules11Geometry
+                            .WithinCoherencyAll(
+                                model,
+                                other
+                            )
                 );
 
-            if (!hasNeighbourWithinTwo ||
-                !withinNineOfEveryone)
+            if (!hasNeighbour ||
+                !withinNine)
             {
-                result.Add(
-                    model
-                );
+                invalid.Add(model);
             }
         }
 
-        return result;
+        return invalid;
     }
 
     public int IncoherentModelCount()
@@ -2111,38 +2115,35 @@ public class SquadController : MonoBehaviour
             return true;
         }
 
-        // 11e prototype coherency:
-        // every model must be within 2" of at least one squadmate,
-        // and within 9" of every other model in the unit.
-        foreach (ModelToken model in living)
+        foreach (ModelToken model
+            in living)
         {
-            bool hasNeighbourWithinTwo =
+            bool hasNeighbour =
                 living.Any(
                     other =>
                         other != model &&
-                        HorizontalDistance(
-                            model.transform.position,
-                            other.transform.position
-                        ) <=
-                        2.0f
+                        CoreRules11Geometry
+                            .WithinCoherencyNeighbour(
+                                model,
+                                other
+                            )
                 );
 
-            if (!hasNeighbourWithinTwo)
-                return false;
+            bool withinNine =
+                living.All(
+                    other =>
+                        other == model ||
+                        CoreRules11Geometry
+                            .WithinCoherencyAll(
+                                model,
+                                other
+                            )
+                );
 
-            foreach (ModelToken other in living)
+            if (!hasNeighbour ||
+                !withinNine)
             {
-                if (other == model)
-                    continue;
-
-                if (HorizontalDistance(
-                        model.transform.position,
-                        other.transform.position
-                    ) >
-                    9.0f)
-                {
-                    return false;
-                }
+                return false;
             }
         }
 
