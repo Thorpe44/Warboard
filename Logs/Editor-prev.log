@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.5/staging' branch; Version is '6000.5.7f1 (017862109af0) revision 96354'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0" at "2026-08-09T20:29:32.7057085Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0" at "2026-08-09T21:07:56.7832158Z"
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 15681 MB
 BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-08-09T20:29:32Z
+Date: 2026-08-09T21:07:56Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Unity.exe
@@ -60,38 +60,38 @@ C:/Users/elli0/Documents/GitHub/Warboard
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [22932]  Target information:
+Player connection [32604]  Target information:
 
-Player connection [22932]  * "[IP] 192.168.1.228 [Port] 55504 [Flags] 2 [Guid] 1248637588 [EditorId] 1248637588 [Version] 1048832 [Id] WindowsEditor(7,Elliot_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [32604]  * "[IP] 192.168.1.228 [Port] 55504 [Flags] 2 [Guid] 2840410920 [EditorId] 2840410920 [Version] 1048832 [Id] WindowsEditor(7,Elliot_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [22932] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [22932] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [32604] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [32604] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-3480" after 0.3 seconds.
-[Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-elli0"
 [Licensing::IpcConnector] LicenseClient-elli0 channel disconnected successfully.
 [Licensing::IpcConnector] Channel LicenseClient-elli0-6000.5.7 doesn't exist
-[Licensing::Module] Successfully launched the LicensingClient (PId: 31324)
+[Licensing::Module] Successfully launched the LicensingClient (PId: 32776)
+[Package Manager] Connected to IPC stream "Upm-31556" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
 Starting IPC server.
 Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-elli0-6000.5.7, press Ctrl-C to exit.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7" at "2026-08-09T20:29:34.2733492Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 31324, path: "C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7" at "2026-08-09T21:07:58.5520731Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 32776, path: "C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              81d20f9a8db4448ca06def4f4301b109
-  Correlation Id:          54b3a9d46c4efb6bdbc2d8fa9f6fdc1e
-  External correlation Id: 8782309122612912028
+  Session Id:              fd28f7e1f7c841929ec4f7fdd89c7e3d
+  Correlation Id:          1cd84b92edb538fa24abf4753f192752
+  External correlation Id: 4628900176180982202
   Machine Id:              JOUP1U45KtUV8sm1s/K3HmNb45Q=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-elli0-6000.5.7" (connect: 0.37s, validation: 0.19s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7-notifications" at "2026-08-09T20:29:34.4712664Z"
-[Licensing::Module] Connected to LicensingClient (PId: 31324, launch time: 0.01, total connection time: 0.57s)
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-elli0-6000.5.7" (connect: 0.37s, validation: 0.26s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-elli0-6000.5.7-notifications" at "2026-08-09T21:07:58.8216422Z"
+[Licensing::Module] Connected to LicensingClient (PId: 32776, launch time: 0.06, total connection time: 0.64s)
 [Licensing::Client] Successfully updated the access token
 [Licensing::Module] Successfully updated the access token PfX7ad6Lo_...
 [Licensing::Client] Successfully resolved entitlement details
@@ -102,8 +102,8 @@ Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-elli0-6000.5.7, p
   Expiration: Unlimited
 [Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
 [Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] Licensing Background thread has ended after 1.82s
-[Licensing::Module] Licensing is initialized (took 1.21s).
+[Licensing::Module] Licensing Background thread has ended after 2.10s
+[Licensing::Module] Licensing is initialized (took 0.52s).
 [Licensing::Client] Successfully resolved entitlement details
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
@@ -135,7 +135,7 @@ Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/Managed
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56480
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56556
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
@@ -143,30 +143,30 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002552 seconds.
+Registered in 0.005091 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.472 seconds
-Domain Reload Profiling: 1078ms
-	BeginReloadAssembly (167ms)
+- Finished resetting the current domain, in  0.682 seconds
+Domain Reload Profiling: 1508ms
+	BeginReloadAssembly (234ms)
 		CreateAndSetChildDomain (12ms)
-	RebuildCommonClasses (6ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (76ms)
-	LoadAllAssembliesAndSetupDomain (336ms)
-		LoadAssemblies (153ms)
-		AnalyzeDomain (247ms)
-			TypeCache.Refresh (245ms)
-				TypeCache.ScanAssembly (230ms)
-	FinalizeReload (476ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (111ms)
+	LoadAllAssembliesAndSetupDomain (441ms)
+		LoadAssemblies (218ms)
+		AnalyzeDomain (331ms)
+			TypeCache.Refresh (329ms)
+				TypeCache.ScanAssembly (305ms)
+	FinalizeReload (686ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (103ms)
-			ProcessInitializeOnLoadAttributes (111ms)
-			ProcessInitializeOnLoadMethodAttributes (170ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (141ms)
+			ProcessInitializeOnLoadAttributes (155ms)
+			ProcessInitializeOnLoadMethodAttributes (270ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
 [Package Manager] Restoring resolved packages state from cache
@@ -178,7 +178,7 @@ Application.AssetDatabase Initial Refresh Start
     com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\elli0\Documents\GitHub\Warboard\Library\PackageCache\com.unity.modules.jsonserialize)
     com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\elli0\Documents\GitHub\Warboard\Library\PackageCache\com.unity.modules.unitywebrequest)
 [Subsystems] No new subsystems found in resolved package list.
-[Package Manager] Done registering packages in 0.01 seconds
+[Package Manager] Done registering packages in 0.02 seconds
 [ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
 info: Microsoft.Hosting.Lifetime[14]
       Now listening on: http://localhost:80
@@ -195,113 +195,589 @@ info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
       Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
 info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
-      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 32.0645ms
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 41.7309ms
 Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
 WorkingDir: C:/Users/elli0/Documents/GitHub/Warboard
-ExitCode: 0 Duration: 4s309ms
-[162/168    3s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+ExitCode: 4 Duration: 4s219ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+*** Tundra requires additional run (4.11 seconds), 1 items updated, 161 evaluated
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/elli0/Documents/GitHub/Warboard
+ExitCode: 0 Duration: 0s335ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/elli0/Documents/GitHub/Warboard
+ExitCode: 0 Duration: 3s476ms
+Finished compiling graph: 171 nodes, 617 flattened edges (607 ToBuild, 4 ToUse), maximum node priority 18
+[161/168    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[162/168    2s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
 Assets\Scripts\Core\CoreRules11Completion.cs(46,16): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
 [163/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
-[164/168    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
-[165/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
-[166/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[164/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[165/168    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[166/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
 [167/168    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-*** Tundra build success (4.26 seconds), 6 items updated, 168 evaluated
+*** Tundra build success (3.44 seconds), 7 items updated, 168 evaluated
 Assets\Scripts\Core\CoreRules11Completion.cs(46,16): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
 Total cache size 16069784
-Total cache size after purge 16069784, took 00:00:00.0306656
-AssetDatabase: script compilation time: 5.226875s
+Total cache size after purge 16069784, took 00:00:00.0566281
+AssetDatabase: script compilation time: 9.531569s
 Begin MonoManager ReloadAssembly
+Importing 'GUID: 219b7dd40ed1eff4580345e053960696 - Path: Assets/Resources/Armies/Models/Custodes' with importer (DefaultImporter)
+Imported 'GUID: 219b7dd40ed1eff4580345e053960696' -> (Import Result ID: '9be4eaf8b71b588ca6d6cd163450c849') in 0.037 seconds [static dependencies only]. Details - ImportResultOutputID=e92f00e197530245bc47cd27389be125 DependenciesID=029c7bf27b6557a34ddb5ab45580c9d4 StaticDependenciesID=4d5659aa204250616618c8e003260aab 
+Importing 'GUID: 7743fa2106db6a04d85b1709c0a2ea55 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool' with importer (DefaultImporter)
+Imported 'GUID: 7743fa2106db6a04d85b1709c0a2ea55' -> (Import Result ID: '34cf72eb6a97b812f43534dafff447e1') in 0.014 seconds [static dependencies only]. Details - ImportResultOutputID=c272a399769cb4ab7a4062fcefc2a3e3 DependenciesID=99461a83aa77fa3c9e148db3f1daabd0 StaticDependenciesID=479b8f5404d617b025d0150b24c48455 
+Importing 'GUID: 4b3e192c9908cca43953cce44999298c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool' with importer (DefaultImporter)
+Imported 'GUID: 4b3e192c9908cca43953cce44999298c' -> (Import Result ID: 'e4a086d5f218cb090a9ecf752ab2a49b') in 0.015 seconds [static dependencies only]. Details - ImportResultOutputID=b5e2667b4ddcd10610863412e17e6831 DependenciesID=9dc42f9c489da5aa284004094d4db93c StaticDependenciesID=b35ee7b4e9243ce4b73a70bf3655215b 
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.524 seconds
-Domain Reload Profiling: 989ms
-	BeginReloadAssembly (265ms)
-		DisableScriptedObjects (31ms)
-		CreateAndSetChildDomain (63ms)
-	RebuildCommonClasses (11ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (123ms)
-		LoadAssemblies (131ms)
+- Finished resetting the current domain, in  0.557 seconds
+Domain Reload Profiling: 1062ms
+	BeginReloadAssembly (282ms)
+		DisableScriptedObjects (36ms)
+		CreateAndSetChildDomain (56ms)
+	RebuildCommonClasses (12ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (137ms)
+		LoadAssemblies (145ms)
 		AnalyzeDomain (14ms)
 			TypeCache.Refresh (8ms)
 				TypeCache.ScanAssembly (3ms)
 			BuildScriptInfoCaches (3ms)
-	FinalizeReload (526ms)
+	FinalizeReload (560ms)
 		SetupLoadedEditorAssemblies (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (103ms)
-			ProcessInitializeOnLoadAttributes (118ms)
-			ProcessInitializeOnLoadMethodAttributes (88ms)
-			AfterProcessingInitializeOnLoad (7ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
+			BeforeProcessingInitializeOnLoad (109ms)
+			ProcessInitializeOnLoadAttributes (126ms)
+			ProcessInitializeOnLoadMethodAttributes (96ms)
+			AfterProcessingInitializeOnLoad (10ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Importing 'GUID: e1966ae8ac92f9e4a8d22ff6c4de343b - Path: Assets/Scripts/Core/ModelVisualRegistry.cs.custodes-backup' with importer (DefaultImporter)
+Imported 'GUID: e1966ae8ac92f9e4a8d22ff6c4de343b' -> (Import Result ID: 'cbdf5dc84f7ca18c40a58740cfb74bfd') in 0.059 seconds [static dependencies only]. Details - ImportResultOutputID=77a628bfc89d227b5dcbbc34dbeea165 DependenciesID=19f5524a9ffb5faacebe97e8b3abc14a StaticDependenciesID=a54175a15c3188d61f306e6dd00e3497 
+Importing 'GUID: 0059eeb922a623e41b36bfbf85a2a431 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12128383371525768858AA088AB906169305FD81466A0CBF914698962687.jpg' with importer (TextureImporter)
+Imported 'GUID: 0059eeb922a623e41b36bfbf85a2a431' -> (Import Result ID: 'ed6a2d8949c2be48ae4f8fc59d681b69') in 0.485 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=480a270f3400311d28de030076ac1ed4 DependenciesID=745eac9c5e50e5cadde0d40375f754e2 StaticDependenciesID=a707e014ac8ab71331693e2007ce9357 
+Importing 'GUID: 60608cacfbd475d41b1ab3b80c22f2f6 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978722508A55465E941AB248CCF861E1FC93B2DFC8FFC8FE.jpg' with importer (TextureImporter)
+Imported 'GUID: 60608cacfbd475d41b1ab3b80c22f2f6' -> (Import Result ID: 'e1d19fbd6c887e5d17c67363388832d0') in 0.124 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2fb4f71017c7a584fdbffcf9b6cb04e8 DependenciesID=61404309404fe1b1d0b32f2cf4ff55a3 StaticDependenciesID=2a6bc139783b175533deb55d8e95903a 
+Importing 'GUID: 607d3a95ec63c6a44b82e289c9193bd0 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985669682289C5F2FE05428A46FDC0AA1EC92E6CD2976B62FFC.jpg' with importer (TextureImporter)
+Imported 'GUID: 607d3a95ec63c6a44b82e289c9193bd0' -> (Import Result ID: 'f6b5446674e0599c534dcd6ef2d113f0') in 0.120 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c838a49e3bfb3f053a3cf07c298adacd DependenciesID=6131ca2051f73cf9820b8ec240cb24fe StaticDependenciesID=421dffda31f2a7338b5da16b2205fbf0 
+Importing 'GUID: 9022a81b96f14c64596c0963cdd094f7 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14565709098843504768AE1B7F7709F7C91438FBBCC29A43DC8EF7C6202E.jpg' with importer (TextureImporter)
+Imported 'GUID: 9022a81b96f14c64596c0963cdd094f7' -> (Import Result ID: '32824ef3cc4c2e7ba06da8b94ded779d') in 0.383 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4ec28dae9ac8276ce35c5397b2ccaf5f DependenciesID=adfa32dcba01b79895c186581e15c4b0 StaticDependenciesID=3483fe949c3303a00e6844e3e0ea9c95 
+Importing 'GUID: 90966d57d0d4caf4ebbbda62e744b24d - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1029580186709972353BD4C48310E2F701508F4A786C0C72DDD66461C7A.jpg' with importer (TextureImporter)
+Imported 'GUID: 90966d57d0d4caf4ebbbda62e744b24d' -> (Import Result ID: 'c5cedb45d9af6176345f90a5d8fab445') in 0.121 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=01e2ff171e3121ecab23b3781b772115 DependenciesID=73a09d2a4a17445c93b849b247f11bf2 StaticDependenciesID=4af627b6a5e20661c3a664a65db767db 
+Importing 'GUID: e0d5fd1b132542a4f93ce2228a538c71 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430628404029644277D636A6842401D764A3C56DC776BEDD2B16AE8.jpg' with importer (TextureImporter)
+Imported 'GUID: e0d5fd1b132542a4f93ce2228a538c71' -> (Import Result ID: '638cf7657a0abe30b4d191aed5221c1a') in 0.130 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b61d2588a8b13e662b50ccbc68c2c3eb DependenciesID=b04fd981336639a45aa8e91c959e94ba StaticDependenciesID=6c547ad662c8fb12e4dc0c5f1b5ac9fc 
+Importing 'GUID: f067904e439a02941b99abdffa8ff7d5 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498567082764775CAB9603D23CADA9F646DCA391BB8B4A86EFD5.jpg' with importer (TextureImporter)
+Imported 'GUID: f067904e439a02941b99abdffa8ff7d5' -> (Import Result ID: '5d37b4355c97df06cc2b83ca8ca423bd') in 0.122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e17662e10174635a60093c01aee0bc5b DependenciesID=024eb6bae98d10873fcc40d4f49a4ec9 StaticDependenciesID=7016d71bed1d890484484c546c8b9019 
+Importing 'GUID: 014b09515e618464fb6f6f86195be753 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc17817311257201378220F77E73971595CE2A34BA5763EB0A3AA004675AF.jpg' with importer (TextureImporter)
+Imported 'GUID: 014b09515e618464fb6f6f86195be753' -> (Import Result ID: '0f05194bb874be06e9db8e73e466c6b6') in 0.407 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=91e59d2c560df0bc504c726326721c2c DependenciesID=54915c614059fef8e62b27f62f40f3dd StaticDependenciesID=8b0975e652d6ab0e3263529ac5775887 
+Importing 'GUID: 1180ed7f32f0a8c4eb34e4beef39ca3b - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978673083EB65DAAF4AA037AF02C26701925949488075832.jpg' with importer (TextureImporter)
+Imported 'GUID: 1180ed7f32f0a8c4eb34e4beef39ca3b' -> (Import Result ID: '5fe047e923126988d43129cc5c748c55') in 0.122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b1412a0ae583a584c1f65cd0c9f8fdc4 DependenciesID=1deeae64594cce9bfa62ef5767c22826 StaticDependenciesID=e023c27f926948d3f41cf47401424890 
+Importing 'GUID: 21d1d24c95aac1e4cbfb328d17e51d61 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc110544324588304516533EB2FA0A3579DD5B3BECA9EB9CA641537C8FF5D6.jpg' with importer (TextureImporter)
+Imported 'GUID: 21d1d24c95aac1e4cbfb328d17e51d61' -> (Import Result ID: '4a3f289afed2daa187b4ca24fddc26c2') in 0.378 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=690418b5c0cc6f3df4985f06119e59d0 DependenciesID=a8218f18c64c703eb5478039cd75eefc StaticDependenciesID=146de7851edee84feb7977a1d95c82a7 
+Importing 'GUID: 21cbbb0e533f07c4ebbf7ba419c58187 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985670819731CB37E7DAE8DD465CA634A1B209E22C6DD2B3F16.jpg' with importer (TextureImporter)
+Imported 'GUID: 21cbbb0e533f07c4ebbf7ba419c58187' -> (Import Result ID: '1badc84d95bef6840022dfe03fec44ec') in 0.121 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a843739774c253b43c33b1e0849e1467 DependenciesID=b3e15d706b360099e4e20d16c45d4c21 StaticDependenciesID=a1af2bfd35198842be7be5f68dd043aa 
+Importing 'GUID: 31c46a0cde111544ba70bb7295b8afa9 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10013938250541442264DEA056BA6E699BF4DA572867A8F117EC2C266B8.jpg' with importer (TextureImporter)
+Imported 'GUID: 31c46a0cde111544ba70bb7295b8afa9' -> (Import Result ID: 'aa4ac33e465125f102cf02f96bf72640') in 0.411 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=06d2fd546d68543f2ea99d0d9e0f123b DependenciesID=766e11edca67554f428444a72a9047c4 StaticDependenciesID=ab82781a865b6de51108a7e05e67fc47 
+Importing 'GUID: 31cc98d72fc27fe45a9e8d8033e2dcff - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14561935396444137599CFFB5670D34C7FF39CC863A6B9D66B4D81351FCF.jpg' with importer (TextureImporter)
+Imported 'GUID: 31cc98d72fc27fe45a9e8d8033e2dcff' -> (Import Result ID: '07c1865fb652c6c4f4ee0b0984814a4a') in 0.347 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9d3e427d5c9ef3264904a5b4f310c2a5 DependenciesID=67dce196c4edfb311a130644811402dd StaticDependenciesID=c42b004d576a886d0739005e6020ee35 
+Importing 'GUID: 5112b6a5bcd079c46a0371505df9e309 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985669688570D36AA64F38EB10E2DB8D3E58D2F2324653411C6.jpg' with importer (TextureImporter)
+Imported 'GUID: 5112b6a5bcd079c46a0371505df9e309' -> (Import Result ID: 'fe7b052035ca6bf8844384a5de9969b6') in 0.122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a2550252142d8623e0bb1dee4e36f37b DependenciesID=ecc267638186509fa1a7bdfce088408b StaticDependenciesID=e2d72b958795526e4e4ab40660bd064b 
+Importing 'GUID: 8101fa0f25c63f94e951737e48499107 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194677701499A3AFE175B8A55AB603801036ECBF942E646CC7B5.png' with importer (TextureImporter)
+Imported 'GUID: 8101fa0f25c63f94e951737e48499107' -> (Import Result ID: '7d46d7110a9794e49df35380da392ffc') in 0.177 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=256d81109f4786e58c56d3514ab88c10 DependenciesID=dcbf44ee2859a9021bce614e4a7bc676 StaticDependenciesID=bea80f4c751552bdf8c46d96375eb833 
+Importing 'GUID: 818118c13bb80454db3084f75e62566c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc155871891669372221183F269D26632B4B656D314DD15E00E90843CB9745.jpg' with importer (TextureImporter)
+Imported 'GUID: 818118c13bb80454db3084f75e62566c' -> (Import Result ID: 'd83d9f6ff801ee4254244f7c9794bf33') in 0.417 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9c3afd890a19019c1b6abcbcd3e35cc5 DependenciesID=b98559c50ab3063a280ae2d469a72cef StaticDependenciesID=2c5d88cf6ff7147e718ca5e19d8ede68 
+Importing 'GUID: 91b9906ca83e4cc479ffbcb3a45fd227 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978695544C8E7E21C74B7EE9DCB982785C97650CAF6F79F4.jpg' with importer (TextureImporter)
+Imported 'GUID: 91b9906ca83e4cc479ffbcb3a45fd227' -> (Import Result ID: '0d2ee3bc97542048061fa502a15fb87a') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=438a7305c076ddbc5219e402a2160992 DependenciesID=089f238f0a5074476defb071a6c7aa6b StaticDependenciesID=9fe7b2d86a28f6925da05e23f245a532 
+Importing 'GUID: a11b8241fe3cd614193a1d9a45c53a34 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13014103330245238354AA58696A831BED9B0B5E67B39D21B24A1783A981.jpg' with importer (TextureImporter)
+Imported 'GUID: a11b8241fe3cd614193a1d9a45c53a34' -> (Import Result ID: 'dc50cf4ab9db1ab65ad339ef6d483cc0') in 0.358 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=885ab144ac0541b5dab2e5746b35b252 DependenciesID=6c4660a89c18e564f11294da5bce1d58 StaticDependenciesID=13c37023dc9d7e26449591832b2ae8b5 
+Importing 'GUID: b1041547bf7f9554987bdce0f031e9fb - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498566886734B257832E13DDFDC5837DB0BB993E52ECDCD69D6A.jpg' with importer (TextureImporter)
+Imported 'GUID: b1041547bf7f9554987bdce0f031e9fb' -> (Import Result ID: '32184c9747a9eb48ddfdb43fe949b6c7') in 0.115 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=47420368de75b2fc8b81602abcf53f38 DependenciesID=2b3e3e13cdde6fe90d1f1ab242ae3cc7 StaticDependenciesID=cd12ba9b6780849c2c0c8f6608b65d46 
+Importing 'GUID: c1655906495acfa48a9adb6d188b9a2f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12489407793534531037CF63F002DBAC6E6B463C519B31C67659B3CB99F2.jpg' with importer (TextureImporter)
+Imported 'GUID: c1655906495acfa48a9adb6d188b9a2f' -> (Import Result ID: 'dae9f351e2f57f296dfcc47a7c051bcf') in 0.412 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c689c22b69fe2e548073d1361669bca7 DependenciesID=40bd499b9e57fd05fe91097e933b48df StaticDependenciesID=b38ae912a4431363214e3f90cf3bfe9d 
+Importing 'GUID: 02475665127a241448b21464c527b439 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18320137091868427475637A30FF7C664724562DB0709BBC1514AB2CD1DC.jpg' with importer (TextureImporter)
+Imported 'GUID: 02475665127a241448b21464c527b439' -> (Import Result ID: 'd90611870353195aef72935d3d70b071') in 0.356 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=19200bf06db98538d5a9bb2e6002c6da DependenciesID=e8b2b55fe9b340b3064114d21939daf5 StaticDependenciesID=17be8642cd0baafbad0bfb8f1f73e010 
+Importing 'GUID: 121ab099bb896884a8c4a586d648b26a - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14913819375214553844B8FD333F34F7E80BB9CCD123F687851D4C4ACE30.jpg' with importer (TextureImporter)
+Imported 'GUID: 121ab099bb896884a8c4a586d648b26a' -> (Import Result ID: '1bd229eb4a51c0458f74fe96db6cbe3c') in 0.351 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a53491d426ddbccdc4ab31395fdaff07 DependenciesID=7b661fa62e4748dc9f60e6d540faac58 StaticDependenciesID=0310de2ef386fd2fa95bb568c674d6c7 
+Importing 'GUID: 52e81045d8b6b3b4c88d5196da600076 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2380801904436850126D5C4B31CF4FE649B9B2AB160A207FAA838018BEF.jpg' with importer (TextureImporter)
+Imported 'GUID: 52e81045d8b6b3b4c88d5196da600076' -> (Import Result ID: 'cb17f8a5bd6b27b4a60cb9d7be20fe96') in 0.113 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d3b77b830d00e378d7b29f6c72d076c4 DependenciesID=17a7faf9f50f44a11ca62be9fbb641d7 StaticDependenciesID=c9448244a8c1896e8db06e4e50cfd40a 
+Importing 'GUID: 626e81442803f3342ae8a1945a9a56b3 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10790527710376686443922DCD41FE3443D9BE675A603683C9666E108.jpg' with importer (TextureImporter)
+Imported 'GUID: 626e81442803f3342ae8a1945a9a56b3' -> (Import Result ID: '81287ba8153fd788c7c7848113ccd2dd') in 0.372 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ada11768862114bc55a194a69f6610f8 DependenciesID=5b275071b5122ac23ec9a88960f1c80a StaticDependenciesID=e90a3789b1019fd43bd37ff0478dfe73 
+Importing 'GUID: d29e574a4e72b9b4db1010ada84e118a - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194673178061E993E2EC2AE7CEBCA7A00B366F96969F088FBD07.png' with importer (TextureImporter)
+Imported 'GUID: d29e574a4e72b9b4db1010ada84e118a' -> (Import Result ID: '9d4ff795b0f006e31ca1fd6fc753e1e0') in 0.175 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f5b7cddbefe944c17de2027b9a567ccd DependenciesID=2c9ace59a7886b072b537a0626f38e52 StaticDependenciesID=9f43f312ca77aa0e67a78b13c8c4cf13 
+Importing 'GUID: 03e6de2c3a6dd234da29a886e7a524d2 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc228395254390968265292A1987B3A1FB8EE6B2B0EB3CC12ACBA64C84DF9.jpg' with importer (TextureImporter)
+Imported 'GUID: 03e6de2c3a6dd234da29a886e7a524d2' -> (Import Result ID: '25572ce91a01628b6f6130175e4736bd') in 0.117 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8e4e5ff914d58af15b9526e01debae19 DependenciesID=995c776e88778d44d92bd394990037b2 StaticDependenciesID=85d4ff5169a6fa14d382a62642b61ac4 
+Importing 'GUID: 1360d38511a6b1e44ac3a48600eb189b - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1821147036166902000997EE64E11D03D8D8B979AB1BB91C59EED0FCC39.jpg' with importer (TextureImporter)
+Imported 'GUID: 1360d38511a6b1e44ac3a48600eb189b' -> (Import Result ID: 'e00ec21a9a21bc670494c958a9b137e5') in 0.138 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=161d2fc6de596c8230018f289d8f2fd7 DependenciesID=38b9244552ba45d050f14cee24d94526 StaticDependenciesID=2f91a7b2be7b92d4053fe9e66429fa7d 
+Importing 'GUID: 83ca5540b43632e44af6426f6525762d - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2404445481954314272DA94AA12122CAC909D56C61AA73A262732524A06.jpg' with importer (TextureImporter)
+Imported 'GUID: 83ca5540b43632e44af6426f6525762d' -> (Import Result ID: '69ecc2c8f81953c8b237346787889143') in 0.152 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6c546036f518c04fa721e1d2ea147ba0 DependenciesID=b4c7a997aa8185bacc97c23f6a223b77 StaticDependenciesID=66dd290f0b3bdb5224e1dc3e9ce3dc4e 
+Importing 'GUID: e3f506c1bf94986488f335b020ca33d8 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18122795233533359818BBED25253345B10951C88AB625585ACBCB747393.jpg' with importer (TextureImporter)
+Imported 'GUID: e3f506c1bf94986488f335b020ca33d8' -> (Import Result ID: '5102bfa190f6cd702d49e9aadbc47ed2') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=51af6eb7f9f553b72cc152f833dac523 DependenciesID=8b9d19e556dca59dd15ee018cec41f98 StaticDependenciesID=2a792cd8e61787cf6ce1a1cad1451b52 
+Importing 'GUID: 047906af5c2a86e4093dbf997a256d05 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1694663387668461296267269A03D7F1E7ADB80478129661D01BC5E957D3.jpg' with importer (TextureImporter)
+Imported 'GUID: 047906af5c2a86e4093dbf997a256d05' -> (Import Result ID: 'a5f388971bbe4bd0a17e4df37489fbe4') in 0.355 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8ae8971a67709ab59b6acc66970e834d DependenciesID=c2e2437bf6976641797ea08f665be411 StaticDependenciesID=d48229fe3f87accc823794721c4331fe 
+Importing 'GUID: 040bca81f0acfc54db7f0cf8dd9d1dee - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12645141954097003512D6F53B15A17B970A40BF67063F2436B025A700CB.jpg' with importer (TextureImporter)
+Imported 'GUID: 040bca81f0acfc54db7f0cf8dd9d1dee' -> (Import Result ID: '1f17665bf65ee3c6abb538a1e4fa38d8') in 0.403 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=58e51e59be69211890ae35aeb6437f44 DependenciesID=bc75d173da0ae80d37f1c65b64f4a8f3 StaticDependenciesID=08f21cf5e7c7fe453eb2b05cc964e668 
+Importing 'GUID: 14bf94798f2065f4eb92ccbfa5da6d41 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB.png' with importer (TextureImporter)
+Imported 'GUID: 14bf94798f2065f4eb92ccbfa5da6d41' -> (Import Result ID: '07b697c705e3b00247e2701b516334a5') in 0.167 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=00802fe375c70c4501dd4e2644f576d6 DependenciesID=270a1f2a5d69ed3b16ba4a2452b6b3ee StaticDependenciesID=a0d42e77417eface3dff451f1eaaa803 
+Importing 'GUID: 246ae7c5288971740a4c89f58f2817da - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497873999DBEFB21104779D098ADAB406E41BEC1848684407.jpg' with importer (TextureImporter)
+Imported 'GUID: 246ae7c5288971740a4c89f58f2817da' -> (Import Result ID: '4bacf72843dcf9feb10c65498d3b73c9') in 0.112 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=27cd2365f39365fe0935905be744ae11 DependenciesID=b2db36823bf18276279d98ecb8812ec8 StaticDependenciesID=9de94a01d3eaff98461a66fa6cf072d5 
+Importing 'GUID: 24dc0f3375dc31445b1164481852efb4 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc160418544166715580694522F52CB71B35CA00464224EB6BCE4D091BB9D3.jpg' with importer (TextureImporter)
+Imported 'GUID: 24dc0f3375dc31445b1164481852efb4' -> (Import Result ID: 'a7608dd2792b2c33ae1d4bb88d32b7c2') in 0.385 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1a1a6f8e497dd62d375fec99e2d29d3e DependenciesID=294005d1a7b78e9e29af6c99395c7612 StaticDependenciesID=27ec9eba66a9274e4036ec4bc3e40f88 
+Importing 'GUID: 3441f92419927e443944dcca7a275ded - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc9474031591108716333DEA3BB662960AABA0D87E95FC64EAE6031DB05A4.jpg' with importer (TextureImporter)
+Imported 'GUID: 3441f92419927e443944dcca7a275ded' -> (Import Result ID: '5ff6d9721dc202e6d9e7ddba6fb61935') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fe31bac0278e9e9c77e01bb966d37f8a DependenciesID=e530aca756e41996396d735c2e6892b5 StaticDependenciesID=34fc6cafbc794767c3a185d7fda7cf8b 
+Importing 'GUID: 8479c28aac7d2c24fb0c2d8904f5a9f4 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc16215376589171023172FEFB70FD6B0B4F70A45EB031CEAE1A6B3FC0D328.jpg' with importer (TextureImporter)
+Imported 'GUID: 8479c28aac7d2c24fb0c2d8904f5a9f4' -> (Import Result ID: 'f14915298f73256547590768ecadd686') in 0.366 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c4996ad32f539de53118b725db58b5fa DependenciesID=0cb2ac16678abd99192111ee437231e5 StaticDependenciesID=6267cb50dd49bd8d26830d6db204b7c4 
+Importing 'GUID: 84b95fcbbae1b944ebadefe4c1cee01f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc23808019044368496669891D0476DAD48089A0170BFB381A4DB399DE0AC.jpg' with importer (TextureImporter)
+Imported 'GUID: 84b95fcbbae1b944ebadefe4c1cee01f' -> (Import Result ID: '0504fe9bed0f51d42241a8fc1122d334') in 0.119 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ff3b250c4368e871cba16fb5e69ef498 DependenciesID=7ba87603bd6ebdbc48fca21a71119e51 StaticDependenciesID=d96562cb7b2e588e4a8a58bdeeb54b65 
+Importing 'GUID: b4e5e6e41ac40424ab1537b974e1c539 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12625092560155152560DFE6BD367B61F067D4153DB2F7B1F05A3FA7977E.jpg' with importer (TextureImporter)
+Imported 'GUID: b4e5e6e41ac40424ab1537b974e1c539' -> (Import Result ID: 'f94f07511e1c440358dfb8fd0cec01af') in 0.352 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1f8aa60b1d4720610e72e18e2bc42547 DependenciesID=80379bcf6f04b10df30fc25d4c3f68df StaticDependenciesID=ef0f75f52a83eebf42b9e555129e738a 
+Importing 'GUID: f4e9a2eb148d9c4408de1979f3335ae8 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1078980262905596446AC497CB413C20FBECBFB633FFA847990335995.jpg' with importer (TextureImporter)
+Imported 'GUID: f4e9a2eb148d9c4408de1979f3335ae8' -> (Import Result ID: '282b55b702210de4895d7b6c77e00a93') in 0.133 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=275442970f2f7665265b599d540cb6de DependenciesID=2602122d6078958dc5ec7fef08fa3e16 StaticDependenciesID=c6435781baac42984d60210b68f6d417 
+Importing 'GUID: 056c0dc5b0482b44aa2064452dfda57a - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985668854686A3F348E2D86D5120EE944C1F207828E5B894248.jpg' with importer (TextureImporter)
+Imported 'GUID: 056c0dc5b0482b44aa2064452dfda57a' -> (Import Result ID: '453ab5ff73bee4295d653d0c4da330e9') in 0.119 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b13b9693011e7430000a750d477b83f4 DependenciesID=34b32263492ef0803e6a69df80d8814f StaticDependenciesID=7c86c8348e8258d053165e3c0b585af7 
+Importing 'GUID: 85b2fcbcbaff58a458041e92b985c787 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc155803956308601788302E5DED6E52AC4D36628BBD951661D1B50D39ED4B.jpg' with importer (TextureImporter)
+Imported 'GUID: 85b2fcbcbaff58a458041e92b985c787' -> (Import Result ID: '0dc222a0c59f1278e51230f635323c05') in 0.374 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b712f70b2929a688170a5fd8d3a900e4 DependenciesID=18061b6519d5582e2cdaf68af16f3073 StaticDependenciesID=e8aff19998c24d065ace5a59e372c7c3 
+Importing 'GUID: 95512ba0d56378f4dbef454c2651a076 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14007928467632830425B9085F7225376EC82EF5BC5F012561CF676AC472.jpg' with importer (TextureImporter)
+Imported 'GUID: 95512ba0d56378f4dbef454c2651a076' -> (Import Result ID: '7907e189ca2937bf65524ba58a7d6462') in 0.375 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a6d1d2bd41d85e798b435d6aca9dd856 DependenciesID=66d4ddef26472537f9848dde5433b2de StaticDependenciesID=3cec3190be00e384dfc4f6002af4c565 
+Importing 'GUID: 95c6e7325db397044b01e1042118999f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc310567257096201426B7417BE7422EB92250A41CA357A4179BD1B969E.jpg' with importer (TextureImporter)
+Imported 'GUID: 95c6e7325db397044b01e1042118999f' -> (Import Result ID: '746bce5db5648b39dc133db6e16ff759') in 0.354 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5069a97c6d38ff27686c1e498962ef51 DependenciesID=77faa5d777a658ea6e65cd2a1dbeabed StaticDependenciesID=58e7316969278b44866dc8d4430705db 
+Importing 'GUID: 95883a9f327b28d4ca69f1865e6a9ccf - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc128519539762957023900AA46D85B4AC4ABA262D97E2C60330BAE51C2338.jpg' with importer (TextureImporter)
+Imported 'GUID: 95883a9f327b28d4ca69f1865e6a9ccf' -> (Import Result ID: '52c9ac9f31c4db0b6cabfdc9ff7c379b') in 0.369 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0891b8a46c02493343adc68070525c7e DependenciesID=153e79780be888f009acd447e7487796 StaticDependenciesID=f13937ecd322c0ab8cc904aebfac0c93 
+Importing 'GUID: c6e54ddbaa475744ba9992a8be3ff36d - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10791705628416087D6161A6E23CBBA37DA828E26A9A6CC637CB45D48.jpg' with importer (TextureImporter)
+Imported 'GUID: c6e54ddbaa475744ba9992a8be3ff36d' -> (Import Result ID: 'cb62ffcc0c1ca8ec79abc28630318c6b') in 0.350 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3e2004ec0ee4ed285560db90adfc1754 DependenciesID=dfedd8810972f733f3cdafbdb965933d StaticDependenciesID=fffc949be05b416780e9d50c628e56a1 
+Importing 'GUID: d60335810d3b0474fb9f8361e6a110dc - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc31071218222771047E6EB88B32D029A3E488F9BEDC0D8B9DC1AB67885.jpg' with importer (TextureImporter)
+Imported 'GUID: d60335810d3b0474fb9f8361e6a110dc' -> (Import Result ID: '9e1c841c7b1037ec9bfef8005dbe7d14') in 0.413 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a06769c9e87473192beda3577f454941 DependenciesID=21239240a2a671d9cd9cff8c2ea2f603 StaticDependenciesID=724bb061b6779a3dbbe7b4a96c6898f2 
+Importing 'GUID: 175f08e744049b0468b9a8a8aa4bc001 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5.jpg' with importer (TextureImporter)
+Imported 'GUID: 175f08e744049b0468b9a8a8aa4bc001' -> (Import Result ID: '9c14627880eea4e229b78efd959e4067') in 0.027 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5d06226f6a0f6e5d5e62597e246384ae DependenciesID=0d325fd889872bc833d924f45bbedcc9 StaticDependenciesID=d542f9d95fe36c3aa232afc6c833a628 
+Importing 'GUID: 5739a006c04dcef4394cf6c42202bd70 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1204295545634989123272B1717C952E34B86CFFE2313AFB30EB99D6C045.jpg' with importer (TextureImporter)
+Imported 'GUID: 5739a006c04dcef4394cf6c42202bd70' -> (Import Result ID: '9fca22d278c125499357e57a25084786') in 0.345 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=73259e83b59c413b8e96683409d6cbbe DependenciesID=80536cfabacb9af0442d3775c8a5fade StaticDependenciesID=7c469e9616affe6fe6ad220a2793c98d 
+Importing 'GUID: 67f2285aaadbad544b4757aad5aa855a - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc98920990603425139580D9F389E4EE18E30F563E2D18689ABFB750B0FB8.jpg' with importer (TextureImporter)
+Imported 'GUID: 67f2285aaadbad544b4757aad5aa855a' -> (Import Result ID: 'a9f40dffac8a7e0d1cfcf1b47522605d') in 0.362 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7e3e51f8836c1ce05a4dc1d3cb60245a DependenciesID=068f18caa396785ee68eaea36510f082 StaticDependenciesID=19bcfffc460ec9bea2caf52a0a4f07a8 
+Importing 'GUID: 67b441cc019bef14c8a9532d4e4bdcff - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc24922548030197637835D657997213DCA34E063D54207CFF9135C70A247.jpg' with importer (TextureImporter)
+Imported 'GUID: 67b441cc019bef14c8a9532d4e4bdcff' -> (Import Result ID: 'c9459c7a09ef2fee7bcc668c2dd6a8e2') in 0.495 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=24b6a1b60b12b1f1991e225a368622ba DependenciesID=cfacdc1918b5e5c63224bb306f7d4297 StaticDependenciesID=ce172c877a2dfe27a311679bf412f69c 
+Importing 'GUID: a7e0d786395a490418b70c12902c717f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc153124426767463789004D18ACED8FD0AB4EC14AD4F1022398241AA43CCD.jpg' with importer (TextureImporter)
+Imported 'GUID: a7e0d786395a490418b70c12902c717f' -> (Import Result ID: '3fd17b00d9cc5b8f6746da5495c9c329') in 0.372 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cd416035b07382acfff59d9e4ce80d86 DependenciesID=42a007e4a5201bfb9bc15f0af079d56d StaticDependenciesID=45774d299e5810d5d41c526bcbc2c56a 
+Importing 'GUID: 3876eb71ed3304943972e48c6da72740 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18211470361664513236036A1BA7406851561C37464BCA4FFAE803CDBDC.jpg' with importer (TextureImporter)
+Imported 'GUID: 3876eb71ed3304943972e48c6da72740' -> (Import Result ID: '37d5a6335bd46ca0b4fb902be4931e5c') in 0.141 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b71fb7a2769f32c87320600792d395dc DependenciesID=d666f2d3295c6baec02fd85342116ba1 StaticDependenciesID=15447a2c8c73831d047835db1c1b41bf 
+Importing 'GUID: 78f90a4c6057d25448e233606bcbe323 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497870521161E20282C854A8CB2E18EA76187913FF50F8745.jpg' with importer (TextureImporter)
+Imported 'GUID: 78f90a4c6057d25448e233606bcbe323' -> (Import Result ID: '81e5e592d735327fa731f0e16b548304') in 0.112 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=77d85415c705f8aecb2e6f26ab09794f DependenciesID=abac102020ef404e06a0100da4abd801 StaticDependenciesID=9754456332598dcb911860c675a2dbcb 
+Importing 'GUID: 8894fccd616c95446b8678314fdf4efb - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1486703883914937326C8C4A65059D3FEA64E2D3D88DB8B1137220470DA.jpg' with importer (TextureImporter)
+Imported 'GUID: 8894fccd616c95446b8678314fdf4efb' -> (Import Result ID: '55aa54d4cab388e8d479d039a50bdb59') in 0.147 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e03d6aefecef041d1738bfed7ea769af DependenciesID=dcce7813950b70100b5d9d59d4bbf981 StaticDependenciesID=85bcaaebf8a8afeb5d0ef8d90edd71e3 
+Importing 'GUID: a841e4f48a99a124fb13e1d3b172a919 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13054310568144318463CB4ABC1C32021C1C629E67C7D4D0AC229B2470B.jpg' with importer (TextureImporter)
+Imported 'GUID: a841e4f48a99a124fb13e1d3b172a919' -> (Import Result ID: '1afe87c8d814002045adda15a19d34f0') in 0.120 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3292b957a3888f01eec97cd33de31176 DependenciesID=e8d7c3c5316c14dc92b3436d8c9abd6b StaticDependenciesID=46e3a88a45763fa038fceaed2776c61b 
+Importing 'GUID: c8cab70e6886c804ca4b39459189c72a - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10789802628891194ABD9ED185D4882ECCD382717D2A91672A436E341.jpg' with importer (TextureImporter)
+Imported 'GUID: c8cab70e6886c804ca4b39459189c72a' -> (Import Result ID: 'fbee983e42ca080cacc71a737763c9a2') in 0.136 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=01eaacd569e8e6474efcf2f042e92393 DependenciesID=572b4a6a076a1a8532d7829a65b217d4 StaticDependenciesID=f267e3406a6c999c5981a711acde0b41 
+Importing 'GUID: 69a787ba527d31347af969f90e88ffec - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2380801904436850484D623EC94FB0F34C3D3A7558074328A01689E439D.jpg' with importer (TextureImporter)
+Imported 'GUID: 69a787ba527d31347af969f90e88ffec' -> (Import Result ID: 'cab88793fe647f375c9e40b8841cca89') in 0.111 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3ef22ae7afd0ce6b60117f39f4f2d96c DependenciesID=30ace948ee5c068b5b2276182136b6c8 StaticDependenciesID=d611d5f58ac223646728e8339d2b3bd3 
+Importing 'GUID: 694eb9ef8900a9044a88ffdaa8bb5392 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc163501791930674444888811541D9AA6179A532232CAD39504D6D8AF25D0.jpg' with importer (TextureImporter)
+Imported 'GUID: 694eb9ef8900a9044a88ffdaa8bb5392' -> (Import Result ID: '95771a787047989c251a99a438248eab') in 0.429 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=af690ddb35053fe81b5b7a72eb60e692 DependenciesID=299305cd4a6a62bbe781ac54a200b74a StaticDependenciesID=2375b4cc3025579dd44cc7d04ca38d78 
+Importing 'GUID: 79cd9ee87795f8644be94611a5e72898 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12261043242531130365F6AD0461AE779069EBB62FAF67867B92E7BC8BE1.jpg' with importer (TextureImporter)
+Imported 'GUID: 79cd9ee87795f8644be94611a5e72898' -> (Import Result ID: '4b5865db48df96524b8ab76eacae6d7c') in 0.371 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d554de65da7093245f188216317ceac5 DependenciesID=c0827266df3a497873a1d5665004077c StaticDependenciesID=d4452b5f3fae040857bc2b3441651c0a 
+Importing 'GUID: 894f9e2c4daad33419578313d5d9fe15 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc16536678139503611559943E96A4A825EBE9DACA71013358797940BFA62E.jpg' with importer (TextureImporter)
+Imported 'GUID: 894f9e2c4daad33419578313d5d9fe15' -> (Import Result ID: 'c8f56e060f2e8ab5ee3ccdce1bda86e6') in 0.145 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e454f03c50808addd4bc4dcf2a4373f2 DependenciesID=710f287c47ca01b2cf523c23d2ecca1f StaticDependenciesID=ea30db435553a2bac24317cef42387f1 
+Importing 'GUID: b97c56eb4a6ff4047a8be6589197784c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc3107058347301820584C58581FD1A9A204717DD63C36681D0F39E0921.jpg' with importer (TextureImporter)
+Imported 'GUID: b97c56eb4a6ff4047a8be6589197784c' -> (Import Result ID: 'c1c2ea60b928dbaa12837ebc684225fe') in 0.416 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9d7ae211b9f9204ee4c54ebc21a4cc0b DependenciesID=bbaa1ae540177a8bf0bb32f66e910b90 StaticDependenciesID=7bb40203466c8bd84c1180084e55938c 
+Importing 'GUID: c9004ea54f05a7046af59be01c3a5aee - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978730917313297BBA3BC181720C9D5C122B3B030FF2C288.jpg' with importer (TextureImporter)
+Imported 'GUID: c9004ea54f05a7046af59be01c3a5aee' -> (Import Result ID: 'e4f1a8c143d977583b149e1d440c3416') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=033a7621a2e152d491513094d190c871 DependenciesID=9de70a9a35934bca60193d2b4c2aa9ee StaticDependenciesID=ba0471a7414d554b86189c6ffed812fb 
+Importing 'GUID: d9878884035616f459adc133a2cabdff - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc102958018670834509947620A01C49D79172122E05CDB39B5619E725AAC.jpg' with importer (TextureImporter)
+Imported 'GUID: d9878884035616f459adc133a2cabdff' -> (Import Result ID: '7a28bcb5d0d0e50f97ba6e36e694e74e') in 0.121 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5cc29f3d8fb6794c8b613d62d5408605 DependenciesID=45c0ad570fd2238b17b6018131aa9749 StaticDependenciesID=d8cd0498b94d2a463be9e137dbf16ea3 
+Importing 'GUID: 6aefc753c5ac5fa45a0cd7c81f6b0542 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13054306284061254310F74A565F457C79B90C373CBAA5B04BE8124D37E.png' with importer (TextureImporter)
+Imported 'GUID: 6aefc753c5ac5fa45a0cd7c81f6b0542' -> (Import Result ID: '8efa3e08add8cead43b8818fee875498') in 0.170 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=854fe2d1728a4127e3a7f93e315093de DependenciesID=9e11bf32b70eeea5cff7a919cb111409 StaticDependenciesID=38aea4d6347376ba4c567e46bd662ddb 
+Importing 'GUID: aa388d70ef4d9ec449ca8817150f0e44 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10802658642902625A49271E7C2CAB0F6D04C4D5362F7E3E17D4C3A08.jpg' with importer (TextureImporter)
+Imported 'GUID: aa388d70ef4d9ec449ca8817150f0e44' -> (Import Result ID: 'c1947ab273eccb03ffa72e6fc1898717') in 0.144 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fe2ca0e9f789340dc1c05420f27d1958 DependenciesID=b36fa18dd87376434464890023a29386 StaticDependenciesID=eb783e10014ca6e47f8cbd036520f95b 
+Importing 'GUID: babf8d85166f70649b546a2554725078 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc175902317978614963193ACDB2AD1D1DE1E54E70A777FE11090138D7C66A.jpg' with importer (TextureImporter)
+Imported 'GUID: babf8d85166f70649b546a2554725078' -> (Import Result ID: '1ad9a3ee29a4c4d7d86c9cce8c4df9d9') in 0.349 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e5e42d6bd0b148724a5848f43c0c33a7 DependenciesID=bf9a55caab4d7fbaf64630771b2803b4 StaticDependenciesID=6409ed41dbe6437565627f71a9e5dafc 
+Importing 'GUID: da0cf8191dea84b4baa2d4f5ae3bba38 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1080154346133470389ED47F1B63DF87300FB8C413FC2F44DE8A2CB8F.jpg' with importer (TextureImporter)
+Imported 'GUID: da0cf8191dea84b4baa2d4f5ae3bba38' -> (Import Result ID: '43558ff7a9ea9b51e3816c73d50e79fb') in 0.139 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f0b972ff4e131f71f9b5d07e188406b0 DependenciesID=1eb572ad27e569d36742b228dbb9b87c StaticDependenciesID=9eae47c429864de9f81c7ad360100a31 
+Importing 'GUID: eae3fa72646ff73448c185c577f6c062 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc238080190443685093346AA3438F32BBA0BCFF113433D13D8438B793F2F.jpg' with importer (TextureImporter)
+Imported 'GUID: eae3fa72646ff73448c185c577f6c062' -> (Import Result ID: 'f1c6f50f7d86b54d93380dac4277845f') in 0.111 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=21dd4ebb370eff1519d0627f425df65e DependenciesID=9d3459c8d31d1384a4e2eaf36ba47502 StaticDependenciesID=8e3ff9ac7c90cfd4744b192b77d765cf 
+Importing 'GUID: 0bf0a45c42af7af4295f2e3bb8f4d647 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497868220E7EB506E5E22EF923D6B552E17ED8C48276C33C8.jpg' with importer (TextureImporter)
+Imported 'GUID: 0bf0a45c42af7af4295f2e3bb8f4d647' -> (Import Result ID: '619e74dc5b7d78dd118584ae47392d86') in 0.113 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bd5f3cd9ccfc5eb5c9da96c2cb89b3de DependenciesID=538c21c548ca87506e403ea390311ecc StaticDependenciesID=0fdbf273eca13fe14f7bdc4cd05cd27e 
+Importing 'GUID: 0bd73c6294c03874eba14050fb58eb22 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10202235339304378313B005CC89D56CEFFCE1A15746B87F222CCA7323C3.jpg' with importer (TextureImporter)
+Imported 'GUID: 0bd73c6294c03874eba14050fb58eb22' -> (Import Result ID: '4a2ea56d29bace8ba695b1d918d6c9e4') in 0.364 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c6fed2c0455dc7161df0aa35939903d4 DependenciesID=30e29dd5a0cf496108006133375e6acd StaticDependenciesID=7dd71e31ad044b951c243bf10173eb96 
+Importing 'GUID: 1b084ac1b463a45468a62829e4d71068 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1424736400201757855487D42BCF6593E12F2661221AF1F8E3A312161AB1.jpg' with importer (TextureImporter)
+Imported 'GUID: 1b084ac1b463a45468a62829e4d71068' -> (Import Result ID: '51f196c36de69280a6782a1394954802') in 0.365 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a0258e2ba5c96205468df5925c8b3017 DependenciesID=9d227e15e009c5fd5e4578bf7e602021 StaticDependenciesID=0b3dc8b552fec78008f4fd5737ce0976 
+Importing 'GUID: 6b9dba61aac949d4b8f35677c9c722fd - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc31069949141769372A60CF003ACA1F8178573BFEB60FDC66FA3F08992.jpg' with importer (TextureImporter)
+Imported 'GUID: 6b9dba61aac949d4b8f35677c9c722fd' -> (Import Result ID: '7a5f2a8ecc2b69ab3013bfd2f9e7f39e') in 0.396 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=387d5c9371f5dec4b911b39ff68807aa DependenciesID=5242c7559b76586dd2d54a27a5f0641e StaticDependenciesID=e9317a90249b7889c33b35d126ea21ea 
+Importing 'GUID: 7bf20efef0bc86a4e8bb61d2d94d74fb - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978714729F9C38B6473B74945CFAEF4AA0C6BEE8938514AF.jpg' with importer (TextureImporter)
+Imported 'GUID: 7bf20efef0bc86a4e8bb61d2d94d74fb' -> (Import Result ID: 'a2635bed280ae7755a8ac16466a2cae7') in 0.110 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ff3251cf95c9915b7822b2d2a2c90ef6 DependenciesID=dc937ee9d88ea8e460c92b42ec8f8f3b StaticDependenciesID=11b037ec4c1d83e2637826973c3c14bf 
+Importing 'GUID: 9b4a938b25689524488a0e344a7c25c4 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc173029488453211265224A06DB2B1F481DBC5F985FD181D90DB5CBD6FCCC.jpg' with importer (TextureImporter)
+Imported 'GUID: 9b4a938b25689524488a0e344a7c25c4' -> (Import Result ID: 'e9658a65960eef61ca767eb959bb15b8') in 0.355 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=95f7d1c862fa3f6d50d8c2eaa10bc3b0 DependenciesID=8cedd61bedc61f3e3df2d23eae138dc8 StaticDependenciesID=34845d7415f22c9db46fbe06933b9adb 
+Importing 'GUID: ab6d5b41fafbe404ebb9585377f0d31b - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498566967602B4A7AFBF7CF6F0E272417B04BF18C800AA862CB0.jpg' with importer (TextureImporter)
+Imported 'GUID: ab6d5b41fafbe404ebb9585377f0d31b' -> (Import Result ID: '61acb5f9445a70e2b3adb57a8ef6f64d') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ab89fd85fd908fe3e2d6ef45b2497ed4 DependenciesID=71c0242a3c0e47cdae5a27ad925aee53 StaticDependenciesID=e790e51ea18e6c6dd76c0c8e198053e2 
+Importing 'GUID: bb5ce0cf075af6b4ea8ac07c91a331d4 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194672924703B7852747F319A8205150FC78709B1E0F15803330.png' with importer (TextureImporter)
+Imported 'GUID: bb5ce0cf075af6b4ea8ac07c91a331d4' -> (Import Result ID: '60529d996e0a71ccf3ceaaca39d968ba') in 0.164 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=de8f888b65453ae3624762eb28eacc88 DependenciesID=08e9b8293ac02af06882144fe8e95860 StaticDependenciesID=1e6273c2e7b05c5458a8d03ea87030b8 
+Importing 'GUID: cbdb2d04afcf9034db8088121caef8e7 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1527364883105148362194CAE1DE3CCB9A570F6510241EBAC43DBCA24180.jpg' with importer (TextureImporter)
+Imported 'GUID: cbdb2d04afcf9034db8088121caef8e7' -> (Import Result ID: '25a7321f0428c3425de806bcf6499cec') in 0.354 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=864d5b14f2c704131e4ae01a35e45df2 DependenciesID=89cace22701c273d9540774ee4d27a5b StaticDependenciesID=4b3ff136d68ef774e0dfb394ebab4367 
+Importing 'GUID: eb23d0f0fa565784aabb15fd3408a401 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13503376855967707728CD49B576E920E3F6A5B860654038705B1A3E557F.jpg' with importer (TextureImporter)
+Imported 'GUID: eb23d0f0fa565784aabb15fd3408a401' -> (Import Result ID: 'a20f90301af5298e571e6c33f3ba79a1') in 0.339 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a16708d3d6ecfcb3f896bc87fd2e8edd DependenciesID=4e8196148d9e1d5525027485b2056f30 StaticDependenciesID=91b4ba6d1f9945d8590d7a2f22cc7177 
+Importing 'GUID: 1c06d997715866c4c997b42f745ea1d8 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14778190837284138856368572D77BDB05E92B63D9DE008B38477D79AAB3.jpg' with importer (TextureImporter)
+Imported 'GUID: 1c06d997715866c4c997b42f745ea1d8' -> (Import Result ID: '69423ba3c0b1384b9d198cfffbb76f1b') in 0.359 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed0784c5d8899d142a626bc656f3b73a DependenciesID=b992d78e9ff60356276d774893c00337 StaticDependenciesID=3cfd5a50e0ee1342fc5f4c4fa6108265 
+Importing 'GUID: 7cd6f09b30dcb5948bc595cb8eea97de - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc101507134767136637120459C74E6145D194A01B2B86EFDE928F479E63C9.jpg' with importer (TextureImporter)
+Imported 'GUID: 7cd6f09b30dcb5948bc595cb8eea97de' -> (Import Result ID: '4cba51b2958178db11b61b926ef971c6') in 0.403 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8b9cfafdd2b89c835535770da3cbce53 DependenciesID=f66494c0106beb1d30085ac28fa82a02 StaticDependenciesID=dc5aa2674439a035257dbcebcfe81c7c 
+Importing 'GUID: 9cce724280fcc824180c96363baf89ed - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc24359560060540910261B985236EC0D2F3FC02F7396B1B45259312374C0.jpg' with importer (TextureImporter)
+Imported 'GUID: 9cce724280fcc824180c96363baf89ed' -> (Import Result ID: '65eafcd13f66fcaa560be4aaeb40fd7a') in 0.510 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ff9071acd8b20ee2c4d33bbe35d66067 DependenciesID=2db2761ec8480520b2ed6e4ce50cf981 StaticDependenciesID=39dfd926581127691494ee102486ad04 
+Importing 'GUID: cc23e9e604be1a34d95145db55c2c82c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc781876126630071871EE4624F6D0F841040EA539305E7516FC3CDD3DA3.jpg' with importer (TextureImporter)
+Imported 'GUID: cc23e9e604be1a34d95145db55c2c82c' -> (Import Result ID: '44081ca4ad55820a90bf1b6894a8ebb1') in 0.331 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d6139eccba0bffe6f1029ddb35146ef DependenciesID=aa5d99d8fcc281101047a176a29c7843 StaticDependenciesID=3f0dc64284dc232850201c55b6a9e8cc 
+Importing 'GUID: cc57cc708e23e7a40869a536a3c62448 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10801543461324502FCCA79E97B28E8DD328E1D6B214A615F24978AEF.jpg' with importer (TextureImporter)
+Imported 'GUID: cc57cc708e23e7a40869a536a3c62448' -> (Import Result ID: '3e5a8220f06b8085a47022354e744cf1') in 0.141 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f3054133871329adc64d213e6c95c3f7 DependenciesID=035d686023f3319ea347d08e92c7959b StaticDependenciesID=51637d3481dd38f0eda638fc3cd0c7cb 
+Importing 'GUID: ec7fc465c8343474e86df5a7e865f29b - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194673017531CCE037CAE9AE6D36EF784865E27C403E07B27B13.png' with importer (TextureImporter)
+Imported 'GUID: ec7fc465c8343474e86df5a7e865f29b' -> (Import Result ID: '7881e0f40c4f38f0d5e6e813157a9ccd') in 0.166 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3cbe7a0ed2d1a0c25095749cf4b7c810 DependenciesID=bc44c44d360d74d38f1a2f0abd87e004 StaticDependenciesID=aca0324a492c7dbb0786f8db4b40c385 
+Importing 'GUID: fc3f7194520978e47beb43f629632c19 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc31070034373345122A483863734E9B75AF00822A5F6A49AB864330E07.jpg' with importer (TextureImporter)
+Imported 'GUID: fc3f7194520978e47beb43f629632c19' -> (Import Result ID: 'b57a60fe09fc0bac2b71acfab73c46e2') in 0.396 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fd4d5d91534ba84a93a49e01ac1e6fbb DependenciesID=1e78ad7d94805d8d7347426dab70225a StaticDependenciesID=842f89f8f668915247951be25913a763 
+Importing 'GUID: 2d47cf6f67c016f47982abeb57b69c1c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12508669834491198667738A084411B12DE9B4B41AAA4B55079DB54AD702.jpg' with importer (TextureImporter)
+Imported 'GUID: 2d47cf6f67c016f47982abeb57b69c1c' -> (Import Result ID: 'c926cdae1956fca7bf925be207cbe260') in 0.393 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=65414d6d9db7a73b6d0f89cbeba3563d DependenciesID=5fd1d4dda7bb16d91bb5e9f47b4c37f9 StaticDependenciesID=10f95501054ab15c9f7678f726e53630 
+Importing 'GUID: 3d234fbddf32a8e42af5d29576c3e957 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc4120008146000002416B22B6ABE8E2B5F60C03C7FBE92DD4465B30DCB.jpg' with importer (TextureImporter)
+Imported 'GUID: 3d234fbddf32a8e42af5d29576c3e957' -> (Import Result ID: '0975fddfe875c274217b6e391e12f363') in 0.140 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=483d505470b1befecf1021a23e743cf8 DependenciesID=85566915e7575529eaaa8791adffc5af StaticDependenciesID=4c2c46ffed0a581d4629ad53aac8a7e8 
+Importing 'GUID: 8ddb96bf31d6c3646b6f86f7c01367b7 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc108015434613341379B8CCE7E38BA3184C3AB61330E1BC333A2378464.jpg' with importer (TextureImporter)
+Imported 'GUID: 8ddb96bf31d6c3646b6f86f7c01367b7' -> (Import Result ID: '43f6bc2d7989680f037dc3160e5dfdcb') in 0.140 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=af8750c8a4c504e0332b16721371e754 DependenciesID=d8a967ed1937634bc8bac014e5e9f265 StaticDependenciesID=c166b508d04f118e045a6f4ce1333891 
+Importing 'GUID: 1eb1ca920e7cce34a8d48e3d6127b79b - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1821147036162828120C525B89047928F3B132D9C1247215AA1F94ECFF4.jpg' with importer (TextureImporter)
+Imported 'GUID: 1eb1ca920e7cce34a8d48e3d6127b79b' -> (Import Result ID: 'd464468f5fe86221d998494372aeab7e') in 0.138 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9d1c74fd336fd632b793c0fefbb5f8b5 DependenciesID=5a2bb12d25981c0abf7870cb9bfcf39b StaticDependenciesID=b5b31dcf9aad9a5212b8e292f962c6cc 
+Importing 'GUID: 2ecc537c891a2b548b2e6f356706c304 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18084062155022321286CDE244B0400658B883AC213879279D590B09A8DE.jpg' with importer (TextureImporter)
+Imported 'GUID: 2ecc537c891a2b548b2e6f356706c304' -> (Import Result ID: '60744af677a0660bda8e7b92a10d648c') in 0.358 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=26fe1cbb8154379d7428ab5e40b6ad52 DependenciesID=126bad95a3f01015dcb23688792fc627 StaticDependenciesID=5ede40537420d8fc93dac3637bb29a4e 
+Importing 'GUID: 3e4b6c10397cccf4890bf7b03589f0f1 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459998838D09822C17EF5C216FCB004A48236315834979638.jpg' with importer (TextureImporter)
+Imported 'GUID: 3e4b6c10397cccf4890bf7b03589f0f1' -> (Import Result ID: '80a80699a84b1c8b0fed57de4535e35f') in 0.146 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b463b7fa569c7fd5ae59d347ff20342d DependenciesID=653ebd35158b207baeb3a0eaad0b3a6c StaticDependenciesID=6a9613018fa798712af23f33b90d7bcd 
+Importing 'GUID: 5e740a9251b9e9e499cb0b642372e165 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc9529663569249853499427F863D4449A719CD173A5A72D2FD2FF4327D6.jpg' with importer (TextureImporter)
+Imported 'GUID: 5e740a9251b9e9e499cb0b642372e165' -> (Import Result ID: 'c704816689c5d1a5f5c4c9412e243317') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c939bb8891217509ad9e78c0ebe27de0 DependenciesID=1d4489ac000d0fecbd7dc3609324268a StaticDependenciesID=67476842d68159a9a0f66959afe4509b 
+Importing 'GUID: ce591ecaac837c64aa957762ae07fc0f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1809885360410074309496677D0AA2520C48EF987F26E54E9EBC23EF696.jpg' with importer (TextureImporter)
+Imported 'GUID: ce591ecaac837c64aa957762ae07fc0f' -> (Import Result ID: 'c03515a241a9ff0f1216510a91ddbdad') in 0.120 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3fdbfe5a68a7aa358830d1f0243f4228 DependenciesID=91adca168d15aeb6d09e96958e7800e5 StaticDependenciesID=5837f2bb41eef975e90bbf17af7b4514 
+Importing 'GUID: eeba4f10ecf31c4468417e6cdefe4c85 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14111529875816533586C7D2C4FCCB920BFCD96CF55D6370959B38C5FA41.jpg' with importer (TextureImporter)
+Imported 'GUID: eeba4f10ecf31c4468417e6cdefe4c85' -> (Import Result ID: 'd9480561b33333ec47c2c867beff1967') in 0.355 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=950f3de6953860762132d8569f702631 DependenciesID=5af49860567a3921b248a9b5fe10759e StaticDependenciesID=7e39fd73800ccd56cbe88910a78251e3 
+Importing 'GUID: fe9b15412146a5d44864b6e25713cda3 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc182564913118354049141AD132C99B0089EC8969C1488FB5022916DDA90.jpg' with importer (TextureImporter)
+Imported 'GUID: fe9b15412146a5d44864b6e25713cda3' -> (Import Result ID: 'd456d8e96fcbf3089e7c0c0510dec2b7') in 0.122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f5784dcd6fac3782e0a06733d97da229 DependenciesID=fe135dd85c811906e5e30a01809006a7 StaticDependenciesID=9b5a3137fcf693c308970f2f7b920fca 
+Importing 'GUID: 4f93a61e1532f884fbfa6a2bf002d827 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc108015434613359521B06EF90A8FBCD2AC647D65A65A1034C500EB441.jpg' with importer (TextureImporter)
+Imported 'GUID: 4f93a61e1532f884fbfa6a2bf002d827' -> (Import Result ID: '770d397736b01cadaa881baa386c941d') in 0.146 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c8d9fd14df05437ad3c2910f40dbb778 DependenciesID=01df243cb6615c4fd3544ce1255ec3f5 StaticDependenciesID=055f7db99dee62e4db8b5f0079444b70 
+Importing 'GUID: 8fa84d6fe9e51ee44bd5bc0458223961 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2435956414433317788D2D9F01ABA35E6D398BA04316C5BD4711FEF94DC.jpg' with importer (TextureImporter)
+Imported 'GUID: 8fa84d6fe9e51ee44bd5bc0458223961' -> (Import Result ID: 'f88e0d64f91f7ca6e14a7bf5690db640') in 0.522 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a7b9c840c463f5e68003c8ac213fd192 DependenciesID=411d836bcafab7320817a54c0480e6b1 StaticDependenciesID=3055efb2ec90f70fbebfc626c9cb6401 
+Importing 'GUID: 8ffc2db51d2825f438b8def1818c3cb6 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc15015275072796422350FBF3B2C6EB93F056DA716B009FF645B93A33D620.jpg' with importer (TextureImporter)
+Imported 'GUID: 8ffc2db51d2825f438b8def1818c3cb6' -> (Import Result ID: 'af46d7d7086e62de753384364f4009f4') in 0.141 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=50c5d51c2370f9fff4573eabb02e2653 DependenciesID=84ca88d2986e9a011f9f1a03e5d449de StaticDependenciesID=5923d15ccb32ad75ad1007026e58dbe0 
+Importing 'GUID: df631bd18e420bc41865f791088024de - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14622352967245123058D3094EF5420C15A26D940EE20D5C593529AC00DD.jpg' with importer (TextureImporter)
+Imported 'GUID: df631bd18e420bc41865f791088024de' -> (Import Result ID: 'dd6dbbc0fdacbea54093fe39f8f8408a') in 0.394 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e6f8a50c15caa118686aafe53c0f6a9d DependenciesID=44670c721e493a49df880ac61b6381da StaticDependenciesID=04fb0ebd4d0613c78db63cfd7786b1d7 
+Importing 'GUID: ef88ec7dc9e7ba140a335c2edc260f7d - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc189435349856688452539019618BD372E15EB2C84835D0F1F159F65B355.jpg' with importer (TextureImporter)
+Imported 'GUID: ef88ec7dc9e7ba140a335c2edc260f7d' -> (Import Result ID: '9b2b305ce8b8eb27c67a040b91b6ac41') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=97b0586ddc1b1d43e2a71c3a99f2be61 DependenciesID=fe69c42f135a2941524b3e2befec3e13 StaticDependenciesID=46e956cb634128ffcb6a626921fe8c38 
+Importing 'GUID: 20c77244346658b4683599a3ccd475ef - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12108199023198643597601CF4ED6C75DC4BF737E6768E2C34F9F3618E01.obj' with importer (FBXImporter)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Imported 'GUID: 20c77244346658b4683599a3ccd475ef' -> (Import Result ID: 'fd1030de0bfeb8cde2b0de1c32b502bc') in 0.378 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=731db100d7489b1d23e990c4c872ea81 DependenciesID=8473368aad3270613fd24fa26d132ab3 StaticDependenciesID=226b0bf983928b1d0388098c5b36b412 
+Importing 'GUID: 301895470d788c54085b389dfdad8558 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc177935169916542242046AEB1B3E2309A98C1031A6918FD61EAA624FA274.obj' with importer (FBXImporter)
+Imported 'GUID: 301895470d788c54085b389dfdad8558' -> (Import Result ID: 'c2a4953eb12de5879d71de4cb1e20a12') in 0.119 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9e414304cebe32e56e578ba4cf88c23e DependenciesID=37a7d592977e0a5c30c408d27954e74d StaticDependenciesID=7c577823cfaf17b945b401ccda91291e 
+Importing 'GUID: 500315587b1cb514d80a73d0946298e4 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1692777177697003615828B68F51030050AC043785F65C6127DE91B6CEF.obj' with importer (FBXImporter)
+ImportFBX Warnings:
+Can't import normals, because mesh 'default' doesn't have any.
+Mesh 'default' has no normals. Recalculating normals.
+Imported 'GUID: 500315587b1cb514d80a73d0946298e4' -> (Import Result ID: '9d855c06d6475821b75108653ebf05e4') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed97f8b81a3be1e2f01a6a342575f878 DependenciesID=fc4c6e25a6e8e51ea150c1a67640c991 StaticDependenciesID=d05030b866e0f6c79d55e4ed29bdfc0d 
+Importing 'GUID: 508335916e599e04abe7bd97e40433de - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18943534985670823009862E521D232041F698E48BF78EEF774ACA81487.obj' with importer (FBXImporter)
+Imported 'GUID: 508335916e599e04abe7bd97e40433de' -> (Import Result ID: '0b392d781edbd1c51da7cb4b8ee5ca05') in 0.074 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8c440fc84553a306c431634e1091fcf1 DependenciesID=ee1b395b7c5d8ab23df135e549873c21 StaticDependenciesID=b24358f3a328579d03a846808b32bb2c 
+Importing 'GUID: 70d55dc0c68186d4fa5f36980c190711 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1751307139248784144A7E6CFF4C43707E372C496E95E7C980EB9C5DD3F.obj' with importer (FBXImporter)
+Imported 'GUID: 70d55dc0c68186d4fa5f36980c190711' -> (Import Result ID: '7a6b0084b724fbb8a54105d21865db86') in 0.025 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5650c2c14957682de7620d1bde3cde7f DependenciesID=5dae11adc712a5c501ac670661855d4a StaticDependenciesID=f10a65d573545aa50dd88a232bab5b52 
+Importing 'GUID: 9091c77dc5e296e4998b70a3118b920f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566884821E86DC19E5C2F0609563175BF24FC5AB4FC500772.obj' with importer (FBXImporter)
+Imported 'GUID: 9091c77dc5e296e4998b70a3118b920f' -> (Import Result ID: 'a9778059c36eda651716d107ddc174a8') in 0.071 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=640b59dfd6d608af1f232231325c3c2a DependenciesID=b83e739eb9b3425b290f3472495e0f4c StaticDependenciesID=94fc07a1d9fbb100b3350ce26841af9d 
+Importing 'GUID: 90d206e56b7629c4683cfd591b64ba00 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1821147036162827715C5BC7893F3BD242D6D7915B313FB0643B11A5A62.obj' with importer (FBXImporter)
+Imported 'GUID: 90d206e56b7629c4683cfd591b64ba00' -> (Import Result ID: 'e630c47e5160840989669557536e86e8') in 0.091 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0fb9970e8ce1953b3c4534e7d19b3c8b DependenciesID=18bbd6227aea2e880dc516bfc933fb1c StaticDependenciesID=55f28758c89ed334870ce9457c877409 
+Importing 'GUID: a093b3e3528081347b2e19271fd9c501 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc169277717769700446452DC683FC9202D958790C191305AE127494A17EF.obj' with importer (FBXImporter)
+ImportFBX Warnings:
+Can't import normals, because mesh 'default' doesn't have any.
+Mesh 'default' has no normals. Recalculating normals.
+Imported 'GUID: a093b3e3528081347b2e19271fd9c501' -> (Import Result ID: 'fe0a2aaf5c45cc1ec0110fa5d4c8b799') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=574bff6bbf315f16932ef1a7a9e684e1 DependenciesID=5e71c57bcf196ee3a2f57443a9efbf65 StaticDependenciesID=3b019bfb27697b2005833ae1bc9fa651 
+Importing 'GUID: b0a09d59e50fa1b47b05a77e2342ec13 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431056814431114C4A5E238EB3C19A53FA35585A0A5A3CB98485A73.obj' with importer (FBXImporter)
+Imported 'GUID: b0a09d59e50fa1b47b05a77e2342ec13' -> (Import Result ID: 'f673132e7fc2b3ffda84c22fec0784d8') in 0.091 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ae30767b223c99d8bda5e61e4f4d88a5 DependenciesID=3c1d5aa1b20938c7613aaebc6134dfa4 StaticDependenciesID=b89c35fa9d230488fdfbf6fa050b28cf 
+Importing 'GUID: b0641ac1425741e448c44585469725bf - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc128309644039982209853F915888997C1DC2E5C6BA30CBEEBCA78E5FA0AB.obj' with importer (FBXImporter)
+Imported 'GUID: b0641ac1425741e448c44585469725bf' -> (Import Result ID: 'b5ef9fc5b417f220a3c7c957e59e8838') in 0.110 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4a9a576dae60ee45fc1ccfedf59117b8 DependenciesID=3089f259193ecf966c4dd31c72eb3fcc StaticDependenciesID=7340135b91b9999bdaa0c0cf970935ec 
+Importing 'GUID: d0e3334524e24a94ebb26962e5653a26 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1396628954941556060760E5AABD51711DD7DA582B5EC88DDD128C1D13C1.obj' with importer (FBXImporter)
+Imported 'GUID: d0e3334524e24a94ebb26962e5653a26' -> (Import Result ID: 'fb71441ddba682c10a39d8166245fea9') in 0.115 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=18ee6fd9fd26f3c02ee423ed2f148c8c DependenciesID=ec713db3b1fb98f111492e27c36b021d StaticDependenciesID=0d909f5679bba84cbc6518a8236dea21 
+Importing 'GUID: 419244baf7cab0b499edcaa8206d19b3 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc109883056726794776078054C64FD55E7DEC61E175653F8C59C2ECC56616.obj' with importer (FBXImporter)
+Imported 'GUID: 419244baf7cab0b499edcaa8206d19b3' -> (Import Result ID: '1c21d44af898446ed0296b11e7a56c51') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3fcac14a31297f2715891244e5b4639b DependenciesID=eae19daca23939641a44b063782510f2 StaticDependenciesID=a8c22af2ec11238f37628863ef20e9c1 
+Importing 'GUID: 514703fac878f5f4cbd3a48bed99d875 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc130543062840401624696AAF21A511DFE797601DB83BAF8514B0FED2A6D.obj' with importer (FBXImporter)
+Imported 'GUID: 514703fac878f5f4cbd3a48bed99d875' -> (Import Result ID: '3156ae2cfc4f2febe78da633dd8b8311') in 0.096 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7267111ccb307243c916db5a9ebfb21a DependenciesID=849f08cbaa1b76507c76027149379061 StaticDependenciesID=60c45b3140c5af3d40dc0427e071b57c 
+Importing 'GUID: 61a9308b069184a418f38b15d9515d79 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1486703883914914939D1A267360BDD2BAEB395A4B1B48E533FC42E71BB.obj' with importer (FBXImporter)
+Imported 'GUID: 61a9308b069184a418f38b15d9515d79' -> (Import Result ID: '656fc4f415f559942d6400b997ea3816') in 0.105 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=362c242b008b3207063969abd4cdfdfc DependenciesID=adf86e271e882cdafa5b4a9dc3d748ee StaticDependenciesID=218c711b2eb9662504817c62f5905671 
+Importing 'GUID: 8175e09768a7394479574c19d242449d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04.obj' with importer (FBXImporter)
+Imported 'GUID: 8175e09768a7394479574c19d242449d' -> (Import Result ID: 'b49917ed76b9c32ef50dd98fc19d1d2f') in 0.041 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=40d3edf7f708adb18d2d4dc75c20e830 DependenciesID=562250fecd71c8f5cfca036951176821 StaticDependenciesID=11e454eb9c07f8cf21bfeafd7ebbe396 
+Importing 'GUID: b1b62ba384e45b246b27948022bf733b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc310700343733459727ADFBDE2C9409D303CE032B8D139AD2A8E4893A7.obj' with importer (FBXImporter)
+Imported 'GUID: b1b62ba384e45b246b27948022bf733b' -> (Import Result ID: '65f905ebb04890bd2716b143b4a46e4d') in 0.106 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3407677388be42a82939f66d3db2a20c DependenciesID=5b68e1f4babd40a272352e69f5bfe588 StaticDependenciesID=75c906905f6c59190a97645c034c740c 
+Importing 'GUID: 02e9e1ede13e5924aa7b900915a70499 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497873419086CC8612CA868D3DD850AA60EB8D1392988666B.obj' with importer (FBXImporter)
+Imported 'GUID: 02e9e1ede13e5924aa7b900915a70499' -> (Import Result ID: '3334996902ce1663634981d5fa8be8ab') in 0.070 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3adb6ffe85638f1b2e13cb32d5872a25 DependenciesID=5d2383d2f6f23c8de701dcbdec3cb7a6 StaticDependenciesID=8ebf41f218eb7fe22f44ed63fcbc2437 
+Importing 'GUID: 1203a1c61ac38384ca9ee09d28f6bab1 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720138770E6D5D440061FB39C1A4067C6369934C708F55B66.obj' with importer (FBXImporter)
+Imported 'GUID: 1203a1c61ac38384ca9ee09d28f6bab1' -> (Import Result ID: 'bec010ae2d59942af32aad4d4c411fe5') in 0.080 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d30f4ea85602703b57aa0f437d49b222 DependenciesID=6671bcfaa4b3b6e41cf77fa6d8ebac7e StaticDependenciesID=05414a76285b0246b90c7047d14be900 
+Importing 'GUID: 2279b95ef9de88b4ea0c0be55ccc25a5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc4119435501749555823F7B9649782D0BA2DAE7B52F544D117A1E7C8D3.obj' with importer (FBXImporter)
+Imported 'GUID: 2279b95ef9de88b4ea0c0be55ccc25a5' -> (Import Result ID: '61316b1e5a7f632021883f261e156617') in 0.093 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1f8746a27757632b46291e34b6185361 DependenciesID=b478f61f145bc0c98d05c10b54afd37c StaticDependenciesID=0787e9e774a50a8e68ae4c136d1500b7 
+Importing 'GUID: a21d610478a7edc4ebea3e10c8c0c81e - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431194673001669EFDAA724E9E66126C1BA90D8743DB798515A3060.obj' with importer (FBXImporter)
+Imported 'GUID: a21d610478a7edc4ebea3e10c8c0c81e' -> (Import Result ID: 'a22baca04211dc404d9f5e070d600599') in 0.094 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5e0440589ab6175faa01121842307e50 DependenciesID=35edc49e01bfbb60cfaa781bdc797ad2 StaticDependenciesID=5a9f829c8155cd535707663f13747caf 
+Importing 'GUID: b2236fda5f1ff7e4b9ecd2b56b38bb0b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc3105672570961972635CC8EBC938149950DF02B275C91EF3BCE34A297.obj' with importer (FBXImporter)
+Imported 'GUID: b2236fda5f1ff7e4b9ecd2b56b38bb0b' -> (Import Result ID: '3144c0701065bb2bbae347d853c47cd7') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d9f26e47bb0ce2dde26a59c969fd40d6 DependenciesID=10159a1ab4de3e8569831482329a7721 StaticDependenciesID=5c12a5900cca7c905dd589e28de65cf4 
+Importing 'GUID: e2da0c709fc80f045a9181bd23463bbe - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc178173112572013706015E198596FB0F4B0C6D2C172C44044836C967586.obj' with importer (FBXImporter)
+Imported 'GUID: e2da0c709fc80f045a9181bd23463bbe' -> (Import Result ID: 'b49fef0fb4d6ac4c3a25dea88a395443') in 0.082 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8cfc1bdbffaac96389be4b9beaea8acc DependenciesID=73086929c6a404da95f8642d39ea318b StaticDependenciesID=4a938281a105cc08d751c17e280955ea 
+Importing 'GUID: f2d6747f5d91649459f6e62354b1a110 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566887001FE1D4769AD0E7C8A827436D0CAA8FCAB6D8D515F.obj' with importer (FBXImporter)
+Imported 'GUID: f2d6747f5d91649459f6e62354b1a110' -> (Import Result ID: 'd55e9398b7d0a63d7b76d1209a0ce2ce') in 0.074 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d0b6f8e45993e93c37a5edacd79dd2ce DependenciesID=7654d2b0787c537befa4ff482741d730 StaticDependenciesID=24afd642f8d496d3a6c1db1fa5152140 
+Importing 'GUID: 03612b127b24d994ab99b529d349fc0b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc15004475678211406673D9D914B9CD022919EE873A0D0410B795E6BEE71D.obj' with importer (FBXImporter)
+Imported 'GUID: 03612b127b24d994ab99b529d349fc0b' -> (Import Result ID: '1763d25710b78937f81521a143ec685a') in 0.098 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=12654f5792a8b745ed5b2aee5a22a7fd DependenciesID=0087ff751195b7d1caf18e0c5fc7cf45 StaticDependenciesID=02c2333911565dd4654c0c9306ffdc93 
+Importing 'GUID: 33bd2043accf05e428d0324c45f2c45a - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497868620C4EC3E4972692E146439DC528DBC059C5290040A.obj' with importer (FBXImporter)
+Imported 'GUID: 33bd2043accf05e428d0324c45f2c45a' -> (Import Result ID: '8265fdb8db1f153f465349295b932f07') in 0.075 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ec047fdb6a9295de775bf0333b5dd42b DependenciesID=5e55ad719771076f632b20d472fa9a11 StaticDependenciesID=de58a7647ce2200930cd901be0dccaf2 
+Importing 'GUID: 73b86d2e0fa386046abf21ae85e76212 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1825649131183539545F52037D9B6B814A5B829E1038B4435A65B52F0E0.obj' with importer (FBXImporter)
+Imported 'GUID: 73b86d2e0fa386046abf21ae85e76212' -> (Import Result ID: 'bc7acdd497b8a2e03d6529cbd419148a') in 0.086 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=177855beffe92a09ff739c8ccbd2716e DependenciesID=dd89b60d9ceb0c3acecbff1bae5f5ba4 StaticDependenciesID=42a92a579eeefe81aa1c1a2df6749a23 
+Importing 'GUID: 731e9f6bea15c1149ba607600ea361de - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9622965398647091610459ABBE114D035B447CA0FB2B7A3A92448ED07C7.obj' with importer (FBXImporter)
+Imported 'GUID: 731e9f6bea15c1149ba607600ea361de' -> (Import Result ID: '3652faefd660db365e646a896cc96cb7') in 0.117 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9eaa64097fd030362a151acc0425696e DependenciesID=9e47c72fbbb6e7174a7889beb2e25ef9 StaticDependenciesID=98db5d2a5da72c223897bcfe37bbe60d 
+Importing 'GUID: 83ab5b92240d75147b1f27a03d6ddc7c - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc177143862223268749947B5DE719C3F9896DE0029647B8630594AE59A4AC.obj' with importer (FBXImporter)
+Imported 'GUID: 83ab5b92240d75147b1f27a03d6ddc7c' -> (Import Result ID: 'bb40914f5a26068de9d9830004bb7007') in 0.119 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4c45f012f8c862eb0df4a7ce588c2e3c DependenciesID=4b1369782818eb306508fc42d47328fe StaticDependenciesID=bc2daf738ec753b4d8c64664fc53cab8 
+Importing 'GUID: c3b2b0ec02c66834db7fc89f8aca5671 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc15813718579661489366AC6AF9D473822F21A522152E0E9AF962E91245EA.obj' with importer (FBXImporter)
+Imported 'GUID: c3b2b0ec02c66834db7fc89f8aca5671' -> (Import Result ID: '7887f67122db069cc5c76859cf8a8227') in 0.100 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ccd5ad0ddcf9a0a8132d7f63ecbe8f4 DependenciesID=e42078093cd0690594b7d7adfcd93351 StaticDependenciesID=ebafffd05e66b09f5c8a63a0baab324d 
+Importing 'GUID: 0403e76063acc7542b1bc12ac99c7650 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1079052771036435108856360C7D7CA691A696E15F0EACC93737DEF3A.obj' with importer (FBXImporter)
+Imported 'GUID: 0403e76063acc7542b1bc12ac99c7650' -> (Import Result ID: 'a3ce2b3be9996b34630c5bc5f6435c09') in 0.087 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=652a4c36abab12b8831e01f8821032d3 DependenciesID=a492e05b67a4ded2b6465753d7b13611 StaticDependenciesID=f86c41f1f638993acbcda7c40dafd0bf 
+Importing 'GUID: 1488706d5966b1e41992992cbd10119f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720139970F57B5A359CAF1C3C5BEB5C84A8F323D04DAC05D9.obj' with importer (FBXImporter)
+Imported 'GUID: 1488706d5966b1e41992992cbd10119f' -> (Import Result ID: 'd5804bddf02b4e251a647ebe63316e28') in 0.079 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b3dbd1599f798536df7c8ca7edbcd3ed DependenciesID=d40f0a54a11d1d0750a8ff13a6108f06 StaticDependenciesID=494c6cfab620d3ef0737cd130e2e3b5c 
+Importing 'GUID: 5421bb715f1207240882094f0623b914 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431194677668812917FE53DA92390B74F0728DA40F7C8C9D99AFD5A.obj' with importer (FBXImporter)
+Imported 'GUID: 5421bb715f1207240882094f0623b914' -> (Import Result ID: '245e9d6dbd610e5cd241f3d4103f62dc') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c8863bc914764992e3c9fe03696d6e4f DependenciesID=eedf54e10ad0a1df6987905b1a289da3 StaticDependenciesID=ff5c0084916a976257a42e912e05ff35 
+Importing 'GUID: 648e2c4e76ddfbf4eb0d5f33872f855b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc175130676024373346611A1C47200C020DF3699120B9C29BE33EF3741A4.obj' with importer (FBXImporter)
+Imported 'GUID: 648e2c4e76ddfbf4eb0d5f33872f855b' -> (Import Result ID: 'baa1f5cc5568ce4e4a4c781403283c90') in 0.025 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ffe6cd12b34cffb4e469ebed9fc63483 DependenciesID=179495a1f37cfe9d5f87ba1716e4798d StaticDependenciesID=8ed543e3636291222e54143a92efe67b 
+Importing 'GUID: a474f1e592cd8534b852259de4ac4fa4 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498567083056845A8C9688419991F9361569A3ABCFC3192B1B85.obj' with importer (FBXImporter)
+Imported 'GUID: a474f1e592cd8534b852259de4ac4fa4' -> (Import Result ID: 'd83973b50a9493a8d0e6d783a1a1694d') in 0.072 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ceb1222f2604432bebed2296f4736876 DependenciesID=757badc4e4a123ed2928a6d0562d7349 StaticDependenciesID=fc44172f567c828c508ed354eb32bfbc 
+Importing 'GUID: d4fa3233687e09a40a39f9a0f618dd9d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc124481718997875246949E3034B5DCED32AEA3DB2DD07D47AB4543B1467D.obj' with importer (FBXImporter)
+Imported 'GUID: d4fa3233687e09a40a39f9a0f618dd9d' -> (Import Result ID: 'e57f8654eec5e46d2d137d6adb1b6a73') in 0.120 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b968821f85b8168733c22ce34863c7c9 DependenciesID=9733c42b185112f02ff1a7eb52557990 StaticDependenciesID=dcfca509d911dd63ef99928ba1835a0a 
+Importing 'GUID: e42fe32f7d4e47c4cae722a462010596 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18211470361669017218EF7A0484BD38C0B125D2F09090D2B1F915B199B.obj' with importer (FBXImporter)
+Imported 'GUID: e42fe32f7d4e47c4cae722a462010596' -> (Import Result ID: 'f9a51b684e5f4add2ab151bd87dce0db') in 0.081 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ddde3ad8ab59c1d54587a3a8aaaff294 DependenciesID=526039cd35fd75a01b92bd983fe6a585 StaticDependenciesID=d528cf1bd7488d321c829841ad13275c 
+Importing 'GUID: 4504a561a1c7fba468025ec68c5ee407 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11944547760575877273224B56DAE150028C6E16602C7A35DAD134D515C2.obj' with importer (FBXImporter)
+Imported 'GUID: 4504a561a1c7fba468025ec68c5ee407' -> (Import Result ID: '0e05c39179eea79c23e3c6fca24a1dd2') in 0.119 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=808d3b9cff775192f4539601bd4cdbdc DependenciesID=1015b2054952d09183929c510cafbdda StaticDependenciesID=5a5f73505757d35770342340a8c7a66c 
+Importing 'GUID: 453fbcc1a506b8f45b05e88d038219c4 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802627849091CCB1A670C2F8978A9CEBFFB0D9FA58754059217D.obj' with importer (FBXImporter)
+Imported 'GUID: 453fbcc1a506b8f45b05e88d038219c4' -> (Import Result ID: 'a8e34255e19224d9e4d564b119b497e0') in 0.037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0ac1d69e08f121163c8c8d6730a236cd DependenciesID=e3bfbeec1622bdd1571e351cf789a6b3 StaticDependenciesID=2208b68b1aa7791599e189eca7977da4 
+Importing 'GUID: 5558ff2cd65d913489ab228bf7fb56ee - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc24359564144332359474E21CAC028A9E988E923809483227D4F5CE19ADB.obj' with importer (FBXImporter)
+Imported 'GUID: 5558ff2cd65d913489ab228bf7fb56ee' -> (Import Result ID: '74c970b91421dbbd606745fdf5eb930c') in 0.072 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d2208fd00da889849bdc580c67581a52 DependenciesID=c35ae8102e336c436936d9fbc7d4d1ee StaticDependenciesID=d65a5fcb3f15b532da99cdeae5df21e3 
+Importing 'GUID: 7570bb6a8e3c38544acdf2dbc4df7742 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc189435349856696781917DD8CE63A858DF558B543CBCA7C32A142724A2C.obj' with importer (FBXImporter)
+A polygon of Mesh 'default' in Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc189435349856696781917DD8CE63A858DF558B543CBCA7C32A142724A2C.obj is self-intersecting and has been discarded.
+Imported 'GUID: 7570bb6a8e3c38544acdf2dbc4df7742' -> (Import Result ID: '62795ca3e3a08b671dd4986e4aa96a8d') in 0.072 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=56952b721d6c4526ad75c97f0ae51796 DependenciesID=c734f77e3d40e015a752bb77be3dcf64 StaticDependenciesID=ff785e3569cea2ba4c2fb041e4648f49 
+Importing 'GUID: a57bcc789eb9bfe40931d177eee7ed69 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc13148099567518813183D6B12054C434800ACDF3F9C19B398E83837C4FE4.obj' with importer (FBXImporter)
+Imported 'GUID: a57bcc789eb9bfe40931d177eee7ed69' -> (Import Result ID: '1506d374d0f6b352f6014d9286b3e549') in 0.120 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0bd749e65124bc4ca1ee60a261afcdd3 DependenciesID=155c71cf638d382263543de8fa9f4d2b StaticDependenciesID=746a25b82682e436b5844b5f8c0c7600 
+Importing 'GUID: b542014c84f42c64abc3df7a069be72f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10976653372927727464D2495DB20392D83F9B1BAADBBF4DE67A04D21487.obj' with importer (FBXImporter)
+Imported 'GUID: b542014c84f42c64abc3df7a069be72f' -> (Import Result ID: 'b322cc5445a8a42901cb5a276b52c7b9') in 0.134 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3895cc86411f701e31dfdf2306c58626 DependenciesID=8faad93199fa5fa0895aaf0cb93ade26 StaticDependenciesID=62c141673435b03215904d542b8b4b2e 
+Importing 'GUID: b553a86a8bfd56344b9813f75f3ddc37 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436850616FC796FBC5B3888A7B9B6A3FF54B8A8CEDBA6BE45.obj' with importer (FBXImporter)
+Imported 'GUID: b553a86a8bfd56344b9813f75f3ddc37' -> (Import Result ID: 'd7d1b96f1c64079dddf1fa3857a716c9') in 0.048 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=84b2670d3d5c253c4ea2c3ebf30b56e9 DependenciesID=19a1e873b11ac3338ac6f00cdc9296ed StaticDependenciesID=303d032187b95a1604537d59fa8d60cc 
+Importing 'GUID: d50ce4481ee7e284292554ecdadfda0b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc94226471545002318908BBA6478EEEE6E0A9B4E26DED47E6B86537497BE.obj' with importer (FBXImporter)
+Imported 'GUID: d50ce4481ee7e284292554ecdadfda0b' -> (Import Result ID: '37f3af6aecddfa4de3a93c59f60d9b70') in 0.098 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6ce29de7fd6d49f797bf3291e93b586d DependenciesID=73c78e685eb93ad86bdff17b66671855 StaticDependenciesID=086e3c324bb23df8c73b08f704bfcf73 
+Importing 'GUID: 06012184c78bdc2439fd1ac4894894ee - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431405701592236FE9A5CC6F7AED098DFF9B371F57FF8CB2D292DB4.obj' with importer (FBXImporter)
+Imported 'GUID: 06012184c78bdc2439fd1ac4894894ee' -> (Import Result ID: 'fd082104fc78f0cbe5e7fc8e9eddf04b') in 0.022 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8dc6ea208521d71dadb8e57adc91faf2 DependenciesID=21f906c8d032061cb1a11a054a94b54c StaticDependenciesID=463eb25ea314f2c8a5133596a1cb050f 
+Importing 'GUID: 56ba0d8cf237e6e4ea9fd56c8e418360 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9750579273913085057E7F833123BB44774C8D4358C319E06AAE79EDBA8.obj' with importer (FBXImporter)
+Imported 'GUID: 56ba0d8cf237e6e4ea9fd56c8e418360' -> (Import Result ID: 'cf9c5fc047eda930f94e94e49881ae55') in 0.115 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5073c97560bd947e43d5a4ab7c048f40 DependenciesID=485e2ff264c5a202079889a776aaf3cd StaticDependenciesID=e4a8db5f4babd90c3478f5dd5168c834 
+Importing 'GUID: a6da3bcdd08db804287659cf568bde54 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc310699491417689009160FE6F1985FB580080BD264ECEFB95AC2FDA1B.obj' with importer (FBXImporter)
+Imported 'GUID: a6da3bcdd08db804287659cf568bde54' -> (Import Result ID: 'e6a473f7c0567121756380a2951bad7c') in 0.111 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c1cdecd6ebea16fcb5f66009ac8ab6c2 DependenciesID=a0e9653aed7e68d9095910a4c250628c StaticDependenciesID=e1f91cad882dc8b2e728aa7ea5999142 
+Importing 'GUID: d615db140e13ce3429d1a8c1bde69606 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11514242168809510332AEB2F62153958B3552D5B3F1D737D460C4931222.obj' with importer (FBXImporter)
+Imported 'GUID: d615db140e13ce3429d1a8c1bde69606' -> (Import Result ID: '5efdcf06c7f5b23083afb398243942f9') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2a2c1042cdb420a5f9e3cfc92b22e7bc DependenciesID=deab3fe86b5c53f5ef7964b977b91f5b StaticDependenciesID=83518d08104adb066bcc5ff53daab85c 
+Importing 'GUID: 27836403ab4684b4d9279baf3496bd5b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1469968687379554198752E0256B4524195790E261000A698E543D2F2DCB.obj' with importer (FBXImporter)
+Imported 'GUID: 27836403ab4684b4d9279baf3496bd5b' -> (Import Result ID: '6e562b4329ea2651b224993aba302388') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=deee4dfb78ab531e506d5d337a7fbd18 DependenciesID=745546694bac6b96966ba13e18df854b StaticDependenciesID=fc55fb4f5598007292f943583aefef25 
+Importing 'GUID: 372bc93052e71ad4a9189101ed2073c9 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc3107058347301856835462F11A586F4E43567D1309FA36CC526669860.obj' with importer (FBXImporter)
+Imported 'GUID: 372bc93052e71ad4a9189101ed2073c9' -> (Import Result ID: 'fc5a406511b5d0e31182c447b65827f6') in 0.106 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6188dc96c975ddafa3376db94619dfed DependenciesID=0c6b6bace7e1508ebbfa7febb740bbe3 StaticDependenciesID=a36b8a90720782d8a1b5c37347bcd371 
+Importing 'GUID: 47070117b24f39f42a78389377fac052 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720140897978C123505C01005219B63B5BBD7ECFF1701F1F1.obj' with importer (FBXImporter)
+Imported 'GUID: 47070117b24f39f42a78389377fac052' -> (Import Result ID: 'e614122b5502eee31229317eeaa22a45') in 0.067 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=251b231639cad2e67344ce8c045b9268 DependenciesID=cea1b26d55c3cc59fd10462f8b43f9e7 StaticDependenciesID=4cfb7eba380c6ddf6a17301ed04d8ba8 
+Importing 'GUID: 679aab3c15a7546408d20233dd8a0ff5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc181969198396798703857A024DE58DB0A035BF0C8BC1184741BA39D90FA9.obj' with importer (FBXImporter)
+Imported 'GUID: 679aab3c15a7546408d20233dd8a0ff5' -> (Import Result ID: '0cf05580cca5095631d25cd4af6e88f3') in 0.124 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=345f727e660b6058755255195d46c6f0 DependenciesID=c6d427ee06d22925b78022eb8fe5bc4e StaticDependenciesID=334c8808ef699f24ad0d883b620d1191 
+Importing 'GUID: b7932b0fbc32bd647ac156bf589ec1cd - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc17531329397109570912F1A7752577E4A2F4FA08EAC7A3248CBCA1469396.obj' with importer (FBXImporter)
+Imported 'GUID: b7932b0fbc32bd647ac156bf589ec1cd' -> (Import Result ID: '43a20056b77250bbd09a55bb4ae18414') in 0.117 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=716afc1539ebadfd27411339268f7a28 DependenciesID=d7c39b7409f6cfd9cbe9ec5bd0019c8d StaticDependenciesID=a48c64a604d082024e167caf3a54944b 
+Importing 'GUID: c787196f9dfc58a46b0b337f5ac144f6 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9929355111463726855755BFD498769615356D754D399A5C4C4B456822D.obj' with importer (FBXImporter)
+Imported 'GUID: c787196f9dfc58a46b0b337f5ac144f6' -> (Import Result ID: 'c094f5e28c13866c6981d054e7f960ae') in 0.122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4f8e0e8b09a2c55921a20d68f33b8e95 DependenciesID=0fddbb90d01291b497c8cf7fe4567b70 StaticDependenciesID=32c23611cb21211294626bedc2a6cd84 
+Importing 'GUID: 385bdd73643e26844bb74cc4c138c3e9 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc100139382505414373888F90437B42C17102A73FEA20628330A00AD02F5.obj' with importer (FBXImporter)
+Imported 'GUID: 385bdd73643e26844bb74cc4c138c3e9' -> (Import Result ID: '15aadf3dbd0ec6fbf2895246c6486eed') in 0.102 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c2f828638c834bce711367412f7f3f14 DependenciesID=061bd0c2e5fda634c3a5069117fdde5e StaticDependenciesID=31e5f1f51673308a145ee4f17c5c09f8 
+Importing 'GUID: 4888b8f0293bf4140ba67ed91ceb00b5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497870899BE6ED9BA3AFC6440D49F52E8287984ED197D1CCC.obj' with importer (FBXImporter)
+Imported 'GUID: 4888b8f0293bf4140ba67ed91ceb00b5' -> (Import Result ID: 'aa596b5574274cf5f5c4a68aa3408f21') in 0.070 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8935d27e78712f38559d6388fea9a1a3 DependenciesID=e9f6392160ad2951126c73722271f808 StaticDependenciesID=b1d8c133b5b8d5d0c22e2495fea49ad3 
+Importing 'GUID: 48f970f965ec1e94f9ded3a135a026a5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc16927771776970002323D2A92F0C02ED0DE431FA3394A3005C6A3514444.obj' with importer (FBXImporter)
+ImportFBX Warnings:
+Can't import normals, because mesh 'default' doesn't have any.
+Mesh 'default' has no normals. Recalculating normals.
+Imported 'GUID: 48f970f965ec1e94f9ded3a135a026a5' -> (Import Result ID: 'fdeef4a8ef1384f115d6207902611a50') in 0.054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=64c753e575bfca75968c43651d6781d5 DependenciesID=bb08f4df3732331d30d95633c66ffb84 StaticDependenciesID=7dcc4040fa5fd5b1343a47cf23ef5c93 
+Importing 'GUID: 589ef15ecb620d94e8c7ec32f5baae48 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9345495520519056269E96B002E56742BBAA7CFFF22A1C45A0A1100C71E.obj' with importer (FBXImporter)
+Imported 'GUID: 589ef15ecb620d94e8c7ec32f5baae48' -> (Import Result ID: 'd76fde44f3897f8625f3b8ec34473883') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=62e63ea43f62df1f76e77e9a1f89c13b DependenciesID=e68fd5181a7ef325d7d7a9aa45f70179 StaticDependenciesID=5b7fe250092280745188a380b35ec9c6 
+Importing 'GUID: 68b0483fcce999f41bcf3b216ad1a904 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802620717997EE642C580C4E38BB65B24194086DBBE2EE729969.obj' with importer (FBXImporter)
+Imported 'GUID: 68b0483fcce999f41bcf3b216ad1a904' -> (Import Result ID: '9e881d0e613244ca6fdbbf2f3c170fe0') in 0.025 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d9a6a0b8a28f4f1d8a29bf3c851cb4f7 DependenciesID=b668bd0d9f86b2e2006e9f835b964e81 StaticDependenciesID=15ccf26c2ea6c09cc971c81c01ddc614 
+Importing 'GUID: 8886274b149acb8428d98c9f2b2ced4d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802627851117FE6ED8BB990247BB2609789E652B416BA952B756.obj' with importer (FBXImporter)
+Imported 'GUID: 8886274b149acb8428d98c9f2b2ced4d' -> (Import Result ID: '7fa0d970ae469050c46e4867de0024cc') in 0.046 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aee9c7cca547b698fa64ee579965a5c6 DependenciesID=5bc99c4c55d693701ee67d58ab32f877 StaticDependenciesID=f78a5ee603e460b03062758df38ed659 
+Importing 'GUID: 98553ac1e0cf1924586eb7343f668815 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497869895099124EC79839211778A6C283EA95A27AB9D146D.obj' with importer (FBXImporter)
+Imported 'GUID: 98553ac1e0cf1924586eb7343f668815' -> (Import Result ID: '3a886225d4e5d8963c005dbc69db411b') in 0.072 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a0ffa4774bfe0fe66d6d513bfe9030e2 DependenciesID=88747f89380cb37c0c03ee765b810dd6 StaticDependenciesID=35b3c87bc7bdb2dd9e2868e1f9c8cc77 
+Importing 'GUID: c8fbc32d36c78b149b1b088b0a728ca8 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10295803526031001029B8301C65FAFD9CBE8F7B3D4BBB0962E9614D6D6.obj' with importer (FBXImporter)
+Imported 'GUID: c8fbc32d36c78b149b1b088b0a728ca8' -> (Import Result ID: '3023385f47239d7fed5ffd2ce2685749') in 0.085 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b0c20f95d45acf0ea59e8953e49b7a53 DependenciesID=f4a464bd41ce5213ad1281f503aa072e StaticDependenciesID=98f5a587ce0e6cfb3a671c4744f04094 
+Importing 'GUID: f8833871daf26b844a2c7db6f3243043 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802622032872A6F63507E9BEADE66B1611ED4B007628924E0904.obj' with importer (FBXImporter)
+Imported 'GUID: f8833871daf26b844a2c7db6f3243043' -> (Import Result ID: 'c7da9250b466cacd3416b904039928f0') in 0.026 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d534422207ed7c4eb7a41a0da1a6f7c3 DependenciesID=a6a48a9d6a785bab6d6b99e02da344c4 StaticDependenciesID=c3c767bb8471c3a12b744845562d0a6f 
+Importing 'GUID: 0970e1fe26255304d8a458db21ab501b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1692777177697002734E6E82DC517DE23DD124E2572F7FA46E14897E066.obj' with importer (FBXImporter)
+ImportFBX Warnings:
+Can't import normals, because mesh 'default' doesn't have any.
+Mesh 'default' has no normals. Recalculating normals.
+Imported 'GUID: 0970e1fe26255304d8a458db21ab501b' -> (Import Result ID: 'c57b6d73bc84d14857a1dbed214560f3') in 0.028 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=158bd5c9c0f2302d8c07a1bfbd5e0552 DependenciesID=1568f722ac2323bbd522ae3e2fb8cd17 StaticDependenciesID=c1b2ae68f20929907a377dbe74de7a2f 
+Importing 'GUID: 19aeea7152801b242b6778225c2eb95f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc145373343640512875977F86238DF297C95E214A5FE923EDDDC873212419.obj' with importer (FBXImporter)
+Imported 'GUID: 19aeea7152801b242b6778225c2eb95f' -> (Import Result ID: 'ce94b74124dacc744bc9485af7139eac') in 0.119 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f32118c81a07fb799b10da8c874bb0da DependenciesID=03b66ed65d309c30185d8451a9f70996 StaticDependenciesID=a7f75c52832e6c565552d9021ac68a67 
+Importing 'GUID: 3910628f85ee9d64294ab145bee8d442 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc107898026290783940A34DF95D714BEC6C9A3E370FB5F822F19F6E99C.obj' with importer (FBXImporter)
+Imported 'GUID: 3910628f85ee9d64294ab145bee8d442' -> (Import Result ID: 'b1f9ec6261bbfb98ed40a7391acb37ea') in 0.073 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f73af828bd0256a74b51d3e9f79d9abc DependenciesID=c72951ed645816bf4a21bea12bd3ebf5 StaticDependenciesID=15a58a6f35c33d1a863d00711fb6f9f9 
+Importing 'GUID: 9940460a4c6ccf444899683f565bbf79 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc7694811541337051790909D2D290652F1ECFECBF7C5FDB4EAB908C64A4.obj' with importer (FBXImporter)
+Imported 'GUID: 9940460a4c6ccf444899683f565bbf79' -> (Import Result ID: '1915d671cda3c6cdf1dfa7239fc11de0') in 0.055 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8b00e49a926997bb2a90a87c5b6ee934 DependenciesID=d96b27eb473507de93b52b734b855aac StaticDependenciesID=873cafdb02191e38e6e993d855f2e97a 
+Importing 'GUID: 995282200f7019042a00913b57697182 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1750180373837761017A991C1AC731B4BB84EB3112221D9E7DD2FC9BD30.obj' with importer (FBXImporter)
+Imported 'GUID: 995282200f7019042a00913b57697182' -> (Import Result ID: 'f67e527b7de969ae26387b3afc5ec3b1') in 0.026 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=29c8140064ffa62155eac0db9f217dfd DependenciesID=535bf23ff9c30a03e440133c8d2e1af0 StaticDependenciesID=6d7faeb027dc5d700479e60350641dfb 
+Importing 'GUID: a94fedf786440114ba094f9952e5e3be - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc158680720477236462092D8D620381EFA9B01D1E0D048F6078294FAB258A.obj' with importer (FBXImporter)
+Imported 'GUID: a94fedf786440114ba094f9952e5e3be' -> (Import Result ID: '161a55566b810c3353e6392df31524ce') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=04bfe1dc469660dd77c88f1263187a74 DependenciesID=c4f4fb1629873e7dfacc66d050e18072 StaticDependenciesID=a68908ad9655987442b6ec808421ed7b 
+Importing 'GUID: c933313f921d5934d95794775fc23f63 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436850199956CF63822FD3A382EFA9FCA88082A8636257642.obj' with importer (FBXImporter)
+Imported 'GUID: c933313f921d5934d95794775fc23f63' -> (Import Result ID: '0df7d5661be0ed80d01498a7fa6256eb') in 0.046 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f4c14ddc041dab9cc5dc9a9a93bd7749 DependenciesID=e21eea72fd7f9763d2461aeebb9bf3d5 StaticDependenciesID=36b00d53482411441bd74588ce85d126 
+Importing 'GUID: c92f8304365a8b647bbb421253feee30 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566968474D7610B52FE5A7E4964186F05CF7B40E7AE91E8C4.obj' with importer (FBXImporter)
+Imported 'GUID: c92f8304365a8b647bbb421253feee30' -> (Import Result ID: 'dc4199f71b4555a2015d58aaa4d46111') in 0.073 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f7e09671389c724a23169c811c420446 DependenciesID=3d43e369f794daa8bd7034603745168d StaticDependenciesID=92513e9d4cc83482b98043201a38a2ad 
+Importing 'GUID: d9e239990fa12304b8c3b6eac4dc7370 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc17479686935473567970E9B8BE23DA00857D4737AA59E9308589E5B144C3.obj' with importer (FBXImporter)
+Imported 'GUID: d9e239990fa12304b8c3b6eac4dc7370' -> (Import Result ID: '1dee8579318b79fe0fdd5d1180212924') in 0.122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=156a0e7694d3f80f10ebb3362dd0edae DependenciesID=4d7b2bc1738e3d9b045bf9e4df68ed9a StaticDependenciesID=d386796d4d4278d7c3219ab8a6d4518d 
+Importing 'GUID: e9155410ad280cf4da7d3ee27d516c74 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10666845033131195534972421CF6C70F71D5B0A3B4489D57FABFB370C60.obj' with importer (FBXImporter)
+Imported 'GUID: e9155410ad280cf4da7d3ee27d516c74' -> (Import Result ID: '9fd665ab94b316e78d41d7ef1c0d7b2b') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0518da414d1cec955bec0731ec20149c DependenciesID=8ce49b5a81dbea26b7fb095ca5d92d4a StaticDependenciesID=698e363dbcb8142e2912d059d42301f2 
+Importing 'GUID: 0af0e5a128c80e34eaf6411694597edc - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1346504945446130948896D30CA6317056932DC4717487FBA97B963849C6.obj' with importer (FBXImporter)
+Imported 'GUID: 0af0e5a128c80e34eaf6411694597edc' -> (Import Result ID: 'd7d652f65d3c71bb8cb7dcaefbde3775') in 0.118 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=87cce4da38c1145ee4a357bf9300d5ff DependenciesID=918a3f577ff0651e2da594f1917aa1c1 StaticDependenciesID=1e3affa6cfe047d50b4259a7e99f3a38 
+Importing 'GUID: 1a93756c22a37c14aa110840fbff07c9 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436849391F3D920928B087659CD675E68F3808D84C6D362FF.obj' with importer (FBXImporter)
+Imported 'GUID: 1a93756c22a37c14aa110840fbff07c9' -> (Import Result ID: 'd6bef98c27dbf51b280741a08127935a') in 0.048 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=18c07e342a82536dc782eb43007c16c6 DependenciesID=ebb96618a5a62bc41972d523d6387bec StaticDependenciesID=1ac718493b91d71e31c092197d780d52 
+Importing 'GUID: 3a205694b697cc645b9f3107fbfea3bf - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc128154666079523045945D87722235CF8A8793DD0EFD3D03594137728AC0.obj' with importer (FBXImporter)
+Imported 'GUID: 3a205694b697cc645b9f3107fbfea3bf' -> (Import Result ID: 'b37136413d01d9d715d8659ae54e753c') in 0.081 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bfbf017241e843af19dab39fc38045bb DependenciesID=74e5de067a547cd9cf62fe76dbed0d09 StaticDependenciesID=f51898b3dbc5fab03aaee031de8e9d4b 
+Importing 'GUID: 3a5f78b22d0cdc14eb0fc52f7ad7631f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc142060775450782977408D5E0413276A7C2D11F0B3B5BAF857AE6879C775.obj' with importer (FBXImporter)
+Imported 'GUID: 3a5f78b22d0cdc14eb0fc52f7ad7631f' -> (Import Result ID: 'd8a65fbd400603a1727f632af54e0672') in 0.119 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=df030aa4eb6f7f6c786cd94870d7f32c DependenciesID=859bb38ba624b78ccf83e01a3970f779 StaticDependenciesID=efeab523bf75885bd3af94a8f229773f 
+Importing 'GUID: ba615c4f9fdb19a4497704e0075e4bf5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc13001155980243478692F43F4C00FFCF25F9EB7B9C27E5ED82316FA0D42B.obj' with importer (FBXImporter)
+Imported 'GUID: ba615c4f9fdb19a4497704e0075e4bf5' -> (Import Result ID: '3609c74370f9bf22b02e3ad6c1693e50') in 0.118 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=590608067db6119b2f77162971ac9b44 DependenciesID=d728f08c25ab223f1877334f3daf52cc StaticDependenciesID=bee81f92a10e9a6c204cb1e1bc8aabae 
+Importing 'GUID: ba3b0b73d12c9824f982402d77b24539 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc141540768619893704124D8F25E0312AA912A2334EEC06096D4254120912.obj' with importer (FBXImporter)
+Imported 'GUID: ba3b0b73d12c9824f982402d77b24539' -> (Import Result ID: '12a0853f19484b92d804a9bb63961bba') in 0.089 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=64f5de09daa20496f400e4bb9944e943 DependenciesID=38d1d24204e566dc19d733efe1fbd8bd StaticDependenciesID=411233fd42ebde76b5677c808b23e37d 
+Importing 'GUID: da3e897735087d94aa0ecfaa4bfc0ef3 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12341415840940575925BBF25E4003A35502C546F2350E0F3D7C0181CBA6.obj' with importer (FBXImporter)
+Imported 'GUID: da3e897735087d94aa0ecfaa4bfc0ef3' -> (Import Result ID: '487e28685128e7e1365f93b696d81842') in 0.122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fc686c18700e32389b0f1f245ef179e5 DependenciesID=d624476565c5d2ff4577315d4ca349d3 StaticDependenciesID=ec27e6cea8d523d2d986ef7d1b384b5a 
+Importing 'GUID: 1b031902a445ed8429152bcc67e5aa61 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18943534985668857224EE501EFB9A172C13A5AC71DF4B1894AAEDD590D.obj' with importer (FBXImporter)
+Imported 'GUID: 1b031902a445ed8429152bcc67e5aa61' -> (Import Result ID: '218133022217300e22ede77f56eb8853') in 0.071 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=400d95bd07f6ecb7a3262c942196e20a DependenciesID=2a36c36045acb9536661afa8b4f89c31 StaticDependenciesID=652054076e45e0b05cd0f07e5d35ca65 
+Importing 'GUID: 2b608cac8074fb04786d756bfa0cc12c - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1809885360410075712EB7AB68864CE2B1D72C7A135DF1E7B746E0108A0.obj' with importer (FBXImporter)
+Imported 'GUID: 2b608cac8074fb04786d756bfa0cc12c' -> (Import Result ID: '0c08bcc74bf9b2dd94a97ae58fd80a6a') in 0.060 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ac866c9cb71ee67c52cc4d006d4f7adc DependenciesID=dc0df61d83b540a9ea657a9a402b53a6 StaticDependenciesID=9b3b7597012639ea6dbcfe52cb831450 
+Importing 'GUID: 3ba19f866964bd542a73f240f6c73926 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497872570D8997A276148B46EA09D17DC0B01365DF219C9D7.obj' with importer (FBXImporter)
+Imported 'GUID: 3ba19f866964bd542a73f240f6c73926' -> (Import Result ID: '1b5afba27a7b9553b5227e13d5d1eef6') in 0.074 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5377176a5d6dcd940520a6d0ee13123f DependenciesID=6e160829431c4b8e5a6e7c8ded1b5114 StaticDependenciesID=93ed6c34a9647c70c5900c8a7f45a620 
+Importing 'GUID: 3b88609448ee4c5499c2fce135f8a3cf - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc13054311946729062668E5F86AE0B2C2232386E93480F1E985420A3E98F.obj' with importer (FBXImporter)
+Imported 'GUID: 3b88609448ee4c5499c2fce135f8a3cf' -> (Import Result ID: 'da09cf1ae97a587c7f816b3bfb2ddaeb') in 0.088 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2d6650c6a4a9458da74a8ee6c4109644 DependenciesID=3d911376f0da536aa46dc014fe5d552c StaticDependenciesID=3a3190e71d8ccc95a8e3d505ed0d98f1 
+Importing 'GUID: 5b0842fad9e93794da881072c5cc20d3 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc179869336199123401491C50ABD51E7693FCBDBD99A895A72C51ECB3CB55.obj' with importer (FBXImporter)
+Imported 'GUID: 5b0842fad9e93794da881072c5cc20d3' -> (Import Result ID: '95f6ac11e9e5ccdedafd0e73bd1a6dab') in 0.120 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c8b32d2bd8f7d2df8260d188b96d9a62 DependenciesID=97fb7fc28fcb1bcc5ce3cb189108fc58 StaticDependenciesID=aa7efe189b6c5fae340c538cc2561d06 
+Importing 'GUID: 6b2378138daec934facaabd59d790a41 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc41194808183768465D2065A5CA79710627FEC8CC6DF708994A9C78191.obj' with importer (FBXImporter)
+Imported 'GUID: 6b2378138daec934facaabd59d790a41' -> (Import Result ID: '5783ab0205a3e83caafa1102d9d92aa9') in 0.110 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=057a0d51a55910e60b35dd41795cfa36 DependenciesID=99249cea9b02a9cc74ed793e08e10441 StaticDependenciesID=b6132736b452d951ba68e9e0313dfeac 
+Importing 'GUID: 6be44687e877b0848a41498d26451da8 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2492254803019744804527EB32C2C8AEBFD916C28708AB02A69EA65471E.obj' with importer (FBXImporter)
+Imported 'GUID: 6be44687e877b0848a41498d26451da8' -> (Import Result ID: '623af718d6341cf9f194fb03774c1bff') in 0.091 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aec2f7a1b18dd0d7fe5b2127af5186f5 DependenciesID=3f8852b377a0b5a77192439e80c24f07 StaticDependenciesID=fd96583fa6b585f4827f6ed9a2f4a6ed 
+Importing 'GUID: 8b70232d344c3d04c8487608a1f43650 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11604694323817432532C645719CBFE6176DA8350F272E999576DE9B3541.obj' with importer (FBXImporter)
+Imported 'GUID: 8b70232d344c3d04c8487608a1f43650' -> (Import Result ID: 'e312a04ff9aecc9bc719c483cd564cd4') in 0.116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e520a11b6add58cf09ea5739ad2d6287 DependenciesID=3efd07f00fbc9bbb5b6dc65ede4356d3 StaticDependenciesID=59cf48d083efe28b02518427b64c152b 
+Importing 'GUID: cb2a3c44f372ab7449b3214d502bcdab - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc176366184721586962524BE0CE76D30B3CF1C4FF09E4322DB4706C974792.obj' with importer (FBXImporter)
+Imported 'GUID: cb2a3c44f372ab7449b3214d502bcdab' -> (Import Result ID: '4c0bb079376f6703c96b9300203e8dc4') in 0.118 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9731ed9aa8a19ef95c02d242646485f9 DependenciesID=4911c9f75fc958ff5210aaa4aae80170 StaticDependenciesID=6ea3d8e5dd7b9069b300bbe031ec2b49 
+Importing 'GUID: db70d09178fabea44802ef7db668c60b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1169969432031733147743608AC01E48C671BF3E9AA7610E06DDE3336C03.obj' with importer (FBXImporter)
+Imported 'GUID: db70d09178fabea44802ef7db668c60b' -> (Import Result ID: '9ec0ce0d45b4faf8c77277415949b115') in 0.120 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fb96d36a6e9d35fb66e22419c0b6586b DependenciesID=4822bad88a4c65644c1d5e17b2bca98a StaticDependenciesID=30379f260dfbd489d3cfcf24f484e562 
+Importing 'GUID: eb38c3997ed889a43a5bc807419631e1 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1078980262203271722BC42E145D2168C4A343D2FE83DAC80B935739D.obj' with importer (FBXImporter)
+Imported 'GUID: eb38c3997ed889a43a5bc807419631e1' -> (Import Result ID: '7f05756b34c824b31f1da6b9529d240b') in 0.024 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3bf112616e702f30af20ac663ec533b1 DependenciesID=ae9e7086f4267332b4f78c52a3356e6e StaticDependenciesID=bbf135be01c68e1ca3130aec824f6996 
+Importing 'GUID: 4cdbd4140bef6cc48b702301715da785 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10791705628407015FA230CFE7522E798766A38F0A6B424D86B770105.obj' with importer (FBXImporter)
+Imported 'GUID: 4cdbd4140bef6cc48b702301715da785' -> (Import Result ID: '1f79de5b890f96b50916a0868868738c') in 0.118 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=df7dd1bedcac38f79fea40043a76ba55 DependenciesID=4a57ae0835d3bac9aaa3ac5cde237242 StaticDependenciesID=9e234beca77740fcc92dad681b04932e 
+Importing 'GUID: 5c1aad7edd3484c4c96a52faac40722c - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1809885360410073506BCA188EAC5B0D926A3D7EA9025D0930536C43C8E.obj' with importer (FBXImporter)
+Imported 'GUID: 5c1aad7edd3484c4c96a52faac40722c' -> (Import Result ID: 'ff669ec41dda600455e9376b394c4aab') in 0.083 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=86782c14c1bc130a30a46db4a3268e35 DependenciesID=5d7c20eec424c0c2cbdb497333949ad7 StaticDependenciesID=610476fbdd89d91d8e3ed612ab387128 
+Importing 'GUID: 7c0db4b193507254e8795a2912aa18e0 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc20103494434978677186AD0054DEEB1BA91B8A63099FB3935782A38590D.obj' with importer (FBXImporter)
+Imported 'GUID: 7c0db4b193507254e8795a2912aa18e0' -> (Import Result ID: '09d865ea2066bc9911276a8480f98bb7') in 0.075 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=18bca8a7c32d5b5c94380ef54490d20d DependenciesID=ca7143daff724cd94a356d886936d0f9 StaticDependenciesID=22adc7902820e7649e1f78875de82eee 
+Importing 'GUID: cc0246dbddb78ed478b1032a305098fa - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc15592158661965307126245B42BA6FE11AFB58327247917DD5570F679DA4.obj' with importer (FBXImporter)
+Imported 'GUID: cc0246dbddb78ed478b1032a305098fa' -> (Import Result ID: 'e1e58c712528115551a045ab6abf9dc6') in 0.113 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dd28cf8d4ef5bb1f5e39b9039045f76d DependenciesID=f533ad10f65b79a4d83d7b07daecf6a8 StaticDependenciesID=30795533ffb7b642d21e4a3f80f405aa 
+Importing 'GUID: cc9929055193bb245a238f2053b41f02 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc78187612663007098831C473275E24B4A853CE264051DE9C8FFF797BDB.obj' with importer (FBXImporter)
+Imported 'GUID: cc9929055193bb245a238f2053b41f02' -> (Import Result ID: '3eea70b3c8c867ba434485c71890ec78') in 0.117 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2cc7764159df2748865ede11969a54a6 DependenciesID=a28a20a72c3a911414366afd01b3a508 StaticDependenciesID=a68ee16085bd81a74059d3a1cbd66417 
+Importing 'GUID: 0d47194cfaadced49aaa2a9485c61dec - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12481717435481830880A865A574CE590B8DA162171FD6C437D527E8473F.obj' with importer (FBXImporter)
+Imported 'GUID: 0d47194cfaadced49aaa2a9485c61dec' -> (Import Result ID: '1cc357726dae07a83694f17900ffe884') in 0.118 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=87dcb221ee80f250d676566b2ff3985a DependenciesID=e6b67bf2d1839ba6b579e594c85acbda StaticDependenciesID=2e6d17d99f42e87135c45bad9eb16e23 
+Importing 'GUID: 3d5e4d64742413b45b9312af43f48eee - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc107898026207179880C18B70A62BA81C29C451CE1A1867C1B4FE648F0.obj' with importer (FBXImporter)
+Imported 'GUID: 3d5e4d64742413b45b9312af43f48eee' -> (Import Result ID: '357981f72d77f057d63fde3695eb5793') in 0.023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6a2115f115f14e1d18bbab72e4b27d8f DependenciesID=ae24d9fa07274329d60f2d8aa14cafbc StaticDependenciesID=f1c5af90044cf457a3e36aca7eb2012d 
+Importing 'GUID: 4d32b9dc49eb60840af5ca3ec5d255d0 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc228395254390968306426BE70092A75A7A8D8D420B4AE2E23BE9BC1CF20.obj' with importer (FBXImporter)
+Imported 'GUID: 4d32b9dc49eb60840af5ca3ec5d255d0' -> (Import Result ID: '468416490a6ecb9c848587f4e1a87ed6') in 0.049 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=98db6a48956f47ed6391ac7d42df3973 DependenciesID=c4b234f706a53c2e92843ca29fc0bd0c StaticDependenciesID=0b2dee29501f37666158d018ae3995e4 
+Importing 'GUID: 4d27b1918af277d4c95c93c161d49133 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc201034944349787432301F25FB005155F6BC7FAF2B9C7D22C86368E1071.obj' with importer (FBXImporter)
+Imported 'GUID: 4d27b1918af277d4c95c93c161d49133' -> (Import Result ID: 'eed348766b2454a00f306bbd8fd54a68') in 0.074 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4453c1868c55c0942d58f94a700a0843 DependenciesID=fcac01d7cc29dd21a44a829c371fc815 StaticDependenciesID=576a234fe9b969ca7ccdd867ec57d1bd 
+Importing 'GUID: 5db63358b6e822e46880b456caff3740 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc310712182227709043BC6C333878083F296FFCF433C95EEAB720F74CE.obj' with importer (FBXImporter)
+Imported 'GUID: 5db63358b6e822e46880b456caff3740' -> (Import Result ID: '02ffd02ee12f9a3857071133114e3236') in 0.095 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ba0063f33f94b6456a38d228d9073829 DependenciesID=ff4784f14a1fcd29702b86f0eefc8e62 StaticDependenciesID=f2829a94cf53f54c8c1b1b683303ddb0 
+Importing 'GUID: 5dd923e19b53f1f4791c738adb18d173 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9529663569250035527F24342D01D0B1E2B30E3D3F7CCFEFC74DEC6933.obj' with importer (FBXImporter)
+Imported 'GUID: 5dd923e19b53f1f4791c738adb18d173' -> (Import Result ID: '93810ec9a3df644869acb0e674fa0396') in 0.052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7c9bea8c0c745a0f7e9921c025ac7123 DependenciesID=a928ab63af140581456ae9dd8a68ccbe StaticDependenciesID=b3c0339928939ac8f2626a867e8431d2 
+Importing 'GUID: 5d7fb4a503843b7499c63e997ba7eddc - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc24359560060540611105A2FD4FA230F40F7512497FEB10E8FD91F5012CF.obj' with importer (FBXImporter)
+Imported 'GUID: 5d7fb4a503843b7499c63e997ba7eddc' -> (Import Result ID: 'dd93ae506378545e2b3d2e39f184bebe') in 0.076 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=19fd02beb234e50804e71892e8a1221d DependenciesID=d3f75d4e1bde9e0b7183a53196fa58fe StaticDependenciesID=aff623edcfb7cfe4c71342de28cc660d 
+Importing 'GUID: dd302b2bba720c3438365b538b909e6d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc144722961778971426133500E24BC2A35D35D867624A0DD0194143EEE101.obj' with importer (FBXImporter)
+Imported 'GUID: dd302b2bba720c3438365b538b909e6d' -> (Import Result ID: '9e5b5464737bac562bc31ac694016223') in 0.121 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=15475c392531ab832accc67d101fb621 DependenciesID=6c2d7fb9b6e6c5dcfb0d467cdfef1ded StaticDependenciesID=57f3b56583c0809e0a30cfe0455941a3 
+Importing 'GUID: 4e811b1c16197aa49973660c76c9b91c - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1029580352603090677CDB450FE3AF38B3A915F5669424D97FB29C4F1A8.obj' with importer (FBXImporter)
+Imported 'GUID: 4e811b1c16197aa49973660c76c9b91c' -> (Import Result ID: 'b087c22e39286a8f11339663de211597') in 0.099 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1194c79959910b836d17177d23efab5d DependenciesID=d887ca17c00d2bfa37cc0b63cc85df43 StaticDependenciesID=2f3c2bf063ed1d7d7ae49afed118e949 
+Importing 'GUID: 4e2218d4353135446a41175a7546c4f6 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431405701572752620DF74BDC141B8DB36CEEE53EC46E4E4E485A5C.obj' with importer (FBXImporter)
+Imported 'GUID: 4e2218d4353135446a41175a7546c4f6' -> (Import Result ID: 'd30c8c4359ab711495cf8f9ccf6a3a7c') in 0.091 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dc6f423ab9beda1d0385a9e902000f2a DependenciesID=f94ba72f734b7a0045c92ea4bc074cd6 StaticDependenciesID=11a572b8382ab897637dd7e211cf5d4c 
+Importing 'GUID: be24ee2ecd1c20f42a4312f6347d9107 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566969053A3BD8ED6310391F24770B2DB75CE1766322FA93B.obj' with importer (FBXImporter)
+Imported 'GUID: be24ee2ecd1c20f42a4312f6347d9107' -> (Import Result ID: '3a40a1d5e00e1c31c4fc9166dc0bdd73') in 0.073 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9d0feb35e21f9b0012813cc4ea013f5c DependenciesID=72c40c21f729e64fb5aef081a84909ec StaticDependenciesID=b83398a2f0bb965c3d7280940d659668 
+Importing 'GUID: deb7a15e49131e74aa3e3d36187d5c08 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497871795C7956BE0B249C0E31C1E45848D07BE441E90A4E5.obj' with importer (FBXImporter)
+Imported 'GUID: deb7a15e49131e74aa3e3d36187d5c08' -> (Import Result ID: '1ee9fd211189576389cd60225fd73860') in 0.074 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bc11cb9bcb47e39572cbc56dfd78e111 DependenciesID=f54375f7211980c2ca8967d9a9b1fbcf StaticDependenciesID=e1a8ef7495ad698d4f91e3ec57fa97e6 
+Importing 'GUID: fea0bf6dc05aea643a39ddf9fc726bd9 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc23808019044368498231CFF711F5EB6E2C04EA3AA4F5A2D226C3D112715.obj' with importer (FBXImporter)
+Imported 'GUID: fea0bf6dc05aea643a39ddf9fc726bd9' -> (Import Result ID: '11096ee504da77554b0b7fbbe6590fe8') in 0.047 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=121ca6eb1a17f4caacd544426dd216ee DependenciesID=5624b624d1fe22b0af3c8ef40374787f StaticDependenciesID=8bee1219c9c4af146393de694e3b2dc6 
+Importing 'GUID: 2fd02d2d8bfc3a04b8331929ac73a28a - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc169277717769700091593F75BFE898F181924DF264E2840664443684A37.obj' with importer (FBXImporter)
+ImportFBX Warnings:
+Can't import normals, because mesh 'default' doesn't have any.
+Mesh 'default' has no normals. Recalculating normals.
+Imported 'GUID: 2fd02d2d8bfc3a04b8331929ac73a28a' -> (Import Result ID: 'deae3a024e6150cb63768d2c2f75ae9d') in 0.028 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=92a8f0b22f8fca7a642ac3bc8620b332 DependenciesID=54df5f49098cc330050230163ca2c8b1 StaticDependenciesID=215edce4bc9023a4046c0a0fe1bb7bfd 
+Importing 'GUID: 8f09e20bb32d1d746a586efbc6f689c4 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12295548183642451281D611E1AC9257F42E691C94BAC106EA8C5A06E345.obj' with importer (FBXImporter)
+Imported 'GUID: 8f09e20bb32d1d746a586efbc6f689c4' -> (Import Result ID: '5af2e0d3ce2dcb2a2104ae4a97ceeb79') in 0.117 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=706937de10e541844c45a9d57e08b8d9 DependenciesID=4fafff18180d3e115be436c66d8d3716 StaticDependenciesID=adc121250646c5af9e79f44443b62573 
+Importing 'GUID: af0078e8d267f9840bdfa31df9f4c739 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18211470361664510641B254937FB108BBF278F964F7C3CDBBC80F30618.obj' with importer (FBXImporter)
+Imported 'GUID: af0078e8d267f9840bdfa31df9f4c739' -> (Import Result ID: 'd7d5e3b9a215cdf68c13ddc4d805e649') in 0.083 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5ca221434e951cfaffb9bdaeb5d2061f DependenciesID=a45626741c1964b761187bc5a1a8e7c2 StaticDependenciesID=6c22eff6a95d5ecb11f95a77935c8418 
+Importing 'GUID: bf24d2f421199f04d855eaae4fa2a15d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10925748675272389396599104D21D89F2CEC6579D9D5AFE16981AA48BEA.obj' with importer (FBXImporter)
+Imported 'GUID: bf24d2f421199f04d855eaae4fa2a15d' -> (Import Result ID: '7c9dcf10f32d9f8f19018e475857cb34') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f90701b75efdd918b76b2725fc849adc DependenciesID=2bb23a5e9182aad37e635625ea97fee0 StaticDependenciesID=219f6755118dd0b4170af1d811b6f008 
+Importing 'GUID: 70432c46f6154304aa9e47ca8127f820 - Path: Assets/Resources/Armies/Models/Custodes/ModelIndex.json' with importer (TextScriptImporter)
+Imported 'GUID: 70432c46f6154304aa9e47ca8127f820' -> (Import Result ID: '6bbbfe3ecd8b60fa80bec5a141c0aaba') in 0.013 seconds [static dependencies only]. Details - ImportResultOutputID=7d2a04c990325c8b59ceaee44a87b508 DependenciesID=2bbccff9bec7624cf9a4f5d72012ac15 StaticDependenciesID=2802eecaa48aa1826cc2b86a7ad6912a 
+Importing 'GUID: b56942dbcdd58164283cb4fcb98b81e5 - Path: Assets/Resources/Armies/Models/Custodes/CATALOGUE.txt' with importer (TextScriptImporter)
+Imported 'GUID: b56942dbcdd58164283cb4fcb98b81e5' -> (Import Result ID: 'b53405dbe2cd7413e8dee8eebe564cc2') in 0.014 seconds [static dependencies only]. Details - ImportResultOutputID=762e724e8ce5db5d45b64fd5f204e8db DependenciesID=0a63a5b6e35aa0ac0041a63e2f9025b4 StaticDependenciesID=3efe88cd89a4437c8373c7a6b530c3f6 
 Starting new worker id: 0 with log in C:/Users/elli0/Documents/GitHub/Warboard/Logs/AssetImportWorkerHW0.log
 
-Asset Pipeline Refresh (id=9c1f60ff3214f6c40a9aaae5b6c527e1): Total: 6.475 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=a850bf7cf4f981440af7f34e4a04c25c): Total: 46.690 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	(Values over 0.05ms)
 	Summary:
-		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=648 ms
-		Asset DB Callback time: managed=80 ms, native=11 ms
-		Scripting: domain reloads=1, domain reload time=498 ms, compile time=5229 ms, other=6 ms
-		Project Asset Count: scripts=50, non-scripts=438
-		Asset File Changes: new=0, changed=2, moved=0, deleted=0
+		Imports: total=219 (actual=219, local cache=0, cache server=0)
+		Asset DB Process Time: managed=78 ms, native=36319 ms
+		Asset DB Callback time: managed=94 ms, native=113 ms
+		Scripting: domain reloads=1, domain reload time=540 ms, compile time=9535 ms, other=9 ms
+		Project Asset Count: scripts=53, non-scripts=654
+		Asset File Changes: new=220, changed=221, moved=0, deleted=0
 		Scan Filter Count: 0
-	InvokePackagesCallback: 8.746ms
-	ApplyChangesToAssetFolders: 0.214ms
-	Scan: 37.499ms
-	Collect global state as custom dependencies: 9.079ms
-	OnSourceAssetsModified: 0.737ms
-	CategorizeScriptCompilationAssets: 0.270ms
-	ProcessAssetsWithTransientArtifactChanges: 1.972ms
-	CategorizeAssets: 3.627ms
-	CompileScripts: 5229.267ms
-	ImportOutOfDateAssets: 550.755ms (527.886ms without children)
-		UnloadImportedAssets: 0.165ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.063ms
-		ImportSchedulerStart: 22.637ms
-	PostProcessAllAssets: 82.549ms
-		VCAutoAddAssetPostprocess 1.515ms
-		MonoPostProcessAllAssets: 80.320ms
-			AssetPostprocessor.OnPostprocessAllAssets 15.568ms
-			StyleCatalogPostProcessor.OnPostprocessAllAssets 14.522ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 10.935ms
-			AssetChangedListener.OnPostprocessAllAssets 8.650ms
-			BuilderAssetPostprocessor.OnPostprocessAllAssets 5.993ms
-			SyncVS.PostprocessSyncProject 1.810ms
-			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.595ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.453ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 1.395ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 1.044ms
-			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.665ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.372ms
-			AudioMixerPostprocessor.OnPostprocessAllAssets 0.365ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.334ms
-			AssetEvents.OnPostprocessAllAssets 0.302ms
-			SpeedTreePostProcessor.OnPostprocessAllAssets 0.227ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.215ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.183ms
-			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.146ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.111ms
-			AudioContainerPostProcessor.OnPostprocessAllAssets 0.103ms
-	PostAssetChangesProfiler: 2.308ms
-	UnloadStreamsBegin: 1.446ms
-	Untracked: 539.792ms
+	InvokePackagesCallback: 23.339ms
+	ApplyChangesToAssetFolders: 0.272ms
+	Scan: 540.201ms
+	Collect global state as custom dependencies: 15.722ms
+	OnSourceAssetsModified: 2.696ms
+	CategorizeScriptCompilationAssets: 0.639ms
+	ProcessAssetsWithTransientArtifactChanges: 2.466ms
+	CategorizeAssets: 5.915ms
+	CompileScripts: 9534.592ms
+	ImportOutOfDateAssets: 35775.521ms (565.857ms without children)
+		ImportManagerImport: 35183.704ms (11.270ms without children)
+			UpdateCategorizedAssets: 1.297ms
+		UnloadImportedAssets: 0.310ms
+		ReloadImportedAssets: 0.117ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.101ms
+		ImportSchedulerStart: 25.543ms
+	PostProcessAllAssets: 183.458ms
+		VersionControlSettings.HiddenFilePostprocess 6.042ms
+		PostProcessCallbackCreateDeferredMaterials 0.526ms
+		RaytracingShaderImportPostprocess 0.335ms
+		ShaderAssetModifiedCallback 0.309ms
+		ComputeShaderImportPostprocess 0.248ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 0.228ms
+		SpeedTreeImporter.PostprocessAllAssets 0.190ms
+		AssemblyValidation.PostprocessAllAssets 0.139ms
+		BlockShaderImporter.PostprocessAllAssets 0.116ms
+		MonoPostProcessAllAssets: 91.724ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 16.871ms
+			AssetPostprocessor.OnPostprocessAllAssets 16.599ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 11.474ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 10.996ms
+			AssetChangedListener.OnPostprocessAllAssets 10.613ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 3.993ms
+			SyncVS.PostprocessSyncProject 1.679ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.601ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.400ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.179ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.830ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.588ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.565ms
+			AssetEvents.OnPostprocessAllAssets 0.464ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.379ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.236ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.216ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.201ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.166ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.130ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.116ms
+	PostAssetChangesProfiler: 1.460ms
+	UnloadStreamsBegin: 1.865ms
+	PersistCurrentRevisions: 0.579ms
+	Untracked: 594.196ms
 
 Application.AssetDatabase Initial Refresh End
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Scanning for USB devices : 5.716ms
+Scanning for USB devices : 6.002ms
 Initializing Unity extensions:
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-Warboard_Unity6_v26_1_ReservePlacementFix_FLAT
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 82 unused Assets / (0.5 MB). Loaded Objects now: 736.
-Memory consumption went from 206.5 MB to 205.9 MB.
-Total: 7.466600 ms (FindLiveObjects: 0.071500 ms CreateObjectMapping: 0.022800 ms MarkObjects: 6.850700 ms  DeleteObjects: 0.513500 ms)
+Unloading 116 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 196 unused Assets / (0.7 MB). Loaded Objects now: 739.
+Memory consumption went from 233.4 MB to 232.7 MB.
+Total: 7.632700 ms (FindLiveObjects: 0.167400 ms CreateObjectMapping: 0.034300 ms MarkObjects: 6.541500 ms  DeleteObjects: 0.442800 ms)
 
 [LAYOUT] About to load UserSettings\Layouts\default-6000.dwlt, keepMainWindow=False
 [LAYOUT] About to save layout C:\Users\elli0\Documents\GitHub\Warboard\UserSettings\Layouts\default-6000.dwlt
@@ -312,21 +788,21 @@ This project uses Input Manager, which is marked for deprecation. To manage inpu
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
-[Project] Loading completed in 11.095 seconds
-	Project init time: 				9.812 seconds
+[Project] Loading completed in 52.619 seconds
+	Project init time: 				51.206 seconds
 		Template init time: 		0.000 seconds
-		Package Manager init time: 		1.544 seconds
-		Asset Database init time: 		0.208 seconds
-		Global illumination init time: 	0.002 seconds
-		Assemblies load time: 			1.124 seconds
+		Package Manager init time: 		0.879 seconds
+		Asset Database init time: 		0.310 seconds
+		Global illumination init time: 	0.010 seconds
+		Assemblies load time: 			1.642 seconds
 		Unity extensions init time: 	0.001 seconds
-		Asset Database refresh time: 	6.475 seconds
-	Scene opening time: 			1.034 seconds
-##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1786307383792,"processId":3480,"projectLoad":11.095379900000001,"projectInit":9.8121161,"templateInit":0.0,"packageManagerInit":1.544454,"assetDatabaseInit":0.2076005,"globalIlluminationInit":0.0022686,"assembliesLoad":1.1241884,"unityExtensionsInit":0.0007299,"assetDatabaseRefresh":6.4750534,"sceneOpening":1.0337041}
-##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1786307383792,"processId":3480,"editorVersion":"6000.5.7f1 (017862109af0)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+		Asset Database refresh time: 	46.690 seconds
+	Scene opening time: 			1.165 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1786309729390,"processId":31556,"projectLoad":52.6194944,"projectInit":51.2057064,"templateInit":0.0,"packageManagerInit":0.8785598,"assetDatabaseInit":0.3099138,"globalIlluminationInit":0.0098803,"assembliesLoad":1.6417853,"unityExtensionsInit":0.0008374,"assetDatabaseRefresh":46.6904931,"sceneOpening":1.164828}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1786309729391,"processId":31556,"editorVersion":"6000.5.7f1 (017862109af0)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
 D3D11 device created for Microsoft Media Foundation video decoding.
 Worker ready: AssetImportWorkerHW0 0
-Asset Pipeline Refresh (id=51ee55515df78764d9076edd3590c46d): Total: 0.024 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=32e0955f97cf1e640962d5be5a499aa4): Total: 0.033 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
 Dynamic Batching is deprecated and will be removed in a future release. Use GPU Instancing instead. Disable Dynamic Batching in Project Settings > Player > Other Settings to remove this warning.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -339,106 +815,171 @@ UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
 
 Start Indexing on Editor startup
 [Indexing] Starting Initial Indexing for Assets
-Created GICache directory at C:/Users/elli0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.013s, timestamps: [12.048 - 12.061]
+Created GICache directory at C:/Users/elli0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.025s, timestamps: [54.022 - 54.047]
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Client] Successfully updated the access token
 [Licensing::Module] Successfully updated access token: "PfX7ad6L"... (expires: 2026-08-09T21:57:07Z)
 Starting new worker id: 1 with log in C:/Users/elli0/Documents/GitHub/Warboard/Logs/AssetImportWorkerHW1.log
-[Worker0] Imported GUID: dcd6235622c24141927199ba267b3acf - Path: Assets/Scripts/Core/WarboardBuildInfo.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2ac5f9043fba041a89f7b4d6f167693e') in 0.1838002 seconds
-[Worker0] Imported GUID: fcd3153b03e64dbdbe66d6905ada1b4f - Path: Assets/Scripts/Factions/AdeptusCustodes/CustodesSetupUI.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '767405e5a88ccedb3c98e19876f772df') in 0.0057966 seconds
+[Worker0] Imported GUID: a94fedf786440114ba094f9952e5e3be - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc158680720477236462092D8D620381EFA9B01D1E0D048F6078294FAB258A.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '18218ce14c0c54626b51a5d0c2acc501') in 0.2224791 seconds
+Starting new worker id: 2 with log in C:/Users/elli0/Documents/GitHub/Warboard/Logs/AssetImportWorkerHW2.log
 [Licensing::Client] Successfully resolved entitlement details
+[Worker0] Imported GUID: 47070117b24f39f42a78389377fac052 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720140897978C123505C01005219B63B5BBD7ECFF1701F1F1.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e8b5192bd17efb0e100a503fbde0fee0') in 0.0253251 seconds
+[Worker0] Imported GUID: b0641ac1425741e448c44585469725bf - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc128309644039982209853F915888997C1DC2E5C6BA30CBEEBCA78E5FA0AB.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '566f588c90d6e5e2caa889522d542fb9') in 0.0139769 seconds
+[Worker0] Imported GUID: 2ecc537c891a2b548b2e6f356706c304 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18084062155022321286CDE244B0400658B883AC213879279D590B09A8DE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c1221054302cecc444a3bfd3f01b6bcf') in 0.0670921 seconds
+[Worker0] Imported GUID: 6aefc753c5ac5fa45a0cd7c81f6b0542 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13054306284061254310F74A565F457C79B90C373CBAA5B04BE8124D37E.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8bb1161652ddcfe71d68d60b96a7b035') in 0.019205 seconds
+[Worker0] Imported GUID: 648e2c4e76ddfbf4eb0d5f33872f855b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc175130676024373346611A1C47200C020DF3699120B9C29BE33EF3741A4.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '44eb02947b79a0981526e626a93252fa') in 0.0147424 seconds
+[Worker0] Imported GUID: e0d5fd1b132542a4f93ce2228a538c71 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430628404029644277D636A6842401D764A3C56DC776BEDD2B16AE8.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b8bb2a5987283cafa87e1fb3cdc5a2e0') in 0.017228 seconds
+[Worker0] Imported GUID: a474f1e592cd8534b852259de4ac4fa4 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498567083056845A8C9688419991F9361569A3ABCFC3192B1B85.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '541a842bbba77a73f2e03e2bd7fd5929') in 0.012226 seconds
+[Worker0] Imported GUID: 0af0e5a128c80e34eaf6411694597edc - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1346504945446130948896D30CA6317056932DC4717487FBA97B963849C6.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '928497d00f50fcb53fc38b406e04bd1e') in 0.0196311 seconds
+[Worker0] Imported GUID: d4fa3233687e09a40a39f9a0f618dd9d - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc124481718997875246949E3034B5DCED32AEA3DB2DD07D47AB4543B1467D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '85318c905025a310e62ea788e49a8bea') in 0.0174738 seconds
+[Worker0] Imported GUID: c8fbc32d36c78b149b1b088b0a728ca8 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10295803526031001029B8301C65FAFD9CBE8F7B3D4BBB0962E9614D6D6.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '742181b43a5cf2b8e8d59a9c45490d2b') in 0.0145113 seconds
+[Worker0] Imported GUID: d50ce4481ee7e284292554ecdadfda0b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc94226471545002318908BBA6478EEEE6E0A9B4E26DED47E6B86537497BE.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e773e44aeca7a79005b9a40739619589') in 0.0132694 seconds
+[Worker0] Imported GUID: 60608cacfbd475d41b1ab3b80c22f2f6 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978722508A55465E941AB248CCF861E1FC93B2DFC8FFC8FE.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '47201d766d1ca36235cee1fa7739b09c') in 0.0130991 seconds
+[Worker0] Imported GUID: 9cce724280fcc824180c96363baf89ed - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc24359560060540910261B985236EC0D2F3FC02F7396B1B45259312374C0.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a944c05567ce3fcd4de387b694dfa338') in 0.0152897 seconds
+[Worker0] Imported GUID: eb38c3997ed889a43a5bc807419631e1 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1078980262203271722BC42E145D2168C4A343D2FE83DAC80B935739D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5e01930cad1c216d0f2e82e67901caa6') in 0.0175521 seconds
+[Worker0] Imported GUID: 3d234fbddf32a8e42af5d29576c3e957 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc4120008146000002416B22B6ABE8E2B5F60C03C7FBE92DD4465B30DCB.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c005c356105902c90342b39b0a98336d') in 0.0159772 seconds
+[Worker0] Imported GUID: deb7a15e49131e74aa3e3d36187d5c08 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497871795C7956BE0B249C0E31C1E45848D07BE441E90A4E5.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd107cb7e1a18317a8d39a0c49d00eb01') in 0.01432 seconds
+[Worker0] Imported GUID: fe9b15412146a5d44864b6e25713cda3 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc182564913118354049141AD132C99B0089EC8969C1488FB5022916DDA90.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0b48981e6b8286741af5a9555be24d4d') in 0.0191155 seconds
+[Worker0] Imported GUID: 78f90a4c6057d25448e233606bcbe323 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497870521161E20282C854A8CB2E18EA76187913FF50F8745.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '038da54bc655a81dd1c362a8d6eb0e31') in 0.0149114 seconds
+[Worker0] Imported GUID: a7e0d786395a490418b70c12902c717f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc153124426767463789004D18ACED8FD0AB4EC14AD4F1022398241AA43CCD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '71d2194fc79e1259752927254c53d2cd') in 0.0225259 seconds
+[Worker0] Imported GUID: df631bd18e420bc41865f791088024de - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14622352967245123058D3094EF5420C15A26D940EE20D5C593529AC00DD.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6888b2140ff4ddccd146498fb93c5125') in 0.0188828 seconds
+[Worker0] Imported GUID: 20c77244346658b4683599a3ccd475ef - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12108199023198643597601CF4ED6C75DC4BF737E6768E2C34F9F3618E01.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4f70c726d80555d15b3d49a0199a7aec') in 0.0210661 seconds
+[Worker0] Imported GUID: c1655906495acfa48a9adb6d188b9a2f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12489407793534531037CF63F002DBAC6E6B463C519B31C67659B3CB99F2.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '57088ccfcfcbcc36c8544d692912e1ef') in 0.0160149 seconds
+[Worker0] Imported GUID: 8b70232d344c3d04c8487608a1f43650 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11604694323817432532C645719CBFE6176DA8350F272E999576DE9B3541.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd156fd416f610cff3128b35bb5714b45') in 0.014967 seconds
+[Worker0] Imported GUID: 514703fac878f5f4cbd3a48bed99d875 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc130543062840401624696AAF21A511DFE797601DB83BAF8514B0FED2A6D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c5bcca159096835813d7a80ea403d167') in 0.0177564 seconds
+[Worker0] Imported GUID: 19aeea7152801b242b6778225c2eb95f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc145373343640512875977F86238DF297C95E214A5FE923EDDDC873212419.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f9292dc09f887316e17075dfc4719c09') in 0.0159982 seconds
+[Worker0] Imported GUID: a093b3e3528081347b2e19271fd9c501 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc169277717769700446452DC683FC9202D958790C191305AE127494A17EF.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '119e6707b2b4742901a9ee4d0c6de631') in 0.0159626 seconds
+[Worker0] Imported GUID: 589ef15ecb620d94e8c7ec32f5baae48 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9345495520519056269E96B002E56742BBAA7CFFF22A1C45A0A1100C71E.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8783c69abad63337f902da24aeba561e') in 0.0146521 seconds
+[Worker0] Imported GUID: 84b95fcbbae1b944ebadefe4c1cee01f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc23808019044368496669891D0476DAD48089A0170BFB381A4DB399DE0AC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '101e971f809841a0f96cbaae33abac04') in 0.0207381 seconds
+[Worker0] Imported GUID: b1b62ba384e45b246b27948022bf733b - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc310700343733459727ADFBDE2C9409D303CE032B8D139AD2A8E4893A7.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a0a84a5142be1c803b42396459f36311') in 0.0217852 seconds
+[Worker0] Imported GUID: ce591ecaac837c64aa957762ae07fc0f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1809885360410074309496677D0AA2520C48EF987F26E54E9EBC23EF696.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9c068ce4f83413b23a61245acfd20e38') in 0.0696495 seconds
+[Worker0] Imported GUID: 508335916e599e04abe7bd97e40433de - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18943534985670823009862E521D232041F698E48BF78EEF774ACA81487.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '19f464307d76da1bbe64772887be2b62') in 0.0172506 seconds
+[Worker0] Imported GUID: cbdb2d04afcf9034db8088121caef8e7 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1527364883105148362194CAE1DE3CCB9A570F6510241EBAC43DBCA24180.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'dca8c52a284fbdd38b5d55a20fe85da1') in 0.0877175 seconds
+[Worker0] Imported GUID: 8ddb96bf31d6c3646b6f86f7c01367b7 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc108015434613341379B8CCE7E38BA3184C3AB61330E1BC333A2378464.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b0c136741d8e5ec0b8a486cddd20ec2a') in 0.0484218 seconds
+[Worker0] Imported GUID: 246ae7c5288971740a4c89f58f2817da - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497873999DBEFB21104779D098ADAB406E41BEC1848684407.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f284afe05430f9d220a19c97d23d45fc') in 0.0294378 seconds
+[Worker0] Imported GUID: fc3f7194520978e47beb43f629632c19 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc31070034373345122A483863734E9B75AF00822A5F6A49AB864330E07.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2dafff123263046679442f4d9bd9cce1') in 0.0222268 seconds
+[Worker0] Imported GUID: b1041547bf7f9554987bdce0f031e9fb - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498566886734B257832E13DDFDC5837DB0BB993E52ECDCD69D6A.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '745bca3e0dffc20195531d0b1ec61553') in 0.0324088 seconds
+[Worker0] Imported GUID: 95c6e7325db397044b01e1042118999f - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc310567257096201426B7417BE7422EB92250A41CA357A4179BD1B969E.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '10c1df38e301bd7f80b0113663ea283f') in 0.0248874 seconds
+[Worker0] Imported GUID: 03e6de2c3a6dd234da29a886e7a524d2 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc228395254390968265292A1987B3A1FB8EE6B2B0EB3CC12ACBA64C84DF9.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9e540ff50e20a5e5c11666b003bf7feb') in 0.0405363 seconds
+[Worker0] Imported GUID: 694eb9ef8900a9044a88ffdaa8bb5392 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc163501791930674444888811541D9AA6179A532232CAD39504D6D8AF25D0.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '27e330372a8b636d3e19b86cf93d73a8') in 0.0513969 seconds
+[Worker0] Imported GUID: c933313f921d5934d95794775fc23f63 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436850199956CF63822FD3A382EFA9FCA88082A8636257642.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c8b762ae558d961bd536d05d3c80f1d2') in 0.0395661 seconds
+[Worker0] Imported GUID: 0403e76063acc7542b1bc12ac99c7650 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1079052771036435108856360C7D7CA691A696E15F0EACC93737DEF3A.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'eeea9a4d08d108f5fd70c9d52b537ff5') in 0.0179663 seconds
+[Worker0] Imported GUID: 9091c77dc5e296e4998b70a3118b920f - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566884821E86DC19E5C2F0609563175BF24FC5AB4FC500772.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '38745ff2f63139ee1b83eea10e312261') in 0.0264211 seconds
+[Worker0] Imported GUID: c787196f9dfc58a46b0b337f5ac144f6 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9929355111463726855755BFD498769615356D754D399A5C4C4B456822D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '288c9e2e23ab2f6184dc42d1553feb76') in 0.0194999 seconds
+[Worker0] Imported GUID: 2b608cac8074fb04786d756bfa0cc12c - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1809885360410075712EB7AB68864CE2B1D72C7A135DF1E7B746E0108A0.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1e13032473917fa60ac5cab1c5658e47') in 0.0225027 seconds
+[Worker0] Imported GUID: a6da3bcdd08db804287659cf568bde54 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc310699491417689009160FE6F1985FB580080BD264ECEFB95AC2FDA1B.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ca394efa6ab9ecd4521067815e5b1756') in 0.0206475 seconds
+[Worker0] Imported GUID: 02e9e1ede13e5924aa7b900915a70499 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497873419086CC8612CA868D3DD850AA60EB8D1392988666B.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '43545e2cd1ad71137ac6ad7da5db9139') in 0.0220852 seconds
+[Worker0] Imported GUID: 8101fa0f25c63f94e951737e48499107 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194677701499A3AFE175B8A55AB603801036ECBF942E646CC7B5.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9aa50a8a2e4e10871eab11a74887c8ec') in 0.0415467 seconds
+[Worker0] Imported GUID: 83ca5540b43632e44af6426f6525762d - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2404445481954314272DA94AA12122CAC909D56C61AA73A262732524A06.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '266cbfde0b02b21ab9d82a8727bcf074') in 0.03398 seconds
+[Worker0] Imported GUID: 0059eeb922a623e41b36bfbf85a2a431 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12128383371525768858AA088AB906169305FD81466A0CBF914698962687.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '866dfa9d3a94da0044275d3e05663012') in 0.0230355 seconds
+[Worker0] Imported GUID: 3441f92419927e443944dcca7a275ded - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc9474031591108716333DEA3BB662960AABA0D87E95FC64EAE6031DB05A4.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0934902968f6351eaba97bfe92384945') in 0.0210601 seconds
+[Worker0] Imported GUID: 98553ac1e0cf1924586eb7343f668815 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497869895099124EC79839211778A6C283EA95A27AB9D146D.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3ed7b0d1ccf2c27851cc110ab5fa6bae') in 0.0226065 seconds
+[Worker0] Imported GUID: 2279b95ef9de88b4ea0c0be55ccc25a5 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc4119435501749555823F7B9649782D0BA2DAE7B52F544D117A1E7C8D3.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd87cd430269f5265766f1dc601148155') in 0.0281232 seconds
+[Worker0] Imported GUID: d615db140e13ce3429d1a8c1bde69606 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11514242168809510332AEB2F62153958B3552D5B3F1D737D460C4931222.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '95616624fa520eac2ac502d0ea3d72c5') in 0.0186973 seconds
+[Worker0] Imported GUID: 5558ff2cd65d913489ab228bf7fb56ee - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc24359564144332359474E21CAC028A9E988E923809483227D4F5CE19ADB.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '922dd412923dcb0e98189b185175f1d6') in 0.0145643 seconds
+[Worker0] Imported GUID: 2d47cf6f67c016f47982abeb57b69c1c - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12508669834491198667738A084411B12DE9B4B41AAA4B55079DB54AD702.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c68fae9e0f8cfb478eb6c2ef6b82e0bf') in 0.0145323 seconds
+[Worker0] Imported GUID: c8cab70e6886c804ca4b39459189c72a - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10789802628891194ABD9ED185D4882ECCD382717D2A91672A436E341.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '78431dc62d2268ff9aa4cfcbd7dd2ac3') in 0.0156798 seconds
+[Worker0] Imported GUID: 5b0842fad9e93794da881072c5cc20d3 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc179869336199123401491C50ABD51E7693FCBDBD99A895A72C51ECB3CB55.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f194f808d8486ef0cb92a81da0d4438e') in 0.0141207 seconds
+[Worker0] Imported GUID: 4504a561a1c7fba468025ec68c5ee407 - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11944547760575877273224B56DAE150028C6E16602C7A35DAD134D515C2.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '65a7f82953726e731d294f1442bc3a0a') in 0.0200145 seconds
+[Worker0] Imported GUID: 5c1aad7edd3484c4c96a52faac40722c - Path: Assets/Resources/Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1809885360410073506BCA188EAC5B0D926A3D7EA9025D0930536C43C8E.obj - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '994b79291c86af2d26afe22eb46ce1f1') in 0.0156588 seconds
+[Worker0] Imported GUID: 3876eb71ed3304943972e48c6da72740 - Path: Assets/Resources/Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18211470361664513236036A1BA7406851561C37464BCA4FFAE803CDBDC.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '91520d85352a39814ec0ac0663b23228') in 0.0153189 seconds
 Reloading assemblies for play mode.
 Reloading assemblies after forced synchronous recompile.
 Begin MonoManager ReloadAssembly
 Worker ready: AssetImportWorkerHW1 1
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
+Worker ready: AssetImportWorkerHW2 2
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.213 seconds
-Domain Reload Profiling: 1830ms
-	BeginReloadAssembly (439ms)
-		DisableScriptedObjects (111ms)
-		CreateAndSetChildDomain (142ms)
-	RebuildCommonClasses (10ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (101ms)
-		LoadAssemblies (121ms)
-		AnalyzeDomain (6ms)
-			TypeCache.Refresh (4ms)
-	FinalizeReload (1215ms)
+- Finished resetting the current domain, in  1.371 seconds
+Domain Reload Profiling: 2396ms
+	BeginReloadAssembly (744ms)
+		DisableScriptedObjects (150ms)
+		CreateAndSetChildDomain (163ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (73ms)
+	LoadAllAssembliesAndSetupDomain (165ms)
+		LoadAssemblies (150ms)
+		AnalyzeDomain (10ms)
+			TypeCache.Refresh (7ms)
+	FinalizeReload (1372ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (99ms)
-			ProcessInitializeOnLoadAttributes (90ms)
-			ProcessInitializeOnLoadMethodAttributes (95ms)
-			AfterProcessingInitializeOnLoad (7ms)
-		AwakeInstancesAfterBackupRestoration (559ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (112ms)
+			ProcessInitializeOnLoadMethodAttributes (99ms)
+			AfterProcessingInitializeOnLoad (9ms)
+		AwakeInstancesAfterBackupRestoration (619ms)
 
-Asset Pipeline Refresh (id=a6ef29cd2141f94469ccbcc0593ee4a0): Total: 1.955 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+Asset Pipeline Refresh (id=859c77a04132f7c4399e25982caf350d): Total: 2.553 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
 	(Values over 0.05ms)
 	Summary:
 		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=1262 ms
-		Asset DB Callback time: managed=42 ms, native=3 ms
-		Scripting: domain reloads=1, domain reload time=644 ms, compile time=2 ms, other=0 ms
-		Project Asset Count: scripts=50, non-scripts=438
+		Asset DB Process Time: managed=0 ms, native=1433 ms
+		Asset DB Callback time: managed=41 ms, native=4 ms
+		Scripting: domain reloads=1, domain reload time=1070 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=53, non-scripts=654
 		Asset File Changes: new=0, changed=0, moved=0, deleted=0
 		Scan Filter Count: 0
-	InvokePackagesCallback: 2.049ms
-	ApplyChangesToAssetFolders: 0.054ms
-	Collect global state as custom dependencies: 1.027ms
-	ProcessAssetsWithTransientArtifactChanges: 2.932ms
-	CategorizeAssets: 3.216ms
-	CompileScripts: 1.677ms
-	ImportOutOfDateAssets: 1220.432ms (1215.206ms without children)
-		UnloadImportedAssets: 1.637ms
-		ImportSchedulerStart: 3.539ms
-	PostProcessAllAssets: 45.503ms
-		PostProcessCallbackCreateDeferredMaterials 0.394ms
-		ShaderAssetModifiedCallback 0.233ms
-		RaytracingShaderImportPostprocess 0.084ms
-		ComputeShaderImportPostprocess 0.075ms
-		SpeedTreeImporter.PostprocessAllAssets 0.062ms
-		MonoPostProcessAllAssets: 42.285ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 8.745ms
-			BuilderAssetPostprocessor.OnPostprocessAllAssets 7.456ms
-			AssetPostprocessor.OnPostprocessAllAssets 5.929ms
-			AssetChangedListener.OnPostprocessAllAssets 2.390ms
-			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.370ms
-			SyncVS.PostprocessSyncProject 1.335ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.013ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 0.934ms
-			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.667ms
-			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.408ms
-			AssetEvents.OnPostprocessAllAssets 0.355ms
-			AudioMixerPostprocessor.OnPostprocessAllAssets 0.352ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 0.319ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.316ms
-			SpeedTreePostProcessor.OnPostprocessAllAssets 0.231ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.203ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.197ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.149ms
-			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.147ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.116ms
-			AudioContainerPostProcessor.OnPostprocessAllAssets 0.088ms
-	PostAssetChangesProfiler: 0.358ms
-	UnloadStreamsBegin: 1.428ms
-	Untracked: 672.702ms
+	InvokePackagesCallback: 2.829ms
+	ApplyChangesToAssetFolders: 0.072ms
+	Collect global state as custom dependencies: 1.367ms
+	ProcessAssetsWithTransientArtifactChanges: 3.364ms
+	CategorizeAssets: 4.949ms
+	CompileScripts: 1.920ms
+	ImportOutOfDateAssets: 1379.128ms (1372.626ms without children)
+		UnloadImportedAssets: 2.130ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.107ms
+		ImportSchedulerStart: 4.261ms
+	PostProcessAllAssets: 45.172ms
+		PostProcessCallbackCreateDeferredMaterials 0.418ms
+		ShaderAssetModifiedCallback 0.248ms
+		ComputeShaderImportPostprocess 0.127ms
+		RaytracingShaderImportPostprocess 0.097ms
+		SpeedTreeImporter.PostprocessAllAssets 0.082ms
+		MonoPostProcessAllAssets: 41.659ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 9.275ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.929ms
+			AssetPostprocessor.OnPostprocessAllAssets 5.432ms
+			AssetChangedListener.OnPostprocessAllAssets 2.358ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.488ms
+			SyncVS.PostprocessSyncProject 1.307ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.012ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.005ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.606ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.366ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.357ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.324ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.273ms
+			AssetEvents.OnPostprocessAllAssets 0.258ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.198ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.190ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.182ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.168ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.167ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.126ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.111ms
+	PostAssetChangesProfiler: 0.374ms
+	UnloadStreamsBegin: 2.515ms
+	Untracked: 1107.486ms
 
 AudioListener component deleted: Component belongs to a disabled built-in package.
 Loaded scene 'Temp/__Backupscenes/0.backup'
-	Deserialize:            0.661 ms
-	Integration:            32.300 ms
+	Deserialize:            1.185 ms
+	Integration:            38.914 ms
 	Integration of assets:  0.002 ms
-	Thread Wait Time:       0.031 ms
-	Total Operation Time:   32.994 ms
+	Thread Wait Time:       0.020 ms
+	Total Operation Time:   40.122 ms
 [Licensing::Client] Successfully resolved entitlement details
-Asset Pipeline Refresh (id=f9ff3dffc7014b442ae662b289113beb): Total: 0.013 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=f3aea7e4778507b4288e20becad168b9): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=362c086b56bf97c48b02a62ee6951d06): Total: 0.015 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=8095d97de2391bb41858715ab0f9d5be): Total: 0.004 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=122a2a4b5d5e0164eb603cc1f89aeaea): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=3766aa600b2e14e4ca9111ae898d306a): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+TrimDiskCacheJob: Current cache size 0mb
 Unknown ability id: Herald of Ynnead
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -544,6 +1085,24 @@ UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr
 
 (Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
 
+Warboard Custodes Model Pack loaded: 104 indexed objects.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CustodesModelPackResolver:EnsureLoaded () (at Assets/Scripts/Core/CustodesModelPackResolver.cs:24)
+CustodesModelPackResolver:TryResolve (string,string,int) (at Assets/Scripts/Core/CustodesModelPackResolver.cs:118)
+ModelVisualRegistry:Resolve (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:771)
+SquadController:CreateModels () (at Assets/Scripts/Core/SquadController.cs:303)
+SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:275)
+GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
+GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Core/CustodesModelPackResolver.cs Line: 24)
+
 Warboard Aeldari Model Pack loaded from Resources/Armies/Models/Aeldari: 209 indexed objects.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -553,7 +1112,7 @@ UnityEngine.Logger:Log (UnityEngine.LogType,object)
 UnityEngine.Debug:Log (object)
 ModelVisualRegistry:EnsurePackLoaded () (at Assets/Scripts/Core/ModelVisualRegistry.cs:146)
 ModelVisualRegistry:TryResolvePack (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:404)
-ModelVisualRegistry:Resolve (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:771)
+ModelVisualRegistry:Resolve (string,string,int) (at Assets/Scripts/Core/ModelVisualRegistry.cs:781)
 SquadController:CreateModels () (at Assets/Scripts/Core/SquadController.cs:303)
 SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:275)
 GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
@@ -952,6 +1511,21 @@ UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr
 
 (Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
 
+Unknown ability id: Warlord
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+AbilityRegistry:Create (string) (at Assets/Scripts/Core/AbilitySystem.cs:46)
+SquadController:Initialize (UnitData) (at Assets/Scripts/Core/SquadController.cs:267)
+GameController:SpawnSquad (UnitData,UnityEngine.Vector3) (at Assets/Scripts/Core/GameController.Core.cs:438)
+GameController/<LoadYellowScribeRoster>d__630:MoveNext () (at Assets/Scripts/Core/GameController.Setup.cs:364)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
+
 Unknown ability id: Stand Vigil
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -1207,11 +1781,14 @@ UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr
 
 (Filename: Assets/Scripts/Core/AbilitySystem.cs Line: 46)
 
-TrimDiskCacheJob: Current cache size 0mb
-Asset Pipeline Refresh (id=15787958acbc32b45a459a32d0dadc30): Total: 0.004 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=dff5accb807fd474da73471d8e281cba): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=04ac3b2febb714d448f9ddaa46f19d98): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-MonoPathRemapper: Attempts to remap: 3017; Successful remaps: 16
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Asset Pipeline Refresh (id=9edf25294226ea54c8743aa8ed7e3d4b): Total: 0.010 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=2f1915b8e93c6ba42983423f3b3152f3): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=5d8909a1384e2f2418bd86bdb174ee00): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=449f3d9792cc0514fabbbe2d5107def2): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=e386e1ac46d9a094bac8c6f8fc0d8160): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+MonoPathRemapper: Attempts to remap: 3261; Successful remaps: 16
 Serialized file version minimum: 23, current 23
 [LAYOUT] About to save layout C:\Users\elli0\Documents\GitHub\Warboard\UserSettings\Layouts\default-6000.dwlt
 [LAYOUT] About to save layout C:/Users/elli0/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
@@ -1226,12 +1803,16 @@ Shut down.
 AcceleratorClientConnectionCallback - disconnected - :0
 Cleanup mono
 CodeReloadManager destroyed
-abort_threads: Failed aborting id: 00000000000003AC, mono_thread_manage will ignore it
+abort_threads: Failed aborting id: 0000000000007CF8, mono_thread_manage will ignore it
 
-abort_threads: Failed aborting id: 00000000000003AC, mono_thread_manage will ignore it
+abort_threads: Failed aborting id: 0000000000008584, mono_thread_manage will ignore it
 
-debugger-agent: Unable to listen on 4988
+abort_threads: Failed aborting id: 0000000000007CF8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000008584, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 4400
 Checking for leaked weakptr:
   Found no leaked weakptrs.
 [Package Manager] Server process was shutdown
-##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1786307493441,"processId":3480,"allocatedMemory":45348061,"memoryLabels":[{"Default":165338},{"Permanent":15516},{"NewDelete":66241},{"Thread":4197560},{"Manager":32517},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":837400},{"Material":24},{"GfxDevice":55328},{"Animation":952},{"Audio":880},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":94664},{"Input":42840},{"JobScheduler":256},{"TextLib":19030},{"Mono":48},{"ScriptingNativeRuntime":674964},{"BaseObject":1734314},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":1032},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":9894},{"StaticString":3808},{"Utility":2673426},{"Curl":48},{"PoolAlloc":2168},{"AI":80},{"TypeTree":17165},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7352},{"WebRequest":8027},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":33042128},{"Camera":17},{"Secure":265},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":185192},{"CoreStats":13688},{"Identifiers":6768},{"Gui":609},{"EditorUtility":188249},{"VersionControl":8},{"Undo":931},{"AssetDatabase":756907},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35345},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1786309887725,"processId":31556,"allocatedMemory":45873295,"memoryLabels":[{"Default":173622},{"Permanent":15516},{"NewDelete":66401},{"Thread":4197560},{"Manager":32517},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":837400},{"Material":24},{"GfxDevice":55328},{"Animation":952},{"Audio":880},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":94664},{"Input":42840},{"JobScheduler":256},{"TextLib":19030},{"Mono":48},{"ScriptingNativeRuntime":674964},{"BaseObject":1734314},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":1032},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":10041},{"StaticString":3808},{"Utility":2673432},{"Curl":48},{"PoolAlloc":2168},{"AI":80},{"TypeTree":17165},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7352},{"WebRequest":10490},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":33042128},{"Camera":17},{"Secure":265},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":201616},{"CoreStats":13688},{"Identifiers":6768},{"Gui":901},{"EditorUtility":193931},{"VersionControl":8},{"Undo":931},{"AssetDatabase":1248683},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35345},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}
