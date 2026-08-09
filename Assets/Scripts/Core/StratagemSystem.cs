@@ -4,14 +4,43 @@ using System.Linq;
 
 public enum GameEventType
 {
+    BattleStarted,
+    BattleRoundStarted,
+    BattleRoundEnded,
+
     TurnStarted,
+    TurnEnded,
+
     PhaseStarted,
+    PhaseEnded,
+
+    UnitSelectedToMove,
+    MoveStarted,
+    MoveEnded,
+    UnitSetUp,
+    UnitAdvanced,
+    UnitFellBack,
+
     AttackStarted,
     AttackResolved,
     HitRolled,
     WoundRolled,
+
+    UnitFinishedShooting,
+
+    ChargeDeclared,
     ChargeRolled,
-    UnitDestroyed
+
+    UnitSelectedToFight,
+    UnitFinishedFighting,
+
+    ModelDestroyed,
+    UnitDestroyed,
+
+    ObjectiveControlChanged,
+
+    UnitEmbarked,
+    UnitDisembarked
 }
 
 public enum CommandRerollStage

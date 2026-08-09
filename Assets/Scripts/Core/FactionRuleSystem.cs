@@ -73,12 +73,10 @@ public class FactionRuleSystem
             battleFocusTokens[faction] = 0;
             lethalSurgeUsedThisTurn[faction] = false;
 
-            if (profile.IsYnnari)
-            {
-                ApplyServantsOfTheWhisperingGod(
-                    army
-                );
-            }
+            // v33:
+            // Do not mutate Aeldari keywords here. Devoted of Ynnead is a
+            // detachment choice, so AeldariGameController/AeldariRulesSystem
+            // is now the authority for Servants of the Whispering God.
         }
     }
 
@@ -133,12 +131,33 @@ public class FactionRuleSystem
         {
             if (pair.Value.UsesBattleFocus)
             {
-                // Warboard's current board/mission is Strike Force scale.
-                battleFocusTokens[pair.Key] = 4;
+                battleFocusTokens[pair.Key] =
+                    BattleFocusTokensForBattlefield();
             }
 
             lethalSurgeUsedThisTurn[pair.Key] = false;
         }
+    }
+
+    private static int BattleFocusTokensForBattlefield()
+    {
+        // 11e Aeldari Battle Focus:
+        // Incursion 2, Strike Force 4, Onslaught 6.
+        //
+        // Warboard already selects battlefield dimensions before army
+        // loading. 44x30 / 44x60 / 44x90 are the standard footprints, so
+        // depth gives us a backwards-compatible size signal without adding
+        // another GameController dependency in this migration release.
+        float battlefieldDepth =
+            GameController.BoardDepth;
+
+        if (battlefieldDepth <= 30.01f)
+            return 2;
+
+        if (battlefieldDepth <= 60.01f)
+            return 4;
+
+        return 6;
     }
 
     public void StartTurn(string faction)
@@ -214,33 +233,13 @@ public class FactionRuleSystem
         SquadController unit =
             squad.JoinedActionController();
 
-        if (UnitOrLeaderHasRule(
+        // v33:
+        // Native Battle Focus remains generic. Spirit Guides is explicitly a
+        // Spirit Conclave detachment rule and is handled by
+        // AeldariRulesSystem.GrantsBattleFocusFromSpiritGuides().
+        return UnitOrLeaderHasRule(
             unit,
-            "Battle Focus"))
-        {
-            return true;
-        }
-
-        if (!unit.HasKeyword(
-            "wraith construct"))
-        {
-            return false;
-        }
-
-        return allSquads.Any(
-            psyker =>
-                psyker != null &&
-                psyker.IsAlive &&
-                psyker.IsOnBattlefield &&
-                psyker.FactionId ==
-                    unit.FactionId &&
-                psyker.HasKeyword("aeldari") &&
-                psyker.HasKeyword("psyker") &&
-                game.JoinedDistancePublic(
-                    psyker,
-                    unit
-                ) <= 12.001f
-        );
+            "Battle Focus");
     }
 
     public string EndCommandPhase(
@@ -369,6 +368,9 @@ public class FactionRuleSystem
             );
         }
 
+        // Psychic Guidance is a datasheet ability rather than the
+        // Spirit Conclave detachment's Spirit Guides aura, so it remains
+        // here for compatibility.
         if (actionAttacker.HasKeyword(
                 "wraith construct") &&
             game.FriendlyKeywordWithin(
@@ -464,6 +466,9 @@ public class FactionRuleSystem
                         "adeptus custodes")
             );
 
+        // Retained as a legacy compatibility flag for existing v32 UI and
+        // reaction code. It no longer mutates the army. The selected
+        // Aeldari detachment is the gameplay authority.
         bool ynnari =
             army.Any(
                 squad =>
@@ -483,14 +488,16 @@ public class FactionRuleSystem
                     ) >= 0
             );
 
+        // Battle Focus is the ASURYANI army rule in the supplied 11e pack.
+        // Explicit imported Battle Focus rules remain supported.
         bool battleFocus =
             army.Any(
                 squad =>
                     UniversalRuleRegistry.UnitHasRule(
                         squad,
                         "Battle Focus") ||
-                    squad.HasKeyword("asuryani") ||
-                    squad.HasKeyword("aeldari")
+                    squad.HasKeyword(
+                        "asuryani")
             );
 
         if (necrons)
@@ -516,7 +523,7 @@ public class FactionRuleSystem
                 ArmyRuleName =
                     "Battle Focus",
                 DetachmentName =
-                    "Devoted of Ynnead — Strength from Death",
+                    "Aeldari detachment controller",
                 IsYnnari = true,
                 UsesBattleFocus = battleFocus
             };
@@ -544,33 +551,5 @@ public class FactionRuleSystem
             DetachmentName = "",
             UsesBattleFocus = battleFocus
         };
-    }
-
-    private void ApplyServantsOfTheWhisperingGod(
-        List<SquadController> army)
-    {
-        foreach (SquadController squad in army)
-        {
-            if (squad == null)
-                continue;
-
-            bool asuryani =
-                squad.HasKeyword(
-                    "asuryani") ||
-                squad.HasKeyword(
-                    "aeldari");
-
-            bool epicHero =
-                squad.HasKeyword(
-                    "epic hero");
-
-            if (asuryani &&
-                !epicHero)
-            {
-                squad.AddFactionKeyword(
-                    "YNNARI"
-                );
-            }
-        }
     }
 }
