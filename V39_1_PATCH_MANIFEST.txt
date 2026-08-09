@@ -1,0 +1,8 @@
+WARBOARD v39.1 PATCH MANIFEST
+
+Assets/Editor/WarboardV39CoreRulesCompliance.cs
+Assets/Editor/WarboardV39CoreRulesCompliance.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+README_V39_1.md
+V39_1_PATCH_MANIFEST.txt

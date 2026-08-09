@@ -572,13 +572,13 @@ public static class WarboardV39CoreRulesCompliance
                  ) ||
                  UniversalRuleRegistry.UnitHasRule(
                     target.JoinedActionController(),
-                    "stealth"
+                    ""stealth""
                  ));
 
             bool v39IgnoresCover =
                 WeaponRuleParser.Has(
                     weapon,
-                    "ignores_cover"
+                    ""ignores_cover""
                 );
 
             if (v39BenefitOfCover &&
