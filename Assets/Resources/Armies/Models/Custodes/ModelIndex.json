@@ -1,0 +1,4842 @@
+{
+  "formatVersion": 1,
+  "packId": "warboard.custodes",
+  "displayName": "Warboard Adeptus Custodes Model Pack",
+  "sources": [
+    "Custodes",
+    "Custodes_State"
+  ],
+  "units": [
+    {
+      "source": "Custodes",
+      "name": "Coronus Grav Carrier",
+      "guid": "eb9c36",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 170.004,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc128309644039982209853F915888997C1DC2E5C6BA30CBEEBCA78E5FA0AB",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12625092560155152560DFE6BD367B61F067D4153DB2F7B1F05A3FA7977E",
+          "normalResource": "",
+          "position": [
+            -1.21859948e-05,
+            0.125993967,
+            7.204487e-06
+          ],
+          "rotation": [
+            0.020941365499997748,
+            0.0144171687,
+            0.03424863520000001
+          ],
+          "scale": [
+            0.9999999999999999,
+            1.0,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Coronus_Grav_Carrier"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "telemon dreadnought photoscan loadouts, rebased",
+      "guid": "bb82e8",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 100.0,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1750180373837761017A991C1AC731B4BB84EB3112221D9E7DD2FC9BD30"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "telemon body",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc16927771776970002323D2A92F0C02ED0DE431FA3394A3005C6A3514444",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            0.0,
+            -0.07855082486133552,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            180.0,
+            359.9999999999874
+          ],
+          "scale": [
+            1.00000238,
+            0.981883347,
+            1.00000238
+          ],
+          "objectNames": [
+            "Body_Trimmed_a.004"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "2",
+          "nickname": "telemon caestus L",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc169277717769700091593F75BFE898F181924DF264E2840664443684A37",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            0.0,
+            -0.07855082486133552,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            180.0,
+            359.9999999999874
+          ],
+          "scale": [
+            1.00000238,
+            0.981883347,
+            1.00000238
+          ],
+          "objectNames": [
+            "Caestus_L_a.001"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "3",
+          "nickname": "telemon caestus R",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1692777177697002734E6E82DC517DE23DD124E2572F7FA46E14897E066",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            0.0,
+            -0.07855082486133552,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            180.0,
+            359.9999999999874
+          ],
+          "scale": [
+            1.00000238,
+            0.981883347,
+            1.00000238
+          ],
+          "objectNames": [
+            "Caestus_R_a.001_a.010"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Caladius Grav-Tank",
+      "guid": "1a15db",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 149.739,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802622032872A6F63507E9BEADE66B1611ED4B007628924E0904"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc144722961778971426133500E24BC2A35D35D867624A0DD0194143EEE101",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1527364883105148362194CAE1DE3CCB9A570F6510241EBAC43DBCA24180",
+          "normalResource": "",
+          "position": [
+            4.31853223e-05,
+            0.12594831,
+            -2.67649957e-05
+          ],
+          "rotation": [
+            0.020260771700014217,
+            359.9737,
+            0.0505203381
+          ],
+          "scale": [
+            1.0000000000000002,
+            1.0000000000000002,
+            1.0000000000000002
+          ],
+          "objectNames": [
+            "Caladius_Grav_Tank"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Telemon",
+      "guid": "021618",
+      "description": "Photoscan by Raikoh",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 99.966,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc107898026207179880C18B70A62BA81C29C451CE1A1867C1B4FE648F0"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10791705628407015FA230CFE7522E798766A38F0A6B424D86B770105",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10791705628416087D6161A6E23CBBA37DA828E26A9A6CC637CB45D48",
+          "normalResource": "",
+          "position": [
+            -0.0428011976,
+            0.125529245,
+            0.0307939276
+          ],
+          "rotation": [
+            0.0014629579399974898,
+            179.955261,
+            359.9992958291
+          ],
+          "scale": [
+            0.9499999,
+            0.9500000480000002,
+            0.9499999
+          ],
+          "objectNames": [
+            "Telemon"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vertus Praetors",
+      "guid": "9612ee",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 74.841,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1078980262203271722BC42E145D2168C4A343D2FE83DAC80B935739D"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1469968687379554198752E0256B4524195790E261000A698E543D2F2DCB",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc155871891669372221183F269D26632B4B656D314DD15E00E90843CB9745",
+          "normalResource": "",
+          "position": [
+            0.00017260859,
+            0.1264033,
+            -6.978696e-05
+          ],
+          "rotation": [
+            0.11109400500000335,
+            359.99898806377,
+            0.07776061999999999
+          ],
+          "scale": [
+            0.9999999399999998,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Vertus_Praetors_3"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vertus Praetors",
+      "guid": "bd7a7b",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 74.841,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1078980262203271722BC42E145D2168C4A343D2FE83DAC80B935739D"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc177935169916542242046AEB1B3E2309A98C1031A6918FD61EAA624FA274",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc163501791930674444888811541D9AA6179A532232CAD39504D6D8AF25D0",
+          "normalResource": "",
+          "position": [
+            0.00454161735,
+            0.126224488,
+            0.000415783667
+          ],
+          "rotation": [
+            0.11168192300002074,
+            359.987366,
+            0.001556645000000001
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999998,
+            0.9999999399999999
+          ],
+          "objectNames": [
+            "Vertus_Praetors_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vertus Praetors",
+      "guid": "634c92",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 74.841,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1078980262203271722BC42E145D2168C4A343D2FE83DAC80B935739D"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc13001155980243478692F43F4C00FFCF25F9EB7B9C27E5ED82316FA0D42B",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc101507134767136637120459C74E6145D194A01B2B86EFDE928F479E63C9",
+          "normalResource": "",
+          "position": [
+            0.000154808222,
+            0.126430169,
+            -7.123815e-05
+          ],
+          "rotation": [
+            0.10701724900000738,
+            0.0007533117000000054,
+            0.07514230000000002
+          ],
+          "scale": [
+            0.9999999999999997,
+            0.9999999999999996,
+            0.9999999999999997
+          ],
+          "objectNames": [
+            "Vertus_Praetors_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Caladius Annihilator Grav-Tank",
+      "guid": "dd71a7",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 157.226,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802622032872A6F63507E9BEADE66B1611ED4B007628924E0904"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9750579273913085057E7F833123BB44774C8D4358C319E06AAE79EDBA8",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14622352967245123058D3094EF5420C15A26D940EE20D5C593529AC00DD",
+          "normalResource": "",
+          "position": [
+            -1.2682034190000001e-05,
+            0.1306494357,
+            4.341342243e-05
+          ],
+          "rotation": [
+            0.00820127900001017,
+            359.8947,
+            359.9933
+          ],
+          "scale": [
+            1.0500002519999998,
+            1.0499999999999996,
+            1.0500003779999998
+          ],
+          "objectNames": [
+            "Caladius_Annihilator_Grav-Tank"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Agamatus Jetbike",
+      "guid": "f02d78",
+      "description": "Photoscan by Savage Boii",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 65.0,
+        "resource": "Armies/Models/Bases/base_65_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc141540768619893704124D8F25E0312AA912A2334EEC06096D4254120912",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc9474031591108716333DEA3BB662960AABA0D87E95FC64EAE6031DB05A4",
+          "normalResource": "",
+          "position": [
+            -0.0004782562,
+            0.126056641,
+            -0.000107960906
+          ],
+          "rotation": [
+            0.01202290510000491,
+            359.9977720473,
+            359.984528
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Legio_Custodes_Gyrfalcon_Pattern_Jetbike"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Telemon Heavy Dreadnought",
+      "guid": "ce6fbd",
+      "description": "Photoscan by Savage Boii",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 99.966,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc107898026207179880C18B70A62BA81C29C451CE1A1867C1B4FE648F0"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1346504945446130948896D30CA6317056932DC4717487FBA97B963849C6",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc15015275072796422350FBF3B2C6EB93F056DA716B009FF645B93A33D620",
+          "normalResource": "",
+          "position": [
+            -2.588966e-05,
+            0.126570046,
+            4.22966732e-05
+          ],
+          "rotation": [
+            359.81020000000007,
+            359.99475976638,
+            359.96344
+          ],
+          "scale": [
+            0.9999998999999999,
+            0.9999999999999999,
+            1.00000012
+          ],
+          "objectNames": [
+            "Legio-custodes-heavy-dreadnought"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes_State",
+      "name": "telemon dreadnought photoscan loadouts, rebased",
+      "guid": "569f6a",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 100.0,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1750180373837761017A991C1AC731B4BB84EB3112221D9E7DD2FC9BD30"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "telemon gun R",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc169277717769700446452DC683FC9202D958790C191305AE127494A17EF",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            0.0,
+            -0.0782695565388,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            180.0,
+            359.9999999999906
+          ],
+          "scale": [
+            1.0,
+            0.9783675,
+            1.0
+          ],
+          "objectNames": [
+            "Gun_R_a.003"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "2",
+          "nickname": "telemon body",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc16927771776970002323D2A92F0C02ED0DE431FA3394A3005C6A3514444",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            0.0,
+            -0.0782695565388,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            180.0,
+            359.9999999999906
+          ],
+          "scale": [
+            1.0,
+            0.9783675,
+            1.0
+          ],
+          "objectNames": [
+            "Body_Trimmed_a.004"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "3",
+          "nickname": "telemon caestus L",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc169277717769700091593F75BFE898F181924DF264E2840664443684A37",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            0.0,
+            -0.0782695565388,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            180.0,
+            359.9999999999906
+          ],
+          "scale": [
+            1.0,
+            0.9783675,
+            1.0
+          ],
+          "objectNames": [
+            "Caestus_L_a.001"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Ares Gunship",
+      "guid": "749f9a",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "CarlsDirt"
+      ],
+      "base": {
+        "diameterMm": 159.283,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802620717997EE642C580C4E38BB65B24194086DBBE2EE729969"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10976653372927727464D2495DB20392D83F9B1BAADBBF4DE67A04D21487",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14913819375214553844B8FD333F34F7E80BB9CCD123F687851D4C4ACE30",
+          "normalResource": "",
+          "position": [
+            -1.6658294e-05,
+            4.069754,
+            -2.45188858e-07
+          ],
+          "rotation": [
+            0.0012260696400008596,
+            359.9784,
+            0.0023359721500000007
+          ],
+          "scale": [
+            0.9999999399999999,
+            1.0,
+            0.99999994
+          ],
+          "objectNames": [
+            "Ares_Gunship"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5",
+          "normalResource": "",
+          "position": [
+            4.57320239e-05,
+            0.126464725,
+            5.72140561e-06
+          ],
+          "rotation": [
+            359.999812844908,
+            180.024673,
+            359.999048080645
+          ],
+          "scale": [
+            6.999999999999999,
+            6.999999999999999,
+            7.0
+          ],
+          "objectNames": [
+            "Dirt_Base"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes_State",
+      "name": "Ares Gunship",
+      "guid": "99f197",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 159.283,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802620717997EE642C580C4E38BB65B24194086DBBE2EE729969"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10976653372927727464D2495DB20392D83F9B1BAADBBF4DE67A04D21487",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14913819375214553844B8FD333F34F7E80BB9CCD123F687851D4C4ACE30",
+          "normalResource": "",
+          "position": [
+            -1.93415713e-06,
+            0.12707448,
+            -9.75383e-07
+          ],
+          "rotation": [
+            0.010661381299988684,
+            359.999675047176,
+            359.995762403
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999997,
+            0.9999999999999997
+          ],
+          "objectNames": [
+            "Ares_Gunship"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Prosecutor Superior",
+      "guid": "2d9cd0",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497868620C4EC3E4972692E146439DC528DBC059C5290040A",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497868220E7EB506E5E22EF923D6B552E17ED8C48276C33C8",
+          "normalResource": "",
+          "position": [
+            1.914967e-09,
+            0.127400041,
+            -5.00571939e-09
+          ],
+          "rotation": [
+            359.99999980680224,
+            269.992432,
+            359.9999991641658
+          ],
+          "scale": [
+            1.0000000000000002,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Prosecutor",
+      "guid": "fc8e17",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc20103494434978677186AD0054DEEB1BA91B8A63099FB3935782A38590D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978673083EB65DAAF4AA037AF02C26701925949488075832",
+          "normalResource": "",
+          "position": [
+            2.05505959e-08,
+            0.127400041,
+            -6.81534651e-09
+          ],
+          "rotation": [
+            359.9999998632732,
+            269.992432,
+            359.9999994829168
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Witchseeker",
+      "guid": "123f5a",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497869895099124EC79839211778A6C283EA95A27AB9D146D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978695544C8E7E21C74B7EE9DCB982785C97650CAF6F79F4",
+          "normalResource": "",
+          "position": [
+            8.319352e-08,
+            0.127399921,
+            -8.47675352e-08
+          ],
+          "rotation": [
+            1.1185867435302147e-06,
+            269.992432,
+            359.99999952132583
+          ],
+          "scale": [
+            0.9999997620000002,
+            1.0,
+            0.9999997620000001
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Prosecutor",
+      "guid": "f8c025",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "Vox",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1486703883914914939D1A267360BDD2BAEB395A4B1B48E533FC42E71BB",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1486703883914937326C8C4A65059D3FEA64E2D3D88DB8B1137220470DA",
+          "normalResource": "",
+          "position": [
+            -0.0402308322919658,
+            0.16215051797294358,
+            0.12601050995344598
+          ],
+          "rotation": [
+            0.0003194708809315848,
+            315.0011600000022,
+            7.727616775294977e-05
+          ],
+          "scale": [
+            0.530512142681676,
+            0.539862043402827,
+            0.5266116028826971
+          ],
+          "objectNames": [
+            "a.001"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Prosecutor",
+      "guid": "083571",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "Prosecutor",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc130543062840401624696AAF21A511DFE797601DB83BAF8514B0FED2A6D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430628404029644277D636A6842401D764A3C56DC776BEDD2B16AE8",
+          "normalResource": "",
+          "position": [
+            0.029468852204260113,
+            0.16234040692281257,
+            0.0467717944735406
+          ],
+          "rotation": [
+            0.00020298103895904053,
+            120.00773600000556,
+            0.00031549828519829304
+          ],
+          "scale": [
+            0.9250008211148854,
+            0.9250000616498801,
+            0.9250004904186293
+          ],
+          "objectNames": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard Sodality",
+      "guid": "3fb0c6",
+      "description": "Photoscanned and Kitbashed by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "Marble_Base"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc179869336199123401491C50ABD51E7693FCBDBD99A895A72C51ECB3CB55",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12645141954097003512D6F53B15A17B970A40BF67063F2436B025A700CB",
+          "normalResource": "",
+          "position": [
+            0.000127365944,
+            0.209198654,
+            -1.11600611e-05
+          ],
+          "rotation": [
+            0.16288685800000768,
+            0.03927141,
+            359.9903259999999
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Custodian_Guard_Sodality_1_-_No_Base"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc228395254390968306426BE70092A75A7A8D8D420B4AE2E23BE9BC1CF20",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc228395254390968265292A1987B3A1FB8EE6B2B0EB3CC12ACBA64C84DF9",
+          "normalResource": "",
+          "position": [
+            -3.65954365e-05,
+            0.126866043,
+            -0.000130317232
+          ],
+          "rotation": [
+            0.12518528100000728,
+            0.0183053669,
+            359.970245
+          ],
+          "scale": [
+            1.6500003299999995,
+            1.6499999999999995,
+            1.6500003299999997
+          ],
+          "objectNames": [
+            "25_Circle.019"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes_State",
+      "name": "Custodian Guard Sodality",
+      "guid": "d4974e",
+      "description": "Photoscanned and Kitbashed by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "CarlsDirt"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc179869336199123401491C50ABD51E7693FCBDBD99A895A72C51ECB3CB55",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12645141954097003512D6F53B15A17B970A40BF67063F2436B025A700CB",
+          "normalResource": "",
+          "position": [
+            -0.000236893291,
+            0.153439522,
+            0.00014781591
+          ],
+          "rotation": [
+            0.043349730000002855,
+            0.009802690000000001,
+            0.006845145
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999999,
+            0.9999999999999998
+          ],
+          "objectNames": [
+            "Custodian_Guard_Sodality_1_-_No_Base"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5",
+          "normalResource": "",
+          "position": [
+            1.86100146e-06,
+            0.126708388,
+            -9.583282e-06
+          ],
+          "rotation": [
+            359.976654,
+            180.00236500000003,
+            0.006675967480009871
+          ],
+          "scale": [
+            1.6500001,
+            1.65,
+            1.6499997400000002
+          ],
+          "objectNames": [
+            "Dirt_Base"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "telemon dreadnought",
+      "guid": "e8f19f",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 100.0,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1750180373837761017A991C1AC731B4BB84EB3112221D9E7DD2FC9BD30"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "telemon gun R",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc169277717769700446452DC683FC9202D958790C191305AE127494A17EF",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            -0.000103518483,
+            -0.0765769380662313,
+            -6.214336e-05
+          ],
+          "rotation": [
+            359.94998941705234,
+            180.00019998853742,
+            0.0620646497654416
+          ],
+          "scale": [
+            0.9999996183581861,
+            0.979635874802658,
+            0.9999995846497173
+          ],
+          "objectNames": [
+            "Gun_R_a.003"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "2",
+          "nickname": "telemon gun L",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1692777177697003615828B68F51030050AC043785F65C6127DE91B6CEF",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            -0.000103518483,
+            -0.0765769380662313,
+            -6.214336e-05
+          ],
+          "rotation": [
+            359.94998941705234,
+            180.00019998853742,
+            0.0620646497654416
+          ],
+          "scale": [
+            0.9999996183581861,
+            0.979635874802658,
+            0.9999995846497173
+          ],
+          "objectNames": [
+            "Gun_L_a.001_a.002"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "3",
+          "nickname": "telemon body",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc16927771776970002323D2A92F0C02ED0DE431FA3394A3005C6A3514444",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305430759774552767E6B73B179D2E94F7B35A210CF1A18413DEC0BBAB",
+          "normalResource": "",
+          "position": [
+            -0.000103518483,
+            -0.0765769380662313,
+            -6.214336e-05
+          ],
+          "rotation": [
+            359.94998941705234,
+            180.00019998853742,
+            0.0620646497654416
+          ],
+          "scale": [
+            0.9999996183581861,
+            0.979635874802658,
+            0.9999995846497173
+          ],
+          "objectNames": [
+            "Body_Trimmed_a.004"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard with Guardian Spear",
+      "guid": "d0f597",
+      "description": "Original Model by Savageboi/40k Translator",
+      "gmnotes": "",
+      "tags": [
+        "warcry"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436849391F3D920928B087659CD675E68F3808D84C6D362FF",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1080154346133470389ED47F1B63DF87300FB8C413FC2F44DE8A2CB8F",
+          "normalResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc23808019044368496669891D0476DAD48089A0170BFB381A4DB399DE0AC",
+          "position": [
+            -1.72382624e-08,
+            0.1299991,
+            1.41174951e-06
+          ],
+          "rotation": [
+            7.822602998907171e-05,
+            359.94165,
+            359.999953043196
+          ],
+          "scale": [
+            1.0000003599999998,
+            0.9999999999999998,
+            1.0000003599999998
+          ],
+          "objectNames": [
+            "Custodian_Guard_Squad_A_L"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Guardian with adrasite spear",
+      "guid": "9698cd",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "Constantin Valdor",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc13054311946729062668E5F86AE0B2C2232386E93480F1E985420A3E98F",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194672924703B7852747F319A8205150FC78709B1E0F15803330",
+          "normalResource": "",
+          "position": [
+            -0.190437362,
+            0.128114685,
+            0.02674152
+          ],
+          "rotation": [
+            359.9998250789,
+            194.989014,
+            359.99998873538
+          ],
+          "scale": [
+            0.6666670999999998,
+            0.6666668649999999,
+            0.6666670999999998
+          ],
+          "objectNames": [
+            "a.002"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custo 2 Spear",
+      "guid": "190f1e",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566969053A3BD8ED6310391F24770B2DB75CE1766322FA93B",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985669688570D36AA64F38EB10E2DB8D3E58D2F2324653411C6",
+          "normalResource": "",
+          "position": [
+            -1.29262263e-08,
+            0.127400041,
+            -5.55098456e-09
+          ],
+          "rotation": [
+            1.0089876280951017e-06,
+            136.016724,
+            1.7239266656684134e-07
+          ],
+          "scale": [
+            0.9999999000000002,
+            0.9999999999999999,
+            0.9999998999999999
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard Sodality",
+      "guid": "b0ebed",
+      "description": "Photoscanned and Kitbashed by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "Marble_Base"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc17479686935473567970E9B8BE23DA00857D4737AA59E9308589E5B144C3",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12645141954097003512D6F53B15A17B970A40BF67063F2436B025A700CB",
+          "normalResource": "",
+          "position": [
+            0.000110655048,
+            0.208997086,
+            0.0003591755
+          ],
+          "rotation": [
+            0.12581633000000306,
+            359.99744936358,
+            359.999863600548
+          ],
+          "scale": [
+            1.0000002399999999,
+            1.0,
+            1.00000024
+          ],
+          "objectNames": [
+            "Custodian_Guard_Sodality_1_-_No_Base.003"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc228395254390968306426BE70092A75A7A8D8D420B4AE2E23BE9BC1CF20",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc228395254390968265292A1987B3A1FB8EE6B2B0EB3CC12ACBA64C84DF9",
+          "normalResource": "",
+          "position": [
+            0.00089936296,
+            0.127200037,
+            -0.00104407186
+          ],
+          "rotation": [
+            359.985352,
+            0.00828075,
+            359.9712
+          ],
+          "scale": [
+            1.6500003300000001,
+            1.6500003300000003,
+            1.65000057
+          ],
+          "objectNames": [
+            "25_Circle.019"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes_State",
+      "name": "Custodian Guard Sodality",
+      "guid": "94c815",
+      "description": "Photoscanned and Kitbashed by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "CarlsDirt"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc17479686935473567970E9B8BE23DA00857D4737AA59E9308589E5B144C3",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12645141954097003512D6F53B15A17B970A40BF67063F2436B025A700CB",
+          "normalResource": "",
+          "position": [
+            -0.0002422957,
+            0.153278023,
+            7.772434e-05
+          ],
+          "rotation": [
+            0.07028757999999588,
+            359.971741,
+            0.0192005076
+          ],
+          "scale": [
+            0.9999999999999998,
+            1.0000001199999997,
+            1.0000001199999997
+          ],
+          "objectNames": [
+            "Custodian_Guard_Sodality_1_-_No_Base.003"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5",
+          "normalResource": "",
+          "position": [
+            -1.91118852e-05,
+            0.127289,
+            -3.196454e-05
+          ],
+          "rotation": [
+            359.98,
+            180.0163,
+            0.008362181000009197
+          ],
+          "scale": [
+            1.6499997400000006,
+            1.6500000000000004,
+            1.6499997400000004
+          ],
+          "objectNames": [
+            "Dirt_Base"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Legio Custodes Caladius Grav-Tank",
+      "guid": "ba8600",
+      "description": "By Savege Boii",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 170.004,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc15592158661965307126245B42BA6FE11AFB58327247917DD5570F679DA4",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc16536678139503611559943E96A4A825EBE9DACA71013358797940BFA62E",
+          "normalResource": "",
+          "position": [
+            3.56962937e-06,
+            0.126020133,
+            -3.3298722e-05
+          ],
+          "rotation": [
+            0.023108229000011533,
+            0.011070659399999997,
+            0.20935474299999998
+          ],
+          "scale": [
+            1.0,
+            0.9999999400000001,
+            1.0
+          ],
+          "objectNames": [
+            "Legio_Custodes_Caladius_Grav-Tank"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Contemptor Galatus Dreadnought",
+      "guid": "fb322d",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 65.0,
+        "resource": "Armies/Models/Bases/base_65_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc17531329397109570912F1A7752577E4A2F4FA08EAC7A3248CBCA1469396",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12489407793534531037CF63F002DBAC6E6B463C519B31C67659B3CB99F2",
+          "normalResource": "",
+          "position": [
+            0.0002843396,
+            0.124841817,
+            0.0005298332
+          ],
+          "rotation": [
+            0.02388287520000512,
+            0.04154516380000001,
+            359.99761364912
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999399999999,
+            0.9999999399999999
+          ],
+          "objectNames": [
+            "Contemptor_Galatus_Dreadnought"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "pallas grav-attack photoscan (2022-02-02) without scanned basing material",
+      "guid": "2283c5",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 105.0,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1751307139248784144A7E6CFF4C43707E372C496E95E7C980EB9C5DD3F"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "pallas grav-attack photoscan (2022-02-02) vehicle",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1825649131183539545F52037D9B6B814A5B829E1038B4435A65B52F0E0",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc182564913118354049141AD132C99B0089EC8969C1488FB5022916DDA90",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.13,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "just_tank.003_Textured_mesh_9k.007"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custo 3 Spear",
+      "guid": "deb034",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566968474D7610B52FE5A7E4964186F05CF7B40E7AE91E8C4",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985669682289C5F2FE05428A46FDC0AA1EC92E6CD2976B62FFC",
+          "normalResource": "",
+          "position": [
+            -2.04759871e-08,
+            0.127400041,
+            -1.26554944e-08
+          ],
+          "rotation": [
+            359.99999961067607,
+            136.016708,
+            6.319154411679474e-07
+          ],
+          "scale": [
+            0.9999999000000002,
+            1.0,
+            0.9999999000000002
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard Sodality",
+      "guid": "67ff7f",
+      "description": "Photoscanned and Kitbashed by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "Marble_Base"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc228395254390968306426BE70092A75A7A8D8D420B4AE2E23BE9BC1CF20",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc228395254390968265292A1987B3A1FB8EE6B2B0EB3CC12ACBA64C84DF9",
+          "normalResource": "",
+          "position": [
+            0.004771258,
+            0.12721929,
+            0.00650922861
+          ],
+          "rotation": [
+            359.973755,
+            359.99771404755,
+            0.0054723233900000005
+          ],
+          "scale": [
+            1.64999962,
+            1.6500001,
+            1.64999974
+          ],
+          "objectNames": [
+            "25_Circle.019"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc142060775450782977408D5E0413276A7C2D11F0B3B5BAF857AE6879C775",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12645141954097003512D6F53B15A17B970A40BF67063F2436B025A700CB",
+          "normalResource": "",
+          "position": [
+            0.03151217,
+            0.209192127,
+            -0.06544581
+          ],
+          "rotation": [
+            359.974426,
+            0.031055523099999992,
+            0.006038953550000003
+          ],
+          "scale": [
+            0.9999998000000001,
+            1.0,
+            0.999999762
+          ],
+          "objectNames": [
+            "Custodian_Guard_Sodality_1_-_No_Base.002"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes_State",
+      "name": "Custodian Guard Sodality",
+      "guid": "7b914a",
+      "description": "Photoscanned and Kitbashed by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "CarlsDirt"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc142060775450782977408D5E0413276A7C2D11F0B3B5BAF857AE6879C775",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12645141954097003512D6F53B15A17B970A40BF67063F2436B025A700CB",
+          "normalResource": "",
+          "position": [
+            0.000414352719,
+            0.153954625,
+            -0.007944234
+          ],
+          "rotation": [
+            359.9979778477,
+            359.99544804031,
+            0.02806243000000002
+          ],
+          "scale": [
+            1.0000001199999997,
+            0.9999999999999998,
+            1.0000002399999999
+          ],
+          "objectNames": [
+            "Custodian_Guard_Sodality_1_-_No_Base.002"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5",
+          "normalResource": "",
+          "position": [
+            -3.645833e-05,
+            0.127246082,
+            3.431188e-05
+          ],
+          "rotation": [
+            0.004179097250011558,
+            180.003525,
+            359.984222
+          ],
+          "scale": [
+            1.65,
+            1.6500001,
+            1.6500001
+          ],
+          "objectNames": [
+            "Dirt_Base"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard with Guardian Spear",
+      "guid": "07ac74",
+      "description": "Original Model by Savageboi/40k Translator",
+      "gmnotes": "",
+      "tags": [
+        "warcry"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436850616FC796FBC5B3888A7B9B6A3FF54B8A8CEDBA6BE45",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc108015434613341379B8CCE7E38BA3184C3AB61330E1BC333A2378464",
+          "normalResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc238080190443685093346AA3438F32BBA0BCFF113433D13D8438B793F2F",
+          "position": [
+            -4.0320374e-06,
+            0.129996419,
+            -1.763955e-07
+          ],
+          "rotation": [
+            359.999774493073,
+            359.889984,
+            359.99995209443
+          ],
+          "scale": [
+            0.9999999,
+            1.0,
+            0.9999998999999999
+          ],
+          "objectNames": [
+            "Custodian_Guard_Squad_D_L"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Guardian with Pyrithite spear",
+      "guid": "7b16b6",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "Guardian with Pyrithite spear",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431194673001669EFDAA724E9E66126C1BA90D8743DB798515A3060",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194673017531CCE037CAE9AE6D36EF784865E27C403E07B27B13",
+          "normalResource": "",
+          "position": [
+            0.0155245261,
+            0.136593327,
+            -0.23348473
+          ],
+          "rotation": [
+            0.001177632599995843,
+            210.01446500000003,
+            0.0005548936309985386
+          ],
+          "scale": [
+            0.7380966540000002,
+            0.7380954000000001,
+            0.7380966540000002
+          ],
+          "objectNames": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custo 1 Spear",
+      "guid": "cf1662",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566887001FE1D4769AD0E7C8A827436D0CAA8FCAB6D8D515F",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498566886734B257832E13DDFDC5837DB0BB993E52ECDCD69D6A",
+          "normalResource": "",
+          "position": [
+            -2.12969749e-08,
+            0.127400041,
+            -2.33135147e-08
+          ],
+          "rotation": [
+            4.810712615679584e-07,
+            136.016724,
+            5.858160617815972e-07
+          ],
+          "scale": [
+            0.999999762,
+            1.0,
+            0.999999762
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard with Vexilius Praetor",
+      "guid": "4dbf7a",
+      "description": "Original Model by Savageboi/40k Translator",
+      "gmnotes": "",
+      "tags": [
+        "warcry"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc23808019044368498231CFF711F5EB6E2C04EA3AA4F5A2D226C3D112715",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc108015434613359521B06EF90A8FBCD2AC647D65A65A1034C500EB441",
+          "normalResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2380801904436850126D5C4B31CF4FE649B9B2AB160A207FAA838018BEF",
+          "position": [
+            -2.01527587e-06,
+            0.129997253,
+            8.701229e-07
+          ],
+          "rotation": [
+            359.9998041061,
+            359.713776,
+            2.39472682999871e-05
+          ],
+          "scale": [
+            0.9999998999999998,
+            0.9999999999999998,
+            0.9999998999999998
+          ],
+          "objectNames": [
+            "Custodian_Guard_Squad_B_L"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Witchseekers",
+      "guid": "b24f19",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12108199023198643597601CF4ED6C75DC4BF737E6768E2C34F9F3618E01",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14778190837284138856368572D77BDB05E92B63D9DE008B38477D79AAB3",
+          "normalResource": "",
+          "position": [
+            1.29447983e-07,
+            0.127399623,
+            1.91057279e-06
+          ],
+          "rotation": [
+            0.0005963680450123836,
+            359.968933,
+            359.99998694891
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Witchseekers_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Witchseekers",
+      "guid": "1ee0b2",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1396628954941556060760E5AABD51711DD7DA582B5EC88DDD128C1D13C1",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc173029488453211265224A06DB2B1F481DBC5F985FD181D90DB5CBD6FCCC",
+          "normalResource": "",
+          "position": [
+            -7.164354e-07,
+            0.127398908,
+            0.0
+          ],
+          "rotation": [
+            0.0001472541479937261,
+            359.9688,
+            0.0002300080809999998
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Witchseekers_3"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Saggitarum Custodes",
+      "guid": "1fa31c",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc15004475678211406673D9D914B9CD022919EE873A0D0410B795E6BEE71D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc128519539762957023900AA46D85B4AC4ABA262D97E2C60330BAE51C2338",
+          "normalResource": "",
+          "position": [
+            8.928814e-08,
+            0.127397,
+            -8.49628748e-07
+          ],
+          "rotation": [
+            359.999523540115,
+            359.977783,
+            359.9997386329
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999997,
+            0.9999999999999998
+          ],
+          "objectNames": [
+            "Saggitarum_Custodes_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Witchseekers",
+      "guid": "0d9ce9",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc109883056726794776078054C64FD55E7DEC61E175653F8C59C2ECC56616",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13014103330245238354AA58696A831BED9B0B5E67B39D21B24A1783A981",
+          "normalResource": "",
+          "position": [
+            4.862857e-07,
+            0.127399027,
+            2.65733413e-09
+          ],
+          "rotation": [
+            0.0001449657870031221,
+            359.968872,
+            359.9997684809
+          ],
+          "scale": [
+            0.9999999999999999,
+            1.0,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Witchseekers_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custo 1 Shield",
+      "guid": "691c3f",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498566884821E86DC19E5C2F0609563175BF24FC5AB4FC500772",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc189435349856688452539019618BD372E15EB2C84835D0F1F159F65B355",
+          "normalResource": "",
+          "position": [
+            -2.33790427e-08,
+            0.133731961,
+            -1.878838e-08
+          ],
+          "rotation": [
+            2.5748682951427573e-07,
+            136.016724,
+            3.090959728308562e-07
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilator",
+      "guid": "95d6b7",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497870899BE6ED9BA3AFC6440D49F52E8287984ED197D1CCC",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497870521161E20282C854A8CB2E18EA76187913FF50F8745",
+          "normalResource": "",
+          "position": [
+            1.56972277e-07,
+            0.127399921,
+            2.653358e-07
+          ],
+          "rotation": [
+            359.9999993224212,
+            269.992432,
+            3.438930221566887e-08
+          ],
+          "scale": [
+            0.9999997620000001,
+            1.0,
+            0.9999997620000001
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilator Superior",
+      "guid": "de50f5",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc201034944349787432301F25FB005155F6BC7FAF2B9C7D22C86368E1071",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2010349443497873999DBEFB21104779D098ADAB406E41BEC1848684407",
+          "normalResource": "",
+          "position": [
+            -2.31090638e-07,
+            0.127399921,
+            -4.52215971e-08
+          ],
+          "rotation": [
+            359.9999996828844,
+            269.992432,
+            359.99999953030704
+          ],
+          "scale": [
+            0.9999997620000001,
+            1.0,
+            0.9999997620000001
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilators",
+      "guid": "644743",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc15813718579661489366AC6AF9D473822F21A522152E0E9AF962E91245EA",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13503376855967707728CD49B576E920E3F6A5B860654038705B1A3E557F",
+          "normalResource": "",
+          "position": [
+            5.79949e-07,
+            0.127396524,
+            -3.08236e-07
+          ],
+          "rotation": [
+            359.99962078337603,
+            359.9689,
+            359.99993288382
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999998,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Vigilators_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilator Superior",
+      "guid": "ef05f7",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497873419086CC8612CA868D3DD850AA60EB8D1392988666B",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978730917313297BBA3BC181720C9D5C122B3B030FF2C288",
+          "normalResource": "",
+          "position": [
+            -1.2391979e-07,
+            0.127399921,
+            -5.894062e-08
+          ],
+          "rotation": [
+            359.9999996567581,
+            269.992432,
+            359.99999993498267
+          ],
+          "scale": [
+            0.9999997620000001,
+            1.0,
+            0.9999997620000001
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilator",
+      "guid": "94924d",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497871795C7956BE0B249C0E31C1E45848D07BE441E90A4E5",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978714729F9C38B6473B74945CFAEF4AA0C6BEE8938514AF",
+          "normalResource": "",
+          "position": [
+            4.63280436e-09,
+            0.127399921,
+            0.0
+          ],
+          "rotation": [
+            359.99999917413385,
+            269.99246200000005,
+            359.9999993565394
+          ],
+          "scale": [
+            0.999999762,
+            0.9999999999999999,
+            0.9999997620000001
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilator",
+      "guid": "df5178",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2010349443497872570D8997A276148B46EA09D17DC0B01365DF219C9D7",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc20103494434978722508A55465E941AB248CCF861E1FC93B2DFC8FFC8FE",
+          "normalResource": "",
+          "position": [
+            -1.32670408e-09,
+            0.127400041,
+            -1.1925124e-08
+          ],
+          "rotation": [
+            5.561452651025042e-07,
+            269.992432,
+            359.9999993180592
+          ],
+          "scale": [
+            0.9999997620000002,
+            1.0,
+            0.9999997620000001
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custo 2 Spear",
+      "guid": "74e402",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1894353498567083056845A8C9688419991F9361569A3ABCFC3192B1B85",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498567082764775CAB9603D23CADA9F646DCA391BB8B4A86EFD5",
+          "normalResource": "",
+          "position": [
+            -6.32825063e-08,
+            0.127400041,
+            -3.031364e-08
+          ],
+          "rotation": [
+            5.858210997802127e-07,
+            136.016724,
+            1.0141764104468786e-06
+          ],
+          "scale": [
+            0.999999762,
+            1.0,
+            0.9999997620000001
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custo LeaderShield",
+      "guid": "001009",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc189435349856696781917DD8CE63A858DF558B543CBCA7C32A142724A2C",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1894353498566967602B4A7AFBF7CF6F0E272417B04BF18C800AA862CB0",
+          "normalResource": "",
+          "position": [
+            -9.242893e-09,
+            0.127399921,
+            -4.96232877e-09
+          ],
+          "rotation": [
+            6.240300955016945e-07,
+            136.016724,
+            8.253277066247699e-07
+          ],
+          "scale": [
+            1.0,
+            0.9999999999999999,
+            1.0
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilators",
+      "guid": "3d1c72",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc158680720477236462092D8D620381EFA9B01D1E0D048F6078294FAB258A",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14111529875816533586C7D2C4FCCB920BFCD96CF55D6370959B38C5FA41",
+          "normalResource": "",
+          "position": [
+            -4.72122423e-07,
+            0.127399027,
+            0.0
+          ],
+          "rotation": [
+            359.9999966337184,
+            359.9688,
+            0.0002745318340000012
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999998,
+            0.9999999999999998
+          ],
+          "objectNames": [
+            "Sisters_Of_Silence_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilators",
+      "guid": "992473",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1169969432031733147743608AC01E48C671BF3E9AA7610E06DDE3336C03",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14565709098843504768AE1B7F7709F7C91438FBBCC29A43DC8EF7C6202E",
+          "normalResource": "",
+          "position": [
+            -4.792466e-07,
+            0.127399027,
+            -1.9593922e-09
+          ],
+          "rotation": [
+            0.00022123900001681877,
+            359.968872,
+            0.00015384198900000287
+          ],
+          "scale": [
+            1.0000000000000002,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Sisters_Of_Silence_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain with Sintinel Blade and Praesidium Shield",
+      "guid": "1b1c31",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9622965398647091610459ABBE114D035B447CA0FB2B7A3A92448ED07C7",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18084062155022321286CDE244B0400658B883AC213879279D590B09A8DE",
+          "normalResource": "",
+          "position": [
+            -8.26291853e-07,
+            0.127397,
+            -8.656215e-08
+          ],
+          "rotation": [
+            359.99993325159454,
+            359.977753,
+            0.0002705611000000019
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Shield_Captain_3"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard",
+      "guid": "225642",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc176366184721586962524BE0CE76D30B3CF1C4FF09E4322DB4706C974792",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc98920990603425139580D9F389E4EE18E30F563E2D18689ABFB750B0FB8",
+          "normalResource": "",
+          "position": [
+            -2.62156448e-07,
+            0.127388537,
+            5.178495e-08
+          ],
+          "rotation": [
+            359.99993386222,
+            359.977753,
+            359.999537959782
+          ],
+          "scale": [
+            1.0000000000000002,
+            1.0000000000000002,
+            1.0000000000000002
+          ],
+          "objectNames": [
+            "Custodian_Guard_4"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard",
+      "guid": "b809a1",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12295548183642451281D611E1AC9257F42E691C94BAC106EA8C5A06E345",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10202235339304378313B005CC89D56CEFFCE1A15746B87F222CCA7323C3",
+          "normalResource": "",
+          "position": [
+            -6.730868e-07,
+            0.127393544,
+            -1.04897379e-06
+          ],
+          "rotation": [
+            359.9993368551,
+            359.977722,
+            0.0004414012360000023
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Custodian_Guard_3"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Sentinel Guard Sodality",
+      "guid": "683586",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9929355111463726855755BFD498769615356D754D399A5C4C4B456822D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12508669834491198667738A084411B12DE9B4B41AAA4B55079DB54AD702",
+          "normalResource": "",
+          "position": [
+            8.699897e-07,
+            0.127391756,
+            -4.26197062e-07
+          ],
+          "rotation": [
+            359.99916992,
+            359.9891,
+            359.999343152856
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999998,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Sentinel_Guard_Sodality_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Vigilators",
+      "guid": "b5eb37",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc94226471545002318908BBA6478EEEE6E0A9B4E26DED47E6B86537497BE",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1694663387668461296267269A03D7F1E7ADB80478129661D01BC5E957D3",
+          "normalResource": "",
+          "position": [
+            1.14679347e-06,
+            0.127401292,
+            3.35962682e-07
+          ],
+          "rotation": [
+            2.540266908452041e-05,
+            359.968933,
+            359.9996965543
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Vigilators_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Oblivion-Knight centura",
+      "guid": "0f8f7b",
+      "description": "WS 6\nBS 5\nS 3\nT 3\nW 3\nI 5\nA 4\nLD 10\nSV 2+/4++",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 0.0,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Oblivion-Knight centura",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1029580352603090677CDB450FE3AF38B3A915F5669424D97FB29C4F1A8",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1029580186709972353BD4C48310E2F701508F4A786C0C72DDD66461C7A",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.378954,
+            0.427325815,
+            0.378954
+          ],
+          "objectNames": [
+            "Term_Consul:base:Standard_Infantry_Base.001_Term_Consul:base:Standard_Infantry_Base.003",
+            "SILENCE"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Jenetia Krole - Commander Of The Silent Sisterhood",
+      "guid": "210051",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 32.0,
+        "resource": "Armies/Models/Bases/base_32mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc177143862223268749947B5DE719C3F9896DE0029647B8630594AE59A4AC",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1204295545634989123272B1717C952E34B86CFFE2313AFB30EB99D6C045",
+          "normalResource": "",
+          "position": [
+            -2.37562446e-07,
+            0.127399027,
+            0.0
+          ],
+          "rotation": [
+            7.3439673475920715e-06,
+            359.9689,
+            0.00027357809999999707
+          ],
+          "scale": [
+            1.0000000000000002,
+            1.0000000000000002,
+            1.0000000000000002
+          ],
+          "objectNames": [
+            "Jenetia_Krole_-_Knight_Commander_Of_The_Silent_Sisterhood"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Raptor Guard",
+      "guid": "eb87ad",
+      "description": "\rWS 5\r\nBS 4\r\nS 3\r\nT 3\r\nW 1\r\nI 4\nA 2\r\nLd 8\r\nSv 3+/6++(4++)\r\n\nExecution blade\nPsyk-out grenade\r\r\r\r",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 0.0,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Raptor Guard",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10295803526031001029B8301C65FAFD9CBE8F7B3D4BBB0962E9614D6D6",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc102958018670834509947620A01C49D79172122E05CDB39B5619E725AAC",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.398306847,
+            0.440200478,
+            0.398306847
+          ],
+          "objectNames": [
+            "Term_Consul:base:Standard_Infantry_Base.001_Term_Consul:base:Standard_Infantry_Base.003",
+            "vigi.001"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield-Captain with Spear",
+      "guid": "2a4c3b",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 0.0,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Shield-Captain with Spear",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431405701572752620DF74BDC141B8DB36CEEE53EC46E4E4E485A5C",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194673178061E993E2EC2AE7CEBCA7A00B366F96969F088FBD07",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.650000334,
+            0.650000334,
+            0.650000334
+          ],
+          "objectNames": [
+            "a"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "Galatus Dreadnought",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431405701592236FE9A5CC6F7AED098DFF9B371F57FF8CB2D292DB4",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13054306284061254310F74A565F457C79B90C373CBAA5B04BE8124D37E",
+          "normalResource": "",
+          "position": [
+            0.20596493048423298,
+            1.412741925931632,
+            0.0026993900660704905
+          ],
+          "rotation": [
+            18.93883710000001,
+            114.499954,
+            0.4364284569999992
+          ],
+          "scale": [
+            0.8337007633937105,
+            1.1131308239776987,
+            0.991167582307388
+          ],
+          "objectNames": [
+            "a.002"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Blade Champion",
+      "guid": "e5feef",
+      "description": "From SirDragdords Crafts",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc24359564144332359474E21CAC028A9E988E923809483227D4F5CE19ADB",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2435956414433317788D2D9F01ABA35E6D398BA04316C5BD4711FEF94DC",
+          "normalResource": "",
+          "position": [
+            1.2437269e-08,
+            0.127399683,
+            1.21128272e-08
+          ],
+          "rotation": [
+            1.0314712197660762e-05,
+            15.028192500000003,
+            2.0346178600122536e-06
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0000000000000002
+          ],
+          "objectNames": [
+            "40_Circle.017"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Blade Champion",
+      "guid": "9d96ba",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc310699491417689009160FE6F1985FB580080BD264ECEFB95AC2FDA1B",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc31069949141769372A60CF003ACA1F8178573BFEB60FDC66FA3F08992",
+          "normalResource": "",
+          "position": [
+            -1.06501216e-06,
+            0.127400339,
+            2.39025667e-07
+          ],
+          "rotation": [
+            359.999720092543,
+            59.96456,
+            0.00026147680001348695
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999999,
+            1.0
+          ],
+          "objectNames": [
+            "Blade_Champion"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield-Captain in Allarus Terminator Armor",
+      "guid": "fc7d3e",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Shield-Captain in Allarus Terminator Armor",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc7694811541337051790909D2D290652F1ECFECBF7C5FDB4EAB908C64A4",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2404445481954314272DA94AA12122CAC909D56C61AA73A262732524A06",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "40mm_Cylinder.002",
+            "test.002",
+            "B9D552806798B545309A110AE0E46DC8F634F6D0_Custodian_Guard_(G.000"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain",
+      "guid": "da9a12",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Shield Captain",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431194677668812917FE53DA92390B74F0728DA40F7C8C9D99AFD5A",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1305431194677701499A3AFE175B8A55AB603801036ECBF942E646CC7B5",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.7866089,
+            0.88701576,
+            0.7866089
+          ],
+          "objectNames": [
+            "a.001"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain with Pyrithite Spear and Praesidium Shield",
+      "guid": "fa8a37",
+      "description": "By Savege Boii (40k Translator)",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc41194808183768465D2065A5CA79710627FEC8CC6DF708994A9C78191",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc4120008146000002416B22B6ABE8E2B5F60C03C7FBE92DD4465B30DCB",
+          "normalResource": "",
+          "position": [
+            1.046661e-06,
+            0.1273939,
+            1.446665e-06
+          ],
+          "rotation": [
+            0.00024979264700332,
+            359.986877,
+            359.999800645877
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "AuricChampions"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain in Allarus Terminator Armor",
+      "guid": "5b4911",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Shield Captain in Allarus Terminator Armor",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9529663569250035527F24342D01D0B1E2B30E3D3F7CCFEFC74DEC6933",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc9529663569249853499427F863D4449A719CD173A5A72D2FD2FF4327D6",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "40mm_Cylinder.001",
+            "test"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Orion Assault Dropship",
+      "guid": "9ce360",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "CarlsDirt"
+      ],
+      "base": {
+        "diameterMm": 159.283,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802620717997EE642C580C4E38BB65B24194086DBBE2EE729969"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc124481718997875246949E3034B5DCED32AEA3DB2DD07D47AB4543B1467D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc155803956308601788302E5DED6E52AC4D36628BBD951661D1B50D39ED4B",
+          "normalResource": "",
+          "position": [
+            -0.000701911,
+            2.95580149,
+            0.000248117285
+          ],
+          "rotation": [
+            359.99957359486103,
+            359.983643,
+            0.001913928080000001
+          ],
+          "scale": [
+            1.0000001200000002,
+            1.0,
+            1.00000012
+          ],
+          "objectNames": [
+            "Orion_Assault_Dropship"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5",
+          "normalResource": "",
+          "position": [
+            4.7356396e-05,
+            0.126223922,
+            4.42727332e-06
+          ],
+          "rotation": [
+            359.99920719635,
+            180.024628,
+            0.00011015058399988976
+          ],
+          "scale": [
+            6.99999857,
+            7.000000000000001,
+            6.99999857
+          ],
+          "objectNames": [
+            "Dirt_Base"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes_State",
+      "name": "Orion Assault Dropship",
+      "guid": "73fc3c",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "CarlsDirt"
+      ],
+      "base": {
+        "diameterMm": 159.283,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802620717997EE642C580C4E38BB65B24194086DBBE2EE729969"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5",
+          "normalResource": "",
+          "position": [
+            5.067982e-05,
+            0.12651372,
+            6.1751366e-06
+          ],
+          "rotation": [
+            359.9993946509,
+            180.024673,
+            359.9999675411054
+          ],
+          "scale": [
+            6.999998,
+            7.000000000000001,
+            6.999998
+          ],
+          "objectNames": [
+            "Dirt_Base"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc124481718997875246949E3034B5DCED32AEA3DB2DD07D47AB4543B1467D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc155803956308601788302E5DED6E52AC4D36628BBD951661D1B50D39ED4B",
+          "normalResource": "",
+          "position": [
+            -3.29098754e-07,
+            0.240407288,
+            -1.92164066e-06
+          ],
+          "rotation": [
+            359.999612676125,
+            359.983734,
+            0.0007493783490000021
+          ],
+          "scale": [
+            1.0000001200000002,
+            1.0,
+            1.0000001200000002
+          ],
+          "objectNames": [
+            "Orion_Assault_Dropship"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custo 2 Shield",
+      "guid": "cb19ca",
+      "description": "By Clostry",
+      "gmnotes": "Talons",
+      "tags": [
+        "Talons"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18943534985670823009862E521D232041F698E48BF78EEF774ACA81487",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985670819731CB37E7DAE8DD465CA634A1B209E22C6DD2B3F16",
+          "normalResource": "",
+          "position": [
+            -2.24684218e-08,
+            0.127400041,
+            -2.689641e-08
+          ],
+          "rotation": [
+            9.918514864711875e-07,
+            136.016724,
+            359.999999991769
+          ],
+          "scale": [
+            0.999999762,
+            0.9999999999999999,
+            0.999999762
+          ],
+          "objectNames": [
+            "3DModel_LowPoly.069"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard Sentinel Blade",
+      "guid": "d8b2ed",
+      "description": "Original Model by Savageboi/40k Translator",
+      "gmnotes": "",
+      "tags": [
+        "warcry"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "Custodian Guard Sentinel Blade",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2380801904436850199956CF63822FD3A382EFA9FCA88082A8636257642",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10801543461324502FCCA79E97B28E8DD328E1D6B214A615F24978AEF",
+          "normalResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2380801904436850484D623EC94FB0F34C3D3A7558074328A01689E439D",
+          "position": [
+            -0.005943765,
+            0.129997671,
+            -0.0119313076
+          ],
+          "rotation": [
+            0.00011730599400791298,
+            359.9782,
+            0.0001640156700000007
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Custodian_Guard_Squad_C_L"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield-Captain",
+      "guid": "43782c",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc4119435501749555823F7B9649782D0BA2DAE7B52F544D117A1E7C8D3",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc41200081459998838D09822C17EF5C216FCB004A48236315834979638",
+          "normalResource": "",
+          "position": [
+            1.02066758e-06,
+            0.127395213,
+            2.26402881e-06
+          ],
+          "rotation": [
+            359.9996780437,
+            359.985748,
+            0.00037052304800000164
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Shield-Captain_B"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodes Venerable Contemptor Dreadnought",
+      "guid": "3d6a00",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 65.0,
+        "resource": "Armies/Models/Bases/base_65_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11944547760575877273224B56DAE150028C6E16602C7A35DAD134D515C2",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc110544324588304516533EB2FA0A3579DD5B3BECA9EB9CA641537C8FF5D6",
+          "normalResource": "",
+          "position": [
+            2.86916747e-05,
+            0.1256554,
+            4.92325671e-05
+          ],
+          "rotation": [
+            359.95895399999995,
+            0.001021325999999997,
+            359.958252
+          ],
+          "scale": [
+            0.99999994,
+            0.9999999999999999,
+            0.99999994
+          ],
+          "objectNames": [
+            "Contemptor_Dreadnought_-_Custodes.001"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes_State",
+      "name": "Custodes Venerable Contemptor Dreadnought",
+      "guid": "b15f0d",
+      "description": "Photoscanned and Kitbashed by Seaborne",
+      "gmnotes": "",
+      "tags": [
+        "CarlsDirt"
+      ],
+      "base": {
+        "diameterMm": 65.0,
+        "resource": "Armies/Models/Bases/base_65_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5",
+          "normalResource": "",
+          "position": [
+            1.72860273e-05,
+            0.1264528,
+            7.68209e-05
+          ],
+          "rotation": [
+            359.969055,
+            179.98394800000003,
+            359.977783
+          ],
+          "scale": [
+            2.7999989999999997,
+            2.79999971,
+            2.7999994799999994
+          ],
+          "objectNames": [
+            "Dirt_Base"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Venerable Land Raider",
+      "guid": "9ddd3e",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 0.0,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Venerable Land Raider",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc181969198396798703857A024DE58DB0A035BF0C8BC1184741BA39D90FA9",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc16215376589171023172FEFB70FD6B0B4F70A45EB031CEAE1A6B3FC0D328",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Venerable_Land_Raider"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Contemptor-Achillus Dreadnought",
+      "guid": "0f7c0b",
+      "description": "By Khaaarl",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 65.0,
+        "resource": "Armies/Models/Bases/base_65_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "Contemptor-Achillus Dreadnought v2 photoscan (2021-11-06). 4 parts, 4k texture. Significant manual touchups on top surfaces.",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720138770E6D5D440061FB39C1A4067C6369934C708F55B66",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc17817311257201378220F77E73971595CE2A34BA5763EB0A3AA004675AF",
+          "normalResource": "",
+          "position": [
+            -5.43833266e-06,
+            0.145903572,
+            7.33212946e-05
+          ],
+          "rotation": [
+            359.99694524775003,
+            14.964592899999994,
+            0.005671611999999113
+          ],
+          "scale": [
+            1.00000608,
+            1.06045437,
+            1.000006
+          ],
+          "objectNames": [
+            "Achillus_v2_p.002_Textured_mesh_1.006"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1/0",
+          "nickname": "Contemptor-Achillus Dreadnought v2 photoscan (2021-11-06). 4 parts, 4k texture. Significant manual touchups on top surfaces.",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc178173112572013706015E198596FB0F4B0C6D2C172C44044836C967586",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc17817311257201378220F77E73971595CE2A34BA5763EB0A3AA004675AF",
+          "normalResource": "",
+          "position": [
+            -5.43833266e-06,
+            0.145903572,
+            7.33212946e-05
+          ],
+          "rotation": [
+            359.99694524775003,
+            14.964592899999994,
+            0.005671611999999113
+          ],
+          "scale": [
+            1.00000608,
+            1.06045437,
+            1.000006
+          ],
+          "objectNames": [
+            "Achillus_v2_p.001_Textured_mesh_1.005"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1/1",
+          "nickname": "Contemptor-Achillus Dreadnought v2 photoscan (2021-11-06). 4 parts, 4k texture. Significant manual touchups on top surfaces.",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720139970F57B5A359CAF1C3C5BEB5C84A8F323D04DAC05D9",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc17817311257201378220F77E73971595CE2A34BA5763EB0A3AA004675AF",
+          "normalResource": "",
+          "position": [
+            -5.43833266e-06,
+            0.145903572,
+            7.33212946e-05
+          ],
+          "rotation": [
+            359.99694524775003,
+            14.964592899999994,
+            0.005671611999999113
+          ],
+          "scale": [
+            1.00000608,
+            1.06045437,
+            1.000006
+          ],
+          "objectNames": [
+            "Achillus_v2_p.003_Textured_mesh_1.007"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1/2",
+          "nickname": "Contemptor-Achillus Dreadnought v2 photoscan (2021-11-06). 4 parts, 4k texture. Significant manual touchups on top surfaces.",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1781731125720140897978C123505C01005219B63B5BBD7ECFF1701F1F1",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc17817311257201378220F77E73971595CE2A34BA5763EB0A3AA004675AF",
+          "normalResource": "",
+          "position": [
+            -5.43833266e-06,
+            0.145903572,
+            7.33212946e-05
+          ],
+          "rotation": [
+            359.99694524775003,
+            14.964592899999994,
+            0.005671611999999113
+          ],
+          "scale": [
+            1.00000608,
+            1.06045437,
+            1.000006
+          ],
+          "objectNames": [
+            "Achillus_v2_p.004_Textured_mesh_1.004"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield-Captain with Spear",
+      "guid": "b57f45",
+      "description": "By Clostry",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18943534985668857224EE501EFB9A172C13A5AC71DF4B1894AAEDD590D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18943534985668854686A3F348E2D86D5120EE944C1F207828E5B894248",
+          "normalResource": "",
+          "position": [
+            -3.41698367e-08,
+            0.127400041,
+            3.18007842e-09
+          ],
+          "rotation": [
+            3.6244987302904713e-06,
+            136.016724,
+            1.2686420603303353e-05
+          ],
+          "scale": [
+            0.9999996419999998,
+            0.9999999999999998,
+            0.9999996419999998
+          ],
+          "objectNames": [
+            "3DModel_LowPoly"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain",
+      "guid": "4717ec",
+      "description": "Made from Den Of Imagination video on Youtube",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc2492254803019744804527EB32C2C8AEBFD916C28708AB02A69EA65471E",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc24922548030197637835D657997213DCA34E063D54207CFF9135C70A247",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.127399623,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "40_Circle.017"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain",
+      "guid": "8d4b70",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11514242168809510332AEB2F62153958B3552D5B3F1D737D460C4931222",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18320137091868427475637A30FF7C664724562DB0709BBC1514AB2CD1DC",
+          "normalResource": "",
+          "position": [
+            -7.747469e-07,
+            0.127391636,
+            -4.055577e-07
+          ],
+          "rotation": [
+            359.999718529551,
+            359.9779,
+            0.0007266419000000007
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Shield_Captain_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Null Maiden Rhino",
+      "guid": "738a1d",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 0.0,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Null Maiden Rhino",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12341415840940575925BBF25E4003A35502C546F2350E0F3D7C0181CBA6",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc175902317978614963193ACDB2AD1D1DE1E54E70A777FE11090138D7C66A",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Null_Maiden_Rhino"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain in Allarus Terminator Armor",
+      "guid": "87d113",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10925748675272389396599104D21D89F2CEC6579D9D5AFE16981AA48BEA",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12261043242531130365F6AD0461AE779069EBB62FAF67867B92E7BC8BE1",
+          "normalResource": "",
+          "position": [
+            5.45468e-07,
+            0.127394617,
+            -7.336261e-07
+          ],
+          "rotation": [
+            359.999387229851,
+            359.977783,
+            359.999830835935
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999998,
+            0.9999999999999998
+          ],
+          "objectNames": [
+            "Allarus_Terminator_3"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Ventari Sodality",
+      "guid": "6eaca0",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc11604694323817432532C645719CBFE6176DA8350F272E999576DE9B3541",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc160418544166715580694522F52CB71B35CA00464224EB6BCE4D091BB9D3",
+          "normalResource": "",
+          "position": [
+            2.17422214e-09,
+            0.127399027,
+            4.8347124e-07
+          ],
+          "rotation": [
+            0.00015443653700594593,
+            359.999381868052,
+            0.00016040010000000003
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Ventari_Sodality_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Aquillon Terminator",
+      "guid": "a50674",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 50.0,
+        "resource": "Armies/Models/Bases/base_50mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "Guardsmen",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18211470361664510641B254937FB108BBF278F964F7C3CDBBC80F30618",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18211470361664513236036A1BA7406851561C37464BCA4FFAE803CDBDC",
+          "normalResource": "",
+          "position": [
+            0.08208075,
+            0.159388825,
+            0.135614514
+          ],
+          "rotation": [
+            0.00045967389997990653,
+            44.37044529999999,
+            359.9999487452733
+          ],
+          "scale": [
+            0.6997871400000001,
+            0.7087784410000001,
+            0.6997871400000001
+          ],
+          "objectNames": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Allarus Terminator",
+      "guid": "9139a3",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc310712182227709043BC6C333878083F296FFCF433C95EEAB720F74CE",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc31071218222771047E6EB88B32D029A3E488F9BEDC0D8B9DC1AB67885",
+          "normalResource": "",
+          "position": [
+            -2.0373202e-06,
+            0.127394617,
+            1.363858e-06
+          ],
+          "rotation": [
+            359.9994619318,
+            105.00230399999998,
+            359.999672105885
+          ],
+          "scale": [
+            0.9999999,
+            1.0,
+            0.9999999
+          ],
+          "objectNames": [
+            "Allarus_Terminator_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain",
+      "guid": "1686e9",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc9345495520519056269E96B002E56742BBAA7CFFF22A1C45A0A1100C71E",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc12128383371525768858AA088AB906169305FD81466A0CBF914698962687",
+          "normalResource": "",
+          "position": [
+            0.000151618238,
+            0.127359569,
+            0.0004104917
+          ],
+          "rotation": [
+            0.03524094000000295,
+            0.025447559999999998,
+            0.005086251529999997
+          ],
+          "scale": [
+            1.0000002400000003,
+            1.0,
+            1.0000001200000002
+          ],
+          "objectNames": [
+            "Shield_Captain_4"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Ventari Sodality",
+      "guid": "e3357a",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc12481717435481830880A865A574CE590B8DA162171FD6C437D527E8473F",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1424736400201757855487D42BCF6593E12F2661221AF1F8E3A312161AB1",
+          "normalResource": "",
+          "position": [
+            5.531317e-09,
+            0.127399147,
+            1.893999e-09
+          ],
+          "rotation": [
+            0.00011888127502059942,
+            0.03313324600000001,
+            359.999815780713
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Ventari_Sodality_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Aquillon Terminator",
+      "guid": "70dee3",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 50.0,
+        "resource": "Armies/Models/Bases/base_50mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "Guardsmen",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc18211470361669017218EF7A0484BD38C0B125D2F09090D2B1F915B199B",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1821147036166902000997EE64E11D03D8D8B979AB1BB91C59EED0FCC39",
+          "normalResource": "",
+          "position": [
+            -0.07643073,
+            0.127822325,
+            0.1927423
+          ],
+          "rotation": [
+            0.0008284981600045095,
+            313.42189999999994,
+            8.158509439932374e-05
+          ],
+          "scale": [
+            0.8491470999999999,
+            0.8600576519999998,
+            0.8491470999999999
+          ],
+          "objectNames": [
+            "a.001"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Wardens",
+      "guid": "5dcbce",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc13148099567518813183D6B12054C434800ACDF3F9C19B398E83837C4FE4",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14007928467632830425B9085F7225376EC82EF5BC5F012561CF676AC472",
+          "normalResource": "",
+          "position": [
+            -9.085883e-07,
+            0.127399385,
+            -1.02456772e-06
+          ],
+          "rotation": [
+            359.999528469925,
+            359.9778,
+            5.6140010000001486e-05
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "Custodian_Guard_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Aquillon Terminator",
+      "guid": "bda64b",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 50.0,
+        "resource": "Armies/Models/Bases/base_50mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "Guardsmen",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1821147036162827715C5BC7893F3BD242D6D7915B313FB0643B11A5A62",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1821147036162828120C525B89047928F3B132D9C1247215AA1F94ECFF4",
+          "normalResource": "",
+          "position": [
+            0.00262977183,
+            0.1566159,
+            0.0854945
+          ],
+          "rotation": [
+            8.523650469014883e-05,
+            299.504242,
+            359.99992641368
+          ],
+          "scale": [
+            0.7744672299999997,
+            0.7844181659999997,
+            0.7744672999999997
+          ],
+          "objectNames": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Allarus Terminators",
+      "guid": "2633cc",
+      "description": "\n",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Allarus Terminators",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc7694811541337051790909D2D290652F1ECFECBF7C5FDB4EAB908C64A4",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2404445481954314272DA94AA12122CAC909D56C61AA73A262732524A06",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "40mm_Cylinder.002",
+            "test.002",
+            "B9D552806798B545309A110AE0E46DC8F634F6D0_Custodian_Guard_(G.000"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Allarus Terminator with Vexillius Praetor",
+      "guid": "ebd653",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc3107058347301856835462F11A586F4E43567D1309FA36CC526669860",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc3107058347301820584C58581FD1A9A204717DD63C36681D0F39E0921",
+          "normalResource": "",
+          "position": [
+            -0.0126662,
+            0.127392039,
+            0.0144574009
+          ],
+          "rotation": [
+            9.238929491344758e-05,
+            359.982819,
+            0.0006462423999999979
+          ],
+          "scale": [
+            0.9999999999999997,
+            0.9999999999999998,
+            0.9999999999999997
+          ],
+          "objectNames": [
+            "Allarus_Terminator_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Allarus Custodians",
+      "guid": "3316f4",
+      "description": "Photoscan by Savage Boii",
+      "gmnotes": "",
+      "tags": [
+        "CarlsDirt"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc22850758152686968388D3547FE7D3D6BA7F273955BA954D7F61C13FB04",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc2285075815268697252EFE69F1675BE0FBDEED405ED078C245FDDE0ADE5",
+          "normalResource": "",
+          "position": [
+            3.93523533e-06,
+            0.127382755,
+            6.80988751e-06
+          ],
+          "rotation": [
+            0.0004168044539971161,
+            179.999237,
+            359.99851454375
+          ],
+          "scale": [
+            1.65,
+            1.65,
+            1.6499999999999995
+          ],
+          "objectNames": [
+            "Dirt_Base"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc128154666079523045945D87722235CF8A8793DD0EFD3D03594137728AC0",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc18122795233533359818BBED25253345B10951C88AB625585ACBCB747393",
+          "normalResource": "",
+          "position": [
+            9.495359e-07,
+            0.154222548,
+            2.707415e-07
+          ],
+          "rotation": [
+            359.99976601515704,
+            359.9778,
+            0.0009221744000000011
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999998,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Vexilus_Praetor_in_Allarus_Terminator_Armour_B"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Warden with Vexilla",
+      "guid": "5ad4d0",
+      "description": "Photoscan by Raikoh",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc107898026290783940A34DF95D714BEC6C9A3E370FB5F822F19F6E99C",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1078980262905596446AC497CB413C20FBECBFB633FFA847990335995",
+          "normalResource": "",
+          "position": [
+            -3.60732247e-06,
+            0.127402008,
+            1.92145353e-06
+          ],
+          "rotation": [
+            0.0002564406000080822,
+            105.00904100000001,
+            359.999256100738
+          ],
+          "scale": [
+            0.9999999,
+            1.0,
+            0.9999999000000002
+          ],
+          "objectNames": [
+            "CustodianWardensVexilusPraetor"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield-Captain on Dawneagle Jetbike",
+      "guid": "2db10d",
+      "description": "Original Model by Savageboi/40k Translator, Kitbash by Raikoh",
+      "gmnotes": "",
+      "tags": [
+        "warcry"
+      ],
+      "base": {
+        "diameterMm": 75.0,
+        "resource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc175130676024373346611A1C47200C020DF3699120B9C29BE33EF3741A4"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802627851117FE6ED8BB990247BB2609789E652B416BA952B756",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10802658642902625A49271E7C2CAB0F6D04C4D5362F7E3E17D4C3A08",
+          "normalResource": "",
+          "position": [
+            -1.22412382e-08,
+            0.12799871,
+            -1.23210722e-08
+          ],
+          "rotation": [
+            8.971088390237193e-05,
+            0.366151035,
+            359.9999758661434
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Vertus_Praetors_L"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10789802627849091CCB1A670C2F8978A9CEBFFB0D9FA58754059217D",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10789802628891194ABD9ED185D4882ECCD382717D2A91672A436E341",
+          "normalResource": "",
+          "position": [
+            -1.22412382e-08,
+            0.12799871,
+            -1.23210722e-08
+          ],
+          "rotation": [
+            359.99999999052363,
+            359.9162,
+            359.99999992173736
+          ],
+          "scale": [
+            0.9999999999999999,
+            1.0,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Hibou_Khan"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Kharon Pattern Acquisitor",
+      "guid": "17da72",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 170.004,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc10666845033131195534972421CF6C70F71D5B0A3B4489D57FABFB370C60",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc14561935396444137599CFFB5670D34C7FF39CC863A6B9D66B4D81351FCF",
+          "normalResource": "",
+          "position": [
+            -0.000310306757,
+            0.125863716,
+            0.000168499
+          ],
+          "rotation": [
+            0.015429135400007291,
+            0.146146089,
+            0.028735466300000012
+          ],
+          "scale": [
+            1.00000012,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Kharon_Pattern_Acquisitor"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Ventari Sodality",
+      "guid": "87c0ad",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc145373343640512875977F86238DF297C95E214A5FE923EDDDC873212419",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc153124426767463789004D18ACED8FD0AB4EC14AD4F1022398241AA43CCD",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.127399027,
+            -4.751813e-07
+          ],
+          "rotation": [
+            359.999868217637,
+            359.977661,
+            0.0001855701270000003
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Ventari_Sodality_3"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Allarus Custodian",
+      "guid": "741d3f",
+      "description": "From SirDragdords Crafts",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc24359560060540611105A2FD4FA230F40F7512497FEB10E8FD91F5012CF",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc24359560060540910261B985236EC0D2F3FC02F7396B1B45259312374C0",
+          "normalResource": "",
+          "position": [
+            8.894084e-08,
+            0.127400517,
+            6.2150086e-08
+          ],
+          "rotation": [
+            359.9999815661122,
+            0.0,
+            359.9999575399
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999999,
+            1.0
+          ],
+          "objectNames": [
+            "40_Circle.017"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes_State",
+      "name": "Allarus Custodian (Purple)",
+      "guid": "edecf8",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc24359560060540611105A2FD4FA230F40F7512497FEB10E8FD91F5012CF",
+          "diffuseResource": "",
+          "normalResource": "",
+          "position": [
+            -4.926517e-06,
+            0.127419472,
+            -8.528953e-06
+          ],
+          "rotation": [
+            0.0004333593239993887,
+            1.675530109998312e-08,
+            0.00102495647
+          ],
+          "scale": [
+            0.9999999999999998,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "40_Circle.017"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Wardens",
+      "guid": "1d44df",
+      "description": "Photoscanned by Seaborne",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc310700343733459727ADFBDE2C9409D303CE032B8D139AD2A8E4893A7",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc31070034373345122A483863734E9B75AF00822A5F6A49AB864330E07",
+          "normalResource": "",
+          "position": [
+            3.26333236e-08,
+            0.127401292,
+            -1.59302465e-06
+          ],
+          "rotation": [
+            359.999842990132,
+            44.98414,
+            359.999802574122
+          ],
+          "scale": [
+            0.9999999999999999,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "objectNames": [
+            "Custodian_Guard_1"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Aquillon Terminator",
+      "guid": "82c8a9",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 50.0,
+        "resource": "Armies/Models/Bases/base_50mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "Aquilon Custodian, Twin Adrathic Destructor & Solerite Power Gauntlet photoscan 2022-01-23 part 2",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1809885360410075712EB7AB68864CE2B1D72C7A135DF1E7B746E0108A0",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1809885360410074309496677D0AA2520C48EF987F26E54E9EBC23EF696",
+          "normalResource": "",
+          "position": [
+            -0.110233091,
+            0.106911026,
+            -0.04348904
+          ],
+          "rotation": [
+            0.016122432399992014,
+            345.0183,
+            0.0797603100000012
+          ],
+          "scale": [
+            1.0000000000000002,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "objectNames": [
+            "aquilon_b_v03_p2_Textured_mesh_15k.004"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "Aquilon Custodian, Twin Adrathic Destructor & Solerite Power Gauntlet photoscan 2022-01-23 part 1",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1809885360410073506BCA188EAC5B0D926A3D7EA9025D0930536C43C8E",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc1809885360410074309496677D0AA2520C48EF987F26E54E9EBC23EF696",
+          "normalResource": "",
+          "position": [
+            -0.110233121,
+            0.106910788,
+            -0.0434890464
+          ],
+          "rotation": [
+            0.016122432399992014,
+            345.0183,
+            0.07976032000000226
+          ],
+          "scale": [
+            0.999999762,
+            1.0,
+            0.9999998
+          ],
+          "objectNames": [
+            "aquilon_b_v03_p1_Textured_mesh_15k.002"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Allarus Terminator",
+      "guid": "982250",
+      "description": "Photoscanned by Seaborne\n\nSource - Unknown",
+      "gmnotes": "",
+      "tags": [
+        "Marble_Base"
+      ],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc228395254390968306426BE70092A75A7A8D8D420B4AE2E23BE9BC1CF20",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc228395254390968265292A1987B3A1FB8EE6B2B0EB3CC12ACBA64C84DF9",
+          "normalResource": "",
+          "position": [
+            1.86167763e-05,
+            0.1272471,
+            -4.93962543e-05
+          ],
+          "rotation": [
+            359.98974599999997,
+            359.9999721175282,
+            359.9871
+          ],
+          "scale": [
+            1.6499999999999995,
+            1.64999986,
+            1.6500002099999995
+          ],
+          "objectNames": [
+            "25_Circle.019"
+          ]
+        },
+        {
+          "role": "visual_mesh",
+          "childPath": "1",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc3105672570961972635CC8EBC938149950DF02B275C91EF3BCE34A297",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc310567257096201426B7417BE7422EB92250A41CA357A4179BD1B969E",
+          "normalResource": "",
+          "position": [
+            6.21942745e-05,
+            0.209139764,
+            -9.313354e-05
+          ],
+          "rotation": [
+            359.9724,
+            330.183655,
+            359.991272
+          ],
+          "scale": [
+            0.9249999520000001,
+            0.9250001000000002,
+            0.9249999520000001
+          ],
+          "objectNames": [
+            "Video_-_Joytoys_Allarus"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Custodian Guard - Guardian Spear (Att2)",
+      "guid": "5455ba",
+      "description": "",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1305431056814431114C4A5E238EB3C19A53FA35585A0A5A3CB98485A73",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc13054310568144318463CB4ABC1C32021C1C629E67C7D4D0AC229B2470B",
+          "normalResource": "",
+          "position": [
+            -1.2533132535e-05,
+            0.13376879145,
+            -9.28774455e-06
+          ],
+          "rotation": [
+            0.0010362935699931685,
+            180.000092,
+            359.9994258084
+          ],
+          "scale": [
+            1.0500000000000003,
+            1.05,
+            1.05
+          ],
+          "objectNames": [
+            "Custodian_Guard_-_Guardian_Spear_Attempt_2"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "5/5 Aleya",
+      "guid": "e5d913",
+      "description": "M  WS BS  S  T  W  A  LD  SV\r\n7\"  2+  3+  3  3  5   4   9    3+\r\n[5ACFFF]Weapons[-]\r\n-Somnus Blade\nMelee S+1  AP-3  Dd3\r\r\r\r\r\r\r\r\n-Psyk-out Grenades\r\nGrenade d3 6\" S2 AP0 D1  Sp* \n[B41919]Abilities[-]\r\nTalons of the Emperor\nWitch Hunter\nPsychic Abomination",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 0.0,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "5/5 Aleya",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc78187612663007098831C473275E24B4A853CE264051DE9C8FFF797BDB",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc781876126630071871EE4624F6D0F841040EA539305E7516FC3CDD3DA3",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "objectNames": [
+            "32mm_Cylinder.001",
+            "Aleya"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Captain-General Trajann Valoris",
+      "guid": "13ab89",
+      "description": "Photoscan by Raikoh",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 40.0,
+        "resource": "Armies/Models/Bases/base_40_0mm"
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "0",
+          "nickname": "",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc1079052771036435108856360C7D7CA691A696E15F0EACC93737DEF3A",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10790527710376686443922DCD41FE3443D9BE675A603683C9666E108",
+          "normalResource": "",
+          "position": [
+            6.734298e-07,
+            0.127395451,
+            1.92053946e-07
+          ],
+          "rotation": [
+            0.00016924855300158516,
+            180.008911,
+            0.00046103150000080577
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0000000000000002
+          ],
+          "objectNames": [
+            "Captain-General_Trajann_Valoris"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Custodes",
+      "name": "Shield Captain",
+      "guid": "1860b6",
+      "description": "By Savege Boii",
+      "gmnotes": "",
+      "tags": [],
+      "base": {
+        "diameterMm": 0.0,
+        "resource": ""
+      },
+      "components": [
+        {
+          "role": "visual_mesh",
+          "childPath": "",
+          "nickname": "Shield Captain",
+          "meshResource": "Armies/Models/Custodes/ModelPool/httpssteamusercontentaakamaihdnetugc100139382505414373888F90437B42C17102A73FEA20628330A00AD02F5",
+          "diffuseResource": "Armies/Models/Custodes/TexturePool/httpssteamusercontentaakamaihdnetugc10013938250541442264DEA056BA6E699BF4DA572867A8F117EC2C266B8",
+          "normalResource": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.9250001,
+            0.9250001,
+            0.9250001
+          ],
+          "objectNames": [
+            "40mm_Cylinder.001",
+            "Valdor"
+          ]
+        }
+      ]
+    }
+  ]
+}

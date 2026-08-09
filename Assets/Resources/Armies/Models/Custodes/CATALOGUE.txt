@@ -1,0 +1,128 @@
+WARBOARD ADEPTUS CUSTODES MODEL PACK CATALOGUE
+
+Total indexed objects: 104
+Unique visual/base mesh assets: 113
+Unique texture assets: 100
+Missing referenced mesh cache assets: 10
+Missing referenced texture cache assets: 1
+Assetbundle-only TTS objects are not indexed by this OBJ model pack.
+
+Coronus Grav Carrier [eb9c36]  base=170.0mm  parts=1
+telemon dreadnought photoscan loadouts, rebased [bb82e8]  base=100.0mm  parts=3
+Caladius Grav-Tank [1a15db]  base=149.7mm  parts=1
+Telemon [021618]  base=100.0mm  parts=1
+Vertus Praetors [9612ee]  base=74.8mm  parts=1
+Vertus Praetors [bd7a7b]  base=74.8mm  parts=1
+Vertus Praetors [634c92]  base=74.8mm  parts=1
+Caladius Annihilator Grav-Tank [dd71a7]  base=157.2mm  parts=1
+Agamatus Jetbike [f02d78]  base=65.0mm  parts=1
+Telemon Heavy Dreadnought [ce6fbd]  base=100.0mm  parts=1
+telemon dreadnought photoscan loadouts, rebased [569f6a]  base=100.0mm  parts=3
+Ares Gunship [749f9a]  base=159.3mm  parts=2
+Ares Gunship [99f197]  base=159.3mm  parts=1
+Prosecutor Superior [2d9cd0]  base=32.0mm  parts=1
+Prosecutor [fc8e17]  base=32.0mm  parts=1
+Witchseeker [123f5a]  base=32.0mm  parts=1
+Prosecutor [f8c025]  base=32.0mm  parts=1
+Prosecutor [083571]  base=32.0mm  parts=1
+Custodian Guard Sodality [3fb0c6]  base=40.0mm  parts=2
+Custodian Guard Sodality [d4974e]  base=40.0mm  parts=2
+telemon dreadnought [e8f19f]  base=100.0mm  parts=3
+Custodian Guard with Guardian Spear [d0f597]  base=40.0mm  parts=1
+Guardian with adrasite spear [9698cd]  base=40.0mm  parts=1
+Custo 2 Spear [190f1e]  base=40.0mm  parts=1
+Custodian Guard Sodality [b0ebed]  base=40.0mm  parts=2
+Custodian Guard Sodality [94c815]  base=40.0mm  parts=2
+Legio Custodes Caladius Grav-Tank [ba8600]  base=170.0mm  parts=1
+Contemptor Galatus Dreadnought [fb322d]  base=65.0mm  parts=1
+pallas grav-attack photoscan (2022-02-02) without scanned basing material [2283c5]  base=105.0mm  parts=1
+Custo 3 Spear [deb034]  base=40.0mm  parts=1
+Custodian Guard Sodality [67ff7f]  base=40.0mm  parts=2
+Custodian Guard Sodality [7b914a]  base=40.0mm  parts=2
+Custodian Guard with Guardian Spear [07ac74]  base=40.0mm  parts=1
+Guardian with Pyrithite spear [7b16b6]  base=40.0mm  parts=1
+Custo 1 Spear [cf1662]  base=40.0mm  parts=1
+Custodian Guard with Vexilius Praetor [4dbf7a]  base=40.0mm  parts=1
+Witchseekers [b24f19]  base=32.0mm  parts=1
+Witchseekers [1ee0b2]  base=32.0mm  parts=1
+Saggitarum Custodes [1fa31c]  base=40.0mm  parts=1
+Witchseekers [0d9ce9]  base=32.0mm  parts=1
+Custo 1 Shield [691c3f]  base=40.0mm  parts=1
+Vigilator [95d6b7]  base=32.0mm  parts=1
+Vigilator Superior [de50f5]  base=32.0mm  parts=1
+Vigilators [644743]  base=32.0mm  parts=1
+Vigilator Superior [ef05f7]  base=32.0mm  parts=1
+Vigilator [94924d]  base=32.0mm  parts=1
+Vigilator [df5178]  base=32.0mm  parts=1
+Custo 2 Spear [74e402]  base=40.0mm  parts=1
+Custo LeaderShield [001009]  base=40.0mm  parts=1
+Vigilators [3d1c72]  base=32.0mm  parts=1
+Vigilators [992473]  base=32.0mm  parts=1
+Shield Captain with Sintinel Blade and Praesidium Shield [1b1c31]  base=40.0mm  parts=1
+Custodian Guard [225642]  base=40.0mm  parts=1
+Custodian Guard [b809a1]  base=40.0mm  parts=1
+Sentinel Guard Sodality [683586]  base=40.0mm  parts=1
+Vigilators [b5eb37]  base=32.0mm  parts=1
+Oblivion-Knight centura [0f8f7b]  base=unresolvedmm  parts=1
+Jenetia Krole - Commander Of The Silent Sisterhood [210051]  base=32.0mm  parts=1
+Raptor Guard [eb87ad]  base=unresolvedmm  parts=1
+Shield-Captain with Spear [2a4c3b]  base=unresolvedmm  parts=2
+Blade Champion [e5feef]  base=40.0mm  parts=1
+Blade Champion [9d96ba]  base=40.0mm  parts=1
+Shield-Captain in Allarus Terminator Armor [fc7d3e]  base=40.0mm  parts=1
+Shield Captain [da9a12]  base=40.0mm  parts=1
+Shield Captain with Pyrithite Spear and Praesidium Shield [fa8a37]  base=40.0mm  parts=1
+Shield Captain in Allarus Terminator Armor [5b4911]  base=40.0mm  parts=1
+Orion Assault Dropship [9ce360]  base=159.3mm  parts=2
+Orion Assault Dropship [73fc3c]  base=159.3mm  parts=2
+Custo 2 Shield [cb19ca]  base=40.0mm  parts=1
+Custodian Guard Sentinel Blade [d8b2ed]  base=40.0mm  parts=1
+Shield-Captain [43782c]  base=40.0mm  parts=1
+Custodes Venerable Contemptor Dreadnought [3d6a00]  base=65.0mm  parts=1
+Custodes Venerable Contemptor Dreadnought [b15f0d]  base=65.0mm  parts=1
+Venerable Land Raider [9ddd3e]  base=unresolvedmm  parts=1
+Contemptor-Achillus Dreadnought [0f7c0b]  base=65.0mm  parts=4
+Shield-Captain with Spear [b57f45]  base=40.0mm  parts=1
+Shield Captain [4717ec]  base=40.0mm  parts=1
+Shield Captain [8d4b70]  base=40.0mm  parts=1
+Null Maiden Rhino [738a1d]  base=unresolvedmm  parts=1
+Shield Captain in Allarus Terminator Armor [87d113]  base=40.0mm  parts=1
+Ventari Sodality [6eaca0]  base=40.0mm  parts=1
+Aquillon Terminator [a50674]  base=50.0mm  parts=1
+Allarus Terminator [9139a3]  base=40.0mm  parts=1
+Shield Captain [1686e9]  base=40.0mm  parts=1
+Ventari Sodality [e3357a]  base=40.0mm  parts=1
+Aquillon Terminator [70dee3]  base=50.0mm  parts=1
+Custodian Wardens [5dcbce]  base=40.0mm  parts=1
+Aquillon Terminator [bda64b]  base=50.0mm  parts=1
+Allarus Terminators [2633cc]  base=40.0mm  parts=1
+Allarus Terminator with Vexillius Praetor [ebd653]  base=40.0mm  parts=1
+Allarus Custodians [3316f4]  base=40.0mm  parts=2
+Warden with Vexilla [5ad4d0]  base=40.0mm  parts=1
+Shield-Captain on Dawneagle Jetbike [2db10d]  base=75.0mm  parts=2
+Kharon Pattern Acquisitor [17da72]  base=170.0mm  parts=1
+Ventari Sodality [87c0ad]  base=40.0mm  parts=1
+Allarus Custodian [741d3f]  base=40.0mm  parts=1
+Allarus Custodian (Purple) [edecf8]  base=40.0mm  parts=1
+Custodian Wardens [1d44df]  base=40.0mm  parts=1
+Aquillon Terminator [82c8a9]  base=50.0mm  parts=2
+Allarus Terminator [982250]  base=40.0mm  parts=2
+Custodian Guard - Guardian Spear (Att2) [5455ba]  base=40.0mm  parts=1
+5/5 Aleya [e5d913]  base=unresolvedmm  parts=1
+Captain-General Trajann Valoris [13ab89]  base=40.0mm  parts=1
+Shield Captain [1860b6]  base=unresolvedmm  parts=1
+
+== Missing mesh URLs ==
+https://steamusercontent-a.akamaihd.net/ugc/10197903079171199558/EE3A520C50529D1FBE8BA206AEDC81C798F92F0D/
+https://steamusercontent-a.akamaihd.net/ugc/10897610793884449198/5879C94463966796634F6B7D2B327B77F629E750/
+https://steamusercontent-a.akamaihd.net/ugc/10950014842414634321/A3ADF6F8698DB6AB7B71BE153AAF19D22E79001D/
+https://steamusercontent-a.akamaihd.net/ugc/11702650204181222301/E7079AC7A863F803E40FA982C3E67DA063072F58/
+https://steamusercontent-a.akamaihd.net/ugc/12617563349587043400/4CBC953683FE5EA18DC1807E3A0887890AC8B802/
+https://steamusercontent-a.akamaihd.net/ugc/13781526344712534483/DDF73478C8A3814FAA944D8D0550A16C1AFE0869/
+https://steamusercontent-a.akamaihd.net/ugc/14581848873440033327/3089EAAB44A475044E0450D3CC4B0F57B544BB4F/
+https://steamusercontent-a.akamaihd.net/ugc/16055396746074334627/FF4C87FB3861077172F2B51C8AC096148048191E/
+https://steamusercontent-a.akamaihd.net/ugc/16342148074643092533/2C0B3E4F0B09FFA6321711134D8B9C2D7B96F9AD/
+https://steamusercontent-a.akamaihd.net/ugc/9984333203477957459/E2F2F2C20982B5B1113E6C57E35999E482407B71/
+
+== Missing texture URLs ==
+https://steamusercontent-a.akamaihd.net/ugc/2435956006055405010/3816F6F88857BC906B3A019A34EAF2AF9A7BA053/

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -768,6 +768,16 @@ public static class ModelVisualRegistry
         // v26.8: the installed faction model pack is the sole canonical
         // source of real miniature visuals. If no indexed asset matches,
         // return null and SquadController keeps the normal gameplay capsule.
+        ModelVisualDefinition custodesVisual =
+            CustodesModelPackResolver.TryResolve(
+                unitName,
+                roleName,
+                modelIndex
+            );
+
+        if (custodesVisual != null)
+            return custodesVisual;
+
         return
             TryResolvePack(
                 unitName,
@@ -1057,3 +1067,4 @@ public static class ModelVisualRegistry
         );
     }
 }
+
