@@ -1,0 +1,8 @@
+WARBOARD v38.1 PATCH MANIFEST
+
+Assets/Editor/WarboardV38MultiDetachmentMigration.cs
+Assets/Editor/WarboardV38MultiDetachmentMigration.cs.meta
+Assets/Scripts/Core/WarboardBuildInfo.cs
+Assets/Scripts/Core/WarboardBuildInfo.cs.meta
+README_V38_1.md
+V38_1_PATCH_MANIFEST.txt

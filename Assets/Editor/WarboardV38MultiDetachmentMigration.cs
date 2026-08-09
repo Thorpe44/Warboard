@@ -108,7 +108,15 @@ public static class WarboardV38MultiDetachmentMigration
                         "public bool DetachmentIs(",
                         DetachmentIsMethod());
 
-                int classBrace = source.IndexOf('{');
+                int classStart =
+                    source.IndexOf(
+                        "public class AeldariRulesSystem",
+                        StringComparison.Ordinal);
+
+                int classBrace =
+                    classStart >= 0
+                    ? source.IndexOf('{', classStart)
+                    : -1;
 
                 if (classBrace < 0)
                 {
@@ -121,13 +129,18 @@ public static class WarboardV38MultiDetachmentMigration
                         classBrace + 1,
                         "\n    // " + Marker + "\n");
 
+                // v38.1: the generated GetSelected calls are intentionally
+                // formatted across two lines (AeldariDetachmentRuntime then
+                // .GetSelected). The original v38 validator incorrectly looked
+                // for one contiguous string and therefore rejected a migration
+                // that had actually installed the runtime calls correctly.
                 if (!source.Contains(
-                        "AeldariDetachmentRuntime.GetSelected") ||
+                        ".GetSelected(faction)") ||
                     !source.Contains(
-                        "AeldariDetachmentRuntime.Has"))
+                        "AeldariDetachmentRuntime.Has("))
                 {
                     throw new InvalidOperationException(
-                        "v38 validation failed: multi-detachment runtime references were not installed.");
+                        "v38.1 validation failed: multi-detachment runtime references were not installed.");
                 }
 
                 File.WriteAllText(
