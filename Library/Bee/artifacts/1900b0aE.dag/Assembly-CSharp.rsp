@@ -417,6 +417,7 @@
 "Assets/Scripts/Core/GameController.Fight11.cs"
 "Assets/Scripts/Core/GameController.Missions.cs"
 "Assets/Scripts/Core/GameController.Movement.cs"
+"Assets/Scripts/Core/GameController.NecronsFaction11.cs"
 "Assets/Scripts/Core/GameController.Rules.cs"
 "Assets/Scripts/Core/GameController.RuntimeApi.cs"
 "Assets/Scripts/Core/GameController.Setup.cs"
@@ -460,8 +461,13 @@
 "Assets/Scripts/Factions/Aeldari/AeldariFactionPack11Runtime.cs"
 "Assets/Scripts/Factions/Aeldari/AeldariGameController.cs"
 "Assets/Scripts/Factions/Aeldari/AeldariSetupUI.cs"
+"Assets/Scripts/Factions/Necrons/NecronDetachmentControllerSystem.cs"
+"Assets/Scripts/Factions/Necrons/NecronDetachmentRuntime.cs"
 "Assets/Scripts/Factions/Necrons/NecronFactionModule.cs"
 "Assets/Scripts/Factions/Necrons/NecronGameController.cs"
+"Assets/Scripts/Factions/Necrons/NecronsFactionPack11.cs"
+"Assets/Scripts/Factions/Necrons/NecronsFactionPack11Runtime.cs"
+"Assets/Scripts/Factions/Necrons/NecronsSetupUI.cs"
 -langversion:9.0
 /deterministic
 /optimize+

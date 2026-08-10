@@ -835,7 +835,7 @@ public partial class GameController
             int distance =
                 minimum == 4 &&
                 maximum == 6
-                ? DiceRoller.RollD3(label) + 3
+                ? DiceRoller.RollExpressionDie(3, label) + 3
                 : DiceRoller.RollD6(label);
 
             BeginSpecialMove(
@@ -1551,11 +1551,11 @@ public partial class GameController
             return false;
 
         if (when.Contains("movement phase") &&
-            phase != Phase.Movement)
+            phase != Phase.Move)
             return false;
 
         if (when.Contains("shooting phase") &&
-            phase != Phase.Shooting)
+            phase != Phase.Shoot)
             return false;
 
         if (when.Contains("charge phase") &&
