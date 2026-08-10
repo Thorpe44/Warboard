@@ -235,14 +235,24 @@ public partial class GameController : MonoBehaviour
                 return;
             }
 
+                        // WARBOARD_V46_TRADITIONAL_SYNAPSE
+            int diceCount =
+                WarboardFactionExtensionHub
+                    .BattleShockDice(
+                        this,
+                        traditionalBattleShockUnit
+                    );
+
             OpenTraditionalDicePrompt(
-                2
+                diceCount
             );
 
             status =
                 "BATTLE-SHOCK TEST REQUIRED: " +
                 traditionalBattleShockUnit.DisplayName +
-                ". Roll 2D6 manually, apply any tabletop rules yourself, then mark PASS or FAIL.";
+                ". Roll " +
+                diceCount +
+                "D6 manually, apply any tabletop rules yourself, then mark PASS or FAIL.";
 
             return;
         }

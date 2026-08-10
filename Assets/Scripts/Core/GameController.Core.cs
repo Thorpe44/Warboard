@@ -395,9 +395,13 @@ public partial class GameController : MonoBehaviour
                 !selectedSquad
                     .JoinedActionController()
                     .FactionSuddenStormActive &&
-                !selectedSquad
+                                !selectedSquad
                     .JoinedActionController()
                     .StarEnginesActive &&
+                // WARBOARD_V46_RANGE_GUIDE_ADVANCE_SHOOT
+                !WarboardFactionExtensionHub
+                    .CanShootAfterAdvance(
+                        selectedSquad) &&
                 !(aeldariRules != null &&
                   aeldariRules
                     .VehicleRangedHasAssault(
@@ -1622,11 +1626,26 @@ public partial class GameController : MonoBehaviour
                     unit
                 );
 
+                        // WARBOARD_V46_COMMAND_BATTLESHOCK_DICE
+            int battleShockDice =
+                WarboardFactionExtensionHub
+                    .BattleShockDice(
+                        this,
+                        unit
+                    );
+
             int roll =
-                DiceRoller.Roll2D6(
+                battleShockDice >= 3
+                ? DiceRoller.RollDice(
+                    battleShockDice,
+                    6,
                     "Battle-shock: " +
                     unit.DisplayName
-                );
+                  ).Total
+                : DiceRoller.Roll2D6(
+                    "Battle-shock: " +
+                    unit.DisplayName
+                  );
 
             bool passed =
                 roll >= leadership;
@@ -4272,15 +4291,25 @@ public partial class GameController : MonoBehaviour
             traditionalBattleShockPending =
                 true;
 
+                        // WARBOARD_V46_FORCED_TRADITIONAL_BATTLESHOCK_DICE
+            int forcedDiceCount =
+                WarboardFactionExtensionHub
+                    .BattleShockDice(
+                        this,
+                        target
+                    );
+
             OpenTraditionalDicePrompt(
-                2
+                forcedDiceCount
             );
 
             status =
                 label +
                 ": " +
                 target.DisplayName +
-                " must take a Battle-shock test. Resolve 2D6 manually and mark PASS or FAIL.";
+                " must take a Battle-shock test. Resolve " +
+                forcedDiceCount +
+                "D6 manually and mark PASS or FAIL.";
 
             AppendBattleLog(
                 "BATTLE-SHOCK",
@@ -4297,12 +4326,28 @@ public partial class GameController : MonoBehaviour
                 target
             );
 
+                // WARBOARD_V46_FORCED_BATTLESHOCK_DICE
+        int standardBattleShockDice =
+            WarboardFactionExtensionHub
+                .BattleShockDice(
+                    this,
+                    target
+                );
+
         int roll =
-            DiceRoller.Roll2D6(
+            standardBattleShockDice >= 3
+            ? DiceRoller.RollDice(
+                standardBattleShockDice,
+                6,
                 label +
                 ": " +
                 target.DisplayName
-            );
+              ).Total
+            : DiceRoller.Roll2D6(
+                label +
+                ": " +
+                target.DisplayName
+              );
 
         bool passed =
             roll >= leadership;
@@ -6416,6 +6461,18 @@ public partial class GameController : MonoBehaviour
 
     private void NextPhase()
     {
+        // WARBOARD_V46_STANDARD_PHASE_GATE
+        string standardFactionPhaseReason;
+
+        if (!WarboardFactionExtensionHub
+                .CanAdvancePhase(
+                    this,
+                    out standardFactionPhaseReason))
+        {
+            status = standardFactionPhaseReason;
+            return;
+        }
+
         string core11PhaseReason;
         if (!Core11CanAdvancePhase(out core11PhaseReason))
         {

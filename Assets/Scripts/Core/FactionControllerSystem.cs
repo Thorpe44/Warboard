@@ -168,6 +168,16 @@ public static class FactionGameControllerFactory
             return new CustodesGameController();
         }
 
+        // WARBOARD_V46_STANDARD_FACTION_FACTORY
+        IFactionGameController extension =
+            WarboardFactionExtensionHub
+                .TryCreateController(
+                    army
+                );
+
+        if (extension != null)
+            return extension;
+
         return new GenericFactionGameController();
     }
 

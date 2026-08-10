@@ -1,0 +1,1365 @@
+{
+  "id": "space_marines",
+  "displayName": "Space Marines",
+  "keyword": "ADEPTUS ASTARTES",
+  "version": "Space Marines Faction Pack 11e v1.1 July 2026",
+  "armyRuleName": "OATH OF MOMENT",
+  "armyRuleText": "OATH OF MOMENT In battle, Space Marines swear mighty oaths to destroy the enemies of the Emperor and uphold the honour of their Chapter, and such vows are sacrosanct. When the Angels of Death strike, they do so with the precision of a surgeon and the force of a thunderbolt. Experience and strategic expertise help them to read the shiting shape of the battle with post-human speed and clarity, directing their wrath towards one priority target after another. Command assets are annihilated, leaving the enemy reeling leaderless. Heavy armour, potent artillery and the vaunted elites of the foe's forces are laid waste with horrifying speed, until the Emperor's Angels of Death stand victorious over a field of smouldering wreckage and bolt-riddled corpses, and honour is finally satisfied. If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: \u25aa You can re-roll the Hit roll. \u25aa If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLACK TEMPLARS, BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions' Munitorum Field Manual sections, add 1 to the Wound roll as well. SPACE MARINE CHAPTERS \u25aa If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit's Chapter. For example, MARNEUS CALGAR has both the ADEPTUS ASTARTES and ULTRAMARINES Faction keywords, and is therefore from the Ultramarines Chapter. \u25aa You cannot include units from more than one Chapter in your army. \u25aa If your army includes one or more BLACK TEMPLARS units, it cannot include any ADEPTUS ASTARTES PSYKER models, and cannot include any of the following models that do not have the Black Templars keyword: GLADIATOR LANCER; GLADIATOR REAPER; GLADIATOR VALIANT; Impulsor; Repulsor; REPULSOR EXECUTIONER. \u25aa If your army includes one or more DEATHWATCH units, it cannot include any of the following units: DEVASTATOR SQUAD; SCOUT SQUAD; TACTICAL SQUAD. \u25aa If your army includes one or more SPACE WOLVES units, it cannot include any of the following units: APOTHECARY; DEVASTATOR SQUAD; TACTICAL SQUAD. DEATHWATCH \u25aa Your army can include ADEPTUS ASTARTES DEATHWATCH units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter. \u25aa With the exception of KILL TEAM CASSIUS (see Legends: Agents of the Imperium), your army cannot include any AGENTS OF THE IMPERIUM DEATHWATCH units. \u25aa Your army cannot include any of the following units: ASSAULT SQUAD; ASSAULT SQUAD WITH JUMP PACKS; ATTACK BIKE SQUAD; DEVASTATOR SQUAD; LAND SPEEDER STORM; RELIC TERMINATOR SQUAD; Scout Bike Squad; SCOUT SQUAD; SCOUT SNIPER SQUAD; TACTICAL SQUAD; TERMINATOR ASSAULT SQUAD; TERMINATOR SQUAD.",
+  "detachments": [
+    {
+      "name": "GLADIUS TASK FORCE",
+      "dp": 3,
+      "ruleName": "COMBAT DOCTRINES",
+      "ruleText": "The Codex Astartes has proven its worth as a superb treatise on warfare over countless battlefields, and has remained so even after ten thousand years. Many Space Marines hold its wisdom in awe, and exemplify its teachings, employing a flexible set of combat doctrines to eliminate their enemy. Few opponents can withstand the fury of such an onslaught. At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Combat Doctrine once per battle. Devastator Doctrine The Codex Astartes details the strategic value of overwhelming firepower applied to key targets while advancing into position to eliminate threats. This unit is eligible to shoot in a turn in which it Advanced. Tactical Doctrine As the warring armies close upon one another and vicious fire-fights erupt, the Codex lays out strategies for switly seizing the initiative and combining versatility with firepower. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Assault Doctrine The Codex Astartes leaves no doubt that the killing blow in most engagements must be delivered with a decisive close-quarters strike. It presents plentiful tactical means to achieve this end. This unit is eligible to declare a charge in a turn in which it Advanced.",
+      "sourcePage": 5,
+      "enhancements": [
+        {
+          "name": "ARTIFICER ARMOUR",
+          "points": 20,
+          "rule": "Crated by the Chapter's finest artificers, this suit of armour provides superior protection. ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+          "sourcePage": 5
+        },
+        {
+          "name": "THE HONOUR VEHEMENT",
+          "points": 15,
+          "rule": "This stanza is inscribed on thrice-blessed parchment and affixed to its bearers' wargear with a purity seal, there to inspire them to heroic acts of martial prowess. ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer's melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
+          "sourcePage": 5
+        },
+        {
+          "name": "ADEPT OF THE CODEX",
+          "points": 20,
+          "rule": "An ardent student of the Codex Astartes, this commander epitomises its tactical genius, and the wisdom gleaned from its teachings guides their measured strategic responses amidst the fiercest battle. CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer's unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
+          "sourcePage": 5
+        },
+        {
+          "name": "FIRE DISCIPLINE",
+          "points": 25,
+          "rule": "This commander drills his warriors relentlessly; combined with the Adeptus Astartes' incredible reflexes, they produce a devastating rate of fire. ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer's unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
+          "sourcePage": 5
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "GLADIUS TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 5
+        },
+        {
+          "name": "ONLY IN DEATH DOES DUTY END",
+          "cost": 2,
+          "category": "GLADIUS TASK FORCE - EPIC DEED STRATAGEM",
+          "when": "Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+          "restrictions": "",
+          "sourcePage": 5
+        },
+        {
+          "name": "HONOUR THE CHAPTER",
+          "cost": 1,
+          "category": "GLADIUS TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Fight phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army.",
+          "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability. If your unit is under the effects of the Assault Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well.",
+          "restrictions": "",
+          "sourcePage": 5
+        },
+        {
+          "name": "ADAPTIVE STRATEGY",
+          "cost": 1,
+          "category": "GLADIUS TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Command phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army.",
+          "effect": "Select the Devastator Doctrine, Tactical Doctrine or Assault Doctrine. Until the start of your next Command phase, that Combat Doctrine is active for that unit instead of any other Combat Doctrine that is active for your army, even if you have already selected that doctrine this battle.",
+          "restrictions": "",
+          "sourcePage": 5
+        },
+        {
+          "name": "STORM OF FIRE",
+          "cost": 1,
+          "category": "GLADIUS TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability. If your unit is under the effects of the Devastator Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well.",
+          "restrictions": "",
+          "sourcePage": 5
+        },
+        {
+          "name": "SQUAD TACTICS",
+          "cost": 1,
+          "category": "GLADIUS TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that is within 8\" of the enemy unit that just ended that move.",
+          "effect": "Your unit can make a Normal move of up to D6\", or a Normal move of up to 6\" instead if it is under the effects of the Tactical Doctrine.",
+          "restrictions": "You cannot select a unit that is within Engagement Range of one or more enemy units.",
+          "sourcePage": 5
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "ANVIL SIEGE FORCE",
+      "dp": 2,
+      "ruleName": "SHIELD OF THE IMPERIUM",
+      "ruleText": "Across blood-drenched battlefields, within towering citadels and isolated orbital stations, the Angels of Death throw back tides of traitors, mutants, xenos and heretics, and purge enemy holdings of foes thanks to their disciplined strategies and fighting skills. All who oppose them are met with volleys of deadly accurate firepower long before they reach the battle-brothers' razor-sharp blades. Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model's unit Remained Stationary this turn, add 1 to the Wound roll.",
+      "sourcePage": 9,
+      "enhancements": [
+        {
+          "name": "INDOMITABLE FURY",
+          "points": 20,
+          "rule": "This hero refuses to yield whilst foes remain, fighting back from the brink of death like a vengeful demigod. GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+          "sourcePage": 9
+        },
+        {
+          "name": "FLEET COMMANDER",
+          "points": 15,
+          "rule": "The Chapter's orbiting warships stand ready to unleash devastation at this leader's command. CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+          "sourcePage": 9
+        },
+        {
+          "name": "STOIC DEFENDER",
+          "points": 15,
+          "rule": "This commander and their warriors hold their ground tenaciously against even overwhelming numbers. ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+          "sourcePage": 9
+        },
+        {
+          "name": "ARCHITECT OF WAR",
+          "points": 25,
+          "rule": "There are few who have a deeper understanding of the tenets of siege warfare than this warrior. ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+          "sourcePage": 9
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "ANVIL SIEGE FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 9
+        },
+        {
+          "name": "RIGID DISCIPLINE",
+          "cost": 1,
+          "category": "ANVIL SIEGE FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "End of the Fight phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that is within Engagement Range of one or more enemy units.",
+          "effect": "Your unit can immediately make a Fall Back move of up to 6\".",
+          "restrictions": "When making that move, your unit must end that move either wholly within your deployment zone or within range of an objective marker.",
+          "sourcePage": 9
+        },
+        {
+          "name": "NOT ONE BACKWARDS STEP",
+          "cost": 1,
+          "category": "ANVIL SIEGE FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Command phase.",
+          "target": "One ADEPTUS ASTARTES INFANTRY unit from your army within range of an objective marker.",
+          "effect": "Until the end of the turn, double the Objective Control characteristic of models in your unit, but it must Remain Stationary this turn.",
+          "restrictions": "",
+          "sourcePage": 9
+        },
+        {
+          "name": "NO THREAT TOO GREAT",
+          "cost": 2,
+          "category": "ANVIL SIEGE FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets a MONSTER or VEHICLE unit, you can re-roll the Wound roll.",
+          "restrictions": "",
+          "sourcePage": 9
+        },
+        {
+          "name": "BATTLE DRILL RECALL",
+          "cost": 1,
+          "category": "ANVIL SIEGE FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability. If your unit Remained Stationary this turn, then until the end of the phase, each time a model in your unit makes a ranged attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+          "restrictions": "",
+          "sourcePage": 9
+        },
+        {
+          "name": "HAIL OF VENGEANCE",
+          "cost": 2,
+          "category": "ANVIL SIEGE FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Shooting phase, just after an enemy unit has resolved its attacks.",
+          "target": "One ADEPTUS ASTARTES unit from your army that had one or more of its models destroyed as a result of the attacking unit's attacks.",
+          "effect": "Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+          "restrictions": "",
+          "sourcePage": 9
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "IRONSTORM SPEARHEAD",
+      "dp": 2,
+      "ruleName": "ARMOURED WRATH",
+      "ruleText": "An Ironstorm Spearhead's commanders guide their assault with pre-cogitated fire solutions, cycling data-gheist inloads and whispered binharic auguries. These ensure their warriors, and the belligerent machine spirits inhabiting their war engines, deliver their fire with inescapable accuracy. Once per phase for each ADEPTUS ASTARTES unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
+      "sourcePage": 12,
+      "enhancements": [
+        {
+          "name": "TARGET AUGURY WEB",
+          "points": 30,
+          "rule": "This spearhead commander uses advanced augmetics to distribute targeting data. With these, they direct the fire of their war engine crews and rouse their machine spirits to operative superiority. TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
+          "sourcePage": 12
+        },
+        {
+          "name": "THE FLESH IS WEAK",
+          "points": 20,
+          "rule": "The injuries of past battles have seen this warrior heavily rebuilt with ultra-durable cybernetic limbs and organs that render them extremely difficult to kill. ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
+          "sourcePage": 12
+        },
+        {
+          "name": "ADEPT OF THE OMNISSIAH",
+          "points": 35,
+          "rule": "This battle-brother is steeped in hidden technological rites. Should their armoured charges be threatened, a burst of arcane binharic screed can rouse their machine spirits to vigilance. TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+          "sourcePage": 12
+        },
+        {
+          "name": "MASTER OF MACHINE WAR",
+          "points": 20,
+          "rule": "This commander is supremely gited in the strategies of armoured warfare, understanding the capabilities of every war engine in the Chapters arsenal. Delivering precision orders, they ensure the vehicles under their command inflict the most punishing damage to the enemy even amidst complex manoeuvres. ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
+          "sourcePage": 12
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "UNBOWED CONVICTION",
+          "cost": 1,
+          "category": "IRONSTORM SPEARHEAD - BATTLE TACTIC STRATAGEM",
+          "when": "Command phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that is below its Starting Strength.",
+          "effect": "Until the end of the turn, your unit can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).",
+          "restrictions": "",
+          "sourcePage": 12
+        },
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "IRONSTORM SPEARHEAD - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 12
+        },
+        {
+          "name": "MERCY IS WEAKNESS",
+          "cost": 2,
+          "category": "IRONSTORM SPEARHEAD - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is below its Starting Strength, that attack has the [SUSTAINED HITS 1] ability, and when making such an attack, if the attacking model is a VEHICLE, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+          "restrictions": "",
+          "sourcePage": 12
+        },
+        {
+          "name": "VENGEFUL ANIMUS",
+          "cost": 1,
+          "category": "IRONSTORM SPEARHEAD - EPIC DEED STRATAGEM",
+          "when": "Any phase, just after an ADEPTUS ASTARTES VEHICLE model from your army with the Deadly Demise ability is destroyed.",
+          "target": "That ADEPTUS ASTARTES VEHICLE model. You can use this Stratagem on that model even though it was just destroyed.",
+          "effect": "Do not roll one D6 to determine whether mortal wounds are inflicted by your model's Deadly Demise ability. Instead, mortal wounds are automatically inflicted.",
+          "restrictions": "",
+          "sourcePage": 12
+        },
+        {
+          "name": "ANCIENT FURY",
+          "cost": 1,
+          "category": "IRONSTORM SPEARHEAD - EPIC DEED STRATAGEM",
+          "when": "Your Command phase.",
+          "target": "One ADEPTUS ASTARTES WALKER model from your army.",
+          "effect": "Until the start of your next Command phase, improve your model's Move, Toughness, Leadership and Objective Control characteristics by 1 and each time your model makes an attack, add 1 to the Hit roll.",
+          "restrictions": "",
+          "sourcePage": 12
+        },
+        {
+          "name": "POWER OF THE MACHINE SPIRIT",
+          "cost": 1,
+          "category": "IRONSTORM SPEARHEAD - EPIC DEED STRATAGEM",
+          "when": "Your opponent's Shooting phase, just after an enemy unit has resolved its attacks.",
+          "target": "One ADEPTUS ASTARTES VEHICLE unit from your army that was reduced to Below Half-strength as a result of the attacking unit's attacks.",
+          "effect": "Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+          "restrictions": "",
+          "sourcePage": 12
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "FIRESTORM ASSAULT FORCE",
+      "dp": 2,
+      "ruleName": "CLOSE-RANGE ERADICATION",
+      "ruleText": "The Space Marines are the Emperor's finest shock troops, striking at the foe before they can react. In their rapid, mechanised assaults, Space Marines smash aside the enemy, destroying them at close quarters without mercy. Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
+      "sourcePage": 15,
+      "enhancements": [
+        {
+          "name": "CHAMPION OF HUMANITY",
+          "points": 10,
+          "rule": "This commander and their warriors have vowed to secure victory and defend the Imperium from the horrors of the galaxy. TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/ or to any roll or test made for them (excluding modifiers to saving throws).",
+          "sourcePage": 15
+        },
+        {
+          "name": "WAR-TEMPERED ARTIFICE",
+          "points": 25,
+          "rule": "Having laboured long in the Chapter's forges, this warrior-smith has crated his personal armaments. Each weapon is a masterwork tool of death-dealing, wrought with care and strength, and embellished with the icons of their maker's brotherhood. ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer's melee weapons.",
+          "sourcePage": 15
+        },
+        {
+          "name": "FORGED IN BATTLE",
+          "points": 15,
+          "rule": "To this Angel of Death, war is the anvil upon which their strength is wrought. Every battle is seen as a test in which they and their battle- brothers can prove themselves, and the superior cratsmanship of their weapons and armour. ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
+          "sourcePage": 15
+        },
+        {
+          "name": "ADAMANTINE MANTLE",
+          "points": 20,
+          "rule": "This flowing cloak or finely wrought tabard is laced through with threads of braided adamantine. When combined with armour and energy fields, it has been shown time and again that these symbols of office are proof against even the very strongest attacks. ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
+          "sourcePage": 15
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "FIRESTORM ASSAULT FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 15
+        },
+        {
+          "name": "CRUCIBLE OF BATTLE",
+          "cost": 1,
+          "category": "FIRESTORM ASSAULT FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets the closest eligible target within 6\", add 1 to the Wound roll.",
+          "restrictions": "",
+          "sourcePage": 15
+        },
+        {
+          "name": "RAPID EMBARKATION",
+          "cost": 1,
+          "category": "FIRESTORM ASSAULT FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "End of the Fight phase.",
+          "target": "One ADEPTUS ASTARTES TRANSPORT unit from your army that has no models embarked within it, and one ADEPTUS ASTARTES INFANTRY unit from your army wholly within 6\" of that TRANSPORT.",
+          "effect": "Your INFANTRY unit can embark within that TRANSPORT.",
+          "restrictions": "You cannot target an INFANTRY unit that is within Engagement Range of one or more enemy units, that cannot normally embark within that TRANSPORT, or that disembarked from a TRANSPORT this turn.",
+          "sourcePage": 15
+        },
+        {
+          "name": "IMMOLATION PROTOCOLS",
+          "cost": 2,
+          "category": "FIRESTORM ASSAULT FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, Torrent weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
+          "restrictions": "",
+          "sourcePage": 15
+        },
+        {
+          "name": "ONSLAUGHT OF FIRE",
+          "cost": 1,
+          "category": "FIRESTORM ASSAULT FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that disembarked from a TRANSPORT this turn and has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets the closest eligible target within 12\", add 1 to the Hit roll. If one or more enemy models are destroyed as the result of any of those attacks, select one of those destroyed models; that destroyed model's unit must take a Battle-shock test.",
+          "restrictions": "",
+          "sourcePage": 15
+        },
+        {
+          "name": "BURNING VENGEANCE",
+          "cost": 1,
+          "category": "FIRESTORM ASSAULT FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase, just after an enemy unit has resolved its attacks.",
+          "target": "One ADEPTUS ASTARTES TRANSPORT unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "One unit embarked within that TRANSPORT can disembark as if it were your Movement phase, and can then shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+          "restrictions": "",
+          "sourcePage": 15
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "STORMLANCE TASK FORCE",
+      "dp": 3,
+      "ruleName": "LIGHTNING ASSAULT",
+      "ruleText": "The warriors of a Stormlance Task Force employ high-speed tactics and hit-and-run warfare. They do battle on the move, wrong-footing their enemies with breakneck manoeuvres and melting away one moment only to crash home like a thunderbolt the next. ADEPTUS ASTARTES units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+      "sourcePage": 18,
+      "enhancements": [
+        {
+          "name": "FURY OF THE STORM",
+          "points": 25,
+          "rule": "This aggressive warrior channels their eagerness to kill into each and every strike. They hit the enemy's lines with all the ferocity of a raging tempest. ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
+          "sourcePage": 18
+        },
+        {
+          "name": "PORTENTS OF WISDOM",
+          "points": 15,
+          "rule": "This warrior has been made privy to omens of great threats in the wars to come. Armed with this knowledge, they and their battle- brothers enter battle with a boldness that some mistake for recklessness. ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
+          "sourcePage": 18
+        },
+        {
+          "name": "FEINTING WITHDRAWAL",
+          "points": 10,
+          "rule": "This living legend of the Chapter is known for their calm in the heat of battle. Ever-observant of the ebbs and flows of the engagement, they can withdraw their warriors from the fray in good order, ready to hammer home a torrent of fire. ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
+          "sourcePage": 18
+        },
+        {
+          "name": "HUNTER'S INSTINCTS",
+          "points": 25,
+          "rule": "This mounted huntsman espouses the value of circling the enemy and striking suddenly from an unexpected quarter upon their speeding steed, the beter to land the killing blow. ADEPTUS ASTARTES MOUNTED model only. If the bearer's unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+          "sourcePage": 18
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "STORMLANCE TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 18
+        },
+        {
+          "name": "BLITZING FUSILLADE",
+          "cost": 1,
+          "category": "STORMLANCE TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] ability. If such a weapon already has this ability, until the end of the phase, that weapon has the [SUSTAINED HITS 1] ability as well.",
+          "restrictions": "",
+          "sourcePage": 18
+        },
+        {
+          "name": "FULL THROTTLE",
+          "cost": 2,
+          "category": "STORMLANCE TASK FORCE - WARGEAR STRATAGEM",
+          "when": "Your Movement phase.",
+          "target": "One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES VEHICLE unit (excluding WALKERS) from your army.",
+          "effect": "Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is MOUNTED.",
+          "restrictions": "",
+          "sourcePage": 18
+        },
+        {
+          "name": "SHOCK ASSAULT",
+          "cost": 1,
+          "category": "STORMLANCE TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.",
+          "target": "That ADEPTUS ASTARTES unit.",
+          "effect": "Your unit's melee attacks have [LANCE].",
+          "restrictions": "",
+          "sourcePage": 18
+        },
+        {
+          "name": "RIDE HARD, RIDE FAST",
+          "cost": 1,
+          "category": "STORMLANCE TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES FLY VEHICLE unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll.",
+          "restrictions": "",
+          "sourcePage": 18
+        },
+        {
+          "name": "WIND-SWIFT EVASION",
+          "cost": 1,
+          "category": "STORMLANCE TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that is within 8\" of that enemy unit.",
+          "effect": "Your unit can make a Normal move of up to 6\".",
+          "restrictions": "You cannot select a unit that is within Engagement Range of one or more enemy units.",
+          "sourcePage": 18
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "VANGUARD SPEARHEAD",
+      "dp": 2,
+      "ruleName": "SHADOW MASTERS",
+      "ruleText": "The warriors of a Vanguard Spearhead slip through the shadows, half-seen spectres barely visible to the foe. Enemies blaze away into the gloom with increasing panic, their shots flying wide as covert specialists encircle their victims and prepare to level the killing blow. Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
+      "sourcePage": 21,
+      "enhancements": [
+        {
+          "name": "THE BLADE DRIVEN DEEP",
+          "points": 25,
+          "rule": "This battlefield stalker slips through enemy territory like a spectre, leading their warriors in daring behind-enemy-lines operations. ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
+          "sourcePage": 21
+        },
+        {
+          "name": "GHOSTWEAVE CLOAK",
+          "points": 15,
+          "rule": "Hand-stitched by blinded servitors and anointed with distilled blood, this cloak contains strands of mnemothread. It throws up a field of techno-spiritual dissonance that veils its wearer from sight and sensors, allowing them to slip across the battlefield like a wraith. ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
+          "sourcePage": 21
+        },
+        {
+          "name": "EXECUTE AND REDEPLOY",
+          "points": 20,
+          "rule": "The battle-brothers under this warrior's command seize every opportunity to strike while the initiative is theirs, harrying the foe with gunfire before returning to the shadows. PHOBOS model only. In your Shooting phase, after the bearer's unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer's unit to move more than once in your Shooting phase.",
+          "sourcePage": 21
+        },
+        {
+          "name": "SHADOW WAR VETERAN",
+          "points": 30,
+          "rule": "By the time the enemy believes battle has begun, their rear lines have already been attacked at this warriors command - their supply lines cut and their communications in disarray - choking them off from vital battlefield support. PHOBOS model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
+          "sourcePage": 21
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "A DEADLY PRIZE",
+          "cost": 1,
+          "category": "VANGUARD SPEARHEAD - WARGEAR STRATAGEM",
+          "when": "Start of the Command phase.",
+          "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army within range of an objective marker you control.",
+          "effect": "That objective marker is said to be Sabotaged, and remains under your control even if you have no models within range of it, until your opponent controls it at the start or end of any turn. While an objective marker is Sabotaged and under your control, each time an enemy unit ends a Normal, Advance, Fall Back or Charge move within range of that objective marker, roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.",
+          "restrictions": "",
+          "sourcePage": 21
+        },
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "VANGUARD SPEARHEAD - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 21
+        },
+        {
+          "name": "SURGICAL STRIKES",
+          "cost": 2,
+          "category": "VANGUARD SPEARHEAD - BATTLE TACTIC STRATAGEM",
+          "when": "Fight phase.",
+          "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to fight this phase.",
+          "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+          "restrictions": "",
+          "sourcePage": 21
+        },
+        {
+          "name": "STRIKE FROM THE SHADOWS",
+          "cost": 1,
+          "category": "VANGUARD SPEARHEAD - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit that is more than 12\" away, improve the Ballistic Skill and Armour Penetration characteristics of that attack by 1. If one or more enemy models are destroyed as a result of those attacks, select one of those destroyed models; that destroyed model's unit must take a Battle-shock test.",
+          "restrictions": "",
+          "sourcePage": 21
+        },
+        {
+          "name": "CALCULATED FEINT",
+          "cost": 1,
+          "category": "VANGUARD SPEARHEAD - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Charge phase, just after an enemy unit declares a charge.",
+          "target": "One friendly ADEPTUS ASTARTES INFANTRY unit within 12\" of that enemy unit.",
+          "effect": "Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a PHOBOS or SCOUT SQUAD unit. RESTRICTION: You cannot select a unit that is within Engagement Range of one or more enemy units.",
+          "restrictions": "",
+          "sourcePage": 21
+        },
+        {
+          "name": "GUERRILLA TACTICS",
+          "cost": 1,
+          "category": "VANGUARD SPEARHEAD - STRATEGIC PLOY STRATAGEM",
+          "when": "End of your opponent's Fight phase.",
+          "target": "Up to two PHOBOS and/or SCOUT SQUAD units from your army, or one other ADEPTUS ASTARTES INFANTRY unit from your army.",
+          "effect": "Remove those units from the battlefield and place them into Strategic Reserves.",
+          "restrictions": "Each unit selected for this Stratagem must be more than 3\" away from all enemy models.",
+          "sourcePage": 21
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "1ST COMPANY TASK FORCE",
+      "dp": 2,
+      "ruleName": "EXTREMIS-LEVEL THREAT",
+      "ruleText": "The 1st Company's veterans have fought at the forefront of their Chapter's wars for many mortal lifespans. Experience has taught them to identify the foe's lethal threats and to lead their battle-brothers to purge them from existence. Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
+      "sourcePage": 24,
+      "enhancements": [
+        {
+          "name": "THE IMPERIUM'S SWORD",
+          "points": 25,
+          "rule": "This hero and the veterans they lead cut down their foes like a reaping whirlwind. ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit as well.",
+          "sourcePage": 24
+        },
+        {
+          "name": "FEAR MADE MANIFEST (AURA)",
+          "points": 30,
+          "rule": "This warrior personifies the Emperor's wrath. ADEPTUS ASTARTES model only. While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+          "sourcePage": 24
+        },
+        {
+          "name": "RITES OF WAR",
+          "points": 10,
+          "rule": "The commanders of the 1st Company vow before the Chapter and the Emperor to secure victory. ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
+          "sourcePage": 24
+        },
+        {
+          "name": "IRON RESOLVE",
+          "points": 15,
+          "rule": "This hero shrugs off even horrendous wounds. ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer's unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Feel No Pain 5+ ability.",
+          "sourcePage": 24
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "1ST COMPANY TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 24
+        },
+        {
+          "name": "HEROES OF THE CHAPTER",
+          "cost": 1,
+          "category": "1ST COMPANY TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is Below Half-strength, add 1 to the Wound roll as well.",
+          "restrictions": "",
+          "sourcePage": 24
+        },
+        {
+          "name": "TERRIFYING PROFICIENCY",
+          "cost": 1,
+          "category": "1ST COMPANY TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Fight phase.",
+          "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that made a Charge move this turn and destroyed one or more enemy units this phase.",
+          "effect": "In your opponent's next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+          "restrictions": "",
+          "sourcePage": 24
+        },
+        {
+          "name": "DUTY AND HONOUR",
+          "cost": 1,
+          "category": "1ST COMPANY TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Movement phase.",
+          "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control.",
+          "effect": "That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+          "restrictions": "",
+          "sourcePage": 24
+        },
+        {
+          "name": "ORBITAL TELEPORTARIUM",
+          "cost": 1,
+          "category": "1ST COMPANY TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "End of your opponent's Fight phase.",
+          "target": "One ADEPTUS ASTARTES TERMINATOR unit from your army.",
+          "effect": "Remove your unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase using the Deep Strike ability.",
+          "restrictions": "You cannot select a unit that is within Engagement Range of one or more enemy units.",
+          "sourcePage": 24
+        },
+        {
+          "name": "LEGENDARY FORTITUDE",
+          "cost": 1,
+          "category": "1ST COMPANY TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Charge phase, just after an enemy unit ends a Charge move.",
+          "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within Engagement Range of that enemy unit.",
+          "effect": "Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+          "restrictions": "",
+          "sourcePage": 24
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "BASTION TASK FORCE",
+      "dp": 2,
+      "ruleName": "INTERLOCKING TACTICS",
+      "ruleText": "Employing the full breadth of combined arms tactics taught by the Codex Astartes, mainstay squads hit and fade, blunting enemy attacks while acquiring auspex data to guide the targeting of their more heavily armed comrades. ADEPTUS ASTARTES BATTLELINE units from your army: \u25aa Are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back. \u25aa Are eligible to start to perform an Action in a turn in which they Advanced or Fell Back. Each time an ADEPTUS ASTARTES BATTLELINE unit from your army is selected to attack, after resolving those attacks, select one enemy unit hit by one or more of those attacks. Until the end of the turn, that enemy unit is auspex scanned. Each time an ADEPTUS ASTARTES model from your army makes an attack that targets an auspex scanned unit, re-roll a Hit roll of 1.",
+      "sourcePage": 27,
+      "enhancements": [
+        {
+          "name": "EYE OF THE PRIMARCH",
+          "points": 10,
+          "rule": "This master crated microauspex integrates with the bearer's auto-senses and feeds superior targeting data to them and their squad. ADEPTUS ASTARTES model only. Ranged weapons equipped by the bearer and BATTLELINE models in the bearer's unit have the [PRECISION] ability.",
+          "sourcePage": 27
+        },
+        {
+          "name": "HERO OF THE CHAPTER",
+          "points": 20,
+          "rule": "A storied and inspirational exemplar of their Chapter's virtues, this war leader is an inspirational presence amongst the ranks of their battle-brothers. ADEPTUS ASTARTES model only. While the bearer is leading a unit, the bearer has the BATTLELINE keyword.",
+          "sourcePage": 27
+        },
+        {
+          "name": "BLADES OF VALOUR",
+          "points": 15,
+          "rule": "This officer and their honour guard of dedicated battle-brothers have been presented with masterwork combat blades in recognition of the selfless battle they are about to fight. ADEPTUS ASTARTES model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and BATTLELINE models in the bearer's unit by 1.",
+          "sourcePage": 27
+        },
+        {
+          "name": "BOMBAST OMNIVOX",
+          "points": 15,
+          "rule": "This remarkable technological relic is mounted within the bearer's armour gorget and facilitates code-hardened, rapid-exchange intelligence dissemination while in battle. ADEPTUS ASTARTES model only. Each time you select the bearer's unit as the target of a Stratagem, roll one D6, adding 1 if the bearer's unit has the BATTLELINE keyword: on a 4+, you gain 1CP.",
+          "sourcePage": 27
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "CODEX DISCIPLINE",
+          "cost": 1,
+          "category": "BASTION TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit, re-roll a Hit roll of 1. If that target is auspex scanned, re-roll a Wound roll of 1 as well.",
+          "restrictions": "",
+          "sourcePage": 27
+        },
+        {
+          "name": "GUIDED DISRUPTION",
+          "cost": 1,
+          "category": "BASTION TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase, just after an ADEPTUS ASTARTES BATTLELINE unit from your army has finished making its attacks.",
+          "target": "That ADEPTUS ASTARTES BATTLELINE unit.",
+          "effect": "When an enemy unit is auspex scanned as a result of those attacks this turn, if that enemy unit does not have the MONSTER or VEHICLE keywords, until the start of your next turn, it is pinned. While a unit is pinned, subtract 2 from that unit's Move characteristic and subtract 2 from Charge rolls made for that unit.",
+          "restrictions": "",
+          "sourcePage": 27
+        },
+        {
+          "name": "LIGHT OF VENGEANCE",
+          "cost": 1,
+          "category": "BASTION TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Select the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in your unit have that ability while targeting an auspex scanned unit or if the bearer has the BATTLELINE keyword.",
+          "restrictions": "",
+          "sourcePage": 27
+        },
+        {
+          "name": "SHOCK BOMBARDMENT",
+          "cost": 1,
+          "category": "BASTION TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase, just after an ADEPTUS ASTARTES BATTLELINE unit from your army finished making its attacks.",
+          "target": "That ADEPTUS ASTARTES BATTLELINE unit.",
+          "effect": "When an enemy unit is auspex scanned as a result of those attacks this turn, until the start of your next turn, it is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+          "restrictions": "",
+          "sourcePage": 27
+        },
+        {
+          "name": "ANGELS DEFIANT",
+          "cost": 1,
+          "category": "BASTION TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES BATTLELINE unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
+          "restrictions": "",
+          "sourcePage": 27
+        },
+        {
+          "name": "HERESY UNDONE",
+          "cost": 1,
+          "category": "BASTION TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Shooting phase or your Charge phase.",
+          "target": "One ADEPTUS ASTARTES unit (excluding BATTLELINE units) from your army.",
+          "effect": "Until the end of the phase, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back. If it does, every target of that charge and every target of those attacks must be an auspex scanned unit.",
+          "restrictions": "",
+          "sourcePage": 27
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "ORBITAL ASSAULT FORCE",
+      "dp": 2,
+      "ruleName": "RAPID-DROP DEPLOYMENT",
+      "ruleText": "Through the use of teleportation, Drop Pods and gunship insertion, entire strike forces of Space Marines and even their armoured support can deploy from orbit in a mater of moments, a capability that in and of itself has won entire wars. At the start of the Declare Battle Formations step, select a number of ADEPTUS ASTARTES units (excluding TITANIC units) from your army based on the battle size, as shown below. Models in those units have the Deep Strike ability. BATTLE SIZE NUMBER OF UNITS Incursion 2 Strike Force 3 Onslaught 4 Each time an ADEPTUS ASTARTES model from your army makes an attack, if it was set up on the battlefield this turn, re-roll a Wound roll of 1. If it disembarked from a DROP POD this turn, re-roll a Hit roll of 1 as well.",
+      "sourcePage": 30,
+      "enhancements": [
+        {
+          "name": "LAURELS OF THUNDER",
+          "points": 15,
+          "rule": "This honour is awarded to those Space Marine officers who display greatest vigour during orbital drops. ADEPTUS ASTARTES model only. You can re-roll Charge rolls made for the bearer's unit in a turn in which it was set up on the battlefield.",
+          "sourcePage": 30
+        },
+        {
+          "name": "VETERAN OF THE VANGUARD",
+          "points": 20,
+          "rule": "Long experience leading Phobos-armoured vanguard strikes has taught this warrior many lessons about swift and stealthy attacks. ADEPTUS ASTARTES model only. Models in the bearer's unit have the Scouts 6\" ability.",
+          "sourcePage": 30
+        },
+        {
+          "name": "ORBITAL UPLINK RELIQUARY",
+          "points": 25,
+          "rule": "Though it appears a morbid trinket of faith, in truth this device contains a powerful microcogitator linked to the strategium of the orbiting strike cruiser, which helps the bearer coordinate rapid strategic redeployments. ADEPTUS ASTARTES model only. After both players have deployed their armies, select up to three ADEPTUS ASTARTES units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+          "sourcePage": 30
+        },
+        {
+          "name": "DEDICATED GUNSHIP",
+          "points": 15,
+          "rule": "Bulky and somewhat lumbering as they are, Terminator squads - or even particularly vital officers wearing Terminator plate - may be assigned a gunship for swift combat extraction and relocation mid-batle. ADEPTUS ASTARTES TERMINATOR model only. Once per battle, at the end of your opponent's Fight phase, if the bearer's unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer's unit from the battlefield and place it into Strategic Reserves.",
+          "sourcePage": 30
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "SUPPRESSION STRAFING",
+          "cost": 1,
+          "category": "ORBITAL ASSAULT FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Command phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army.",
+          "effect": "Select one enemy unit visible to and within 18\" of your unit. That enemy unit takes a Battle-shock test. When doing so, subtract 1 from that test and, if that test is failed, until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+          "restrictions": "You cannot use this Stratagem more than once per battle round.",
+          "sourcePage": 30
+        },
+        {
+          "name": "TACTICAL DECAPITATION",
+          "cost": 1,
+          "category": "ORBITAL ASSAULT FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, weapons equipped by models in your unit have the [PRECISION] ability and each time a model in your unit makes an attack that targets a CHARACTER unit, add 1 to the Hit roll.",
+          "restrictions": "",
+          "sourcePage": 30
+        },
+        {
+          "name": "SHOCK ONSLAUGHT",
+          "cost": 1,
+          "category": "ORBITAL ASSAULT FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Fight phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".",
+          "restrictions": "",
+          "sourcePage": 30
+        },
+        {
+          "name": "AUTO-SENSE COORDINATION",
+          "cost": 1,
+          "category": "ORBITAL ASSAULT FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Select the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in your unit have this ability in a turn in which they disembarked from a DROP POD or while targeting an enemy unit within 12\".",
+          "restrictions": "",
+          "sourcePage": 30
+        },
+        {
+          "name": "BLIND SCREEN",
+          "cost": 1,
+          "category": "ORBITAL ASSAULT FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Shooting phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit (excluding TITANIC units) from your army that was selected as the target of one or more of the attacking unit's attacks and one friendly ADEPTUS ASTARTES SMOKE VEHICLE or DROP POD unit within 9\" of it.",
+          "effect": "Until the end of the phase, models in your units have the Stealth ability and each time a ranged attack targets one of your units, models in that unit have the Benefit of Cover against that attack.",
+          "restrictions": "",
+          "sourcePage": 30
+        },
+        {
+          "name": "ONWARD FOR THE EMPEROR",
+          "cost": 1,
+          "category": "ORBITAL ASSAULT FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "End of your opponent's Fight phase.",
+          "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that was not set up on the battlefield this turn and one friendly TRANSPORT it is able to embark within.",
+          "effect": "If your ADEPTUS ASTARTES unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
+          "restrictions": "",
+          "sourcePage": 30
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "CERAMITE SENTINELS",
+      "dp": 3,
+      "ruleName": "ADAPTIVE DEFENCE",
+      "ruleText": "These Space Marines are experts in fighting from rapidly prepared defensive positions. They are able to maximise the potential of almost any terrain to serve as an ad-hoc strongpoint, rapidly assessing optimal firing lines and punishing the foe's every attempt to advance and dislodge them. Each time an ADEPTUS ASTARTES model from your army makes an attack, if that model's unit is within a terrain feature, re-roll a Hit roll of 1 and re-roll a Wound roll of 1. ADEPTUS ASTARTES units from your army gain the ENTRENCHED keyword while all of the following are true: \u25aa That unit is within a terrain feature. \u25aa That unit was not set up on the battlefield this turn. \u25aa No model in that unit has moved more than 3\" this turn.",
+      "sourcePage": 33,
+      "enhancements": [
+        {
+          "name": "HONOUR INDEFATIGABLE",
+          "points": 25,
+          "rule": "This rare honour badge celebrates a warrior who refuses to give up, even in the face of apparently certain death. GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+          "sourcePage": 33
+        },
+        {
+          "name": "CASTELLUM OMNIVOX",
+          "points": 20,
+          "rule": "This unique vox-and-augur augmetic provides the bearer with unparalleled tactical data vital to coordinating an aggressive defence in battle. ADEPTUS ASTARTES model only. Each time the bearer's unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: \u25aa That unit is eligible to perform an Action in a turn in which it Fell Back. \u25aa That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+          "sourcePage": 33
+        },
+        {
+          "name": "SPY-SKULL DATA LINK",
+          "points": 15,
+          "rule": "Several artificer-crated and heavily shrouded servo-skulls are tethered to this device, their linked visual feeds making the bearer nigh impossible to evade. ADEPTUS ASTARTES model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
+          "sourcePage": 33
+        },
+        {
+          "name": "DEFENSIVE MASTERY",
+          "points": 25,
+          "rule": "Few officers of the Chapter can match this commander's talent for cunning defensive troop dispositions. ADEPTUS ASTARTES model only. After both players have deployed their armies, select up to three ADEPTUS ASTARTES units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+          "sourcePage": 33
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "UNYIELDING MIGHT",
+          "cost": 1,
+          "category": "CERAMITE SENTINELS - BATTLE TACTIC STRATAGEM",
+          "when": "Command phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that is within Engagement Range of one or more enemy units.",
+          "effect": "Until the start of your next Command phase, add 1 to the Objective Control characteristics of models in your unit.",
+          "restrictions": "",
+          "sourcePage": 33
+        },
+        {
+          "name": "PRIORITY STRIKE",
+          "cost": 2,
+          "category": "CERAMITE SENTINELS - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.",
+          "restrictions": "",
+          "sourcePage": 33
+        },
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "CERAMITE SENTINELS - BATTLE TACTIC STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 33
+        },
+        {
+          "name": "STAND TO THE END",
+          "cost": 1,
+          "category": "CERAMITE SENTINELS - EPIC DEED STRATAGEM",
+          "when": "Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if it is an ENTRENCHED unit: on a 4+, do not remove it from play. That destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "restrictions": "",
+          "sourcePage": 33
+        },
+        {
+          "name": "AUGMENTED TARGETING",
+          "cost": 1,
+          "category": "CERAMITE SENTINELS - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Select either the [SUSTAINED HITS 1] or [LETHAL HITS] abilities. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. If your unit is ENTRENCHED, until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [LETHAL HITS] abilities instead.",
+          "restrictions": "",
+          "sourcePage": 33
+        },
+        {
+          "name": "EVASIVE REPOSITIONING",
+          "cost": 1,
+          "category": "CERAMITE SENTINELS - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Shooting phase, just after an enemy unit has shot.",
+          "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Your unit can make a Normal move of up to D6\". If your unit is ENTRENCHED, you can re-roll the D6 to determine how far your unit can move.",
+          "restrictions": "",
+          "sourcePage": 33
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "ARMOURED SPEARTIP",
+      "dp": 3,
+      "ruleName": "RAPID DEPLOYMENT",
+      "ruleText": "Land Raider, Repulsors and other armoured transports plunge headlong into the heart of enemy formations, weathering heavy firepower to deploy their cargo of elite Space Marines into battle. Each time an ADEPTUS ASTARTES unit from your army disembarks from a TRANSPORT (excluding FLY) that made a Normal or Advance move this phase (excluding those that arrived from Strategic Reserves), that disembarked unit can make a Normal move of up to D6\", or a Normal move of up to D3+3\" instead if that TRANSPORT is a HEAVY TRANSPORT (see below). Keywords ADEPTUS ASTARTES TRANSPORT units from your army (excluding FLY) that have a Wounds characteristic of 14+ have the HEAVY TRANSPORT keyword.",
+      "sourcePage": 36,
+      "enhancements": [
+        {
+          "name": "LIBERATOR",
+          "points": 15,
+          "rule": "A dauntless conqueror and liberator of worlds, this intimidating champion inspires confidence in their battle-brothers and abject fear in the enemy. ADEPTUS ASTARTES model only. If you control an objective marker at the end of your Command phase, and the bearer's unit (or any HEAVY TRANSPORT it is embarked within) is within range of that objective marker, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
+          "sourcePage": 36
+        },
+        {
+          "name": "TIP OF THE SPEAR",
+          "points": 40,
+          "rule": "This aggressive front-line commander knows the value of speed and decisive manoeuvre. ADEPTUS ASTARTES model only. If the bearer starts the battle embarked within a TRANSPORT, that TRANSPORT has the Scouts 6\" ability.",
+          "sourcePage": 36
+        },
+        {
+          "name": "SHOCK DEPLOYMENT",
+          "points": 20,
+          "rule": "From the ramps of armoured transports, elite infantry deploy switly, unleashing fire on overawed enemies. Adeptus Astartes Terminator or GRAVIS model only. In your Shooting phase, each time the bearer's unit is selected to shoot, if it disembarked from a TRANSPORT this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+          "sourcePage": 36
+        },
+        {
+          "name": "ARMOURED COMMANDER",
+          "points": 25,
+          "rule": "This veteran commander of mechanised infantry utilises its manoeuvrability to ensnare the foe. ADEPTUS ASTARTES model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly ADEPTUS ASTARTES TRANSPORT that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that TRANSPORT on the battlefield, treat the current battle round number as being one higher than it actually is.",
+          "sourcePage": 36
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "MACHINE WRATH",
+          "cost": 1,
+          "category": "ARMOURED SPEARTIP - EPIC DEED STRATAGEM",
+          "when": "Any phase, just after a HEAVY TRANSPORT unit from your army with the Deadly Demise ability is destroyed.",
+          "target": "That HEAVY TRANSPORT unit, if you rolled a 6 for its Deadly Demise ability. You can use this Stratagem on that unit even though it was just destroyed.",
+          "effect": "Your unit can make a Normal or Fall Back move before its Deadly Demise ability is resolved, and before any embarked units perform an Emergency Disembarkation. When making this move, your unit can move through enemy models (excluding MONSTERS and VEHICLES) and can move within Engagement Range of such models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+          "restrictions": "",
+          "sourcePage": 36
+        },
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "ARMOURED SPEARTIP - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 36
+        },
+        {
+          "name": "RAPID EMBARKATION",
+          "cost": 1,
+          "category": "ARMOURED SPEARTIP - WARGEAR STRATAGEM",
+          "when": "End of the Fight phase.",
+          "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that is not within Engagement Range of one or more enemy units, and one friendly HEAVY TRANSPORT it is able to embark within.",
+          "effect": "If your ADEPTUS ASTARTES INFANTRY unit is wholly within 6\" of that HEAVY TRANSPORT, it can embark within it.",
+          "restrictions": "",
+          "sourcePage": 36
+        },
+        {
+          "name": "CERAMITE SLEDGEHAMMER",
+          "cost": 1,
+          "category": "ARMOURED SPEARTIP - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Movement phase.",
+          "target": "One ADEPTUS ASTARTES TRANSPORT unit from your army that has not been selected to move this phase.",
+          "effect": "Until the end of the phase, each time your unit makes a Normal or Advance move, it can move horizontally through terrain features. In addition, if your unit is a HEAVY TRANSPORT, when making this move, your unit can move through enemy models (excluding MONSTERS and VEHICLES) and can move within Engagement Range of such models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+          "restrictions": "",
+          "sourcePage": 36
+        },
+        {
+          "name": "ADVANCED DEPLOYMENT",
+          "cost": 1,
+          "category": "ARMOURED SPEARTIP - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Movement phase.",
+          "target": "One ADEPTUS ASTARTES TRANSPORT unit from your army that has not been selected to move this phase.",
+          "effect": "Until the end of the phase, units can disembark from your TRANSPORT after it has Advanced. Units that do so count as having made a Normal move this phase, and cannot declare a charge in the same turn (unless your TRANSPORT has the Assault Ramp ability), but can otherwise act normally.",
+          "restrictions": "",
+          "sourcePage": 36
+        },
+        {
+          "name": "PURGATION DOCTRINE",
+          "cost": 1,
+          "category": "ARMOURED SPEARTIP - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll (if your unit disembarked from a HEAVY TRANSPORT this turn, add 1 to the Wound roll as well).",
+          "restrictions": "",
+          "sourcePage": 36
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "HEADHUNTER TASK FORCE",
+      "dp": 2,
+      "ruleName": "TARGET SIGHTED",
+      "ruleText": "Space Marine crews are relentless in their pursuit of assigned targets, coaxing every last trace of power from their war machines and demonstrating exemplary gunnery even under heavy fire. Each time a TANK ACE unit from your army (see below) Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a TANK ACE unit from your army shoots in your Shooting phase, if that unit did not Advance this turn, you can re-roll the Damage roll. KEYWORDS ADEPTUS ASTARTES VEHICLE units from your army (excluding FORTIFICATIONS, DROP PODS, WALKERS and units that can FLY) have the TANK ACE keyword. In the Muster Armies step, you can select up to three TANK ACE units from your army to gain the CHARACTER keyword. Designer's Note: This means that the selected units can be given Enhancements, and one of them can be selected as your WARLORD.",
+      "sourcePage": 39,
+      "enhancements": [
+        {
+          "name": "REDOUBTABLE MACHINE SPIRIT",
+          "points": 25,
+          "rule": "This ancient war machine has endured millennia of battle, and its belligerent machine spirit has only become more obdurant. ADEPTUS ASTARTES VEHICLE model only. The bearer has a 5+ invulnerable save and, at the end of your Command phase, the bearer regains 1 lost wound.",
+          "sourcePage": 39
+        },
+        {
+          "name": "GUNNERY HONOURS",
+          "points": 20,
+          "rule": "The crew of this war machine demonstrate exemplary gunnery and have earned the highest honours for their crat. ADEPTUS ASTARTES VEHICLE model only. Once per phase, you can re-roll one Hit roll, one Wound roll and one Damage roll for the bearer.",
+          "sourcePage": 39
+        },
+        {
+          "name": "FIRESTORM COORDINATORS",
+          "points": 20,
+          "rule": "This vehicle's fire control systems incorporate ancient yet highly advanced logic engines, which assist the crew in obtaining firing solutions and keeping up an exceptionally rapid rate of fire. ADEPTUS ASTARTES VEHICLE model only. Ranged weapons equipped by the bearer have the [SUSTAINED HITS 1] ability.",
+          "sourcePage": 39
+        },
+        {
+          "name": "ASTARTES TANK ACE (AURA)",
+          "points": 40,
+          "rule": "The commander of this battle tank is a storied tank ace whose exploits are the stuff of Chapter legend. Crews who fight at their side are inspired by their aggression and eagerness to join the battle. ADEPTUS ASTARTES VEHICLE model only. In your Shooting phase, while a friendly ADEPTUS ASTARTES VEHICLE unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+          "sourcePage": 39
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "ARMOUR OF CONTEMPT",
+          "cost": 1,
+          "category": "HEADHUNTER TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "",
+          "sourcePage": 39
+        },
+        {
+          "name": "TARGET WEAK POINT",
+          "cost": 1,
+          "category": "HEADHUNTER TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One TANK ACE unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets a MONSTER or VEHICLE unit, improve the Armour Penetration characteristic of that attack by 1.",
+          "restrictions": "A unit cannot be targeted with this and the Kill Shot Stratagem in the same phase.",
+          "sourcePage": 39
+        },
+        {
+          "name": "KILL SHOT",
+          "cost": 1,
+          "category": "HEADHUNTER TASK FORCE - BATTLE TACTIC STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One TANK ACE unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a MONSTER or VEHICLE unit, re-roll a Wound roll of 1. If the target unit is below its Starting Strength, you can re-roll the Wound roll instead.",
+          "restrictions": "A unit cannot be targeted with this and the Target Weak Point Stratagem in the same phase.",
+          "sourcePage": 39
+        },
+        {
+          "name": "RAPID GUNNERY",
+          "cost": 1,
+          "category": "HEADHUNTER TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your Shooting phase.",
+          "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, your unit is eligible to shoot in a turn in which it Fell Back.",
+          "restrictions": "",
+          "sourcePage": 39
+        },
+        {
+          "name": "REACTIVE REPOSITIONING",
+          "cost": 1,
+          "category": "HEADHUNTER TASK FORCE - STRATEGIC PLOY STRATAGEM",
+          "when": "Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "target": "One TANK ACE unit from your army (excluding units containing one or more models with a Wounds characteristic of 16+) that is within 8\" of that enemy unit.",
+          "effect": "Your unit can make a Normal move of up to D6\".",
+          "restrictions": "",
+          "sourcePage": 39
+        },
+        {
+          "name": "MACHINE VENGEANCE",
+          "cost": 1,
+          "category": "HEADHUNTER TASK FORCE - EPIC DEED STRATAGEM",
+          "when": "Your opponent's Shooting phase, just after an enemy unit has shot.",
+          "target": "One TANK ACE unit from your army (excluding units containing one or more models with a Wounds characteristic of 16+) that was selected as the target of one or more of the attacking unit's attacks.",
+          "effect": "Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is visible and an eligible target.",
+          "restrictions": "",
+          "sourcePage": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "VENGEFUL HOSTS",
+      "dp": 1,
+      "ruleName": "IMPERATOR UNLEASHED",
+      "ruleText": "The warrior hosts deployed in Operation Imperator know they must strike with decisive fury if they are to break their foes. In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit's attacks can re-roll hit rolls of 1.",
+      "sourcePage": 42,
+      "enhancements": [
+        {
+          "name": "AVENGING ANGEL",
+          "points": 20,
+          "rule": "Descending on wings of fire, this warrior spreads terror of Imperial vengeance through the ranks of the foe. ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+          "sourcePage": 42
+        },
+        {
+          "name": "ORKSBANE",
+          "points": 20,
+          "rule": "The machine spirit of this ancient relic weapon is said to hate Orks with a vehemence that kills them on contact. ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Forged by Organghast the Haemomancer, the Blood Glaive absorbs the viscera of those victims it slays. Sloughing off parts of its blade that have become nicked in battle, the freshly harvested gore is used to rehone its crimson edge. MELEE WEAPONS RANGE A WS S AP D Orksbane CLEAVE 2 Melee 4 2+ 8 -2 3",
+          "sourcePage": 42
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "METEORIC ONSLAUGHT",
+          "cost": 1,
+          "category": "VENGEFUL HOSTS STRATAGEM",
+          "when": "Fight phase, when a friendly ADEPTUS ASTARTES FLY INFANTRY unit that made a charge move this turn is selected to attack.",
+          "target": "That friendly ADEPTUS ASTARTES FLY INFANTRY unit.",
+          "effect": "Your unit's melee attacks have +1 S.",
+          "restrictions": "",
+          "sourcePage": 42
+        },
+        {
+          "name": "PURGE BY SECTORS",
+          "cost": 1,
+          "category": "VENGEFUL HOSTS STRATAGEM",
+          "when": "End of the Fight phase.",
+          "target": "One friendly unengaged ADEPTUS ASTARTES FLY INFANTRY unit that was eligible to fight this phase.",
+          "effect": "Your unit can make a normal move of up to D3+3\".",
+          "restrictions": "",
+          "sourcePage": 42
+        },
+        {
+          "name": "KNOW NO FEAR",
+          "cost": 1,
+          "category": "VENGEFUL HOSTS STRATAGEM",
+          "when": "Your Command phase.",
+          "target": "One friendly battle-shocked ADEPTUS ASTARTES unit. You can target that unit with this stratagem even though it is battle-shocked.",
+          "effect": "Your unit is no longer battle-shocked.",
+          "restrictions": "",
+          "sourcePage": 42
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "FULGURIS TASK FORCE",
+      "dp": 1,
+      "ruleName": "SKYSTRIKE",
+      "ruleText": "With howling engines and a buffeting of anti-gravitic forces, a Chapter's massed combat skimmers plunge into the midst of battle with guns blazing. \u25aa Friendly LAND SPEEDER/STORM SPEEDER HAILSTRIKE/STORM SPEEDER HAMMERSTRIKE/STORM SPEEDER THUNDERSTRIKE units have SPEEDER. \u25aa In your first Movement phase, friendly SPEEDER units can make an ingress move.",
+      "sourcePage": 44,
+      "enhancements": [
+        {
+          "name": "BELLICOSE WEAPON SPIRITS UPGRADE",
+          "points": 15,
+          "rule": "Entreated by veteran gunners, this skimmer's potent weapons unleash their spirits' wrath in bursts of excoriating destruction. SPEEDER unit only. This unit can re-roll: \u25aa Damage rolls. \u25aa Rolls to determine the A of a weapon.",
+          "sourcePage": 44
+        },
+        {
+          "name": "RAPTORIAL COGITATOR CORE UPGRADE",
+          "points": 15,
+          "rule": "The pinpoint firing solutions woven in runic screed by this vehicle's logic engine speak to its predatory instincts. SPEEDER unit only. This unit's ranged attacks have [IGNORES COVER].",
+          "sourcePage": 44
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "DATA-LINK AUGURY",
+          "cost": 1,
+          "category": "FULGURIS TASK FORCE STRATAGEM",
+          "when": "Your Shooting phase, when a friendly SPEEDER unit is selected to shoot.",
+          "target": "That SPEEDER unit.",
+          "effect": "Select one enemy unit within 24\" of your unit. That enemy unit has +6\" detection range until your unit has shot.",
+          "restrictions": "",
+          "sourcePage": 44
+        },
+        {
+          "name": "REACTIVE EVASION",
+          "cost": 1,
+          "category": "FULGURIS TASK FORCE STRATAGEM",
+          "when": "Your opponent's Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged SPEEDER unit.",
+          "target": "That SPEEDER unit.",
+          "effect": "Your unit can make a normal move of up to D3+3\".",
+          "restrictions": "",
+          "sourcePage": 44
+        },
+        {
+          "name": "ANTI-GRAV SURGE",
+          "cost": 1,
+          "category": "FULGURIS TASK FORCE STRATAGEM",
+          "when": "End of your opponent's Fight phase.",
+          "target": "One friendly unengaged SPEEDER unit.",
+          "effect": "Place your unit in strategic reserves.",
+          "restrictions": "",
+          "sourcePage": 44
+        }
+      ],
+      "tags": []
+    },
+    {
+      "name": "LIBRARIUS CONCLAVE",
+      "dp": 1,
+      "ruleName": "PSYCHIC DISCIPLINES",
+      "ruleText": "Librarians spend their lives mastering psychic disciplines, learning how to manipulate the energies of the Immaterium to confound their foes and embolden their battle-brothers. At the start of the battle round, select one of the following Psychic Disciplines abilities. Friendly ADEPTUS ASTARTES PSYKER units have that ability until the end of the battle round. \u25aa Biomancy Discipline: This unit has +2\" M. \u25aa Divination Discipline: This unit's attacks can: \u25e6 Re-roll hit rolls of 1. \u25e6 Re-roll wound rolls of 1. \u25aa Pyromancy Discipline: This unit's ranged attacks that target an enemy unit within 12\" of this unit have +1 AP. \u25aa Telekinesis Discipline: Ranged attacks that target this unit have -1 S. \u25aa Telepathy Discipline: This unit's attacks can ignore modifiers to BS, WS and hit rolls.",
+      "sourcePage": 46,
+      "enhancements": [
+        {
+          "name": "CELERITY",
+          "points": 35,
+          "rule": "The powers of the Immaterium flow through the psyker, heightening his speed and that of his battle-brothers. ADEPTUS ASTARTES PSYKER model only. \u25aa When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. \u25aa When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
+          "sourcePage": 46
+        },
+        {
+          "name": "PRESCIENCE",
+          "points": 20,
+          "rule": "Those who specialise in prognostication may foresee the flow of battle and position their allies accordingly. ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of: \u25aa Up to D6\". \u25aa Or: If this unit has the Divination Discipline ability, up to 6\".",
+          "sourcePage": 46
+        },
+        {
+          "name": "OBFUSCATION",
+          "points": 25,
+          "rule": "By manipulating the minds of the foe, practitioners of telepathy may obfuscate their presence. ADEPTUS ASTARTES PSYKER model only. \u25aa Enemy units cannot target this unit with snap shooting attacks. \u25aa If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
+          "sourcePage": 46
+        },
+        {
+          "name": "TEMPORAL CORRIDOR",
+          "points": 25,
+          "rule": "Folding existence around an invisible path along which time is altered, the Librarian propels his allies across the battlefield with supernatural swiftness. ADEPTUS ASTARTES PSYKER model only. \u25aa If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. \u25aa At the end of your opponent's Fight phase, if this unit is unengaged, you can use this ability. If you do: \u25e6 Place this unit in strategic reserves. \u25e6 This unit can make an ingress move in your next Movement phase (including in your first turn).",
+          "sourcePage": 46
+        },
+        {
+          "name": "FUSILLADE",
+          "points": 25,
+          "rule": "The Librarian wreathes the ammunition of his allies in armour-eroding halos of azure fire. ADEPTUS ASTARTES PSYKER model only. This unit's ranged attacks have: \u25aa [LETHAL HITS] \u25aa If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
+          "sourcePage": 46
+        }
+      ],
+      "stratagems": [],
+      "tags": []
+    },
+    {
+      "name": "SUBVERSION ASSETS",
+      "dp": 1,
+      "ruleName": "NOWHERE TO HIDE",
+      "ruleText": "With transhuman instincts, auto-senses, and more specialised equipment, a Chapter's masters of clandestine warfare are able to unmask the foe, leaving them ripe for swift eradication. Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: \u25aa While a unit is detected, that unit has +3\" detection range.",
+      "sourcePage": 48,
+      "enhancements": [
+        {
+          "name": "SHROUD FIELD",
+          "points": 20,
+          "rule": "This camouflaging field projector employs a chameleonic twisting of emissions whose secrets the Techmarines cannot reproduce. It mantles its bearer as if with a spectral shroud and masks his approach to his doomed target. PHOBOS model only. This model has: \u25aa Lone Operative. \u25aa Stealth.",
+          "sourcePage": 48
+        },
+        {
+          "name": "DEATH IN THE DARK UPGRADE",
+          "points": 15,
+          "rule": "To slay the hidden foe where they lurk, where their deaths go unmarked and unremembered, is to deny their hateful lives meaning. INFANTRY PHOBOS unit only. This unit's attacks that target a hidden unit have +1 to hit rolls.",
+          "sourcePage": 48
+        }
+      ],
+      "stratagems": [
+        {
+          "name": "ADAPTIVE OPERATIONS",
+          "cost": 1,
+          "category": "SUBVERSION ASSETS STRATAGEM",
+          "when": "Your Shooting phase, when a friendly PHOBOS/SCOUT SQUAD unit starts an action.",
+          "target": "That PHOBOS/SCOUT SQUAD unit.",
+          "effect": "That action does not prevent your unit from being eligible to shoot.",
+          "restrictions": "",
+          "sourcePage": 48
+        },
+        {
+          "name": "STRIKE FROM THE SHADOWS",
+          "cost": 1,
+          "category": "SUBVERSION ASSETS STRATAGEM",
+          "when": "Your Shooting phase, when a friendly PHOBOS/SCOUT SQUAD unit has shot.",
+          "target": "That PHOBOS/SCOUT SQUAD unit.",
+          "effect": "Those ranged attacks do not prevent your unit from being hidden.",
+          "restrictions": "",
+          "sourcePage": 48
+        },
+        {
+          "name": "CLOAKED POSITION",
+          "cost": 1,
+          "category": "SUBVERSION ASSETS STRATAGEM",
+          "when": "Start of your opponent's Movement phase.",
+          "target": "One friendly unengaged PHOBOS/SCOUT SQUAD unit.",
+          "effect": "Your unit has -3\" detection range until the end of the turn.",
+          "restrictions": "",
+          "sourcePage": 48
+        }
+      ],
+      "tags": []
+    }
+  ]
+}

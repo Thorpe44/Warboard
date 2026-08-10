@@ -2917,6 +2917,18 @@ public partial class GameController : MonoBehaviour
             DrawNecrons11StratagemCards(
                 left, right, y, cardWidth);
         }
+        // WARBOARD_V46_STANDARD_STRATAGEM_MENU
+        else if (WarboardFactionExtensionHub
+                    .ControllerFor(
+                        activeFaction) != null)
+        {
+            DrawStandardFactionStratagemCards(
+                left,
+                right,
+                y,
+                cardWidth
+            );
+        }
         else if (isNecrons)
         {
             if (DrawStratagemActionButton(

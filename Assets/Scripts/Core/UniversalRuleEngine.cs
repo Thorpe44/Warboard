@@ -117,6 +117,13 @@ public static class UniversalRuleRegistry
         CustodesFactionPack11.ApplyAttackModifiers(
             game, attacker, target, shooter, weapon, mode, state);
 
+        // WARBOARD_V46_FINAL_ATTACK_STATE
+        WarboardFactionExtensionHub
+            .FinalizeAttackState(
+                attacker,
+                state
+            );
+
         if (attacker != null &&
             attacker
                 .JoinedActionController()
@@ -171,6 +178,15 @@ public static class UniversalRuleRegistry
 
         if (NecronsFactionPack11.GrantsCoreAbility(
                 squad, ruleName))
+        {
+            return true;
+        }
+
+        // WARBOARD_V46_STANDARD_CORE_ABILITIES
+        if (WarboardFactionExtensionHub
+            .GrantsCoreAbility(
+                squad,
+                ruleName))
         {
             return true;
         }
@@ -335,6 +351,15 @@ public static class UniversalRuleRegistry
             CustodesFactionPack11.ConditionalFeelNoPain(
                 squad, label, fnp);
 
+        // WARBOARD_V46_STANDARD_FNP
+        fnp =
+            WarboardFactionExtensionHub
+                .ConditionalFeelNoPain(
+                    squad,
+                    label,
+                    fnp
+                );
+
         if (incomingWounds <= 0 ||
             fnp <= 0)
         {
@@ -382,9 +407,15 @@ public static class UniversalRuleRegistry
             UniversalAttackRuleState state)
         {
             if (mode != AttackMode.Ranged ||
-                !WeaponRuleParser.Has(
+                // WARBOARD_V46_GRANTED_HEAVY
+                (!WeaponRuleParser.Has(
                     weapon,
-                    "heavy") ||
+                    "heavy") &&
+                 !WarboardFactionExtensionHub
+                    .GrantsHeavy(
+                        attacker,
+                        weapon,
+                        mode)) ||
                 game == null ||
                 attacker == null)
             {

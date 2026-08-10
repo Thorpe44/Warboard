@@ -1360,10 +1360,21 @@ public class InteractiveAttackController
                 CustodesFactionPack11.GrantsLethalHits(
                     attacker, mode);
 
-            volley.lethalHits =
+                        volley.lethalHits =
                 volley.lethalHits ||
                 NecronsFactionPack11.GrantsLethalHits(
                     attacker, mode);
+
+            // WARBOARD_V46_INTERACTIVE_STANDARD_LETHAL
+            volley.lethalHits =
+                volley.lethalHits ||
+                WarboardFactionExtensionHub
+                    .GrantsLethalHits(
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
 
             volley.sustainedHits =
                 WeaponRuleParser.GetValue(
@@ -1426,6 +1437,19 @@ public class InteractiveAttackController
                     NecronsFactionPack11.MinimumSustainedHits(
                         attacker, weapon, mode));
 
+            // WARBOARD_V46_INTERACTIVE_STANDARD_SUSTAINED
+            volley.sustainedHits =
+                Mathf.Max(
+                    volley.sustainedHits,
+                    WarboardFactionExtensionHub
+                        .MinimumSustainedHits(
+                            attacker,
+                            target,
+                            weapon,
+                            mode
+                        )
+                );
+
 volley.twinLinked =
                 RulesEngine.HasKeyword(
                     weapon,
@@ -1458,6 +1482,17 @@ volley.twinLinked =
                 NecronsFactionPack11.GrantsDevastatingWounds(
                     attacker, weapon, mode);
 
+            // WARBOARD_V46_INTERACTIVE_STANDARD_DEVASTATING
+            volley.devastating =
+                volley.devastating ||
+                WarboardFactionExtensionHub
+                    .GrantsDevastatingWounds(
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
+
 volley.precision =
                 WeaponRuleParser.Has(
                     weapon,
@@ -1489,6 +1524,17 @@ volley.precision =
                         volley.effectiveStrength +=
                 NecronsFactionPack11.StrengthModifier(
                     attacker, first.model, weapon, mode);
+
+            // WARBOARD_V46_INTERACTIVE_STANDARD_STRENGTH
+            volley.effectiveStrength +=
+                WarboardFactionExtensionHub
+                    .StrengthModifier(
+                        game,
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
 
 volley.effectiveAp =
                 weapon.ap;
@@ -1531,9 +1577,31 @@ volley.effectiveAp =
                 NecronsFactionPack11.GrantsPrecision(
                     attacker, weapon, mode);
 
+            // WARBOARD_V46_INTERACTIVE_STANDARD_PRECISION
+            volley.precision =
+                volley.precision ||
+                WarboardFactionExtensionHub
+                    .GrantsPrecision(
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
+
             volley.effectiveAp +=
                 NecronsFactionPack11.ApModifier(
                     game, attacker, target, first.model, weapon, mode);
+
+            // WARBOARD_V46_INTERACTIVE_STANDARD_AP
+            volley.effectiveAp +=
+                WarboardFactionExtensionHub
+                    .ApModifier(
+                        game,
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
 
 volley.woundTarget =
                 RulesEngine.WoundRollNeeded(
@@ -1582,6 +1650,15 @@ volley.woundTarget =
                     NecronsFactionPack11.AdditionalAttacks(
                         game, attacker, selection.model,
                         weapon, mode, target);
+
+                // WARBOARD_V46_INTERACTIVE_STANDARD_ATTACKS
+                oneModelAttacks +=
+                    WarboardFactionExtensionHub
+                        .AdditionalAttacks(
+                            attacker,
+                            weapon,
+                            mode
+                        );
 
 oneModelAttacks +=
                     AeldariFactionPack11.AdditionalAttacks(
@@ -1800,19 +1877,36 @@ rapid +=
         SquadController actionUnit =
             attacker.JoinedActionController();
 
+                // WARBOARD_V46_INTERACTIVE_STANDARD_HIT_REROLLS
         bool rerollAll =
             (mode == AttackMode.Melee &&
              actionUnit
                 .FactionEmissariesRerollAll) ||
             actionUnit.AeldariRerollAllHits ||
-            (conquering && ledNecron);
+            (conquering && ledNecron) ||
+            WarboardFactionExtensionHub
+                .RerollAllHits(
+                    game,
+                    attacker,
+                    target,
+                    volley.weapon,
+                    mode
+                );
 
         bool rerollOnes =
             (mode == AttackMode.Melee &&
              actionUnit
                 .FactionEmissariesRerollOnes) ||
             actionUnit.AeldariRerollHitOnes ||
-            (conquering && !ledNecron);
+            (conquering && !ledNecron) ||
+            WarboardFactionExtensionHub
+                .RerollHitOnes(
+                    game,
+                    attacker,
+                    target,
+                    volley.weapon,
+                    mode
+                );
 
         volley.automaticHitRerolls =
             rerollAll || rerollOnes;
@@ -2164,6 +2258,70 @@ rapid +=
         if (necronsWoundRerolled)
             volley.automaticWoundRerolls = true;
 
+        // WARBOARD_V46_INTERACTIVE_STANDARD_WOUND_REROLLS
+        bool standardWoundRerolled = false;
+
+        if (!volley.automaticWoundRerolls)
+        {
+        for (int i = 0;
+             i < volley.woundRolls.Count;
+             i++)
+        {
+            int roll =
+                volley.woundRolls[i];
+
+            bool critical =
+                roll >=
+                volley.criticalWoundThreshold;
+
+            bool success =
+                roll != 1 &&
+                (critical ||
+                 roll == 6 ||
+                 roll +
+                    volley.woundRollModifier >=
+                    volley.woundTarget);
+
+            bool shouldReroll =
+                WarboardFactionExtensionHub
+                    .RerollAllWounds(
+                        game,
+                        attacker,
+                        target,
+                        volley.weapon,
+                        mode
+                    )
+                ? !success
+                : WarboardFactionExtensionHub
+                    .RerollWoundOnes(
+                        game,
+                        attacker,
+                        target,
+                        volley.weapon,
+                        mode
+                    ) &&
+                  roll == 1;
+
+            if (!shouldReroll)
+                continue;
+
+            volley.woundRolls[i] =
+                DiceRoller.RollD6(
+                    "Faction Wound re-roll: " +
+                    volley.weapon.displayName
+                );
+
+            standardWoundRerolled =
+                true;
+        }
+        }
+
+        if (standardWoundRerolled)
+        {
+            volley.automaticWoundRerolls =
+                true;
+        }
+
         RecalculateWoundResults();
 
         lastActionText =
@@ -2268,6 +2426,23 @@ rapid +=
                 game.AeldariInvulnerableOverride(
                     owner
                 );
+
+                        // WARBOARD_V46_INTERACTIVE_STANDARD_INVULN
+            int standardInvulnerable =
+                WarboardFactionExtensionHub
+                    .InvulnerableOverride(
+                        game,
+                        owner
+                    );
+
+            if (standardInvulnerable > 0 &&
+                (invulnerable <= 0 ||
+                 standardInvulnerable <
+                    invulnerable))
+            {
+                invulnerable =
+                    standardInvulnerable;
+            }
 
             if (aeldariInvulnerable > 0)
             {

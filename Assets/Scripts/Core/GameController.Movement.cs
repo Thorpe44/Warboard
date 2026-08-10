@@ -1273,6 +1273,30 @@ public partial class GameController : MonoBehaviour
         SquadController unit,
         int roll)
     {
+        // WARBOARD_V46_STANDARD_ADVANCE_RESULT
+        if (unit != null)
+        {
+            int fixedAdvance =
+                WarboardFactionExtensionHub
+                    .FixedAdvanceResult(
+                        unit
+                    );
+
+            if (fixedAdvance > 0)
+            {
+                roll = fixedAdvance;
+            }
+            else if (IsXcomMode)
+            {
+                roll +=
+                    WarboardFactionExtensionHub
+                        .AdvanceRollModifier(
+                            this,
+                            unit
+                        );
+            }
+        }
+
         if (unit == null)
             return;
 

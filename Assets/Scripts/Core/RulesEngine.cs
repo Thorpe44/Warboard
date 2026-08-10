@@ -159,6 +159,15 @@ public static class RulesEngine
                 NecronsFactionPack11.AdditionalAttacks(
                     game, attacker, model, weapon, mode, target);
 
+            // WARBOARD_V46_RULES_STANDARD_ATTACKS
+            attacks +=
+                WarboardFactionExtensionHub
+                    .AdditionalAttacks(
+                        attacker,
+                        weapon,
+                        mode
+                    );
+
 attacks +=
                 AeldariFactionPack11.AdditionalAttacks(
                     attacker, model, weapon, mode);
@@ -303,6 +312,17 @@ bool torrent =
                 NecronsFactionPack11.GrantsLethalHits(
                     attacker, mode);
 
+            // WARBOARD_V46_RULES_STANDARD_LETHAL
+            lethalHits =
+                lethalHits ||
+                WarboardFactionExtensionHub
+                    .GrantsLethalHits(
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
+
 int sustainedHits =
                 WeaponRuleParser.GetValue(
                     weapon,
@@ -331,6 +351,19 @@ int sustainedHits =
                 NecronsFactionPack11.MinimumSustainedHits(
                     attacker, weapon, mode));
 
+            // WARBOARD_V46_RULES_STANDARD_SUSTAINED
+            sustainedHits =
+                Mathf.Max(
+                    sustainedHits,
+                    WarboardFactionExtensionHub
+                        .MinimumSustainedHits(
+                            attacker,
+                            target,
+                            weapon,
+                            mode
+                        )
+                );
+
 bool twinLinked =
                 HasKeyword(
                     weapon,
@@ -352,6 +385,17 @@ bool twinLinked =
                 NecronsFactionPack11.GrantsDevastatingWounds(
                     attacker, weapon, mode);
 
+            // WARBOARD_V46_RULES_STANDARD_DEVASTATING
+            devastating =
+                devastating ||
+                WarboardFactionExtensionHub
+                    .GrantsDevastatingWounds(
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
+
 bool precision =
                 WeaponRuleParser.Has(
                     weapon,
@@ -372,6 +416,17 @@ bool precision =
                         precision = precision ||
                 NecronsFactionPack11.GrantsPrecision(
                     attacker, weapon, mode);
+
+            // WARBOARD_V46_RULES_STANDARD_PRECISION
+            precision =
+                precision ||
+                WarboardFactionExtensionHub
+                    .GrantsPrecision(
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
 
 int melta =
                 halfRange
@@ -433,6 +488,47 @@ if (!aeldari11UniversalState.cannotRerollHits &&
                 {
                     hitRoll = DiceRoller.RollD6(
                         "Aeldari Hit re-roll: " + weapon.displayName);
+                }
+
+                // WARBOARD_V46_RULES_STANDARD_HIT_REROLLS
+                if (!aeldari11UniversalState.cannotRerollHits)
+                {
+                    bool standardHitSuccess =
+                        AeldariFactionPack11
+                            .AutomaticHitSucceeds(
+                                hitRoll,
+                                skill,
+                                aeldari11UniversalState
+                            );
+
+                    bool rerollStandardHit =
+                        WarboardFactionExtensionHub
+                            .RerollAllHits(
+                                game,
+                                attacker,
+                                target,
+                                weapon,
+                                mode
+                            )
+                        ? !standardHitSuccess
+                        : WarboardFactionExtensionHub
+                            .RerollHitOnes(
+                                game,
+                                attacker,
+                                target,
+                                weapon,
+                                mode
+                            ) &&
+                          hitRoll == 1;
+
+                    if (rerollStandardHit)
+                    {
+                        hitRoll =
+                            DiceRoller.RollD6(
+                                "Faction Hit re-roll: " +
+                                weapon.displayName
+                            );
+                    }
                 }
 
                 if (!AeldariFactionPack11.AutomaticHitSucceeds(
@@ -512,9 +608,21 @@ if (!aeldari11UniversalState.cannotRerollHits &&
                     lethalAutoWounds
                 );
 
+                        // WARBOARD_V46_RULES_STANDARD_STRENGTH
+            int effectiveStrength =
+                weapon.strength +
+                WarboardFactionExtensionHub
+                    .StrengthModifier(
+                        game,
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
+
             int woundTarget =
                 WoundRollNeeded(
-                    weapon.strength,
+                    effectiveStrength,
                     target.Toughness
                 );
 
@@ -578,6 +686,51 @@ if (!aeldari11UniversalState.cannotRerollHits &&
                         woundRoll, woundTarget, criticalThreshold,
                         aeldari11UniversalState.woundRollModifier);
                     alreadyRerolled = true;
+                }
+
+                                // WARBOARD_V46_RULES_STANDARD_WOUND_REROLLS
+                if (!alreadyRerolled)
+                {
+                    bool standardReroll =
+                        WarboardFactionExtensionHub
+                            .RerollAllWounds(
+                                game,
+                                attacker,
+                                target,
+                                weapon,
+                                mode
+                            )
+                        ? !success
+                        : WarboardFactionExtensionHub
+                            .RerollWoundOnes(
+                                game,
+                                attacker,
+                                target,
+                                weapon,
+                                mode
+                            ) &&
+                          woundRoll == 1;
+
+                    if (standardReroll)
+                    {
+                        woundRoll =
+                            DiceRoller.RollD6(
+                                "Faction Wound re-roll: " +
+                                weapon.displayName
+                            );
+
+                        success =
+                            AeldariFactionPack11
+                                .AutomaticWoundSucceeds(
+                                    woundRoll,
+                                    woundTarget,
+                                    criticalThreshold,
+                                    aeldari11UniversalState
+                                        .woundRollModifier
+                                );
+
+                        alreadyRerolled = true;
+                    }
                 }
 
                 if (!success &&
@@ -672,6 +825,17 @@ if (!aeldari11UniversalState.cannotRerollHits &&
                 NecronsFactionPack11.ApModifier(
                     game, attacker, target, model, weapon, mode);
 
+            // WARBOARD_V46_RULES_STANDARD_AP
+            int standardApModifier =
+                WarboardFactionExtensionHub
+                    .ApModifier(
+                        game,
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
+
 int failedSaves = 0;
             int woundsLost = 0;
             int modelsKilled = 0;
@@ -699,8 +863,10 @@ int failedSaves = 0;
                     Mathf.Clamp(
                         saveOwner.GetSave(
                             attackOwner
-                        ) -
-                        weapon.ap + necronsApModifier,
+                                                ) -
+                        weapon.ap +
+                        necronsApModifier -
+                        standardApModifier,
                         2,
                         7
                     );

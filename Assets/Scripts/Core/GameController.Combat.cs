@@ -276,6 +276,18 @@ public partial class GameController : MonoBehaviour
     
         NecronsFactionPack11.ApplyAttackModifiers(
             this, attacker, target, null, weapon, attackMode, state);
+
+        // WARBOARD_V46_STANDARD_ATTACK_HOOK
+        WarboardFactionExtensionHub
+            .ApplyAttackModifiers(
+                this,
+                attacker,
+                target,
+                null,
+                weapon,
+                attackMode,
+                state
+            );
 }
 
     public bool AeldariGrantsDevastatingWounds(
@@ -567,9 +579,22 @@ public partial class GameController : MonoBehaviour
                 )
         );
 
-        if (resolvedAttack.Mode ==
+                if (resolvedAttack.Mode ==
             AttackMode.Ranged)
         {
+            // WARBOARD_V46_STANDARD_POST_ATTACK
+            postAttackFlowQueue.Enqueue(
+                () =>
+                {
+                    if (!StandardOfferPostAttackReaction(
+                            resolvedAttack,
+                            ContinuePostAttackFlow))
+                    {
+                        ContinuePostAttackFlow();
+                    }
+                }
+            );
+
             postAttackFlowQueue.Enqueue(
                 () =>
                 {
@@ -1068,7 +1093,11 @@ public partial class GameController : MonoBehaviour
 
         if (attacker.HasFallenBack &&
             !Necrons11CanShootAfterFallBack(attacker) &&
-            !Custodes11CanShootAfterFallBack(attacker) &&
+                        !Custodes11CanShootAfterFallBack(attacker) &&
+            // WARBOARD_V46_STANDARD_FALLBACK_SHOOT
+            !WarboardFactionExtensionHub
+                .CanShootAfterFallBack(
+                    attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanShootAfterFallBack(
                   attacker
@@ -1503,7 +1532,11 @@ public partial class GameController : MonoBehaviour
 
                 if (attacker.HasAdvanced &&
                     !Necrons11CanShootAfterAdvance(attacker) &&
-                    !Custodes11CanShootAfterAdvance(attacker) &&
+                                        !Custodes11CanShootAfterAdvance(attacker) &&
+                    // WARBOARD_V46_STANDARD_ADVANCE_SHOOT
+                    !WarboardFactionExtensionHub
+                        .CanShootAfterAdvance(
+                            attacker) &&
                     !attacker
                         .JoinedActionController()
                         .SnapShootingActive &&
@@ -1581,9 +1614,20 @@ public partial class GameController : MonoBehaviour
                     bool legalIndirect =
                         indirect &&
                         !attackerEngaged &&
-                        !attacker.HasAdvanced &&
-                    !Necrons11CanShootAfterAdvance(attacker) &&
-                    !Custodes11CanShootAfterAdvance(attacker) &&
+                        (
+                            // WARBOARD_V46_INDIRECT_ADVANCE_LEGAL
+                            !attacker.HasAdvanced ||
+                            Necrons11CanShootAfterAdvance(attacker) ||
+                            Custodes11CanShootAfterAdvance(attacker) ||
+                            WarboardFactionExtensionHub
+                                .CanShootAfterAdvance(attacker) ||
+                            attacker
+                                .JoinedActionController()
+                                .SnapShootingActive ||
+                            WeaponRuleParser.Has(
+                                weapon,
+                                "assault")
+                        ) &&
                         !targetEngaged;
 
                     if (!legalIndirect)

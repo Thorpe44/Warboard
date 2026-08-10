@@ -18,17 +18,32 @@ public partial class GameController : MonoBehaviour
             return false;
         }
 
+                // WARBOARD_V46_SELECTED_CHARGE_PERMISSIONS
         bool canChargeAfterFallBack =
-            aeldariRules != null &&
-            aeldariRules.CanChargeAfterFallBack(
-                selectedSquad
-            );
+            Necrons11CanChargeAfterFallBack(
+                selectedSquad) ||
+            Custodes11CanChargeAfterFallBack(
+                selectedSquad) ||
+            WarboardFactionExtensionHub
+                .CanChargeAfterFallBack(
+                    selectedSquad) ||
+            (aeldariRules != null &&
+             aeldariRules.CanChargeAfterFallBack(
+                 selectedSquad
+             ));
 
         bool canChargeAfterAdvance =
-            aeldariRules != null &&
-            aeldariRules.CanChargeAfterAdvance(
-                selectedSquad
-            );
+            Necrons11CanChargeAfterAdvance(
+                selectedSquad) ||
+            Custodes11CanChargeAfterAdvance(
+                selectedSquad) ||
+            WarboardFactionExtensionHub
+                .CanChargeAfterAdvance(
+                    selectedSquad) ||
+            (aeldariRules != null &&
+             aeldariRules.CanChargeAfterAdvance(
+                 selectedSquad
+             ));
 
         if (selectedSquad.HasCharged ||
             (selectedSquad.HasFallenBack &&
@@ -94,7 +109,11 @@ public partial class GameController : MonoBehaviour
 
         if (attacker.HasFallenBack &&
             !Necrons11CanChargeAfterFallBack(attacker) &&
-            !Custodes11CanChargeAfterFallBack(attacker) &&
+                        !Custodes11CanChargeAfterFallBack(attacker) &&
+            // WARBOARD_V46_STANDARD_FALLBACK_CHARGE
+            !WarboardFactionExtensionHub
+                .CanChargeAfterFallBack(
+                    attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanChargeAfterFallBack(
                   attacker
@@ -107,7 +126,11 @@ public partial class GameController : MonoBehaviour
 
         if (attacker.HasAdvanced &&
             !Necrons11CanChargeAfterAdvance(attacker) &&
-            !Custodes11CanChargeAfterAdvance(attacker) &&
+                        !Custodes11CanChargeAfterAdvance(attacker) &&
+            // WARBOARD_V46_STANDARD_ADVANCE_CHARGE
+            !WarboardFactionExtensionHub
+                .CanChargeAfterAdvance(
+                    attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanChargeAfterAdvance(
                   attacker
@@ -405,9 +428,27 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
+        // WARBOARD_V46_STANDARD_CHARGE_ROLL
+        if (StandardOfferFactionChargeReroll(
+                attacker,
+                target,
+                roll,
+                wasRerolled))
+        {
+            return;
+        }
+
         roll +=
             Necrons11ChargeRollModifier(
                 attacker, target);
+
+        roll +=
+            WarboardFactionExtensionHub
+                .ChargeRollModifier(
+                    this,
+                    attacker,
+                    target
+                );
 
         float targetDistance =
             JoinedDistance(

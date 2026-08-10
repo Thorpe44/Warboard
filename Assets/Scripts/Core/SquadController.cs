@@ -1403,6 +1403,14 @@ public class SquadController : MonoBehaviour
                 AttachedLeader.AttachedMoveModifier;
         }
 
+        // WARBOARD_V46_STANDARD_MOVE_MODIFIER
+        value +=
+            WarboardFactionExtensionHub
+                .MoveModifier(
+                    GameController.Current,
+                    this
+                );
+
         return Mathf.Max(0f, value);
     }
 
@@ -2421,7 +2429,31 @@ public class SquadController : MonoBehaviour
                 rootPosition + new Vector3(1.1f, 0f, 0f);
             leader.SetModelPresentation(true);
         }
-    }
+    
+        // WARBOARD_V46_DISEMBARK_EVENT
+        GameController currentGame =
+            GameController.Current;
+
+        if (currentGame != null)
+        {
+            GameEventBus.Raise(
+                new GameEventContext
+                {
+                    Type =
+                        GameEventType.UnitDisembarked,
+                    Game = currentGame,
+                    ActingFaction =
+                        actionUnit.FactionId,
+                    Phase =
+                        currentGame.CurrentPhase,
+                    Source = actionUnit,
+                    Note =
+                        actionUnit.DisplayName +
+                        " disembarked."
+                }
+            );
+        }
+}
 
     public void ReembarkAfterFailedDisembark(
         SquadController transport)
