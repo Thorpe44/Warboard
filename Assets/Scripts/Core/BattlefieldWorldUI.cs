@@ -163,22 +163,22 @@ public class BattlefieldWorldUI : MonoBehaviour
 
         SetPanelVisible(
             playerOneReserves,
-            ready
+            false
         );
 
         SetPanelVisible(
             playerOneDead,
-            ready
+            false
         );
 
         SetPanelVisible(
             playerTwoReserves,
-            ready
+            false
         );
 
         SetPanelVisible(
             playerTwoDead,
-            ready
+            false
         );
 
         if (!ready)
@@ -401,7 +401,7 @@ public class BattlefieldWorldUI : MonoBehaviour
         if (entries == null ||
             entries.Length == 0)
         {
-            lines.Add("—");
+            lines.Add(" - ");
         }
         else
         {
@@ -409,7 +409,7 @@ public class BattlefieldWorldUI : MonoBehaviour
                 in entries.Take(7))
             {
                 lines.Add(
-                    "• " +
+                    " |  " +
                     entry
                 );
             }
@@ -445,7 +445,7 @@ public class BattlefieldWorldUI : MonoBehaviour
         return value.Substring(
             0,
             13
-        ) + "…";
+        ) + "...";
     }
 
     private WorldPanel CreatePanel(

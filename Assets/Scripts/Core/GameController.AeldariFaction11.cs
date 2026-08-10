@@ -198,7 +198,7 @@ public partial class GameController
         {
             AeldariStratagem11 capturedRule = rule;
             options.Add(new RuleChoiceOption(
-                capturedRule.Name + " — " + capturedRule.Cost + " CP",
+                capturedRule.Name + "  -  " + capturedRule.Cost + " CP",
                 () =>
                 {
                     CloseRuleChoice();
@@ -212,7 +212,7 @@ public partial class GameController
         }));
         OpenRuleChoice(
             "AELDARI REACTION",
-            request.Unit != null ? request.Unit.DisplayName + " — choose an available rule." : "Choose an available Aeldari rule.",
+            request.Unit != null ? request.Unit.DisplayName + "  -  choose an available rule." : "Choose an available Aeldari rule.",
             options.ToArray());
         aeldari11OpeningReaction = false;
     }
@@ -226,7 +226,7 @@ public partial class GameController
             bool rightColumn = i % 2 == 1;
             int row = i / 2;
             Rect card = new Rect(rightColumn ? right : left, y + row * 54f, cardWidth, 42f);
-            string label = rule.Name + " — " + rule.Cost + " CP";
+            string label = rule.Name + "  -  " + rule.Cost + " CP";
             bool reactive = Aeldari11IsReactiveOnly(rule);
             if (DrawStratagemActionButton(
                     card,
@@ -281,15 +281,15 @@ public partial class GameController
         if (fateValue > 0 && AeldariFactionPack11Runtime.HasFateDie(unit.FactionId, fateValue) && rule.Cost > 0)
         {
             Aeldari11QueueChoice(
-                "STRANDS OF FATE — " + rule.Name,
+                "STRANDS OF FATE  -  " + rule.Name,
                 "Discard a Fate die showing " + fateValue + " to reduce this Stratagem by 1CP?",
-                new RuleChoiceOption("Discard " + fateValue + " — pay " + Mathf.Max(0, rule.Cost - 1) + " CP", () =>
+                new RuleChoiceOption("Discard " + fateValue + "  -  pay " + Mathf.Max(0, rule.Cost - 1) + " CP", () =>
                 {
                     CloseRuleChoice();
                     if (AeldariFactionPack11Runtime.SpendFateDie(unit.FactionId, fateValue))
                         Aeldari11SpendAndExecute(rule, unit, context, Mathf.Max(0, rule.Cost - 1));
                 }),
-                new RuleChoiceOption("Keep Fate die — pay " + rule.Cost + " CP", () =>
+                new RuleChoiceOption("Keep Fate die  -  pay " + rule.Cost + " CP", () =>
                 {
                     CloseRuleChoice();
                     Aeldari11SpendAndExecute(rule, unit, context, rule.Cost);
@@ -307,7 +307,7 @@ public partial class GameController
 
         bool automatic = Aeldari11ExecuteStratagem(rule, unit, context);
         AppendBattleLog("AELDARI STRATAGEM", rule.Name,
-            unit.DisplayName + " • " + cost + " CP • " + rule.FullRule);
+            unit.DisplayName + "  |  " + cost + " CP  |  " + rule.FullRule);
 
         if (!automatic)
         {

@@ -301,7 +301,7 @@ public partial class GameController : MonoBehaviour
         status =
             "Command Re-roll: " +
             originalRoll +
-            " → " +
+            "  ->  " +
             rerolledValue +
             " on a " +
             stage.ToString().ToLowerInvariant() +
@@ -447,7 +447,7 @@ public partial class GameController : MonoBehaviour
 
         status =
             manoeuvre +
-            " — " +
+            "  -  " +
             unit.DisplayName +
             ". Battle Focus: " +
             TotalBattleFocusTokens(
@@ -773,7 +773,7 @@ public partial class GameController : MonoBehaviour
         }
 
         OpenRuleChoice(
-            "PATH OF THE WARRIOR — " +
+            "PATH OF THE WARRIOR  -  " +
             actionUnit.DisplayName,
             IsXcomMode
             ? "Choose the Aspect Host attack discipline Warboard should apply until end of phase."

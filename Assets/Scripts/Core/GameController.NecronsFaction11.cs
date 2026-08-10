@@ -20,7 +20,7 @@ public partial class GameController
             "NECRONS",
             "Reanimation Protocols",
             controller.DetachmentName +
-            " • " +
+            "  |  " +
             controller.DetachmentPointsSpent +
             (controller.DetachmentPointLimit > 0
                 ? "/" +
@@ -254,7 +254,7 @@ public partial class GameController
             if (DrawStratagemActionButton(
                     card,
                     rule.Name +
-                    " — " +
+                    "  -  " +
                     rule.Cost +
                     " CP",
                     rule.FullRule))
@@ -1122,7 +1122,7 @@ public partial class GameController
             attacker.JoinedActionController();
 
         OpenRuleChoice(
-            "ANNIHILATION PROTOCOL — CHARGE RE-ROLL",
+            "ANNIHILATION PROTOCOL  -  CHARGE RE-ROLL",
             attacker.DisplayName +
             " can re-roll its Charge roll of " +
             roll +

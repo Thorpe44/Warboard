@@ -280,12 +280,12 @@ public partial class GameController : MonoBehaviour
             "BATTLE-SHOCK",
             unit.DisplayName,
             traditionalBattleShockLabel +
-            " • Leadership " +
+            "  |  Leadership " +
             leadership +
-            "+ • player marked " +
+            "+  |  player marked " +
             (passed
                 ? "PASS"
-                : "FAIL — BATTLE-SHOCKED") +
+                : "FAIL  -  BATTLE-SHOCKED") +
             ". Physical dice were not interpreted by Warboard."
         );
 
@@ -435,13 +435,13 @@ public partial class GameController : MonoBehaviour
                                   ": "
                                 : "") +
                             weapon.displayName +
-                            " • A " +
+                            "  |  A " +
                             attacks +
-                            " • S " +
+                            "  |  S " +
                             weapon.strength +
-                            " • AP " +
+                            "  |  AP " +
                             weapon.ap +
-                            " • D " +
+                            "  |  D " +
                             damage;
                     }
                 )
@@ -521,7 +521,7 @@ public partial class GameController : MonoBehaviour
             ? "SHOOTING DECLARATION"
             : "FIGHT DECLARATION",
             attacker.DisplayName +
-            " → " +
+            "  ->  " +
             target.DisplayName,
             weaponSummary +
             ". Traditional mode: dice and damage are entirely player-resolved."
@@ -530,9 +530,9 @@ public partial class GameController : MonoBehaviour
         status =
             "TRADITIONAL: " +
             attacker.DisplayName +
-            " → " +
+            "  ->  " +
             target.DisplayName +
-            " • " +
+            "  |  " +
             weaponSummary +
             ". Use the free 3D dice tray and manual wound controls, then click ATTACK RESOLVED." +
             (engagedShooting
@@ -914,7 +914,7 @@ public partial class GameController : MonoBehaviour
             "WOUNDS",
             selectedModel.RoleName,
             before +
-            " → " +
+            "  ->  " +
             after +
             " wounds (manual Traditional adjustment)."
         );
@@ -1259,7 +1259,7 @@ public partial class GameController : MonoBehaviour
         AppendBattleLog(
             "CHARGE",
             attacker.DisplayName +
-            " → " +
+            "  ->  " +
             target.DisplayName,
             "Player-entered final Charge total: " +
             result +
@@ -1399,7 +1399,7 @@ public partial class GameController : MonoBehaviour
             selectedModel.RoleName +
             " manually restored 1 wound (" +
             before +
-            " → " +
+            "  ->  " +
             selectedModel.CurrentWounds +
             ")."
         );

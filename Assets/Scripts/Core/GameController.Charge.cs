@@ -150,7 +150,7 @@ public partial class GameController : MonoBehaviour
             AppendBattleLog(
                 "CHARGE",
                 attacker.DisplayName +
-                " → " +
+                "  ->  " +
                 target.DisplayName,
                 "Charge declared. Player resolves 2D6 and any tabletop rerolls manually, then enters the final total."
             );
@@ -419,7 +419,7 @@ public partial class GameController : MonoBehaviour
             wasRerolled
             ? "Command Re-roll " +
               previousRoll +
-              " → " +
+              "  ->  " +
               roll
             : "rolled " +
               roll;

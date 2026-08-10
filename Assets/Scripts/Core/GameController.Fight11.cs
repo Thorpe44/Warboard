@@ -143,7 +143,7 @@ public partial class GameController
         if (fight11Step == Fight11Step.PileIn)
         {
             status =
-                "PILE IN STEP — " +
+                "PILE IN STEP  -  " +
                 DisplayFactionName(fight11StepFaction) +
                 " resolves optional pile-ins. Select a unit and an eligible enemy, or click DONE SIDE PILE-IN.";
         }
@@ -452,7 +452,7 @@ public partial class GameController
             (fightPriorityStep == FightPriorityStep.FightsFirst
                 ? "FIGHTS FIRST"
                 : "REMAINING") +
-            " — " +
+            "  -  " +
             DisplayFactionName(fightSelectionFaction) +
             " selects";
     }
@@ -765,7 +765,7 @@ public partial class GameController
                 new[]
                 {
                     new RuleChoiceOption(
-                        "Dacatarai — Sustained Hits 1",
+                        "Dacatarai  -  Sustained Hits 1",
                         () =>
                         {
                             CloseRuleChoice();
@@ -775,7 +775,7 @@ public partial class GameController
                             Fight11OfferPreFightChoices(attacker, target, forced, after);
                         }),
                     new RuleChoiceOption(
-                        "Rendax — Lethal Hits",
+                        "Rendax  -  Lethal Hits",
                         () =>
                         {
                             CloseRuleChoice();
@@ -792,7 +792,7 @@ public partial class GameController
         if (CanUseBattleFocusManoeuvre(attacker))
         {
             OpenRuleChoice(
-                "BATTLE FOCUS — SUDDEN STRIKE",
+                "BATTLE FOCUS  -  SUDDEN STRIKE",
                 attacker.DisplayName +
                 " is selected to fight. Spend 1 Battle Focus token so any Overrun pile-in and later consolidation can be up to 6″?",
                 new[]
@@ -833,7 +833,7 @@ public partial class GameController
         if (normal && overrun)
         {
             OpenRuleChoice(
-                "SELECT FIGHT TYPE — " + attacker.DisplayName,
+                "SELECT FIGHT TYPE  -  " + attacker.DisplayName,
                 "This unit is eligible to make either a Normal Fight or an Overrun Fight.",
                 new[]
                 {
@@ -1220,7 +1220,7 @@ public partial class GameController
         if (fight11Step == Fight11Step.Consolidate)
         {
             status =
-                "CONSOLIDATE STEP — " +
+                "CONSOLIDATE STEP  -  " +
                 DisplayFactionName(fight11StepFaction) +
                 " resolves optional consolidations. Select an eligible unit and target, or click DONE SIDE CONSOLIDATE.";
         }
@@ -2182,7 +2182,7 @@ public partial class GameController
             x += 135f;
             GUI.Label(
                 new Rect(x, bar.y + 10f, bar.width - (x - bar.x) - 12f, 24f),
-                "Select model → click board • hold ALT to measure"
+                "Select model  ->  click board  |  hold ALT to measure"
             );
             return;
         }
@@ -2211,7 +2211,7 @@ public partial class GameController
             x += 125f;
             GUI.Label(
                 new Rect(x, bar.y + 10f, bar.width - (x - bar.x) - 12f, 24f),
-                "Model → weapon → enemy"
+                "Model  ->  weapon  ->  enemy"
             );
             return;
         }
@@ -2231,7 +2231,7 @@ public partial class GameController
             x += 165f;
             GUI.Label(
                 new Rect(x, bar.y + 10f, bar.width - (x - bar.x) - 12f, 24f),
-                "Select model → click board • hold ALT to measure"
+                "Select model  ->  click board  |  hold ALT to measure"
             );
             return;
         }
@@ -2240,7 +2240,7 @@ public partial class GameController
         {
             GUI.Label(
                 new Rect(x, bar.y + 10f, 240f, 24f),
-                "PILE IN — " + DisplayFactionName(fight11StepFaction)
+                "PILE IN  -  " + DisplayFactionName(fight11StepFaction)
             );
             x += 245f;
 
@@ -2250,7 +2250,7 @@ public partial class GameController
             x += 167f;
             GUI.Label(
                 new Rect(x, bar.y + 10f, bar.width - (x - bar.x) - 12f, 24f),
-                "Select unit → enemy to pile in • optional"
+                "Select unit  ->  enemy to pile in  |  optional"
             );
             return;
         }
@@ -2259,7 +2259,7 @@ public partial class GameController
         {
             GUI.Label(
                 new Rect(x, bar.y + 10f, 420f, 24f),
-                Fight11FightPriorityText() + " • select unit/model → enemy"
+                Fight11FightPriorityText() + "  |  select unit/model  ->  enemy"
             );
             x += 425f;
 
@@ -2275,7 +2275,7 @@ public partial class GameController
         {
             GUI.Label(
                 new Rect(x, bar.y + 10f, 260f, 24f),
-                "CONSOLIDATE — " + DisplayFactionName(fight11StepFaction)
+                "CONSOLIDATE  -  " + DisplayFactionName(fight11StepFaction)
             );
             x += 265f;
 

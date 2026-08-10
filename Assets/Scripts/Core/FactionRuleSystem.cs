@@ -358,7 +358,7 @@ public class FactionRuleSystem
         }
 
         return
-            "Reanimation Protocols — " +
+            "Reanimation Protocols  -  " +
             string.Join(
                 " | ",
                 results.ToArray()

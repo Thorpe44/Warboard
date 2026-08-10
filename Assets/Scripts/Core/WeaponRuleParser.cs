@@ -357,9 +357,9 @@ public static class WeaponRuleParser
 
         return value
             .ToLowerInvariant()
-            .Replace('‑', '-')
-            .Replace('–', '-')
-            .Replace('—', '-')
+            .Replace('\u2011', '-')
+            .Replace('\u2013', '-')
+            .Replace('\u2014', '-')
             .Replace('_', ' ')
             .Replace('[', ' ')
             .Replace(']', ' ');

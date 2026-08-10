@@ -153,7 +153,7 @@ public partial class GameController : MonoBehaviour
 
                         if (!SpendBattleFocusFor(
                                 unit,
-                                "FADE BACK — LETHAL SURGE"))
+                                "FADE BACK  -  LETHAL SURGE"))
                         {
                             if (after != null)
                                 after();
@@ -236,7 +236,7 @@ public partial class GameController : MonoBehaviour
         );
 
         OpenRuleChoice(
-            "BATTLE FOCUS — FADE BACK",
+            "BATTLE FOCUS  -  FADE BACK",
             unit.DisplayName +
             " was hit by ranged attacks. Spend 1 Battle Focus token to make a D6+1 Normal move.",
             options
@@ -510,7 +510,7 @@ public partial class GameController : MonoBehaviour
         }
 
         status =
-            "XCOM RESOLUTION PAUSED — decision required: " +
+            "XCOM RESOLUTION PAUSED  -  decision required: " +
             interactiveAttack.StageTitle +
             ".";
     }
@@ -1246,7 +1246,7 @@ public partial class GameController : MonoBehaviour
 
             string profile =
                 weapon.displayName +
-                "  •  " +
+                "   |   " +
                 weapon.range.ToString("0.#") +
                 "\"  A " +
                 (string.IsNullOrWhiteSpace(
@@ -1279,7 +1279,7 @@ public partial class GameController : MonoBehaviour
         }
 
         OpenRuleChoice(
-            "SELECT WEAPON — " +
+            "SELECT WEAPON  -  " +
             firingModel.RoleName,
             "Choose which weapon this model will fire at " +
             target.DisplayName +

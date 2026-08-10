@@ -1358,9 +1358,9 @@ public static class YellowScribeImporter
         string lower =
             abilityText
                 .ToLowerInvariant()
-                .Replace('‑', '-')
-                .Replace('–', '-')
-                .Replace('—', '-');
+                .Replace('\u2011', '-')
+            .Replace('\u2013', '-')
+            .Replace('\u2014', '-');
 
         List<string> keywords =
             new List<string>();

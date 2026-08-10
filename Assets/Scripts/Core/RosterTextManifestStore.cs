@@ -50,7 +50,7 @@ public sealed class WarboardRosterManifest
         }
 
         return string.Join(
-            " • ",
+            "  |  ",
             parts.ToArray());
     }
 }

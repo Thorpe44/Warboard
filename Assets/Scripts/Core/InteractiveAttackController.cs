@@ -92,7 +92,7 @@ public class InteractiveCasualtyChoice
 
             return
                 automaticModel.Squad.DisplayName +
-                " — " +
+                "  -  " +
                 automaticModel.RoleName;
         }
     }
@@ -835,7 +835,7 @@ public class InteractiveAttackController
                 lastActionText =
                     "Command Re-roll hit: " +
                     old +
-                    " → " +
+                    "  ->  " +
                     value;
 
                 break;
@@ -863,7 +863,7 @@ public class InteractiveAttackController
                 lastActionText =
                     "Command Re-roll wound: " +
                     old +
-                    " → " +
+                    "  ->  " +
                     value;
 
                 break;
@@ -891,7 +891,7 @@ public class InteractiveAttackController
                 lastActionText =
                     "Command Re-roll save: " +
                     old +
-                    " → " +
+                    "  ->  " +
                     value;
 
                 break;
@@ -919,7 +919,7 @@ public class InteractiveAttackController
                 lastActionText =
                     "Command Re-roll damage: " +
                     old +
-                    " → " +
+                    "  ->  " +
                     value;
 
                 break;
@@ -1073,7 +1073,7 @@ public class InteractiveAttackController
         if (values == null ||
             values.Count == 0)
         {
-            return "—";
+            return " - ";
         }
 
         return
@@ -1097,9 +1097,9 @@ public class InteractiveAttackController
 
         lines.Add(
             attacker.DisplayName +
-            " → " +
+            "  ->  " +
             target.DisplayName +
-            " • " +
+            "  |  " +
             mode.ToString().ToUpper()
         );
 
@@ -1145,18 +1145,18 @@ public class InteractiveAttackController
                 volley.attacks +
                 "\nHIT: " +
                 hitTarget +
-                " • rolls " +
+                "  |  rolls " +
                 RollList(
                     volley.hitRolls
                 ) +
-                " → " +
+                "  ->  " +
                 volley.hits +
                 " hit(s)" +
                 "\nWOUND: S" +
                 volley.effectiveStrength +
                 " vs T" +
                 target.Toughness +
-                " → " +
+                "  ->  " +
                 volley.woundTarget +
                 "+" +
                 (volley.woundRollModifier == 0
@@ -1167,11 +1167,11 @@ public class InteractiveAttackController
                         : "") +
                       volley.woundRollModifier +
                       " modifier)") +
-                " • rolls " +
+                "  |  rolls " +
                 RollList(
                     volley.woundRolls
                 ) +
-                " → " +
+                "  ->  " +
                 (volley.normalWounds +
                  volley.devastatingWounds) +
                 " wound(s)" +
@@ -1184,20 +1184,20 @@ public class InteractiveAttackController
                 saveType +
                 " " +
                 volley.saveTarget +
-                "+ • AP " +
+                "+  |  AP " +
                 volley.effectiveAp +
-                " • rolls " +
+                "  |  rolls " +
                 RollList(
                     volley.saveRolls
                 ) +
-                " → " +
+                "  ->  " +
                 volley.failedSaves +
                 " failed" +
                 "\nDAMAGE: " +
                 RollList(
                     volley.damageValues
                 ) +
-                " → " +
+                "  ->  " +
                 volley.woundsLost +
                 " wound(s), " +
                 volley.modelsKilled +
@@ -1209,7 +1209,7 @@ public class InteractiveAttackController
         lines.Add(
             "\nTOTAL: " +
             totalWoundsLost +
-            " wound(s) lost • " +
+            " wound(s) lost  |  " +
             totalModelsKilled +
             " model(s) destroyed"
         );

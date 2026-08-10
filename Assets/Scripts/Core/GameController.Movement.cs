@@ -259,7 +259,7 @@ public partial class GameController : MonoBehaviour
                 "″ / " +
                 specialMoveMaxDistance
                     .ToString("0.0") +
-                "″  •  " +
+                "″   |   " +
                 specialMoveLabel,
                 legal,
                 new Color(
@@ -326,7 +326,7 @@ public partial class GameController : MonoBehaviour
                     start,
                     cursor,
                     segment.ToString("0.0") +
-                    "″ segment  •  " +
+                    "″ segment   |   " +
                     total.ToString("0.0") +
                     "/" +
                     limit.ToString("0.0") +
@@ -371,7 +371,7 @@ public partial class GameController : MonoBehaviour
                     start,
                     cursor,
                     distance.ToString("0.0") +
-                    "″  •  melee range " +
+                    "″   |   melee range " +
                     EngagementRange.ToString("0.#") +
                     "″",
                     distance <=
@@ -431,7 +431,7 @@ public partial class GameController : MonoBehaviour
                     start,
                     cursor,
                     distance.ToString("0.0") +
-                    "″  •  formation translation",
+                    "″   |   formation translation",
                     legal,
                     new Color(
                         0.16f,
@@ -497,7 +497,7 @@ public partial class GameController : MonoBehaviour
                     0.01f)
                 {
                     text +=
-                        " segment  •  " +
+                        " segment   |   " +
                         total.ToString("0.0") +
                         "/" +
                         allowance.ToString("0.0") +
@@ -557,7 +557,7 @@ public partial class GameController : MonoBehaviour
                 start,
                 cursor,
                 distance.ToString("0.0") +
-                "″  •  max 12″",
+                "″   |   max 12″",
                 legal,
                 new Color(
                     1f,
@@ -1058,7 +1058,7 @@ public partial class GameController : MonoBehaviour
                 options.Add(
                     new RuleChoiceOption(
                         capturedWraith.DisplayName +
-                        " → " +
+                        "  ->  " +
                         capturedEnemy.DisplayName,
                         () =>
                         {
@@ -1217,7 +1217,7 @@ public partial class GameController : MonoBehaviour
 
             OpenRuleChoice(
                 rerollSource +
-                " — ADVANCE",
+                "  -  ADVANCE",
                 unit.DisplayName +
                 " rolled " +
                 capturedRoll +

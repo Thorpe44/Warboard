@@ -12,38 +12,38 @@ public partial class GameController : MonoBehaviour
     {
         float width =
             Mathf.Min(
-                780f,
-                Screen.width -
-                    40f
+                960f,
+                Screen.width - 24f
             );
 
         float height =
             Mathf.Min(
-                580f,
-                Screen.height -
-                    40f
+                680f,
+                Screen.height - 24f
             );
 
         Rect panel =
             new Rect(
-                (Screen.width -
-                 width) *
+                (Screen.width - width) *
                     0.5f,
-                (Screen.height -
-                 height) *
+                (Screen.height - height) *
                     0.5f,
                 width,
                 height
             );
 
-        DrawTintedBox(
-            panel,
+        Color accent =
             new Color(
-                0.025f,
-                0.03f,
-                0.042f,
+                0.22f,
+                0.67f,
+                0.82f,
                 1f
-            )
+            );
+
+        WarboardV45Presentation.DrawPanel(
+            panel,
+            accent,
+            true
         );
 
         GUIStyle heading =
@@ -55,77 +55,108 @@ public partial class GameController : MonoBehaviour
         heading.fontStyle =
             FontStyle.Bold;
 
+        GUIStyle section =
+            new GUIStyle(
+                GUI.skin.label
+            );
+
+        section.fontSize = 17;
+        section.fontStyle =
+            FontStyle.Bold;
+
         GUIStyle sub =
             new GUIStyle(
                 GUI.skin.label
             );
 
-        sub.fontSize = 13;
+        sub.fontSize = 12;
         sub.wordWrap = true;
+
+        sub.normal.textColor =
+            new Color(
+                0.76f,
+                0.80f,
+                0.85f,
+                1f
+            );
 
         GUI.Label(
             new Rect(
                 panel.x + 22f,
-                panel.y + 16f,
+                panel.y + 14f,
                 panel.width - 44f,
                 30f
             ),
-            "WARBOARD — BATTLE SETUP",
+            "WARBOARD - BATTLE SETUP",
             heading
         );
 
         GUI.Label(
             new Rect(
                 panel.x + 22f,
-                panel.y + 54f,
+                panel.y + 47f,
                 panel.width - 44f,
-                36f
+                28f
             ),
-            "Choose how Warboard resolves dice, then choose battle size. Tactical decisions remain player-controlled in both modes.",
+            "Choose resolution mode and battle size. Tactical decisions remain player-controlled in both modes.",
             sub
         );
 
         GUI.Label(
             new Rect(
                 panel.x + 22f,
-                panel.y + 96f,
+                panel.y + 79f,
                 panel.width - 44f,
                 24f
             ),
             "RESOLUTION MODE",
-            heading
+            section
         );
 
-        float modeWidth =
-            (panel.width - 62f) *
+        float gap = 18f;
+
+        float twoColumnWidth =
+            (panel.width -
+             44f -
+             gap) *
             0.5f;
+
+        float leftX =
+            panel.x + 22f;
+
+        float rightX =
+            leftX +
+            twoColumnWidth +
+            gap;
 
         Color oldColor =
             GUI.color;
 
         if (ResolutionMode ==
-            WarboardResolutionMode.XcomAutomatic)
+            WarboardResolutionMode
+                .XcomAutomatic)
         {
             GUI.color =
                 new Color(
-                    0.72f,
-                    1f,
-                    0.72f,
+                    0.74f,
+                    0.96f,
+                    0.88f,
                     1f
                 );
         }
 
         if (GUI.Button(
             new Rect(
-                panel.x + 22f,
-                panel.y + 128f,
-                modeWidth,
-                52f
+                leftX,
+                panel.y + 108f,
+                twoColumnWidth,
+                48f
             ),
             "XCOM / AUTOMATIC\nWarboard rolls; you make the decisions"))
         {
             ResolutionMode =
-                WarboardResolutionMode.XcomAutomatic;
+                WarboardResolutionMode
+                    .XcomAutomatic;
 
             showDiceTray = false;
         }
@@ -133,7 +164,8 @@ public partial class GameController : MonoBehaviour
         GUI.color = oldColor;
 
         if (ResolutionMode ==
-            WarboardResolutionMode.TraditionalManual)
+            WarboardResolutionMode
+                .TraditionalManual)
         {
             GUI.color =
                 new Color(
@@ -146,32 +178,28 @@ public partial class GameController : MonoBehaviour
 
         if (GUI.Button(
             new Rect(
-                panel.x + 40f +
-                    modeWidth,
-                panel.y + 128f,
-                modeWidth,
-                52f
+                rightX,
+                panel.y + 108f,
+                twoColumnWidth,
+                48f
             ),
             "TRADITIONAL / MANUAL\nPlayer resolves visible combat dice"))
         {
             ResolutionMode =
-                WarboardResolutionMode.TraditionalManual;
+                WarboardResolutionMode
+                    .TraditionalManual;
         }
 
         GUI.color = oldColor;
 
-        float battleButtonWidth =
-            (panel.width - 62f) *
-            0.5f;
-
         if (GUI.Button(
             new Rect(
-                panel.x + 22f,
-                panel.y + 196f,
-                battleButtonWidth,
-                50f
+                leftX,
+                panel.y + 166f,
+                twoColumnWidth,
+                46f
             ),
-            "INCURSION\n1,000 pts • 60 x 44"))
+            "INCURSION\n1,000 pts | 60 x 44"))
         {
             ConfigureBattle(
                 "Incursion",
@@ -187,13 +215,12 @@ public partial class GameController : MonoBehaviour
 
         if (GUI.Button(
             new Rect(
-                panel.x + 40f +
-                    battleButtonWidth,
-                panel.y + 196f,
-                battleButtonWidth,
-                50f
+                rightX,
+                panel.y + 166f,
+                twoColumnWidth,
+                46f
             ),
-            "STRIKE FORCE\n2,000 pts • 60 x 44"))
+            "STRIKE FORCE\n2,000 pts | 60 x 44"))
         {
             ConfigureBattle(
                 "Strike Force",
@@ -207,30 +234,64 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
-        GUI.Label(
+        Rect customCard =
             new Rect(
-                panel.x + 22f,
-                panel.y + 262f,
-                panel.width - 44f,
-                22f
+                panel.x + 18f,
+                panel.y + 224f,
+                panel.width - 36f,
+                panel.height - 292f
+            );
+
+        WarboardV45Presentation.DrawPanel(
+            customCard,
+            new Color(
+                0.26f,
+                0.32f,
+                0.40f,
+                1f
             ),
-            "CUSTOM / HOUSE BATTLEFIELD",
-            heading
+            false
         );
 
-        float labelX =
-            panel.x + 24f;
+        GUI.Label(
+            new Rect(
+                customCard.x + 18f,
+                customCard.y + 13f,
+                customCard.width - 36f,
+                24f
+            ),
+            "CUSTOM / HOUSE BATTLEFIELD",
+            section
+        );
 
-        float valueX =
-            panel.x + 190f;
+        float inputLabelX =
+            customCard.x + 20f;
+
+        float inputValueX =
+            customCard.x +
+            Mathf.Min(
+                190f,
+                customCard.width *
+                    0.27f
+            );
+
+        float inputWidth =
+            Mathf.Clamp(
+                customCard.width *
+                    0.17f,
+                96f,
+                142f
+            );
 
         float rowY =
-            panel.y + 300f;
+            customCard.y + 53f;
+
+        const float rowStep = 37f;
 
         GUI.Label(
             new Rect(
-                labelX,
-                rowY,
+                inputLabelX,
+                rowY + 3f,
                 150f,
                 24f
             ),
@@ -240,22 +301,22 @@ public partial class GameController : MonoBehaviour
         customPointsText =
             GUI.TextField(
                 new Rect(
-                    valueX,
-                    rowY - 2f,
-                    110f,
-                    28f
+                    inputValueX,
+                    rowY,
+                    inputWidth,
+                    29f
                 ),
                 customPointsText,
                 5
             );
 
-        rowY += 38f;
+        rowY += rowStep;
 
         GUI.Label(
             new Rect(
-                labelX,
-                rowY,
-                150f,
+                inputLabelX,
+                rowY + 3f,
+                160f,
                 24f
             ),
             "Board X (inches):"
@@ -264,22 +325,22 @@ public partial class GameController : MonoBehaviour
         customWidthText =
             GUI.TextField(
                 new Rect(
-                    valueX,
-                    rowY - 2f,
-                    110f,
-                    28f
+                    inputValueX,
+                    rowY,
+                    inputWidth,
+                    29f
                 ),
                 customWidthText,
                 5
             );
 
-        rowY += 38f;
+        rowY += rowStep;
 
         GUI.Label(
             new Rect(
-                labelX,
-                rowY,
-                150f,
+                inputLabelX,
+                rowY + 3f,
+                160f,
                 24f
             ),
             "Board Z (inches):"
@@ -288,22 +349,22 @@ public partial class GameController : MonoBehaviour
         customDepthText =
             GUI.TextField(
                 new Rect(
-                    valueX,
-                    rowY - 2f,
-                    110f,
-                    28f
+                    inputValueX,
+                    rowY,
+                    inputWidth,
+                    29f
                 ),
                 customDepthText,
                 5
             );
 
-        rowY += 38f;
+        rowY += rowStep;
 
         GUI.Label(
             new Rect(
-                labelX,
-                rowY,
-                150f,
+                inputLabelX,
+                rowY + 3f,
+                160f,
                 24f
             ),
             "Deployment depth:"
@@ -312,26 +373,47 @@ public partial class GameController : MonoBehaviour
         customDeploymentText =
             GUI.TextField(
                 new Rect(
-                    valueX,
-                    rowY - 2f,
-                    110f,
-                    28f
+                    inputValueX,
+                    rowY,
+                    inputWidth,
+                    29f
                 ),
                 customDeploymentText,
                 5
             );
 
+        float infoX =
+            Mathf.Max(
+                inputValueX +
+                    inputWidth +
+                    28f,
+                customCard.x +
+                    customCard.width *
+                    0.48f
+            );
+
+        float infoWidth =
+            customCard.x +
+            customCard.width -
+            20f -
+            infoX;
+
         GUI.Label(
             new Rect(
-                panel.x + 336f,
-                panel.y + 300f,
-                panel.width - 360f,
-                112f
+                infoX,
+                customCard.y + 54f,
+                infoWidth,
+                Mathf.Max(
+                    95f,
+                    customCard.height -
+                        118f
+                )
             ),
             ResolutionMode ==
-                WarboardResolutionMode.XcomAutomatic
-            ? "XCOM mode hides routine combat dice and resolves them immediately. Optional choices, model placement, targets, weapons, casualties and reactions still stop for the player."
-            : "Traditional mode is a digital tabletop: Warboard keeps phases, movement, missions, CP, Stratagem/effect state and measurements, while players roll and interpret every die themselves.",
+                WarboardResolutionMode
+                    .XcomAutomatic
+            ? "XCOM mode resolves routine combat dice immediately while player decisions, targets, placement, casualties and reactions still stop for input."
+            : "Traditional mode keeps phases, movement, missions, CP, Stratagem state and measurements while the players physically resolve the dice.",
             sub
         );
 
@@ -348,21 +430,42 @@ public partial class GameController : MonoBehaviour
                 out customDeployment
             );
 
+        GUI.Label(
+            new Rect(
+                customCard.x + 20f,
+                customCard.y +
+                    customCard.height -
+                    47f,
+                customCard.width -
+                    250f,
+                28f
+            ),
+            customValid
+            ? "Selected: " +
+              (IsXcomMode
+                  ? "XCOM / AUTOMATIC"
+                  : "TRADITIONAL / MANUAL")
+            : "Enter valid points, board dimensions and deployment depth.",
+            sub
+        );
+
         GUI.enabled =
             customValid;
 
         if (GUI.Button(
             new Rect(
-                panel.x +
-                    panel.width -
-                    232f,
-                panel.y +
-                    panel.height -
-                    62f,
-                210f,
-                38f
+                customCard.x +
+                    customCard.width -
+                    215f,
+                customCard.y +
+                    customCard.height -
+                    52f,
+                195f,
+                34f
             ),
-            "START CUSTOM BATTLE"))
+            "START CUSTOM BATTLE",
+            WarboardV45Presentation
+                .PrimaryButtonStyle))
         {
             ConfigureBattle(
                 "Custom",
@@ -377,25 +480,8 @@ public partial class GameController : MonoBehaviour
         }
 
         GUI.enabled = true;
-
-        GUI.Label(
-            new Rect(
-                panel.x + 22f,
-                panel.y +
-                    panel.height -
-                    58f,
-                panel.width - 275f,
-                36f
-            ),
-            customValid
-            ? "Selected mode: " +
-              (IsXcomMode
-                  ? "XCOM / AUTOMATIC"
-                  : "TRADITIONAL / MANUAL")
-            : "Custom values: points > 0; board dimensions ≥ 24; deployment depth ≥ 4 and less than half the X dimension.",
-            sub
-        );
     }
+
 
     public void AppendBattleLog(
         string category,
@@ -1325,7 +1411,7 @@ public partial class GameController : MonoBehaviour
                     outer.width - 32f,
                     22f
                 ),
-                "—"
+                " - "
             );
 
             y += 23f;
@@ -1373,7 +1459,7 @@ public partial class GameController : MonoBehaviour
                     outer.width - 32f,
                     22f
                 ),
-                "—"
+                " - "
             );
         }
         else
@@ -1998,7 +2084,7 @@ public partial class GameController : MonoBehaviour
                 panel.width - 36f,
                 28f
             ),
-            "XCOM RESOLUTION — DECISION REQUIRED",
+            "XCOM RESOLUTION  -  DECISION REQUIRED",
             heading
         );
 
@@ -2010,7 +2096,7 @@ public partial class GameController : MonoBehaviour
                 52f
             ),
             interactiveAttack.Attacker.DisplayName +
-            " → " +
+            "  ->  " +
             interactiveAttack.Target.DisplayName +
             "\n" +
             interactiveAttack.RequirementText
@@ -2188,7 +2274,7 @@ public partial class GameController : MonoBehaviour
                 30f
             ),
             interactiveAttack.StageTitle +
-            " — " +
+            "  -  " +
             volley.weapon.displayName,
             title
         );
@@ -2201,7 +2287,7 @@ public partial class GameController : MonoBehaviour
                 24f
             ),
             interactiveAttack.Attacker.DisplayName +
-            " → " +
+            "  ->  " +
             interactiveAttack.Target.DisplayName +
             " | Weapon " +
             interactiveAttack.VolleyNumber +
@@ -2673,9 +2759,9 @@ public partial class GameController : MonoBehaviour
                 panel.width - 80f,
                 30f
             ),
-            "STRATAGEMS   •   " +
+            "STRATAGEMS    |    " +
             ActiveFactionDisplayName() +
-            "   •   " +
+            "    |    " +
             GetCommandPoints(
                 activeFaction
             ) +
@@ -2725,7 +2811,7 @@ public partial class GameController : MonoBehaviour
                 panel.width - 36f,
                 42f
             ),
-            "Command Re-roll — 1 CP",
+            "Command Re-roll  -  1 CP",
             StratagemTooltip(
                 "Command Re-roll"
             )
@@ -2739,7 +2825,7 @@ public partial class GameController : MonoBehaviour
                 activeFaction))
         {
             detachmentHeading +=
-                " — " +
+                "  -  " +
                 aeldariRules.DetachmentName(
                     activeFaction
                 ).ToUpper();
@@ -2820,7 +2906,7 @@ public partial class GameController : MonoBehaviour
                     cardWidth,
                     42f
                 ),
-                "Hungry Void — 1 CP",
+                "Hungry Void  -  1 CP",
                 "Protocol of the Hungry Void"))
             {
                 TryUiStratagem(
@@ -2836,7 +2922,7 @@ public partial class GameController : MonoBehaviour
                     cardWidth,
                     42f
                 ),
-                "Sudden Storm — 1 CP",
+                "Sudden Storm  -  1 CP",
                 "Protocol of the Sudden Storm"))
             {
                 TryUiStratagem(
@@ -2854,7 +2940,7 @@ public partial class GameController : MonoBehaviour
                     cardWidth,
                     42f
                 ),
-                "Conquering Tyrant — 1 CP",
+                "Conquering Tyrant  -  1 CP",
                 "Protocol of the Conquering Tyrant"))
             {
                 TryUiStratagem(
@@ -2870,7 +2956,7 @@ public partial class GameController : MonoBehaviour
                     cardWidth,
                     42f
                 ),
-                "Undying Legions — reactive",
+                "Undying Legions  -  reactive",
                 StratagemTooltip(
                     "Protocol of the Undying Legions"
                 )
@@ -2885,7 +2971,7 @@ public partial class GameController : MonoBehaviour
                     cardWidth,
                     42f
                 ),
-                "Vengeful Stars — reactive",
+                "Vengeful Stars  -  reactive",
                 StratagemTooltip(
                     "Protocol of the Vengeful Stars"
                 )
@@ -2898,7 +2984,7 @@ public partial class GameController : MonoBehaviour
                     cardWidth,
                     42f
                 ),
-                "Eternal Revenant — reactive",
+                "Eternal Revenant  -  reactive",
                 StratagemTooltip(
                     "Protocol of the Eternal Revenant"
                 )
@@ -3005,43 +3091,43 @@ public partial class GameController : MonoBehaviour
         switch (name)
         {
             case "Command Re-roll":
-                return "1 CP • After an eligible roll. Re-roll one die. Charge and staged attack windows offer this automatically when legal.";
+                return "1 CP  |  After an eligible roll. Re-roll one die. Charge and staged attack windows offer this automatically when legal.";
 
             case "Soulsight":
-                return "1 CP • Shooting phase • Select an eligible YNNARI unit that has not shot. Its ranged weapons gain Lethal Hits and Ignores Cover until end of phase.";
+                return "1 CP  |  Shooting phase  |  Select an eligible YNNARI unit that has not shot. Its ranged weapons gain Lethal Hits and Ignores Cover until end of phase.";
 
             case "Emissaries of Ynnead":
-                return "1 CP • Fight phase • YNNARI Infantry. Re-roll Hit rolls of 1; if below Starting Strength, re-roll failed Hit rolls instead.";
+                return "1 CP  |  Fight phase  |  YNNARI Infantry. Re-roll Hit rolls of 1; if below Starting Strength, re-roll failed Hit rolls instead.";
 
             case "Macabre Resilience":
-                return "1 CP • Reactive when an eligible YNNARI Infantry/Mounted unit is targeted. Attacks are -1 to Wound for the phase. Warboard opens the reaction automatically.";
+                return "1 CP  |  Reactive when an eligible YNNARI Infantry/Mounted unit is targeted. Attacks are -1 to Wound for the phase. Warboard opens the reaction automatically.";
 
             case "Parting the Veil":
-                return "2 CP • Reactive Fight-phase defence. Destroyed eligible models that have not fought can fight after the attacking unit finishes.";
+                return "2 CP  |  Reactive Fight-phase defence. Destroyed eligible models that have not fought can fight after the attacking unit finishes.";
 
             case "Pall of Dread":
-                return "1 CP • Reactive when an eligible YNNARI unit is destroyed on an objective you previously controlled. Secure that objective until the opponent exceeds your Level of Control.";
+                return "1 CP  |  Reactive when an eligible YNNARI unit is destroyed on an objective you previously controlled. Secure that objective until the opponent exceeds your Level of Control.";
 
             case "Death Answers Death":
-                return "1 CP • Reactive at the end of the opponent Shooting phase. One eligible YNNARI unit that lost models can shoot as if it were your Shooting phase.";
+                return "1 CP  |  Reactive at the end of the opponent Shooting phase. One eligible YNNARI unit that lost models can shoot as if it were your Shooting phase.";
 
             case "Protocol of the Hungry Void":
-                return "1 CP • Fight phase • Selected Necron unit gets +1 melee Strength; while led by a Necron Character, improve melee AP by 1.";
+                return "1 CP  |  Fight phase  |  Selected Necron unit gets +1 melee Strength; while led by a Necron Character, improve melee AP by 1.";
 
             case "Protocol of the Sudden Storm":
-                return "1 CP • Movement phase • Selected Necron unit's ranged weapons count as Assault until end of turn.";
+                return "1 CP  |  Movement phase  |  Selected Necron unit's ranged weapons count as Assault until end of turn.";
 
             case "Protocol of the Conquering Tyrant":
-                return "1 CP • Shooting phase • At half range, selected Necron unit re-rolls Hit rolls of 1; if led by a Necron Character it re-rolls failed Hit rolls.";
+                return "1 CP  |  Shooting phase  |  At half range, selected Necron unit re-rolls Hit rolls of 1; if led by a Necron Character it re-rolls failed Hit rolls.";
 
             case "Protocol of the Undying Legions":
-                return "1 CP • Reactive after a Necron unit loses models to an attack. Activate Reanimation Protocols immediately; led units receive the implemented bonus.";
+                return "1 CP  |  Reactive after a Necron unit loses models to an attack. Activate Reanimation Protocols immediately; led units receive the implemented bonus.";
 
             case "Protocol of the Vengeful Stars":
-                return "1 CP • Reactive after a Necron unit is destroyed by a Shooting attack. An eligible nearby Necron Character can retaliate against the attacker.";
+                return "1 CP  |  Reactive after a Necron unit is destroyed by a Shooting attack. An eligible nearby Necron Character can retaliate against the attacker.";
 
             case "Protocol of the Eternal Revenant":
-                return "1 CP • Reactive end-of-phase resurrection for an eligible destroyed Necron Infantry Character, returning with half wounds.";
+                return "1 CP  |  Reactive end-of-phase resurrection for an eligible destroyed Necron Infantry Character, returning with half wounds.";
 
             default:
                 return name;
@@ -3219,11 +3305,11 @@ public partial class GameController : MonoBehaviour
                 ),
                 "WARBOARD " + WarboardBuildInfo.CurrentVersion + " | " +
                 (IsXcomMode ? "XCOM" : "TRADITIONAL") +
-                " • " +
+                "  |  " +
                 battleSizeName.ToUpper() +
-                " • " +
+                "  |  " +
                 battlePoints +
-                " PTS • NEW RECRUIT / YELLOWSCRIBE"
+                " PTS  |  NEW RECRUIT / YELLOWSCRIBE"
             );
 
             GUI.Label(
@@ -3233,7 +3319,7 @@ public partial class GameController : MonoBehaviour
                     760,
                     42
                 ),
-                "New Recruit: Export → Integrations → YellowScribe (TTS). Paste each 8-character code below. YellowScribe codes expire quickly."
+                "New Recruit: Export  ->  Integrations  ->  YellowScribe (TTS). Paste each 8-character code below. YellowScribe codes expire quickly."
             );
 
             GUI.Label(
@@ -3382,10 +3468,10 @@ public partial class GameController : MonoBehaviour
                     760,
                     40
                 ),
-                missionPresetName + " • " +
+                missionPresetName + "  |  " +
                 BoardWidth.ToString("0.#") + " x " +
                 BoardDepth.ToString("0.#") +
-                " battlefield • " +
+                " battlefield  |  " +
                 DeploymentZoneWidth.ToString("0.#") +
                 " deployment zones. Load both rosters, then start deployment."
             );
@@ -3527,7 +3613,7 @@ public partial class GameController : MonoBehaviour
                 panel.width - 40f,
                 30f
             ),
-            "CHAPTER APPROVED 2026–27 — MISSION SETUP",
+            "CHAPTER APPROVED 2026 - 27  -  MISSION SETUP",
             heading
         );
 
@@ -3781,7 +3867,7 @@ public partial class GameController : MonoBehaviour
             ),
             "LAYOUT " +
             previewBattlefield.LayoutLabel +
-            " • " +
+            "  |  " +
             previewBattlefield.DisplayName
                 .ToUpper()))
         {
@@ -3815,11 +3901,11 @@ public partial class GameController : MonoBehaviour
                 500f,
                 42f
             ),
-            "60 × 44 • " +
+            "60  x  44  |  " +
             previewBattlefield.DisplayName +
-            " deployment • six objectives • Layout " +
+            " deployment  |  six objectives  |  Layout " +
             previewBattlefield.LayoutLabel +
-            " • roll-off winner takes first turn.",
+            "  |  roll-off winner takes first turn.",
             wrap
         );
 
@@ -3976,7 +4062,7 @@ public partial class GameController : MonoBehaviour
                 20f
             ),
             definition.DisplayName +
-            " • Layout " +
+            "  |  Layout " +
             definition.LayoutLabel
         );
     }
@@ -4072,7 +4158,7 @@ public partial class GameController : MonoBehaviour
                 ),
                 "AELDARI: " +
                 definition.DisplayName +
-                " — " +
+                "  -  " +
                 definition.RuleName,
                 heading
             );
@@ -4231,9 +4317,9 @@ public partial class GameController : MonoBehaviour
                 panel.width - 32f,
                 28f
             ),
-            "MISSION — ROUND " +
+            "MISSION  -  ROUND " +
             round +
-            " • LAYOUT " +
+            "  |  LAYOUT " +
             missionLayoutIndex,
             heading
         );
@@ -4301,7 +4387,7 @@ public partial class GameController : MonoBehaviour
                 24f
             ),
             ActiveFactionDisplayName() +
-            " — " +
+            "  -  " +
             activeState.PrimaryMission,
             heading
         );
@@ -4458,7 +4544,7 @@ public partial class GameController : MonoBehaviour
                 secondary.width - 24f,
                 24f
             ),
-            "SECONDARIES — " +
+            "SECONDARIES  -  " +
             activeState.SecondaryMode
                 .ToString()
                 .ToUpper(),
@@ -4660,9 +4746,9 @@ public partial class GameController : MonoBehaviour
             ),
             "Deck: " +
             state.SecondaryDeck.Count +
-            " • Hand: " +
+            "  |  Hand: " +
             state.SecondaryHand.Count +
-            "/2 • secondary scoring is capped at 15 VP per round / 45 VP total."
+            "/2  |  secondary scoring is capped at 15 VP per round / 45 VP total."
         );
     }
 
@@ -4817,7 +4903,7 @@ public partial class GameController : MonoBehaviour
                 panel.width - 160f,
                 26f
             ),
-            "BATTLE LOG — COMPLETE AUDIT TRAIL",
+            "BATTLE LOG  -  COMPLETE AUDIT TRAIL",
             heading
         );
 
@@ -5079,38 +5165,33 @@ public partial class GameController : MonoBehaviour
             (IsXcomMode
                 ? "XCOM / AUTOMATIC"
                 : "TRADITIONAL") +
-            "   â€¢   " +
+            "    |    " +
             battleSizeName.ToUpper(),
             WarboardV45Presentation.SubHeaderStyle
         );
 
         float phaseWidth =
             Mathf.Clamp(
-                Screen.width * 0.24f,
-                270f,
-                410f
+                Screen.width * 0.16f,
+                250f,
+                280f
             );
 
         Rect phaseRect =
             new Rect(
-                Mathf.Min(
-                    bar.x + 270f,
-                    bar.x +
-                        bar.width -
-                        phaseWidth -
-                        650f
-                ),
+                (Screen.width -
+                    phaseWidth) *
+                    0.5f,
                 bar.y + 10f,
                 phaseWidth,
                 32f
             );
-
         GUI.Label(
             phaseRect,
             roundText +
-            "   â€¢   " +
+            "    |    " +
             ActiveFactionDisplayName() +
-            "   â€¢   " +
+            "    |    " +
             phaseText,
             WarboardV45Presentation.PhasePillStyle
         );
@@ -5438,7 +5519,7 @@ public partial class GameController : MonoBehaviour
                 TotalBattleFocusTokens(
                     activeFaction
                 ) +
-                " • Enhancements in detachment: " +
+                "  |  Enhancements in detachment: " +
                 string.Join(
                     ", ",
                     enhancements
@@ -5453,8 +5534,8 @@ public partial class GameController : MonoBehaviour
                 panel.width - 32f,
                 64f
             ),
-            "Universal: Heavy • Cover • Stealth • Ignores Cover • Indirect • Lance • InSv • FNP • Deadly Demise\n" +
-            "Reserves: from Round 2 • >8 from enemies • Strategic Reserves use battlefield edge\n" +
+            "Universal: Heavy  |  Cover  |  Stealth  |  Ignores Cover  |  Indirect  |  Lance  |  InSv  |  FNP  |  Deadly Demise\n" +
+            "Reserves: from Round 2  |  >8 from enemies  |  Strategic Reserves use battlefield edge\n" +
             "Aeldari rules are resolved through the selected detachment module."
         );
     }
@@ -5542,6 +5623,30 @@ public partial class GameController : MonoBehaviour
                 width,
                 height
             );
+        // WARBOARD_V45_3_DEPLOYMENT_PANEL_LAYOUT
+        panel.width =
+            Mathf.Min(
+                Screen.width - 40f,
+                Mathf.Max(
+                    panel.width,
+                    900f
+                )
+            );
+
+        panel.height =
+            Mathf.Max(
+                panel.height,
+                360f
+            );
+
+        panel.x =
+            Mathf.Max(
+                20f,
+                (Screen.width -
+                    panel.width) * 0.5f
+            );
+        // WARBOARD_V45_2_CENTERED_DEPLOYMENT_PANEL
+        panel.x = Mathf.Max(12f, (Screen.width - panel.width) * 0.5f);
 
         // Fully opaque during deployment so world-space wound labels and
         // miniature highlights cannot visually leak through the menu.
@@ -5714,7 +5819,7 @@ public partial class GameController : MonoBehaviour
                     : "");
 
             string label =
-                (selected ? "► " : "") +
+                (selected ? ">  " : "") +
                 squad.DisplayName +
                 suffix;
 
@@ -5974,7 +6079,7 @@ public partial class GameController : MonoBehaviour
                 panel.width - 180f,
                 24f
             ),
-            "TRADITIONAL — ATTACK DECLARED",
+            "TRADITIONAL  -  ATTACK DECLARED",
             heading
         );
 
@@ -5988,7 +6093,7 @@ public partial class GameController : MonoBehaviour
             (traditionalAttackAttacker != null
                 ? traditionalAttackAttacker.DisplayName
                 : "Attacker") +
-            " → " +
+            "  ->  " +
             (traditionalAttackTarget != null
                 ? traditionalAttackTarget.DisplayName
                 : "Target") +
@@ -6103,7 +6208,7 @@ public partial class GameController : MonoBehaviour
                     panel.width - 32f,
                     28f
                 ),
-                "TRADITIONAL — FIRST-TURN ROLL-OFF",
+                "TRADITIONAL  -  FIRST-TURN ROLL-OFF",
                 title
             );
 
@@ -6264,7 +6369,7 @@ public partial class GameController : MonoBehaviour
                     panel.width - 32f,
                     28f
                 ),
-                "TRADITIONAL — ADVANCE",
+                "TRADITIONAL  -  ADVANCE",
                 title
             );
 
@@ -6364,7 +6469,7 @@ public partial class GameController : MonoBehaviour
                     panel.width - 32f,
                     28f
                 ),
-                "TRADITIONAL — CHARGE",
+                "TRADITIONAL  -  CHARGE",
                 title
             );
 
@@ -6376,7 +6481,7 @@ public partial class GameController : MonoBehaviour
                     58f
                 ),
                 traditionalChargeAttacker.DisplayName +
-                " → " +
+                "  ->  " +
                 traditionalChargeTarget.DisplayName +
                 "\nRoll 2D6 yourself and apply any tabletop rerolls yourself. Enter only the final total.",
                 wrap
@@ -6470,7 +6575,7 @@ public partial class GameController : MonoBehaviour
                     78f
                 ),
                 traditionalBattleShockUnit.DisplayName +
-                " • Leadership " +
+                "  |  Leadership " +
                 leadership +
                 "+\nRoll 2D6 yourself and resolve every tabletop modifier/reroll yourself. Warboard only needs the final state.",
                 wrap
@@ -6527,7 +6632,7 @@ public partial class GameController : MonoBehaviour
                     panel.width - 32f,
                     28f
                 ),
-                "REANIMATION PROTOCOLS — MANUAL",
+                "REANIMATION PROTOCOLS  -  MANUAL",
                 title
             );
 
@@ -6636,7 +6741,7 @@ public partial class GameController : MonoBehaviour
                 traditionalReanimationUnit.LivingModels +
                 "/" +
                 traditionalReanimationUnit.StartingModels +
-                " • Click a wounded living model on the battlefield to heal it.",
+                "  |  Click a wounded living model on the battlefield to heal it.",
                 wrap
             );
 

@@ -744,7 +744,7 @@ public partial class GameController : MonoBehaviour
             : "deployment zone";
 
         status =
-            "DEPLOYMENT — " +
+            "DEPLOYMENT  -  " +
             ActiveFactionDisplayName() +
             ": selected " +
             currentDeploymentSquad.DisplayName +

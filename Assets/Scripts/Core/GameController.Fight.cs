@@ -575,15 +575,15 @@ public partial class GameController : MonoBehaviour
 
         return
             weapon.displayName +
-            "  •  A " +
+            "   |   A " +
             attacks +
-            "  •  WS " +
+            "   |   WS " +
             weapon.skill +
-            "+  •  S " +
+            "+   |   S " +
             weapon.strength +
-            "  •  AP " +
+            "   |   AP " +
             weapon.ap +
-            "  •  D " +
+            "   |   D " +
             damage;
     }
 
@@ -652,7 +652,7 @@ public partial class GameController : MonoBehaviour
 
             status =
                 model.RoleName +
-                " → " +
+                "  ->  " +
                 normal[0].displayName +
                 ". Click an enemy target.";
 
@@ -686,7 +686,7 @@ public partial class GameController : MonoBehaviour
 
                         status =
                             model.RoleName +
-                            " → " +
+                            "  ->  " +
                             captured.displayName +
                             ". Click an enemy target.";
 
@@ -697,7 +697,7 @@ public partial class GameController : MonoBehaviour
         }
 
         OpenRuleChoice(
-            "SELECT MELEE WEAPON — " +
+            "SELECT MELEE WEAPON  -  " +
             model.RoleName,
             "Choose this model's normal melee profile. Any [EXTRA ATTACKS] profiles are added automatically. Then click the enemy target.",
             options.ToArray()

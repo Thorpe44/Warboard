@@ -23,19 +23,19 @@ public class WarboardBattleLogEntry
             return
                 "#" +
                 Sequence +
-                " • " +
+                "  |  " +
                 round +
-                " • " +
+                "  |  " +
                 (string.IsNullOrWhiteSpace(
                     Faction)
                     ? "SYSTEM"
                     : Faction) +
-                " • " +
+                "  |  " +
                 (string.IsNullOrWhiteSpace(
                     Phase)
                     ? "SETUP"
                     : Phase) +
-                " • " +
+                "  |  " +
                 Category;
         }
     }

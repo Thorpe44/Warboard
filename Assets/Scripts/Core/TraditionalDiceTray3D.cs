@@ -672,7 +672,7 @@ public class TraditionalDiceTray3D : MonoBehaviour
                 results.Length +
                 "D" +
                 group.Key +
-                " → [" +
+                "  ->  [" +
                 string.Join(
                     ", ",
                     results
@@ -783,7 +783,7 @@ public class TraditionalDiceTray3D : MonoBehaviour
         settledSince = -1f;
         settledText =
             PoolSummary() +
-            " rolling…";
+            " rolling...";
     }
 
     private Color DieColor(
@@ -1932,7 +1932,7 @@ public class TraditionalDiceTray3D : MonoBehaviour
         settledSince = -1f;
         settledText =
             selected.Count +
-            " selected dice rerolling…";
+            " selected dice rerolling...";
     }
 
     private void HandleTrayClick(
@@ -2084,7 +2084,7 @@ public class TraditionalDiceTray3D : MonoBehaviour
                 panel.width - 28f,
                 26f
             ),
-            "TRADITIONAL — FREE 3D POLYHEDRAL DICE TRAY",
+            "TRADITIONAL  -  FREE 3D POLYHEDRAL DICE TRAY",
             heading
         );
 
@@ -2316,7 +2316,7 @@ public class TraditionalDiceTray3D : MonoBehaviour
             ),
             "Pool: " +
             PoolSummary() +
-            "   •   " +
+            "    |    " +
             RequestedPoolTotal() +
             "/" +
             MaxDice +
@@ -2332,7 +2332,7 @@ public class TraditionalDiceTray3D : MonoBehaviour
             ),
             settledText +
             (selectedCount > 0
-                ? " • " +
+                ? "  |  " +
                   selectedCount +
                   " selected"
                 : "")

@@ -106,7 +106,7 @@ public partial class GameController
         }
 
         Custodes11QueueChoice(
-            "SHIELD HOST — MARTIAL MASTERY",
+            "SHIELD HOST  -  MARTIAL MASTERY",
             "At the start of the battle round, choose the Martial Mastery effect until the start of the next battle round, or choose neither.",
             new RuleChoiceOption(
                 "Critical Hits on unmodified 5+",
@@ -325,7 +325,7 @@ public partial class GameController
             options.Add(
                 new RuleChoiceOption(
                     captured.Name +
-                    " — " +
+                    "  -  " +
                     captured.Cost +
                     " CP",
                     () =>
@@ -353,7 +353,7 @@ public partial class GameController
             "ADEPTUS CUSTODES REACTION",
             request.Unit != null
                 ? request.Unit.DisplayName +
-                  " — choose an available faction rule."
+                  "  -  choose an available faction rule."
                 : "Choose an available Adeptus Custodes faction rule.",
             options.ToArray());
 
@@ -391,7 +391,7 @@ public partial class GameController
             if (DrawStratagemActionButton(
                     card,
                     rule.Name +
-                    " — " +
+                    "  -  " +
                     rule.Cost +
                     " CP" +
                     (reactive
@@ -912,13 +912,13 @@ public partial class GameController
         }
 
         OpenRuleChoice(
-            "MARTIAL KA’TAH — " +
+            "MARTIAL KA’TAH  -  " +
             attacker.DisplayName,
             "Each time this unit is selected to fight, choose one Ka’tah Stance until it has finished making its attacks.",
             new[]
             {
                 new RuleChoiceOption(
-                    "DACATARAI — SUSTAINED HITS 1",
+                    "DACATARAI  -  SUSTAINED HITS 1",
                     () =>
                     {
                         CloseRuleChoice();
@@ -928,7 +928,7 @@ public partial class GameController
                         TryFight(attacker, target);
                     }),
                 new RuleChoiceOption(
-                    "RENDAX — LETHAL HITS",
+                    "RENDAX  -  LETHAL HITS",
                     () =>
                     {
                         CloseRuleChoice();
@@ -981,7 +981,7 @@ public partial class GameController
         if (IsXcomMode)
         {
             OpenRuleChoice(
-                "THE HAMMER FALLS — CHARGE RE-ROLL",
+                "THE HAMMER FALLS  -  CHARGE RE-ROLL",
                 attacker.DisplayName +
                 " made an ingress move this turn and can re-roll its Charge roll of " +
                 roll +
@@ -1021,7 +1021,7 @@ public partial class GameController
         }
 
         OpenRuleChoice(
-            "THE HAMMER FALLS — CHARGE RE-ROLL",
+            "THE HAMMER FALLS  -  CHARGE RE-ROLL",
             attacker.DisplayName +
             " can re-roll its Charge roll of " +
             roll +
@@ -1143,7 +1143,7 @@ public partial class GameController
         }
 
         Custodes11QueueChoice(
-            "BLADE IMPERATOR — ONCE PER BATTLE",
+            "BLADE IMPERATOR  -  ONCE PER BATTLE",
             "After this Charge move, all enemy units within 6 inches of the bearer can be forced to take a Battle-shock test. Use the once-per-battle effect now?",
             new RuleChoiceOption(
                 "Use Battle-shock pulse",
@@ -1234,8 +1234,8 @@ public partial class GameController
 
         Custodes11QueueChoice(
             fromSlayer
-                ? "SLAYER OF CHAMPIONS — NEW QUARRY"
-                : "AURIC CHAMPIONS — ASSEMBLAGE OF MIGHT",
+                ? "SLAYER OF CHAMPIONS  -  NEW QUARRY"
+                : "AURIC CHAMPIONS  -  ASSEMBLAGE OF MIGHT",
             "Select the enemy unit to mark.",
             options.ToArray());
 
@@ -1375,7 +1375,7 @@ public partial class GameController
                     CloseRuleChoice));
 
             Custodes11QueueChoice(
-                "CEASELESS VIGILANCE — " +
+                "CEASELESS VIGILANCE  -  " +
                 capturedSource.DisplayName,
                 "Select one visible enemy unit within 12 inches. It is nulled and has +3 inches detection range.",
                 options.ToArray());
@@ -1564,7 +1564,7 @@ public partial class GameController
                             CloseRuleChoice));
 
                     Custodes11QueueChoice(
-                        "INSPIRATIONAL EXEMPLAR — ONCE PER BATTLE",
+                        "INSPIRATIONAL EXEMPLAR  -  ONCE PER BATTLE",
                         "Select a Battle-shocked friendly ADEPTUS CUSTODES unit within 12 inches to cease being Battle-shocked.",
                         options.ToArray());
                 }
@@ -1584,7 +1584,7 @@ public partial class GameController
                     captured.UnitId;
 
                 Custodes11QueueChoice(
-                    "VEILED BLADE — ONCE PER BATTLE",
+                    "VEILED BLADE  -  ONCE PER BATTLE",
                     "Triple the bearer’s Objective Control until the end of this turn?",
                     new RuleChoiceOption(
                         "Use Veiled Blade",
@@ -1647,7 +1647,7 @@ public partial class GameController
                     unit.JoinedActionController();
 
                 Custodes11QueueChoice(
-                    "MARTIAL PHILOSOPHER — ONCE PER BATTLE",
+                    "MARTIAL PHILOSOPHER  -  ONCE PER BATTLE",
                     context.Source.DisplayName +
                     " ended a move within 8 inches of " +
                     captured.DisplayName +

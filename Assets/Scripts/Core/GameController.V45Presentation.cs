@@ -67,7 +67,7 @@ public partial class GameController : MonoBehaviour
         string selectedModelText =
             selectedModel != null &&
             selectedModel.IsAlive
-            ? "   •   MODEL " +
+            ? "    |    MODEL " +
               selectedModel.CurrentWounds +
               "/" +
               selectedModel.MaxWounds +
@@ -77,14 +77,14 @@ public partial class GameController : MonoBehaviour
         string stats =
             modelText +
             selectedModelText +
-            "   •   M " +
+            "    |    M " +
             selectedSquad.GetMove()
                 .ToString("0.#") +
             "\"   T " +
             selectedSquad.Toughness +
             "   SV " +
             selectedSquad.BaseSave +
-            "+   •   " +
+            "+    |    " +
             state;
 
         GUI.Label(

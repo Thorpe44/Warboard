@@ -1071,7 +1071,7 @@ public partial class GameController
         );
 
         OpenRuleChoice(
-            "TRANSPORT CAPACITY — " +
+            "TRANSPORT CAPACITY  -  " +
             transport.DisplayName,
             "The imported datasheet text did not expose a transport capacity. Select the printed datasheet capacity; Warboard will not invent one.",
             options
@@ -1279,7 +1279,7 @@ public partial class GameController
         // Otherwise Tactical is mandatory if it can be set up. Combat is only
         // available when a Tactical setup is not possible.
         OpenRuleChoice(
-            "DISEMBARK — " + passenger.DisplayName,
+            "DISEMBARK  -  " + passenger.DisplayName,
             "18.04: use Tactical Disembark if a legal 3\" unengaged setup is possible. Use Combat Disembark only if Tactical setup is impossible.",
             new[]
             {
@@ -2032,7 +2032,7 @@ public partial class GameController
         );
 
         OpenRuleChoice(
-            "EXPLOSIVES — 1CP",
+            "EXPLOSIVES  -  1CP",
             "Select one visible unengaged enemy within 8\".",
             options
         );
@@ -2111,7 +2111,7 @@ public partial class GameController
                         if (!IsXcomMode)
                         {
                             OpenTraditionalNumericPrompt(
-                                "CRUSHING IMPACT — 1s",
+                                "CRUSHING IMPACT  -  1s",
                                 "Roll " + dice +
                                 " D6. Enter how many dice rolled a 1.",
                                 0,
@@ -2120,7 +2120,7 @@ public partial class GameController
                                 dice,
                                 selfWounds =>
                                     OpenTraditionalNumericPrompt(
-                                        "CRUSHING IMPACT — 5+",
+                                        "CRUSHING IMPACT  -  5+",
                                         "Using the same roll, enter how many dice rolled 5+ (maximum 6 inflicted).",
                                         0,
                                         dice,
@@ -2165,7 +2165,7 @@ public partial class GameController
         );
 
         OpenRuleChoice(
-            "CRUSHING IMPACT — 1CP",
+            "CRUSHING IMPACT  -  1CP",
             "Select one enemy unit engaged with the charging MONSTER/VEHICLE.",
             options
         );
@@ -2335,7 +2335,7 @@ public partial class GameController
         );
 
         OpenRuleChoice(
-            "RAPID INGRESS — END OF MOVEMENT",
+            "RAPID INGRESS  -  END OF MOVEMENT",
             "The opposing player may bring in one non-AIRCRAFT unit from Strategic Reserves for 1CP.",
             options
         );
@@ -2421,7 +2421,7 @@ public partial class GameController
         );
 
         OpenRuleChoice(
-            "HEROIC INTERVENTION — END OF CHARGE",
+            "HEROIC INTERVENTION  -  END OF CHARGE",
             "The opposing player may resolve a Heroic Intervention charge.",
             options
         );
@@ -2798,7 +2798,7 @@ public partial class GameController
         );
 
         OpenRuleChoice(
-            "EPIC CHALLENGE — 1CP",
+            "EPIC CHALLENGE  -  1CP",
             "The unit was selected to fight. Select one CHARACTER model to gain PRECISION on its melee weapons until the end of the phase.",
             options
         );
@@ -2913,7 +2913,7 @@ public partial class GameController
         );
 
         OpenRuleChoice(
-            "COUNTEROFFENSIVE — 2CP",
+            "COUNTEROFFENSIVE  -  2CP",
             "Just after the enemy resolved its attacks, select an eligible friendly unit to fight next.",
             options
         );
@@ -2959,7 +2959,7 @@ public partial class GameController
         }
 
         OpenRuleChoice(
-            "INSANE BRAVERY — 1CP",
+            "INSANE BRAVERY  -  1CP",
             "Just before the Battle-shock roll for " +
             unit.DisplayName +
             ", make that roll automatically successful? This can only be used once per battle.",
@@ -3293,7 +3293,7 @@ public partial class GameController
 
             capacityOptions.Add(
                 new RuleChoiceOption(
-                    "Leave empty — destroy transport",
+                    "Leave empty  -  destroy transport",
                     () =>
                     {
                         CloseRuleChoice();
@@ -3306,7 +3306,7 @@ public partial class GameController
             );
 
             OpenRuleChoice(
-                "DECLARE BATTLE FORMATIONS — " +
+                "DECLARE BATTLE FORMATIONS  -  " +
                 empty.DisplayName,
                 "The imported datasheet did not expose this DEDICATED TRANSPORT's capacity. Select the printed capacity before assigning its passenger.",
                 capacityOptions
@@ -3366,7 +3366,7 @@ public partial class GameController
 
         options.Add(
             new RuleChoiceOption(
-                "Leave empty — destroy transport",
+                "Leave empty  -  destroy transport",
                 () =>
                 {
                     CloseRuleChoice();
@@ -3379,7 +3379,7 @@ public partial class GameController
         );
 
         OpenRuleChoice(
-            "DECLARE BATTLE FORMATIONS — " +
+            "DECLARE BATTLE FORMATIONS  -  " +
             empty.DisplayName,
             "A friendly unit must start embarked within each DEDICATED TRANSPORT. Choose a passenger or leave it empty and destroy it.",
             options

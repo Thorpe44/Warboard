@@ -332,7 +332,7 @@ public partial class GameController : MonoBehaviour
                     "OBJECTIVE",
                     objective.name,
                     previous +
-                    " → " +
+                    "  ->  " +
                     liveState
                 );
             }

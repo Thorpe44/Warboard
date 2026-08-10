@@ -3930,9 +3930,9 @@ public class MissionSystem
             MissionRegistry.Display(
                 state.Disposition
             ) +
-            " • " +
+            "  |  " +
             state.PrimaryMission +
-            " • " +
+            "  |  " +
             state.SecondaryMode.ToString();
     }
 }

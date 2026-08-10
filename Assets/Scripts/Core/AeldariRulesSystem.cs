@@ -468,7 +468,7 @@ public class AeldariRulesSystem
 
                         return
                             definition.DisplayName +
-                            " — " +
+                            "  -  " +
                             definition.RuleName +
                             ": " +
                             definition.RuleSummary;

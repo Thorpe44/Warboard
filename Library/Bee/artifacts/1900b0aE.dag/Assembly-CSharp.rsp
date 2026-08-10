@@ -445,6 +445,7 @@
 "Assets/Scripts/Core/WarboardBootstrap.cs"
 "Assets/Scripts/Core/WarboardBuildInfo.cs"
 "Assets/Scripts/Core/WarboardResolutionMode.cs"
+"Assets/Scripts/Core/WarboardV45PhysicalSideTrays.cs"
 "Assets/Scripts/Core/WarboardV45Presentation.cs"
 "Assets/Scripts/Core/WeaponRuleParser.cs"
 "Assets/Scripts/Core/WoundDisplayBillboard.cs"
