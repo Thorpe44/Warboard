@@ -1025,12 +1025,19 @@ public class SquadController : MonoBehaviour
     public bool HasKeyword(
         string keyword)
     {
-        if (NecronsFactionPack11.GrantsKeyword(
+                if (NecronsFactionPack11.GrantsKeyword(
                 this, keyword))
         {
             return true;
         }
 
+        // WARBOARD_V47_ENHANCEMENT_KEYWORDS
+        if (WarboardV47FactionRules.GrantsKeyword(
+                this,
+                keyword))
+        {
+            return true;
+        }
 
         if (HasOwnKeyword(keyword))
             return true;
@@ -1263,11 +1270,24 @@ public class SquadController : MonoBehaviour
             return 0;
         }
 
-        if (JoinedActionController().IsBattleShocked)
+                // WARBOARD_V47_BATTLESHOCK_OC_OVERRIDE
+        int battleShockOverride =
+            WarboardV47FactionRules
+                .BattleShockedObjectiveControl(
+                    this,
+                    model
+                );
+
+        if (JoinedActionController().IsBattleShocked &&
+            battleShockOverride < 0)
+        {
             return 0;
+        }
 
         int objectiveControl =
-            model.ObjectiveControl;
+            battleShockOverride >= 0
+            ? battleShockOverride
+            : model.ObjectiveControl;
 
         if (model.Squad != null &&
             model.Squad
@@ -1291,6 +1311,15 @@ public class SquadController : MonoBehaviour
             NecronsFactionPack11.ModifyObjectiveControl(
                 JoinedActionController(), model, objectiveControl);
 
+        // WARBOARD_V47_ENHANCEMENT_OC
+        objectiveControl =
+            WarboardV47FactionRules
+                .ModifyObjectiveControl(
+                    JoinedActionController(),
+                    model,
+                    objectiveControl
+                );
+
         return Mathf.Max(
             0,
             objectiveControl
@@ -1304,9 +1333,9 @@ public class SquadController : MonoBehaviour
         SquadController actionUnit =
             JoinedActionController();
 
-        if (actionUnit.IsBattleShocked)
-            return 0;
-
+                // WARBOARD_V47_OC_PER_MODEL
+        // EffectiveObjectiveControl handles normal Battle-shock (OC 0) and
+        // exact bearer exceptions such as Stoic Defender.
         int total = 0;
 
         foreach (ModelToken model
@@ -1325,12 +1354,11 @@ public class SquadController : MonoBehaviour
                 continue;
             }
 
-            int oc =
+                        int oc =
                 actionUnit
-                    .AeldariObjectiveControlOverride > 0
-                ? actionUnit
-                    .AeldariObjectiveControlOverride
-                : model.ObjectiveControl;
+                    .EffectiveObjectiveControl(
+                        model
+                    );
 
             total +=
                 Mathf.Max(0, oc);
@@ -1478,6 +1506,14 @@ public class SquadController : MonoBehaviour
 
         foreach (IUnitAbility ability in abilities)
             value = ability.ModifySave(this, attacker, value);
+
+        // WARBOARD_V47_ENHANCEMENT_SAVE
+        value =
+            WarboardV47FactionRules
+                .SaveOverride(
+                    this,
+                    value
+                );
 
         return Mathf.Clamp(value, 2, 6);
     }

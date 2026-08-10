@@ -76,6 +76,35 @@ public static class RulesEngine
         List<WeaponAttackSelection> selections,
         AttackMode mode)
     {
+        // WARBOARD_V47_AUTOMATIC_ATTACK_LEDGER
+        WarboardAttackDieLedger47.Clear();
+
+        string v47TargetReason;
+
+        if (!WarboardV47FactionRules.CanAttackTarget(
+                attacker,
+                target,
+                mode,
+                out v47TargetReason))
+        {
+            return new AttackResult(
+                v47TargetReason,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            );
+        }
+
+        WarboardRuleEventBus47.RaiseTargetSelected(
+            game,
+            attacker,
+            target,
+            mode
+        );
+
         int totalAttacks = 0;
         int totalHits = 0;
         int totalWounds = 0;
@@ -160,10 +189,14 @@ public static class RulesEngine
                     game, attacker, model, weapon, mode, target);
 
             // WARBOARD_V46_RULES_STANDARD_ATTACKS
+            // WARBOARD_V47_MODEL_AWARE_ADDITIONAL_ATTACKS
             attacks +=
                 WarboardFactionExtensionHub
                     .AdditionalAttacks(
+                        game,
                         attacker,
+                        target,
+                        model,
                         weapon,
                         mode
                     );
@@ -428,6 +461,16 @@ bool precision =
                         mode
                     );
 
+            // WARBOARD_V47_CRITICAL_PRECISION_FLAG
+            bool precisionOnCriticalHit =
+                WarboardFactionExtensionHub
+                    .GrantsPrecisionOnCriticalHit(
+                        attacker,
+                        target,
+                        weapon,
+                        mode
+                    );
+
 int melta =
                 halfRange
                 ? Mathf.Max(
@@ -440,8 +483,11 @@ int melta =
                   )
                 : 0;
 
-            int hits = 0;
+                        int hits = 0;
             int lethalAutoWounds = 0;
+
+            int v47PrecisionCriticalHits = 0;
+            int v47PrecisionLethalAutoWounds = 0;
 
             for (int i = 0;
                  i < attacks;
@@ -573,17 +619,73 @@ if (!aeldari11UniversalState.cannotRerollHits &&
                     }
                 );
 
-                if (!AeldariFactionPack11.AutomaticHitSucceeds(
-                        hitRoll, skill, aeldari11UniversalState))
+                                bool v47HitSuccess =
+                    AeldariFactionPack11.AutomaticHitSucceeds(
+                        hitRoll,
+                        skill,
+                        aeldari11UniversalState
+                    );
+
+                bool v47CriticalHit =
+                    WarboardV47FactionRules.IsCriticalHit(
+                        attacker,
+                        hitRoll,
+                        v47HitSuccess
+                    );
+
+                bool v47HitPrecision =
+                    precision ||
+                    (precisionOnCriticalHit &&
+                     v47CriticalHit);
+
+                WarboardAttackDieLedger47.RecordHit(
+                    game,
+                    attacker,
+                    target,
+                    model,
+                    weapon,
+                    mode,
+                    hitRoll,
+                    v47HitSuccess,
+                    v47CriticalHit,
+                    false,
+                    v47HitPrecision,
+                    v47CriticalHit && lethalHits,
+                    v47CriticalHit
+                    ? sustainedHits
+                    : 0
+                );
+
+                WarboardRuleEventBus47.RaiseHit(
+                    game,
+                    attacker,
+                    target,
+                    model,
+                    weapon,
+                    mode,
+                    hitRoll,
+                    v47HitSuccess,
+                    v47CriticalHit,
+                    false
+                );
+
+                if (!v47HitSuccess)
                     continue;
 
                 hits++;
 
-                if (NecronsFactionPack11.IsCriticalHit(
-                        attacker, hitRoll, true))
+                if (v47CriticalHit)
                 {
+                    if (v47HitPrecision)
+                        v47PrecisionCriticalHits++;
+
                     if (lethalHits)
+                    {
                         lethalAutoWounds++;
+
+                        if (v47HitPrecision)
+                            v47PrecisionLethalAutoWounds++;
+                    }
 
                     if (sustainedHits > 0)
                     {
@@ -601,11 +703,30 @@ if (!aeldari11UniversalState.cannotRerollHits &&
 
             int devastatingWounds = 0;
 
-            int normalWoundRolls =
+                        int normalWoundRolls =
                 Mathf.Max(
                     0,
                     hits -
                     lethalAutoWounds
+                );
+
+            // Critical-hit Precision follows the original successful hit into
+            // its wound/save allocation. Sustained extra hits are not Critical
+            // Hits and therefore do not inherit Precision.
+            int v47PrecisionNormalWounds =
+                precision
+                ? lethalAutoWounds
+                : v47PrecisionLethalAutoWounds;
+
+            int v47PrecisionDevastatingWounds = 0;
+
+            int v47PrecisionWoundRolls =
+                precision
+                ? normalWoundRolls
+                : Mathf.Max(
+                    0,
+                    v47PrecisionCriticalHits -
+                    v47PrecisionLethalAutoWounds
                 );
 
                         // WARBOARD_V46_RULES_STANDARD_STRENGTH
@@ -807,6 +928,38 @@ if (!aeldari11UniversalState.cannotRerollHits &&
                     }
                 );
 
+                                bool v47WoundPrecision =
+                    precision ||
+                    i < v47PrecisionWoundRolls;
+
+                WarboardAttackDieLedger47.RecordWound(
+                    game,
+                    attacker,
+                    target,
+                    model,
+                    weapon,
+                    mode,
+                    woundRoll,
+                    success,
+                    critical,
+                    alreadyRerolled,
+                    v47WoundPrecision,
+                    success && critical && devastating
+                );
+
+                WarboardRuleEventBus47.RaiseWound(
+                    game,
+                    attacker,
+                    target,
+                    model,
+                    weapon,
+                    mode,
+                    woundRoll,
+                    success,
+                    critical,
+                    alreadyRerolled
+                );
+
                 if (!success)
                     continue;
 
@@ -814,10 +967,16 @@ if (!aeldari11UniversalState.cannotRerollHits &&
                     devastating)
                 {
                     devastatingWounds++;
+
+                    if (v47WoundPrecision)
+                        v47PrecisionDevastatingWounds++;
                 }
                 else
                 {
                     normalWounds++;
+
+                    if (v47WoundPrecision)
+                        v47PrecisionNormalWounds++;
                 }
             }
 
@@ -841,16 +1000,20 @@ int failedSaves = 0;
             int modelsKilled = 0;
             int coverSaves = 0;
 
-            for (int i = 0;
+                        for (int i = 0;
                  i < normalWounds;
                  i++)
             {
+                bool v47SavePrecision =
+                    precision ||
+                    i < v47PrecisionNormalWounds;
+
                 ModelToken allocated =
                     GetAllocationModel(
                         game,
                         model,
                         target,
-                        precision
+                        v47SavePrecision
                     );
 
                 if (allocated == null)
@@ -926,16 +1089,20 @@ int failedSaves = 0;
             // critical wound inflicts mortal wounds equal to D. Excess mortal
             // wounds from each individual critical wound cannot spill into a
             // second model.
-            for (int i = 0;
+                        for (int i = 0;
                  i < devastatingWounds;
                  i++)
             {
+                bool v47DevastatingPrecision =
+                    precision ||
+                    i < v47PrecisionDevastatingWounds;
+
                 ModelToken allocated =
                     GetAllocationModel(
                         game,
                         model,
                         target,
-                        precision
+                        v47DevastatingPrecision
                     );
 
                 if (allocated == null)
@@ -1148,6 +1315,20 @@ int failedSaves = 0;
             text +=
                 " Target unit destroyed.";
         }
+
+                // WARBOARD_V47_AUTOMATIC_ATTACK_SUMMARY
+        WarboardRuleEventBus47.RaiseAttackSummary(
+            game,
+            attacker,
+            target,
+            mode,
+            totalAttacks,
+            totalHits,
+            totalWounds,
+            totalWoundsLost,
+            totalModelsKilled,
+            "Automatic RulesEngine attack resolved."
+        );
 
         return new AttackResult(
             text,

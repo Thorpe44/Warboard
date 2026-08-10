@@ -148,10 +148,28 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
-        NotifyChargeDeclared(
+                // WARBOARD_V47_CHARGE_TARGET_STATE
+        string v47TargetReason;
 
+        if (!WarboardV47FactionRules.CanAttackTarget(
+                attacker,
+                target,
+                AttackMode.Melee,
+                out v47TargetReason))
+        {
+            status = v47TargetReason;
+            return;
+        }
+
+        WarboardRuleEventBus47.RaiseTargetSelected(
+            this,
             attacker,
+            target,
+            AttackMode.Melee
+        );
 
+        NotifyChargeDeclared(
+            attacker,
             target);
 
 

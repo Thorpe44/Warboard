@@ -270,6 +270,11 @@ public partial class GameController
             NecronsFactionPack11.DetectionRangeBonus(
                 target.Squad != null
                     ? target.Squad.JoinedActionController()
+                    : null) +
+            // WARBOARD_V47_DETECTION_RANGE_STATE
+            WarboardFactionExtensionHub.DetectionRangeModifier(
+                target.Squad != null
+                    ? target.Squad.JoinedActionController()
                     : null);
 
         if (Core11GoneToGround(target))

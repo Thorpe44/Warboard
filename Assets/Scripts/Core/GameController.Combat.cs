@@ -449,6 +449,28 @@ public partial class GameController : MonoBehaviour
             return;
         }
 
+        // WARBOARD_V47_TARGET_SELECTION_EVENT
+        string v47TargetReason;
+
+        if (!WarboardV47FactionRules.CanAttackTarget(
+                attacker,
+                target,
+                attackMode,
+                out v47TargetReason))
+        {
+            status = v47TargetReason;
+            return;
+        }
+
+        WarboardAttackDieLedger47.Clear();
+
+        WarboardRuleEventBus47.RaiseTargetSelected(
+            this,
+            attacker,
+            target,
+            attackMode
+        );
+
         ClearArmedCommandReroll();
 
         GameEventBus.Raise(
@@ -705,6 +727,20 @@ public partial class GameController : MonoBehaviour
 
         System.Action completionCallback =
             interactiveAttackCompletionCallback;
+
+        // WARBOARD_V47_INTERACTIVE_ATTACK_SUMMARY
+        WarboardRuleEventBus47.RaiseAttackSummary(
+            this,
+            resolvedAttack.Attacker,
+            resolvedAttack.Target,
+            resolvedAttack.Mode,
+            resolvedAttack.TotalAttacks,
+            resolvedAttack.TotalHits,
+            resolvedAttack.TotalWounds,
+            resolvedAttack.TotalWoundsLost,
+            resolvedAttack.TotalModelsKilled,
+            "Interactive/XCOM attack resolved."
+        );
 
         interactiveAttack = null;
         interactiveAttackCompletionCallback = null;
