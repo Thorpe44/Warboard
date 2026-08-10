@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -199,6 +199,14 @@ public partial class GameController : MonoBehaviour
         SetObjectColor(
             terrain,
             color
+        );
+
+        // WARBOARD_V45_MISSION_TERRAIN_STYLE
+        WarboardV45Presentation.StyleTerrain(
+            terrain,
+            spec.Trait,
+            spec.Id,
+            spec.Size
         );
     }
 

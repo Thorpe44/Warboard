@@ -3178,6 +3178,8 @@ public partial class GameController : MonoBehaviour
 
     private void OnGUI()
     {
+        // WARBOARD_V45_UI_THEME
+        WarboardV45Presentation.ApplyGuiTheme();
         if (battleSetupMode)
         {
             DrawBattleSetupPanel();
@@ -3462,6 +3464,7 @@ public partial class GameController : MonoBehaviour
         }
 
         DrawContextActionBar();
+        DrawV45SelectedUnitCard();
         DrawStatusToast();
         DrawDiceTray();
     }
@@ -5024,51 +5027,25 @@ public partial class GameController : MonoBehaviour
 
     private void DrawTopCommandBar()
     {
+        // WARBOARD_V45_TOP_COMMAND_BAR
         Rect bar =
             new Rect(
                 10f,
-                10f,
+                8f,
                 Screen.width - 20f,
-                46f
+                52f
             );
-
-        DrawTintedBox(
-            bar,
-            new Color(
-                0.035f,
-                0.04f,
-                0.055f,
-                0.97f
-            )
-        );
 
         Color accent =
             FactionColor(
                 activeFaction
             );
 
-        DrawTintedBox(
-            new Rect(
-                bar.x,
-                bar.y +
-                    bar.height -
-                    3f,
-                bar.width,
-                3f
-            ),
-            accent
+        WarboardV45Presentation.DrawPanel(
+            bar,
+            accent,
+            true
         );
-
-        GUIStyle title =
-            new GUIStyle(
-                GUI.skin.label
-            );
-
-        title.fontSize = 16;
-        title.fontStyle =
-            FontStyle.Bold;
-        title.alignment =
-            TextAnchor.MiddleLeft;
 
         string phaseText =
             deploymentMode
@@ -5082,24 +5059,60 @@ public partial class GameController : MonoBehaviour
 
         GUI.Label(
             new Rect(
-                bar.x + 14f,
+                bar.x + 16f,
                 bar.y + 7f,
-                460f,
-                30f
+                185f,
+                22f
             ),
-            "WARBOARD " + WarboardBuildInfo.CurrentVersion + "   •   " +
+            "WARBOARD " +
+            WarboardBuildInfo.CurrentVersion,
+            WarboardV45Presentation.HeaderStyle
+        );
+
+        GUI.Label(
+            new Rect(
+                bar.x + 17f,
+                bar.y + 30f,
+                250f,
+                16f
+            ),
             (IsXcomMode
-                ? "XCOM"
+                ? "XCOM / AUTOMATIC"
                 : "TRADITIONAL") +
-            "   •   " +
-            battleSizeName.ToUpper() +
-            "   •   " +
+            "   â€¢   " +
+            battleSizeName.ToUpper(),
+            WarboardV45Presentation.SubHeaderStyle
+        );
+
+        float phaseWidth =
+            Mathf.Clamp(
+                Screen.width * 0.24f,
+                270f,
+                410f
+            );
+
+        Rect phaseRect =
+            new Rect(
+                Mathf.Min(
+                    bar.x + 270f,
+                    bar.x +
+                        bar.width -
+                        phaseWidth -
+                        650f
+                ),
+                bar.y + 10f,
+                phaseWidth,
+                32f
+            );
+
+        GUI.Label(
+            phaseRect,
             roundText +
-            "   •   " +
+            "   â€¢   " +
             ActiveFactionDisplayName() +
-            "   •   " +
+            "   â€¢   " +
             phaseText,
-            title
+            WarboardV45Presentation.PhasePillStyle
         );
 
         float right =
@@ -5109,22 +5122,24 @@ public partial class GameController : MonoBehaviour
 
         if (!deploymentMode)
         {
-            right -= 118f;
+            right -= 124f;
 
             if (GUI.Button(
                 new Rect(
                     right,
-                    bar.y + 7f,
-                    110f,
-                    30f
+                    bar.y + 9f,
+                    116f,
+                    34f
                 ),
-                "NEXT PHASE"))
+                "NEXT PHASE  >",
+                WarboardV45Presentation
+                    .PrimaryButtonStyle))
             {
                 NextPhase();
             }
         }
 
-        right -= 84f;
+        right -= 86f;
 
         GUI.enabled =
             !IsXcomMode;
@@ -5132,15 +5147,17 @@ public partial class GameController : MonoBehaviour
         if (GUI.Button(
             new Rect(
                 right,
-                bar.y + 7f,
-                76f,
-                30f
+                bar.y + 9f,
+                78f,
+                34f
             ),
             IsXcomMode
             ? "AUTO"
             : (showDiceTray
-                ? "HIDE 3D"
-                : "3D DICE")))
+                ? "HIDE DICE"
+                : "3D DICE"),
+            WarboardV45Presentation
+                .ToolbarButtonStyle))
         {
             showDiceTray =
                 !showDiceTray;
@@ -5156,11 +5173,13 @@ public partial class GameController : MonoBehaviour
         if (GUI.Button(
             new Rect(
                 right,
-                bar.y + 7f,
+                bar.y + 9f,
                 100f,
-                30f
+                34f
             ),
-            "STRATAGEMS"))
+            "STRATAGEMS",
+            WarboardV45Presentation
+                .ToolbarButtonStyle))
         {
             showStratagemMenu =
                 !showStratagemMenu;
@@ -5174,16 +5193,18 @@ public partial class GameController : MonoBehaviour
 
         GUI.enabled = true;
 
-        right -= 106f;
+        right -= 104f;
 
         if (GUI.Button(
             new Rect(
                 right,
-                bar.y + 7f,
-                98f,
-                30f
+                bar.y + 9f,
+                96f,
+                34f
             ),
-            "COMMANDS"))
+            "COMMANDS",
+            WarboardV45Presentation
+                .ToolbarButtonStyle))
         {
             showBasicCommandsPanel =
                 !showBasicCommandsPanel;
@@ -5198,16 +5219,18 @@ public partial class GameController : MonoBehaviour
             }
         }
 
-        right -= 72f;
+        right -= 70f;
 
         if (GUI.Button(
             new Rect(
                 right,
-                bar.y + 7f,
-                64f,
-                30f
+                bar.y + 9f,
+                62f,
+                34f
             ),
-            "LOG"))
+            "LOG",
+            WarboardV45Presentation
+                .ToolbarButtonStyle))
         {
             showBattleLog =
                 !showBattleLog;
@@ -5222,16 +5245,18 @@ public partial class GameController : MonoBehaviour
             }
         }
 
-        right -= 100f;
+        right -= 98f;
 
         if (GUI.Button(
             new Rect(
                 right,
-                bar.y + 7f,
-                92f,
-                30f
+                bar.y + 9f,
+                90f,
+                34f
             ),
-            "MISSION"))
+            "MISSION",
+            WarboardV45Presentation
+                .ToolbarButtonStyle))
         {
             showMissionPanel =
                 !showMissionPanel;
@@ -5246,16 +5271,18 @@ public partial class GameController : MonoBehaviour
             }
         }
 
-        right -= 106f;
+        right -= 100f;
 
         if (GUI.Button(
             new Rect(
                 right,
-                bar.y + 7f,
-                98f,
-                30f
+                bar.y + 9f,
+                92f,
+                34f
             ),
-            "WARBOARD"))
+            "WARBOARD",
+            WarboardV45Presentation
+                .ToolbarButtonStyle))
         {
             showWarboardPanel =
                 !showWarboardPanel;
@@ -5271,18 +5298,21 @@ public partial class GameController : MonoBehaviour
         }
 
         if (selectedSquad != null &&
-            !deploymentMode)
+            !deploymentMode &&
+            right > phaseRect.xMax + 108f)
         {
-            right -= 110f;
+            right -= 104f;
 
             if (GUI.Button(
                 new Rect(
                     right,
-                    bar.y + 7f,
-                    102f,
-                    30f
+                    bar.y + 9f,
+                    96f,
+                    34f
                 ),
-                "DATASHEET"))
+                "DATASHEET",
+                WarboardV45Presentation
+                    .ToolbarButtonStyle))
             {
                 showWarboardPanel = false;
                 showBasicCommandsPanel = false;

@@ -88,6 +88,12 @@ public class ObjectiveController : MonoBehaviour
         markerRenderer =
             marker.GetComponent<Renderer>();
 
+        WarboardV45Presentation.StyleObjectiveMarker(
+            marker,
+            transform,
+            role
+        );
+
         CreateStatusText();
     }
 

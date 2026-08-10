@@ -625,6 +625,14 @@ public class BattlefieldWorldUI : MonoBehaviour
 
         panel.Text.text = "";
 
+        WarboardV45Presentation.StyleWorldPanel(
+            panel.Root,
+            panel.Background,
+            panel.Text,
+            width,
+            height,
+            accentColor
+        );
         return panel;
     }
 

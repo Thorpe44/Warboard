@@ -210,6 +210,8 @@ public partial class GameController : MonoBehaviour
             new Color(0.19f, 0.22f, 0.19f)
         );
 
+        WarboardV45Presentation.StyleBoard(board);
+
         // Terrain and mission objectives are generated after Force
         // Dispositions resolve the Chapter Approved mission matchup.
 
@@ -253,6 +255,13 @@ public partial class GameController : MonoBehaviour
         SetObjectColor(
             terrain,
             color
+        );
+
+        WarboardV45Presentation.StyleTerrain(
+            terrain,
+            trait,
+            terrain.name,
+            scale
         );
     }
 
