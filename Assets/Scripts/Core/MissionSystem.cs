@@ -1624,7 +1624,8 @@ public class MissionSystem
         }
 
         if ((actionUnit.HasAdvanced &&
-             !CustodesFactionPack11.CanStartActionAfterAdvance(actionUnit)) ||
+             !CustodesFactionPack11.CanStartActionAfterAdvance(actionUnit) &&
+             !NecronsFactionPack11.CanStartActionAfterAdvance(actionUnit)) ||
             actionUnit.HasFallenBack)
         {
             reason =

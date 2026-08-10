@@ -654,6 +654,10 @@ public partial class GameController : MonoBehaviour
             Custodes11ModifyStratagemCost(
                 unit, label, cost);
 
+        cost =
+            Necrons11ModifyStratagemCost(
+                unit, label, cost);
+
         SquadController overlord = null;
 
         if (FactionRuleSystem.UnitOrLeaderHasRule(

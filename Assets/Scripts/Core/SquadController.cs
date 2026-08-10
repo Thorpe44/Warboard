@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -1025,6 +1025,13 @@ public class SquadController : MonoBehaviour
     public bool HasKeyword(
         string keyword)
     {
+        if (NecronsFactionPack11.GrantsKeyword(
+                this, keyword))
+        {
+            return true;
+        }
+
+
         if (HasOwnKeyword(keyword))
             return true;
 
@@ -1077,6 +1084,12 @@ public class SquadController : MonoBehaviour
     public void DeclareAdvance(
         int roll)
     {
+        int necronsFixedAdvance =
+            NecronsFactionPack11.FixedAdvanceResult(this);
+        if (necronsFixedAdvance > 0)
+            roll = necronsFixedAdvance;
+
+
         SquadController actionUnit =
             JoinedActionController();
 
@@ -1110,6 +1123,7 @@ public class SquadController : MonoBehaviour
         float allowance =
             model.Squad.GetMove() +
             CustodesFactionPack11.MoveModifier(actionUnit) +
+            NecronsFactionPack11.MoveModifier(actionUnit) +
             actionUnit.BattleFocusMoveBonus +
             (actionUnit.HasAdvanced
                 ? actionUnit.AdvanceBonus
@@ -1271,6 +1285,10 @@ public class SquadController : MonoBehaviour
 
         objectiveControl =
             CustodesFactionPack11.ModifyObjectiveControl(
+                JoinedActionController(), model, objectiveControl);
+
+        objectiveControl =
+            NecronsFactionPack11.ModifyObjectiveControl(
                 JoinedActionController(), model, objectiveControl);
 
         return Mathf.Max(

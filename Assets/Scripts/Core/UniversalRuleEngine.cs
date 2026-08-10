@@ -169,6 +169,12 @@ public static class UniversalRuleRegistry
             return true;
         }
 
+        if (NecronsFactionPack11.GrantsCoreAbility(
+                squad, ruleName))
+        {
+            return true;
+        }
+
         UnitData data =
             squad.SourceData;
 
@@ -320,6 +326,10 @@ public static class UniversalRuleRegistry
 
         int fnp =
             GetFeelNoPain(squad);
+
+        fnp =
+            NecronsFactionPack11.ConditionalFeelNoPain(
+                squad, label, fnp);
 
         fnp =
             CustodesFactionPack11.ConditionalFeelNoPain(

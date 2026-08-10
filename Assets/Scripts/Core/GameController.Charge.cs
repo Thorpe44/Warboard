@@ -93,6 +93,7 @@ public partial class GameController : MonoBehaviour
         }
 
         if (attacker.HasFallenBack &&
+            !Necrons11CanChargeAfterFallBack(attacker) &&
             !Custodes11CanChargeAfterFallBack(attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanChargeAfterFallBack(
@@ -105,6 +106,7 @@ public partial class GameController : MonoBehaviour
         }
 
         if (attacker.HasAdvanced &&
+            !Necrons11CanChargeAfterAdvance(attacker) &&
             !Custodes11CanChargeAfterAdvance(attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanChargeAfterAdvance(
@@ -396,6 +398,16 @@ public partial class GameController : MonoBehaviour
         roll +=
             CustodesFactionPack11.ChargeRollModifier(
                 attacker);
+
+        if (Necrons11OfferChargeReroll(
+                attacker, target, roll, wasRerolled))
+        {
+            return;
+        }
+
+        roll +=
+            Necrons11ChargeRollModifier(
+                attacker, target);
 
         float targetDistance =
             JoinedDistance(

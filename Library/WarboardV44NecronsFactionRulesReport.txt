@@ -1,0 +1,13 @@
+WARBOARD v44 — FULL NECRONS FACTION RULES
+
+Installed against Necrons Faction Pack 11e v1.1, July 2026.
+12 detachments / 63 stratagems / 42 enhancements and Necrodermal Bindings.
+Standard matched-play faction pack only; Crusade and Boarding Actions are not included.
+
+Touched source:
+ - Assets/Scripts/Core/RulesEngine.cs
+ - Assets/Scripts/Core/SquadController.cs
+ - Assets/Scripts/Core/UniversalRuleEngine.cs
+ - Assets/Scripts/Core/GameController.CoreCompletion11.cs
+ - Assets/Scripts/Core/MissionSystem.cs
+ - Assets/Scripts/Core/FactionRuleSystem.cs

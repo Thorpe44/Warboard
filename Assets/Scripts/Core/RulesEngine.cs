@@ -137,7 +137,9 @@ public static class RulesEngine
                 mode == AttackMode.Ranged &&
                 weapon.range > 0f &&
                 targetDistance <=
-                    weapon.range * 0.5f +
+                    (weapon.range +
+                     NecronsFactionPack11.RangeModifier(
+                         attacker, weapon, mode)) * 0.5f +
                     0.001f;
 
             int attacks =
@@ -153,7 +155,11 @@ public static class RulesEngine
                 CustodesFactionPack11.AdditionalAttacks(
                     game, attacker, model, weapon, mode, target);
 
-            attacks +=
+                        attacks +=
+                NecronsFactionPack11.AdditionalAttacks(
+                    game, attacker, model, weapon, mode, target);
+
+attacks +=
                 AeldariFactionPack11.AdditionalAttacks(
                     attacker, model, weapon, mode);
 
@@ -168,7 +174,11 @@ public static class RulesEngine
                 CustodesFactionPack11.AdditionalRapidFire(
                     attacker, weapon, mode);
 
-            rapidFire +=
+                        rapidFire +=
+                NecronsFactionPack11.AdditionalRapidFire(
+                    attacker, weapon, mode);
+
+rapidFire +=
                 AeldariFactionPack11.AdditionalRapidFire(
                     attacker, weapon, mode);
 
@@ -289,7 +299,11 @@ bool torrent =
                 AeldariFactionPack11.GrantsLethalHits(
                     attacker, mode);
 
-            int sustainedHits =
+                        lethalHits = lethalHits ||
+                NecronsFactionPack11.GrantsLethalHits(
+                    attacker, mode);
+
+int sustainedHits =
                 WeaponRuleParser.GetValue(
                     weapon,
                     "sustained_hits",
@@ -312,7 +326,12 @@ bool torrent =
                     AeldariFactionPack11.MinimumSustainedHits(
                         attacker, weapon, mode));
 
-            bool twinLinked =
+                        sustainedHits = Mathf.Max(
+                sustainedHits,
+                NecronsFactionPack11.MinimumSustainedHits(
+                    attacker, weapon, mode));
+
+bool twinLinked =
                 HasKeyword(
                     weapon,
                     "twin_linked"
@@ -329,7 +348,11 @@ bool torrent =
                 AeldariFactionPack11.GrantsDevastatingWounds(
                     attacker, weapon, mode);
 
-            bool precision =
+                        devastating = devastating ||
+                NecronsFactionPack11.GrantsDevastatingWounds(
+                    attacker, weapon, mode);
+
+bool precision =
                 WeaponRuleParser.Has(
                     weapon,
                     "precision"
@@ -346,7 +369,11 @@ bool torrent =
                 AeldariFactionPack11.GrantsPrecision(
                     attacker, weapon, mode);
 
-            int melta =
+                        precision = precision ||
+                NecronsFactionPack11.GrantsPrecision(
+                    attacker, weapon, mode);
+
+int melta =
                 halfRange
                 ? Mathf.Max(
                     0,
@@ -388,7 +415,19 @@ bool torrent =
                         "Custodes Hit re-roll: " + weapon.displayName);
                 }
 
+                                bool necronsHitSuccess =
+                    AeldariFactionPack11.AutomaticHitSucceeds(
+                        hitRoll, skill, aeldari11UniversalState);
                 if (!aeldari11UniversalState.cannotRerollHits &&
+                    NecronsFactionPack11.AutomaticRerollHit(
+                        game, attacker, target, hitRoll,
+                        necronsHitSuccess, mode))
+                {
+                    hitRoll = DiceRoller.RollD6(
+                        "Necrons Hit re-roll: " + weapon.displayName);
+                }
+
+if (!aeldari11UniversalState.cannotRerollHits &&
                     AeldariFactionPack11.AutomaticRerollHit(
                         attacker, hitRoll, skill, aeldari11UniversalState))
                 {
@@ -444,7 +483,8 @@ bool torrent =
 
                 hits++;
 
-                if (hitRoll == 6)
+                if (NecronsFactionPack11.IsCriticalHit(
+                        attacker, hitRoll, true))
                 {
                     if (lethalHits)
                         lethalAutoWounds++;
@@ -506,6 +546,17 @@ bool torrent =
 
                 bool alreadyRerolled =
                     false;
+
+                if (NecronsFactionPack11.AutomaticRerollWound(
+                        game, attacker, target, woundRoll, success, mode))
+                {
+                    woundRoll = DiceRoller.RollD6(
+                        "Necrons Wound re-roll: " + weapon.displayName);
+                    success = AeldariFactionPack11.AutomaticWoundSucceeds(
+                        woundRoll, woundTarget, criticalThreshold,
+                        aeldari11UniversalState.woundRollModifier);
+                    alreadyRerolled = true;
+                }
 
                 if (CustodesFactionPack11.AutomaticRerollWound(
                         attacker, target, woundRoll, success, mode))
@@ -617,7 +668,11 @@ bool torrent =
                 }
             }
 
-            int failedSaves = 0;
+                        int necronsApModifier =
+                NecronsFactionPack11.ApModifier(
+                    game, attacker, target, model, weapon, mode);
+
+int failedSaves = 0;
             int woundsLost = 0;
             int modelsKilled = 0;
             int coverSaves = 0;
@@ -645,7 +700,7 @@ bool torrent =
                         saveOwner.GetSave(
                             attackOwner
                         ) -
-                        weapon.ap,
+                        weapon.ap + necronsApModifier,
                         2,
                         7
                     );
@@ -677,6 +732,10 @@ bool torrent =
                     rolledDamage =
                         CustodesFactionPack11.ModifyIncomingDamage(
                             allocated, attacker, weapon, rolledDamage);
+
+                    rolledDamage =
+                        NecronsFactionPack11.ModifyIncomingDamage(
+                            allocated.Squad, rolledDamage);
 
                     int lost =
                         allocated.ApplyDamage(
@@ -732,6 +791,10 @@ bool torrent =
                 mortalDamage =
                     CustodesFactionPack11.ModifyIncomingDamage(
                         allocated, attacker, weapon, mortalDamage, false);
+
+                mortalDamage =
+                    NecronsFactionPack11.ModifyIncomingDamage(
+                        allocated.Squad, mortalDamage);
 
                 int lost =
                     allocated.ApplyDamage(

@@ -273,7 +273,10 @@ public partial class GameController : MonoBehaviour
                 state
             );
         }
-    }
+    
+        NecronsFactionPack11.ApplyAttackModifiers(
+            this, attacker, target, null, weapon, attackMode, state);
+}
 
     public bool AeldariGrantsDevastatingWounds(
         SquadController attacker,
@@ -1017,6 +1020,23 @@ public partial class GameController : MonoBehaviour
         SquadController attacker,
         SquadController target)
     {
+        string necronsTargetReason;
+        if (attacker != null && target != null &&
+            !Necrons11CanAttackTarget(
+                attacker, target, AttackMode.Ranged,
+                out necronsTargetReason))
+        {
+            status = necronsTargetReason;
+            return;
+        }
+
+        if (attacker != null &&
+            !Necrons11EnsureCryptekAugmentation(attacker))
+        {
+            return;
+        }
+
+
         string custodesTargetReason;
         if (attacker != null && target != null &&
             !Custodes11CanAttackTarget(
@@ -1047,6 +1067,7 @@ public partial class GameController : MonoBehaviour
         }
 
         if (attacker.HasFallenBack &&
+            !Necrons11CanShootAfterFallBack(attacker) &&
             !Custodes11CanShootAfterFallBack(attacker) &&
             !(aeldariRules != null &&
               aeldariRules.CanShootAfterFallBack(
@@ -1481,6 +1502,7 @@ public partial class GameController : MonoBehaviour
                     );
 
                 if (attacker.HasAdvanced &&
+                    !Necrons11CanShootAfterAdvance(attacker) &&
                     !Custodes11CanShootAfterAdvance(attacker) &&
                     !attacker
                         .JoinedActionController()
@@ -1560,6 +1582,7 @@ public partial class GameController : MonoBehaviour
                         indirect &&
                         !attackerEngaged &&
                         !attacker.HasAdvanced &&
+                    !Necrons11CanShootAfterAdvance(attacker) &&
                     !Custodes11CanShootAfterAdvance(attacker) &&
                         !targetEngaged;
 

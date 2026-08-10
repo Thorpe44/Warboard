@@ -1360,6 +1360,11 @@ public class InteractiveAttackController
                 CustodesFactionPack11.GrantsLethalHits(
                     attacker, mode);
 
+            volley.lethalHits =
+                volley.lethalHits ||
+                NecronsFactionPack11.GrantsLethalHits(
+                    attacker, mode);
+
             volley.sustainedHits =
                 WeaponRuleParser.GetValue(
                     weapon,
@@ -1415,6 +1420,12 @@ public class InteractiveAttackController
                     CustodesFactionPack11.MinimumSustainedHits(
                         attacker, weapon, mode));
 
+            volley.sustainedHits =
+                Mathf.Max(
+                    volley.sustainedHits,
+                    NecronsFactionPack11.MinimumSustainedHits(
+                        attacker, weapon, mode));
+
 volley.twinLinked =
                 RulesEngine.HasKeyword(
                     weapon,
@@ -1442,7 +1453,12 @@ volley.twinLinked =
                     mode
                  ));
 
-            volley.precision =
+                        volley.devastating =
+                volley.devastating ||
+                NecronsFactionPack11.GrantsDevastatingWounds(
+                    attacker, weapon, mode);
+
+volley.precision =
                 WeaponRuleParser.Has(
                     weapon,
                     "precision"
@@ -1470,7 +1486,11 @@ volley.twinLinked =
                 CustodesFactionPack11.StrengthModifier(
                     attacker, first.model, weapon, mode);
 
-            volley.effectiveAp =
+                        volley.effectiveStrength +=
+                NecronsFactionPack11.StrengthModifier(
+                    attacker, first.model, weapon, mode);
+
+volley.effectiveAp =
                 weapon.ap;
 
             if (mode == AttackMode.Melee &&
@@ -1506,6 +1526,15 @@ volley.twinLinked =
                 CustodesFactionPack11.ApModifier(
                     attacker, target, first.model, weapon, mode);
 
+            volley.precision =
+                volley.precision ||
+                NecronsFactionPack11.GrantsPrecision(
+                    attacker, weapon, mode);
+
+            volley.effectiveAp +=
+                NecronsFactionPack11.ApModifier(
+                    game, attacker, target, first.model, weapon, mode);
+
 volley.woundTarget =
                 RulesEngine.WoundRollNeeded(
                     volley.effectiveStrength,
@@ -1522,6 +1551,11 @@ volley.woundTarget =
             volley.criticalWoundThreshold =
                 AeldariFactionPack11.CriticalWoundThreshold(
                     attacker, target, weapon,
+                    volley.criticalWoundThreshold);
+
+            volley.criticalWoundThreshold =
+                NecronsFactionPack11.CriticalWoundThreshold(
+                    attacker, target, weapon, mode,
                     volley.criticalWoundThreshold);
 
             int attacks = 0;
@@ -1544,7 +1578,12 @@ volley.woundTarget =
                         game, attacker, selection.model,
                         weapon, mode, target);
 
-                oneModelAttacks +=
+                                oneModelAttacks +=
+                    NecronsFactionPack11.AdditionalAttacks(
+                        game, attacker, selection.model,
+                        weapon, mode, target);
+
+oneModelAttacks +=
                     AeldariFactionPack11.AdditionalAttacks(
                         attacker, selection.model, weapon, mode);
 
@@ -1558,7 +1597,9 @@ volley.woundTarget =
                     mode == AttackMode.Ranged &&
                     weapon.range > 0f &&
                     distance <=
-                        weapon.range * 0.5f +
+                        (weapon.range +
+                         NecronsFactionPack11.RangeModifier(
+                             attacker, weapon, mode)) * 0.5f +
                         0.001f;
 
                 int rapid =
@@ -1572,7 +1613,11 @@ volley.woundTarget =
                     CustodesFactionPack11.AdditionalRapidFire(
                         attacker, weapon, mode);
 
-                rapid +=
+                                rapid +=
+                    NecronsFactionPack11.AdditionalRapidFire(
+                        attacker, weapon, mode);
+
+rapid +=
                     AeldariFactionPack11.AdditionalRapidFire(
                         attacker, weapon, mode);
 
@@ -1731,7 +1776,9 @@ volley.woundTarget =
                         selection.model,
                         target
                     ) <=
-                    volley.weapon.range * 0.5f +
+                    (volley.weapon.range +
+                     NecronsFactionPack11.RangeModifier(
+                         attacker, volley.weapon, mode)) * 0.5f +
                     0.001f
             );
 
@@ -1826,6 +1873,26 @@ volley.woundTarget =
                 volley.automaticHitRerolls = true;
         }
 
+        if (!volley.cannotRerollHits)
+        {
+            bool necronsRerolled = false;
+            for (int i = 0; i < volley.hitRolls.Count; i++)
+            {
+                int roll = volley.hitRolls[i];
+                bool success = roll != 1 &&
+                    (roll == 6 ||
+                     roll + volley.hitRollModifier >= volley.skill);
+                if (!NecronsFactionPack11.AutomaticRerollHit(
+                        game, attacker, target, roll, success, mode))
+                    continue;
+                volley.hitRolls[i] = DiceRoller.RollD6(
+                    "Necrons Hit re-roll: " + volley.weapon.displayName);
+                necronsRerolled = true;
+            }
+            if (necronsRerolled)
+                volley.automaticHitRerolls = true;
+        }
+
         RecalculateHitResults();
 
         lastActionText =
@@ -1874,6 +1941,8 @@ volley.woundTarget =
             hits++;
 
             if (CustodesFactionPack11.IsCriticalHit(
+                    attacker, roll, success) ||
+                NecronsFactionPack11.IsCriticalHit(
                     attacker, roll, success))
             {
                 if (volley.lethalHits)
@@ -2075,6 +2144,24 @@ volley.woundTarget =
             custodesWoundRerolled = true;
         }
         if (custodesWoundRerolled)
+            volley.automaticWoundRerolls = true;
+
+        bool necronsWoundRerolled = false;
+        for (int i = 0; i < volley.woundRolls.Count; i++)
+        {
+            int roll = volley.woundRolls[i];
+            bool critical = roll >= volley.criticalWoundThreshold;
+            bool success = roll != 1 &&
+                (critical || roll == 6 ||
+                 roll + volley.woundRollModifier >= volley.woundTarget);
+            if (!NecronsFactionPack11.AutomaticRerollWound(
+                    game, attacker, target, roll, success, mode))
+                continue;
+            volley.woundRolls[i] = DiceRoller.RollD6(
+                "Necrons Wound re-roll: " + volley.weapon.displayName);
+            necronsWoundRerolled = true;
+        }
+        if (necronsWoundRerolled)
             volley.automaticWoundRerolls = true;
 
         RecalculateWoundResults();
@@ -2312,6 +2399,14 @@ volley.woundTarget =
                       )
                     : 0);
 
+            damage +=
+                NecronsFactionPack11.DamageModifier(
+                    attacker,
+                    volley.selections.Count > 0
+                        ? volley.selections[0].model
+                        : null,
+                    volley.weapon, mode);
+
             volley.damageValues.Add(
                 Mathf.Max(
                     0,
@@ -2531,6 +2626,10 @@ volley.woundTarget =
                 CustodesFactionPack11.ModifyIncomingDamage(
                     allocated, attacker, volley.weapon, attackDamage);
 
+            attackDamage =
+                NecronsFactionPack11.ModifyIncomingDamage(
+                    allocated.Squad, attackDamage);
+
             int incoming =
                 Mathf.Min(
                     allocated.CurrentWounds,
@@ -2630,6 +2729,10 @@ volley.woundTarget =
             attackDamage =
                 CustodesFactionPack11.ModifyIncomingDamage(
                     allocated, attacker, volley.weapon, attackDamage, false);
+
+            attackDamage =
+                NecronsFactionPack11.ModifyIncomingDamage(
+                    allocated.Squad, attackDamage);
 
             int incoming =
                 Mathf.Min(

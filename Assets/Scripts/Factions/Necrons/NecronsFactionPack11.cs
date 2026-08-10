@@ -1,3 +1,4 @@
+// WARBOARD_V44_FULL_NECRONS_FACTION_RULES
 using System;
 using System.Collections.Generic;
 using System.Linq;

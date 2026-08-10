@@ -332,6 +332,10 @@ public class FactionRuleSystem
                     squad.DisplayName
                 );
 
+            reanimation =
+                NecronsFactionPack11.ModifyReanimationRoll(
+                    squad, reanimation);
+
             int restored =
                 game.ReanimateUnit(
                     squad,
@@ -555,7 +559,7 @@ public class FactionRuleSystem
                 ArmyRuleName =
                     "Reanimation Protocols",
                 DetachmentName =
-                    "Awakened Dynasty — Command Protocols",
+                    "Faction controller",
                 IsNecrons = true
             };
         }
