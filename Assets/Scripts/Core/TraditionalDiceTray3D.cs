@@ -118,7 +118,7 @@ public class TraditionalDiceTray3D : MonoBehaviour
         20
     };
 
-    private readonly Vector3 trayOrigin =
+    private Vector3 trayOrigin =
         new Vector3(
             4000f,
             -5000f,
@@ -142,6 +142,7 @@ public class TraditionalDiceTray3D : MonoBehaviour
     private RenderTexture renderTexture;
     private GameObject trayRoot;
     private PhysicsMaterial dicePhysics;
+    private bool worldSpaceMode;
 
     private int selectedSides = 6;
     private int nextDieId = 1;
@@ -158,6 +159,64 @@ public class TraditionalDiceTray3D : MonoBehaviour
         EnsurePoolInitialized();
         EnsureBuilt();
     }
+
+    public void SetWorldSpaceMode(
+        bool enabled)
+    {
+        EnsureBuilt();
+
+        worldSpaceMode = enabled;
+
+        if (trayRoot == null)
+            return;
+
+        if (!enabled)
+        {
+            trayRoot.SetActive(false);
+            return;
+        }
+
+        GameObject board =
+            GameObject.Find("Board");
+
+        if (board == null)
+            return;
+
+        float boardDepth =
+            board.transform.localScale.z;
+
+        trayOrigin =
+            new Vector3(
+                board.transform.position.x,
+                0.055f,
+                board.transform.position.z -
+                    boardDepth * 0.5f -
+                    4.25f
+            );
+
+        trayRoot.SetActive(true);
+
+        trayRoot.transform.position =
+            trayOrigin;
+
+        trayRoot.transform.localScale =
+            new Vector3(
+                1.55f,
+                1.0f,
+                0.58f
+            );
+
+        Camera main =
+            Camera.main;
+
+        if (main != null)
+        {
+            main.cullingMask |=
+                1 << DiceLayer;
+        }
+    }
+
+
 
     private void EnsurePoolInitialized()
     {
@@ -577,6 +636,9 @@ public class TraditionalDiceTray3D : MonoBehaviour
 
     private void Update()
     {
+        if (worldSpaceMode)
+            HandleWorldDiceClick();
+
         if (!rollInProgress ||
             dice.Count == 0)
         {
@@ -630,6 +692,47 @@ public class TraditionalDiceTray3D : MonoBehaviour
         }
     }
 
+
+    private void HandleWorldDiceClick()
+    {
+        if (!Input.GetMouseButtonDown(0))
+            return;
+
+        Camera main =
+            Camera.main;
+
+        if (main == null)
+            return;
+
+        Ray ray =
+            main.ScreenPointToRay(
+                Input.mousePosition
+            );
+
+        RaycastHit hit;
+
+        if (!Physics.Raycast(
+                ray,
+                out hit,
+                250f,
+                1 << DiceLayer))
+        {
+            return;
+        }
+
+        TraditionalDiceMarker marker =
+            hit.collider
+                .GetComponentInParent<
+                    TraditionalDiceMarker
+                >();
+
+        if (marker != null)
+        {
+            marker.SetSelected(
+                !marker.Selected
+            );
+        }
+    }
     private void RefreshSettledText()
     {
         if (dice.Count == 0)
@@ -2041,108 +2144,68 @@ public class TraditionalDiceTray3D : MonoBehaviour
 
         float width =
             Mathf.Min(
-                790f,
-                Screen.width - 36f
+                650f,
+                Screen.width - 28f
             );
 
-        float height =
-            Mathf.Min(
-                590f,
-                Screen.height - 96f
-            );
+        const float height = 176f;
 
         Rect panel =
             new Rect(
                 Screen.width -
                     width -
-                    18f,
+                    14f,
                 Screen.height -
                     height -
-                    18f,
+                    14f,
                 width,
                 height
             );
 
-        GUI.Box(
-            panel,
-            ""
-        );
+        GUI.Box(panel, "");
 
         GUIStyle heading =
             new GUIStyle(
                 GUI.skin.label
             );
 
-        heading.fontSize = 17;
+        heading.fontSize = 15;
         heading.fontStyle =
             FontStyle.Bold;
 
         GUI.Label(
             new Rect(
-                panel.x + 14f,
-                panel.y + 10f,
-                panel.width - 28f,
-                26f
+                panel.x + 12f,
+                panel.y + 8f,
+                panel.width - 24f,
+                22f
             ),
-            "TRADITIONAL  -  FREE 3D POLYHEDRAL DICE TRAY",
+            "WORLD DICE TRAY CONTROLS",
             heading
         );
 
-        GUI.Label(
-            new Rect(
-                panel.x + 14f,
-                panel.y + 38f,
-                panel.width - 28f,
-                38f
-            ),
-            "D3 / D4 / D6 / D8 / D10 / D12 / D20. Build any mixed pool. Warboard does not interpret legality or rerolls; click dice to select them for a manual reroll."
-        );
-
-        Rect textureRect =
-            new Rect(
-                panel.x + 14f,
-                panel.y + 78f,
-                panel.width - 28f,
-                panel.height - 250f
-            );
-
-        GUI.DrawTexture(
-            textureRect,
-            renderTexture,
-            ScaleMode.StretchToFill,
-            false
-        );
-
-        HandleTrayClick(
-            textureRect
-        );
-
         float typeY =
-            panel.y +
-            panel.height -
-            158f;
+            panel.y + 36f;
 
         float typeWidth =
             (panel.width -
-             28f -
+             24f -
              6f * 6f) /
             7f;
 
         float typeX =
-            panel.x + 14f;
+            panel.x + 12f;
 
         foreach (int sides
             in SupportedSides)
         {
-            Color old =
-                GUI.color;
+            Color old = GUI.color;
 
-            if (sides ==
-                selectedSides)
+            if (sides == selectedSides)
             {
                 GUI.color =
                     new Color(
-                        0.78f,
+                        0.76f,
                         0.90f,
                         1f,
                         1f
@@ -2154,102 +2217,84 @@ public class TraditionalDiceTray3D : MonoBehaviour
                     typeX,
                     typeY,
                     typeWidth,
-                    38f
+                    34f
                 ),
                 "D" +
                 sides +
-                "\n" +
-                requestedPool[
-                    sides
-                ]))
+                " " +
+                requestedPool[sides]))
             {
-                selectedSides =
-                    sides;
+                selectedSides = sides;
             }
 
             GUI.color = old;
 
             typeX +=
-                typeWidth +
-                6f;
+                typeWidth + 6f;
         }
 
         float y =
-            panel.y +
-            panel.height -
-            110f;
+            panel.y + 78f;
 
         if (GUI.Button(
             new Rect(
-                panel.x + 14f,
+                panel.x + 12f,
                 y,
-                42f,
-                30f
+                40f,
+                28f
             ),
             "-5"))
         {
-            AdjustSelectedPool(
-                -5
-            );
+            AdjustSelectedPool(-5);
         }
 
         if (GUI.Button(
             new Rect(
-                panel.x + 60f,
+                panel.x + 56f,
                 y,
-                42f,
-                30f
+                40f,
+                28f
             ),
             "-1"))
         {
-            AdjustSelectedPool(
-                -1
-            );
+            AdjustSelectedPool(-1);
         }
 
         GUI.Label(
             new Rect(
-                panel.x + 110f,
+                panel.x + 104f,
                 y + 4f,
-                118f,
-                26f
+                108f,
+                22f
             ),
             "D" +
             selectedSides +
             ": " +
-            requestedPool[
-                selectedSides
-            ] +
-            " / " +
-            MaxDice
+            requestedPool[selectedSides]
         );
 
         if (GUI.Button(
             new Rect(
-                panel.x + 232f,
+                panel.x + 212f,
                 y,
-                42f,
-                30f
+                40f,
+                28f
             ),
             "+1"))
         {
-            AdjustSelectedPool(
-                1
-            );
+            AdjustSelectedPool(1);
         }
 
         if (GUI.Button(
             new Rect(
-                panel.x + 278f,
+                panel.x + 256f,
                 y,
-                42f,
-                30f
+                40f,
+                28f
             ),
             "+5"))
         {
-            AdjustSelectedPool(
-                5
-            );
+            AdjustSelectedPool(5);
         }
 
         GUI.enabled =
@@ -2257,10 +2302,10 @@ public class TraditionalDiceTray3D : MonoBehaviour
 
         if (GUI.Button(
             new Rect(
-                panel.x + 330f,
+                panel.x + 306f,
                 y,
-                112f,
-                30f
+                106f,
+                28f
             ),
             "ROLL POOL"))
         {
@@ -2281,10 +2326,10 @@ public class TraditionalDiceTray3D : MonoBehaviour
 
         if (GUI.Button(
             new Rect(
-                panel.x + 448f,
+                panel.x + 418f,
                 y,
-                142f,
-                30f
+                122f,
+                28f
             ),
             "REROLL SELECTED"))
         {
@@ -2297,10 +2342,10 @@ public class TraditionalDiceTray3D : MonoBehaviour
             new Rect(
                 panel.x +
                     panel.width -
-                    96f,
+                    100f,
                 y,
-                82f,
-                30f
+                88f,
+                28f
             ),
             "CLEAR"))
         {
@@ -2309,33 +2354,31 @@ public class TraditionalDiceTray3D : MonoBehaviour
 
         GUI.Label(
             new Rect(
-                panel.x + 14f,
-                y + 36f,
-                panel.width - 28f,
-                24f
+                panel.x + 12f,
+                panel.y + 116f,
+                panel.width - 24f,
+                22f
             ),
             "Pool: " +
             PoolSummary() +
-            "    |    " +
-            RequestedPoolTotal() +
-            "/" +
-            MaxDice +
-            " dice"
-        );
-
-        GUI.Label(
-            new Rect(
-                panel.x + 14f,
-                y + 60f,
-                panel.width - 28f,
-                34f
-            ),
+            " | " +
             settledText +
             (selectedCount > 0
-                ? "  |  " +
+                ? " | " +
                   selectedCount +
                   " selected"
                 : "")
         );
+
+        GUI.Label(
+            new Rect(
+                panel.x + 12f,
+                panel.y + 140f,
+                panel.width - 24f,
+                22f
+            ),
+            "Dice are physical objects below the battlefield. Click a die there to select it for reroll."
+        );
     }
+
 }

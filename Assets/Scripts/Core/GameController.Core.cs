@@ -229,6 +229,15 @@ public partial class GameController : MonoBehaviour
         battlefieldWorldUI.Initialize(
             this
         );
+
+        GameObject hudOverlayObject =
+            new GameObject(
+                "Warboard v45 HUD Overlay"
+            );
+
+        hudOverlayObject.AddComponent<
+            WarboardV45HudOverlay
+        >();
         GameObject trayUiObject =
             new GameObject(
                 "Warboard v45 Physical Side Trays"
@@ -237,7 +246,16 @@ public partial class GameController : MonoBehaviour
         trayUiObject.AddComponent<
             WarboardV45PhysicalSideTrays
         >();
-    }
+    
+        GameObject tableEnvironmentObject =
+            new GameObject(
+                "Warboard v45 Environment Table"
+            );
+
+        tableEnvironmentObject.AddComponent<
+            WarboardV45EnvironmentTable
+        >();
+}
 
     private void CreateTerrain(
         Vector3 position,

@@ -2665,18 +2665,38 @@ public partial class GameController : MonoBehaviour
 
     private void DrawDiceTray()
     {
-        if (IsXcomMode ||
-            !showDiceTray ||
-            armyImportMode ||
+        if (armyImportMode ||
             deploymentMode)
         {
+            if (traditionalDiceTray != null)
+            {
+                traditionalDiceTray
+                    .SetWorldSpaceMode(false);
+            }
+
+            return;
+        }
+
+        if (IsXcomMode)
+        {
+            if (traditionalDiceTray != null)
+            {
+                traditionalDiceTray
+                    .SetWorldSpaceMode(false);
+            }
+
             return;
         }
 
         EnsureTraditionalDiceTray();
 
-        traditionalDiceTray.DrawGUI();
+        traditionalDiceTray
+            .SetWorldSpaceMode(true);
+
+        if (showDiceTray)
+            traditionalDiceTray.DrawGUI();
     }
+
 
     private void DrawDieFace(
         Rect rect,
@@ -3549,7 +3569,7 @@ public partial class GameController : MonoBehaviour
             DrawTraditionalRuleAlertPanel();
         }
 
-        DrawContextActionBar();
+        // WARBOARD_V45_5_MERGED_CONTEXT_BAR
         DrawV45SelectedUnitCard();
         DrawStatusToast();
         DrawDiceTray();
@@ -5113,13 +5133,13 @@ public partial class GameController : MonoBehaviour
 
     private void DrawTopCommandBar()
     {
-        // WARBOARD_V45_TOP_COMMAND_BAR
+        // WARBOARD_V45_7_TOP_BAR
         Rect bar =
             new Rect(
-                10f,
                 8f,
-                Screen.width - 20f,
-                52f
+                6f,
+                Screen.width - 16f,
+                76f
             );
 
         Color accent =
@@ -5133,6 +5153,23 @@ public partial class GameController : MonoBehaviour
             true
         );
 
+        float phaseWidth =
+            Mathf.Clamp(
+                Screen.width * 0.16f,
+                250f,
+                286f
+            );
+
+        Rect phaseRect =
+            new Rect(
+                (Screen.width -
+                    phaseWidth) *
+                    0.5f,
+                bar.y + 7f,
+                phaseWidth,
+                32f
+            );
+
         string phaseText =
             deploymentMode
             ? "DEPLOYMENT"
@@ -5144,226 +5181,58 @@ public partial class GameController : MonoBehaviour
             : "ROUND " + round;
 
         GUI.Label(
-            new Rect(
-                bar.x + 16f,
-                bar.y + 7f,
-                185f,
-                22f
-            ),
-            "WARBOARD " +
-            WarboardBuildInfo.CurrentVersion,
-            WarboardV45Presentation.HeaderStyle
-        );
-
-        GUI.Label(
-            new Rect(
-                bar.x + 17f,
-                bar.y + 30f,
-                250f,
-                16f
-            ),
-            (IsXcomMode
-                ? "XCOM / AUTOMATIC"
-                : "TRADITIONAL") +
-            "    |    " +
-            battleSizeName.ToUpper(),
-            WarboardV45Presentation.SubHeaderStyle
-        );
-
-        float phaseWidth =
-            Mathf.Clamp(
-                Screen.width * 0.16f,
-                250f,
-                280f
-            );
-
-        Rect phaseRect =
-            new Rect(
-                (Screen.width -
-                    phaseWidth) *
-                    0.5f,
-                bar.y + 10f,
-                phaseWidth,
-                32f
-            );
-        GUI.Label(
             phaseRect,
             roundText +
-            "    |    " +
+            "  |  " +
             ActiveFactionDisplayName() +
-            "    |    " +
+            "  |  " +
             phaseText,
-            WarboardV45Presentation.PhasePillStyle
+            WarboardV45Presentation
+                .PhasePillStyle
         );
 
-        float right =
-            bar.x +
-            bar.width -
-            12f;
+        float leftMetaX =
+            bar.x + 12f;
 
-        if (!deploymentMode)
-        {
-            right -= 124f;
-
-            if (GUI.Button(
-                new Rect(
-                    right,
-                    bar.y + 9f,
-                    116f,
-                    34f
-                ),
-                "NEXT PHASE  >",
-                WarboardV45Presentation
-                    .PrimaryButtonStyle))
-            {
-                NextPhase();
-            }
-        }
-
-        right -= 86f;
-
-        GUI.enabled =
-            !IsXcomMode;
-
-        if (GUI.Button(
+        GUI.Label(
             new Rect(
-                right,
-                bar.y + 9f,
-                78f,
-                34f
+                leftMetaX,
+                bar.y + 7f,
+                100f,
+                14f
             ),
             IsXcomMode
-            ? "AUTO"
-            : (showDiceTray
-                ? "HIDE DICE"
-                : "3D DICE"),
+            ? "XCOM / AUTO"
+            : "TRADITIONAL",
             WarboardV45Presentation
-                .ToolbarButtonStyle))
-        {
-            showDiceTray =
-                !showDiceTray;
-        }
+                .SubHeaderStyle
+        );
 
-        GUI.enabled = true;
-
-        right -= 108f;
-
-        GUI.enabled =
-            !deploymentMode;
-
-        if (GUI.Button(
+        GUI.Label(
             new Rect(
-                right,
-                bar.y + 9f,
+                leftMetaX,
+                bar.y + 24f,
                 100f,
-                34f
+                14f
             ),
-            "STRATAGEMS",
+            battleSizeName.ToUpper(),
             WarboardV45Presentation
-                .ToolbarButtonStyle))
-        {
-            showStratagemMenu =
-                !showStratagemMenu;
+                .SubHeaderStyle
+        );
 
-            showWarboardPanel = false;
-            showBasicCommandsPanel = false;
-            showDatasheet = false;
-            showMissionPanel = false;
-            showBattleLog = false;
-        }
+        float leftX =
+            bar.x + 120f;
 
-        GUI.enabled = true;
-
-        right -= 104f;
+        const float leftGap = 8f;
 
         if (GUI.Button(
             new Rect(
-                right,
-                bar.y + 9f,
-                96f,
+                leftX,
+                bar.y + 8f,
+                86f,
                 34f
             ),
-            "COMMANDS",
-            WarboardV45Presentation
-                .ToolbarButtonStyle))
-        {
-            showBasicCommandsPanel =
-                !showBasicCommandsPanel;
-
-            if (showBasicCommandsPanel)
-            {
-                showWarboardPanel = false;
-                showStratagemMenu = false;
-                showDatasheet = false;
-                showMissionPanel = false;
-                showBattleLog = false;
-            }
-        }
-
-        right -= 70f;
-
-        if (GUI.Button(
-            new Rect(
-                right,
-                bar.y + 9f,
-                62f,
-                34f
-            ),
-            "LOG",
-            WarboardV45Presentation
-                .ToolbarButtonStyle))
-        {
-            showBattleLog =
-                !showBattleLog;
-
-            if (showBattleLog)
-            {
-                showWarboardPanel = false;
-                showBasicCommandsPanel = false;
-                showStratagemMenu = false;
-                showDatasheet = false;
-                showMissionPanel = false;
-            }
-        }
-
-        right -= 98f;
-
-        if (GUI.Button(
-            new Rect(
-                right,
-                bar.y + 9f,
-                90f,
-                34f
-            ),
-            "MISSION",
-            WarboardV45Presentation
-                .ToolbarButtonStyle))
-        {
-            showMissionPanel =
-                !showMissionPanel;
-
-            if (showMissionPanel)
-            {
-                showWarboardPanel = false;
-                showBasicCommandsPanel = false;
-                showStratagemMenu = false;
-                showDatasheet = false;
-                showBattleLog = false;
-            }
-        }
-
-        right -= 100f;
-
-        if (GUI.Button(
-            new Rect(
-                right,
-                bar.y + 9f,
-                92f,
-                34f
-            ),
-            "WARBOARD",
-            WarboardV45Presentation
-                .ToolbarButtonStyle))
+            "WARBOARD"))
         {
             showWarboardPanel =
                 !showWarboardPanel;
@@ -5378,31 +5247,234 @@ public partial class GameController : MonoBehaviour
             }
         }
 
-        if (selectedSquad != null &&
-            !deploymentMode &&
-            right > phaseRect.xMax + 108f)
-        {
-            right -= 104f;
+        leftX += 86f + leftGap;
 
-            if (GUI.Button(
-                new Rect(
-                    right,
-                    bar.y + 9f,
-                    96f,
-                    34f
-                ),
-                "DATASHEET",
-                WarboardV45Presentation
-                    .ToolbarButtonStyle))
+        if (GUI.Button(
+            new Rect(
+                leftX,
+                bar.y + 8f,
+                80f,
+                34f
+            ),
+            "MISSION"))
+        {
+            showMissionPanel =
+                !showMissionPanel;
+
+            if (showMissionPanel)
             {
                 showWarboardPanel = false;
                 showBasicCommandsPanel = false;
                 showStratagemMenu = false;
-
-                OpenDatasheetForSelection();
+                showDatasheet = false;
+                showBattleLog = false;
             }
         }
+
+        leftX += 80f + leftGap;
+
+        if (GUI.Button(
+            new Rect(
+                leftX,
+                bar.y + 8f,
+                54f,
+                34f
+            ),
+            "LOG"))
+        {
+            showBattleLog =
+                !showBattleLog;
+
+            if (showBattleLog)
+            {
+                showWarboardPanel = false;
+                showBasicCommandsPanel = false;
+                showStratagemMenu = false;
+                showDatasheet = false;
+                showMissionPanel = false;
+            }
+        }
+
+        float rightX =
+            bar.x + bar.width - 12f;
+
+        if (!deploymentMode)
+        {
+            rightX -= 116f;
+
+            if (GUI.Button(
+                new Rect(
+                    rightX,
+                    bar.y + 8f,
+                    116f,
+                    34f
+                ),
+                "NEXT PHASE >",
+                WarboardV45Presentation
+                    .PrimaryButtonStyle))
+            {
+                NextPhase();
+            }
+        }
+
+        if (!IsXcomMode &&
+            !deploymentMode)
+        {
+            rightX -= 8f + 86f;
+
+            if (GUI.Button(
+                new Rect(
+                    rightX,
+                    bar.y + 8f,
+                    86f,
+                    34f
+                ),
+                showDiceTray
+                ? "HIDE CTRL"
+                : "DICE CTRL"))
+            {
+                showDiceTray =
+                    !showDiceTray;
+            }
+        }
+
+        rightX -= 8f + 104f;
+
+        GUI.enabled =
+            !deploymentMode;
+
+        if (GUI.Button(
+            new Rect(
+                rightX,
+                bar.y + 8f,
+                104f,
+                34f
+            ),
+            "STRATAGEMS"))
+        {
+            showStratagemMenu =
+                !showStratagemMenu;
+
+            showWarboardPanel = false;
+            showBasicCommandsPanel = false;
+            showDatasheet = false;
+            showMissionPanel = false;
+            showBattleLog = false;
+        }
+
+        GUI.enabled = true;
+
+        rightX -= 8f + 96f;
+
+        if (GUI.Button(
+            new Rect(
+                rightX,
+                bar.y + 8f,
+                96f,
+                34f
+            ),
+            "COMMANDS"))
+        {
+            showBasicCommandsPanel =
+                !showBasicCommandsPanel;
+
+            if (showBasicCommandsPanel)
+            {
+                showWarboardPanel = false;
+                showStratagemMenu = false;
+                showDatasheet = false;
+                showMissionPanel = false;
+                showBattleLog = false;
+            }
+        }
+
+        if (!deploymentMode &&
+            factions.Count >= 2)
+        {
+            string p1 = factions[0];
+            string p2 = factions[1];
+
+            int p1Primary =
+                TotalScoreType(p1, true);
+
+            int p1Secondary =
+                TotalScoreType(p1, false);
+
+            int p2Primary =
+                TotalScoreType(p2, true);
+
+            int p2Secondary =
+                TotalScoreType(p2, false);
+
+            int p1Total =
+                p1Primary +
+                p1Secondary;
+
+            int p2Total =
+                p2Primary +
+                p2Secondary;
+
+            Rect scoreRect =
+                new Rect(
+                    (Screen.width - 620f) *
+                        0.5f,
+                    bar.y + 46f,
+                    620f,
+                    24f
+                );
+
+            DrawTintedBox(
+                scoreRect,
+                new Color(
+                    0.025f,
+                    0.040f,
+                    0.060f,
+                    0.97f
+                )
+            );
+
+            GUIStyle scoreStyle =
+                new GUIStyle(
+                    GUI.skin.label
+                );
+
+            scoreStyle.alignment =
+                TextAnchor.MiddleCenter;
+
+            scoreStyle.fontStyle =
+                FontStyle.Bold;
+
+            scoreStyle.fontSize = 12;
+
+            GUI.Label(
+                scoreRect,
+                DisplayFactionName(p1).ToUpper() +
+                "  " +
+                p1Total +
+                " VP   P" +
+                p1Primary +
+                " / S" +
+                p1Secondary +
+                "   " +
+                GetCommandPoints(p1) +
+                " CP     ||     " +
+                DisplayFactionName(p2).ToUpper() +
+                "  " +
+                p2Total +
+                " VP   P" +
+                p2Primary +
+                " / S" +
+                p2Secondary +
+                "   " +
+                GetCommandPoints(p2) +
+                " CP",
+                scoreStyle
+            );
+        }
     }
+
+
+
 
     private void DrawWarboardPanel()
     {
