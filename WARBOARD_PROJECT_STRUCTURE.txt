@@ -1,40 +1,38 @@
-﻿WARBOARD v26.8 - CANONICAL PROJECT STRUCTURE
+WARBOARD v44 - CURRENT PROJECT STRUCTURE
 
 Warboard/
+  .gitignore
   Assets/
     Resources/
       Armies/
         Models/
-          Aeldari/
-            ModelIndex.json
-            ModelPool/
-            TexturePool/
-          Bases/
-        [army JSON resources]
-      Core/
       Factions/
     Scripts/
       Core/
       Factions/
+  Docs/
+    Audits/
+    Releases/
   Packages/
   ProjectSettings/
+  README_V44.md
+  V44_PATCH_MANIFEST.txt
+  BUILD_REPORT.json
 
-MODEL RULE
-The sole canonical miniature location is:
-  Assets/Resources/Armies/Models/<Faction>/
+TRACK IN GIT
+  Assets/
+  Packages/
+  ProjectSettings/
+  Docs/
+  current release documentation
 
-Do not recreate Assets/Resources/WarboardModels.
+DO NOT TRACK
+  Library/
+  Logs/
+  UserSettings/
+  Temp/
+  obj/
+  IDE caches
+  temporary *.bak / *.before_* source backups
 
-A unit without a matching installed model-pack entry uses the normal gameplay
-capsule instead of an obsolete hard-coded fallback asset.
-
-SAFE TO REGENERATE
-Library/
-Logs/
-Temp/
-obj/
-
-DO NOT DELETE
-Assets/
-Packages/
-ProjectSettings/
+The cleanup does not delete Library locally. Git simply stops tracking it.

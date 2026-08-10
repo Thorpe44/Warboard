@@ -1,9 +1,0 @@
-﻿Warboard roster ability warning fix V2 installed successfully.
-Date: 08/09/2026 22:46:43
-AbilitySystem: C:\Users\elli0\Documents\GitHub\Warboard\Assets\Scripts\Core\AbilitySystem.cs
-SquadController: C:\Users\elli0\Documents\GitHub\Warboard\Assets\Scripts\Core\SquadController.cs
-
-Verified:
-- AbilityRegistry.TryCreate exists.
-- SquadController uses TryCreate(id).
-- SquadController no longer calls AbilityRegistry.Create(id).
